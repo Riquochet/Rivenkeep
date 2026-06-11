@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — Critical Analysis (Definitive)</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
+header{padding:50px 40px 35px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2.2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--danger),var(--warn));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+header .sub{font-size:.85rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim)}
+.ctn{max-width:1100px;margin:0 auto;padding:0 40px}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,12,16,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 40px;display:flex;gap:18px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;transition:color .15s}nav a:hover{color:var(--accent)}
+section{padding:40px 0;border-bottom:1px solid var(--border)}
+h2{font-family:'Chakra Petch',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+h3{font-family:'Chakra Petch',sans-serif;font-size:.95rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:24px 0 8px;color:var(--text)}
+p{margin-bottom:10px;font-size:.88rem}
+.s{background:var(--surface);padding:14px 18px;margin:14px 0;border-radius:0 6px 6px 0;border-left:3px solid var(--border)}
+.s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.8rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px}
+.sr{display:flex;gap:14px;margin:20px 0;flex-wrap:wrap}
+.sb{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 18px;flex:1;min-width:100px;text-align:center}
+.sb .sn{font-family:'Chakra Petch',sans-serif;font-size:1.8rem;font-weight:700}.sb .sl{font-size:.6rem;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin:12px 0}
+.item .title{font-family:'Chakra Petch',sans-serif;font-size:.88rem;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.item .body{font-size:.84rem;color:var(--dim);line-height:1.6}
+.item .body strong{color:var(--text)}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px;margin-right:4px}
+.tag-balance{background:rgba(239,83,80,.12);color:var(--danger);border:1px solid rgba(239,83,80,.3)}
+.tag-flow{background:rgba(255,167,38,.12);color:var(--warn);border:1px solid rgba(255,167,38,.3)}
+.tag-policy{background:rgba(79,195,247,.12);color:var(--accent);border:1px solid rgba(79,195,247,.3)}
+.tag-infra{background:rgba(124,77,255,.12);color:#9b7dff;border:1px solid rgba(124,77,255,.3)}
+.tag-future{background:rgba(136,145,164,.12);color:var(--dim);border:1px solid rgba(136,145,164,.3)}
+.cat-balance{border-left:3px solid var(--danger)}.cat-balance .title{color:var(--danger)}
+.cat-flow{border-left:3px solid var(--warn)}.cat-flow .title{color:var(--warn)}
+.cat-policy{border-left:3px solid var(--accent)}.cat-policy .title{color:var(--accent)}
+.cat-infra{border-left:3px solid #9b7dff}.cat-infra .title{color:#9b7dff}
+.cat-future{border-left:3px solid var(--dim)}.cat-future .title{color:var(--dim)}
+table{border-collapse:collapse;width:100%;margin:10px 0}
+th,td{padding:8px 12px;border:1px solid var(--border);font-size:.8rem;text-align:left;vertical-align:top}
+th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.7rem;letter-spacing:1px}
+.green{color:var(--success)}
+footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
+@media(max-width:768px){header{padding:35px 18px 25px}h1{font-size:1.7rem}.ctn{padding:0 18px}nav{padding:8px 18px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Critical Analysis — Definitive</h1>
+<div class="sub">Rivenkeep GDD v6.2.4 — The Final Honest Assessment</div>
+<div class="meta">Generated 2026-05-31 • Re-checked against GDD v6.2.4 • Merges Critical Analysis v1–v5 • Resolved items logged below • 16 open items remain (several now documented in the GDD)</div>
+</header>
+<nav>
+<a href="#verdict">Verdict</a>
+<a href="#balance">Balance</a>
+<a href="#flow">Flow</a>
+<a href="#policy">Policy Gaps</a>
+<a href="#future">Future</a>
+<a href="#infra">Infrastructure</a>
+<a href="#resolved">Resolved Log</a>
+</nav>
+<div class="ctn">
+
+<section id="verdict">
+<h2>The Verdict</h2>
+<p>This is the <strong>definitive critical analysis</strong> of Rivenkeep, merging every issue raised across five prior analysis passes (v1 through v5) and re-checking each against GDD v6.2.4. <strong>Resolved items have been removed</strong> from the active lists and logged at the bottom for the record.</p>
+<p><strong>v6.2.0 note:</strong> a full fresh-eyes pass reconciled several internal contradictions present in v6.1.0 — the Build-timer spec (two conflicting formulas), the "destroy all ships" vs. enclosure-only victory wording, the "ships cannot damage castles" prose vs. the rule that they can after a breach, and an obsolete walls/time star formula that contradicted the canonical 3-lever system. The document was also reorganized (Wind moved to Build, the enemy cast moved ahead of the Fight mechanics, the one-section "Castles" part dissolved into Combat, Loss & Replay moved to Progression). Several open items below are now <span class="green">documented in the GDD</span> (annotated inline) even though they remain genuinely open work. <strong>v6.2.1</strong> additionally relocated the player-selectable Difficulty Levels from the Overview to Part VI Progression (beside Difficulty Layers), reconciled the Chain Shot eDPS figure (BAL-2), and fixed two minor consistency nits. <strong>v6.2.2</strong> corrected two section header colors (Wall Storage → Progression orange, Future Release Framework → Economy &amp; Meta pink).</p>
+<p>The GDD v6.2.4 is, bluntly, <strong>one of the most complete indie game design documents in existence</strong> — ~4,650 lines, 84 glossary terms, every core system specified to algorithm level, a fair monetization model, a thoughtful psychological foundation, and a full backend architecture. Across the analysis history, <strong>62 of 78 raised issues have been resolved.</strong></p>
+<p>What remains is honest and worth stating plainly: <strong>two genuine balance risks</strong> that can only be settled by playtesting, <strong>two flow concerns</strong> about early-game pacing, <strong>three policy/compliance gaps</strong> that must be closed before App Store submission, <strong>one discovery feature</strong> worth considering, and <strong>ten infrastructure tasks</strong> that are the real work of turning this document into a shipped game. None of these are design flaws. They are the known unknowns of an ambitious solo project.</p>
+<div class="sr">
+<div class="sb"><div class="sn" style="color:var(--danger)">2</div><div class="sl">Balance Open</div></div>
+<div class="sb"><div class="sn" style="color:var(--warn)">2</div><div class="sl">Flow Open</div></div>
+<div class="sb"><div class="sn" style="color:var(--accent)">3</div><div class="sl">Policy Gaps</div></div>
+<div class="sb"><div class="sn" style="color:var(--dim)">1</div><div class="sl">Future</div></div>
+<div class="sb"><div class="sn" style="color:#9b7dff">10</div><div class="sl">Infrastructure</div></div>
+<div class="sb"><div class="sn green">62</div><div class="sl">Resolved ✅</div></div>
+</div>
+</section>
+
+<section id="balance">
+<h2 style="color:var(--danger)">Balance Risks — Only Playtesting Can Settle These</h2>
+<p>These are the two balance questions that have survived every analysis pass because they cannot be resolved on paper. They require a working prototype and real combat data.</p>
+
+<div class="item cat-balance"><div class="title"><span class="tag tag-balance">BAL-1</span> Lightning Cannon Dominance (was Q-10, BAL-5)</div>
+<div class="body">Lightning Cannon outputs <strong>9.0 eDPS vs Standard's 5.3 eDPS — 70% higher</strong>. Even with the per-type deployment limit, a mixed loadout of Lightning + Standard significantly outperforms pure Standard. The GDD says "encounter design should counter this," but no specific encounter that punishes Lightning is designed. Lightning's 10-grid range (vs Standard's 12) means it sits <em>closer</em> to the action, not further — so range-based counters don't naturally apply. <strong>Resolution path:</strong> During prototype, log per-cannon-type win contribution across 100 battles. If Lightning appears in &gt;60% of winning loadouts, either raise its unlock cost, lower its eDPS to ~7.0, or design Crystal/Fog encounters where its short range is a genuine liability. <span class="green">✎ v6.2.0: now surfaced in the GDD → Unit &amp; Structure Statistics → “Open Balance &amp; Flow Questions.” Still an open playtest item.</span></div></div>
+
+<div class="item cat-balance"><div class="title"><span class="tag tag-balance">BAL-2</span> Chain Shot eDPS Variance (was BAL-2)</div>
+<div class="body">Chain Shot's effective damage ranges from <strong>~4.7 eDPS single-target to ~9.2 eDPS against 3+ clustered ships</strong> — roughly a 2× swing — depending entirely on enemy clustering (derived from the GDD stats: 22 dmg × 85% accuracy ÷ 4-tick reload single-target, rising with the 60% per-chain decay across up to 3 targets). Even at ~2× it is either a mediocre or a best-in-class cannon with little middle ground. A player who learns to bait ships into clusters gets a broken weapon; everyone else gets a dud. <strong>Resolution path:</strong> Either (a) add a minimum-targets floor so Chain Shot always hits at least 2, compressing the low end upward, or (b) accept the variance as a skill expression and ensure the tutorial/onboarding teaches clustering. Decide during prototype — do not ship without choosing. <span class="green">✎ v6.2.0: surfaced in the GDD balance section. v6.2.1: eDPS reconciled to the GDD’s verified 4.7–9.2 — the earlier 4.3–12.8 estimate is superseded.</span></div></div>
+</section>
+
+<section id="flow">
+<h2 style="color:var(--warn)">Flow Concerns — Early-Game Pacing</h2>
+<p>Two pacing issues flagged in the original Flow State analysis remain worth watching. Both are about the <em>early</em> game (Campaigns 1–5) where the player has few cannons and few enemies. Neither is fatal, but both could cause early churn if not tuned.</p>
+
+<div class="item cat-flow"><div class="title"><span class="tag tag-flow">FLOW-1</span> Deploy Phase Is Thin in Early Campaigns</div>
+<div class="body">In Campaign 1, the player places 2 cannons in a 12-second Deploy phase. That is barely an interaction — drag, drag, done, wait. The Deploy phase doesn't become a genuine strategic decision until the player has 4+ cannons and multiple types to choose from (Campaign 8+). <strong>Mitigation already in GDD:</strong> cannon persistence and the move bonus give early Deploy <em>some</em> texture. <strong>Watch during playtest:</strong> if early Deploy feels like dead air, consider front-loading a second cannon type unlock or adding a brief "reposition for bonus" prompt in Campaign 1–3. <span class="green">✎ v6.2.0: noted in the GDD → Unit &amp; Structure Statistics → “Open Balance &amp; Flow Questions.”</span></div></div>
+
+<div class="item cat-flow"><div class="title"><span class="tag tag-flow">FLOW-2</span> Fight Phase Passivity in Early Campaigns</div>
+<div class="body">With 2 cannons on auto-fire against 2–3 slow ships, the early Fight phase can feel like watching rather than playing. The player's directed-fire skill isn't tested because auto-fire handles the trivial threat. <strong>Mitigation already in GDD:</strong> the 2.5D transition and explosions provide spectacle; the Build puzzle is the real early hook. <strong>Watch during playtest:</strong> if early Fights feel passive, introduce one Sapper (a priority kill that demands directed fire) one campaign earlier, or tighten the early Fight timer so auto-fire alone isn't quite enough. <span class="green">✎ v6.2.0: noted in the GDD → Unit &amp; Structure Statistics → “Open Balance &amp; Flow Questions.”</span></div></div>
+</section>
+
+<section id="policy">
+<h2 style="color:var(--accent)">Policy &amp; Compliance Gaps — Close Before App Store Submission</h2>
+<p>These three items are not gameplay issues — they are App Store requirements and operational policies that have never been specified. They will block submission or create legal exposure if ignored.</p>
+
+<div class="item cat-policy"><div class="title"><span class="tag tag-policy">POL-1</span> Privacy &amp; Data Policy (was P3-6)</div>
+<div class="body">The game collects: Game Center ID, region, purchase history, custom piece names (user-generated content), Featured Fortress screenshots, and analytics. Apple <strong>requires</strong> a privacy policy URL and a completed App Privacy "nutrition label" at submission. The GDD specifies what data flows where (CloudKit, Firebase) but not the user-facing privacy policy, consent flow, or data-deletion mechanism (GDPR/CCPA right-to-delete). <strong>Action:</strong> Write a privacy policy. Implement account-data export/delete. Complete Apple's privacy questionnaire. Required before first TestFlight external build. <span class="green">✎ v6.2.0: skeleton folded into the GDD → Production → “Privacy &amp; Data Policy.”</span></div></div>
+
+<div class="item cat-policy"><div class="title"><span class="tag tag-policy">POL-2</span> Push Notification Strategy (was P3-7)</div>
+<div class="body">The game has natural notification hooks (daily challenge reset, streak-about-to-break, Weekend Race ending soon, challenge package ready to open, piece name approved/rejected). But none are specified, and notification permission timing/copy is undefined. Over-notifying causes uninstalls; under-notifying loses the retention value. <strong>Action:</strong> Define the notification taxonomy (which events, what copy, what frequency cap), the permission-request timing (after first ★★★, not on launch), and a settings toggle per category. Maps to the existing Settings Menu section. <span class="green">✎ v6.2.0: folded into the GDD → Settings → “Notification Strategy” + a Notifications settings row.</span></div></div>
+
+<div class="item cat-policy"><div class="title"><span class="tag tag-policy">POL-3</span> Monetization &amp; Gameplay Analytics (was P3-10)</div>
+<div class="body">The GDD mentions server-side tuning (star thresholds, economy) via Firebase Remote Config, but no analytics <em>event schema</em> is defined. To tune the economy, balance cannons (see BAL-1/2), and verify session-length targets, you need instrumented events: battle_start, battle_end (with stars/Battle Score/cannon types used), purchase, ad_watch, stonwryt_earn, stonwryt_spend, challenge_complete, churn_point. <strong>Action:</strong> Define ~20 analytics events with parameters. Firebase Analytics (free) covers this. Without it, you're tuning blind — and BAL-1/BAL-2 can never be resolved. <span class="green">✎ v6.2.0: event schema folded into the GDD → Backend Architecture → “Analytics event schema.”</span></div></div>
+</section>
+
+<section id="future">
+<h2 style="color:var(--dim)">Future Consideration — Not Required, Worth Noting</h2>
+
+<div class="item cat-future"><div class="title"><span class="tag tag-future">FUT-1</span> Spectator / "Watch a Pro" Discovery (was V-8)</div>
+<div class="body">Featured Fortresses show top players' <em>builds</em>, but there's no way to watch a top player's <em>battle</em>. The replay system already produces shareable clips — a curated "Replay of the Day" or a browsable gallery of top-scoring battle replays (not just fortress screenshots) would be a strong discovery and aspiration mechanic. Deterministic battles make this especially powerful: a player can watch a ★★★! run on a battle they're stuck on, then attempt the exact same battle. <strong>Recommendation:</strong> Consider for a post-launch update. Low priority — the replay infrastructure already exists, this is just surfacing it. <span class="green">✎ v6.2.0: now documented in the GDD → Future Release Framework → “Spectator / Watch a Pro.”</span></div></div>
+
+<div class="item cat-future"><div class="title"><span class="tag tag-future">FUT-2</span> Endless Mode (was GAP-4)</div>
+<div class="body">After 190 battles + Boss Finale + War II, the deterministic content is finite. Endless Mode (infinite escalating waves on a rotating map, unlocked at 570 stars) is listed in the GDD as "under evaluation." It would provide infinite replayability with near-zero content cost. <strong>Recommendation:</strong> Keep under evaluation. The War system and daily/challenge/race loops already provide strong retention; Endless is a nice-to-have, not a launch requirement.</div></div>
+</section>
+
+<section id="infra">
+<h2 style="color:#9b7dff">Infrastructure — The Real Work Ahead (Permanent Checklist)</h2>
+<p>These ten items are not bugs or design gaps — they are the content-production and engineering tasks that turn a complete GDD into a shipped game. They remain as a permanent checklist for the development phase. This is, honestly, where the multi-year effort actually lives.</p>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-1</span> Server Architecture</div>
+<div class="body"><span class="green">Largely specified in v6.0.0's Backend Architecture section</span> (CloudKit + GameKit + Firebase). Remaining work: actually building the 8 Cloud Functions, defining Firestore security rules, and load-testing Weekend Race matchmaking at scale.</div></div>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-2</span> iCloud Sync Data Schema</div>
+<div class="body">The 7 CloudKit record types are named, but the field-level schema, conflict-resolution strategy, and migration plan for schema changes across app updates need full specification before save/restore is built.</div></div>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-3</span> Cannon Carry vs Determinism (marketing nuance)</div>
+<div class="body">Cannon HP carry means "every battle is identical for every player" is only true for the first battle of each campaign. The marketing claim needs the honest framing: "same starting conditions = same outcome." Not a code issue — a messaging precision issue for the App Store listing. <span class="green">✎ v6.2.0: caveat folded into the GDD → Design Philosophy (Deterministic Puzzles).</span></div></div>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-4</span> 380 Battlefield Overlays (~95 hrs)</div>
+<div class="body">190 environmental overlays + 190 enemy overlays, hand-designed. The single largest content bottleneck. Strongly consider a constrained procedural generator with human curation rather than hand-placing every rock and ship.</div></div>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-5</span> 800+ Sprite Production Pipeline</div>
+<div class="body">198 pieces × 4 rotations + cannons + ships + terrain × 10 theaters, in both Map View (flat) and World View (2.5D). AI-generation + curation workflow needs documenting: prompts, resolution, cleanup, sprite-sheet format.</div></div>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-6</span> 950+ Flavor Messages</div>
+<div class="body">190 battlefields × 5–8 messages. AI-generated with human curation, organized by theater and campaign stage, with a tonal style guide.</div></div>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-7</span> 10 Boss Encounter Designs</div>
+<div class="body"><span class="green">Framework specified</span> (all 10 Mystarchs have theater, attack, HP tier, special mechanic). Remaining: exact HP-per-sortie progression, attack timing in ticks, phase-transition triggers, and vulnerability windows for each.</div></div>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-8</span> Sound Design Asset List</div>
+<div class="body">The Audio section has mood direction per phase/theater but no concrete asset list (how many cannon-fire variants, explosion types, UI clicks, ambient loops). Needed to brief a contractor or AI audio tool.</div></div>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-9</span> 32 Campaign Names + 320 Soldier Quotes</div>
+<div class="body">The 20-soldier roster needs personality definitions first, then 32 campaign names and 10 quotes each. Writing task with a consistency style guide.</div></div>
+
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-10</span> Lore Progressive Revelation Map</div>
+<div class="body">Rich lore exists (Ael'thar ritual, Mystaeri, Elderess Rhyna, Stonewrights, Aetherbond, Rivenmen). Needs a timeline mapping which beats unlock at which campaign milestone and how they surface in-game (loading screens, victory messages, campaign intros).</div></div>
+</section>
+
+<section id="resolved">
+<h2 class="green">Resolved Log — For the Record (62 Items)</h2>
+<p>Every issue raised across analyses v1–v5 that GDD v6.2.4 has resolved. Kept here so no concern is ever silently dropped.</p>
+
+<h3 class="green">Virality (8/8 resolved)</h3>
+<p class="green">✅ V-1 Challenge a Friend (deep links) · V-2 9:16 vertical replay export · V-3 Defeat sharing + near-miss data · V-4 Social proof (Featured Fortresses) · V-5 ★★★! frequency targeted (1 per 15–20 battles) · V-6 Seasonal events (Winter Siege skeleton + quarterly plan) · V-7 Piece naming system (full social layer) · V-8 → moved to FUT-1 (spectator)</p>
+
+<h3 class="green">Monetization (8/8 resolved)</h3>
+<p class="green">✅ M-1 Cosmetic skins (Civ bundles, 20 colors) · M-2 Starter bundle (Commander's Pack) · M-3 Streak rewards now cosmetic badges, not team colors · M-4 Ad frequency (1 interstitial/battle) · M-5 Annual supporter (Commander's Circle) · M-6 Piece naming pricing (clean Apple-tier table) · M-7 Victory screen cosmetic suggestion · M-8 Rewarded video ads (with daily cap)</p>
+
+<h3 class="green">Flow State (6/8 resolved, 2 → FLOW-1/2)</h3>
+<p class="green">✅ F-3 Build timer (20–25s + rollover) · F-4 Phase boundaries as safe exits (X button, auto-save) · F-5 Boss duration warning (8–15 min) · F-6 Star criteria shown (info panel + long-press graph) · F-7 Retry button after defeat · F-8 Daily challenge unlock timing (after Campaign 1). F-1/F-2 remain as FLOW-1/FLOW-2.</p>
+
+<h3 class="green">Unanswered Questions (9/10 resolved, 1 → BAL-1)</h3>
+<p class="green">✅ Q-1 Star criteria (3-lever system) · Q-2 Retry button · Q-3 Victory skip · Q-4 Leaderboard structure (4 boards, Battle Score) · Q-5 Home screen layout · Q-6 Loading screen (Featured Fortresses) · Q-7 Storage state on replay · Q-8 Locked cannon preview · Q-9 Stonwryt reset on restart. Q-10 Lightning → BAL-1.</p>
+
+<h3 class="green">Professional Standards (6/6 resolved)</h3>
+<p class="green">✅ PRO-1 Competitive analysis · PRO-2 Revenue projections (3 scenarios) · PRO-3 Technical requirements · PRO-4 Production timeline (18–24 mo) · PRO-5 Art direction · PRO-6 Accessibility (WCAG 2.1 AA)</p>
+
+<h3 class="green">Competitive / Major / Content / Minor (v4) — resolved</h3>
+<p class="green">✅ All competitive-landscape items (informational) · GAP-7 App Store listing (full strategy) · MINOR-1 Group B verification · MINOR-2 Riquochet spelling (confirmed intentional) · MINOR-3 portrait ratio cleanup · MINOR-4 piece naming price rounding · MINOR-5 2D→2.5D transition timing (2.5–3.0s) · BAL-1 Stonwryt economy (×10 rework) · BAL-3 cannon type limits reconciled · BAL-4 drop-back loop fixed · BAL-6 max cannon formula</p>
+
+<h3 class="green">Infrastructure / Pre-Submission (P3 v2)</h3>
+<p class="green">✅ P3-1 App size (100–150MB) · P3-2 Performance budget (60fps, 200MB) · P3-3 Accessibility beyond visual · P3-4 Server scope (Backend Architecture) · P3-5 Name moderation pipeline (AI + community) · P3-8 Game Center integration · P3-9 Loading experience. P3-6 → POL-1, P3-7 → POL-2, P3-10 → POL-3.</p>
+</section>
+
+</div>
+<footer>
+Rivenkeep Critical Analysis (Definitive) — GDD v6.2.4 — 78 total issues across v1–v5 · 62 resolved · 16 open<br>
+Open: BAL-1 (Lightning), BAL-2 (Chain Shot), FLOW-1 (Deploy), FLOW-2 (Fight), POL-1 (Privacy), POL-2 (Notifications), POL-3 (Analytics), FUT-1 (Spectator), FUT-2 (Endless), INFRA-1–10<br>
+This is the definitive analysis. All prior analysis documents are superseded.
+</footer>
+</body>
+</html>

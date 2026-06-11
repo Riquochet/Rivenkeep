@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — Software Design Document &amp; Build Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
+header{padding:46px 40px 30px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2.1rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+header .sub{font-size:.85rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim)}
+.ctn{max-width:1080px;margin:0 auto;padding:0 40px}
+/* sticky dashboard */
+.dash{position:sticky;top:0;z-index:120;background:rgba(10,12,16,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 40px}
+.dash .row{display:flex;align-items:center;gap:14px;max-width:1080px;margin:0 auto}
+.dash .gnum{font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:var(--accent);white-space:nowrap}
+.gbar{flex:1;height:8px;background:var(--surface2);border-radius:5px;overflow:hidden;border:1px solid var(--border)}
+.gfill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--success));transition:width .25s}
+.dash button{background:var(--surface2);color:var(--dim);border:1px solid var(--border);border-radius:5px;font-family:'IBM Plex Mono',monospace;font-size:.65rem;padding:5px 10px;cursor:pointer;text-transform:uppercase;letter-spacing:1px}
+.dash button:hover{color:var(--danger);border-color:var(--danger)}
+nav{position:sticky;top:43px;z-index:110;background:rgba(10,12,16,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:8px 40px;display:flex;gap:16px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}nav a:hover{color:var(--accent)}
+section{padding:36px 0;border-bottom:1px solid var(--border)}
+h2{font-family:'Chakra Petch',sans-serif;font-size:1.42rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+h3{font-family:'Chakra Petch',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:24px 0 8px;color:var(--accent)}
+h4{font-family:'Chakra Petch',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:1px;margin:16px 0 6px;color:var(--gold)}
+p{margin-bottom:10px;font-size:.88rem}
+a{color:var(--link)}em{color:var(--text);font-style:italic}
+code{font-family:'IBM Plex Mono',monospace;font-size:.82em;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--gold)}
+ul{margin:6px 0 12px 20px}li{font-size:.85rem;margin-bottom:5px}
+.s{background:var(--surface);padding:14px 18px;margin:14px 0;border-radius:0 6px 6px 0;border-left:3px solid var(--border)}
+.s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.8rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;color:var(--gold)}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{padding:7px 11px;border:1px solid var(--border);font-size:.78rem;text-align:left;vertical-align:top}
+th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.66rem;letter-spacing:1px}
+/* milestone cards */
+.ms{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 22px;margin:20px 0}
+.ms-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--border);padding-bottom:12px;margin-bottom:6px}
+.ms-head .id{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:1px;color:var(--purple)}
+.ms-head .nm{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:1px;flex:1;min-width:200px}
+.ms-prog{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--accent);background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:3px 12px}
+.pbar{height:5px;background:var(--surface2);border-radius:4px;overflow:hidden;margin:8px 0 4px}
+.pfill{height:100%;width:0;background:var(--success);transition:width .25s}
+.mmeta{font-size:.78rem;color:var(--dim);margin:8px 0}
+.mmeta b{color:var(--text)}
+.grp{margin:14px 0 6px}
+.grp .gh{font-family:'Chakra Petch',sans-serif;font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--dim);border-left:3px solid var(--accent);padding-left:8px;margin-bottom:7px}
+.grp.assets .gh{border-color:var(--gold)}.grp.tests .gh{border-color:var(--success)}.grp.exit .gh{border-color:var(--purple)}
+label.ck{display:flex;gap:9px;align-items:flex-start;font-size:.85rem;padding:3px 0;cursor:pointer;color:var(--text)}
+label.ck input{margin-top:3px;width:15px;height:15px;flex-shrink:0;accent-color:var(--success);cursor:pointer}
+label.ck input:checked + span{color:var(--dim);text-decoration:line-through}
+label.ck span code{text-decoration:none}
+.prompt{position:relative;background:#0d1017;border:1px solid var(--border);border-left:3px solid var(--purple);border-radius:6px;margin:10px 0;padding:0}
+.prompt .ph{font-family:'IBM Plex Mono',monospace;font-size:.63rem;letter-spacing:1px;text-transform:uppercase;color:var(--purple);padding:7px 12px 0}
+.prompt pre{margin:0;padding:8px 12px 12px;overflow-x:auto}
+.prompt code{display:block;background:none;color:#cdd4e0;font-size:.76rem;line-height:1.55;white-space:pre-wrap;padding:0}
+.prompt .copy{position:absolute;top:6px;right:8px;background:var(--surface2);color:var(--dim);border:1px solid var(--border);border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;padding:3px 8px;cursor:pointer;text-transform:uppercase}
+.prompt .copy:hover{color:var(--accent)}
+.pill{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.pill-core{background:rgba(155,125,255,.13);color:var(--purple);border:1px solid rgba(155,125,255,.3)}
+.pill-render{background:rgba(79,195,247,.12);color:var(--accent);border:1px solid rgba(79,195,247,.3)}
+.pill-data{background:rgba(255,213,79,.12);color:var(--gold);border:1px solid rgba(255,213,79,.3)}
+.pill-test{background:rgba(102,187,106,.12);color:var(--success);border:1px solid rgba(102,187,106,.3)}
+.dim{color:var(--dim)}.green{color:var(--success)}.amber{color:var(--warn)}.red{color:var(--danger)}
+footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
+@media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.4rem}.ctn{padding:0 16px}.dash,nav{padding-left:16px;padding-right:16px}th,td{font-size:.72rem;padding:5px 7px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Rivenkeep — Software Design Document</h1>
+<div class="sub">Architecture · Build Order · Asset Pipeline · Testing · AI-Assisted Workflow</div>
+<div class="meta">Version 1.0.2 · Derived from GDD v6.2.4 · Swift · SpriteKit · GameplayKit · Interactive checklist — progress saves in this browser</div>
+</header>
+
+<div class="dash"><div class="row">
+<span class="gnum" id="gnum">0 / 0 (0%)</span>
+<div class="gbar"><div class="gfill" id="gfill"></div></div>
+<button id="reset">Reset</button>
+</div></div>
+
+<nav>
+<a href="#version">Version</a>
+<a href="#use">How to Use</a>
+<a href="#stack">Stack</a>
+<a href="#arch">Architecture</a>
+<a href="#ai-arch">AI Layer</a>
+<a href="#struct">Project Layout</a>
+<a href="#assets">Asset Pipeline</a>
+<a href="#m0">M0</a><a href="#m1">M1</a><a href="#m2">M2</a><a href="#m3">M3</a><a href="#m4">M4</a><a href="#m5">M5</a><a href="#m6">M6</a><a href="#m7">M7</a><a href="#m8">M8</a><a href="#m9">M9</a><a href="#m10">M10</a><a href="#m11">M11</a><a href="#m12">M12</a>
+<a href="#testing">Testing</a><a href="#timeline">Timeline</a>
+</nav>
+
+<div class="ctn">
+
+<section id="version">
+<h2>Document Version &amp; Changelog</h2>
+<div class="s" style="border-left-color:var(--gold)"><div class="ct">Versioning Rule — Non-Negotiable</div>
+<p><strong>Every change to this document increments the version.</strong> Patch (1.0.<b>x</b>) for content edits, fixes, and task tweaks; minor (1.<b>x</b>.0) for new sections or milestones; major (<b>x</b>.0.0) for a structural rewrite. <strong>Update the changelog below on every edit</strong> and bump the version stamp in the header and footer. No silent changes.</p></div>
+<table>
+<tr><th>Version</th><th>Date</th><th>Change</th></tr>
+<tr><td>1.0.0</td><td>Initial</td><td>First SDD: architecture (deterministic Core ⟂ SpriteKit render), project layout, asset pipeline, milestones M0–M12, testing strategy, timeline.</td></tr>
+<tr><td>1.0.1</td><td>prior</td><td>Added document versioning + this changelog. Integrated the <a href="#ai-arch">AI-Enhanced Experience</a> as a first-class layer (Apple Foundation Models): piece-name moderation + suggestions folded into M9; post-battle debrief, living tutorial, the rules assistant, dynamic flavor, accessibility narration, and recaps folded into M11; the debrief's data dependency noted in M10; AI testing row added. GDD reference updated to v6.2.3.</td></tr>
+<tr><td><b>1.0.2</b></td><td>current</td><td>Renamed the two AI help personas for in-world consistency: the building/gameplay helper is now <b>"Ask the Stonewright"</b> (was "Ask the Stonemason" — matches the Stonewrights who build) and the rules-help + narrative voice is now <b>"Ask the Emissary"</b> (was "Ask the Garrison" — avoids collision with the Last Garrison castle mechanic). GDD reference updated to v6.2.4.</td></tr>
+</table>
+</section>
+
+<section id="use">
+<h2>How to Use This Document</h2>
+<p>This is both the <strong>Software Design Document</strong> (the architecture and the rules everything must obey) and the <strong>build plan</strong> (the ordered, checkable task list to realize it). It is written for an intermediate engineer to pick up and execute. The GDD (v6.2.4) remains the source of truth for <em>what</em> the game is; this document is <em>how</em> to build it and <em>in what order</em>.</p>
+<ul>
+<li><strong>Check boxes to track progress.</strong> Every task, asset, and test is a checkbox. State is saved in this browser (localStorage) — close and reopen and your progress is still here. The bar at the top is overall completion; each milestone shows its own count. "Reset" clears everything (with confirm).</li>
+<li><strong>Work milestones in order (M0 → M12).</strong> They form a <em>vertical slice first</em> sequence: by the end of M4 you have one playable battle end-to-end; everything after deepens and widens it. Each milestone lists what it <b>depends on</b>, so nothing is started before its foundation exists.</li>
+<li><strong>Each milestone has four groups:</strong> <span class="pill pill-core">Tasks</span> (the code), <span class="pill pill-data">Assets needed</span> (art/audio required <em>by this milestone</em> — use placeholders until M11), <span class="pill pill-test">Tests</span> (what to verify before moving on), and an <strong>Exit Criteria</strong> "definition of done."</li>
+<li><strong>AI prompts.</strong> Purple blocks are written to paste directly into the <strong>Claude model inside the Windsurf plugin</strong> (Cascade chat) in your JetBrains/IntelliJ IDE. They assume the file/architecture context of the surrounding tasks. Hit "copy", paste, and refine. They are starting points, not magic — always review generated Swift against the GDD and the determinism rules.</li>
+<li><strong>Definition of Done (global):</strong> a task is done when it (a) compiles, (b) has the tests listed for its milestone passing, (c) obeys the <a href="#arch">determinism contract</a>, and (d) is committed with a message referencing the milestone (e.g. <code>M4: deterministic tick loop</code>).</li>
+</ul>
+<div class="s"><div class="ct">Reality check on tooling</div><p>iOS + SpriteKit games are <strong>built and run through Xcode</strong> (toolchain, simulators, signing, asset catalogs, Game Center entitlements). The Windsurf/Claude plugin is used here for <em>authoring and refactoring Swift</em> — author in Windsurf, build/run/profile in Xcode. The two coexist on the same SwiftPM/Xcode project on disk. Where a task is Xcode-specific (entitlements, capabilities, asset catalog), it is noted.</p></div>
+</section>
+
+<section id="stack">
+<h2>Technology Stack</h2>
+<table>
+<tr><th>Layer</th><th>Choice</th><th>Why</th></tr>
+<tr><td>Language</td><td>Swift 5.9+</td><td>Native iOS; value types help determinism.</td></tr>
+<tr><td>Rendering / scene</td><td>SpriteKit + SKScene</td><td>2D sprite/tile rendering, action system, built into iOS. Matches the GDD's 2.5D battlefield.</td></tr>
+<tr><td>Game logic helpers</td><td>GameplayKit</td><td><code>GKGridGraph</code> (weighted A* troop pathfinding), <code>GKStateMachine</code> (phase + piece state machines), <code>GKMersenneTwisterRandomSource</code> (seeded deterministic RNG).</td></tr>
+<tr><td>Min OS / devices</td><td>iOS 16+, iPhone first</td><td>Portrait orientation per GDD. iPad later.</td></tr>
+<tr><td>Persistence (local)</td><td>Codable → file</td><td>Source-of-truth save written locally first; never block on network.</td></tr>
+<tr><td>Cloud save / sync</td><td>CloudKit (private DB)</td><td>Cross-device progress; GDPR-deletable.</td></tr>
+<tr><td>Social / ranking</td><td>GameKit (Game Center)</td><td>Leaderboards (Battle Score), achievements.</td></tr>
+<tr><td>Analytics / config / crash</td><td>Firebase Analytics, Remote Config, Crashlytics</td><td>The event schema, server-tunable timers/star thresholds, crash triage. Free tier covers launch scale.</td></tr>
+<tr><td>Ads / IAP</td><td>StoreKit 2 + a rewarded-ad SDK (e.g. AdMob)</td><td>Earned-only currency rule: IAP sells ad-free + cosmetics only, never Stonwryts.</td></tr>
+<tr><td>Dependencies</td><td>Swift Package Manager</td><td>Keep deps minimal; the sim core has zero third-party deps.</td></tr>
+<tr><td>CI</td><td>Xcode Cloud or GitHub Actions (macOS runner)</td><td>Build + run unit tests on every push.</td></tr>
+</table>
+</section>
+
+<section id="arch">
+<h2>Architecture — The One Rule Everything Obeys</h2>
+<p>The GDD's central promise is <strong>determinism</strong>: every battle is identical for every player on every run, which is what makes the puzzle learnable, the leaderboards fair, and replays shareable. That single promise dictates the entire architecture.</p>
+
+<h3>Simulation core ⟂ render layer (hard separation)</h3>
+<p>Split the codebase into two modules with a one-way dependency:</p>
+<ul>
+<li><strong><code>RivenkeepCore</code></strong> — a pure-Swift module with <em>no</em> import of SpriteKit/UIKit. It owns the grid, all units, all rules, the fixed-step tick loop, and the seeded RNG. It is fully unit-testable headless, runs identically on any device, and is the only place game state changes. It exposes a deterministic <code>step(intents:) -&gt; [Event]</code> API.</li>
+<li><strong><code>RivenkeepRender</code></strong> — SpriteKit. It <em>observes</em> core state and the event stream and draws nodes/animations. It captures touch input and translates it into <em>intents</em> handed to the core. It never mutates game state directly. Animations interpolate between discrete tick states for smooth visuals (the standard GameplayKit-grid technique).</li>
+</ul>
+<div class="s"><div class="ct">The determinism contract (every Core task must honor this)</div>
+<ul>
+<li><strong>Fixed logic tick = 0.5 s.</strong> The sim advances in discrete ticks, decoupled from frame rate. Render interpolates; logic never runs on <code>deltaTime</code>.</li>
+<li><strong>Seeded RNG only.</strong> All randomness flows through one <code>GKMersenneTwisterRandomSource</code> seeded from <code>battleID</code>. Never call <code>Int.random</code>, <code>arc4random</code>, <code>Date()</code>, or <code>UUID()</code> inside the sim.</li>
+<li><strong>Deterministic ordering.</strong> Iterate units in a stable order (sorted by spawn index, never a <code>Set</code>). Resolve simultaneous events by fixed tie-break rules.</li>
+<li><strong>Avoid float drift.</strong> Prefer integer grid coordinates and integer HP/damage. Where sub-grid position is needed (ship/projectile movement), use a fixed formula evaluation order and the same rounding everywhere.</li>
+<li><strong>Replay = seed + battle params + input timeline.</strong> Record the player's intents with their tick numbers; replaying them on the same seed must reproduce the exact end state. This is also the strongest determinism <em>test</em> (see M4).</li>
+</ul></div>
+
+<h3>Core object model</h3>
+<table>
+<tr><th>Type</th><th>Responsibility</th></tr>
+<tr><td><code>Grid</code></td><td>64×48 array of <code>Cell</code> (terrain, occupancy, owner). O(1) coordinate access, bounds-checked subscript.</td></tr>
+<tr><td><code>Piece</code> / <code>WallRack</code></td><td>Polyomino shapes (offset sets + rotation), deterministic draw with anti-streak, storage slots, trash.</td></tr>
+<tr><td><code>EnclosureSolver</code></td><td>Exterior flood-fill from the border; any open cell not reached = enclosed. Drives victory + isolation cleanup + interior-block reward.</td></tr>
+<tr><td><code>Battle</code></td><td>Aggregate root. Holds <code>GKStateMachine</code> over Build → Deploy → Fight → LastStand, sortie counter, timers, RNG, and all unit collections. The thing <code>step()</code> advances.</td></tr>
+<tr><td><code>Cannon</code> / <code>Ship</code> / <code>Troop</code> / <code>Castle</code> / <code>Boss</code></td><td>Units with a deterministic per-tick <code>update</code>. Stats loaded from data, not hardcoded.</td></tr>
+<tr><td><code>ShipAI</code> / <code>TroopPathfinder</code></td><td>Deterministic grid-scoring target selection; weighted A* over a <code>GKGridGraph</code> rebuilt when walls change.</td></tr>
+<tr><td><code>StarEvaluator</code> / <code>BattleScore</code> / <code>Economy</code></td><td>Pure functions over end-of-battle state → 3-lever stars, raw score, Stonwryt deltas.</td></tr>
+</table>
+<p class="src">Pattern reference: Apple's <em>DemoBots</em> shows SpriteKit + GameplayKit entities/components/state-machines at scale; this design keeps the simulation out of SpriteKit entirely for testability and determinism, which DemoBots does not, but borrows its component and state-machine structure on the render side.</p>
+</section>
+
+<section id="ai-arch">
+<h2>The AI Layer — Apple Foundation Models</h2>
+<p>Rivenkeep treats Apple Intelligence (the on-device model behind Siri, exposed to apps via the <strong>Foundation Models</strong> framework, iOS 26+) as a <strong>first-class third layer</strong> alongside Core and Render — not an optional extra. It powers intelligent piece naming, the post-battle debrief, the living tutorial, rules help, dynamic flavor, accessibility narration, and recaps (full design in <a href="#" onclick="return false">GDD → AI-Enhanced Experience</a>). The model runs entirely on-device (private, free, offline).</p>
+
+<div class="s" style="border-left-color:var(--danger)"><div class="ct" style="color:var(--danger)">The firewall is an architectural boundary, not a guideline</div>
+<p><code>RivenkeepCore</code> <strong>must not import the AI module</strong> (add the same build check that bans SpriteKit in Core). AI lives in a separate <code>RivenkeepAI</code> module that depends on Core's <em>read-only summary types</em>, never the reverse. AI consumes a <strong>structured post-hoc summary</strong> or <strong>player-facing text</strong>, runs <strong>off the timed loop</strong> (results screen, menus, naming UI — never a combat tick), and is <strong>non-authoritative</strong>: its output never flows back into game state, scoring, ranking, or the replay system. The determinism contract is preserved because the AI can only <em>read</em> finished outcomes and <em>write</em> cosmetic text.</p></div>
+
+<h3>Module shape</h3>
+<ul>
+<li><strong><code>RivenkeepAI</code> module.</strong> Depends on Core's <code>BattleSummary</code>, <code>BoardSnapshot</code>, and progression read-models. Exposes feature services: <code>NameModerator</code>, <code>NameSuggester</code>, <code>DebriefCoach</code>, <code>TutorGuide</code>, <code>RulesAssistant</code>, <code>FlavorWriter</code>, <code>BoardNarrator</code>, <code>RecapWriter</code>.</li>
+<li><strong><code>LanguageProvider</code> protocol.</strong> All services talk to the model through one protocol (request → typed result). The default impl wraps <code>SystemLanguageModel</code> via <code>LanguageModelSession</code>. This makes the model <em>swappable</em> — Apple is opening the framework to Private Cloud Compute and to Claude/Gemini Swift packages — and lets tests inject a deterministic stub provider.</li>
+<li><strong>Guided generation everywhere.</strong> Use <code>@Generable</code> typed structs (e.g. <code>Debrief</code>, <code>[PieceNameSuggestion]</code>, <code>ModerationVerdict</code>) so the app never parses free text. Use the <code>Tool</code> protocol for rules-grounded answers (the assistant calls into a rules lookup rather than inventing mechanics).</li>
+</ul>
+
+<h3>Availability &amp; the required baseline (this is not "optional AI")</h3>
+<p>The AI path is the <strong>intended experience</strong>. Because Foundation Models requires an Apple-Intelligence-capable device with the feature on, each service ships with a <strong>baseline that guarantees coverage</strong> — framed as defense-in-depth, not a downgrade:</p>
+<table>
+<tr><th>Service</th><th>AI path (intended)</th><th>Baseline (always present)</th></tr>
+<tr><td>Name moderation</td><td>On-device classification + entity extraction</td><td><b>Required, fail-closed:</b> denylist + pattern filter + community report. Safety can never depend solely on a gated feature.</td></tr>
+<tr><td>Debrief / tutor / flavor / recap</td><td>Personalized generated text</td><td>Templated text built from the same structured summary (deterministic sentences keyed off the data).</td></tr>
+<tr><td>Rules assistant</td><td>NL answer grounded via tool-calling</td><td>Searchable static FAQ / codex.</td></tr>
+</table>
+<p>Build the baseline first (it's also the test fixture and the unsupported-device path), then layer the model on top. As Apple-Intelligence device penetration grows, the AI path becomes the universal experience without code changes.</p>
+
+<h3>Cross-cutting rules for every AI call</h3>
+<ul>
+<li><strong>Async + cached.</strong> Never block a score, transition, or input. Cache results (re-opening a result is instant).</li>
+<li><strong>Moderate generated content too.</strong> Name suggestions and any UGC-adjacent output pass the same moderation as player input. No generated text references real people.</li>
+<li><strong>Privacy.</strong> On-device only; no player text or battle data leaves the device for AI. Matches the Production privacy posture.</li>
+<li><strong>Testability.</strong> Inject a stub <code>LanguageProvider</code> in tests; assert services degrade to baseline when the model is "unavailable," and that no AI type is reachable from <code>RivenkeepCore</code>.</li>
+</ul>
+</section>
+
+<section id="struct">
+<h2>Project Layout</h2>
+<pre style="background:#0d1017;border:1px solid var(--border);border-radius:6px;padding:14px 16px;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:#cdd4e0;line-height:1.5">Rivenkeep/
+├── Packages/
+│   └── RivenkeepCore/        # pure Swift, no SpriteKit — the sim (unit-tested)
+│       ├── Grid/             # Grid, Cell, coordinates
+│       ├── Build/            # Piece, WallRack, Wind, EnclosureSolver
+│       ├── Units/            # Cannon, Ship, Troop, Castle, Boss
+│       ├── AI/               # ShipAI, TroopPathfinder
+│       ├── Sim/              # Battle, TickLoop, RNG, Events, Intents
+│       ├── Scoring/          # StarEvaluator, BattleScore, Economy
+│       └── Data/             # BattleParameters, Theater, Codable models
+├── Rivenkeep/                # the iOS app (SpriteKit)
+│   ├── Scenes/               # HomeScene, BattleScene, sub-overlays
+│   ├── Render/               # node builders, animation, input→intent
+│   ├── UI/                   # HUD, shop panel, menus
+│   ├── Backend/              # CloudKit, GameKit, Firebase wrappers
+│   ├── Resources/            # .atlas asset catalogs, audio, JSON battle data
+│   └── App/                  # AppDelegate, entry, config
+└── RivenkeepTests/           # XCTest: CoreTests (most), AppTests
+</pre>
+<p>Rule of thumb: <strong>if a piece of logic decides a game outcome, it lives in <code>RivenkeepCore</code> and has a unit test.</strong> If it only draws or animates, it lives in the app target. This boundary is what makes the determinism and balance claims verifiable.</p>
+</section>
+
+<section id="assets">
+<h2>Asset Pipeline &amp; When Each Asset Is Needed</h2>
+<p><strong>Placeholder-first.</strong> Do not block engineering on art. Through M10, every sprite is a flat-colored shape or a free programmer-art tile; real art arrives in M11. Each milestone below lists only the <em>placeholders</em> it needs. This table is the master list of <em>final</em> assets and the milestone that first requires a real (or near-final) version.</p>
+<table>
+<tr><th>Asset group</th><th>Items</th><th>Format / notes</th><th>Needed by</th></tr>
+<tr><td>Wall &amp; spackle</td><td>Wall block (states: clean / cracked &lt;75% / spackle), enclosure floor tiles (dark + mirrored gray)</td><td>Tile sprites in a texture atlas; 1× grid cell. Crack states as overlays.</td><td>M1–M2 (placeholder), M11 (final)</td></tr>
+<tr><td>Castles</td><td>Castle 3×3 (enclosed / not-enclosed / 3 degradation states), 3-segment halo HP</td><td>Sprite + halo overlay</td><td>M2 / M11</td></tr>
+<tr><td>Cannons</td><td>10 types × (enclosed/exposed) + barrel team-color trim + HP bar (0–200%)</td><td>2×2 sprites; muzzle anchor point per type for projectile origin</td><td>M3 (Standard), M7 (all), M11 (final art)</td></tr>
+<tr><td>Ships</td><td>13 types × silhouettes; later × 10 theater skins; red "identified" outline; yellow "?" fog state</td><td>Sized per GDD (1×2 … 2×4). Base profile must read at a glance.</td><td>M4 (Warship), M5 (all), M11 (theater skins)</td></tr>
+<tr><td>Troops</td><td>7 types; Bomber as air sprite; Shield Bearer facing variants</td><td>Small sprites; walk animation (2–4 frames)</td><td>M6 / M11</td></tr>
+<tr><td>Bosses</td><td>10 bosses + stealth/surface states + attack tells</td><td>Large multi-frame sprites; per-boss VFX</td><td>M7 (one), M11 (all 10)</td></tr>
+<tr><td>Terrain</td><td>Rocks (1×1/2×2/3×3), trees (healthy/damaged), cliffs (L-tromino), water/lava/void per theater</td><td>Tiles; cliffs count as walls for enclosure</td><td>M2 / M11</td></tr>
+<tr><td>VFX</td><td>Projectiles per cannon, explosions, burn zones, lightning arcs, freeze, lava, screen shake, isolation-wipe</td><td>SKEmitter / sprite-sheet animations</td><td>M4 (basic), M11 (full)</td></tr>
+<tr><td>Maps</td><td>10 theater base maps + 190 environmental overlays (rock/tree placement per battle)</td><td>Data-driven layouts (JSON) + tile art per theater. Overlays are <em>data</em>, generated/authored.</td><td>M8 (data format), M11 (all 190)</td></tr>
+<tr><td>UI</td><td>Wall rack tray, cannon carousel, HUD (timers, stars, Stonwryt), shop cards, home screen, buttons, fonts</td><td>9-slice panels; the Chakra Petch / mono font feel from the GDD docs</td><td>M1 (functional), M9 (shop), M11 (final)</td></tr>
+<tr><td>Audio</td><td>SFX per the GDD audio table (place/rotate/snap/fire/hit/explosion/UI), music per theater, voice barks</td><td>Compressed; pooled players</td><td>M4 (core SFX), M11 (full)</td></tr>
+<tr><td>Civilization skins</td><td>Monetization skin bundles (wall/cannon/castle reskins)</td><td>Atlas variants keyed by skin id</td><td>M9 (hook), M11 (content)</td></tr>
+</table>
+<div class="s"><div class="ct">Asset conventions (set these in M0)</div>
+<ul>
+<li>Texture atlases per theater: <code>theater_&lt;name&gt;.atlas</code>; shared UI atlas; shared units atlas until theater skins exist.</li>
+<li>Naming: <code>&lt;group&gt;_&lt;name&gt;_&lt;state&gt;@&lt;scale&gt;x</code> e.g. <code>cannon_lightning_exposed@2x</code>, <code>ship_warship_fog@2x</code>.</li>
+<li>Every sprite declares an anchor + (for cannons) a muzzle point and (for ships) a hull-center used by the sim→render mapping.</li>
+<li>Asset request tickets reference the GDD section so artists have the spec (e.g. ship sizes, color states, accessibility outlines).</li>
+</ul></div>
+</section>
+
+<section id="build-order">
+<h2>Build Order — Why This Sequence</h2>
+<p>The order is <strong>vertical-slice-first</strong>: prove the riskiest, most novel thing (a deterministic Build puzzle that feels good, then a deterministic combat sim) before widening into content. By the end of <strong>M4</strong> you can play one full battle (build → deploy → fight → win/lose) with one cannon and one ship. M5–M7 add the cast and the full loop; M8–M10 add progression, economy, and live services; M11 produces content; M12 polishes and ships. Each milestone is independently testable and leaves the game in a runnable state.</p>
+</section>
+
+<section id="m0">
+<div class="ms" data-ms="m0">
+<div class="ms-head"><span class="id">M0</span><span class="nm">Foundations &amp; Project Setup</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> a building, testable, version-controlled skeleton with the Core/Render split and the deterministic tick loop proven on a trivial example. <b>Depends on:</b> nothing. <b>Outcome:</b> "Hello deterministic world" — a tick loop you can unit-test.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">setup</span> Create the Xcode project (iOS app, SpriteKit game template, portrait-only) + a local Git repo with a Swift <code>.gitignore</code>.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Add a local SwiftPM package <code>RivenkeepCore</code> (library, zero deps) and link it to the app target. Verify it has <em>no</em> SpriteKit/UIKit imports (add a build check).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Define coordinate types: <code>GridPoint(x:Int,y:Int)</code>, board constants (64×48), and a generic <code>Grid&lt;Cell&gt;</code> with bounds-checked subscript and O(1) access.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Implement the deterministic clock: <code>TickLoop</code> with fixed 0.5 s ticks, a monotonic <code>tick:Int</code> counter, and a <code>step(intents:)</code> entry point returning <code>[Event]</code>. No wall-clock time inside Core.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Wrap RNG: <code>SeededRandom</code> over <code>GKMersenneTwisterRandomSource</code>, constructed from a <code>UInt64</code> battle seed. Add a lint/code-review note banning <code>arc4random</code>/<code>Int.random</code>/<code>Date()</code> in Core.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Bare <code>BattleScene: SKScene</code> that renders the empty grid (debug tiles) and draws the tick counter — proves Core↔Render wiring.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-test">ci</span> Set up CI (GitHub Actions macOS or Xcode Cloud) to build + run <code>RivenkeepTests</code> on every push. Add SwiftLint with a determinism rule set.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">setup</span> Asset conventions + empty atlases committed (see Asset Pipeline). Decide bundle id, team, capabilities placeholder.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed</div>
+<label class="ck"><input type="checkbox"><span>Debug grid tile (single 1-cell square, two tints for checkerboard) — programmer art.</span></label>
+<label class="ck"><input type="checkbox"><span>App icon placeholder + launch screen placeholder.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Grid unit tests:</b> subscript bounds, neighbor queries, coordinate round-trips.</span></label>
+<label class="ck"><input type="checkbox"><span><b>RNG determinism test:</b> two <code>SeededRandom</code> with the same seed produce identical sequences; different seeds differ.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Tick test:</b> N calls to <code>step()</code> advance the counter by N with no time dependency.</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — Core scaffolding</div><pre><code>Create a Swift Package "RivenkeepCore" (library target, no dependencies, must not import
+SpriteKit or UIKit). Add:
+1. struct GridPoint { let x: Int; let y: Int } with Hashable + Comparable (sort by y then x).
+2. struct Grid&lt;Cell&gt; backed by a flat [Cell] of width*height (64x48 default). Provide a
+   bounds-checked subscript(GridPoint), an in-bounds(GridPoint) check, and orthogonal
+   neighbors(of:). O(1) access.
+3. final class SeededRandom wrapping GKMersenneTwisterRandomSource, init(seed: UInt64);
+   methods nextInt(upperBound:), nextDouble(), and shuffledStable([T]) -&gt; [T].
+4. protocol Simulatable { mutating func step(intents: [Intent]) -&gt; [Event] } and an empty
+   enum Intent / enum Event to fill later.
+Write XCTest cases proving: grid bounds safety, identical RNG sequences for equal seeds,
+and divergent sequences for different seeds. Keep everything deterministic — no Date(),
+no arc4random, no Int.random. Explain any nondeterminism risk you see.</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>App launches to an empty rendered grid showing a live tick counter; <code>RivenkeepCore</code> tests green in CI; determinism lint active.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m1">
+<div class="ms" data-ms="m1">
+<div class="ms-head"><span class="id">M1</span><span class="nm">The Build Puzzle (the heart)</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> placing polyomino wall pieces feels great — pick up, rotate, drag, snap, soft-lock, with deterministic draw and wind drift. This is the core fun; get it right before anything else. <b>Depends on:</b> M0. <b>GDD refs:</b> Wall Piece Groups, Piece State Machine, Wind &amp; Drift, Controls.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <code>Piece</code> model: polyomino as a set of cell offsets + rotation (0/90/180/270, no flip — mirrors are distinct pieces). Start with Groups A &amp; B (foundation + tetrominoes).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <code>WallRack</code> deterministic draw: weighted group table + anti-streak (no 3 identical in a row) + guaranteed-distribution counter, all via <code>SeededRandom</code>. Re-roll up to 3× then least-recently-drawn (per GDD).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Placement validation: piece fits only on empty, in-bounds cells (no overlap with walls/terrain/castles). Returns placement result + affected cells.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Piece state machine (<code>GKStateMachine</code>): InTray → InPlay(dragging) → SoftLock(adjustable) → HardLock. Soft-locked pieces show group tint; hard-lock merges into wall.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Wind &amp; Drift: 8-compass wind; on soft-lock, drift the piece per wind strength (deterministic). Cardinal-only early campaigns, diagonals from Cam 10+. (This is a <em>Build</em> mechanic.)</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Touch input → intents: tap-to-pick, drag-to-move, tap-to-rotate, drop. Two drag modes (smooth vs grid-snap) per GDD controls. Translate screen → <code>GridPoint</code>.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Render the wall rack tray, the dragging piece, valid/invalid placement preview (green/red), snap ticks, and the wind compass indicator.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Build phase timer (formula <code>round(25 − (campaign−1)×5/31)</code>, +10 s Sortie 1) + "Ready" early-finish + time rollover banking. Drives nothing yet but the clock.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed (placeholder)</div>
+<label class="ck"><input type="checkbox"><span>Wall block tile (clean) + group-tint overlay colors (A/B green, C/D yellow, E/F purple, G/H red).</span></label>
+<label class="ck"><input type="checkbox"><span>Wall-rack tray panel + piece thumbnails (can be drawn from shapes).</span></label>
+<label class="ck"><input type="checkbox"><span>Wind compass icon; valid/invalid placement highlight.</span></label>
+<label class="ck"><input type="checkbox"><span>SFX: pick-up, rotate click, snap tick, valid "thunk", invalid buzz.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Draw determinism:</b> same seed → identical rack sequence; anti-streak never yields 3 identical consecutively; distribution counter resets per battle.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Placement:</b> all rotations validate correctly; overlap/out-of-bounds rejected; affected-cell sets correct.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Wind drift:</b> deterministic given seed+wind; never drifts a piece off-grid or into occupied cells (or correctly cancels the lock if it would).</span></label>
+<label class="ck"><input type="checkbox"><span><b>Feel playtest:</b> hands-on — does placing pieces feel responsive? (Subjective gate; the GDD calls timing "make or break".)</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — polyomino + deterministic rack</div><pre><code>In RivenkeepCore, implement the wall-piece system from the GDD "Wall Piece Groups" and
+"Piece State Machine" sections.
+- Piece: a polyomino defined by [GridPoint] offsets, with rotate() producing 90° rotations
+  (no mirroring — L and J are separate pieces). Provide cells(at origin:) -&gt; [GridPoint].
+- Define Group A (foundation singles/dominoes) and Group B (all tetrominoes incl. S/Z and
+  L/J mirrors as distinct pieces).
+- WallRack.draw(using: SeededRandom): weighted group probabilities passed in; enforce
+  anti-streak (no 3 identical pieces consecutively, re-roll up to 3 then pick
+  least-recently-drawn) and a per-battle guaranteed-distribution counter.
+- placement(of:at:on grid:) -&gt; PlacementResult validating empty + in-bounds cells only.
+Write XCTest proving identical sequences for equal seeds and the anti-streak invariant over
+1,000 draws. Keep all randomness in SeededRandom; no other RNG.</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>You can play a standalone Build phase: draw pieces, rotate, drag, place with snap + wind drift, hit Ready; the rack is byte-identical on replay with the same seed. It <em>feels</em> good.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m2">
+<div class="ms" data-ms="m2">
+<div class="ms-head"><span class="id">M2</span><span class="nm">Enclosure, Castles &amp; Cleanup</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> the rule that defines the whole game — enclose castles to claim territory, with isolation cleanup and the interior-block reward. <b>Depends on:</b> M1. <b>GDD refs:</b> Enclosure, Isolation Cleanup, Castles, Victory Condition.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <code>EnclosureSolver</code>: exterior flood-fill from all border cells across open space; any open cell <em>not</em> reached is enclosed. Walls, cliffs, and map edge are barriers. O(grid) per evaluation.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Castle claiming: a castle is "claimed/enclosed" when fully inside an enclosed region. Track required vs visible castle counts.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Isolation cleanup (Build→Deploy transition): remove wall fragments not part of an enclosing perimeter; convert isolated interior blocks → Stonwryt credit (4 blocks = 10, ×10 scale, floor).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Terrain in the solver: rocks (impassable, not wall), trees (clear-cut when wall replaces), cliffs (count as walls for enclosure).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Victory check: all required castles enclosed at end of a Build phase = win. Mid-Build impossibility detection = immediate defeat (no playing out lost causes).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Render enclosed-floor tiles (dark) + spackle-enclosed (mirrored gray for a11y), castle states (enclosed/exposed/degradation), and the isolation-wipe banner/animation.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed (placeholder)</div>
+<label class="ck"><input type="checkbox"><span>Castle 3×3 sprite (enclosed + exposed tint).</span></label>
+<label class="ck"><input type="checkbox"><span>Enclosed-floor tile (dark) + mirrored gray spackle-floor tile.</span></label>
+<label class="ck"><input type="checkbox"><span>Rock (1×1/2×2/3×3), tree, cliff (L-tromino) tiles.</span></label>
+<label class="ck"><input type="checkbox"><span>Isolation-cleanup wipe VFX (placeholder flash).</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Flood-fill correctness:</b> hand-authored grids — simple loop, nested loops, diagonal-only gaps (must NOT enclose), cliff-as-wall, map-edge-as-wall. Property test on random grids vs a reference implementation.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Cleanup:</b> isolated fragments removed; interior-block count → correct Stonwryt; perimeter walls preserved.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Victory/defeat:</b> enclosure win fires at Build end; impossibility triggers immediate defeat.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Performance:</b> full-grid enclosure eval well under one frame (it runs on every placement preview).</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — exterior flood-fill enclosure</div><pre><code>Implement EnclosureSolver in RivenkeepCore per the GDD "Enclosure" rules.
+Input: the Grid (cells know if they are wall / cliff / open / castle / rock / tree).
+Algorithm: 4-connected flood fill starting from every border open cell, marking all
+exterior-reachable open cells. Any open cell NOT reached is enclosed. Cliffs and walls and
+the map edge are barriers; diagonal gaps do NOT leak (4-connectivity). Return:
+- Set&lt;GridPoint&gt; enclosedCells
+- which castles are fully enclosed
+- isolated wall fragments (walls not adjacent to any enclosed region's perimeter)
+Then implement isolationCleanup() that removes fragments and returns interiorBlocksReward
+(4 isolated interior blocks = 10 Stonwryts, floor division, ×10 scale).
+Provide XCTest with these fixtures: single loop, two nested loops, a loop with a 1-cell
+diagonal-only gap (must read as NOT enclosed), a cliff completing a wall, and a perimeter
+touching the map edge. Add a randomized property test: enclosed cells must never be
+border-reachable. Must be deterministic and allocation-light (runs every placement).</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>Building a wall around a castle claims it (floor tiles in, victory fires); leftover fragments get wiped and pay out Stonwryts; a diagonal gap correctly fails to enclose. All enclosure tests green.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m3">
+<div class="ms" data-ms="m3">
+<div class="ms-head"><span class="id">M3</span><span class="nm">Deploy Phase &amp; Cannons</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> place and reposition cannons inside enclosed territory, with persistence/HP and the Deploy timer. <b>Depends on:</b> M2. <b>GDD refs:</b> Deploy Phase, Cannon Health &amp; Performance, Cannon Carry, Unit Statistics.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">data</span> <code>CannonType</code> as data (range, damage, reload ticks, accuracy, special, unlock★) loaded from JSON — never hardcoded. Start with Standard; schema must hold all 10. <b>Note:</b> the GDD "eDPS" column is per-<em>tick</em> — store dmg/reload/accuracy and compute, don't store a per-second number.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Cannon placement: only on enclosed, valid 2×2 spots; carousel selection; reposition with move penalty (and Relocation-Assist exception later).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Cannon HP &amp; performance: 150 HP at 100%, scales linearly to 300 at 200%; performance modifier from HP; destroyed at 0%. Pre-build &amp; post-deploy lock-in bonuses.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Cannon carry between sorties/battles within a campaign (cap 200%); cannons persist position between sorties (Deploy gets faster).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Deploy timer (<code>round(12 + (campaign−1)×3/31)</code>) + rollover from Build; starting cannon count per campaign table.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Cannon carousel UI, drag-place, 2×2 footprint preview, HP bar (0–100 green/yellow/red; 100–200 light-green with dot marker), enclosed vs exposed tint.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed (placeholder)</div>
+<label class="ck"><input type="checkbox"><span>Standard cannon 2×2 sprite (enclosed + exposed) with muzzle anchor.</span></label>
+<label class="ck"><input type="checkbox"><span>Cannon carousel UI; HP bar widget (0–200% with dot marker).</span></label>
+<label class="ck"><input type="checkbox"><span>SFX: cannon place, reposition.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Placement legality:</b> cannons only on enclosed 2×2; exposed cannons flagged; carry/persistence across sorties correct.</span></label>
+<label class="ck"><input type="checkbox"><span><b>HP→performance:</b> modifier scales linearly; 200% = 300 effective HP; destruction at 0; carry caps at 200%.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Data loading:</b> all 10 cannon types parse from JSON; computed per-tick eDPS matches GDD table (Standard 5.31, Lightning 9.0, …).</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — cannon data + HP model</div><pre><code>Add the cannon system to RivenkeepCore.
+1. Codable struct CannonType { id, rangeGrids, damage, reloadTicks, accuracy, special,
+   unlockStars }. Load all types from Resources/cannons.json. Add a computed
+   effectiveDamagePerTick = (damage / reloadTicks) * accuracy (NOTE: per TICK, not per
+   second — 1 tick = 0.5s; do not pre-store a per-second value).
+2. struct Cannon { type; origin (2x2); hpPercent (0...200, base 150 HP at 100%);
+   performanceModifier derived linearly from hpPercent }. Destroyed at 0%.
+3. Placement: validate a 2x2 footprint sits entirely on enclosed cells. Support reposition
+   with a move penalty flag. Cannons persist position + hp between sorties within a campaign,
+   carry capped at 200%.
+Write XCTest: JSON loads all 10 types; computed eDPS-per-tick matches the GDD table values
+(Standard 5.31, Long 4.0, Lightning 9.0, Doom 3.75, etc.); hp→performance is linear;
+carry caps at 200%. Flag in a comment that Lightning takes 2x incoming damage (used in M4).</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>Inside an enclosed fort you can place/reposition Standard cannons within the Deploy timer; HP/performance model verified; cannon data fully external. Ready to make them shoot.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m4">
+<div class="ms" data-ms="m4">
+<div class="ms-head"><span class="id">M4</span><span class="nm">Fight: The Deterministic Tick Combat Core ★</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal — the make-or-break milestone:</b> a fixed-tick combat simulation where cannons auto-fire, projectiles travel, one ship moves and shoots walls, and damage resolves — fully deterministic and replayable. After this you can play one whole battle. <b>Depends on:</b> M3. <b>GDD refs:</b> Fight Phase, Player Targeting, Ship AI, Friendly Fire, Phase Timing.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> The fixed-step combat sim inside <code>Battle.step()</code>: every tick, in stable order — move projectiles, resolve hits, fire ready cannons, move ships, ships fire walls, apply damage, emit <code>Event</code>s. Lightning takes 2× incoming damage.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Cannon firing: reload countdown in ticks, target acquisition within range, accuracy roll via <code>SeededRandom</code>, projectile spawn. Three firing modes (Auto / Hold-fire / Touch-lock).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Projectile model with <em>lead</em>: cannonballs travel at finite speed; targeting leads a moving ship's predicted position (the Rampart skill, now assisted). Deterministic flight + impact.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> First ship — Warship: HP 100, speed 0.8 grids/tick, fires walls (15 dmg, 5-tick reload, 70% acc). Moves toward firing position; targets nearest wall section.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Damage + structure HP: walls 100, cannons 150, castle 500; cracks &lt;75%; wall destroyed → enclosure re-evaluated (breach can expose castle/cannons).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Player targeting intents: tap a ship to priority-target; touch-lock a cannon to a target. Friendly-fire rules (Cam 11+ flag, off for now).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Fight timer (<code>round(25 + (campaign−1)×65/31)</code>); fight ends when all ships dead OR timer expires; surviving ships persist to next sortie.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Render combat: interpolate ship/projectile positions between ticks for smooth 60fps; fire/hit/explosion VFX; damage flashes; the "3…2…1…FIGHT" transition.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <b>Replay recorder:</b> capture (seed, battle params, [tick → intents]); a headless re-runner that replays and asserts identical end state. This is your determinism harness <em>and</em> the foundation for the GDD's replay-sharing feature.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed (placeholder)</div>
+<label class="ck"><input type="checkbox"><span>Warship sprite (1×2) + simple wake.</span></label>
+<label class="ck"><input type="checkbox"><span>Projectile sprite + muzzle flash + impact spark + wall-explosion VFX.</span></label>
+<label class="ck"><input type="checkbox"><span>SFX: cannon fire, projectile impact, wall break, fight-start sting.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>★ Determinism (the big one):</b> record a full fight's intents, replay headless 100×, assert byte-identical end state every time and across simulated devices.</span></label>
+<label class="ck"><input type="checkbox"><span><b>TTK validation (ties to balance audit):</b> 1 Standard cannon kills a Warship in ~9.4 s (±1 tick); 4 cannons in ~2.4 s; a Warship breaks a wall block in ~24 s. Assert against computed values.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Breach behavior:</b> destroying a perimeter wall re-opens enclosure and exposes interior cannons/castle next eval.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Timer:</b> fight ends on all-ships-dead and on timeout; survivors carry to next sortie.</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — deterministic tick combat</div><pre><code>Implement the fixed-tick combat loop in RivenkeepCore (GDD "Fight Phase" + "Ship AI").
+1 tick = 0.5s. Battle.step(intents:) advances exactly one tick and must be fully
+deterministic. Per tick, in this STABLE order (document it):
+  (1) advance projectiles; resolve impacts (apply damage, emit HitEvent)
+  (2) for each cannon (sorted by placement index): decrement reload; if ready and a target
+      is in range, roll accuracy via SeededRandom, spawn a projectile LEADING the target's
+      predicted position at projectile speed
+  (3) for each ship (sorted by spawn index): move toward its firing position at speed
+      grids/tick; if in range of a wall, decrement reload and fire (15 dmg, 70% acc)
+  (4) apply structure damage; if a wall block hits 0, remove it and mark enclosure dirty
+Rules: Lightning cannon takes 2x incoming damage. Walls 100hp, cannons 150hp, castle 500hp.
+Targeting intents (tap-to-priority, touch-lock) come in via the intents array. Firing modes:
+Auto / HoldFire / TouchLock.
+Also implement a ReplayRecorder capturing (seed, params, [tick: [Intent]]) and a headless
+replay() that re-simulates and returns the final BattleState for comparison.
+Write XCTest: (a) record a scripted fight, replay it 100x, assert identical final state;
+(b) assert 1 Standard cannon kills a 100hp Warship in 18-20 ticks; (c) a breach re-opens
+enclosure. No wall-clock time, no unseeded RNG anywhere in the loop.</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span><b>One full battle is playable</b> (Build → Deploy → Fight → win/lose) with Standard cannons vs Warships, and the same inputs reproduce the exact same battle every time. The vertical slice is real.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m5">
+<div class="ms" data-ms="m5">
+<div class="ms-head"><span class="id">M5</span><span class="nm">Enemies: Full Fleet &amp; Ship AI</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> all 13 ship types with deterministic grid-scoring AI, sortie spawning, and DMZ advance. <b>Depends on:</b> M4. <b>GDD refs:</b> Ship Types, Ship AI (grid-scoring), DMZ, Hospital/Carrier/Transport behaviors.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">data</span> All 13 ship types as JSON data (HP, size, speed, damage, reload, accuracy, behavior tag, appears-at-campaign).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Deterministic ship AI: grid-scoring positioning (each ship scores candidate cells by threat/opportunity, picks best, ties broken by fixed rule). Same board → same moves, always.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Special behaviors: Transport (lands troops — hooks M6), Carrier (launches bombers), Hospital Ship (heals fleet), Torpedo Boat (one big shot), Mortar Ship/Artillery Barge (arc/range), Smoke/Mine/Scout, Battering Ram &amp; Siege (troop-class).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Spawn + sortie system: ships enter from spawn points over the fight window; DMZ advances 1 grid per sortie (except Coastal/River/Swamp); per-sortie fleet composition from battle params.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Ship sprites per type with fog/identified outline states; spawn + sink animations; behavior tells (Torpedo wind-up, Hospital heal beam).</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed (placeholder)</div>
+<label class="ck"><input type="checkbox"><span>13 ship silhouettes (correct sizes) + identified red outline + fog "?" state.</span></label>
+<label class="ck"><input type="checkbox"><span>Behavior VFX: heal beam, torpedo wake, smoke cloud, mine drop.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>AI determinism:</b> identical board state → identical target/move choices across runs and devices.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Behavior correctness:</b> Hospital heals, Carrier launches, Transport reaches dock, Torpedo one-shot cadence, DMZ advance per sortie.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Balance spot-checks:</b> Artillery Barge fires from max range behind fleet; Battering Ram eDPS-to-wall ~13.3/tick once in contact.</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — deterministic ship grid-scoring AI</div><pre><code>Implement deterministic ship AI in RivenkeepCore per the GDD "Ship AI — Deterministic
+Tactical Positioning". Each ship, on its turn, evaluates candidate water cells within its
+move range and scores each by a weighted sum (distance-to-optimal-firing-range, line of
+fire to nearest wall/breach, exposure to player cannons, special-behavior goal). It moves
+toward the highest-scoring cell; ties broken by lowest (y,x). All weights from data so they
+are tunable. NO randomness in movement (determinism); accuracy rolls still use SeededRandom.
+Load 13 ship types from ships.json with behavior tags and implement: Transport (advance to
+dock, then land troops via a TroopLandingEvent), Carrier (spawn bombers on interval),
+HospitalShip (heal lowest-hp ally in radius), TorpedoBoat (charge then one 50-dmg shot),
+ArtilleryBarge/MortarShip (fire from long range, arc ignores walls for Mortar).
+Write XCTest proving identical move/target decisions for an identical board across 100 runs,
+and that each special behavior fires on the correct schedule.</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>A mixed fleet attacks intelligently and identically on replay; specials behave per GDD; sorties spawn and the DMZ creeps. Fights feel like a real assault.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m6">
+<div class="ms" data-ms="m6">
+<div class="ms-head"><span class="id">M6</span><span class="nm">Troops &amp; Weighted A* Pathfinding</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> landed troops path to walls/cannons/castles over weighted terrain; the 7 troop types incl. the Shield-Bearer+Medic "puzzle" formation. <b>Depends on:</b> M5 (Transport lands them). <b>GDD refs:</b> Troop Types, Troop Pathfinding (A* weighted), Area Denial, Bombers.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Weighted A* over a <code>GKGridGraph</code> of land cells, rebuilt when walls change; terrain weights (open/rubble/burn zones); group re-eval batching (9–16 troops split odd/even ticks per GDD).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">data</span> 7 troop types (Infantry, Sapper, Heavy, Bomber, Scout Troop, Shield Bearer, Medic) as data with HP/speed/dmg/target-priority/special.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Target priority per type (Infantry: wall→cannon→castle; Heavy: cannons first; Sapper: kamikaze 2×2; Scout Troop: floods breaches; Bomber: flies over walls, bomblets, returns to Carrier to reload).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Shield Bearer (front damage reduction + body-blocks troops behind) and Medic (heals adjacent, priority-kill) — the flanking puzzle.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Area denial &amp; ground damage (Fire Cannon burn zones block troop movement &amp; building) integrated into path weights.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Troop sprites + walk anim, bomber flight, sapper detonation, shield facing, medic heal pulse.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed (placeholder)</div>
+<label class="ck"><input type="checkbox"><span>7 troop sprites (+ Shield facing variants, Bomber air sprite).</span></label>
+<label class="ck"><input type="checkbox"><span>Burn-zone tile; sapper blast; bomb/bomblet; medic heal pulse.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Pathfinding determinism + correctness:</b> identical paths across runs; troops route around walls; recompute on breach; weighted terrain respected; tie-break stable.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Priorities:</b> Heavy beelines cannons; Sapper kills a 2×2 on contact; Scout Troop pours through a breach; Bomber ignores walls and reloads at Carrier.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Shield/Medic:</b> front damage reduced; troops behind shielded; killing Medic stops regen.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Perf:</b> path recompute for 16 troops on wall-change stays within tick budget.</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — weighted A* troops</div><pre><code>Implement troop pathfinding in RivenkeepCore using GameplayKit GKGridGraph (GDD "Troop
+Pathfinding — A* with Weighted Terrain"). Build a GKGridGraph of walkable land cells; assign
+per-node movement weights (open=1, rubble/burn=high, impassable removed). Rebuild/patch the
+graph when walls change. For up to 16 troops, batch re-evaluation: group A on even ticks,
+group B on odd ticks. Movement is deterministic — when GKGridGraph returns equal-cost paths,
+break ties by a fixed rule (prefer lower (y,x) next-node) so runs are reproducible.
+Implement 7 troop types from troops.json with target priorities:
+Infantry(wall→cannon→castle), Heavy(cannons first, tanky), Sapper(kamikaze 200 dmg 2x2 on
+wall contact), ScoutTroop(fast/fragile, targets castle through breaches), Bomber(ignores
+walls, drops bomblets on castles, returns to Carrier to reload), ShieldBearer(50% frontal
+cannon resist, blocks troops behind), Medic(heals adjacent 3/tick, can't self-heal).
+Write XCTest: identical paths across 100 runs on the same board; correct re-route after a
+breach; Heavy targets cannons; Sapper detonates 2x2; Medic regen stops on death.</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>Transports land troops that intelligently path to and attack the right targets; the Shield+Medic formation demands flanking; everything reproduces on replay.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m7">
+<div class="ms" data-ms="m7">
+<div class="ms-head"><span class="id">M7</span><span class="nm">Full Battle Loop, Stars, Score &amp; First Boss</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> the complete sortie loop with Last Stand, all defeat conditions, the 3-lever star system, Battle Score, and one working boss. <b>Depends on:</b> M6. <b>GDD refs:</b> Victory &amp; Defeat, Last Stand, Star System, Battle Score, Boss HP &amp; Combat.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Full phase machine across N sorties: Build→Deploy→Fight repeating, then the Last Stand Build (timer = banked fight time; instant-win short-circuit; unused time doesn't score).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> All defeat conditions: enclosure failure, castle destroyed below required count, boss timeout, mid-Build impossibility.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Castle degradation (3-strike), Last Garrison desperation state (&lt;5% HP → +fire rate, −accuracy, 5% cascade), Destroyed Cannon Recovery.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <code>StarEvaluator</code>: 3 levers (Ships destroyed %, Cannon health, Area enclosed %), each 1–3, average rounded up; ★★★! = 2 levers at ! + 1 at ★★★ (hidden). 0★ pacifist easter egg.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <code>BattleScore</code> = ships% + area% + avg-cannon-health% (max 400), the leaderboard metric.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> One boss (e.g. Leviathan 8,000 HP): stealth interval/duration, area attack, multi-sortie kill; boss-finale victory (HP 0 AND castles enclosed).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> End-of-battle results screen (3 lever stars animating, Battle Score, ★★★! surprise reveal), defeat popup with reason + near-miss metrics + strikes.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed (placeholder)</div>
+<label class="ck"><input type="checkbox"><span>One boss sprite + stealth/surface + attack tell + boss VFX.</span></label>
+<label class="ck"><input type="checkbox"><span>Results screen: star fly-in, ★★★! flourish, Battle Score readout; defeat popup.</span></label>
+<label class="ck"><input type="checkbox"><span>Last Garrison desperation visual; castle degradation states.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Star math:</b> table-driven cases — (1,1,2)→2★, (3,3,1)→3★, (2,2,2)→2★, ★★★! gate (2 levers at ! + 1 at ★★★), 0★ easter egg fires once/campaign.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Battle Score:</b> equals lever-percent sum; max 400; distinguishes two ★★★ runs.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Defeat conditions:</b> each triggers correctly and immediately; Last Stand short-circuit on already-enclosed.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Boss:</b> 8 cannons @ ~75% uptime kill Leviathan in ~6–10 sorties (matches GDD/balance audit).</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — star evaluator + battle score</div><pre><code>Implement StarEvaluator and BattleScore in RivenkeepCore (GDD "Star System — Three-Lever
+Averaging" + "Battle Score"). Pure functions over end-of-battle state.
+Levers (each 1..3, plus a hidden ! tier):
+  Ships: ★ any kill, ★★ ≥60%, ★★★ ≥90%, ! 100%
+  Cannons: ★ 1 survives, ★★ majority survive, ★★★ all survive avg ≥100% HP, ! avg ≥125%
+  Area: ★ any enclosed, ★★ ≥35%, ★★★ ≥50%, ! ≥85% of friendly-zone open space
+Final star = ceil(average of the three lever integer values). ★★★! requires ≥2 levers at !
+AND the third at ★★★ (averaging alone cannot reach it). Thresholds come from Remote Config
+(server-tunable) with on-device defaults. 0★ easter egg: 0 ships + 0 cannons surviving but
+castles enclosed → award 10 × campaignLevel once per campaign.
+BattleScore = shipsDestroyedPercent + areaEnclosedPercent + avgCannonHealthPercent (0...400).
+Write XCTest covering the boundary cases above, the ★★★! gate, the ceil-average rule, and
+the 0★ once-per-campaign behavior.</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>A full multi-sortie battle (including a boss) plays start to finish, awards correct stars + Battle Score, and handles every win/lose path. The game is fully playable for a single battle of any shape.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m8">
+<div class="ms" data-ms="m8">
+<div class="ms-head"><span class="id">M8</span><span class="nm">Progression, Battle Generator &amp; Save System</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> turn one battle into the campaign — 190 parameterized battles, difficulty layers/levels, star-gated unlocks, storage slots, and durable save (local + CloudKit). <b>Depends on:</b> M7. <b>GDD refs:</b> Difficulty Layers Matrix, Difficulty Levels, Unlock Timeline, Wall Storage, Battle Spreadsheet.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">data</span> <code>BattleParameters</code> generator: produce all 190 battles from the campaign/difficulty matrix (theater, layers A–E, piece tier, sorties, cannon start/max, castles req/visible, wind, timers, enemy set). Deterministic + data-validated.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Difficulty layers (5 dimensions A–E baked per campaign) and the 4 player difficulty levels (Recruit/Commander/Veteran/Legend) as modifiers. <b>Apply the balance-audit fix:</b> make the ship-count modifier <em>proportional</em> (≈±33%), not flat ±2, so levels feel consistent across campaigns.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Star-gated unlocks (cumulative stars → cannons at 15/30/50/75/100/130/160/200/250★). Decide &amp; implement whether stars are cumulative across difficulty levels (recommended: yes — escape valve).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Wall storage slots (unlock at Cam 2/6/14/23/27 → 1..5) with campaign-persistent contents + restore-on-replay.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> 3-strike drop-back, campaign/war structure, replay-a-battle, and progression state model.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">data</span> Save system: <code>SaveState</code> Codable → local file (source of truth); CloudKit private-DB sync; conflict resolution (latest-wins + merge stars upward); migration/versioning.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Campaign/battle map UI, battle-select, difficulty-level picker, unlock notifications ("X★ to next cannon"), storage UI.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed (placeholder)</div>
+<label class="ck"><input type="checkbox"><span>Campaign map / battle-select UI; difficulty picker; unlock toast; storage tray.</span></label>
+<label class="ck"><input type="checkbox"><span>Battle-overlay data format (JSON) — one schema, content comes in M11.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Generator:</b> all 190 battles validate (no impossible configs; castle req ≤ visible; timers within bounds); deterministic output.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Unlock pacing:</b> simulate avg-★ trajectories — confirm the balance-audit finding (sub-1.32★ never reaches Doom in one pass) and that cross-level cumulative stars relieve it.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Save/load:</b> round-trip integrity; CloudKit sync + conflict cases; schema migration from v1→v2 fixture.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Difficulty:</b> proportional ship modifier produces consistent relative difficulty at Cam 1 and Cam 32 (no compression).</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — battle generator + save</div><pre><code>1) Implement BattleParametersGenerator in RivenkeepCore: from a campaign/difficulty matrix
+(theaters, layers A–E, piece tiers, sorties, cannon start/max, castles required/visible,
+wind, Build/Deploy/Fight timers via the GDD formulas, enemy roster by appears-at-campaign),
+produce all 190 BattleParameters as Codable. Apply difficulty LEVEL modifiers as functions:
+Recruit/Commander/Veteran/Legend adjust build timer (×1.4 / ×1.0 / ×0.9 / ×0.8) and ship
+count PROPORTIONALLY (≈ −33% / 0 / +20% / +33% of the fleet, rounded) — NOT a flat ±2 —
+so a level feels the same at Campaign 1 and 32. Validate every battle (castles_required ≤
+visible, timers in range, non-empty fleet).
+2) Implement SaveState (Codable) with a schemaVersion, written atomically to a local file
+as source of truth, plus a CloudKitSync wrapper (private DB) with latest-wins + stars merged
+upward on conflict, and a migration step.
+Write XCTest: all 190 battles generate and validate deterministically; difficulty modifiers
+scale proportionally; SaveState round-trips and migrates v1→v2.</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>You can play through campaigns with rising difficulty, unlock cannons by stars, bank storage, drop back on 3 losses, and your progress survives reinstall via CloudKit.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m9">
+<div class="ms" data-ms="m9">
+<div class="ms-head"><span class="id">M9</span><span class="nm">Economy, Monetization &amp; Daily Loops</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> the Stonwryt economy (earn/spend), the ~25 in-battle purchases, IAP (ad-free + cosmetics only), rewarded ads, and the daily/streak/challenge/weekend-race loops. <b>Depends on:</b> M8. <b>GDD refs:</b> Stonwryt, Monetization, Daily Challenges, Challenges, Weekend Race.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <code>Economy</code>: faucets (battle stars 8/23/47/93, first-time +18, campaign 87, 0★ egg, interior blocks, dailies, streak, ad +15) and hard sinks (the ~25 phase-gated items with per-battle caps). All earned-only — never purchasable with money.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> In-battle purchase engine: phase-filtered availability, time-stops-on-pause, per-item use caps, multi-purchase in one pause. "Nudge not win" — none can convert a loss to a win.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> StoreKit 2 IAP: ad-free unlock, civilization skin bundles, Commander's Pack/Circle, cosmetics. <b>No Stonwryt sales.</b> Restore-purchases path.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Rewarded video ads (max 3/day): +15 Stonwryts on insufficient balance; avoid-drop-back ad option.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Daily challenges + package timers, daily streak (14-day cycle, Day 28+ holds 2×, DiMaggio streak shields), achievement challenges (10 categories, ~190), Weekend Race (Battle Score placement).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Stonwryt purchase panel (cards, "Assign Stonewrights", masonry SFX), shop/IAP screens, daily/challenge/race UI, package-open timers.</span></label>
+</div>
+
+<div class="grp"><div class="gh">Tasks · AI — Intelligent Piece Naming (first-class, not optional)</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <code>NameModerator</code>: the <b>required fail-closed baseline first</b> — denylist + pattern/leetspeak filter + community-report hook — then the on-device Foundation Models classifier layered on top. Typed verdict via guided generation: <code>{ verdict: allow|review|reject, categories, confidence }</code>. Satisfies the child-safety UGC requirement.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <code>NameSuggester</code>: 3–4 on-theme name suggestions from a piece's shape + group + theater via guided generation (<code>[PieceNameSuggestion]</code>); each suggestion passes back through <code>NameModerator</code>.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Naming UI: suggestion chips (accept / tweak / ignore), moderation feedback states (approved-gold / pending / rejected with reason), optional one-line lore blurb on accept.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed</div>
+<label class="ck"><input type="checkbox"><span>Stonwryt icon + purchase cards + masonry-dust VFX/SFX; package-open art.</span></label>
+<label class="ck"><input type="checkbox"><span>IAP/store screens; civilization skin preview art (hook only; content M11); streak shield badges.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Economy invariants:</b> earn rates match GDD; per-battle sink caps enforced; no purchase flips a loss to a win; Stonwryts never obtainable via IAP.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Faucet/sink sim:</b> model a casual day (~180–320 faucet) → confirm the pinch point (one big play OR several nudges, not both); watch hoarding (balance-audit P2-12).</span></label>
+<label class="ck"><input type="checkbox"><span><b>IAP:</b> sandbox purchase + restore; ad reward caps at 3/day; offline grace.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Streak/dailies:</b> 14-day cycle, Day 28+ 2× hold, streak-break handling, timezone correctness.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Name moderation:</b> baseline denylist catches a banned-words fixture with the model stubbed off (fail-closed); leetspeak/PII evasions rejected; generated suggestions are themselves moderated; verdict is correctly typed.</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — name moderation + suggestions</div><pre><code>In a new RivenkeepAI module (must NOT be importable from RivenkeepCore), implement piece-name
+moderation and suggestion using Apple FoundationModels.
+1. NameModerator.moderate(_ name: String) -&gt; ModerationVerdict. Build the BASELINE FIRST and
+   make it fail-closed: a denylist + regex/leetspeak normalizer + PII patterns that runs on
+   every device with no model. THEN layer a Foundation Models classifier behind a
+   LanguageProvider protocol; combine results (reject if either rejects). Use @Generable:
+   struct ModerationVerdict { enum V { allow, review, reject }; v: V; categories: [String];
+   confidence: Double }.
+2. NameSuggester.suggest(shape:group:theater:) -&gt; [PieceNameSuggestion] via guided generation;
+   pass every suggestion back through NameModerator before returning.
+Inject a stub LanguageProvider in tests. Write XCTest: with the model stubbed unavailable the
+baseline still rejects a banned-words fixture (fail-closed), leetspeak/PII evasions are caught,
+and suggestions that violate policy are filtered. Note in comments this is a child-safety
+requirement — moderation must never fail open.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — economy engine</div><pre><code>Implement the Stonwryt economy in RivenkeepCore (GDD "Stonwryt"). Model faucets and sinks as
+data. Faucets: star rewards (8/23/47/93), first-time +18, campaign completion 87, 0★ egg
+(10×level), interior blocks (10 per 4), daily/streak/challenge/race, rewarded ad +15 (max
+3/day). Sinks: the ~25 phase-gated consumable items with their costs and per-battle/per-phase
+use caps (all HARD sinks — currency is destroyed). Enforce: Stonwryts are earned-only and can
+NEVER be created by an IAP; each item is "a nudge, not a win" (expose a flag and a test that no
+single purchase changes a loss into a win). Provide Economy.canAfford / apply / earn and a
+phase-filter for available items.
+Add an EconomySimulator test that runs a representative day (1 daily + 3 battles) and asserts
+net flow is slightly positive and that a player cannot both make a 235 "big play" AND several
+nudges from one day's income (pinch point). Keep all logic data-driven and unit-tested.</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>The full earn/spend loop works in-battle and across days; IAP sells only ad-free + cosmetics; rewarded ads and dailies/streaks/race drive return visits; the economy holds its pinch point.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m10">
+<div class="ms" data-ms="m10">
+<div class="ms-head"><span class="id">M10</span><span class="nm">Backend &amp; Live Services</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> Game Center leaderboards/achievements, Firebase analytics + Remote Config (server-tunable timers/thresholds + adaptive star thresholds), and privacy/consent — the infrastructure the GDD and balance audit depend on. <b>Depends on:</b> M8–M9. <b>GDD refs:</b> Backend Architecture, Analytics event schema, Adaptive Star Thresholds, Privacy &amp; Data Policy.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> GameKit: authenticate, Battle Score leaderboards (per battle + global), achievements; offline queue + submit on reconnect.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Firebase Analytics: implement the GDD's ~20-event schema (<code>battle_start/end</code> with per-lever %, cannon types + final HP, <code>cannon_placed/lost</code>, <code>purchase</code>, <code>ad_watch</code>, <code>stonwryt_earn/spend</code>, <code>battle_retry</code>, <code>drop_back</code>, <code>name_submit</code>…). This is what makes the balance pass possible — "without it you're tuning blind."</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Emit a structured <code>BattleSummary</code> at battle end (the same data the events carry) as the read-only input the M11 AI <a href="#ai-arch">DebriefCoach</a> consumes — Core produces it, the AI layer only reads it (firewall).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Remote Config: phase timers, star thresholds, economy values, difficulty weights all server-tunable with on-device defaults; fetch + cache + offline fallback.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Adaptive star thresholds: a Cloud Function (<code>tuneStarThresholds</code>) reading completion-rate analytics per lever and nudging thresholds gradually (the only thing preventing ★★★ grade-inflation — treat as launch-blocking, per balance audit).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Crashlytics; privacy policy URL; App Privacy questionnaire data map; first-launch consent for analytics; account data export + delete (CloudKit + Firestore) for GDPR/CCPA.</span></label>
+</div>
+
+<div class="grp assets"><div class="gh">Assets needed</div>
+<label class="ck"><input type="checkbox"><span>Achievement icons; leaderboard UI; consent/notice screen copy + layout.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Determinism guard for ranking:</b> identical replays submit identical Battle Scores (anti-cheat foundation — server can re-sim from seed+inputs).</span></label>
+<label class="ck"><input type="checkbox"><span><b>Analytics:</b> every schema event fires with correct params (debug view); no PII leaks; consent gates collection.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Remote Config:</b> values override defaults; offline uses last-fetched; bad config can't crash the sim.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Privacy:</b> data-delete actually removes CloudKit + Firestore records; export produces a complete bundle.</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — analytics schema + remote config</div><pre><code>Create an AnalyticsService wrapping Firebase Analytics that implements the GDD event schema.
+Define a Swift enum AnalyticsEvent with associated values for each event so call sites are
+type-safe: battleStart(campaign,battle,difficulty,theater),
+battleEnd(result,stars,battleScore,leverPercents,cannonTypesAndFinalHP,sorties),
+cannonPlaced(type), cannonLost(type), purchase(item,cost), adWatch(placement),
+stonwrytEarn(source,amount), stonwrytSpend(item,amount), challengeComplete(id),
+dailyStreakTick(day), battleRetry(battle), dropBack(battle), nameSubmit, nameModerationResult.
+Gate all logging behind a consent flag; never log PII. Add a RemoteConfigService exposing
+typed getters for phase timers, star thresholds, economy values, and difficulty weights, with
+compiled-in defaults and offline fallback to the last fetched values. Write tests that each
+event maps to the right Firebase name+params and that RemoteConfig falls back to defaults
+when unfetched. Note in comments that the server can re-simulate a battle from seed+inputs to
+validate leaderboard submissions (anti-cheat).</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>Scores rank on Game Center, the full event stream flows to Firebase behind consent, timers/thresholds tune from the server, and privacy export/delete work. You can now tune the game with real data.</span></label>
+</div>
+</div>
+</section>
+
+<section id="m11">
+<div class="ms" data-ms="m11">
+<div class="ms-head"><span class="id">M11</span><span class="nm">Content &amp; AI Experience — Theaters, Art, Audio, Tutorial, AI Layer</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> replace all placeholders with final content — 10 theaters, 190 overlays, all sprites/skins, audio, all 10 bosses, the 198-piece catalog, ~190 challenges, the tutorial — and build the <a href="#ai-arch">AI experience layer</a> (debrief, living tutorial, rules help, flavor, narration, recaps). <b>Depends on:</b> M0–M10 (engine feature-complete; this fills it). AI layer depends on the M10 <code>BattleSummary</code>. Runs partly in parallel with M9–M10 once formats freeze.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">content</span> 10 theater base maps + tilesets (Coastal, River, Swamp, Desert, Crystal, Frozen, Volcanic, Void, …) with per-theater water/terrain art and music.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">content</span> 190 environmental overlays (rock/tree placement per battle) authored or generated, then hand-tuned; early sparse → late dense.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">content</span> Final sprites: all 10 cannons, 13 ships × theater skins, 7 troops, 10 bosses (stealth/tells), castles, walls/spackle, terrain, full VFX set, the 198-piece catalog art.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Remaining 9 bosses with unique mechanics (Hydra heads, Magma Titan armor break, Ancient Treant wall-bypass roots, Plague DoT, Crystal Lich ricochet, etc.).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">content</span> Full audio pass: the GDD SFX/haptics table, 10 theater tracks, UI/voice; pooled players, mixing.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">content</span> ~190 challenges across 10 categories; civilization skin bundles; cosmetics catalog.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Video-guided tutorial / demo (the rewritten onboarding), home screen, settings (incl. Notifications), all final UI.</span></label>
+</div>
+
+<div class="grp"><div class="gh">Tasks · AI Experience Layer (Apple Foundation Models — first-class)</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <code>RivenkeepAI</code> module foundation: the <code>LanguageProvider</code> protocol + default <code>SystemLanguageModel</code> impl + a stub provider for tests; the build check that <code>RivenkeepCore</code> cannot import it.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <b>DebriefCoach</b> — the signature feature. Reads the <code>BattleSummary</code>, returns typed <code>Debrief{ strengths, improvements, nextTip }</code> via guided generation; tone-adaptive (new vs. veteran); async + cached on the results screen; advisory only. Templated baseline for unsupported devices.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <b>TutorGuide</b> — adaptive tutorial guidance: contextual hints from interaction telemetry, "Ask the Stonewright" free-text help (tool-grounded in rules), adaptive pacing. The tutorial battle stays scripted/deterministic; only guidance adapts.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <b>RulesAssistant</b> ("Ask the Emissary") — NL rules help via <code>Tool</code>-calling over a rules knowledge base; never invents mechanics. Static-FAQ baseline.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <b>FlavorWriter</b> — context-aware battle/victory/defeat/streak messages, campaign interstitials, boss intros, daily-challenge framing. Cosmetic, off-loop, cached, moderated.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <b>BoardNarrator</b> (accessibility) — on-demand speech-ready board-state narration; plain-language settings front-end. <b>RecapWriter</b> — campaign/weekly recaps + optional replay commentary, from analytics summaries.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> UI for all of the above: debrief card on results, tutor hint/ask surface, Ask-the-Emissary panel, accessibility narration trigger + VoiceOver/TTS wiring.</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — post-battle DebriefCoach</div><pre><code>In RivenkeepAI, implement DebriefCoach (GDD "Post-Battle Debrief"). It must NOT touch the sim.
+Input: a read-only BattleSummary from Core (stars per lever, Battle Score, cannons used +
+final HP + losses, ships destroyed/total + survivor types, breach count + first-breach tick,
+lowest castle HP moment, time used per phase, sorties, difficulty). Output via guided
+generation:
+  @Generable struct Debrief { let strengths: [String]   // 2-3, specific to THIS battle
+                              let improvements: [String] // 2-3, actionable
+                              let nextTip: String }       // one concrete tactic
+Pass a tone hint (encouraging for early/low-star/high-retry; terse for Legend/high-star).
+Go through the LanguageProvider protocol so a stub can be injected. Run async, cache by
+battleID, and NEVER let the result feed back into stars/score/state. Provide a templated
+fallback DebriefBuilder that produces sentences purely from the summary (used when the model
+is unavailable). Write XCTest: with a stub provider the typed Debrief parses and is non-empty;
+the templated fallback fires when unavailable; assert DebriefCoach has no path to mutate any
+Core game state (compile-time: it only receives a value-type summary).</code></pre></div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Content validation:</b> all 190 overlays load + are winnable (automated bot run per battle reaches a legal victory state); every theater/skin atlas resolves.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Boss correctness:</b> each boss's special mechanic behaves and is killable within its sortie band; determinism holds.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Audio/UX:</b> no missing SFX; tutorial completes; accessibility (color-blind floor patterns, HP-bar shapes, outlines) verified.</span></label>
+<label class="ck"><input type="checkbox"><span><b>AI layer:</b> with a stub provider every service returns typed output and degrades to its baseline when "unavailable"; debrief/flavor never alter score or state; <code>RivenkeepCore</code> has no compile path to <code>RivenkeepAI</code>; rules assistant answers only from the knowledge base (no invented mechanics); generated names/flavor pass moderation.</span></label>
+</div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — content loaders &amp; validation harness</div><pre><code>Build the content pipeline + a validation harness.
+1. TheaterLoader and OverlayLoader that read theater tilesets and the 190 overlay JSONs into
+   the sim's terrain layer; assert every referenced atlas/texture exists at load (fail fast).
+2. A headless "auto-pilot" bot (greedy enclosure + nearest-target firing) that can play any
+   BattleParameters to completion in the sim core.
+3. A ContentValidationTests suite that, for all 190 battles, runs the bot and asserts the
+   battle reaches a legal terminal state (win or defeat, never a hang/deadlock), enclosure is
+   achievable, and timers/fleet are sane. Report any battle that the bot cannot complete.
+This harness doubles as a balance instrument — log the bot's stars/Battle Score per battle to
+spot difficulty spikes. Keep the bot in the test target, not shipping code.</code></pre></div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>All 190 battles play with final art/audio across 10 theaters; all 10 bosses work; tutorial onboards a new player; the auto-pilot completes every battle (no unwinnable content).</span></label>
+</div>
+</div>
+</section>
+
+<section id="m12">
+<div class="ms" data-ms="m12">
+<div class="ms-head"><span class="id">M12</span><span class="nm">Polish, Optimization, Balance Pass &amp; Launch</span><span class="ms-prog">0/0</span></div>
+<div class="pbar"><div class="pfill"></div></div>
+<div class="mmeta"><b>Goal:</b> ship it. Performance, device matrix, the data-driven balance pass (close the audit's P0/P1 items), beta, and App Store submission. <b>Depends on:</b> M11. <b>GDD refs:</b> Production &amp; Standards, Mobile UX, Phase Timing; Balance Analysis P0/P1.</div>
+
+<div class="grp"><div class="gh">Tasks</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Performance: hold 60 fps with full fleets + troops + VFX; SKTextureAtlas batching, node pooling, emitter budgets; memory + battery profiling in Instruments.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <b>Balance pass with real analytics</b> — resolve the audit's P0/P1: tame Lightning (per-cannon win-rate &gt;60% → adjust), settle Chain/Scatter cluster variance, fix the eDPS per-tick labeling everywhere, confirm proportional difficulty, verify adaptive star thresholds hold ★★★ rates.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Mobile UX polish: thumb-zone layout, one-handed play, interruption/auto-save, the 3 distinct phase pressure feels; haptics.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">launch</span> App Store: listing, screenshots, App Privacy nutrition label, age rating, ASO; TestFlight internal → external beta; crash-free-rate gate.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">launch</span> Accessibility &amp; localization scaffold; notification strategy (permission after first ★★★); final QA on the device matrix.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">launch</span> Live-ops readiness: Remote Config dashboards, Weekend Race schedule, daily-challenge rotation, support/feedback path.</span></label>
+</div>
+
+<div class="grp tests"><div class="gh">Tests</div>
+<label class="ck"><input type="checkbox"><span><b>Performance budget:</b> 60 fps on the min-spec device under worst-case load; memory under ceiling; no thermal throttling in a 15-min boss battle.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Beta telemetry:</b> ★★★ frequency ≈ target, ★★★! ≈ 1/15–20 battles, no battle with anomalous loss/retry rate, economy net slightly positive.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Soak/stability:</b> long-session auto-save/restore; backgrounding mid-fight; crash-free ≥ 99.5%.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Pre-submission:</b> privacy questionnaire matches actual data flows; data-delete verified; no banned APIs; ad SDK compliance.</span></label>
+</div>
+
+<div class="grp exit"><div class="gh">Exit criteria</div>
+<label class="ck"><input type="checkbox"><span>The game runs smoothly across the device matrix, the balance audit's P0/P1 items are closed with data, beta metrics hit targets, and the build passes App Review. Ship.</span></label>
+</div>
+</div>
+</section>
+
+<section id="testing">
+<h2>Testing Strategy (Cross-Cutting)</h2>
+<p>Testing is embedded in every milestone above, but here is the overall strategy and the layers, so nothing is treated as an afterthought. The Core/Render split exists precisely so the game-deciding logic is testable headlessly.</p>
+<table>
+<tr><th>Layer</th><th>What it covers</th><th>Tooling / cadence</th></tr>
+<tr><td><b>Unit (Core)</b></td><td>Grid, enclosure flood-fill, RNG, piece draw, pathfinding, star math, Battle Score, economy, generator, save round-trip. The majority of tests live here.</td><td>XCTest, run on every push in CI. Target high coverage of <code>RivenkeepCore</code>.</td></tr>
+<tr><td><b>Determinism</b></td><td>Record→replay equality (same seed+inputs → identical end state), across simulated devices; ship/troop AI reproducibility; ranking integrity.</td><td>XCTest harness from M4; run nightly + pre-release on a device matrix.</td></tr>
+<tr><td><b>Integration</b></td><td>Phase transitions, full sortie loop, save/sync/migration, IAP sandbox, analytics events, Remote Config override.</td><td>XCTest + manual sandbox; per milestone + pre-release.</td></tr>
+<tr><td><b>Gameplay / balance</b></td><td>TTK vs computed values, fight-timer margins, boss kill bands, auto-pilot completes all 190 battles, difficulty consistency, economy pinch point. Closes the Balance Analysis findings.</td><td>Auto-pilot bot (M11) + analytics-driven pass (M12).</td></tr>
+<tr><td><b>Performance</b></td><td>60 fps under worst-case load, memory ceiling, battery/thermal, load times.</td><td>Instruments; min-spec device; pre-release gate.</td></tr>
+<tr><td><b>Device / compatibility</b></td><td>Screen sizes (notch/Dynamic Island/home-indicator safe areas), iOS versions, low-storage, offline.</td><td>Device matrix; TestFlight.</td></tr>
+<tr><td><b>UX / playtest</b></td><td>Does Build feel good (M1)? Early-game engagement (the Rampart-skill / passivity risk)? Tutorial clarity? Difficulty curve perception?</td><td>Hands-on + external playtesters from M1; structured beta in M12.</td></tr>
+<tr><td><b>Accessibility</b></td><td>Color-blind floor patterns + HP-bar shapes + enemy outlines (not color-only), text size, one-handed reach, reduced motion.</td><td>Manual + audit checklist; M11–M12.</td></tr>
+<tr><td><b>Compliance / pre-submission</b></td><td>App Privacy label vs real data flows, GDPR/CCPA export+delete, consent gating, ad-SDK and StoreKit rules, child-safety of UGC (piece names moderation).</td><td>Pre-submission checklist; M10 + M12.</td></tr>
+<tr><td><b>AI features</b></td><td>Moderation fail-closed with model stubbed; every service degrades to baseline when unavailable; no AI type reachable from <code>RivenkeepCore</code>; guided-generation output is typed; debrief/flavor never affect score, state, or replay; rules assistant never invents mechanics.</td><td>XCTest with a stub <code>LanguageProvider</code>; built in M11, regression-checked pre-release.</td></tr>
+</table>
+<div class="s"><div class="ct">The one test that protects the whole design</div><p>The <strong>record→replay determinism test</strong> (M4) is the keystone. It guarantees the GDD's core promise (fair, learnable, rankable battles), it is the foundation of the replay-sharing feature, and it gives the server a way to re-simulate any submitted score from <code>seed + inputs</code> to catch cheating. Keep it green at all costs — any nondeterminism is a P0 regression.</p></div>
+</section>
+
+<section id="timeline">
+<h2>Milestone Map &amp; Sequencing</h2>
+<p>Milestones are gated (each depends on the prior), but content (M11) and live-services (M10) can overlap engineering once their data formats freeze. Rough effort shape for a solo, AI-assisted developer on the GDD's 18–24 month horizon:</p>
+<table>
+<tr><th>#</th><th>Milestone</th><th>Depends on</th><th>Unlocks</th><th>Relative effort</th></tr>
+<tr><td>M0</td><td>Foundations &amp; setup</td><td>—</td><td>Testable deterministic core</td><td>S</td></tr>
+<tr><td>M1</td><td>Build puzzle</td><td>M0</td><td>The core fun</td><td>L</td></tr>
+<tr><td>M2</td><td>Enclosure &amp; castles</td><td>M1</td><td>The defining rule + victory</td><td>M</td></tr>
+<tr><td>M3</td><td>Deploy &amp; cannons</td><td>M2</td><td>Firepower placement</td><td>M</td></tr>
+<tr><td>M4 ★</td><td>Tick combat core</td><td>M3</td><td><b>First full playable battle</b></td><td>XL</td></tr>
+<tr><td>M5</td><td>Ships &amp; AI</td><td>M4</td><td>Real assaults</td><td>L</td></tr>
+<tr><td>M6</td><td>Troops &amp; pathfinding</td><td>M5</td><td>Ground threat / breach play</td><td>L</td></tr>
+<tr><td>M7</td><td>Loop, stars, first boss</td><td>M6</td><td><b>Fully playable single battle of any shape</b></td><td>L</td></tr>
+<tr><td>M8</td><td>Progression &amp; save</td><td>M7</td><td>The campaign (190 battles)</td><td>L</td></tr>
+<tr><td>M9</td><td>Economy &amp; monetization</td><td>M8</td><td>Retention + revenue loops</td><td>L</td></tr>
+<tr><td>M10</td><td>Backend &amp; live services</td><td>M8–M9</td><td>Ranking, analytics, tunability</td><td>M</td></tr>
+<tr><td>M11</td><td>Content + AI experience layer</td><td>M0–M10</td><td>All theaters/art/audio/bosses + AI debrief, tutor, naming, flavor</td><td>XL (art + AI)</td></tr>
+<tr><td>M12</td><td>Polish &amp; launch</td><td>M11</td><td><b>Ship</b></td><td>L</td></tr>
+</table>
+<div class="s"><div class="ct">Three checkpoints to stop and reassess</div>
+<ul>
+<li><b>After M1:</b> does the Build puzzle feel good in the hand? If not, fix it before building anything on top — it's the heart.</li>
+<li><b>After M4:</b> is the combat sim provably deterministic <em>and</em> is the auto-firing Fight engaging without manual aim? This is where the balance audit's biggest risk (early-game passivity vs Rampart's lead-the-target skill) gets decided. Prototype a combat skill verb here if it feels flat.</li>
+<li><b>After M8 + analytics (M10):</b> run the balance pass with real data before producing all content (M11) — cheaper to retune cannons/difficulty now than after 190 battles are authored around them.</li>
+</ul></div>
+</section>
+
+</div>
+<footer>
+Rivenkeep — Software Design Document &amp; Build Plan v1.0.2 · Companion to GDD v6.2.4 · Progress saved locally in your browser
+</footer>
+<script>
+(function(){
+  var KEY='rivenkeep_sdd_progress_v1';
+  function load(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return {}}}
+  function save(s){try{localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}}
+  var state=load();
+  var boxes=[];
+  function updateProgress(){
+    document.querySelectorAll('.ms').forEach(function(ms){
+      var bs=ms.querySelectorAll('input[type=checkbox]');
+      var done=0; bs.forEach(function(b){if(b.checked)done++;});
+      var p=ms.querySelector('.ms-prog'); if(p)p.textContent=done+'/'+bs.length;
+      var f=ms.querySelector('.pfill'); if(f)f.style.width=(bs.length?done/bs.length*100:0)+'%';
+    });
+    var done=0; boxes.forEach(function(b){if(b.checked)done++;});
+    var pct=boxes.length?Math.round(done/boxes.length*100):0;
+    var g=document.getElementById('gfill'); if(g)g.style.width=pct+'%';
+    var n=document.getElementById('gnum'); if(n)n.textContent=done+' / '+boxes.length+' ('+pct+'%)';
+  }
+  document.addEventListener('DOMContentLoaded',function(){
+    boxes=[].slice.call(document.querySelectorAll('input[type=checkbox]'));
+    boxes.forEach(function(b,i){
+      var k='c'+i;
+      if(state[k])b.checked=true;
+      b.addEventListener('change',function(){state[k]=b.checked;save(state);updateProgress();});
+    });
+    document.querySelectorAll('.prompt .copy').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var code=btn.parentElement.querySelector('code');
+        if(code&&navigator.clipboard){navigator.clipboard.writeText(code.innerText);}
+        var o=btn.textContent;btn.textContent='copied';setTimeout(function(){btn.textContent=o;},1200);
+      });
+    });
+    var r=document.getElementById('reset');
+    if(r)r.addEventListener('click',function(){
+      if(confirm('Clear all saved progress in this browser?')){state={};save(state);boxes.forEach(function(b){b.checked=false;});updateProgress();}
+    });
+    updateProgress();
+  });
+})();
+</script>
+</body>
+</html>

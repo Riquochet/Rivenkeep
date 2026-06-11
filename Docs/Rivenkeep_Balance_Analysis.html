@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — Balance Analysis (Deep Dive)</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
+header{padding:50px 40px 35px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2.2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--success));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+header .sub{font-size:.85rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim)}
+.ctn{max-width:1100px;margin:0 auto;padding:0 40px}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,12,16,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 40px;display:flex;gap:18px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap;transition:color .15s}nav a:hover{color:var(--accent)}
+section{padding:38px 0;border-bottom:1px solid var(--border)}
+h2{font-family:'Chakra Petch',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
+h3{font-family:'Chakra Petch',sans-serif;font-size:.98rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:26px 0 8px;color:var(--text)}
+h4{font-family:'Chakra Petch',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:1px;margin:18px 0 6px;color:var(--accent)}
+p{margin-bottom:10px;font-size:.88rem}
+a{color:var(--link)}
+em{color:var(--text);font-style:italic}
+code{font-family:'IBM Plex Mono',monospace;font-size:.82em;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--gold)}
+.s{background:var(--surface);padding:14px 18px;margin:14px 0;border-radius:0 6px 6px 0;border-left:3px solid var(--border)}
+.s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.8rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;color:var(--gold)}
+.sr{display:flex;gap:14px;margin:20px 0;flex-wrap:wrap}
+.sb{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 18px;flex:1;min-width:120px;text-align:center}
+.sb .sn{font-family:'Chakra Petch',sans-serif;font-size:1.8rem;font-weight:700}.sb .sl{font-size:.6rem;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+.item{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin:12px 0}
+.item .title{font-family:'Chakra Petch',sans-serif;font-size:.9rem;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.item .body{font-size:.85rem;color:var(--dim);line-height:1.65}
+.item .body strong{color:var(--text)}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.p0{background:rgba(239,83,80,.12);color:var(--danger);border:1px solid rgba(239,83,80,.3)}
+.p1{background:rgba(255,167,38,.12);color:var(--warn);border:1px solid rgba(255,167,38,.3)}
+.p2{background:rgba(79,195,247,.12);color:var(--accent);border:1px solid rgba(79,195,247,.3)}
+.ok{background:rgba(102,187,106,.12);color:var(--success);border:1px solid rgba(102,187,106,.3)}
+.cat-p0{border-left:3px solid var(--danger)}.cat-p0 .title{color:var(--danger)}
+.cat-p1{border-left:3px solid var(--warn)}.cat-p1 .title{color:var(--warn)}
+.cat-p2{border-left:3px solid var(--accent)}.cat-p2 .title{color:var(--accent)}
+.cat-ok{border-left:3px solid var(--success)}.cat-ok .title{color:var(--success)}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{padding:7px 11px;border:1px solid var(--border);font-size:.78rem;text-align:left;vertical-align:top}
+th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.68rem;letter-spacing:1px}
+td.n{font-family:'IBM Plex Mono',monospace;text-align:right}
+.green{color:var(--success)}.red{color:var(--danger)}.amber{color:var(--warn)}.dim{color:var(--dim)}
+.flag{color:var(--danger);font-weight:600}
+ul{margin:6px 0 12px 22px}li{font-size:.85rem;margin-bottom:5px}
+footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
+.src{font-size:.72rem;color:var(--dim);font-style:italic}
+@media(max-width:768px){header{padding:35px 18px 25px}h1{font-size:1.55rem}.ctn{padding:0 18px}nav{padding:8px 18px}th,td{font-size:.72rem;padding:5px 7px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Rivenkeep — Balance Analysis</h1>
+<div class="sub">A Numbers-First Deep Dive · Graded Against Game-Balance Theory &amp; Rampart</div>
+<div class="meta">Companion to GDD v6.2.2 · All figures derived from the GDD stat tables · 1 tick = 0.5 s</div>
+</header>
+
+<nav>
+<a href="#verdict">Verdict</a>
+<a href="#method">Method &amp; Rules</a>
+<a href="#cannons">Cannon Cost Curve</a>
+<a href="#combat">Combat Math</a>
+<a href="#rampart">Rampart Lessons</a>
+<a href="#difficulty">Difficulty &amp; Flow</a>
+<a href="#stars">Stars &amp; Score</a>
+<a href="#economy">Economy</a>
+<a href="#findings">Findings &amp; Fixes</a>
+</nav>
+
+<div class="ctn">
+
+<section id="verdict">
+<h2>Headline Verdict</h2>
+<p>Rivenkeep is <strong>structurally well-balanced on paper</strong>. It does the thing most indie designs skip: it derives every number from four named base units, so the system is internally consistent and tunable from a single lever. The economy has a deliberate pinch point, the PvE difficulty model avoids the classic traps (no unwinnable "play it out" states, a catch-up mechanic), and the cannon roster is built on <em>situational</em> rather than raw-power differentiation — which is the correct method for a single-player content game.</p>
+<p>The risks are not in the skeleton; they are in three specific places, plus a cluster of presentation/arithmetic slips that should be cleaned before they mislead an implementer:</p>
+<div class="sr">
+<div class="sb"><div class="sn green">Sound</div><div class="sl">Base-unit derivation · economy · PvE difficulty frame</div></div>
+<div class="sb"><div class="sn amber">3</div><div class="sl">Genuine balance risks (1 dominant cannon, thin combat layer, difficulty compression)</div></div>
+<div class="sb"><div class="sn red">1</div><div class="sl">Implementation-critical label bug (eDPS units)</div></div>
+<div class="sb"><div class="sn" style="color:var(--accent)">5</div><div class="sl">Doc/number slips worth fixing</div></div>
+</div>
+<p>The single most important finding is not a number at all — it is that Rivenkeep <strong>removes the skill that made Rampart's combat phase engaging</strong> (manual lead-the-target aiming) and replaces it with auto-firing cannons. That is a defensible modernization, but it shifts the entire "fun burden" of early battles onto the Build puzzle, and the math shows early Fights are nearly decision-free. This deserves more attention than any single cannon stat. Details in <a href="#rampart">Rampart Lessons</a>.</p>
+</section>
+
+<section id="method">
+<h2>Method &amp; The Rules I'm Grading Against</h2>
+<p>Every figure below is computed from the GDD's own stat tables. The frameworks are the established ones in game-balance literature; the reference point, per your direction, is Rampart (Atari, 1990) — the game whose loop Rivenkeep modernizes.</p>
+
+<h3>The yardsticks</h3>
+<ul>
+<li><strong>Viable options, no dominant strategy</strong> (Sirlin). A game is balanced when many choices remain meaningful at expert level; a strategy "so rewarding for so little effort that no other is viable" is the red flag. Counters should loop, rock-paper-scissors style, rather than form a straight power ladder.</li>
+<li><strong>Cost curve &amp; situational balancing</strong> (Schreiber &amp; Romero, <em>Game Balance</em>). Reduce each object to cost vs benefit; an item whose benefit-to-cost ratio is far above its peers is out of balance. Crucially for PvE: if everything sits <em>exactly</em> on the curve, choices feel pointless — so the right tool is <em>situational</em> value (a cannon worth more in some encounters than others), not flat power.</li>
+<li><strong>PvE balance criteria</strong> (Adams). A single-player game is balanced when difficulty is <em>consistent</em> and <em>perceived as fair</em>, players who fall behind can catch up, and the game never forces a player to play out a decided loss ("checkmate" states).</li>
+<li><strong>Faucets &amp; sinks</strong> (economy design). Earn-rate (faucets) and spend-rate (sinks) must stay near balance; uncapped faucets with weak sinks cause inflation/hoarding, the reverse causes starvation. Healthy economies run a "pinch point" where the resource stays meaningfully scarce.</li>
+<li><strong>Flow channel</strong> (Csikszentmihalyi, already cited in the GDD). Challenge must rise with skill; too-easy is boredom, too-hard is anxiety. The difficulty curve has to track the player's growing competence smoothly.</li>
+</ul>
+
+<h3>What made Rampart work (the reference)</h3>
+<p>Rampart's loop was Build (drop Tetris pieces to enclose castles → claim territory) → place cannons → Combat (fire on ships) → Repair. Two things made it tick, and they bear directly on Rivenkeep:</p>
+<ul>
+<li><strong>Combat was a skill test, not a DPS check.</strong> Cannonballs were slow, so the player had to <em>lead</em> moving ships, and only one shot per cannon could be in flight at a time. Even with few cannons, aiming kept you fully engaged.</li>
+<li><strong>Firepower scaled with greed.</strong> The number of cannons you got was tied to how much territory you enclosed. Enclosing more castles literally armed you more — a tight risk/reward loop where the build puzzle and the combat power were the same decision.</li>
+</ul>
+<p class="src">Rampart design facts drawn from the Wikipedia entry, Set Side B's "Arcade Mermaid" series, and Hardcore Gaming 101. Rampart is widely described as "easy to learn, hard to win" — the bar Rivenkeep is implicitly setting for itself.</p>
+</section>
+
+<section id="cannons">
+<h2>1 · The Cannon Cost Curve</h2>
+<p>Cannons are gated by accumulated stars, so the "cost" of a cannon is its <strong>unlock-★ threshold</strong> and the "benefit" is its damage output. I recomputed every eDPS from the raw stats (<code>(damage ÷ reload) × accuracy</code>) — all ten match the GDD table, so the table's arithmetic is clean. The revealing column is <strong>eDPS per 100★</strong>: how much raw damage each star of investment buys.</p>
+
+<table>
+<tr><th>Cannon</th><th>Unlock ★</th><th>eDPS<br>(per tick)</th><th>DPS<br>(per sec)</th><th>eDPS<br>per 100★</th><th>Reading</th></tr>
+<tr><td>Standard</td><td class="n">0</td><td class="n">5.31</td><td class="n">10.6</td><td class="n">—</td><td>Baseline. Correctly "never wrong to place."</td></tr>
+<tr><td>Scatter</td><td class="n">15</td><td class="n">6.30*</td><td class="n">12.6*</td><td class="n green">14.0*</td><td>*Best-case (3 targets). <span class="flag">Single-target is 2.10</span> — the weakest in the game. See flag below.</td></tr>
+<tr><td>Long</td><td class="n">30</td><td class="n">4.00</td><td class="n">8.0</td><td class="n green">13.3</td><td>Buys <em>reach</em> (22 grids), not DPS. Clear niche.</td></tr>
+<tr><td>Fire</td><td class="n">50</td><td class="n">3.40</td><td class="n">6.8</td><td class="n">6.8</td><td>Buys area denial. DPS is secondary by design.</td></tr>
+<tr><td>Mortar</td><td class="n">75</td><td class="n">2.75</td><td class="n">5.5</td><td class="n">3.7</td><td>Buys wall-ignoring arc. Lowest accuracy (55%).</td></tr>
+<tr><td>Chain</td><td class="n">100</td><td class="n">4.67&ndash;9.16</td><td class="n">9.3&ndash;18.3</td><td class="n">4.7&ndash;9.2</td><td>Cluster-gated. Honestly shown as a range.</td></tr>
+<tr><td>Healing</td><td class="n">130</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td>Pure utility (15 HP/hit to walls). Off-curve by design.</td></tr>
+<tr><td>Lightning</td><td class="n">160</td><td class="n red">9.00</td><td class="n red">18.0</td><td class="n red">5.6</td><td><span class="flag">+70% over Standard.</span> The only late cannon that buys raw DPS. See P0-1.</td></tr>
+<tr><td>Mirror</td><td class="n">200</td><td class="n">5.31</td><td class="n">10.6</td><td class="n amber">2.7</td><td><span class="amber">A Standard clone at 200★.</span> Only edge: bounce. See P1-3.</td></tr>
+<tr><td>Doom</td><td class="n">250</td><td class="n">3.75</td><td class="n">7.5</td><td class="n">1.5</td><td>Buys 80 alpha + 2×2. Boss-killer niche justifies low DPS.</td></tr>
+</table>
+
+<h3>What the curve says</h3>
+<p>Raw eDPS is <strong>flat-to-declining</strong> as unlock cost rises — Standard (5.3) is never beaten on pure damage except by Lightning. This is <em>correct</em> situational balancing: later cannons buy utility (range, area, healing, alpha, trick angles), not bigger numbers. A player picks Long for a wide map, Fire to shape the field, Doom for the boss. That is exactly the "value changes with the situation" design Schreiber recommends for PvE, and it keeps choices meaningful instead of a straight power ladder.</p>
+<p><strong>Two cannons break the pattern, and they are the two the GDD already flags:</strong></p>
+
+<div class="item cat-p0">
+<div class="title"><span class="tag p0">P0-1</span> Lightning is a dominant generalist, not a glass cannon</div>
+<div class="body">Lightning's 9.0 eDPS is <strong>+70% over Standard</strong> with no situational restriction — it is simply more damage. Its intended drawback is fragility (takes 2× damage, 10-grid range forces front placement). But the drawback only triggers <em>when walls breach</em> — and the player's entire job is to <em>not let walls breach</em>. In a competently built fortress, Lightning's downside never fires, so a skilled player gets +70% DPS for free. By Sirlin's test this is the classic dominant option: high reward, and the "cost" is one most skilled players can dodge. The per-type deployment cap helps but does not solve a Lightning-heavy core. <strong>Fix:</strong> attach a cost that triggers <em>even behind intact walls</em> — e.g. self-heat that forces a cooldown after sustained fire, a hard per-fight uptime cap, or simply lower eDPS toward ~7.0 (still best-in-slot, no longer a runaway). Confirm against the per-cannon win-rate analytics the GDD already specs.</div>
+</div>
+
+<div class="item cat-p1">
+<div class="title"><span class="tag p1">P1-2</span> Scatter's listed eDPS hides a Chain-sized variance</div>
+<div class="body">The table lists Scatter at a flat <strong>6.3</strong>, but that assumes all three projectiles hit three separate targets. Against a single ship only one pellet lands → <strong>2.10 eDPS, the lowest in the game</strong>. Scatter is therefore <em>just as cluster-dependent as Chain Shot</em> (2.1→6.3 vs Chain's 4.7→9.2) — but Chain is honestly shown as a range while Scatter is shown at its best case. This makes Scatter look like a strong, cheap (15★) pick when its realistic average is far lower, and it muddies the very comparison a player makes at the 100★ Chain unlock. <strong>Fix:</strong> show Scatter as <code>2.1&ndash;6.3</code> like Chain, and decide whether two cluster-reward cannons that close together (15★ and 100★) is redundant. If Scatter and Chain occupy the same "punish clustered fleets" niche, one of them is at risk of being a dead option (Sirlin: options that all do the same thing aren't meaningful options).</div>
+</div>
+
+<div class="item cat-p1">
+<div class="title"><span class="tag p1">P1-3</span> Mirror Cannon may be a dead option at its price</div>
+<div class="body">Mirror is mechanically a <strong>Standard cannon (identical 5.3 eDPS, 25 dmg, 4 reload, 85%)</strong> that unlocks at <strong>200★</strong> — 13th-to-last on the road, more than a Standard's worth of investment — and its only differentiator is a single bounce off cliffs/crystals. Its eDPS-per-100★ (2.7) is among the worst. Unless Crystal/cliff-heavy encounters are frequent <em>and</em> reward bounce angles meaningfully, a rational player who reaches 200★ already owns Lightning (160★) and will never choose a Standard-clone over it. <strong>Fix:</strong> either make the bounce do something Standard can't in <em>common</em> encounters (e.g. bounce ignores Shield Bearers' front armor, or pierces smoke), or move Mirror much earlier so it competes with Standard rather than Lightning.</div>
+</div>
+<p class="src">Framework: Sirlin's "viable options / dominant strategy"; Schreiber &amp; Romero's cost curve and situational balancing. A cannon far above its cost-curve peers (Lightning) or far below with no situational payoff (Mirror) are the two textbook out-of-balance shapes.</p>
+</section>
+
+<section id="combat">
+<h2>2 · Combat Math — TTK, Timers, Durability</h2>
+<p>I verified the GDD's own combat claims by recomputing time-to-kill (TTK) from the stats. Most check out; two have arithmetic that needs fixing, and one is a units issue that could genuinely break the build if taken literally.</p>
+
+<div class="item cat-p0">
+<div class="title"><span class="tag p0">P0-4</span> "eDPS" is damage <em>per tick</em>, but reads as per <em>second</em></div>
+<div class="body">The footnote defines <code>eDPS = (Damage ÷ Reload<strong>&nbsp;ticks</strong>) × Accuracy</code>, which yields a <strong>per-tick</strong> number (Standard = 5.31), and every combined-firepower example in the GDD uses it per-tick (e.g. "6 cannons × 5.3 = 31.8… kill in ~25 <em>ticks</em>"). But the label "eDPS" universally means damage <em>per second</em>, and 1 tick = 0.5 s, so the real per-second figure is <strong>2×</strong> the listed value (Standard = 10.6 DPS). An implementer who wires "5.3 damage per second" into the engine will build cannons at <strong>half their intended power</strong> and the whole fight economy collapses. The internal balance is fine — every formula is self-consistent in ticks — this is purely a naming hazard. <strong>Fix:</strong> rename the column "eDPT (per tick)" or list per-second values and adjust the worked examples. Cheap to fix, expensive to miss.</div>
+</div>
+
+<h3>TTK checks (recomputed vs GDD claims)</h3>
+<table>
+<tr><th>Interaction</th><th>Computed</th><th>GDD says</th><th>Verdict</th></tr>
+<tr><td>1 Standard cannon → Warship (100 HP)</td><td class="n">9.4 s</td><td class="n">~10 s</td><td class="green">✓ matches</td></tr>
+<tr><td>4 Standard cannons → Warship</td><td class="n">2.4 s</td><td class="n">~2.5–3 s</td><td class="green">✓ matches</td></tr>
+<tr><td>Battering Ram → 1 wall block</td><td class="n">3.8 s</td><td class="n">~4 s</td><td class="green">✓ matches</td></tr>
+<tr><td>1 Warship → 1 wall block (100 HP)</td><td class="n">23.8 s</td><td class="n red">"~18 s" and "~25 s"</td><td class="amber">slip — see P2-5</td></tr>
+</table>
+
+<div class="item cat-p2">
+<div class="title"><span class="tag p2">P2-5</span> Wall-durability number stated two ways, both off</div>
+<div class="body">A Warship (15 dmg, 5-tick reload, 70% acc = 2.1 eDPS/tick) needs ~9.5 hits to break a 100-HP block = <strong>~47.6 ticks = ~23.8 s</strong>. The GDD's base-units note says "~18 seconds," and the structure table says "~10 shots (18 sec)" — but 10 shots × 5-tick reload × 0.5 s = 25 s, so the "18 s" contradicts its own "10 shots." Walls are actually <em>more</em> durable than advertised, which only strengthens the intended "walls feel durable" feel — but the number should read ~24 s in both places. Not a balance problem; a correctness fix so the durability budget is trustworthy.</div>
+</div>
+
+<h3>Fight-timer adequacy</h3>
+<p>Does the player have time to clear the fleet? Using an all-Standard loadout (a deliberately conservative floor — real loadouts hit harder) against the GDD's own example fleet sizes:</p>
+<table>
+<tr><th>Cam</th><th>Cannons</th><th>Fleet HP</th><th>Combined<br>(per tick)</th><th>Clear time</th><th>Fight timer</th><th>Margin</th></tr>
+<tr><td class="n">1</td><td class="n">2</td><td class="n">240</td><td class="n">10.6</td><td class="n">11.3 s</td><td class="n">25 s</td><td class="n green">+13.7 s</td></tr>
+<tr><td class="n">8</td><td class="n">3</td><td class="n">400</td><td class="n">15.9</td><td class="n">12.5 s</td><td class="n">40 s</td><td class="n green">+27.5 s</td></tr>
+<tr><td class="n">16</td><td class="n">4</td><td class="n">780</td><td class="n">21.2</td><td class="n">18.4 s</td><td class="n">56 s</td><td class="n green">+37.6 s</td></tr>
+<tr><td class="n">24</td><td class="n">6</td><td class="n">1120</td><td class="n">31.9</td><td class="n">17.6 s</td><td class="n">75 s</td><td class="n green">+57.4 s</td></tr>
+<tr><td class="n">32</td><td class="n">7</td><td class="n">1500</td><td class="n">20.2 s</td><td class="n">20.2 s</td><td class="n">90 s</td><td class="n green">+69.8 s</td></tr>
+</table>
+<p>The fleet is clearable within the timer at every stage, with a growing safety margin — confirming the GDD's "fights usually end early" claim. <strong>But the growing margin is itself a flow signal:</strong> at Campaign 32 the fleet dies in ~20 s of a 90 s timer, leaving up to ~70 s of "wait out the clock" unless spawn cadence keeps feeding ships. The timer is correctly sized as a <em>safety net</em> for when walls break and firepower halves, but see the flow note <a href="#difficulty">P2-7</a> on late-fight dead air.</p>
+</section>
+
+<section id="rampart">
+<h2>3 · The Rampart Lessons — What Carried Over, What Didn't</h2>
+<p>You said Rampart "seemed well balanced back in the day," and it was — but its balance lived largely in <em>execution skill</em>, not in the stat tables. This is the most important section of the analysis, because two of Rampart's load-bearing pillars were changed in Rivenkeep, and the math shows the consequences.</p>
+
+<div class="item cat-p0">
+<div class="title"><span class="tag p0">P0-6</span> Auto-firing cannons remove Rampart's core combat skill</div>
+<div class="body">In Rampart, combat was hard because cannonballs were slow and you had to <strong>manually lead moving ships</strong>, one shot in flight at a time. That single mechanic meant even a 2-cannon fight demanded constant, skillful input — your aim <em>was</em> the gameplay. Rivenkeep replaces this with <strong>auto-firing cannons + tap-to-prioritize targeting</strong>. That is a legitimate mobile-friendly modernization, but it moves <em>all</em> the skill expression in early battles onto the Build puzzle, leaving the Fight phase nearly decision-free until enough cannon types and priority targets exist (Campaign 8+). The GDD honestly flags this as "early-game Fight passivity." The math sharpens it: with 2 auto-cannons clearing a 3-ship fleet in 11 s with +14 s of slack, the player's only Fight input is the occasional target tap. Rampart never had a passive moment because you were always aiming. <strong>Recommendation:</strong> give the Fight phase a skill verb that exists from Campaign 1. Options, cheapest first: (a) manual "lead the shot" aiming as an opt-in that boosts accuracy/damage (restores the Rampart skill directly); (b) a charge/overcharge tap per cannon; (c) the GDD's own idea — introduce a priority-kill threat (Sapper) a campaign earlier and tighten early Fight timers so auto-fire alone isn't sufficient. Without one of these, the game is "a great Build puzzle bolted to a screensaver" for its first hour.</div>
+</div>
+
+<div class="item cat-p2">
+<div class="title"><span class="tag p2">P2-8</span> Firepower is decoupled from enclosure greed</div>
+<div class="body">In Rampart, enclosing more territory <em>gave you more cannons</em> — the build puzzle and your firepower were the same decision, a tight risk/reward loop. Rivenkeep ties cannon count to fixed per-campaign start values and a per-type cap by stars; enclosing more area improves the <em>Area</em> star lever but does not arm you further <em>this battle</em>. This is a reasonable change (it keeps battles from snowballing and fits the "enclosure is the win condition" thesis), but it removes a proven feedback loop. <strong>Consider</strong> a light echo of it: e.g. a bonus cannon slot unlocked mid-battle when enclosed area crosses a threshold, so greedy building is rewarded with firepower the way Rampart trained players to expect. Optional — flagged because it's the other half of "what made Rampart work."</div>
+</div>
+
+<div class="item cat-ok">
+<div class="title"><span class="tag ok">KEPT</span> The two pillars Rivenkeep correctly preserves</div>
+<div class="body"><strong>Enclosure-as-territory</strong> is intact and even elevated to the sole win condition — the right call; it's Rampart's signature. And <strong>"easy to learn, hard to win"</strong> survives in the Build puzzle, which deepens correctly via the 16-tier polyomino progression. The decision to make victory <em>enclosure-only</em> (ships feed score, not the win) is actually a cleaner ruleset than Rampart's fuzzy "sink most ships to advance" — it removes the ambiguity the original had about when a level ends.</div>
+</div>
+</section>
+
+<section id="difficulty">
+<h2>4 · Difficulty Scaling &amp; Flow</h2>
+
+<div class="item cat-p1">
+<div class="title"><span class="tag p1">P1-9</span> Difficulty <em>levels</em> compress as campaigns advance</div>
+<div class="body">The 4 player levels modify ships by a <strong>flat ±2 per sortie</strong>. Against the GDD's own fleet sizes, that flat number is a wildly different <em>proportion</em> early vs late:
+<table>
+<tr><th>Campaign</th><th>Fleet</th><th>Recruit (−2)</th><th>Legend (+2)</th></tr>
+<tr><td class="n">1</td><td class="n">3</td><td class="n red">−67%</td><td class="n red">+67%</td></tr>
+<tr><td class="n">8</td><td class="n">4</td><td class="n">−50%</td><td class="n">+50%</td></tr>
+<tr><td class="n">16</td><td class="n">6</td><td class="n">−33%</td><td class="n">+33%</td></tr>
+<tr><td class="n">32</td><td class="n">10</td><td class="n green">−20%</td><td class="n green">+20%</td></tr>
+</table>
+On Recruit, early battles lose two-thirds of their fleet (nearly trivial); on Legend they gain two-thirds (brutal). By Campaign 32 both settle to a mild ±20%. So the <em>distance between difficulty levels shrinks over the game</em> — the opposite of a consistent difficulty promise (Adams: PvE difficulty should be consistent). The build-timer modifiers (Recruit +40%, Legend −20%) are proportional and fine; it's the flat ship count that misbehaves. <strong>Fix:</strong> make the ship modifier proportional too (e.g. Recruit −33% of fleet rounded, Legend +33%), so a level feels like the same level at Campaign 1 and Campaign 32.</div>
+</div>
+
+<div class="item cat-p2">
+<div class="title"><span class="tag p2">P2-7</span> Late-game Fight phases have long dead air</div>
+<div class="body">From the timer table: a tuned late-game loadout clears the fleet in ~20 s of a 90 s window. The GDD correctly frames the long timer as a safety net for disaster runs, but for a <em>clean</em> run that's up to ~70 s of waiting unless ships keep spawning at a steady cadence. <strong>Recommendation:</strong> ensure spawn cadence (set in the enemy overlay) feeds ships across the whole window so the Fight stays active, or let the player "Ready" out of a Fight early once all spawns are exhausted and banked into Last Stand time (rewarding decisive clears the way the Build/Deploy Ready button does). This also ties back to P0-6 — an active combat verb makes the long timer feel earned rather than idle.</div>
+</div>
+
+<div class="item cat-p2">
+<div class="title"><span class="tag p2">P2-10</span> Unlock pacing gates low-skill players out of the top cannons</div>
+<div class="body">Cannons unlock on cumulative stars; the last one (Doom) needs 250★. Across a 190-battle difficulty pass (max 570★), the average rating you must hold just to reach Doom by the final battle is <strong>1.32★</strong>. A player averaging below that <em>never sees the top 1–3 cannons</em> on that difficulty.
+<table>
+<tr><th>Avg ★/battle</th><th>Doom (250★) unlocked</th></tr>
+<tr><td class="n">3.00</td><td>by battle 83</td></tr>
+<tr><td class="n">2.00</td><td>by battle 125</td></tr>
+<tr><td class="n">1.32</td><td>by battle 189 (just barely)</td></tr>
+<tr><td class="n red">1.00</td><td class="red">never (needs 250 battles)</td></tr>
+</table>
+This is a defensible <em>mastery gate</em> — top tools for top play — and it rewards the star system as intended. But confirm one thing the GDD leaves ambiguous: <strong>are stars cumulative across the 4 difficulty levels?</strong> If yes, a struggling player can grind easier levels to unlock cannons (good escape valve). If no, the bottom segment is permanently locked out of content they paid attention for. Recommend cumulative-across-levels, and surface "X★ to next cannon" prominently so the gate feels like a goal, not a wall.</div>
+</div>
+</section>
+
+<section id="stars">
+<h2>5 · Star System &amp; Battle Score</h2>
+<p>The 3-lever average (Ships / Cannon Health / Area), rounded up, is elegant and the Battle Score (raw sum, max 400) is the right way to preserve resolution for leaderboards. Two structural observations:</p>
+
+<div class="item cat-p2">
+<div class="title"><span class="tag p2">P2-11</span> "Turtle" is a near-dominant path to ★★★ (but not to the leaderboard)</div>
+<div class="body">Because the rating rounds <em>up</em>, any two levers at ★★★ guarantee ★★★ overall regardless of the third. The two most player-controllable levers are <strong>Area</strong> (just enclose ≥50% — and the Last Stand grants free time to do it) and <strong>Cannon Health</strong> (keep cannons alive ≥100% avg — trivial for a player carrying 150%+ cannons between battles). So <em>enclose big + protect cannons + ignore ships entirely</em> reliably yields ★★★, leaving the <strong>Ships</strong> lever nearly decorative for the rounded star. This is <em>philosophically on-brand</em> — enclosure is the whole thesis — and the design correctly routes aggression into <strong>Battle Score</strong> and the hidden <strong>★★★!</strong> (which requires 100% ships). So the star is turtle-friendly while the leaderboard rewards killers. That's a deliberate, healthy split — just be aware the Ships lever does little work for the visible star, and the <strong>adaptive server thresholds are the only thing preventing ★★★ grade-inflation</strong> for invested players. That tuning is currently specced but not built; treat it as launch-blocking, not optional, or early ★★★ rates will run hot.</div>
+</div>
+
+<div class="item cat-ok">
+<div class="title"><span class="tag ok">OK</span> Anti-frustration &amp; no-checkmate design is textbook-correct</div>
+<div class="body">Immediate-defeat detection (the game ends the moment enclosure is mathematically impossible rather than forcing you to play out a loss) directly implements Adams' "avoid checkmate situations." The 3-strike drop-back is a clean catch-up/anti-frustration mechanic (flow theory), and letting a player spend 142 Stonwryts <em>or</em> watch an ad to stay put gives agency without pay-to-win. This part of the difficulty model is genuinely well done.</div>
+</div>
+</section>
+
+<section id="economy">
+<h2>6 · The Stonwryt Economy</h2>
+<div class="item cat-ok">
+<div class="title"><span class="tag ok">OK</span> Faucet/sink ratio is a deliberate, healthy pinch point</div>
+<div class="body">Faucet for a casual player is ~<strong>180–320 Stonwryts/day</strong>; the single most expensive use (Early Cleanup) is 235, Battle Surge 93, a full Alter-Time 48. So a day's earnings buys <em>one</em> big play <em>or</em> several small nudges — never everything. That is a correct "pinch point": the resource stays scarce enough that each spend is a real decision (the GDD's "a nudge, not a win"). All sinks are <strong>hard sinks</strong> (currency is consumed, never returned), which is the right call against inflation, and every per-phase item is use-capped, bounding how much a single battle can absorb.</div>
+</div>
+<div class="item cat-p2">
+<div class="title"><span class="tag p2">P2-12</span> Watch the one inflation vector: stockpiling vs capped sinks</div>
+<div class="body">The faucet is technically uncapped (you can replay battles), though replay yield is low (star reward only, 8–47, no first-time bonus). The real risk is a <em>committed</em> player who banks daily/streak/challenge income without spending: because all sinks are per-battle-capped consumables and there is no permanent power purchase (correct — earned-only, no pay-to-win), a large stockpile has nowhere to go except funding a nudge in <em>every</em> battle, which could blunt the difficulty curve for exactly the players who least need help. <strong>Mitigation:</strong> the per-battle caps already bound the per-fight benefit, so this is minor — but if analytics show high-balance players over-nudging, add a prestige/cosmetic <em>money sink</em> (the Ultima Online "luxury goods" trick) to drain hoards without selling power. The earned-only rule is the economy's best feature; protect it.</div>
+</div>
+</section>
+
+<section id="findings">
+<h2>Findings, Ranked</h2>
+<p>Severity is about <em>fun and correctness risk</em>, not effort. P0 = address before/at the start of the prototype balance pass; P1 = resolve during the balance pass; P2 = polish / documentation.</p>
+
+<h3>P0 — Resolve first</h3>
+<table>
+<tr><th>#</th><th>Finding</th><th>One-line fix</th></tr>
+<tr><td>P0-1</td><td>Lightning is a +70% dominant generalist; its drawback only triggers on wall breach</td><td>Add an always-on cost (heat/uptime cap) or drop eDPS to ~7.0</td></tr>
+<tr><td>P0-4</td><td>"eDPS" is per-<em>tick</em>; literal per-second wiring halves cannon power</td><td>Rename to eDPT or restate per-second; fix worked examples</td></tr>
+<tr><td>P0-6</td><td>Auto-fire removes Rampart's lead-the-target skill → passive early Fights</td><td>Add a Fight-phase skill verb from Cam 1 (manual aim / overcharge / earlier priority threat)</td></tr>
+</table>
+
+<h3>P1 — Resolve during the balance pass</h3>
+<table>
+<tr><th>#</th><th>Finding</th><th>One-line fix</th></tr>
+<tr><td>P1-2</td><td>Scatter shown at best-case 6.3; single-target is 2.1 (as cluster-gated as Chain)</td><td>Show as 2.1–6.3; decide if Scatter+Chain overlap</td></tr>
+<tr><td>P1-3</td><td>Mirror = a Standard clone at 200★; likely a dead option vs Lightning</td><td>Give bounce a common-encounter payoff or move it earlier</td></tr>
+<tr><td>P1-9</td><td>Flat ±2 ship modifier makes difficulty levels compress (±67%→±20%)</td><td>Make the ship modifier proportional to fleet size</td></tr>
+<tr><td>P2-11*</td><td>★★★ grade-inflation prevented only by adaptive thresholds (not yet built)</td><td>Treat adaptive star tuning as launch-blocking</td></tr>
+</table>
+
+<h3>P2 — Polish &amp; documentation</h3>
+<table>
+<tr><th>#</th><th>Finding</th><th>One-line fix</th></tr>
+<tr><td>P2-5</td><td>Wall-TTK stated as "18 s" but computes to ~24 s (and contradicts its own "10 shots")</td><td>Correct to ~24 s in both places</td></tr>
+<tr><td>P2-7</td><td>Late-game Fights clear in ~20 s of a 90 s timer → dead air</td><td>Active spawn cadence or "Ready-out" of a cleared Fight</td></tr>
+<tr><td>P2-8</td><td>Firepower decoupled from enclosure greed (a Rampart loop lost)</td><td>Optional: a bonus cannon slot at an enclosed-area threshold</td></tr>
+<tr><td>P2-10</td><td>Sub-1.32★ players never unlock the top cannons in one pass</td><td>Confirm stars are cumulative across difficulty levels</td></tr>
+<tr><td>P2-12</td><td>Stockpiling vs per-battle-capped sinks could over-nudge skilled players</td><td>Add a cosmetic money sink if analytics show hoarding</td></tr>
+</table>
+
+<h3>What is already right (don't touch)</h3>
+<ul>
+<li><strong>Base-unit derivation.</strong> Four numbers drive everything; one lever re-tunes the system cleanly. Rare discipline.</li>
+<li><strong>Situational cannon roster.</strong> Flat-to-declining eDPS with rising utility is the correct PvE method (Schreiber) — choices stay meaningful. Only the two outliers above need work.</li>
+<li><strong>Enclosure-only victory + immediate-defeat detection.</strong> Cleaner than Rampart's win rule and textbook anti-checkmate.</li>
+<li><strong>Earned-only economy with a real pinch point and hard sinks.</strong> Protects leaderboard integrity and resists inflation.</li>
+<li><strong>The GDD already names its own unknowns.</strong> The "Open Balance &amp; Flow Questions" box flags Lightning, Chain, and early passivity for playtest — this analysis confirms those instincts with numbers and adds the units bug, the difficulty-compression, and the Rampart-skill gap.</li>
+</ul>
+</section>
+
+<section>
+<h2>Bottom Line</h2>
+<p>On the numbers, Rivenkeep is <strong>more rigorously balanced than the vast majority of indie designs ever get</strong> — the structure is sound and almost everything is tunable from the base units without cascade risk. Nothing here is fatal. The work that matters before the build settles is narrow and specific: <strong>tame the one dominant cannon, fix the per-tick label before it halves your firepower in code, and give the Fight phase a reason to exist in the first hour the way Rampart's aiming did.</strong> Resolve those three and tune the rest against the per-cannon analytics the GDD already plans to capture, and the game will hold up to the standard you're measuring it against — Rampart's "easy to learn, hard to win," with a great deal more depth behind it.</p>
+<p class="dim">Every number in this document is recomputed from the GDD v6.2.2 stat tables and is reproducible from them. Where this analysis and the GDD disagree on a figure, the discrepancy is flagged as a finding rather than silently corrected — the GDD remains the source of truth until you decide the fix.</p>
+</section>
+
+</div>
+<footer>
+Rivenkeep — Balance Analysis (Deep Dive) · Companion to GDD v6.2.2 · Frameworks: Sirlin · Schreiber &amp; Romero · Adams · Csikszentmihalyi · Reference: Rampart (Atari, 1990)
+</footer>
+</body>
+</html>
