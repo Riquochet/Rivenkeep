@@ -75,7 +75,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <header>
 <h1>Rivenkeep — Software Design Document</h1>
 <div class="sub">Architecture · Build Order · Asset Pipeline · Testing · AI-Assisted Workflow</div>
-<div class="meta">Version 1.0.2 · Derived from GDD v6.2.4 · Swift · SpriteKit · GameplayKit · Interactive checklist — progress saves in this browser</div>
+<div class="meta">Version 1.1.0 · Derived from GDD v6.2.4 · Swift · SpriteKit · GameplayKit · Interactive checklist — progress saves in this browser</div>
 </header>
 
 <div class="dash"><div class="row">
@@ -93,7 +93,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <a href="#struct">Project Layout</a>
 <a href="#assets">Asset Pipeline</a>
 <a href="#m0">M0</a><a href="#m1">M1</a><a href="#m2">M2</a><a href="#m3">M3</a><a href="#m4">M4</a><a href="#m5">M5</a><a href="#m6">M6</a><a href="#m7">M7</a><a href="#m8">M8</a><a href="#m9">M9</a><a href="#m10">M10</a><a href="#m11">M11</a><a href="#m12">M12</a>
-<a href="#testing">Testing</a><a href="#timeline">Timeline</a>
+<a href="#testing">Testing</a><a href="#timeline">Timeline</a><a href="#playbook">Playbook</a>
 </nav>
 
 <div class="ctn">
@@ -106,7 +106,8 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <tr><th>Version</th><th>Date</th><th>Change</th></tr>
 <tr><td>1.0.0</td><td>Initial</td><td>First SDD: architecture (deterministic Core ⟂ SpriteKit render), project layout, asset pipeline, milestones M0–M12, testing strategy, timeline.</td></tr>
 <tr><td>1.0.1</td><td>prior</td><td>Added document versioning + this changelog. Integrated the <a href="#ai-arch">AI-Enhanced Experience</a> as a first-class layer (Apple Foundation Models): piece-name moderation + suggestions folded into M9; post-battle debrief, living tutorial, the rules assistant, dynamic flavor, accessibility narration, and recaps folded into M11; the debrief's data dependency noted in M10; AI testing row added. GDD reference updated to v6.2.3.</td></tr>
-<tr><td><b>1.0.2</b></td><td>current</td><td>Renamed the two AI help personas for in-world consistency: the building/gameplay helper is now <b>"Ask the Stonewright"</b> (was "Ask the Stonemason" — matches the Stonewrights who build) and the rules-help + narrative voice is now <b>"Ask the Emissary"</b> (was "Ask the Garrison" — avoids collision with the Last Garrison castle mechanic). GDD reference updated to v6.2.4.</td></tr>
+<tr><td>1.0.2</td><td>prior</td><td>Renamed the two AI help personas for in-world consistency: the building/gameplay helper is now <b>"Ask the Stonewright"</b> (was "Ask the Stonemason" — matches the Stonewrights who build) and the rules-help + narrative voice is now <b>"Ask the Emissary"</b> (was "Ask the Garrison" — avoids collision with the Last Garrison castle mechanic). GDD reference updated to v6.2.4.</td></tr>
+<tr><td><b>1.1.0</b></td><td>current</td><td>Added <a href="#playbook">Appendix A — The Build Playbook</a>: a fully fleshed, start-to-finish AI prompt sequence (project setup through M12) written for an agentic coder (Devin Desktop / Claude Code) and a beginner to iOS. Reworked the prompt guidance to be agent-agnostic. (No game-design changes.)</td></tr>
 </table>
 </section>
 
@@ -117,7 +118,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <li><strong>Check boxes to track progress.</strong> Every task, asset, and test is a checkbox. State is saved in this browser (localStorage) — close and reopen and your progress is still here. The bar at the top is overall completion; each milestone shows its own count. "Reset" clears everything (with confirm).</li>
 <li><strong>Work milestones in order (M0 → M12).</strong> They form a <em>vertical slice first</em> sequence: by the end of M4 you have one playable battle end-to-end; everything after deepens and widens it. Each milestone lists what it <b>depends on</b>, so nothing is started before its foundation exists.</li>
 <li><strong>Each milestone has four groups:</strong> <span class="pill pill-core">Tasks</span> (the code), <span class="pill pill-data">Assets needed</span> (art/audio required <em>by this milestone</em> — use placeholders until M11), <span class="pill pill-test">Tests</span> (what to verify before moving on), and an <strong>Exit Criteria</strong> "definition of done."</li>
-<li><strong>AI prompts.</strong> Purple blocks are written to paste directly into the <strong>Claude model inside the Windsurf plugin</strong> (Cascade chat) in your JetBrains/IntelliJ IDE. They assume the file/architecture context of the surrounding tasks. Hit "copy", paste, and refine. They are starting points, not magic — always review generated Swift against the GDD and the determinism rules.</li>
+<li><strong>AI prompts.</strong> Purple blocks are written for an <strong>agentic AI coder</strong> — <strong>Devin Desktop</strong> (the editor formerly called Windsurf; same Cascade agent on a VS Code base) or <strong>Claude Code</strong> (terminal). These agents read your repo, write code across files, run terminal commands, and run tests, so the prompts tell the agent to <em>build, test, and iterate</em> — not just emit code. Each milestone has a starter prompt inline; <strong><a href="#playbook">Appendix A — The Build Playbook</a></strong> contains the fully fleshed, start-to-finish prompt sequence (project setup through launch), written for someone new to iOS. Always review generated Swift against the GDD and the determinism rules before committing.</li>
 <li><strong>Definition of Done (global):</strong> a task is done when it (a) compiles, (b) has the tests listed for its milestone passing, (c) obeys the <a href="#arch">determinism contract</a>, and (d) is committed with a message referencing the milestone (e.g. <code>M4: deterministic tick loop</code>).</li>
 </ul>
 <div class="s"><div class="ct">Reality check on tooling</div><p>iOS + SpriteKit games are <strong>built and run through Xcode</strong> (toolchain, simulators, signing, asset catalogs, Game Center entitlements). The Windsurf/Claude plugin is used here for <em>authoring and refactoring Swift</em> — author in Windsurf, build/run/profile in Xcode. The two coexist on the same SwiftPM/Xcode project on disk. Where a task is Xcode-specific (entitlements, capabilities, asset catalog), it is noted.</p></div>
@@ -955,9 +956,220 @@ spot difficulty spikes. Keep the bot in the test target, not shipping code.</cod
 </ul></div>
 </section>
 
+<section id="playbook">
+<h2>Appendix A — The Build Playbook (Fully-Fleshed AI Prompts)</h2>
+<p>This is the start-to-finish prompt sequence to build Rivenkeep with an agentic AI coder, written assuming you are <strong>new to iOS and Swift</strong>. Each prompt maps to a milestone above and is meant to be run by <strong>Devin Desktop</strong> (the editor formerly called Windsurf — same Cascade agent) or <strong>Claude Code</strong> (terminal). These agents can read your files, write code across the project, run commands, and run tests, so the prompts tell the agent to <em>build and verify</em>, then stop for you.</p>
+
+<div class="s" style="border-left-color:var(--accent)"><div class="ct">How to drive the agent (read this first)</div>
+<ul>
+<li><strong>Put the repo on your Mac and open it in the agent.</strong> Devin Desktop: open the folder. Claude Code: <code>cd</code> into the folder and start it there. Because <code>Rivenkeep_GDD.html</code> and <code>Rivenkeep_SDD.html</code> are in the repo, the agent can read them — the prompts tell it which sections to read.</li>
+<li><strong>Run one prompt at a time, in order.</strong> Do not paste the next prompt until the current milestone's <em>Exit Criteria</em> (in the milestone cards above) are met and you've committed.</li>
+<li><strong>The loop:</strong> paste prompt → agent reads the GDD/SDD, writes code + tests, runs them, iterates until green → you review the diff, run the app/tests yourself, then <code>git commit</code>. Each prompt ends by telling the agent to summarize and stop for your review.</li>
+<li><strong>If it goes sideways,</strong> <code>git restore</code> / revert to your last commit and re-prompt with tighter constraints. Cheap to undo when you commit after every milestone.</li>
+<li><strong>The one rule the agent must never break:</strong> nothing in <code>RivenkeepCore</code> may use wall-clock time or unseeded randomness, and no AI may touch the simulation. Repeat it if the agent drifts.</li>
+</ul></div>
+
+<h3>Before you start — things only you can do</h3>
+<div class="grp">
+<label class="ck"><input type="checkbox"><span>Use a <strong>Mac</strong> (Xcode is Mac-only) and install <strong>Xcode</strong> from the Mac App Store (free, large download). Open it once to finish component install.</span></label>
+<label class="ck"><input type="checkbox"><span>Create a free <strong>Apple ID</strong>. The free tier runs the game on the Simulator and your own iPhone; the paid Apple Developer Program ($99/yr) is only needed later for TestFlight/App Store (M12).</span></label>
+<label class="ck"><input type="checkbox"><span>Install your agent: <strong>Devin Desktop</strong> and/or <strong>Claude Code</strong> (see <code>docs.claude.com</code> for the Claude Code install). Sign in.</span></label>
+<label class="ck"><input type="checkbox"><span><strong>Clone your GitHub repo</strong> locally (the one with the GDD, SDD, journal) and open that folder in the agent.</span></label>
+</div>
+
+<h3>The prompt sequence</h3>
+<p class="dim">Work top to bottom. Each prompt references the matching milestone (its full Tasks/Tests/Exit lists) and the GDD sections to read.</p>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P0.1 · Project setup &amp; scaffolding (milestone M0)</div><pre><code>You're setting up a brand-new iOS game called Rivenkeep. I'm new to iOS/Swift, so explain
+each step in one line as you go. This repo already contains Rivenkeep_GDD.html and
+Rivenkeep_SDD.html — first read the SDD sections "Architecture", "The AI Layer", and
+"Project Layout".
+Do, in this folder:
+1. Create an Xcode iOS app "Rivenkeep" (SpriteKit Game template, Swift, portrait only,
+   iOS 16 minimum), bundle id com.riquochet.rivenkeep.
+2. Add a local Swift package "RivenkeepCore" (library, zero dependencies) and link it to the
+   app. It must NOT import SpriteKit or UIKit — add a test that fails if it ever does.
+3. Add a local Swift package "RivenkeepAI" that may read RivenkeepCore's summary types but
+   that RivenkeepCore can never import — add a check enforcing that one-way boundary.
+4. Create the folder structure shown in the SDD "Project Layout".
+5. Add an XCTest target "RivenkeepTests" with one trivial passing test.
+6. Ensure .gitignore covers Swift/Xcode/macOS; keep Package.resolved tracked (this is an app).
+7. Add a GitHub Actions workflow on a macOS runner that builds and runs the tests on push.
+Keep it minimal and building — NO gameplay yet. Then build, run the tests, fix until green,
+tell me how to open and run it in Xcode (Simulator), and STOP for my review.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P0.2 · Deterministic core foundations (milestone M0)</div><pre><code>Read SDD milestone M0 (Tasks/Tests/Exit) and "Architecture → the determinism contract".
+In RivenkeepCore implement:
+- GridPoint(x,y) (Hashable, Comparable: sort by y then x).
+- Grid&lt;Cell&gt; backed by a flat array, 64x48, bounds-checked subscript, O(1) access,
+  orthogonal neighbors(of:).
+- TickLoop: a fixed 0.5s logic tick with an integer tick counter and
+  step(intents:) -&gt; [Event] as the single entry point that advances exactly one tick.
+  No wall-clock time anywhere.
+- SeededRandom wrapping GKMersenneTwisterRandomSource(seed: UInt64) with nextInt(upperBound:),
+  nextDouble(), shuffledStable(_:). All randomness in the game must go through this.
+Add the M0 XCTests: grid bounds safety, identical RNG sequences for equal seeds (and different
+for different seeds), tick advances by N over N steps with no time dependency.
+Run the tests, iterate until green, summarize, and STOP. Reminder: no Date(), arc4random, or
+Int.random in Core.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P1 · The Build puzzle (milestone M1)</div><pre><code>Read SDD milestone M1 and GDD "Wall Piece Groups", "Piece State Machine", "Wind &amp; Drift",
+and "Controls". Implement the build phase: polyomino Piece (offset sets + 90° rotations, no
+mirroring), WallRack deterministic draw (weighted groups + anti-streak + guaranteed
+distribution, all via SeededRandom), placement validation (empty/in-bounds only), the piece
+state machine (InTray→Dragging→SoftLock→HardLock), and Wind &amp; Drift on soft-lock. Then the
+SpriteKit side: render the grid, tray, dragging piece, valid/invalid preview, snap, and the
+wind compass; map touches to intents.
+Write and run the M1 tests (draw determinism + anti-streak over 1,000 draws, placement
+correctness for all rotations, wind drift never lands off-grid or on an occupied cell).
+Iterate until green. Then let me play it and tell me how. STOP for review.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P2 · Enclosure, castles &amp; cleanup (milestone M2)</div><pre><code>Read SDD milestone M2 and GDD "Enclosure", "Isolation Cleanup", "Castles", "Victory
+Condition". Implement EnclosureSolver as a 4-connected exterior flood-fill from every border
+open cell — any open cell NOT reached is enclosed; walls, cliffs, and the map edge are
+barriers; diagonal gaps must NOT leak. Add castle claiming, isolationCleanup() (remove
+fragments, convert interior blocks to Stonwryts at 4 blocks = 10, x10 scale, floor), terrain
+(rocks impassable, trees clear-cut, cliffs count as wall), and the victory/defeat checks.
+Render enclosed-floor tiles, castle states, and the cleanup wipe.
+Write and run the M2 tests, including the fixtures listed (single loop, nested loops, a
+1-cell diagonal-only gap that must read as NOT enclosed, cliff-completes-wall, edge-as-wall)
+and a random property test (enclosed cells are never border-reachable). Iterate until green,
+STOP for review.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P3 · Deploy phase &amp; cannons (milestone M3)</div><pre><code>Read SDD milestone M3 and GDD "Deploy Phase", "Cannon Health &amp; Performance", "Cannon
+Carry", "Unit Statistics". Implement CannonType as data loaded from Resources/cannons.json
+(range, damage, reloadTicks, accuracy, special, unlockStars) with a computed
+effectiveDamagePerTick = damage/reloadTicks*accuracy — remember eDPS in the GDD is per TICK
+(0.5s), do NOT store a per-second number. Implement Cannon (2x2 placement on enclosed cells
+only, hpPercent 0...200 with linear performance, destroyed at 0), reposition, and carry +
+persistence between sorties (cap 200%). Render the carousel, 2x2 preview, and HP bar.
+Write/run the M3 tests (placement legality, hp→performance linear, all 10 cannon types parse,
+computed per-tick eDPS matches the GDD table: Standard 5.31, Lightning 9.0, ...). Iterate
+until green, STOP.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P4.1 · The deterministic tick combat core (milestone M4)</div><pre><code>This is the most important milestone — go carefully. Read SDD milestone M4 and GDD "Fight
+Phase", "Player Targeting", "Ship AI", "Phase Timing". Implement the fixed-tick combat loop
+inside Battle.step(): per tick, in a STABLE documented order — advance projectiles &amp; resolve
+hits; fire ready cannons (reload in ticks, accuracy via SeededRandom, projectile LEADS the
+target's predicted position); move one ship (Warship: 100hp, 0.8 grids/tick) and let it fire
+walls (15 dmg, 70% acc, 5-tick reload); apply structure damage; a destroyed wall marks
+enclosure dirty (breach can expose interior). Lightning cannon takes 2x incoming damage.
+Add the three firing modes (Auto/HoldFire/TouchLock) and tap-to-priority-target. Render with
+smooth interpolation between ticks; add fire/hit/explosion VFX.
+Write/run the M4 tests: 1 Standard cannon kills a Warship in 18-20 ticks; a breach re-opens
+enclosure; fight ends on all-ships-dead and on timeout. Iterate until green, STOP. Reminder:
+the whole loop must be deterministic — seeded RNG only, stable iteration order, no time.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P4.2 · Replay + determinism harness (milestone M4)</div><pre><code>Still in milestone M4. Implement a ReplayRecorder that captures (seed, battle params,
+[tick: [Intent]]) and a headless replay() that re-simulates from that record and returns the
+final BattleState. Then write the keystone test: record a scripted full fight, replay it 100
+times, and assert the final state is byte-identical every time; also assert two fresh
+simulations with the same seed + inputs match. Make this test part of CI. If it ever fails,
+treat it as a P0 — find and remove the nondeterminism (unseeded RNG, unordered collection,
+float drift, or wall-clock use). Summarize how the harness works and STOP.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P5 · Ships &amp; deterministic AI (milestone M5)</div><pre><code>Read SDD milestone M5 and GDD "Ship Types", "Ship AI". Load all 13 ship types from
+ships.json. Implement deterministic grid-scoring AI: each ship scores candidate water cells
+by a weighted sum (distance to optimal firing range, line of fire, exposure, special goal),
+moves to the best, ties broken by lowest (y,x); NO randomness in movement. Implement the
+special behaviors (Transport lands troops via an event, Carrier launches bombers, Hospital
+heals, Torpedo charges then one big shot, Artillery/Mortar long range). Add spawning, the
+sortie system, and DMZ advance (1 grid/sortie except Coastal/River/Swamp). Render ships with
+fog/identified states.
+Write/run the M5 tests (identical decisions across 100 runs on one board; each special fires
+on schedule). Iterate until green, STOP.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P6 · Troops &amp; weighted A* (milestone M6)</div><pre><code>Read SDD milestone M6 and GDD "Troop Types", "Troop Pathfinding", "Bombers". Build a
+GKGridGraph of walkable land cells with per-node weights (open=1, rubble/burn=high,
+impassable removed); rebuild when walls change. Path up to 16 troops with deterministic tie-
+breaking (prefer lower (y,x) next node), batching re-eval across even/odd ticks. Implement
+the 7 troop types with target priorities from troops.json (Infantry, Heavy→cannons, Sapper
+kamikaze 2x2, ScoutTroop floods breaches, Bomber ignores walls + reloads at Carrier,
+ShieldBearer frontal resist + body-block, Medic heals adjacent). Integrate burn-zone weights.
+Render troops, bomber flight, sapper blast, shield facing, medic pulse.
+Write/run the M6 tests (identical paths across 100 runs; reroute after breach; priorities;
+shield/medic behavior; 16-troop recompute within tick budget). Iterate until green, STOP.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P7 · Full loop, stars, score &amp; first boss (milestone M7)</div><pre><code>Read SDD milestone M7 and GDD "Victory &amp; Defeat", "Last Stand", "Star System", "Battle
+Score", "Boss HP &amp; Combat". Implement the full phase machine across N sorties + the Last
+Stand build, all defeat conditions, castle degradation + Last Garrison desperation +
+destroyed-cannon recovery, StarEvaluator (3 levers each 1..3, final = ceil(average), the
+hidden star-star-star! gate needing 2 levers at ! plus the third at 3 stars, 0-star easter
+egg), BattleScore (sum of the three lever percents, max 400), and one boss (Leviathan 8000hp
+with stealth + area attack). Render the results screen (animated lever stars, Battle Score,
+the ! reveal) and the defeat popup.
+Write/run the M7 tests (the star boundary table, the !-gate, ceil-average, 0-star
+once-per-campaign, Battle Score distinguishes two 3-star runs, boss dies in ~6-10 sorties).
+Iterate until green, STOP.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P8 · Progression, battle generator &amp; save (milestone M8)</div><pre><code>Read SDD milestone M8 and GDD "Difficulty Layers Matrix", "Difficulty Levels", "Unlock
+Timeline", "Wall Storage", "Battle Spreadsheet". Implement the BattleParameters generator for
+all 190 battles from the campaign/difficulty matrix (deterministic + validated), the 4
+difficulty LEVELS as modifiers — make the ship-count modifier PROPORTIONAL (about +/-33%),
+not a flat +/-2 (balance-audit fix) — star-gated cannon unlocks, wall storage slots, the
+3-strike drop-back, and a Codable SaveState written locally as source of truth with a
+CloudKit sync wrapper (latest-wins, stars merged upward) and a schema migration. Render the
+campaign map, battle select, difficulty picker, unlock toasts.
+Write/run the M8 tests (all 190 battles validate deterministically; proportional difficulty
+is consistent at Campaign 1 vs 32; save round-trips + migrates; unlock pacing). STOP.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P9 · Economy, monetization &amp; AI piece naming (milestone M9)</div><pre><code>Read SDD milestone M9 and GDD "Stonwryt", "Monetization", "Daily Challenges", "Challenges",
+"Weekend Race", and "AI-Enhanced Experience → Intelligent Piece Naming". Implement the
+Economy (faucets + the ~25 hard-sink phase-gated items with per-battle caps; Stonwryts are
+earned-only and can NEVER be bought; no purchase converts a loss to a win), StoreKit 2 IAP
+(ad-free + cosmetics only), rewarded ads (max 3/day, +15), daily challenges, the 14-day
+streak, achievement challenges, and the Weekend Race. Then in RivenkeepAI build NameModerator
+(fail-closed denylist baseline FIRST, then the on-device Foundation Models classifier behind
+a LanguageProvider protocol) and NameSuggester (guided generation, suggestions re-moderated).
+Render the shop, purchase panel, daily/race UI, and the naming UI (suggestion chips +
+moderation states).
+Write/run the M9 tests (economy invariants + pinch point; IAP sandbox; moderation fail-closed
+with the model stubbed; suggestions moderated). STOP. The AI must never touch the sim.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P10 · Backend &amp; live services (milestone M10)</div><pre><code>Read SDD milestone M10 and GDD "Backend Architecture", "Adaptive Star Thresholds", "Privacy
+&amp; Data Policy". Implement GameKit (auth, Battle Score leaderboards, achievements, offline
+queue), Firebase Analytics with the ~20-event schema as a type-safe Swift enum (gate behind a
+consent flag, no PII), a structured BattleSummary emitted at battle end (the read-only input
+the AI debrief will consume), Remote Config (server-tunable timers/thresholds/economy with
+compiled-in defaults + offline fallback), a tuneStarThresholds cloud function (adaptive
+thresholds — prevents 3-star grade inflation, launch-blocking), Crashlytics, and GDPR/CCPA
+export + delete. Note the server can re-simulate a battle from seed+inputs to validate scores
+(anti-cheat).
+Write/run the M10 tests (identical replays submit identical scores; events fire with correct
+params + no PII; Remote Config falls back to defaults; data-delete clears CloudKit +
+Firestore). STOP.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P11 · Content + AI experience layer (milestone M11)</div><pre><code>Read SDD milestone M11 and GDD "AI-Enhanced Experience" (all subsections). This milestone has
+two tracks. CONTENT: wire up the 10 theaters, 190 overlays, final sprites/audio, the
+remaining 9 bosses, the 198-piece catalog, ~190 challenges, and the tutorial; add a headless
+auto-pilot bot and a ContentValidationTests suite that plays all 190 battles to a legal
+terminal state (no unwinnable content). AI LAYER (in RivenkeepAI, all behind LanguageProvider
+with templated/static baselines, all off the timed loop, all non-authoritative): DebriefCoach
+(typed Debrief from the BattleSummary, tone-adaptive), TutorGuide ("Ask the Stonewright"
+adaptive hints + tool-grounded help), RulesAssistant ("Ask the Emissary", tool-grounded over
+a rules KB), FlavorWriter, BoardNarrator (accessibility), RecapWriter.
+Write/run the M11 tests (all 190 battles completable by the bot; each boss works; with a stub
+provider every AI service returns typed output and degrades to baseline; no AI type reachable
+from RivenkeepCore; debrief/flavor never change score or state). Build incrementally, commit
+per theater/feature, STOP between chunks.</code></pre></div>
+
+<div class="prompt"><button class="copy">copy</button><div class="ph">P12 · Polish, balance pass &amp; launch (milestone M12)</div><pre><code>Read SDD milestone M12 and GDD "Production &amp; Standards", "Mobile UX", plus the Balance
+Analysis P0/P1 findings. Profile and hold 60fps under worst-case load (atlas batching, node
+pooling, emitter budgets); run the data-driven balance pass to close the audit's P0/P1 (tame
+Lightning if its win-rate exceeds target, settle Chain/Scatter variance, confirm proportional
+difficulty, verify adaptive star thresholds hold the 3-star rate); polish mobile UX + haptics
++ accessibility; prepare the App Store listing, App Privacy label, TestFlight beta; verify
+crash-free &gt;= 99.5% and data export/delete.
+Write/run the M12 checks (performance budget on the min-spec device, soak/auto-save, beta
+telemetry targets, pre-submission privacy/compliance). Produce a launch checklist and STOP —
+do not submit without my go-ahead.</code></pre></div>
+
+<div class="s"><div class="ct">After each prompt</div><p>Review the agent's summary, run the app on the Simulator (and your iPhone once signed in), check the milestone's <em>Exit Criteria</em> above, then commit: <code>git add -A &amp;&amp; git commit -m "M&lt;n&gt;: &lt;what changed&gt;"</code> and push. Only then move to the next prompt. If the determinism replay test (P4.2) ever goes red, fix it before anything else.</p></div>
+</section>
+
 </div>
 <footer>
-Rivenkeep — Software Design Document &amp; Build Plan v1.0.2 · Companion to GDD v6.2.4 · Progress saved locally in your browser
+Rivenkeep — Software Design Document &amp; Build Plan v1.1.0 · Companion to GDD v6.2.4 · Progress saved locally in your browser
 </footer>
 <script>
 (function(){

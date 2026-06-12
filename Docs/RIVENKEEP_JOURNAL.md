@@ -1,6 +1,6 @@
 # Rivenkeep — Project Journal
 **Last Updated:** 2026-05-31
-**GDD Version:** v6.2.4 (50 sections, 9 Parts — AI-Enhanced Experience section added). SDD: v1.0.2.
+**GDD Version:** v6.2.4 (50 sections, 9 Parts — AI-Enhanced Experience section added). SDD: v1.1.0.
 **Prototype:** HTML prototype v2 (Build→Deploy→Fight loop, drag from tray, extended timers)
 
 ---
@@ -8,17 +8,19 @@
 ## ⭐ CURRENT STATE — START HERE (for a new session)
 
 **To continue this project in a fresh chat, upload these two files:**
-1. `Rivenkeep_GDD_v6_2_4.html` — THE source of truth. Everything about the game is here.
+1. `Rivenkeep_GDD.html` — THE source of truth. Everything about the game is here.
 2. `RIVENKEEP_JOURNAL.md` — this file (full decision history).
 
 **Optional supporting files** (upload if working on those areas):
 - `Rivenkeep_Critical_Analysis_Definitive.html` — the live issue tracker (16 open items, 62 resolved)
 - `Rivenkeep_Balance_Analysis.html` — deep numbers-first balance audit vs game-balance theory + Rampart (cannon cost curve, TTK/timer math, difficulty scaling, economy). 3 P0 / 4 P1 / 5 P2 findings. Recomputed from the GDD stat tables.
-- `Rivenkeep_SDD.html` — Software Design Document + build plan. Architecture (deterministic Core ⟂ SpriteKit render, GameplayKit), asset pipeline, 13 milestones M0–M12 (vertical-slice-first), v1.0.1 (versioned, every change increments). 188 check-off items, per-phase testing, 14 Windsurf/Claude prompts. Includes first-class AI layer (Apple Foundation Models): piece-name moderation+suggestions (M9), debrief/tutor/rules-help/flavor/narration/recaps (M11). Progress persists in browser localStorage.
+- `Rivenkeep_SDD.html` — Software Design Document + build plan. Architecture (deterministic Core ⟂ SpriteKit render, GameplayKit), asset pipeline, 13 milestones M0–M12 (vertical-slice-first), v1.1.0 (versioned; Appendix A "Build Playbook" — full agentic prompt sequence M0–M12 for Devin Desktop / Claude Code). 188 check-off items, per-phase testing, 14 Windsurf/Claude prompts. Includes first-class AI layer (Apple Foundation Models): piece-name moderation+suggestions (M9), debrief/tutor/rules-help/flavor/narration/recaps (M11). Progress persists in browser localStorage.
 - `Rivenkeep_Map_View_Briefs.html` — 10/10 theater mood boards + portrait UI mockups + piece-catalog detail mockup
 - `Rivenkeep_AI_Image_Prompts.md` — Midjourney workflow + 10 theater hero-image prompts
 
 **The ONLY current GDD is v6.2.4.** All earlier versions (v4.x–v6.2.2) are superseded and were deleted to avoid confusion. Ignore any reference below to an older "SOURCE OF TRUTH" filename — those are historical log entries, not the current file.
+
+**FILENAME / VERSIONING CONVENTION (as of this handoff):** Filenames are now **stable** (`Rivenkeep_GDD.html`, `Rivenkeep_SDD.html`, etc.) — versions are tracked **internally** in each document (title/meta/footer + the SDD changelog) and externally via **git/GitHub**. Do NOT put version numbers in filenames; that breaks git history continuity. Internal version strings are still maintained (GDD v6.2.4, SDD v1.0.2).
 
 **Project status as of this handoff:**
 - GDD design phase is COMPLETE. Every gameplay system, economy, monetization stream, UI layout, challenge, leaderboard, social feature, backend architecture, and future roadmap is fully specified.
@@ -889,9 +891,11 @@ Upload: RIVENKEEP_JOURNAL.md + Rivenkeep_GDD_v5_1_5.html + Rivenkeep_Critical_An
 - [VERIFY] GDD 50/50 sections, version strings all v6.2.4, 0 stale v6.2.3, Last Garrison intact. SDD balanced, v1.0.2, 0 stale v6.2.3.
 
 ### FINAL DOCUMENT SET (v6.2.4 — current)
-- **Rivenkeep_GDD_v6_2_4.html** — 9 Parts, 50 sections (THE SOURCE OF TRUTH)
+- **Rivenkeep_GDD.html** — 9 Parts, 50 sections (THE SOURCE OF TRUTH)
 - **Rivenkeep_Critical_Analysis_Definitive.html** — re-checked vs v6.2.4 (62 resolved, 16 open)
 - **Rivenkeep_Balance_Analysis.html** — deep balance audit (3 P0 / 4 P1 / 5 P2)
 - **Rivenkeep_SDD.html** — Software Design Document + build plan, v1.0.2 (versioned; AI layer integrated)
 - **RIVENKEEP_JOURNAL.md** — this file
+- **README.md** — repo front page (orientation + doc index)
+- **.gitignore** — Swift/Xcode/macOS ignore rules
 - All earlier GDD versions (v4.x–v6.2.3) DELETED to prevent confusion.
