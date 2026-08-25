@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — Dev Environment Setup</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--purple:#9b7dff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.65}
+header{padding:44px 40px 28px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+header .sub{font-size:.82rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--dim)}
+.ctn{max-width:940px;margin:0 auto;padding:0 32px 60px}
+.progwrap{position:sticky;top:0;z-index:50;background:rgba(10,12,16,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:14px 32px}
+.progwrap .inner{max-width:940px;margin:0 auto;display:flex;align-items:center;gap:16px}
+.progbar{flex:1;height:10px;background:var(--surface2);border-radius:6px;overflow:hidden;border:1px solid var(--border)}
+.progfill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--success));transition:width .3s ease;border-radius:6px}
+.progtext{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--accent);white-space:nowrap;min-width:150px;text-align:right}
+.resetbtn{background:var(--surface2);border:1px solid var(--border);color:var(--dim);font-family:'IBM Plex Mono',monospace;font-size:.68rem;padding:6px 12px;border-radius:5px;cursor:pointer;text-transform:uppercase;letter-spacing:1px;transition:all .15s}
+.resetbtn:hover{color:var(--danger);border-color:var(--danger)}
+.intro{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:18px 22px;margin:26px 0}
+.intro p{font-size:.88rem;margin-bottom:8px}.intro p:last-child{margin-bottom:0}
+.part{margin:34px 0 0}
+.part-h{font-family:'Chakra Petch',sans-serif;font-size:1.15rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:12px 0 6px;border-top:2px solid var(--accent);display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
+.part-h .chev{font-size:.8rem;color:var(--dim);transition:transform .2s}
+.part-h.collapsed .chev{transform:rotate(-90deg)}
+.part-h .pcount{font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:var(--dim);font-weight:400;letter-spacing:1px;margin-left:auto;text-transform:none}
+.part-body{overflow:hidden;transition:max-height .3s ease}
+.part-desc{font-size:.82rem;color:var(--dim);margin:6px 0 14px;font-style:italic}
+.step{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:0;margin:10px 0;overflow:hidden;transition:border-color .2s}
+.step.done{border-color:rgba(102,187,106,.4)}
+.step-head{display:flex;align-items:flex-start;gap:12px;padding:14px 18px;cursor:pointer}
+.step-head:hover{background:var(--surface2)}
+.cb{flex-shrink:0;width:22px;height:22px;border:2px solid var(--border);border-radius:5px;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .15s;background:var(--bg)}
+.cb.checked{background:var(--success);border-color:var(--success)}
+.cb.checked::after{content:"✓";color:#0a0c10;font-weight:700;font-size:.85rem}
+.step-title{font-family:'Chakra Petch',sans-serif;font-size:.92rem;font-weight:600;flex:1}
+.step.done .step-title{color:var(--dim);text-decoration:line-through;text-decoration-color:rgba(136,145,164,.5)}
+.step-num{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--accent);margin-right:8px}
+.step-body{padding:0 18px 16px 52px;font-size:.85rem;color:var(--text)}
+.step-body p{margin-bottom:8px;color:var(--dim)}
+.step-body strong{color:var(--text)}
+.step-body a{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent)}
+.cmd{position:relative;background:#05070a;border:1px solid var(--border);border-radius:6px;padding:10px 40px 10px 14px;margin:8px 0;font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:#a5e8a5;overflow-x:auto;white-space:pre}
+.copybtn{position:absolute;top:6px;right:6px;background:var(--surface2);border:1px solid var(--border);color:var(--dim);font-size:.6rem;padding:3px 7px;border-radius:4px;cursor:pointer;font-family:'IBM Plex Mono',monospace;text-transform:uppercase}
+.copybtn:hover{color:var(--accent);border-color:var(--accent)}
+.copybtn.copied{color:var(--success);border-color:var(--success)}
+.note{background:rgba(79,195,247,.08);border-left:3px solid var(--accent);padding:8px 12px;margin:8px 0;font-size:.8rem;border-radius:0 4px 4px 0}
+.note.warn{background:rgba(255,167,38,.08);border-left-color:var(--warn)}
+.note .nl{font-family:'Chakra Petch',sans-serif;font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--accent);font-weight:600}
+.note.warn .nl{color:var(--warn)}
+.tag{display:inline-block;padding:1px 7px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px;margin-left:6px}
+.tag-once{background:rgba(136,145,164,.15);color:var(--dim)}
+.tag-ios{background:rgba(79,195,247,.14);color:var(--accent)}
+.tag-android{background:rgba(102,187,106,.14);color:var(--success)}
+.done-banner{background:linear-gradient(135deg,rgba(102,187,106,.15),rgba(79,195,247,.1));border:1px solid var(--success);border-radius:8px;padding:20px;margin:24px 0;text-align:center;display:none}
+.done-banner.show{display:block}
+.done-banner h3{font-family:'Chakra Petch',sans-serif;color:var(--success);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+kbd{background:var(--surface2);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-family:'IBM Plex Mono',monospace;font-size:.76rem;color:var(--gold)}
+.tbl-wrap{overflow-x:auto;margin:12px 0;border:1px solid var(--border);border-radius:8px}
+table.tools{border-collapse:collapse;width:100%;min-width:520px}
+table.tools th,table.tools td{padding:8px 12px;border-bottom:1px solid var(--border);border-right:1px solid var(--border);font-size:.8rem;text-align:left;vertical-align:top}
+table.tools th{background:var(--surface2);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.66rem;letter-spacing:1px}
+table.tools tr:last-child td{border-bottom:none}
+table.tools td:last-child,table.tools th:last-child{border-right:none}
+table.tools td strong{color:var(--gold)}
+footer{text-align:center;padding:28px;color:var(--dim);font-size:.7rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
+@media(max-width:768px){header{padding:30px 16px 20px}h1{font-size:1.5rem}.ctn{padding:0 16px 40px}.progwrap{padding:12px 16px}.step-body{padding-left:18px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Rivenkeep — Dev Environment Setup</h1>
+<div class="sub">Flutter + Dart + Flame · IntelliJ IDEA · iOS &amp; Android</div>
+<div class="meta">macOS · companion to the current GDD + SDD · check each box as you go — progress saves automatically</div>
+</header>
+
+<div class="progwrap">
+<div class="inner">
+<div class="progbar"><div class="progfill" id="progfill"></div></div>
+<div class="progtext" id="progtext">0 / 0 complete</div>
+<button class="resetbtn" onclick="resetAll()">Reset</button>
+</div>
+</div>
+
+<div class="ctn">
+
+<div class="intro">
+<p><strong>What this sets up:</strong> a complete Flutter/Dart toolchain in IntelliJ IDEA (the IDE you already know), able to build and run Rivenkeep on both iOS and Android from one codebase. Steps are ordered — do them top to bottom.</p>
+<p><strong>Legend:</strong> <span class="tag tag-once">once</span> one-time machine setup · <span class="tag tag-ios">iOS</span> needed for iPhone builds · <span class="tag tag-android">Android</span> needed for Android builds. Commands have a copy button. Your checkbox progress persists in this browser via local storage — bookmark the file and come back anytime.</p>
+</div>
+
+<div class="done-banner" id="doneBanner">
+<h3>★ Environment Ready</h3>
+<p>Every box checked. <code>flutter doctor</code> is green, the app runs on both an iOS simulator and an Android emulator, and hot reload works. You're ready to start building Rivenkeep's Core layer.</p>
+</div>
+
+<!-- PART A -->
+<div class="part">
+<div class="part-h" onclick="toggle(this)"><span class="chev">▼</span> Part A — System Prerequisites <span class="pcount" data-part="A"></span></div>
+<div class="part-body">
+<div class="part-desc">Base tooling on the Mac. Do these once. Xcode is required for iOS; Android Studio supplies the Android SDK + emulator.</div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">A1</span>Confirm macOS + Apple Silicon/Intel <span class="tag tag-once">once</span></div></div>
+<div class="step-body">
+<p>Flutter runs on macOS Sierra (10.14) or later. Confirm your version and chip.</p>
+<div class="cmd">sw_vers && uname -m<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p><code>arm64</code> = Apple Silicon (M-series), <code>x86_64</code> = Intel. Both are fine; just download matching installers where a choice is offered.</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">A2</span>Install Homebrew <span class="tag tag-once">once</span></div></div>
+<div class="step-body">
+<p>Homebrew is the macOS package manager — the cleanest way to install Flutter and its helpers. Skip if <code>brew --version</code> already works.</p>
+<div class="cmd">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"<button class="copybtn" onclick="cp(this)">copy</button></div>
+<div class="note"><span class="nl">Note</span> After install, follow the on-screen "Next steps" to add brew to your PATH (Apple Silicon puts it in <code>/opt/homebrew/bin</code>). Then run <code>brew --version</code> to confirm.</div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">A3</span>Install Xcode + Command Line Tools <span class="tag tag-ios">iOS</span></div></div>
+<div class="step-body">
+<p>Install <strong>Xcode</strong> from the Mac App Store (large download, be patient). Then install the command-line tools and accept the license:</p>
+<div class="cmd">sudo xcodebuild -runFirstLaunch
+sudo xcodebuild -license accept
+xcode-select --install<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>Install an iOS Simulator runtime: open Xcode → <strong>Settings → Components</strong> → download an iOS simulator. Then verify:</p>
+<div class="cmd">open -a Simulator<button class="copybtn" onclick="cp(this)">copy</button></div>
+<div class="note"><span class="nl">Note</span> You already use Xcode for iOS builds, so this is likely done — just confirm the license is accepted and a simulator runtime is present.</div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">A4</span>Install CocoaPods <span class="tag tag-ios">iOS</span></div></div>
+<div class="step-body">
+<p>CocoaPods manages native iOS dependencies that Flutter plugins pull in (Firebase, ads, etc.).</p>
+<div class="cmd">brew install cocoapods<button class="copybtn" onclick="cp(this)">copy</button></div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">A5</span>Install Android Studio (for the Android SDK + emulator) <span class="tag tag-android">Android</span></div></div>
+<div class="step-body">
+<p>Even though you'll code in IntelliJ, the simplest way to get the Android SDK, platform tools, and an emulator is to install Android Studio once and let it manage them.</p>
+<div class="cmd">brew install --cask android-studio<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>Launch it, run the setup wizard (installs SDK + platform-tools), then <strong>Tools → Device Manager → Create Device</strong> to make an emulator (e.g., Pixel 8, latest API).</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">A6</span>Install the Flutter SDK <span class="tag tag-once">once</span></div></div>
+<div class="step-body">
+<p>The Dart SDK is <strong>bundled inside Flutter</strong> — you do not install Dart separately.</p>
+<div class="cmd">brew install --cask flutter<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>Confirm it's on your PATH and note the install path (you'll need it in IntelliJ):</p>
+<div class="cmd">which flutter && flutter --version<button class="copybtn" onclick="cp(this)">copy</button></div>
+<div class="note"><span class="nl">SDK path</span> Homebrew installs Flutter at <code>/opt/homebrew/share/flutter</code> (Apple Silicon) or <code>/usr/local/share/flutter</code> (Intel). Run <code>dirname $(dirname $(which flutter))</code> to print the exact top-level folder — copy it for step B3.</div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">A7</span>Run <code>flutter doctor</code> and resolve issues</div></div>
+<div class="step-body">
+<p>This is your health check. It downloads Flutter's own dependencies on first run, then reports what's missing.</p>
+<div class="cmd">flutter doctor -v<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>Work through anything flagged in <strong>bold</strong>. Two common ones:</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">A8</span>Accept Android SDK licenses <span class="tag tag-android">Android</span></div></div>
+<div class="step-body">
+<div class="cmd">flutter doctor --android-licenses<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>Press <kbd>y</kbd> through each license. Re-run <code>flutter doctor</code> — the Android toolchain line should turn green.</p>
+</div></div>
+
+</div></div>
+
+<!-- PART B -->
+<div class="part">
+<div class="part-h" onclick="toggle(this)"><span class="chev">▼</span> Part B — Dart &amp; Flutter in IntelliJ IDEA <span class="pcount" data-part="B"></span></div>
+<div class="part-body">
+<div class="part-desc">The part you asked for. Installing the Flutter plugin auto-installs the Dart plugin — you don't add Dart separately.</div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">B1</span>Install / update IntelliJ IDEA <span class="tag tag-once">once</span></div></div>
+<div class="step-body">
+<p>Either edition works for Flutter — <strong>Community (free)</strong> is fully supported. Ultimate adds web/enterprise tooling you won't need for the game. Update to a current version (2024.x or later).</p>
+<div class="cmd">brew install --cask intellij-idea-ce<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>(Or <code>intellij-idea</code> for Ultimate if you already license it.)</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">B2</span>Install the Flutter plugin (Dart comes with it)</div></div>
+<div class="step-body">
+<p>Launch IntelliJ. From the Welcome screen (or <kbd>⌘,</kbd> in an open project) open <strong>Settings → Plugins</strong>. Select <strong>Marketplace</strong>, search <em>Flutter</em>, click <strong>Install</strong>.</p>
+<p>When prompted, click <strong>Yes / Install</strong> to also add the <strong>Dart</strong> plugin — it's required and pulled in automatically. Click <strong>Restart</strong> when done.</p>
+<div class="note"><span class="nl">Why</span> The Flutter plugin powers run/debug/hot-reload; the Dart plugin powers code analysis, completion, and formatting. You need both, and installing Flutter guarantees both.</div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">B3</span>Point IntelliJ at the Flutter SDK</div></div>
+<div class="step-body">
+<p>Open <strong>Settings → Languages &amp; Frameworks → Flutter</strong>. In <strong>Flutter SDK path</strong>, paste the top-level Flutter folder from step A6 (e.g., <code>/opt/homebrew/share/flutter</code>). Apply.</p>
+<p>The <strong>Dart SDK path</strong> auto-fills to the bundled copy inside Flutter (<code>.../flutter/bin/cache/dart-sdk</code>) — you should not have to set it manually. Confirm it's populated under <strong>Languages &amp; Frameworks → Dart</strong>.</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">B4</span>Turn on format-on-save + analysis (recommended)</div></div>
+<div class="step-body">
+<p>In <strong>Settings → Languages &amp; Frameworks → Dart</strong>, enable <strong>"Format code on save"</strong> and <strong>"Organize imports on save"</strong>. This keeps the codebase clean with zero effort — matches your zero-tolerance-for-mess standard.</p>
+<p>The Dart Analysis panel (bottom toolbar) shows lints/errors live as you type, like IntelliJ's Java inspector.</p>
+</div></div>
+
+</div></div>
+
+<!-- PART C -->
+<div class="part">
+<div class="part-h" onclick="toggle(this)"><span class="chev">▼</span> Part C — Create &amp; Run the Project <span class="pcount" data-part="C"></span></div>
+<div class="part-body">
+<div class="part-desc">Scaffold the app, wire up a device on each platform, and confirm hot reload before writing any game code.</div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">C1</span>Create the Flutter project</div></div>
+<div class="step-body">
+<p>In IntelliJ: <strong>File → New → Project → Flutter</strong> (from the Generators list). Set the Flutter SDK path, then:</p>
+<p>— <strong>Name:</strong> <code>rivenkeep</code><br>— <strong>Project location:</strong> your dev folder<br>— <strong>Org / company domain:</strong> reverse-DNS you control (e.g., <code>studios.riquochet</code>) — this becomes the bundle/app ID<br>— <strong>Platforms:</strong> check <strong>iOS</strong> and <strong>Android</strong> (and Web later if you want a test target)</p>
+<p>Prefer the terminal? Equivalent:</p>
+<div class="cmd">flutter create --org studios.riquochet --platforms=ios,android rivenkeep<button class="copybtn" onclick="cp(this)">copy</button></div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">C2</span>Run on the iOS Simulator <span class="tag tag-ios">iOS</span></div></div>
+<div class="step-body">
+<p>Open the Simulator (<code>open -a Simulator</code>), select it in IntelliJ's device dropdown (top-right), and click the green <strong>Run</strong> arrow — or:</p>
+<div class="cmd">flutter run -d ios<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>You should see the Flutter starter counter app boot in the simulator.</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">C3</span>Run on the Android Emulator <span class="tag tag-android">Android</span></div></div>
+<div class="step-body">
+<p>Start the emulator you created in A5 (Device Manager), select it in the device dropdown, Run — or:</p>
+<div class="cmd">flutter emulators --launch &lt;emulator_id&gt;
+flutter run -d android<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>List available emulator IDs with <code>flutter emulators</code>.</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">C4</span>Confirm Hot Reload</div></div>
+<div class="step-body">
+<p>With the app running, edit the starter text in <code>lib/main.dart</code> and save. IntelliJ hot-reloads in under a second (or press the ⚡ Hot Reload button). Seeing the change instantly = your loop is healthy.</p>
+<div class="note"><span class="nl">This is the payoff</span> Hot reload is why this stack beats the Xcode/Swift build cycle for iteration. Confirm it works now.</div>
+</div></div>
+
+</div></div>
+
+<!-- PART D -->
+<div class="part">
+<div class="part-h" onclick="toggle(this)"><span class="chev">▼</span> Part D — Rivenkeep Dependencies &amp; Structure <span class="pcount" data-part="D"></span></div>
+<div class="part-body">
+<div class="part-desc">Add the engine, backend, and services from the GDD's architecture, and lay out the logic-vs-render folder split.</div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">D1</span>Add core dependencies</div></div>
+<div class="step-body">
+<p>From the project root, add the engine and service packages the GDD specifies. Run these <code>flutter pub add</code> commands (they write to <code>pubspec.yaml</code> and fetch):</p>
+<div class="cmd">flutter pub add flame
+flutter pub add firebase_core cloud_firestore firebase_auth cloud_functions firebase_remote_config firebase_analytics
+flutter pub add games_services
+flutter pub add in_app_purchase
+flutter pub add google_mobile_ads
+flutter pub add video_player<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>Then fetch everything:</p>
+<div class="cmd">flutter pub get<button class="copybtn" onclick="cp(this)">copy</button></div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">D2</span>Set up the Firebase project (FlutterFire)</div></div>
+<div class="step-body">
+<p>Install the Firebase CLI + FlutterFire CLI, log in, and configure both platform apps under one Firebase project named <strong>rivenkeep-prod</strong>:</p>
+<div class="cmd">brew install firebase-cli
+dart pub global activate flutterfire_cli
+firebase login
+flutterfire configure --project=rivenkeep-prod<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>This registers the iOS and Android apps, downloads their config, and generates <code>lib/firebase_options.dart</code>. Initialize Firebase in <code>main()</code> before <code>runApp()</code>.</p>
+<div class="note warn"><span class="nl">Order</span> Create the Firebase project in the console first (or let the CLI create it). You'll need a Google account; the free Spark tier covers development.</div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">D3</span>Create the logic-vs-render folder structure</div></div>
+<div class="step-body">
+<p>The GDD mandates a <strong>pure-Dart Core layer with zero rendering/platform dependencies</strong>, kept separate from the render layer. Scaffold it:</p>
+<div class="cmd">mkdir -p lib/core lib/render lib/services lib/models
+# lib/core/    → pure logic: grid, piece state machine, enclosure flood-fill,
+#                tick combat, A* pathfinding, star calc. NO Flutter imports.
+# lib/render/  → Flame game + Flutter widgets that draw Core state
+# lib/services/→ SyncService, LeaderboardService, StoreService, etc.
+# lib/models/  → shared immutable data classes<button class="copybtn" onclick="cp(this)">copy</button></div>
+<div class="note"><span class="nl">Discipline</span> Nothing in <code>lib/core/</code> may <code>import 'package:flutter/...'</code> or any plugin. That's what keeps the simulation deterministic and unit-testable — the same principle as your pure-logic Core layer plan.</div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">D4</span>Initialize Git</div></div>
+<div class="step-body">
+<p><code>flutter create</code> adds a <code>.gitignore</code> already. Initialize and make the first commit:</p>
+<div class="cmd">git init && git add -A && git commit -m "Initial Flutter scaffold + Rivenkeep deps"<button class="copybtn" onclick="cp(this)">copy</button></div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">D5</span>Verify the full stack builds on both platforms</div></div>
+<div class="step-body">
+<p>With Firebase + plugins added, native pods/gradle change. Do a clean build on each target to catch config issues early:</p>
+<div class="cmd">flutter clean && flutter pub get
+flutter run -d ios
+flutter run -d android<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>Both should launch the app with Firebase initialized and no plugin errors in the console.</p>
+</div></div>
+
+</div></div>
+
+<!-- PART E -->
+<div class="part">
+<div class="part-h" onclick="toggle(this)"><span class="chev">▼</span> Part E — Final Verification <span class="pcount" data-part="E"></span></div>
+<div class="part-body">
+<div class="part-desc">The green-light checklist. All five confirm the environment is production-ready.</div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">E1</span><code>flutter doctor</code> is all green</div></div>
+<div class="step-body"><div class="cmd">flutter doctor<button class="copybtn" onclick="cp(this)">copy</button></div><p>No red ✗. Yellow ! is acceptable for optional components (e.g., Chrome for web if you're not targeting web).</p></div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">E2</span>App runs on an iOS simulator <span class="tag tag-ios">iOS</span></div></div>
+<div class="step-body"><p>Boots and displays without native errors.</p></div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">E3</span>App runs on an Android emulator <span class="tag tag-android">Android</span></div></div>
+<div class="step-body"><p>Boots and displays without native errors.</p></div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">E4</span>Hot reload works in IntelliJ</div></div>
+<div class="step-body"><p>Edit → save → change appears in under a second.</p></div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">E5</span>Initial project committed to Git</div></div>
+<div class="step-body"><p>Clean working tree, first commit in place. Ready to start the Core layer (Phase 1 of the GDD build sequence).</p></div></div>
+
+</div></div>
+
+<!-- PART F -->
+<div class="part">
+<div class="part-h" onclick="toggle(this)"><span class="chev">▼</span> Part F — Asset Creation Pipeline (AI Art) <span class="pcount" data-part="F"></span></div>
+<div class="part-body">
+<div class="part-desc">The art-production workflow you'll stand up at the art milestone (M11 in the SDD — placeholder shapes carry you until then, so this is not blocking early engineering). Rivenkeep is a <strong>realistic</strong> style, not pixel art, so the tools below are the realistic/HD track — ignore pixel-specific tools (PixelLab, Sprixen, Retro Diffusion). Everything here outputs <strong>transparent PNG sprite sheets / texture atlases</strong>, which are engine-neutral (identical whether the renderer is Flame or anything else).</div>
+
+<div class="note warn"><span class="nl">The #1 rule</span> Rivenkeep needs 800+ sprites that all look like one game. Style consistency — not any single sprite's quality — is what makes or breaks AI-generated game art. The entire pipeline below is built around <strong>locking one house style first (F1)</strong> and generating everything else from it. Do F1 before any production art.</div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">F1</span>Write the art bible + train a house-style model <span class="tag tag-once">keystone</span></div></div>
+<div class="step-body">
+<p>Define the look in a short art bible: realistic materials, the ~30° isometric tilt for the 2.5D battlefield (Age of Empires is the GDD's reference), the flatter clean readability for the 2D Build/Deploy map, palette, lighting direction, and the team-color outline treatment.</p>
+<p>Then lock it with a <strong>custom-trained model</strong> so every later asset shares visual DNA:</p>
+<p>— <strong>Scenario</strong> (<a href="https://scenario.com">scenario.com</a>) is the strongest option for this: upload 20–30 reference images of your target style and train a private model. Every generation then comes out on-brand. Custom training is on the ~$45/mo tier; image plans start ~$15/mo.</p>
+<p>— Alternatives if you don't want to train: <strong>Layer.ai</strong> (character-consistency engine, strong multi-pose sprite consistency) or <strong>Ludo.ai</strong> (all-in-one asset stack, API + MCP, connects to Claude). These use reference images rather than a trained model, so consistency is good but not as locked as Scenario.</p>
+<div class="note"><span class="nl">Do this once</span> The trained model IS your art direction. Everything in F2–F5 is generated from it. Re-train only if you deliberately change the game's look.</div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">F2</span>Generate 2D top-down assets (Build/Deploy Map View)</div></div>
+<div class="step-body">
+<p>Flat overhead sprites for the puzzle view: wall blocks (clean / cracked &lt;75% / spackle states), enclosure floor tiles (dark + mirrored gray), and top-down castle states. Generate from your F1 model with an overhead-orthographic framing prompt.</p>
+<p>Output: transparent PNG sized to <strong>1× grid cell</strong> (crack states as overlays, per the SDD asset table). Keep the base wall neutral so the runtime team-color outline shader reads cleanly on top.</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">F3</span>Generate seamless terrain + theater map tiles</div></div>
+<div class="step-body">
+<p>Ten theaters, each needing tileable ground plus its water/lava/void surface. Generate <strong>seamless / tileable</strong> textures (Scenario and most SDXL/Flux workflows have a tiling toggle) so they repeat without visible seams across the board.</p>
+<div class="note"><span class="nl">Clarify — maps ≠ 190 hand-drawn images</span> The 190 battle overlays are <strong>data</strong> (JSON rock/tree/cliff placement per battle, per the SDD), not individual artworks. You produce the reusable tile <em>set</em> per theater; the overlays are authored/generated placement data that arranges those tiles. This is why "190 battlefields" is a data task, not 190 art commissions.</p></div>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">F4</span>Generate 2.5D isometric assets via 3D → render</div></div>
+<div class="step-body">
+<p>The GDD specifies the Fight view as <strong>"pre-rendered 2D assets from 3D models"</strong> — this is the right call because it gives consistent, controllable multi-angle sprites. The workflow:</p>
+<p><strong>a.</strong> Image-to-3D from your F1 concept art (so the style carries into 3D): <strong>Meshy</strong> (<a href="https://meshy.ai">meshy.ai</a>) is the best all-round pipeline — image/text-to-3D + PBR textures + auto-rig + GLB/FBX export, browser-based. <strong>Rodin / Hyper3D</strong> for higher topology quality; <strong>Luma Genie</strong> (free) or <strong>Tripo</strong> for fast prototyping.</p>
+<p><strong>b.</strong> Import the GLB into <strong>Blender</strong> (free) and set an <strong>orthographic camera</strong> at the GDD's isometric angle (~30° tilt).</p>
+<div class="cmd">brew install --cask blender<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p><strong>c.</strong> Render each needed state/angle to transparent PNG: cannons need a barrel-rotation set + enclosed/exposed + HP tint; ships need per-type profiles (and later 10 theater skins); castles need enclosed/not-enclosed + 3 degradation states; bosses need stealth/surface + attack-tell frames.</p>
+<p><strong>d.</strong> One consistent camera + light rig rendering every model = a coherent isometric set, because they're all lit and angled identically. This is the big advantage over generating isometric sprites directly.</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">F5</span>Produce animation frames (troops + VFX)</div></div>
+<div class="step-body">
+<p>Troops need short walk cycles (2–4 frames) and the Shield Bearer needs facing variants. <strong>Auto-rig the 3D troop model in Meshy</strong> and render animation frames from the same Blender rig as F4, or use <strong>Layer.ai</strong> for multi-pose consistency. Expect manual touch-up — AI animation is still the weakest category in 2026.</p>
+<p>For VFX (projectiles, explosions, lightning arcs, freeze, lava, screen shake, the isolation-wipe), prefer the <strong>engine's particle system</strong> over pre-baked sprite sheets where you can — it's smaller, scalable, and tint-able at runtime.</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">F6</span>Clean up + enforce SDD conventions</div></div>
+<div class="step-body">
+<p>Raw AI/render output is almost never a drop-in asset. Clean up with <strong>Pixelorama</strong> (free, open-source) or your editor of choice: crisp background removal for clean transparency, palette enforcement, grid alignment.</p>
+<div class="cmd">brew install --cask pixelorama<button class="copybtn" onclick="cp(this)">copy</button></div>
+<p>Apply the SDD's asset conventions as you export: naming <code>&lt;group&gt;_&lt;name&gt;_&lt;state&gt;@&lt;scale&gt;x</code> (e.g. <code>cannon_lightning_exposed@2x</code>), and set each sprite's <strong>anchor</strong> — plus a <strong>muzzle point</strong> for cannons and a <strong>hull-center</strong> for ships — since the sim→render mapping relies on them.</p>
+</div></div>
+
+<div class="step"><div class="step-head" onclick="tog(this)"><div class="cb"></div><div class="step-title"><span class="step-num">F7</span>Pack atlases + wire into the game</div></div>
+<div class="step-body">
+<p>Pack finished sprites into <strong>per-theater texture atlases</strong> (<code>theater_&lt;name&gt;.atlas</code> per the SDD), a shared UI atlas, and a shared units atlas until theater skins exist. Use <strong>TexturePacker</strong> or the engine's built-in sprite-sheet tooling, then load through the game's asset loader.</p>
+<div class="note"><span class="nl">Milestone fit</span> Per the SDD, real art lands at <strong>M11</strong> — you build the whole game on placeholder shapes first, then drop in these atlases near the end. That means you can defer this entire Part until the game plays well; don't let art block engineering.</div>
+</div></div>
+
+<h3 style="font-family:'Chakra Petch',sans-serif;font-size:.9rem;letter-spacing:1px;text-transform:uppercase;color:var(--text);margin:20px 0 6px">Tool Cheat-Sheet — Which AI for What</h3>
+<div class="tbl-wrap">
+<table class="tools">
+<tr><th>Asset type</th><th>Recommended AI</th><th>Why</th><th>Rough cost</th></tr>
+<tr><td>House style lock (all 2D)</td><td><strong>Scenario</strong> (custom-trained model)</td><td>Train on 20–30 refs → every asset on-brand. Best consistency in the category.</td><td>~$45/mo (training tier)</td></tr>
+<tr><td>2D top-down sprites &amp; tiles</td><td><strong>Scenario</strong> or <strong>Leonardo.ai</strong></td><td>Realistic/HD output; Leonardo strong for textures/backgrounds where exact match matters less.</td><td>$15–24/mo</td></tr>
+<tr><td>Seamless terrain textures</td><td><strong>Scenario</strong> / SDXL / Flux (tiling on)</td><td>Tileable output repeats without seams across the board.</td><td>incl. above / free self-host</td></tr>
+<tr><td>3D models (for 2.5D render)</td><td><strong>Meshy</strong> (all-round), Rodin (quality), Luma Genie / Tripo (fast/free)</td><td>Image-to-3D + PBR + auto-rig + GLB export. Feeds the Blender isometric render.</td><td>free tier → ~$20/mo</td></tr>
+<tr><td>Isometric render + framing</td><td><strong>Blender</strong> (orthographic, ~30° tilt)</td><td>One camera/light rig renders every model → coherent isometric set.</td><td>free</td></tr>
+<tr><td>Multi-pose / animation frames</td><td>Meshy auto-rig + Blender, or <strong>Layer.ai</strong></td><td>Consistent poses; AI animation still needs manual cleanup.</td><td>free–$30/mo</td></tr>
+<tr><td>Cleanup / palette / assembly</td><td><strong>Pixelorama</strong> (free)</td><td>Background removal, palette enforcement, grid alignment, sheet assembly.</td><td>free</td></tr>
+<tr><td>Atlas packing</td><td><strong>TexturePacker</strong> or engine tooling</td><td>Per-theater atlases per SDD naming/anchor conventions.</td><td>free–$50 one-time</td></tr>
+</table>
+</div>
+<div class="note"><span class="nl">Pricing note</span> AI-tool pricing shifts constantly — confirm current rates on each vendor's site before subscribing. Start on free tiers to validate the workflow before committing to Scenario training.</div>
+
+</div></div>
+
+</div>
+
+<footer>Rivenkeep Dev Environment Setup · Flutter/Dart/Flame · progress saved locally in this browser</footer>
+
+<script>
+const KEY='rivenkeep_setup_v1';
+let state={};
+try{state=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){state={}}
+
+// assign stable ids to each step by index
+const steps=[...document.querySelectorAll('.step')];
+steps.forEach((s,i)=>{
+  const id='s'+i;
+  s.dataset.id=id;
+  if(state[id]){s.classList.add('done');s.querySelector('.cb').classList.add('checked')}
+});
+
+function tog(head){
+  const step=head.closest('.step');
+  const cb=step.querySelector('.cb');
+  const id=step.dataset.id;
+  const now=!cb.classList.contains('checked');
+  cb.classList.toggle('checked',now);
+  step.classList.toggle('done',now);
+  state[id]=now;
+  save();
+  update();
+}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
+function update(){
+  const total=steps.length;
+  const done=steps.filter(s=>s.querySelector('.cb').classList.contains('checked')).length;
+  document.getElementById('progfill').style.width=(total?done/total*100:0)+'%';
+  document.getElementById('progtext').textContent=done+' / '+total+' complete';
+  document.getElementById('doneBanner').classList.toggle('show',done===total&&total>0);
+  // per-part counts
+  document.querySelectorAll('.pcount').forEach(pc=>{
+    const part=pc.closest('.part');
+    const ps=[...part.querySelectorAll('.step')];
+    const pd=ps.filter(s=>s.querySelector('.cb').classList.contains('checked')).length;
+    pc.textContent=pd+'/'+ps.length;
+  });
+}
+function toggle(h){
+  h.classList.toggle('collapsed');
+  const body=h.nextElementSibling;
+  if(h.classList.contains('collapsed')){body.style.maxHeight='0'}
+  else{body.style.maxHeight=body.scrollHeight+'px'}
+}
+function cp(btn){
+  const cmd=btn.parentElement;
+  const text=[...cmd.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join('').trim();
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent='copied';btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='copy';btn.classList.remove('copied')},1400);
+  });
+}
+function resetAll(){
+  if(!confirm('Clear all checkbox progress?'))return;
+  state={};save();
+  steps.forEach(s=>{s.classList.remove('done');s.querySelector('.cb').classList.remove('checked')});
+  update();
+}
+// init part bodies open
+document.querySelectorAll('.part-body').forEach(b=>b.style.maxHeight=b.scrollHeight+'px');
+window.addEventListener('resize',()=>{
+  document.querySelectorAll('.part-h:not(.collapsed)').forEach(h=>{h.nextElementSibling.style.maxHeight=h.nextElementSibling.scrollHeight+'px'})
+});
+update();
+</script>
+</body>
+</html>

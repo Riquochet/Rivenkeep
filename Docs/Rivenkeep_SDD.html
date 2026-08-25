@@ -75,7 +75,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <header>
 <h1>Rivenkeep — Software Design Document</h1>
 <div class="sub">Architecture · Build Order · Asset Pipeline · Testing · AI-Assisted Workflow</div>
-<div class="meta">Version 1.1.0 · Derived from GDD v6.2.4 · Swift · SpriteKit · GameplayKit · Interactive checklist — progress saves in this browser</div>
+<div class="meta">Version 1.2.0 · Derived from GDD v6.3.0 · Flutter · Dart · Flame · Cross-platform iOS + Android · Interactive checklist — progress saves in this browser</div>
 </header>
 
 <div class="dash"><div class="row">
@@ -107,38 +107,40 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <tr><td>1.0.0</td><td>Initial</td><td>First SDD: architecture (deterministic Core ⟂ SpriteKit render), project layout, asset pipeline, milestones M0–M12, testing strategy, timeline.</td></tr>
 <tr><td>1.0.1</td><td>prior</td><td>Added document versioning + this changelog. Integrated the <a href="#ai-arch">AI-Enhanced Experience</a> as a first-class layer (Apple Foundation Models): piece-name moderation + suggestions folded into M9; post-battle debrief, living tutorial, the rules assistant, dynamic flavor, accessibility narration, and recaps folded into M11; the debrief's data dependency noted in M10; AI testing row added. GDD reference updated to v6.2.3.</td></tr>
 <tr><td>1.0.2</td><td>prior</td><td>Renamed the two AI help personas for in-world consistency: the building/gameplay helper is now <b>"Ask the Stonewright"</b> (was "Ask the Stonemason" — matches the Stonewrights who build) and the rules-help + narrative voice is now <b>"Ask the Emissary"</b> (was "Ask the Garrison" — avoids collision with the Last Garrison castle mechanic). GDD reference updated to v6.2.4.</td></tr>
-<tr><td><b>1.1.0</b></td><td>current</td><td>Added <a href="#playbook">Appendix A — The Build Playbook</a>: a fully fleshed, start-to-finish AI prompt sequence (project setup through M12) written for an agentic coder (Devin Desktop / Claude Code) and a beginner to iOS. Reworked the prompt guidance to be agent-agnostic. (No game-design changes.)</td></tr>
+<tr><td>1.1.0</td><td>prior</td><td>Added <a href="#playbook">Appendix A — The Build Playbook</a>: a fully fleshed, start-to-finish AI prompt sequence (project setup through M12) written for an agentic coder (Devin Desktop / Claude Code) and a beginner to iOS. Reworked the prompt guidance to be agent-agnostic. (No game-design changes.)</td></tr>
+<tr><td><b>1.2.0</b></td><td>current</td><td><b>Framework pivot to Flutter + Dart + Flame, cross-platform iOS + Android.</b> Tech Stack, architecture (Core ⟂ Render now pure-Dart ⟂ Flame), project layout, and every milestone prompt retargeted from Swift/SpriteKit/GameplayKit/CloudKit/GameKit/StoreKit to Dart/Flame/Firestore/games_services/in_app_purchase. AI Layer changed from Apple-Foundation-Models-only to a three-tier hybrid (on-device first → dedicated cloud fallback → templated/denylist baseline) behind the existing <code>LanguageProvider</code> seam. Toolchain: IntelliJ + <code>flutter</code> CLI (Xcode/Android Studio for platform bits). GDD reference updated to v6.3.0.</td></tr>
 </table>
 </section>
 
 <section id="use">
 <h2>How to Use This Document</h2>
-<p>This is both the <strong>Software Design Document</strong> (the architecture and the rules everything must obey) and the <strong>build plan</strong> (the ordered, checkable task list to realize it). It is written for an intermediate engineer to pick up and execute. The GDD (v6.2.4) remains the source of truth for <em>what</em> the game is; this document is <em>how</em> to build it and <em>in what order</em>.</p>
+<p>This is both the <strong>Software Design Document</strong> (the architecture and the rules everything must obey) and the <strong>build plan</strong> (the ordered, checkable task list to realize it). It is written for an intermediate engineer to pick up and execute. The GDD (v6.3.0) remains the source of truth for <em>what</em> the game is; this document is <em>how</em> to build it and <em>in what order</em>.</p>
 <ul>
 <li><strong>Check boxes to track progress.</strong> Every task, asset, and test is a checkbox. State is saved in this browser (localStorage) — close and reopen and your progress is still here. The bar at the top is overall completion; each milestone shows its own count. "Reset" clears everything (with confirm).</li>
 <li><strong>Work milestones in order (M0 → M12).</strong> They form a <em>vertical slice first</em> sequence: by the end of M4 you have one playable battle end-to-end; everything after deepens and widens it. Each milestone lists what it <b>depends on</b>, so nothing is started before its foundation exists.</li>
 <li><strong>Each milestone has four groups:</strong> <span class="pill pill-core">Tasks</span> (the code), <span class="pill pill-data">Assets needed</span> (art/audio required <em>by this milestone</em> — use placeholders until M11), <span class="pill pill-test">Tests</span> (what to verify before moving on), and an <strong>Exit Criteria</strong> "definition of done."</li>
-<li><strong>AI prompts.</strong> Purple blocks are written for an <strong>agentic AI coder</strong> — <strong>Devin Desktop</strong> (the editor formerly called Windsurf; same Cascade agent on a VS Code base) or <strong>Claude Code</strong> (terminal). These agents read your repo, write code across files, run terminal commands, and run tests, so the prompts tell the agent to <em>build, test, and iterate</em> — not just emit code. Each milestone has a starter prompt inline; <strong><a href="#playbook">Appendix A — The Build Playbook</a></strong> contains the fully fleshed, start-to-finish prompt sequence (project setup through launch), written for someone new to iOS. Always review generated Swift against the GDD and the determinism rules before committing.</li>
+<li><strong>AI prompts.</strong> Purple blocks are written for an <strong>agentic AI coder</strong> — <strong>Devin Desktop</strong> (the editor formerly called Windsurf; same Cascade agent on a VS Code base) or <strong>Claude Code</strong> (terminal). These agents read your repo, write code across files, run terminal commands, and run tests, so the prompts tell the agent to <em>build, test, and iterate</em> — not just emit code. Each milestone has a starter prompt inline; <strong><a href="#playbook">Appendix A — The Build Playbook</a></strong> contains the fully fleshed, start-to-finish prompt sequence (project setup through launch), written for someone new to iOS. Always review generated Dart against the GDD and the determinism rules before committing.</li>
 <li><strong>Definition of Done (global):</strong> a task is done when it (a) compiles, (b) has the tests listed for its milestone passing, (c) obeys the <a href="#arch">determinism contract</a>, and (d) is committed with a message referencing the milestone (e.g. <code>M4: deterministic tick loop</code>).</li>
 </ul>
-<div class="s"><div class="ct">Reality check on tooling</div><p>iOS + SpriteKit games are <strong>built and run through Xcode</strong> (toolchain, simulators, signing, asset catalogs, Game Center entitlements). The Windsurf/Claude plugin is used here for <em>authoring and refactoring Swift</em> — author in Windsurf, build/run/profile in Xcode. The two coexist on the same SwiftPM/Xcode project on disk. Where a task is Xcode-specific (entitlements, capabilities, asset catalog), it is noted.</p></div>
+<div class="s"><div class="ct">Reality check on tooling</div><p>Flutter games are <strong>built and run through the <code>flutter</code> CLI inside IntelliJ IDEA</strong> (Jack's IDE of 12 years) — one codebase, both platforms. Xcode is still needed for iOS signing/capabilities/simulator and Android Studio for the Android SDK/emulator, but day-to-day authoring, running, and hot reload happen in IntelliJ. The agentic coder authors and refactors Dart; you build/run/profile via <code>flutter run</code> and the platform IDEs only for store-specific setup. See the interactive Dev Environment Setup guide for the full toolchain.</p></div>
 </section>
 
 <section id="stack">
 <h2>Technology Stack</h2>
 <table>
 <tr><th>Layer</th><th>Choice</th><th>Why</th></tr>
-<tr><td>Language</td><td>Swift 5.9+</td><td>Native iOS; value types help determinism.</td></tr>
-<tr><td>Rendering / scene</td><td>SpriteKit + SKScene</td><td>2D sprite/tile rendering, action system, built into iOS. Matches the GDD's 2.5D battlefield.</td></tr>
-<tr><td>Game logic helpers</td><td>GameplayKit</td><td><code>GKGridGraph</code> (weighted A* troop pathfinding), <code>GKStateMachine</code> (phase + piece state machines), <code>GKMersenneTwisterRandomSource</code> (seeded deterministic RNG).</td></tr>
-<tr><td>Min OS / devices</td><td>iOS 16+, iPhone first</td><td>Portrait orientation per GDD. iPad later.</td></tr>
-<tr><td>Persistence (local)</td><td>Codable → file</td><td>Source-of-truth save written locally first; never block on network.</td></tr>
-<tr><td>Cloud save / sync</td><td>CloudKit (private DB)</td><td>Cross-device progress; GDPR-deletable.</td></tr>
-<tr><td>Social / ranking</td><td>GameKit (Game Center)</td><td>Leaderboards (Battle Score), achievements.</td></tr>
-<tr><td>Analytics / config / crash</td><td>Firebase Analytics, Remote Config, Crashlytics</td><td>The event schema, server-tunable timers/star thresholds, crash triage. Free tier covers launch scale.</td></tr>
-<tr><td>Ads / IAP</td><td>StoreKit 2 + a rewarded-ad SDK (e.g. AdMob)</td><td>Earned-only currency rule: IAP sells ad-free + cosmetics only, never Stonwryts.</td></tr>
-<tr><td>Dependencies</td><td>Swift Package Manager</td><td>Keep deps minimal; the sim core has zero third-party deps.</td></tr>
-<tr><td>CI</td><td>Xcode Cloud or GitHub Actions (macOS runner)</td><td>Build + run unit tests on every push.</td></tr>
+<tr><td>Language</td><td>Dart 3.x</td><td>One codebase for iOS + Android; sound null safety and immutable value types help determinism.</td></tr>
+<tr><td>Rendering / scene</td><td>Flame (Fight) + Flutter Canvas/CustomPainter (Build/Deploy)</td><td>Flame game loop + isometric component tree for the 2.5D battlefield; Flutter's own Canvas/widgets/gestures for the flat top-down puzzle UI. Shared Skia/Impeller pipeline.</td></tr>
+<tr><td>Game logic helpers</td><td>Pure Dart</td><td>Hand-rolled weighted A* troop pathfinding, phase + piece state machines, and a seeded deterministic RNG (Mersenne-Twister/xorshift) — all in the pure-Dart Core, zero third-party deps.</td></tr>
+<tr><td>Min OS / devices</td><td>iOS 15+, Android API 24+; phone first</td><td>Portrait orientation per GDD. iPad / large Android later.</td></tr>
+<tr><td>Persistence (local)</td><td>JSON (Dart) → file / Firestore offline cache</td><td>Source-of-truth save written locally first; never block on network.</td></tr>
+<tr><td>Cloud save / sync</td><td>Firestore (per-user doc)</td><td>Single cross-device store on both platforms; GDPR-deletable. Replaces the former Apple-only CloudKit.</td></tr>
+<tr><td>Social / ranking</td><td>games_services (Game Center + Play Games)</td><td>One Dart API over both platforms' leaderboards (Battle Score) + achievements.</td></tr>
+<tr><td>Analytics / config / crash</td><td>Firebase Analytics, Remote Config, Crashlytics (FlutterFire)</td><td>The event schema, server-tunable timers/star thresholds, crash triage. Free tier covers launch scale.</td></tr>
+<tr><td>Ads / IAP</td><td>in_app_purchase + Google Mobile Ads</td><td>One IAP API over App Store + Play Billing. Earned-only currency rule: IAP sells ad-free + cosmetics only, never Stonwryts.</td></tr>
+<tr><td>AI (language tasks)</td><td>Hybrid via <code>LanguageProvider</code>: on-device (Apple Foundation Models / Gemini Nano) → cloud fallback → templated baseline</td><td>Moderation, debrief, tutor, flavor, recaps, narration. Small-model tasks only; on-device first for privacy, cloud fallback for coverage, baseline floor always present.</td></tr>
+<tr><td>Dependencies</td><td>Dart pub (pubspec.yaml)</td><td>Keep deps minimal; the sim Core has zero third-party deps.</td></tr>
+<tr><td>CI</td><td>GitHub Actions (Flutter action) or Codemagic</td><td>Build both platforms + run unit tests on every push.</td></tr>
 </table>
 </section>
 
@@ -149,14 +151,14 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <h3>Simulation core ⟂ render layer (hard separation)</h3>
 <p>Split the codebase into two modules with a one-way dependency:</p>
 <ul>
-<li><strong><code>RivenkeepCore</code></strong> — a pure-Swift module with <em>no</em> import of SpriteKit/UIKit. It owns the grid, all units, all rules, the fixed-step tick loop, and the seeded RNG. It is fully unit-testable headless, runs identically on any device, and is the only place game state changes. It exposes a deterministic <code>step(intents:) -&gt; [Event]</code> API.</li>
-<li><strong><code>RivenkeepRender</code></strong> — SpriteKit. It <em>observes</em> core state and the event stream and draws nodes/animations. It captures touch input and translates it into <em>intents</em> handed to the core. It never mutates game state directly. Animations interpolate between discrete tick states for smooth visuals (the standard GameplayKit-grid technique).</li>
+<li><strong><code>lib/core/</code></strong> — a pure-Dart library with <em>no</em> import of Flame/Flutter. It owns the grid, all units, all rules, the fixed-step tick loop, and the seeded RNG. It is fully unit-testable headless, runs identically on any device, and is the only place game state changes. It exposes a deterministic <code>step(intents) → List&lt;Event&gt;</code> API.</li>
+<li><strong><code>lib/render/</code></strong> — Flame (Fight) + Flutter Canvas (Build/Deploy). It <em>observes</em> core state and the event stream and draws components/animations. It captures touch input and translates it into <em>intents</em> handed to the core. It never mutates game state directly. Animations interpolate between discrete tick states for smooth visuals.</li>
 </ul>
 <div class="s"><div class="ct">The determinism contract (every Core task must honor this)</div>
 <ul>
-<li><strong>Fixed logic tick = 0.5 s.</strong> The sim advances in discrete ticks, decoupled from frame rate. Render interpolates; logic never runs on <code>deltaTime</code>.</li>
-<li><strong>Seeded RNG only.</strong> All randomness flows through one <code>GKMersenneTwisterRandomSource</code> seeded from <code>battleID</code>. Never call <code>Int.random</code>, <code>arc4random</code>, <code>Date()</code>, or <code>UUID()</code> inside the sim.</li>
-<li><strong>Deterministic ordering.</strong> Iterate units in a stable order (sorted by spawn index, never a <code>Set</code>). Resolve simultaneous events by fixed tie-break rules.</li>
+<li><strong>Fixed logic tick = 0.5 s.</strong> The sim advances in discrete ticks, decoupled from frame rate. Render interpolates; logic never runs on <code>dt</code>/<code>deltaTime</code>.</li>
+<li><strong>Seeded RNG only.</strong> All randomness flows through one seeded Dart generator (Mersenne-Twister/xorshift) seeded from <code>battleID</code>. Never call <code>Random()</code> without a seed, <code>DateTime.now()</code>, or any UUID generator inside the sim.</li>
+<li><strong>Deterministic ordering.</strong> Iterate units in a stable order (sorted by spawn index, never an unordered <code>Set</code>). Resolve simultaneous events by fixed tie-break rules.</li>
 <li><strong>Avoid float drift.</strong> Prefer integer grid coordinates and integer HP/damage. Where sub-grid position is needed (ship/projectile movement), use a fixed formula evaluation order and the same rounding everywhere.</li>
 <li><strong>Replay = seed + battle params + input timeline.</strong> Record the player's intents with their tick numbers; replaying them on the same seed must reproduce the exact end state. This is also the strongest determinism <em>test</em> (see M4).</li>
 </ul></div>
@@ -167,69 +169,79 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <tr><td><code>Grid</code></td><td>64×48 array of <code>Cell</code> (terrain, occupancy, owner). O(1) coordinate access, bounds-checked subscript.</td></tr>
 <tr><td><code>Piece</code> / <code>WallRack</code></td><td>Polyomino shapes (offset sets + rotation), deterministic draw with anti-streak, storage slots, trash.</td></tr>
 <tr><td><code>EnclosureSolver</code></td><td>Exterior flood-fill from the border; any open cell not reached = enclosed. Drives victory + isolation cleanup + interior-block reward.</td></tr>
-<tr><td><code>Battle</code></td><td>Aggregate root. Holds <code>GKStateMachine</code> over Build → Deploy → Fight → LastStand, sortie counter, timers, RNG, and all unit collections. The thing <code>step()</code> advances.</td></tr>
+<tr><td><code>Battle</code></td><td>Aggregate root. Holds a Dart state machine over Build → Deploy → Fight → LastStand, sortie counter, timers, RNG, and all unit collections. The thing <code>step()</code> advances.</td></tr>
 <tr><td><code>Cannon</code> / <code>Ship</code> / <code>Troop</code> / <code>Castle</code> / <code>Boss</code></td><td>Units with a deterministic per-tick <code>update</code>. Stats loaded from data, not hardcoded.</td></tr>
-<tr><td><code>ShipAI</code> / <code>TroopPathfinder</code></td><td>Deterministic grid-scoring target selection; weighted A* over a <code>GKGridGraph</code> rebuilt when walls change.</td></tr>
+<tr><td><code>ShipAI</code> / <code>TroopPathfinder</code></td><td>Deterministic grid-scoring target selection; weighted A* over a Dart grid graph rebuilt when walls change.</td></tr>
 <tr><td><code>StarEvaluator</code> / <code>BattleScore</code> / <code>Economy</code></td><td>Pure functions over end-of-battle state → 3-lever stars, raw score, Stonwryt deltas.</td></tr>
 </table>
-<p class="src">Pattern reference: Apple's <em>DemoBots</em> shows SpriteKit + GameplayKit entities/components/state-machines at scale; this design keeps the simulation out of SpriteKit entirely for testability and determinism, which DemoBots does not, but borrows its component and state-machine structure on the render side.</p>
+<p class="src">Pattern reference: Flame's component/game-loop model (FlameGame + Component tree) structures the render side; this design keeps the simulation out of Flame entirely (pure Dart Core) for testability and determinism, and the render layer observes Core state rather than owning it.</p>
 </section>
 
 <section id="ai-arch">
-<h2>The AI Layer — Apple Foundation Models</h2>
-<p>Rivenkeep treats Apple Intelligence (the on-device model behind Siri, exposed to apps via the <strong>Foundation Models</strong> framework, iOS 26+) as a <strong>first-class third layer</strong> alongside Core and Render — not an optional extra. It powers intelligent piece naming, the post-battle debrief, the living tutorial, rules help, dynamic flavor, accessibility narration, and recaps (full design in <a href="#" onclick="return false">GDD → AI-Enhanced Experience</a>). The model runs entirely on-device (private, free, offline).</p>
+<h2>The AI Layer — Hybrid On-Device + Cloud</h2>
+<p>Rivenkeep treats a small language model as a <strong>first-class third layer</strong> alongside Core and Render — not an optional extra. It powers intelligent piece naming, the post-battle debrief, the living tutorial, rules help, dynamic flavor, accessibility narration, and recaps (full design in <a href="#" onclick="return false">GDD → AI-Enhanced Experience</a>). These are all small-model language tasks — no high-performing model required. The model is reached through a <strong>three-tier hybrid behind one <code>LanguageProvider</code> interface</strong>: <strong>on-device first</strong> (Apple Foundation Models on iOS, Gemini Nano on Android — private, free, offline), <strong>dedicated cloud fallback</strong> (a small hosted model via Cloud Function, for devices with no on-device model), and a <strong>templated/denylist baseline floor</strong> that always works.</p>
 
 <div class="s" style="border-left-color:var(--danger)"><div class="ct" style="color:var(--danger)">The firewall is an architectural boundary, not a guideline</div>
-<p><code>RivenkeepCore</code> <strong>must not import the AI module</strong> (add the same build check that bans SpriteKit in Core). AI lives in a separate <code>RivenkeepAI</code> module that depends on Core's <em>read-only summary types</em>, never the reverse. AI consumes a <strong>structured post-hoc summary</strong> or <strong>player-facing text</strong>, runs <strong>off the timed loop</strong> (results screen, menus, naming UI — never a combat tick), and is <strong>non-authoritative</strong>: its output never flows back into game state, scoring, ranking, or the replay system. The determinism contract is preserved because the AI can only <em>read</em> finished outcomes and <em>write</em> cosmetic text.</p></div>
+<p><code>lib/core/</code> <strong>must not import the AI module</strong> (add the same build check that bans Flame/Flutter in Core). AI lives in a separate <code>lib/ai/</code> module that depends on Core's <em>read-only summary types</em>, never the reverse. AI consumes a <strong>structured post-hoc summary</strong> or <strong>player-facing text</strong>, runs <strong>off the timed loop</strong> (results screen, menus, naming UI — never a combat tick), and is <strong>non-authoritative</strong>: its output never flows back into game state, scoring, ranking, or the replay system. The determinism contract is preserved because the AI can only <em>read</em> finished outcomes and <em>write</em> cosmetic text.</p></div>
 
 <h3>Module shape</h3>
 <ul>
-<li><strong><code>RivenkeepAI</code> module.</strong> Depends on Core's <code>BattleSummary</code>, <code>BoardSnapshot</code>, and progression read-models. Exposes feature services: <code>NameModerator</code>, <code>NameSuggester</code>, <code>DebriefCoach</code>, <code>TutorGuide</code>, <code>RulesAssistant</code>, <code>FlavorWriter</code>, <code>BoardNarrator</code>, <code>RecapWriter</code>.</li>
-<li><strong><code>LanguageProvider</code> protocol.</strong> All services talk to the model through one protocol (request → typed result). The default impl wraps <code>SystemLanguageModel</code> via <code>LanguageModelSession</code>. This makes the model <em>swappable</em> — Apple is opening the framework to Private Cloud Compute and to Claude/Gemini Swift packages — and lets tests inject a deterministic stub provider.</li>
-<li><strong>Guided generation everywhere.</strong> Use <code>@Generable</code> typed structs (e.g. <code>Debrief</code>, <code>[PieceNameSuggestion]</code>, <code>ModerationVerdict</code>) so the app never parses free text. Use the <code>Tool</code> protocol for rules-grounded answers (the assistant calls into a rules lookup rather than inventing mechanics).</li>
+<li><strong><code>lib/ai/</code> module.</strong> Depends on Core's <code>BattleSummary</code>, <code>BoardSnapshot</code>, and progression read-models. Exposes feature services: <code>NameModerator</code>, <code>NameSuggester</code>, <code>DebriefCoach</code>, <code>TutorGuide</code>, <code>RulesAssistant</code>, <code>FlavorWriter</code>, <code>BoardNarrator</code>, <code>RecapWriter</code>.</li>
+<li><strong><code>LanguageProvider</code> interface.</strong> All services talk to the model through one Dart interface (request → typed result). Implementations: <code>OnDeviceIOSProvider</code> (Apple Foundation Models via platform channel), <code>OnDeviceAndroidProvider</code> (Gemini Nano / ML Kit GenAI via platform channel), <code>CloudProvider</code> (Cloud Function → small hosted model, enabled per-service for 1/3/6 only), and <code>BaselineProvider</code> (templated/denylist). A router picks the best available tier for each service at runtime; tests inject a deterministic stub.</li>
+<li><strong>Guided generation everywhere.</strong> Each provider returns typed Dart results (e.g. <code>Debrief</code>, <code>List&lt;PieceNameSuggestion&gt;</code>, <code>ModerationVerdict</code>) so the app never parses free text. Rules-grounded answers use tool-calling / a rules lookup rather than inventing mechanics.</li>
 </ul>
 
-<h3>Availability &amp; the required baseline (this is not "optional AI")</h3>
-<p>The AI path is the <strong>intended experience</strong>. Because Foundation Models requires an Apple-Intelligence-capable device with the feature on, each service ships with a <strong>baseline that guarantees coverage</strong> — framed as defense-in-depth, not a downgrade:</p>
+<h3>Per-feature tier routing (not every feature uses cloud)</h3>
+<p>On-device is Tier 1 for all eight features. The cloud tier is wired to <strong>only three features</strong> — the ones where consistent quality on every device matters and calls are infrequent. The rest are on-device-only and drop straight to their templated/denylist baseline when no on-device model is present. This keeps cloud cost trivial and keeps board state, battle data, and recaps entirely on-device.</p>
 <table>
-<tr><th>Service</th><th>AI path (intended)</th><th>Baseline (always present)</th></tr>
-<tr><td>Name moderation</td><td>On-device classification + entity extraction</td><td><b>Required, fail-closed:</b> denylist + pattern filter + community report. Safety can never depend solely on a gated feature.</td></tr>
-<tr><td>Debrief / tutor / flavor / recap</td><td>Personalized generated text</td><td>Templated text built from the same structured summary (deterministic sentences keyed off the data).</td></tr>
-<tr><td>Rules assistant</td><td>NL answer grounded via tool-calling</td><td>Searchable static FAQ / codex.</td></tr>
+<tr><th>#</th><th>Service</th><th>Tier 1</th><th>Cloud backstop?</th><th>Baseline (always present)</th></tr>
+<tr><td>1</td><td><code>NameModerator</code> / <code>NameSuggester</code></td><td>On-device</td><td><b>Yes</b> — safety-critical; the name is public anyway</td><td><b>Fail-closed:</b> denylist + pattern filter + community report</td></tr>
+<tr><td>2</td><td><code>DebriefCoach</code></td><td>On-device</td><td>No</td><td>Templated text from the structured summary</td></tr>
+<tr><td>3</td><td><code>TutorGuide</code></td><td>On-device</td><td><b>Yes</b> — first-impression / conversion</td><td>Scripted video-guided demo + fixed hints</td></tr>
+<tr><td>4</td><td><code>RulesAssistant</code></td><td>On-device</td><td>No</td><td>Searchable static FAQ / codex</td></tr>
+<tr><td>5</td><td><code>FlavorWriter</code></td><td>On-device</td><td>No</td><td>Templated text</td></tr>
+<tr><td>6</td><td>Daily/challenge framing</td><td>On-device</td><td><b>Yes</b> — shared, low-frequency content</td><td>Templated text</td></tr>
+<tr><td>7</td><td><code>BoardNarrator</code> + plain-language settings</td><td>On-device</td><td>No — high-frequency; board state stays on-device</td><td>Templated narration (deterministic board description)</td></tr>
+<tr><td>8</td><td><code>RecapWriter</code></td><td>On-device</td><td>No</td><td>Templated text</td></tr>
 </table>
-<p>Build the baseline first (it's also the test fixture and the unsupported-device path), then layer the model on top. As Apple-Intelligence device penetration grows, the AI path becomes the universal experience without code changes.</p>
+<p>Build order per service: <strong>baseline first</strong> (it's also the test fixture and the no-model path), <strong>then on-device</strong>, and <strong>for services 1/3/6 wire the cloud tier last</strong>. The <code>LanguageProvider</code> router selects on-device → (cloud, if enabled for that service) → baseline, so adding or swapping a tier never touches game code.</p>
 
 <h3>Cross-cutting rules for every AI call</h3>
 <ul>
 <li><strong>Async + cached.</strong> Never block a score, transition, or input. Cache results (re-opening a result is instant).</li>
 <li><strong>Moderate generated content too.</strong> Name suggestions and any UGC-adjacent output pass the same moderation as player input. No generated text references real people.</li>
-<li><strong>Privacy.</strong> On-device only; no player text or battle data leaves the device for AI. Matches the Production privacy posture.</li>
-<li><strong>Testability.</strong> Inject a stub <code>LanguageProvider</code> in tests; assert services degrade to baseline when the model is "unavailable," and that no AI type is reachable from <code>RivenkeepCore</code>.</li>
+<li><strong>Privacy.</strong> On-device by default (nothing leaves the device). The cloud fallback tier sends only the minimal task text (a name, a battle summary) to the hosted model and is disclosed in the privacy policy; no raw gameplay or personal data is sent. Matches the Production privacy posture.</li>
+<li><strong>Testability.</strong> Inject a stub <code>LanguageProvider</code> in tests; assert services degrade to baseline when all model tiers are "unavailable," and that no AI type is reachable from <code>lib/core/</code>.</li>
 </ul>
 </section>
 
 <section id="struct">
 <h2>Project Layout</h2>
-<pre style="background:#0d1017;border:1px solid var(--border);border-radius:6px;padding:14px 16px;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:#cdd4e0;line-height:1.5">Rivenkeep/
-├── Packages/
-│   └── RivenkeepCore/        # pure Swift, no SpriteKit — the sim (unit-tested)
-│       ├── Grid/             # Grid, Cell, coordinates
-│       ├── Build/            # Piece, WallRack, Wind, EnclosureSolver
-│       ├── Units/            # Cannon, Ship, Troop, Castle, Boss
-│       ├── AI/               # ShipAI, TroopPathfinder
-│       ├── Sim/              # Battle, TickLoop, RNG, Events, Intents
-│       ├── Scoring/          # StarEvaluator, BattleScore, Economy
-│       └── Data/             # BattleParameters, Theater, Codable models
-├── Rivenkeep/                # the iOS app (SpriteKit)
-│   ├── Scenes/               # HomeScene, BattleScene, sub-overlays
-│   ├── Render/               # node builders, animation, input→intent
-│   ├── UI/                   # HUD, shop panel, menus
-│   ├── Backend/              # CloudKit, GameKit, Firebase wrappers
-│   ├── Resources/            # .atlas asset catalogs, audio, JSON battle data
-│   └── App/                  # AppDelegate, entry, config
-└── RivenkeepTests/           # XCTest: CoreTests (most), AppTests
+<pre style="background:#0d1017;border:1px solid var(--border);border-radius:6px;padding:14px 16px;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:.74rem;color:#cdd4e0;line-height:1.5">rivenkeep/                    # Flutter project (flutter create --org studios.riquochet)
+├── lib/
+│   ├── core/                 # pure Dart, no Flame/Flutter — the sim (unit-tested)
+│   │   ├── grid/             # Grid, Cell, coordinates
+│   │   ├── build/            # Piece, WallRack, Wind, EnclosureSolver
+│   │   ├── units/            # Cannon, Ship, Troop, Castle, Boss
+│   │   ├── ai_pathing/       # ShipAI, TroopPathfinder (A*) — game AI, not LLM
+│   │   ├── sim/              # Battle, TickLoop, RNG, Events, Intents
+│   │   ├── scoring/          # StarEvaluator, BattleScore, Economy
+│   │   └── data/             # BattleParameters, Theater, JSON models
+│   ├── render/               # Flame (Fight) + Flutter Canvas (Build/Deploy)
+│   │   ├── game/             # FlameGame, components, animation, input→intent
+│   │   └── ui/               # HUD, shop panel, menus (Flutter widgets)
+│   ├── services/             # SyncService(Firestore), LeaderboardService(games_services),
+│   │   │                     #   StoreService(in_app_purchase), Ad/Config/Race/Naming
+│   ├── ai/                   # LanguageProvider + providers + feature services (firewalled)
+│   ├── models/               # shared immutable data classes
+│   └── main.dart             # entry, Firebase init, config
+├── assets/                   # sprite atlases, audio, JSON battle data
+├── ios/                      # iOS runner (signing, capabilities, Game Center)
+├── android/                  # Android runner (Play Games, permissions)
+├── test/                     # flutter test: core tests (most), widget tests
+└── pubspec.yaml              # deps: flame, firebase_*, games_services, in_app_purchase…
 </pre>
-<p>Rule of thumb: <strong>if a piece of logic decides a game outcome, it lives in <code>RivenkeepCore</code> and has a unit test.</strong> If it only draws or animates, it lives in the app target. This boundary is what makes the determinism and balance claims verifiable.</p>
+<p>Rule of thumb: <strong>if a piece of logic decides a game outcome, it lives in <code>lib/core/</code> and has a unit test.</strong> If it only draws or animates, it lives in <code>lib/render/</code>. This boundary is what makes the determinism and balance claims verifiable.</p>
 </section>
 
 <section id="assets">
@@ -244,7 +256,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <tr><td>Troops</td><td>7 types; Bomber as air sprite; Shield Bearer facing variants</td><td>Small sprites; walk animation (2–4 frames)</td><td>M6 / M11</td></tr>
 <tr><td>Bosses</td><td>10 bosses + stealth/surface states + attack tells</td><td>Large multi-frame sprites; per-boss VFX</td><td>M7 (one), M11 (all 10)</td></tr>
 <tr><td>Terrain</td><td>Rocks (1×1/2×2/3×3), trees (healthy/damaged), cliffs (L-tromino), water/lava/void per theater</td><td>Tiles; cliffs count as walls for enclosure</td><td>M2 / M11</td></tr>
-<tr><td>VFX</td><td>Projectiles per cannon, explosions, burn zones, lightning arcs, freeze, lava, screen shake, isolation-wipe</td><td>SKEmitter / sprite-sheet animations</td><td>M4 (basic), M11 (full)</td></tr>
+<tr><td>VFX</td><td>Projectiles per cannon, explosions, burn zones, lightning arcs, freeze, lava, screen shake, isolation-wipe</td><td>Flame particle system / sprite-sheet animations</td><td>M4 (basic), M11 (full)</td></tr>
 <tr><td>Maps</td><td>10 theater base maps + 190 environmental overlays (rock/tree placement per battle)</td><td>Data-driven layouts (JSON) + tile art per theater. Overlays are <em>data</em>, generated/authored.</td><td>M8 (data format), M11 (all 190)</td></tr>
 <tr><td>UI</td><td>Wall rack tray, cannon carousel, HUD (timers, stars, Stonwryt), shop cards, home screen, buttons, fonts</td><td>9-slice panels; the Chakra Petch / mono font feel from the GDD docs</td><td>M1 (functional), M9 (shop), M11 (final)</td></tr>
 <tr><td>Audio</td><td>SFX per the GDD audio table (place/rotate/snap/fire/hit/explosion/UI), music per theater, voice barks</td><td>Compressed; pooled players</td><td>M4 (core SFX), M11 (full)</td></tr>
@@ -252,7 +264,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 </table>
 <div class="s"><div class="ct">Asset conventions (set these in M0)</div>
 <ul>
-<li>Texture atlases per theater: <code>theater_&lt;name&gt;.atlas</code>; shared UI atlas; shared units atlas until theater skins exist.</li>
+<li>Sprite-sheet atlases per theater (e.g. <code>theater_Texture atlases per theater: <code>theater_&lt;name&gt;.atlas</code>; shared UI atlas; shared units atlas until theater skins exist.lt;nameTexture atlases per theater: <code>theater_&lt;name&gt;.atlas</code>; shared UI atlas; shared units atlas until theater skins exist.gt;.png</code> + a Flame-loadable atlas descriptor); shared UI atlas; shared units atlas until theater skins exist.</li>
 <li>Naming: <code>&lt;group&gt;_&lt;name&gt;_&lt;state&gt;@&lt;scale&gt;x</code> e.g. <code>cannon_lightning_exposed@2x</code>, <code>ship_warship_fog@2x</code>.</li>
 <li>Every sprite declares an anchor + (for cannons) a muzzle point and (for ships) a hull-center used by the sim→render mapping.</li>
 <li>Asset request tickets reference the GDD section so artists have the spec (e.g. ship sizes, color states, accessibility outlines).</li>
@@ -271,13 +283,13 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <div class="mmeta"><b>Goal:</b> a building, testable, version-controlled skeleton with the Core/Render split and the deterministic tick loop proven on a trivial example. <b>Depends on:</b> nothing. <b>Outcome:</b> "Hello deterministic world" — a tick loop you can unit-test.</div>
 
 <div class="grp"><div class="gh">Tasks</div>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-data">setup</span> Create the Xcode project (iOS app, SpriteKit game template, portrait-only) + a local Git repo with a Swift <code>.gitignore</code>.</span></label>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Add a local SwiftPM package <code>RivenkeepCore</code> (library, zero deps) and link it to the app target. Verify it has <em>no</em> SpriteKit/UIKit imports (add a build check).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">setup</span> Create the Flutter project (<code>flutter create --org studios.riquochet</code>, portrait-only) + a local Git repo with the generated Flutter <code>.gitignore</code>.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Create the <code>lib/core/</code> library (pure Dart, zero deps). Verify it has <em>no</em> Flame/Flutter imports (add a build/analysis check).</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Define coordinate types: <code>GridPoint(x:Int,y:Int)</code>, board constants (64×48), and a generic <code>Grid&lt;Cell&gt;</code> with bounds-checked subscript and O(1) access.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Implement the deterministic clock: <code>TickLoop</code> with fixed 0.5 s ticks, a monotonic <code>tick:Int</code> counter, and a <code>step(intents:)</code> entry point returning <code>[Event]</code>. No wall-clock time inside Core.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Wrap RNG: <code>SeededRandom</code> over <code>GKMersenneTwisterRandomSource</code>, constructed from a <code>UInt64</code> battle seed. Add a lint/code-review note banning <code>arc4random</code>/<code>Int.random</code>/<code>Date()</code> in Core.</span></label>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Bare <code>BattleScene: SKScene</code> that renders the empty grid (debug tiles) and draws the tick counter — proves Core↔Render wiring.</span></label>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-test">ci</span> Set up CI (GitHub Actions macOS or Xcode Cloud) to build + run <code>RivenkeepTests</code> on every push. Add SwiftLint with a determinism rule set.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Bare <code>BattleGame extends FlameGame</code> that renders the empty grid (debug tiles) and draws the tick counter — proves Core↔Render wiring.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-test">ci</span> Set up CI (GitHub Actions with the Flutter action, or Codemagic) to build both platforms + run <code>flutter test</code> on every push. Add <code>dart analyze</code> with a strict lint set + a determinism rule.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-data">setup</span> Asset conventions + empty atlases committed (see Asset Pipeline). Decide bundle id, team, capabilities placeholder.</span></label>
 </div>
 
@@ -292,8 +304,8 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <label class="ck"><input type="checkbox"><span><b>Tick test:</b> N calls to <code>step()</code> advance the counter by N with no time dependency.</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — Core scaffolding</div><pre><code>Create a Swift Package "RivenkeepCore" (library target, no dependencies, must not import
-SpriteKit or UIKit). Add:
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — Core scaffolding</div><pre><code>Create the "lib/core" Dart library (no dependencies, must not import
+Flame or Flutter). Add:
 1. struct GridPoint { let x: Int; let y: Int } with Hashable + Comparable (sort by y then x).
 2. struct Grid&lt;Cell&gt; backed by a flat [Cell] of width*height (64x48 default). Provide a
    bounds-checked subscript(GridPoint), an in-bounds(GridPoint) check, and orthogonal
@@ -302,12 +314,12 @@ SpriteKit or UIKit). Add:
    methods nextInt(upperBound:), nextDouble(), and shuffledStable([T]) -&gt; [T].
 4. protocol Simulatable { mutating func step(intents: [Intent]) -&gt; [Event] } and an empty
    enum Intent / enum Event to fill later.
-Write XCTest cases proving: grid bounds safety, identical RNG sequences for equal seeds,
+Write test cases proving: grid bounds safety, identical RNG sequences for equal seeds,
 and divergent sequences for different seeds. Keep everything deterministic — no Date(),
 no arc4random, no Int.random. Explain any nondeterminism risk you see.</code></pre></div>
 
 <div class="grp exit"><div class="gh">Exit criteria</div>
-<label class="ck"><input type="checkbox"><span>App launches to an empty rendered grid showing a live tick counter; <code>RivenkeepCore</code> tests green in CI; determinism lint active.</span></label>
+<label class="ck"><input type="checkbox"><span>App launches to an empty rendered grid showing a live tick counter; <code>lib/core</code> tests green in CI; determinism lint active.</span></label>
 </div>
 </div>
 </section>
@@ -322,7 +334,7 @@ no arc4random, no Int.random. Explain any nondeterminism risk you see.</code></p
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <code>Piece</code> model: polyomino as a set of cell offsets + rotation (0/90/180/270, no flip — mirrors are distinct pieces). Start with Groups A &amp; B (foundation + tetrominoes).</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <code>WallRack</code> deterministic draw: weighted group table + anti-streak (no 3 identical in a row) + guaranteed-distribution counter, all via <code>SeededRandom</code>. Re-roll up to 3× then least-recently-drawn (per GDD).</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Placement validation: piece fits only on empty, in-bounds cells (no overlap with walls/terrain/castles). Returns placement result + affected cells.</span></label>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Piece state machine (<code>GKStateMachine</code>): InTray → InPlay(dragging) → SoftLock(adjustable) → HardLock. Soft-locked pieces show group tint; hard-lock merges into wall.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Piece state machine (pure-Dart enum-driven): InTray → InPlay(dragging) → SoftLock(adjustable) → HardLock. Soft-locked pieces show group tint; hard-lock merges into wall.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Wind &amp; Drift: 8-compass wind; on soft-lock, drift the piece per wind strength (deterministic). Cardinal-only early campaigns, diagonals from Cam 10+. (This is a <em>Build</em> mechanic.)</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Touch input → intents: tap-to-pick, drag-to-move, tap-to-rotate, drop. Two drag modes (smooth vs grid-snap) per GDD controls. Translate screen → <code>GridPoint</code>.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Render the wall rack tray, the dragging piece, valid/invalid placement preview (green/red), snap ticks, and the wind compass indicator.</span></label>
@@ -343,7 +355,7 @@ no arc4random, no Int.random. Explain any nondeterminism risk you see.</code></p
 <label class="ck"><input type="checkbox"><span><b>Feel playtest:</b> hands-on — does placing pieces feel responsive? (Subjective gate; the GDD calls timing "make or break".)</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — polyomino + deterministic rack</div><pre><code>In RivenkeepCore, implement the wall-piece system from the GDD "Wall Piece Groups" and
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — polyomino + deterministic rack</div><pre><code>In lib/core, implement the wall-piece system from the GDD "Wall Piece Groups" and
 "Piece State Machine" sections.
 - Piece: a polyomino defined by [GridPoint] offsets, with rotate() producing 90° rotations
   (no mirroring — L and J are separate pieces). Provide cells(at origin:) -&gt; [GridPoint].
@@ -353,7 +365,7 @@ no arc4random, no Int.random. Explain any nondeterminism risk you see.</code></p
   anti-streak (no 3 identical pieces consecutively, re-roll up to 3 then pick
   least-recently-drawn) and a per-battle guaranteed-distribution counter.
 - placement(of:at:on grid:) -&gt; PlacementResult validating empty + in-bounds cells only.
-Write XCTest proving identical sequences for equal seeds and the anti-streak invariant over
+Write tests proving identical sequences for equal seeds and the anti-streak invariant over
 1,000 draws. Keep all randomness in SeededRandom; no other RNG.</code></pre></div>
 
 <div class="grp exit"><div class="gh">Exit criteria</div>
@@ -391,7 +403,7 @@ Write XCTest proving identical sequences for equal seeds and the anti-streak inv
 <label class="ck"><input type="checkbox"><span><b>Performance:</b> full-grid enclosure eval well under one frame (it runs on every placement preview).</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — exterior flood-fill enclosure</div><pre><code>Implement EnclosureSolver in RivenkeepCore per the GDD "Enclosure" rules.
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — exterior flood-fill enclosure</div><pre><code>Implement EnclosureSolver in lib/core per the GDD "Enclosure" rules.
 Input: the Grid (cells know if they are wall / cliff / open / castle / rock / tree).
 Algorithm: 4-connected flood fill starting from every border open cell, marking all
 exterior-reachable open cells. Any open cell NOT reached is enclosed. Cliffs and walls and
@@ -401,7 +413,7 @@ the map edge are barriers; diagonal gaps do NOT leak (4-connectivity). Return:
 - isolated wall fragments (walls not adjacent to any enclosed region's perimeter)
 Then implement isolationCleanup() that removes fragments and returns interiorBlocksReward
 (4 isolated interior blocks = 10 Stonwryts, floor division, ×10 scale).
-Provide XCTest with these fixtures: single loop, two nested loops, a loop with a 1-cell
+Provide tests with these fixtures: single loop, two nested loops, a loop with a 1-cell
 diagonal-only gap (must read as NOT enclosed), a cliff completing a wall, and a perimeter
 touching the map edge. Add a randomized property test: enclosed cells must never be
 border-reachable. Must be deterministic and allocation-light (runs every placement).</code></pre></div>
@@ -439,8 +451,8 @@ border-reachable. Must be deterministic and allocation-light (runs every placeme
 <label class="ck"><input type="checkbox"><span><b>Data loading:</b> all 10 cannon types parse from JSON; computed per-tick eDPS matches GDD table (Standard 5.31, Lightning 9.0, …).</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — cannon data + HP model</div><pre><code>Add the cannon system to RivenkeepCore.
-1. Codable struct CannonType { id, rangeGrids, damage, reloadTicks, accuracy, special,
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — cannon data + HP model</div><pre><code>Add the cannon system to lib/core.
+1. an immutable, JSON-serializable CannonType with { id, rangeGrids, damage, reloadTicks, accuracy, special,
    unlockStars }. Load all types from Resources/cannons.json. Add a computed
    effectiveDamagePerTick = (damage / reloadTicks) * accuracy (NOTE: per TICK, not per
    second — 1 tick = 0.5s; do not pre-store a per-second value).
@@ -449,7 +461,7 @@ border-reachable. Must be deterministic and allocation-light (runs every placeme
 3. Placement: validate a 2x2 footprint sits entirely on enclosed cells. Support reposition
    with a move penalty flag. Cannons persist position + hp between sorties within a campaign,
    carry capped at 200%.
-Write XCTest: JSON loads all 10 types; computed eDPS-per-tick matches the GDD table values
+Write tests: JSON loads all 10 types; computed eDPS-per-tick matches the GDD table values
 (Standard 5.31, Long 4.0, Lightning 9.0, Doom 3.75, etc.); hp→performance is linear;
 carry caps at 200%. Flag in a comment that Lightning takes 2x incoming damage (used in M4).</code></pre></div>
 
@@ -490,7 +502,7 @@ carry caps at 200%. Flag in a comment that Lightning takes 2x incoming damage (u
 <label class="ck"><input type="checkbox"><span><b>Timer:</b> fight ends on all-ships-dead and on timeout; survivors carry to next sortie.</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — deterministic tick combat</div><pre><code>Implement the fixed-tick combat loop in RivenkeepCore (GDD "Fight Phase" + "Ship AI").
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — deterministic tick combat</div><pre><code>Implement the fixed-tick combat loop in lib/core (GDD "Fight Phase" + "Ship AI").
 1 tick = 0.5s. Battle.step(intents:) advances exactly one tick and must be fully
 deterministic. Per tick, in this STABLE order (document it):
   (1) advance projectiles; resolve impacts (apply damage, emit HitEvent)
@@ -505,7 +517,7 @@ Targeting intents (tap-to-priority, touch-lock) come in via the intents array. F
 Auto / HoldFire / TouchLock.
 Also implement a ReplayRecorder capturing (seed, params, [tick: [Intent]]) and a headless
 replay() that re-simulates and returns the final BattleState for comparison.
-Write XCTest: (a) record a scripted fight, replay it 100x, assert identical final state;
+Write tests: (a) record a scripted fight, replay it 100x, assert identical final state;
 (b) assert 1 Standard cannon kills a 100hp Warship in 18-20 ticks; (c) a breach re-opens
 enclosure. No wall-clock time, no unseeded RNG anywhere in the loop.</code></pre></div>
 
@@ -540,7 +552,7 @@ enclosure. No wall-clock time, no unseeded RNG anywhere in the loop.</code></pre
 <label class="ck"><input type="checkbox"><span><b>Balance spot-checks:</b> Artillery Barge fires from max range behind fleet; Battering Ram eDPS-to-wall ~13.3/tick once in contact.</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — deterministic ship grid-scoring AI</div><pre><code>Implement deterministic ship AI in RivenkeepCore per the GDD "Ship AI — Deterministic
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — deterministic ship grid-scoring AI</div><pre><code>Implement deterministic ship AI in lib/core per the GDD "Ship AI — Deterministic
 Tactical Positioning". Each ship, on its turn, evaluates candidate water cells within its
 move range and scores each by a weighted sum (distance-to-optimal-firing-range, line of
 fire to nearest wall/breach, exposure to player cannons, special-behavior goal). It moves
@@ -550,7 +562,7 @@ Load 13 ship types from ships.json with behavior tags and implement: Transport (
 dock, then land troops via a TroopLandingEvent), Carrier (spawn bombers on interval),
 HospitalShip (heal lowest-hp ally in radius), TorpedoBoat (charge then one 50-dmg shot),
 ArtilleryBarge/MortarShip (fire from long range, arc ignores walls for Mortar).
-Write XCTest proving identical move/target decisions for an identical board across 100 runs,
+Write tests proving identical move/target decisions for an identical board across 100 runs,
 and that each special behavior fires on the correct schedule.</code></pre></div>
 
 <div class="grp exit"><div class="gh">Exit criteria</div>
@@ -566,7 +578,7 @@ and that each special behavior fires on the correct schedule.</code></pre></div>
 <div class="mmeta"><b>Goal:</b> landed troops path to walls/cannons/castles over weighted terrain; the 7 troop types incl. the Shield-Bearer+Medic "puzzle" formation. <b>Depends on:</b> M5 (Transport lands them). <b>GDD refs:</b> Troop Types, Troop Pathfinding (A* weighted), Area Denial, Bombers.</div>
 
 <div class="grp"><div class="gh">Tasks</div>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Weighted A* over a <code>GKGridGraph</code> of land cells, rebuilt when walls change; terrain weights (open/rubble/burn zones); group re-eval batching (9–16 troops split odd/even ticks per GDD).</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Weighted A* over a hand-rolled Dart grid graph of land cells, rebuilt when walls change; terrain weights (open/rubble/burn zones); group re-eval batching (9–16 troops split odd/even ticks per GDD).</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-data">data</span> 7 troop types (Infantry, Sapper, Heavy, Bomber, Scout Troop, Shield Bearer, Medic) as data with HP/speed/dmg/target-priority/special.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Target priority per type (Infantry: wall→cannon→castle; Heavy: cannons first; Sapper: kamikaze 2×2; Scout Troop: floods breaches; Bomber: flies over walls, bomblets, returns to Carrier to reload).</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Shield Bearer (front damage reduction + body-blocks troops behind) and Medic (heals adjacent, priority-kill) — the flanking puzzle.</span></label>
@@ -586,18 +598,18 @@ and that each special behavior fires on the correct schedule.</code></pre></div>
 <label class="ck"><input type="checkbox"><span><b>Perf:</b> path recompute for 16 troops on wall-change stays within tick budget.</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — weighted A* troops</div><pre><code>Implement troop pathfinding in RivenkeepCore using GameplayKit GKGridGraph (GDD "Troop
-Pathfinding — A* with Weighted Terrain"). Build a GKGridGraph of walkable land cells; assign
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — weighted A* troops</div><pre><code>Implement troop pathfinding in lib/core using a hand-rolled weighted A* over a Dart grid graph (GDD "Troop
+Pathfinding — A* with Weighted Terrain"). Build a grid graph of walkable land cells; assign
 per-node movement weights (open=1, rubble/burn=high, impassable removed). Rebuild/patch the
 graph when walls change. For up to 16 troops, batch re-evaluation: group A on even ticks,
-group B on odd ticks. Movement is deterministic — when GKGridGraph returns equal-cost paths,
+group B on odd ticks. Movement is deterministic — when the graph returns equal-cost paths,
 break ties by a fixed rule (prefer lower (y,x) next-node) so runs are reproducible.
 Implement 7 troop types from troops.json with target priorities:
 Infantry(wall→cannon→castle), Heavy(cannons first, tanky), Sapper(kamikaze 200 dmg 2x2 on
 wall contact), ScoutTroop(fast/fragile, targets castle through breaches), Bomber(ignores
 walls, drops bomblets on castles, returns to Carrier to reload), ShieldBearer(50% frontal
 cannon resist, blocks troops behind), Medic(heals adjacent 3/tick, can't self-heal).
-Write XCTest: identical paths across 100 runs on the same board; correct re-route after a
+Write tests: identical paths across 100 runs on the same board; correct re-route after a
 breach; Heavy targets cannons; Sapper detonates 2x2; Medic regen stops on death.</code></pre></div>
 
 <div class="grp exit"><div class="gh">Exit criteria</div>
@@ -635,7 +647,7 @@ breach; Heavy targets cannons; Sapper detonates 2x2; Medic regen stops on death.
 <label class="ck"><input type="checkbox"><span><b>Boss:</b> 8 cannons @ ~75% uptime kill Leviathan in ~6–10 sorties (matches GDD/balance audit).</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — star evaluator + battle score</div><pre><code>Implement StarEvaluator and BattleScore in RivenkeepCore (GDD "Star System — Three-Lever
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — star evaluator + battle score</div><pre><code>Implement StarEvaluator and BattleScore in lib/core (GDD "Star System — Three-Lever
 Averaging" + "Battle Score"). Pure functions over end-of-battle state.
 Levers (each 1..3, plus a hidden ! tier):
   Ships: ★ any kill, ★★ ≥60%, ★★★ ≥90%, ! 100%
@@ -646,7 +658,7 @@ AND the third at ★★★ (averaging alone cannot reach it). Thresholds come fr
 (server-tunable) with on-device defaults. 0★ easter egg: 0 ships + 0 cannons surviving but
 castles enclosed → award 10 × campaignLevel once per campaign.
 BattleScore = shipsDestroyedPercent + areaEnclosedPercent + avgCannonHealthPercent (0...400).
-Write XCTest covering the boundary cases above, the ★★★! gate, the ceil-average rule, and
+Write tests covering the boundary cases above, the ★★★! gate, the ceil-average rule, and
 the 0★ once-per-campaign behavior.</code></pre></div>
 
 <div class="grp exit"><div class="gh">Exit criteria</div>
@@ -659,7 +671,7 @@ the 0★ once-per-campaign behavior.</code></pre></div>
 <div class="ms" data-ms="m8">
 <div class="ms-head"><span class="id">M8</span><span class="nm">Progression, Battle Generator &amp; Save System</span><span class="ms-prog">0/0</span></div>
 <div class="pbar"><div class="pfill"></div></div>
-<div class="mmeta"><b>Goal:</b> turn one battle into the campaign — 190 parameterized battles, difficulty layers/levels, star-gated unlocks, storage slots, and durable save (local + CloudKit). <b>Depends on:</b> M7. <b>GDD refs:</b> Difficulty Layers Matrix, Difficulty Levels, Unlock Timeline, Wall Storage, Battle Spreadsheet.</div>
+<div class="mmeta"><b>Goal:</b> turn one battle into the campaign — 190 parameterized battles, difficulty layers/levels, star-gated unlocks, storage slots, and durable save (local + Firestore). <b>Depends on:</b> M7. <b>GDD refs:</b> Difficulty Layers Matrix, Difficulty Levels, Unlock Timeline, Wall Storage, Battle Spreadsheet.</div>
 
 <div class="grp"><div class="gh">Tasks</div>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-data">data</span> <code>BattleParameters</code> generator: produce all 190 battles from the campaign/difficulty matrix (theater, layers A–E, piece tier, sorties, cannon start/max, castles req/visible, wind, timers, enemy set). Deterministic + data-validated.</span></label>
@@ -667,7 +679,7 @@ the 0★ once-per-campaign behavior.</code></pre></div>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Star-gated unlocks (cumulative stars → cannons at 15/30/50/75/100/130/160/200/250★). Decide &amp; implement whether stars are cumulative across difficulty levels (recommended: yes — escape valve).</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Wall storage slots (unlock at Cam 2/6/14/23/27 → 1..5) with campaign-persistent contents + restore-on-replay.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> 3-strike drop-back, campaign/war structure, replay-a-battle, and progression state model.</span></label>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-data">data</span> Save system: <code>SaveState</code> Codable → local file (source of truth); CloudKit private-DB sync; conflict resolution (latest-wins + merge stars upward); migration/versioning.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">data</span> Save system: <code>SaveState</code> JSON → local file (source of truth); Firestore sync; conflict resolution (latest-wins + merge stars upward); migration/versioning.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Campaign/battle map UI, battle-select, difficulty-level picker, unlock notifications ("X★ to next cannon"), storage UI.</span></label>
 </div>
 
@@ -679,26 +691,26 @@ the 0★ once-per-campaign behavior.</code></pre></div>
 <div class="grp tests"><div class="gh">Tests</div>
 <label class="ck"><input type="checkbox"><span><b>Generator:</b> all 190 battles validate (no impossible configs; castle req ≤ visible; timers within bounds); deterministic output.</span></label>
 <label class="ck"><input type="checkbox"><span><b>Unlock pacing:</b> simulate avg-★ trajectories — confirm the balance-audit finding (sub-1.32★ never reaches Doom in one pass) and that cross-level cumulative stars relieve it.</span></label>
-<label class="ck"><input type="checkbox"><span><b>Save/load:</b> round-trip integrity; CloudKit sync + conflict cases; schema migration from v1→v2 fixture.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Save/load:</b> round-trip integrity; Firestore sync + conflict cases; schema migration from v1→v2 fixture.</span></label>
 <label class="ck"><input type="checkbox"><span><b>Difficulty:</b> proportional ship modifier produces consistent relative difficulty at Cam 1 and Cam 32 (no compression).</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — battle generator + save</div><pre><code>1) Implement BattleParametersGenerator in RivenkeepCore: from a campaign/difficulty matrix
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — battle generator + save</div><pre><code>1) Implement BattleParametersGenerator in lib/core: from a campaign/difficulty matrix
 (theaters, layers A–E, piece tiers, sorties, cannon start/max, castles required/visible,
 wind, Build/Deploy/Fight timers via the GDD formulas, enemy roster by appears-at-campaign),
-produce all 190 BattleParameters as Codable. Apply difficulty LEVEL modifiers as functions:
+produce all 190 BattleParameters as JSON-serializable Dart classes. Apply difficulty LEVEL modifiers as functions:
 Recruit/Commander/Veteran/Legend adjust build timer (×1.4 / ×1.0 / ×0.9 / ×0.8) and ship
 count PROPORTIONALLY (≈ −33% / 0 / +20% / +33% of the fleet, rounded) — NOT a flat ±2 —
 so a level feels the same at Campaign 1 and 32. Validate every battle (castles_required ≤
 visible, timers in range, non-empty fleet).
-2) Implement SaveState (Codable) with a schemaVersion, written atomically to a local file
-as source of truth, plus a CloudKitSync wrapper (private DB) with latest-wins + stars merged
+2) Implement SaveState (JSON-serializable) with a schemaVersion, written atomically to a local file
+as source of truth, plus a FirestoreSync wrapper with latest-wins + stars merged
 upward on conflict, and a migration step.
-Write XCTest: all 190 battles generate and validate deterministically; difficulty modifiers
+Write tests: all 190 battles generate and validate deterministically; difficulty modifiers
 scale proportionally; SaveState round-trips and migrates v1→v2.</code></pre></div>
 
 <div class="grp exit"><div class="gh">Exit criteria</div>
-<label class="ck"><input type="checkbox"><span>You can play through campaigns with rising difficulty, unlock cannons by stars, bank storage, drop back on 3 losses, and your progress survives reinstall via CloudKit.</span></label>
+<label class="ck"><input type="checkbox"><span>You can play through campaigns with rising difficulty, unlock cannons by stars, bank storage, drop back on 3 losses, and your progress survives reinstall via Firestore.</span></label>
 </div>
 </div>
 </section>
@@ -712,14 +724,14 @@ scale proportionally; SaveState round-trips and migrates v1→v2.</code></pre></
 <div class="grp"><div class="gh">Tasks</div>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> <code>Economy</code>: faucets (battle stars 8/23/47/93, first-time +18, campaign 87, 0★ egg, interior blocks, dailies, streak, ad +15) and hard sinks (the ~25 phase-gated items with per-battle caps). All earned-only — never purchasable with money.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> In-battle purchase engine: phase-filtered availability, time-stops-on-pause, per-item use caps, multi-purchase in one pause. "Nudge not win" — none can convert a loss to a win.</span></label>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> StoreKit 2 IAP: ad-free unlock, civilization skin bundles, Commander's Pack/Circle, cosmetics. <b>No Stonwryt sales.</b> Restore-purchases path.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> in_app_purchase IAP: ad-free unlock, civilization skin bundles, Commander's Pack/Circle, cosmetics. <b>No Stonwryt sales.</b> Restore-purchases path.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Rewarded video ads (max 3/day): +15 Stonwryts on insufficient balance; avoid-drop-back ad option.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">core</span> Daily challenges + package timers, daily streak (14-day cycle, Day 28+ holds 2×, DiMaggio streak shields), achievement challenges (10 categories, ~190), Weekend Race (Battle Score placement).</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Stonwryt purchase panel (cards, "Assign Stonewrights", masonry SFX), shop/IAP screens, daily/challenge/race UI, package-open timers.</span></label>
 </div>
 
 <div class="grp"><div class="gh">Tasks · AI — Intelligent Piece Naming (first-class, not optional)</div>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <code>NameModerator</code>: the <b>required fail-closed baseline first</b> — denylist + pattern/leetspeak filter + community-report hook — then the on-device Foundation Models classifier layered on top. Typed verdict via guided generation: <code>{ verdict: allow|review|reject, categories, confidence }</code>. Satisfies the child-safety UGC requirement.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <code>NameModerator</code>: the <b>required fail-closed baseline first</b> — denylist + pattern/leetspeak filter + community-report hook — then the on-device model classifier (Apple Foundation Models on iOS / Gemini Nano on Android) layered on top, with a cloud fallback. Typed verdict via guided generation: <code>{ verdict: allow|review|reject, categories, confidence }</code>. Satisfies the child-safety UGC requirement.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <code>NameSuggester</code>: 3–4 on-theme name suggestions from a piece's shape + group + theater via guided generation (<code>[PieceNameSuggestion]</code>); each suggestion passes back through <code>NameModerator</code>.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Naming UI: suggestion chips (accept / tweak / ignore), moderation feedback states (approved-gold / pending / rejected with reason), optional one-line lore blurb on accept.</span></label>
 </div>
@@ -737,22 +749,22 @@ scale proportionally; SaveState round-trips and migrates v1→v2.</code></pre></
 <label class="ck"><input type="checkbox"><span><b>Name moderation:</b> baseline denylist catches a banned-words fixture with the model stubbed off (fail-closed); leetspeak/PII evasions rejected; generated suggestions are themselves moderated; verdict is correctly typed.</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — name moderation + suggestions</div><pre><code>In a new RivenkeepAI module (must NOT be importable from RivenkeepCore), implement piece-name
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — name moderation + suggestions</div><pre><code>In a new lib/ai module (must NOT be importable from lib/core), implement piece-name
 moderation and suggestion using Apple FoundationModels.
 1. NameModerator.moderate(_ name: String) -&gt; ModerationVerdict. Build the BASELINE FIRST and
    make it fail-closed: a denylist + regex/leetspeak normalizer + PII patterns that runs on
-   every device with no model. THEN layer a Foundation Models classifier behind a
-   LanguageProvider protocol; combine results (reject if either rejects). Use @Generable:
+   every device with no model. THEN layer an on-device model classifier (Apple Foundation Models / Gemini Nano) + cloud fallback behind a
+   LanguageProvider interface; combine results (reject if either rejects). Use typed Dart results:
    struct ModerationVerdict { enum V { allow, review, reject }; v: V; categories: [String];
    confidence: Double }.
 2. NameSuggester.suggest(shape:group:theater:) -&gt; [PieceNameSuggestion] via guided generation;
    pass every suggestion back through NameModerator before returning.
-Inject a stub LanguageProvider in tests. Write XCTest: with the model stubbed unavailable the
+Inject a stub LanguageProvider in tests. Write tests: with the model stubbed unavailable the
 baseline still rejects a banned-words fixture (fail-closed), leetspeak/PII evasions are caught,
 and suggestions that violate policy are filtered. Note in comments this is a child-safety
 requirement — moderation must never fail open.</code></pre></div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — economy engine</div><pre><code>Implement the Stonwryt economy in RivenkeepCore (GDD "Stonwryt"). Model faucets and sinks as
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — economy engine</div><pre><code>Implement the Stonwryt economy in lib/core (GDD "Stonwryt"). Model faucets and sinks as
 data. Faucets: star rewards (8/23/47/93), first-time +18, campaign completion 87, 0★ egg
 (10×level), interior blocks (10 per 4), daily/streak/challenge/race, rewarded ad +15 (max
 3/day). Sinks: the ~25 phase-gated consumable items with their costs and per-battle/per-phase
@@ -777,12 +789,12 @@ nudges from one day's income (pinch point). Keep all logic data-driven and unit-
 <div class="mmeta"><b>Goal:</b> Game Center leaderboards/achievements, Firebase analytics + Remote Config (server-tunable timers/thresholds + adaptive star thresholds), and privacy/consent — the infrastructure the GDD and balance audit depend on. <b>Depends on:</b> M8–M9. <b>GDD refs:</b> Backend Architecture, Analytics event schema, Adaptive Star Thresholds, Privacy &amp; Data Policy.</div>
 
 <div class="grp"><div class="gh">Tasks</div>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> GameKit: authenticate, Battle Score leaderboards (per battle + global), achievements; offline queue + submit on reconnect.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> games_services: authenticate, Battle Score leaderboards (per battle + global), achievements; offline queue + submit on reconnect.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Firebase Analytics: implement the GDD's ~20-event schema (<code>battle_start/end</code> with per-lever %, cannon types + final HP, <code>cannon_placed/lost</code>, <code>purchase</code>, <code>ad_watch</code>, <code>stonwryt_earn/spend</code>, <code>battle_retry</code>, <code>drop_back</code>, <code>name_submit</code>…). This is what makes the balance pass possible — "without it you're tuning blind."</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Emit a structured <code>BattleSummary</code> at battle end (the same data the events carry) as the read-only input the M11 AI <a href="#ai-arch">DebriefCoach</a> consumes — Core produces it, the AI layer only reads it (firewall).</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Remote Config: phase timers, star thresholds, economy values, difficulty weights all server-tunable with on-device defaults; fetch + cache + offline fallback.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Adaptive star thresholds: a Cloud Function (<code>tuneStarThresholds</code>) reading completion-rate analytics per lever and nudging thresholds gradually (the only thing preventing ★★★ grade-inflation — treat as launch-blocking, per balance audit).</span></label>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Crashlytics; privacy policy URL; App Privacy questionnaire data map; first-launch consent for analytics; account data export + delete (CloudKit + Firestore) for GDPR/CCPA.</span></label>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-data">backend</span> Crashlytics; privacy policy URL; App Privacy + Play Data Safety questionnaires + Google Play Data Safety data map; first-launch consent for analytics; account data export + delete (Firestore) for GDPR/CCPA.</span></label>
 </div>
 
 <div class="grp assets"><div class="gh">Assets needed</div>
@@ -793,11 +805,11 @@ nudges from one day's income (pinch point). Keep all logic data-driven and unit-
 <label class="ck"><input type="checkbox"><span><b>Determinism guard for ranking:</b> identical replays submit identical Battle Scores (anti-cheat foundation — server can re-sim from seed+inputs).</span></label>
 <label class="ck"><input type="checkbox"><span><b>Analytics:</b> every schema event fires with correct params (debug view); no PII leaks; consent gates collection.</span></label>
 <label class="ck"><input type="checkbox"><span><b>Remote Config:</b> values override defaults; offline uses last-fetched; bad config can't crash the sim.</span></label>
-<label class="ck"><input type="checkbox"><span><b>Privacy:</b> data-delete actually removes CloudKit + Firestore records; export produces a complete bundle.</span></label>
+<label class="ck"><input type="checkbox"><span><b>Privacy:</b> data-delete actually removes all Firestore records; export produces a complete bundle.</span></label>
 </div>
 
 <div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — analytics schema + remote config</div><pre><code>Create an AnalyticsService wrapping Firebase Analytics that implements the GDD event schema.
-Define a Swift enum AnalyticsEvent with associated values for each event so call sites are
+Define a Dart enum AnalyticsEvent with associated values for each event so call sites are
 type-safe: battleStart(campaign,battle,difficulty,theater),
 battleEnd(result,stars,battleScore,leverPercents,cannonTypesAndFinalHP,sorties),
 cannonPlaced(type), cannonLost(type), purchase(item,cost), adWatch(placement),
@@ -832,8 +844,8 @@ validate leaderboard submissions (anti-cheat).</code></pre></div>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> Video-guided tutorial / demo (the rewritten onboarding), home screen, settings (incl. Notifications), all final UI.</span></label>
 </div>
 
-<div class="grp"><div class="gh">Tasks · AI Experience Layer (Apple Foundation Models — first-class)</div>
-<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <code>RivenkeepAI</code> module foundation: the <code>LanguageProvider</code> protocol + default <code>SystemLanguageModel</code> impl + a stub provider for tests; the build check that <code>RivenkeepCore</code> cannot import it.</span></label>
+<div class="grp"><div class="gh">Tasks · AI Experience Layer (Hybrid on-device + cloud — first-class)</div>
+<label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <code>lib/ai/</code> module foundation: the <code>LanguageProvider</code> interface + on-device impls (Apple Foundation Models / Gemini Nano) + cloud impl + baseline impl + a stub provider for tests; the build check that <code>lib/core/</code> cannot import it.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <b>DebriefCoach</b> — the signature feature. Reads the <code>BattleSummary</code>, returns typed <code>Debrief{ strengths, improvements, nextTip }</code> via guided generation; tone-adaptive (new vs. veteran); async + cached on the results screen; advisory only. Templated baseline for unsupported devices.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <b>TutorGuide</b> — adaptive tutorial guidance: contextual hints from interaction telemetry, "Ask the Stonewright" free-text help (tool-grounded in rules), adaptive pacing. The tutorial battle stays scripted/deterministic; only guidance adapts.</span></label>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-core">ai</span> <b>RulesAssistant</b> ("Ask the Emissary") — NL rules help via <code>Tool</code>-calling over a rules knowledge base; never invents mechanics. Static-FAQ baseline.</span></label>
@@ -842,19 +854,19 @@ validate leaderboard submissions (anti-cheat).</code></pre></div>
 <label class="ck"><input type="checkbox"><span><span class="pill pill-render">render</span> UI for all of the above: debrief card on results, tutor hint/ask surface, Ask-the-Emissary panel, accessibility narration trigger + VoiceOver/TTS wiring.</span></label>
 </div>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — post-battle DebriefCoach</div><pre><code>In RivenkeepAI, implement DebriefCoach (GDD "Post-Battle Debrief"). It must NOT touch the sim.
+<div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — post-battle DebriefCoach</div><pre><code>In lib/ai, implement DebriefCoach (GDD "Post-Battle Debrief"). It must NOT touch the sim.
 Input: a read-only BattleSummary from Core (stars per lever, Battle Score, cannons used +
 final HP + losses, ships destroyed/total + survivor types, breach count + first-breach tick,
 lowest castle HP moment, time used per phase, sorties, difficulty). Output via guided
 generation:
-  @Generable struct Debrief { let strengths: [String]   // 2-3, specific to THIS battle
+  class Debrief { List&lt;String&gt; strengths;   // 2-3, specific to THIS battle (typed result)
                               let improvements: [String] // 2-3, actionable
                               let nextTip: String }       // one concrete tactic
 Pass a tone hint (encouraging for early/low-star/high-retry; terse for Legend/high-star).
 Go through the LanguageProvider protocol so a stub can be injected. Run async, cache by
 battleID, and NEVER let the result feed back into stars/score/state. Provide a templated
 fallback DebriefBuilder that produces sentences purely from the summary (used when the model
-is unavailable). Write XCTest: with a stub provider the typed Debrief parses and is non-empty;
+is unavailable). Write tests: with a stub provider the typed Debrief parses and is non-empty;
 the templated fallback fires when unavailable; assert DebriefCoach has no path to mutate any
 Core game state (compile-time: it only receives a value-type summary).</code></pre></div>
 
@@ -862,7 +874,7 @@ Core game state (compile-time: it only receives a value-type summary).</code></p
 <label class="ck"><input type="checkbox"><span><b>Content validation:</b> all 190 overlays load + are winnable (automated bot run per battle reaches a legal victory state); every theater/skin atlas resolves.</span></label>
 <label class="ck"><input type="checkbox"><span><b>Boss correctness:</b> each boss's special mechanic behaves and is killable within its sortie band; determinism holds.</span></label>
 <label class="ck"><input type="checkbox"><span><b>Audio/UX:</b> no missing SFX; tutorial completes; accessibility (color-blind floor patterns, HP-bar shapes, outlines) verified.</span></label>
-<label class="ck"><input type="checkbox"><span><b>AI layer:</b> with a stub provider every service returns typed output and degrades to its baseline when "unavailable"; debrief/flavor never alter score or state; <code>RivenkeepCore</code> has no compile path to <code>RivenkeepAI</code>; rules assistant answers only from the knowledge base (no invented mechanics); generated names/flavor pass moderation.</span></label>
+<label class="ck"><input type="checkbox"><span><b>AI layer:</b> with a stub provider every service returns typed output and degrades to its baseline when "unavailable"; debrief/flavor never alter score or state; <code>lib/core</code> has no compile path to <code>lib/ai</code>; rules assistant answers only from the knowledge base (no invented mechanics); generated names/flavor pass moderation.</span></label>
 </div>
 
 <div class="prompt"><button class="copy">copy</button><div class="ph">Windsurf · Claude prompt — content loaders &amp; validation harness</div><pre><code>Build the content pipeline + a validation harness.
@@ -915,16 +927,16 @@ spot difficulty spikes. Keep the bot in the test target, not shipping code.</cod
 <p>Testing is embedded in every milestone above, but here is the overall strategy and the layers, so nothing is treated as an afterthought. The Core/Render split exists precisely so the game-deciding logic is testable headlessly.</p>
 <table>
 <tr><th>Layer</th><th>What it covers</th><th>Tooling / cadence</th></tr>
-<tr><td><b>Unit (Core)</b></td><td>Grid, enclosure flood-fill, RNG, piece draw, pathfinding, star math, Battle Score, economy, generator, save round-trip. The majority of tests live here.</td><td>XCTest, run on every push in CI. Target high coverage of <code>RivenkeepCore</code>.</td></tr>
-<tr><td><b>Determinism</b></td><td>Record→replay equality (same seed+inputs → identical end state), across simulated devices; ship/troop AI reproducibility; ranking integrity.</td><td>XCTest harness from M4; run nightly + pre-release on a device matrix.</td></tr>
-<tr><td><b>Integration</b></td><td>Phase transitions, full sortie loop, save/sync/migration, IAP sandbox, analytics events, Remote Config override.</td><td>XCTest + manual sandbox; per milestone + pre-release.</td></tr>
+<tr><td><b>Unit (Core)</b></td><td>Grid, enclosure flood-fill, RNG, piece draw, pathfinding, star math, Battle Score, economy, generator, save round-trip. The majority of tests live here.</td><td>flutter test, run on every push in CI. Target high coverage of <code>lib/core/</code>.</td></tr>
+<tr><td><b>Determinism</b></td><td>Record→replay equality (same seed+inputs → identical end state), across simulated devices; ship/troop AI reproducibility; ranking integrity.</td><td>test harness from M4; run nightly + pre-release on a device matrix.</td></tr>
+<tr><td><b>Integration</b></td><td>Phase transitions, full sortie loop, save/sync/migration, IAP sandbox, analytics events, Remote Config override.</td><td>flutter test + manual sandbox; per milestone + pre-release.</td></tr>
 <tr><td><b>Gameplay / balance</b></td><td>TTK vs computed values, fight-timer margins, boss kill bands, auto-pilot completes all 190 battles, difficulty consistency, economy pinch point. Closes the Balance Analysis findings.</td><td>Auto-pilot bot (M11) + analytics-driven pass (M12).</td></tr>
 <tr><td><b>Performance</b></td><td>60 fps under worst-case load, memory ceiling, battery/thermal, load times.</td><td>Instruments; min-spec device; pre-release gate.</td></tr>
 <tr><td><b>Device / compatibility</b></td><td>Screen sizes (notch/Dynamic Island/home-indicator safe areas), iOS versions, low-storage, offline.</td><td>Device matrix; TestFlight.</td></tr>
 <tr><td><b>UX / playtest</b></td><td>Does Build feel good (M1)? Early-game engagement (the Rampart-skill / passivity risk)? Tutorial clarity? Difficulty curve perception?</td><td>Hands-on + external playtesters from M1; structured beta in M12.</td></tr>
 <tr><td><b>Accessibility</b></td><td>Color-blind floor patterns + HP-bar shapes + enemy outlines (not color-only), text size, one-handed reach, reduced motion.</td><td>Manual + audit checklist; M11–M12.</td></tr>
-<tr><td><b>Compliance / pre-submission</b></td><td>App Privacy label vs real data flows, GDPR/CCPA export+delete, consent gating, ad-SDK and StoreKit rules, child-safety of UGC (piece names moderation).</td><td>Pre-submission checklist; M10 + M12.</td></tr>
-<tr><td><b>AI features</b></td><td>Moderation fail-closed with model stubbed; every service degrades to baseline when unavailable; no AI type reachable from <code>RivenkeepCore</code>; guided-generation output is typed; debrief/flavor never affect score, state, or replay; rules assistant never invents mechanics.</td><td>XCTest with a stub <code>LanguageProvider</code>; built in M11, regression-checked pre-release.</td></tr>
+<tr><td><b>Compliance / pre-submission</b></td><td>App Privacy label vs real data flows, GDPR/CCPA export+delete, consent gating, ad-SDK and in_app_purchase/store rules, child-safety of UGC (piece names moderation).</td><td>Pre-submission checklist; M10 + M12.</td></tr>
+<tr><td><b>AI features</b></td><td>Moderation fail-closed with model stubbed; every service degrades to baseline when unavailable; no AI type reachable from <code>lib/core/</code>; guided-generation output is typed; debrief/flavor never affect score, state, or replay; rules assistant never invents mechanics.</td><td>flutter test with a stub <code>LanguageProvider</code>; built in M11, regression-checked pre-release.</td></tr>
 </table>
 <div class="s"><div class="ct">The one test that protects the whole design</div><p>The <strong>record→replay determinism test</strong> (M4) is the keystone. It guarantees the GDD's core promise (fair, learnable, rankable battles), it is the foundation of the replay-sharing feature, and it gives the server a way to re-simulate any submitted score from <code>seed + inputs</code> to catch cheating. Keep it green at all costs — any nondeterminism is a P0 regression.</p></div>
 </section>
@@ -958,7 +970,7 @@ spot difficulty spikes. Keep the bot in the test target, not shipping code.</cod
 
 <section id="playbook">
 <h2>Appendix A — The Build Playbook (Fully-Fleshed AI Prompts)</h2>
-<p>This is the start-to-finish prompt sequence to build Rivenkeep with an agentic AI coder, written assuming you are <strong>new to iOS and Swift</strong>. Each prompt maps to a milestone above and is meant to be run by <strong>Devin Desktop</strong> (the editor formerly called Windsurf — same Cascade agent) or <strong>Claude Code</strong> (terminal). These agents can read your files, write code across the project, run commands, and run tests, so the prompts tell the agent to <em>build and verify</em>, then stop for you.</p>
+<p>This is the start-to-finish prompt sequence to build Rivenkeep with an agentic AI coder, written assuming you are <strong>new to Flutter and Dart</strong>. Each prompt maps to a milestone above and is meant to be run by <strong>Devin Desktop</strong> (the editor formerly called Windsurf — same Cascade agent) or <strong>Claude Code</strong> (terminal). These agents can read your files, write code across the project, run commands, and run tests, so the prompts tell the agent to <em>build and verify</em>, then stop for you.</p>
 
 <div class="s" style="border-left-color:var(--accent)"><div class="ct">How to drive the agent (read this first)</div>
 <ul>
@@ -966,12 +978,12 @@ spot difficulty spikes. Keep the bot in the test target, not shipping code.</cod
 <li><strong>Run one prompt at a time, in order.</strong> Do not paste the next prompt until the current milestone's <em>Exit Criteria</em> (in the milestone cards above) are met and you've committed.</li>
 <li><strong>The loop:</strong> paste prompt → agent reads the GDD/SDD, writes code + tests, runs them, iterates until green → you review the diff, run the app/tests yourself, then <code>git commit</code>. Each prompt ends by telling the agent to summarize and stop for your review.</li>
 <li><strong>If it goes sideways,</strong> <code>git restore</code> / revert to your last commit and re-prompt with tighter constraints. Cheap to undo when you commit after every milestone.</li>
-<li><strong>The one rule the agent must never break:</strong> nothing in <code>RivenkeepCore</code> may use wall-clock time or unseeded randomness, and no AI may touch the simulation. Repeat it if the agent drifts.</li>
+<li><strong>The one rule the agent must never break:</strong> nothing in <code>lib/core</code> may use wall-clock time or unseeded randomness, and no AI may touch the simulation. Repeat it if the agent drifts.</li>
 </ul></div>
 
 <h3>Before you start — things only you can do</h3>
 <div class="grp">
-<label class="ck"><input type="checkbox"><span>Use a <strong>Mac</strong> (Xcode is Mac-only) and install <strong>Xcode</strong> from the Mac App Store (free, large download). Open it once to finish component install.</span></label>
+<label class="ck"><input type="checkbox"><span>Install the full Flutter toolchain (Flutter SDK, Xcode for iOS, Android Studio for the Android SDK/emulator) — see the interactive Dev Environment Setup guide. Run <code>flutter doctor</code> until it is all green.</span></label>
 <label class="ck"><input type="checkbox"><span>Create a free <strong>Apple ID</strong>. The free tier runs the game on the Simulator and your own iPhone; the paid Apple Developer Program ($99/yr) is only needed later for TestFlight/App Store (M12).</span></label>
 <label class="ck"><input type="checkbox"><span>Install your agent: <strong>Devin Desktop</strong> and/or <strong>Claude Code</strong> (see <code>docs.claude.com</code> for the Claude Code install). Sign in.</span></label>
 <label class="ck"><input type="checkbox"><span><strong>Clone your GitHub repo</strong> locally (the one with the GDD, SDD, journal) and open that folder in the agent.</span></label>
@@ -980,26 +992,26 @@ spot difficulty spikes. Keep the bot in the test target, not shipping code.</cod
 <h3>The prompt sequence</h3>
 <p class="dim">Work top to bottom. Each prompt references the matching milestone (its full Tasks/Tests/Exit lists) and the GDD sections to read.</p>
 
-<div class="prompt"><button class="copy">copy</button><div class="ph">P0.1 · Project setup &amp; scaffolding (milestone M0)</div><pre><code>You're setting up a brand-new iOS game called Rivenkeep. I'm new to iOS/Swift, so explain
+<div class="prompt"><button class="copy">copy</button><div class="ph">P0.1 · Project setup &amp; scaffolding (milestone M0)</div><pre><code>You're setting up a brand-new cross-platform mobile game called Rivenkeep in Flutter. I'm new to Flutter/Dart, so explain
 each step in one line as you go. This repo already contains Rivenkeep_GDD.html and
 Rivenkeep_SDD.html — first read the SDD sections "Architecture", "The AI Layer", and
 "Project Layout".
 Do, in this folder:
-1. Create an Xcode iOS app "Rivenkeep" (SpriteKit Game template, Swift, portrait only,
-   iOS 16 minimum), bundle id com.riquochet.rivenkeep.
-2. Add a local Swift package "RivenkeepCore" (library, zero dependencies) and link it to the
-   app. It must NOT import SpriteKit or UIKit — add a test that fails if it ever does.
-3. Add a local Swift package "RivenkeepAI" that may read RivenkeepCore's summary types but
-   that RivenkeepCore can never import — add a check enforcing that one-way boundary.
+1. Create a Flutter app "rivenkeep" (flutter create --org studios.riquochet, portrait only,
+   iOS 15 minimum), bundle id com.riquochet.rivenkeep.
+2. Add the <code>lib/core/</code> Dart library (zero dependencies) inside the
+   app. It must NOT import Flame or Flutter — add a test that fails if it ever does.
+3. Add a <code>lib/ai/</code> module that may read lib/core's summary types but
+   that lib/core can never import — add a check enforcing that one-way boundary.
 4. Create the folder structure shown in the SDD "Project Layout".
-5. Add an XCTest target "RivenkeepTests" with one trivial passing test.
-6. Ensure .gitignore covers Swift/Xcode/macOS; keep Package.resolved tracked (this is an app).
+5. Add the <code>test/</code> directory with one trivial passing test.
+6. Ensure .gitignore covers Flutter/Dart/build output; keep pubspec.lock tracked (this is an app).
 7. Add a GitHub Actions workflow on a macOS runner that builds and runs the tests on push.
 Keep it minimal and building — NO gameplay yet. Then build, run the tests, fix until green,
-tell me how to open and run it in Xcode (Simulator), and STOP for my review.</code></pre></div>
+tell me how to run it on an iOS simulator and Android emulator (flutter run), and STOP for my review.</code></pre></div>
 
 <div class="prompt"><button class="copy">copy</button><div class="ph">P0.2 · Deterministic core foundations (milestone M0)</div><pre><code>Read SDD milestone M0 (Tasks/Tests/Exit) and "Architecture → the determinism contract".
-In RivenkeepCore implement:
+In lib/core implement:
 - GridPoint(x,y) (Hashable, Comparable: sort by y then x).
 - Grid&lt;Cell&gt; backed by a flat array, 64x48, bounds-checked subscript, O(1) access,
   orthogonal neighbors(of:).
@@ -1008,7 +1020,7 @@ In RivenkeepCore implement:
   No wall-clock time anywhere.
 - SeededRandom wrapping GKMersenneTwisterRandomSource(seed: UInt64) with nextInt(upperBound:),
   nextDouble(), shuffledStable(_:). All randomness in the game must go through this.
-Add the M0 XCTests: grid bounds safety, identical RNG sequences for equal seeds (and different
+Add the M0 tests: grid bounds safety, identical RNG sequences for equal seeds (and different
 for different seeds), tick advances by N over N steps with no time dependency.
 Run the tests, iterate until green, summarize, and STOP. Reminder: no Date(), arc4random, or
 Int.random in Core.</code></pre></div>
@@ -1018,7 +1030,7 @@ and "Controls". Implement the build phase: polyomino Piece (offset sets + 90° r
 mirroring), WallRack deterministic draw (weighted groups + anti-streak + guaranteed
 distribution, all via SeededRandom), placement validation (empty/in-bounds only), the piece
 state machine (InTray→Dragging→SoftLock→HardLock), and Wind &amp; Drift on soft-lock. Then the
-SpriteKit side: render the grid, tray, dragging piece, valid/invalid preview, snap, and the
+Flame/render side: render the grid, tray, dragging piece, valid/invalid preview, snap, and the
 wind compass; map touches to intents.
 Write and run the M1 tests (draw determinism + anti-streak over 1,000 draws, placement
 correctness for all rotations, wind drift never lands off-grid or on an occupied cell).
@@ -1080,7 +1092,7 @@ Write/run the M5 tests (identical decisions across 100 runs on one board; each s
 on schedule). Iterate until green, STOP.</code></pre></div>
 
 <div class="prompt"><button class="copy">copy</button><div class="ph">P6 · Troops &amp; weighted A* (milestone M6)</div><pre><code>Read SDD milestone M6 and GDD "Troop Types", "Troop Pathfinding", "Bombers". Build a
-GKGridGraph of walkable land cells with per-node weights (open=1, rubble/burn=high,
+grid graph of walkable land cells with per-node weights (open=1, rubble/burn=high,
 impassable removed); rebuild when walls change. Path up to 16 troops with deterministic tie-
 breaking (prefer lower (y,x) next node), batching re-eval across even/odd ticks. Implement
 the 7 troop types with target priorities from troops.json (Infantry, Heavy→cannons, Sapper
@@ -1107,8 +1119,8 @@ Timeline", "Wall Storage", "Battle Spreadsheet". Implement the BattleParameters 
 all 190 battles from the campaign/difficulty matrix (deterministic + validated), the 4
 difficulty LEVELS as modifiers — make the ship-count modifier PROPORTIONAL (about +/-33%),
 not a flat +/-2 (balance-audit fix) — star-gated cannon unlocks, wall storage slots, the
-3-strike drop-back, and a Codable SaveState written locally as source of truth with a
-CloudKit sync wrapper (latest-wins, stars merged upward) and a schema migration. Render the
+3-strike drop-back, and a JSON-serializable SaveState written locally as source of truth with a
+Firestore sync wrapper (latest-wins, stars merged upward) and a schema migration. Render the
 campaign map, battle select, difficulty picker, unlock toasts.
 Write/run the M8 tests (all 190 battles validate deterministically; proportional difficulty
 is consistent at Campaign 1 vs 32; save round-trips + migrates; unlock pacing). STOP.</code></pre></div>
@@ -1116,10 +1128,10 @@ is consistent at Campaign 1 vs 32; save round-trips + migrates; unlock pacing). 
 <div class="prompt"><button class="copy">copy</button><div class="ph">P9 · Economy, monetization &amp; AI piece naming (milestone M9)</div><pre><code>Read SDD milestone M9 and GDD "Stonwryt", "Monetization", "Daily Challenges", "Challenges",
 "Weekend Race", and "AI-Enhanced Experience → Intelligent Piece Naming". Implement the
 Economy (faucets + the ~25 hard-sink phase-gated items with per-battle caps; Stonwryts are
-earned-only and can NEVER be bought; no purchase converts a loss to a win), StoreKit 2 IAP
+earned-only and can NEVER be bought; no purchase converts a loss to a win), in_app_purchase IAP
 (ad-free + cosmetics only), rewarded ads (max 3/day, +15), daily challenges, the 14-day
-streak, achievement challenges, and the Weekend Race. Then in RivenkeepAI build NameModerator
-(fail-closed denylist baseline FIRST, then the on-device Foundation Models classifier behind
+streak, achievement challenges, and the Weekend Race. Then in lib/ai build NameModerator
+(fail-closed denylist baseline FIRST, then the on-device model classifier + cloud fallback behind
 a LanguageProvider protocol) and NameSuggester (guided generation, suggestions re-moderated).
 Render the shop, purchase panel, daily/race UI, and the naming UI (suggestion chips +
 moderation states).
@@ -1127,8 +1139,8 @@ Write/run the M9 tests (economy invariants + pinch point; IAP sandbox; moderatio
 with the model stubbed; suggestions moderated). STOP. The AI must never touch the sim.</code></pre></div>
 
 <div class="prompt"><button class="copy">copy</button><div class="ph">P10 · Backend &amp; live services (milestone M10)</div><pre><code>Read SDD milestone M10 and GDD "Backend Architecture", "Adaptive Star Thresholds", "Privacy
-&amp; Data Policy". Implement GameKit (auth, Battle Score leaderboards, achievements, offline
-queue), Firebase Analytics with the ~20-event schema as a type-safe Swift enum (gate behind a
+&amp; Data Policy". Implement games_services (auth, Battle Score leaderboards, achievements, offline
+queue), Firebase Analytics with the ~20-event schema as a type-safe Dart enum (gate behind a
 consent flag, no PII), a structured BattleSummary emitted at battle end (the read-only input
 the AI debrief will consume), Remote Config (server-tunable timers/thresholds/economy with
 compiled-in defaults + offline fallback), a tuneStarThresholds cloud function (adaptive
@@ -1136,21 +1148,21 @@ thresholds — prevents 3-star grade inflation, launch-blocking), Crashlytics, a
 export + delete. Note the server can re-simulate a battle from seed+inputs to validate scores
 (anti-cheat).
 Write/run the M10 tests (identical replays submit identical scores; events fire with correct
-params + no PII; Remote Config falls back to defaults; data-delete clears CloudKit +
+params + no PII; Remote Config falls back to defaults; data-delete clears Firestore +
 Firestore). STOP.</code></pre></div>
 
 <div class="prompt"><button class="copy">copy</button><div class="ph">P11 · Content + AI experience layer (milestone M11)</div><pre><code>Read SDD milestone M11 and GDD "AI-Enhanced Experience" (all subsections). This milestone has
 two tracks. CONTENT: wire up the 10 theaters, 190 overlays, final sprites/audio, the
 remaining 9 bosses, the 198-piece catalog, ~190 challenges, and the tutorial; add a headless
 auto-pilot bot and a ContentValidationTests suite that plays all 190 battles to a legal
-terminal state (no unwinnable content). AI LAYER (in RivenkeepAI, all behind LanguageProvider
+terminal state (no unwinnable content). AI LAYER (in lib/ai, all behind LanguageProvider
 with templated/static baselines, all off the timed loop, all non-authoritative): DebriefCoach
 (typed Debrief from the BattleSummary, tone-adaptive), TutorGuide ("Ask the Stonewright"
 adaptive hints + tool-grounded help), RulesAssistant ("Ask the Emissary", tool-grounded over
 a rules KB), FlavorWriter, BoardNarrator (accessibility), RecapWriter.
 Write/run the M11 tests (all 190 battles completable by the bot; each boss works; with a stub
 provider every AI service returns typed output and degrades to baseline; no AI type reachable
-from RivenkeepCore; debrief/flavor never change score or state). Build incrementally, commit
+from lib/core; debrief/flavor never change score or state). Build incrementally, commit
 per theater/feature, STOP between chunks.</code></pre></div>
 
 <div class="prompt"><button class="copy">copy</button><div class="ph">P12 · Polish, balance pass &amp; launch (milestone M12)</div><pre><code>Read SDD milestone M12 and GDD "Production &amp; Standards", "Mobile UX", plus the Balance
@@ -1169,7 +1181,7 @@ do not submit without my go-ahead.</code></pre></div>
 
 </div>
 <footer>
-Rivenkeep — Software Design Document &amp; Build Plan v1.1.0 · Companion to GDD v6.2.4 · Progress saved locally in your browser
+Rivenkeep — Software Design Document &amp; Build Plan v1.2.0 · Companion to GDD v6.3.0 · Progress saved locally in your browser
 </footer>
 <script>
 (function(){

@@ -895,7 +895,52 @@ Upload: RIVENKEEP_JOURNAL.md + Rivenkeep_GDD_v5_1_5.html + Rivenkeep_Critical_An
 - **Rivenkeep_Critical_Analysis_Definitive.html** — re-checked vs v6.2.4 (62 resolved, 16 open)
 - **Rivenkeep_Balance_Analysis.html** — deep balance audit (3 P0 / 4 P1 / 5 P2)
 - **Rivenkeep_SDD.html** — Software Design Document + build plan, v1.0.2 (versioned; AI layer integrated)
+- **Rivenkeep_Cannons_Towers.html** — Cannon & Tower Design (MODULE of the GDD), v1.0.0. The defender combat model. Stable filename, version internal (git convention).
 - **RIVENKEEP_JOURNAL.md** — this file
 - **README.md** — repo front page (orientation + doc index)
 - **.gitignore** — Swift/Xcode/macOS ignore rules
 - All earlier GDD versions (v4.x–v6.2.3) DELETED to prevent confusion.
+
+---
+
+## COMBAT-CONTROL-MODEL SESSION (defender: cannons & towers)
+
+Big design session rethinking the combat roster from counter-web first principles. Produced `Rivenkeep_Cannons_Towers.html` (the source of truth for the defender). Research drew on Rampart (weak roster model — depth was aiming, which we removed), Kingdom Rush (4 archetypes + rich enemy matrix = the model), and hard/soft-counter theory (avoid dominant generalists; prefer soft counters; "perfect imbalance").
+
+**LOCKED decisions (settled):**
+- **Pillar:** commander, not soldier. Player controls coverage + ammunition, never aim/fire. Tight toolkit + rich (future) bestiary. Deploy = plan; Fight = watch plan + adapt. Determinism = the teacher.
+- **8×3 matrix:** 8 cannon ARCHETYPES × 3 DOMAINS (Land/Sea/Air). Learn 8, not 24. Domain = loaded ammo (per group). Air is a domain-mode, NOT a separate AA cannon.
+- **Efficiency = directional cycle:** Land full-vs-land / reduced-sea / heavily-reduced-air; Sea heavily-reduced-land / full-sea / reduced-air; Air reduced-land / heavily-reduced-sea / full-air. No dead picks.
+- **Range: CUT (v1.1.0).** Range removed entirely — the AoR *is* the reach; if a target is in the zone, cannons hit it. Domains differ only by the efficiency cycle, not reach. AoR move-distance limit also considered + disfavored. (Reversed an earlier Land-close/Sea-mid/Air-far idea.)
+- **Groups:** touching cannons = group; DEPLOY-ONLY (no merge/split in Fight). **More cannons → BIGGER AoR (~linear: 1→base, 2→2×, 3→3×) AND more firepower — grouping is advantageous.** LONE WOLF cannons are the exception: they SHRINK the group's AoR (antisocial). New tension = concentration vs flexibility: one big group = max power but ONE domain + one direction; many groups = multi-domain + independent zones. AoRs may overlap. Heuristic: ~3–4 groups of 3–4 cannons blanket a coastline. Lone cannon = group of one. **(Corrects an earlier note that said "more cannons → smaller AoR" — that was backwards.)**
+- **AoR = coverage, not targeting.** Big lazy overlapping zones are the intended steady state. Crews hold fire when AoR empty; fire immediately on entry (must read "coiled," not "asleep").
+- **Falloff:** P(hit)=100%−75%×(dist/radius), linear. Centre 100%, edge 25%. 4 cannons at edge ≈ 1 hit. Overlap stacks fringes (the cure for edge-weakness) — a DEPLOY decision. Must show a visible gradient; seeded RNG.
+- **Firepower = probabilistic** (not assigned/locked); overkill wasted → discourages over-stacking.
+- **Two Fight verbs, both cost silent time:** (A) Re-task AoR — hold-drag, soft-lock until finger lifts, cooldown scales with distance, desaturate. (B) Switch domain — per group, whole group, expensive, RESTARTABLE (timer resets on change of mind), whole group silent, countdown + desaturate over group. Both domain + AoR set in DEPLOY, adapted in Fight.
+- **6 towers** (2×2, no damage, one per group incl. lone cannon, NOT upgradeable, no in-battle improvement, DESTRUCTIBLE → enemies prioritize them): Stonewright Post (repair — FIRST taught, fits backstory), Spotter (extend AoR + lift fog of war: spot ships sooner / reveal type earlier), Forge (cut reload + domain-switch cooldowns), Rangefinder (tracking + tighten out-of-domain penalty), Powder Store (damage amp), Jammer (slow enemies in AoR).
+- **Upgrades:** cannons get a 3-rank Stonwryt mastery track, PERMANENT account unlocks, per-cannon-TYPE, expensive-but-optional (rank-0 always viable → no capital-cliff, "favored not locked in"). Individual-cannon improvements (existing, e.g. HP carry) stay. Towers do NOT upgrade.
+- **All shots lob over walls (NO line-of-sight).** → encourages enclosing your guns → cannon defense reinforces the enclosure victory condition.
+- **Mini-game onboarding:** early play IS a ladder of concept-drills (wall → enclose → deploy → AoR → domain → tower), combine phases, until the LAST mini-game IS Campaign 1 Battle 1. Replayable for Stonwryts; re-appear at campaign starts; teach transferable mechanics only.
+- **Ship "personalities":** flavor unpredictability inside determinism (e.g. transports doing "crazy Ivans"). Deferred to ships session.
+
+**PARKED / FUTURE ("War 2" & later):** symmetric friendly fire (likely first version = heavily-reduced self-splash to discourage troop wall-camping; ship OFF by default behind a flag); per-cannon overheat/cooldown rhythms; commander-triggered cannon actives; Relay tower.
+
+**8 ARCHETYPES = v1 DRAFT, NOT settled** (system is locked, roles are clay until the bestiary exists): Standard, Rapid, Piercer, Splasher, Chain, Burner, Marksman (recast from "Siege" when range was cut — identity is target-selection: always fires the highest-value threat), Breaker. FLAG: Splasher/Chain/Burner are all multi-target and may blur → consider consolidating to 6–7.
+
+**OPEN QUESTIONS to prototype before locking:** the multi-target trio; falloff readability; idle-as-coiled feel; cooldown lengths (domain-switch heavier than AoR-move?); and the load-bearing one — a stripped M4 prototype answering "does managing AoRs feel like COMMANDING or FLAILING?" Validate that BEFORE investing in the bestiary.
+
+**NEXT SESSIONS (user's plan):** a dedicated **Ships / bestiary** doc (the missing half — the crises the defender answers), then a **Troops** doc (own levers: target priority, path behavior, formation tricks; revealed on landing). GDD will eventually reference the three module docs.
+
+**PROCESS NOTE:** user asked for calibrated honest feedback in design — flag risks in the same breath as praise, say when something is a prototype question vs a known answer, don't manufacture enthusiasm, don't swing to reflexive contrarianism. Biggest correction this session: the Fight is NOT meant to be high-APM; big overlapping AoRs + rare moves = "watch the plan, nudge occasionally." (Assistant had over-worried this; user's AoR-coverage framing resolved it.)
+
+### ▲ REVISIONS — Cannons & Tower doc v1.2.0 (supersedes any conflicting note above)
+- **AoR SCALING (corrected):** more cannons → BIGGER AoR (~linear) AND more firepower; grouping is advantageous. Only LONE WOLF cannons shrink a group's AoR. Tension is now concentration-vs-flexibility (one big group = one domain/one direction; many groups = multi-domain + independent zones — domain diversity is the reason to split).
+- **RNG seed PER SORTIE** (not just per battle): same board + same layout → identical ship movement and hit rolls. (Falloff miss rolls seeded here too.)
+- **Fight verbs (now up to 3):** (A) re-task AoR, (B) switch domain — both can be CANCELLED mid-cooldown → guns immediately re-fire in the old state (cost only paid if the change completes); the two also STACK (do both at once). (C) PROPOSED 3rd verb = Abilities (timed Stonwryt consumables — barrage/flak/wall-patch); ALT = per-group "firing-orders" priority toggle. Decide in roster pass.
+- **Archetypes: 16 CANDIDATES → pair to ~8 against the ships** (was 8 draft). List: Standard, Rapid, Piercer(LW), Splasher, Scatter(multishot), Volley(multishot), Chain, Burner, Frost, Marksman(LW), Breaker, Interdictor, Finisher, Overwatch, Disabler(LW), Suppressor. Three Lone Wolves. Explores multi-SHOT (Scatter/Volley) alongside multi-TARGET (Splasher/Chain). Clusters to resolve: multi-hit, control (Frost/Suppressor/Disabler/Jammer-tower), target-personality (Marksman/Interdictor/Finisher).
+- **Towers: 10 CANDIDATES → pair to ~6** (was 6). Stonewright Post(first), Spotter(+AoR +fog), Forge(−cooldowns), **Sights** (renamed from Rangefinder — "range" word banished; = accuracy/tracking), Powder Store(+dmg), Magazine(+fire rate), Jammer(slow), Bulwark(+durability), Rally Flag(faster AoR moves/cancel-recovery), Decoy Mast(draws enemy fire).
+- **Idle animation:** idle muzzles randomly SWEEP/search the horizon; on ship entry every barrel SNAPS to the same bearing in unison (coiled, not asleep).
+- **Mini-games = the "CANDY CRUSH" casual layer:** several per skill, progressive difficulty that EXCEEDS the early campaign, replayable for Stonwryts, combine phases as they climb until the last one IS Campaign 1 Battle 1; player should hit the first real battle thinking "this is easy." Standalone-fun, not just tutorial.
+- **RANGE: permanently removed from the game AND from the Cannons doc.** Recorded ONLY here per user. Rationale: range "just seems unfair" and fought the coverage model — the AoR IS the reach (in-zone = hittable). The earlier Land-close/Sea-mid/Air-far idea and any AoR move-distance limit are both rejected; do not reintroduce. Domains differ ONLY by the efficiency cycle.
+- **Ships session = SILOED:** develop the bestiary freely on its own first, THEN bring it to the cannon design so the 16→8 and 10→6 pair-downs are a real meshing to what works against each other (no good idea cut early).
+- Doc version: Cannons & Tower **v1.2.0**.

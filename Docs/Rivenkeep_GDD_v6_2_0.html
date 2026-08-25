@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rivenkeep — GDD v6.3.0</title>
+<title>Rivenkeep — GDD v6.2.0</title>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#80cbc4;--accent2:#7c4dff;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#b2dfdb;
@@ -130,11 +130,11 @@ section[class*="p-"] > h3{border-left:none;padding-left:0;margin-left:0}
 <header>
   <h1>Rivenkeep</h1>
   <div class="sub">Game Design Document</div>
-  <div class="meta">v6.3.0 — 190 Battles • 10 Theaters • 32 Campaigns + Boss Finale • 198 Pieces • Single-Player · iOS + Android</div>
+  <div class="meta">v6.2.0 — 190 Battles • 10 Theaters • 32 Campaigns + Boss Finale • 198 Pieces • Single-Player iOS</div>
 </header>
 
 <nav>
-  <strong style="color:var(--c-found);font-size:.6rem">I</strong>
+  <strong style="color:var(--dim);font-size:.6rem">I</strong>
   <a href="#overview">Overview</a>
   <a href="#theory">Theory</a>
   <a href="#philosophy">Philosophy</a>
@@ -154,20 +154,18 @@ section[class*="p-"] > h3{border-left:none;padding-left:0;margin-left:0}
   <a style="color:var(--border)">│</a>
   <strong style="color:var(--c-deploy);font-size:.6rem">IV</strong>
   <a href="#deploy">Deploy</a>
-  <a href="#cannonhp">Cannons</a>
+  <a href="#cannons">Cannons</a>
+  <a href="#cannonhp">HP</a>
   <a style="color:var(--border)">│</a>
   <strong style="color:var(--c-fight);font-size:.6rem">V</strong>
-  <a href="#enemy-ref">Enemies</a>
-  <a href="#bosses">Bosses</a>
   <a href="#fight">Fight</a>
-  <a href="#castlehp">Castles</a>
-  <a href="#stats">Stats</a>
-  <a href="#win">Victory</a>
+  <a href="#ships">Ships</a>
+  <a href="#troops">Troops</a>
+  <a href="#bosses">Bosses</a>
+  <a href="#castles">Castles</a>
   <a style="color:var(--border)">│</a>
   <strong style="color:var(--c-prog);font-size:.6rem">VI</strong>
-  <a href="#loss">Loss</a>
   <a href="#campaigns">Campaigns</a>
-  <a href="#difficulty">Levels</a>
   <a href="#stars">Stars</a>
   <a href="#battle-score">Score</a>
   <a style="color:var(--border)">│</a>
@@ -176,20 +174,19 @@ section[class*="p-"] > h3{border-left:none;padding-left:0;margin-left:0}
   <a href="#dailies">Daily</a>
   <a href="#challenges">Challenges</a>
   <a href="#race">Race</a>
+  <a style="color:var(--border)">│</a>
+  <strong style="color:var(--c-econ);font-size:.6rem">VIII</strong>
   <a href="#monetization">Money</a>
   <a href="#nicknames">Naming</a>
   <a href="#replay">Replay</a>
-  <a href="#future">Future</a>
   <a style="color:var(--border)">│</a>
-  <strong style="color:var(--c-exp);font-size:.6rem">VIII</strong>
+  <strong style="color:var(--c-exp);font-size:.6rem">IX</strong>
   <a href="#tutorial">Tutorial</a>
   <a href="#timing">Timing</a>
-  <a href="#settings">Settings</a>
-  <a href="#audio">Audio</a>
-  <a href="#ai">AI</a>
+  <a href="#future">Future</a>
   <a style="color:var(--border)">│</a>
-  <strong style="color:var(--c-ref);font-size:.6rem">IX</strong>
-  <a href="#reference">Reference</a>
+  <strong style="color:var(--c-ref);font-size:.6rem">X</strong>
+  <a href="#glossary-ref">Reference</a>
   <a href="#piece-catalog">Pieces</a>
 </nav>
 
@@ -329,7 +326,8 @@ section[class*="p-"] > h3{border-left:none;padding-left:0;margin-left:0}
 <p><strong>Campaign 32 + Boss Finale:</strong> <em>"We do not fight because we are right. We fight because our children are behind these walls."</em> After the final Mystarch falls, a sliver of living Mystwood is found — still green, still aware. Rhyna touches it. The wood speaks clearly at last: <em>"We remember our home too."</em></p>
 </div>
 
-<h4>XII. Battle Messages</h4>
+
+<h4>XIV. Battle Messages</h4>
 <div class="s">
 <div class="ct">Every Battle Starts With a Unique Message</div>
 <p>Each of the 190 battlefields has a <strong>flavor theme</strong> tied to its theater, campaign stage, and narrative position. When the battle begins (during the first Build phase, below the phase bar), a message displays for 3 seconds. <strong>The message is different every time the player starts that battle</strong> — drawn from a pool of 5–8 messages per battlefield. All messages share the battlefield's flavor but offer different perspectives.</p>
@@ -345,6 +343,22 @@ section[class*="p-"] > h3{border-left:none;padding-left:0;margin-left:0}
 <p>— <em>"Voss asked why we fight for ice and stone. I said it's not the ice I'm fighting for."</em></p>
 <p>— <em>"The wind carries their drums. Let it carry our cannons' answer."</em></p>
 <p>Messages are stored in the battlefield data file. The game selects one at random each time the battle loads. On replay, a different message appears — keeping the experience fresh even on the 10th retry. The messages deepen the narrative without interrupting gameplay.</p>
+</div>
+
+<h3 id="difficulty">Difficulty Levels</h3>
+<div class="s">
+<div class="ct">4 Levels — 190 Battles × 4 = 760 Unique Experiences Per War</div>
+<p>The player selects a difficulty level from the campaign screen. Each level modifies the battle parameters, effectively creating 760 distinct battles from the 190 base maps. Difficulty can be changed at any time — stars earned on each level are tracked separately.</p>
+<table style="font-size:.78rem">
+<tr><th>Level</th><th>Build Timer</th><th>Pieces</th><th>Ships</th><th>Spackle</th><th>Stars</th><th>Leaderboard</th></tr>
+<tr><td><strong>1 — Recruit</strong></td><td>+40%</td><td>+20% Group A/B draw rate</td><td>-2 ships per sortie</td><td>+2 extra</td><td>★★★ achievable; no ★★★!</td><td>Separate</td></tr>
+<tr><td><strong>2 — Commander</strong></td><td>Baseline (current GDD values)</td><td>Baseline</td><td>Baseline</td><td>Baseline</td><td>★★★ + ★★★! achievable</td><td>Main board</td></tr>
+<tr><td><strong>3 — Veteran</strong></td><td>-10%</td><td>+15% Group E/F/G/H</td><td>+1 ship per sortie</td><td>-1 spackle</td><td>★★★ + ★★★!</td><td>Separate</td></tr>
+<tr><td><strong>4 — Legend</strong></td><td>-20%</td><td>+25% Group G/H</td><td>+2 ships, harder types</td><td>-2 spackle</td><td>★★★ + ★★★!</td><td>Separate</td></tr>
+</table>
+<p><strong>Harder means everything changes</strong> — not just shorter timers. Higher difficulty introduces harder piece shapes (more heptominoes, fewer monominoes), more and tougher ships (Torpedo Boats replace Warships), more fragile terrain, and stronger wind drift. Lower difficulty adds more time, friendlier pieces, fewer enemies, and extra spackle.</p>
+<p><strong>Assist Mode:</strong> After 5 consecutive defeats on the same battle (at any difficulty), the game silently activates Assist Mode: +5 seconds Build timer, +1 extra spackle, same enemies. No UI indicator — the player doesn't know. Assist Mode wins are tracked internally (no ★★★! possible) but count as legitimate victories. Assist Mode <strong>turns off when the player wins the battle</strong> — the player can then replay it without Assist Mode to earn a clean victory and ★★★! eligibility. <strong>Assist Mode never activates on previously won battlefields</strong> — it only helps players push past battles they've never beaten. Once a battle is won (with or without Assist), it is marked as cleared and future replays are always clean.</p>
+<p><strong>Leaderboard separation:</strong> Each difficulty level has its own leaderboard. A Level 4 Legend player competes only against other Legend players. The Friends board shows all difficulty levels with a difficulty badge next to each score.</p>
 </div>
 
 <h2 id="theory">Game Theory &amp; Player Psychology</h2>
@@ -415,7 +429,7 @@ section[class*="p-"] > h3{border-left:none;padding-left:0;margin-left:0}
 <p>Switching theaters is about <em>freshness</em> — different scenery, sounds, and feel. It is NOT about being harder. Difficulty comes from the five named layers (A through E) that are mixed and combined independently of theater. A player going from Coastal to Mountain in Campaign 1 should feel change, not punishment.</p>
 
 <h3>Deterministic Puzzles Reward Replay</h3>
-<p>The game uses a <strong>three-layer map system</strong>: 10 base maps + 190 environmental overlays + 190 enemy overlays — all pre-constructed, identical for all players. No procedural generation. Because every element is consistent — same spawns, same terrain, same ship destinations — the player <strong>gets better every replay</strong>. They learn where the Sapper comes from, which wall section gets hit first, where to place the Long Cannon. This is a puzzle game. The puzzle has a solution. Retrying is not grinding — it is learning. Leaderboards are fair, strategy guides are possible. <em>(Precision note: because cannon performance carries within a campaign, two players are perfectly comparable on the <strong>first battle of each campaign</strong>, where everyone starts from the same clean state; later battles in a campaign share identical maps and spawns but may differ in carried-cannon strength. The honest framing is "identical starting conditions produce identical outcomes.")</em> See <a href="#map" style="color:var(--link)">Maps &amp; Terrain</a> for details.</p>
+<p>The game uses a <strong>three-layer map system</strong>: 10 base maps + 190 environmental overlays + 190 enemy overlays — all pre-constructed, identical for all players. No procedural generation. Because every element is consistent — same spawns, same terrain, same ship destinations — the player <strong>gets better every replay</strong>. They learn where the Sapper comes from, which wall section gets hit first, where to place the Long Cannon. This is a puzzle game. The puzzle has a solution. Retrying is not grinding — it is learning. Leaderboards are fair, strategy guides are possible. See <a href="#map" style="color:var(--link)">Maps &amp; Terrain</a> for details.</p>
 
 <h3>Single Player Only</h3>
 <p>This is strictly a one-person game. No multiplayer, co-op, or PvP. The game's identity is the solitary puzzle-and-defend loop. Leaderboards and star comparisons provide indirect competition without requiring networking infrastructure or matchmaking.</p>
@@ -491,7 +505,7 @@ section[class*="p-"] > h3{border-left:none;padding-left:0;margin-left:0}
 <h3>Map Dimensions</h3>
 <div class="s">
 <p>All maps are <strong>64×48 <span class="g" data-t="grid">grids</span></strong> (64 wide × 48 tall, landscape orientation). 3,072 total grids. Each grid is <strong>12pt × 11.25pt</strong> (iOS points — the system scales automatically to pixel density on all devices). The grid is intentionally <strong>wider than tall</strong> to correct for the horizontal-vertical optical illusion: a horizontal line appears longer than a vertical one of equal length, so making grids slightly wider than tall causes them to appear as perfect squares on screen. A 4×4 piece <span class="g" data-t="bounding_box">bounding box</span> = 48pt × 45pt — precise enough for finger placement. Default view shows ~65% of the map. Pinch to zoom in (25% visible, grid detail) or out (100% visible, strategic overview). The 4:3 ratio is optimized for horizontal video sharing and matches landscape phone screens.</p>
-<p><strong>Logical vs physical pixels:</strong> Flutter uses logical pixels (density-independent), like iOS points. The framework maps them to physical pixels per the device's pixel ratio (3× on most modern phones, 2× on older). The game renders in logical pixels; Flutter handles scaling on both iOS and Android, so the grid is always the same physical size regardless of pixel density.</p>
+<p><strong>Points vs pixels:</strong> iOS points are resolution-independent. On a standard iPhone, 1pt = 3 physical pixels (3× Retina). On older devices, 1pt = 2px. The game renders in points; the system handles scaling. This means the grid is always the same physical size regardless of device pixel density.</p>
 <p><strong>Portrait and landscape mode:</strong> The game supports <strong>both orientations</strong>. In portrait mode, the player sees a vertically-cropped portion of the board and pans left/right to see the full width. In landscape mode, the board fills the screen more naturally. Pan and zoom are available in all phases. The game detects orientation and adjusts the UI layout accordingly.</p>
 </div>
 
@@ -521,7 +535,7 @@ section[class*="p-"] > h3{border-left:none;padding-left:0;margin-left:0}
 <h3 id="map">Map Zones</h3>
 <div class="s">
 <p><strong>Friendly Zone (60%→40%):</strong> Where the player builds walls and places <a href="#cannons">cannons</a>. All castle positions are here. The ratio starts at 60:40 for Coastal and compresses as <span class="g" data-t="theater">theaters</span> get harder — late theaters can reach 35:65 as the <a href="#dmz">DMZ advances</a>. Can be fragmented by terrain (River, Volcanic, Sky).</p>
-<p><strong><span class="g" data-t="waterways">Waterways</span> (~30%):</strong> Where ships spawn and travel. Enemy ships move on <strong>waterways</strong> — oceans, rivers, lakes, lava channels, frozen seas, or void depending on the theater. The <span class="g" data-t="waterways">waterways</span> are visually distinct from the friendly zone (colored differently to clearly indicate no-build territory). Even theaters without literal water (Mountain, Forest) use theater-appropriate waterway coloring to signal that the area is out of bounds for building. <strong>Waterways can cut through friendly territory</strong>, fragmenting buildable land — the River theater's channels and the Volcanic theater's lava rivers are prime examples. Any grid designated as waterway is unbuildable regardless of its position on the map.</p>
+<p><strong>Enemy Zone / <span class="g" data-t="waterways">Waterways</span> (~30%):</strong> Where ships spawn and travel. Enemy ships move on <strong>waterways</strong> — oceans, rivers, lakes, lava channels, frozen seas, or void depending on the theater. The <span class="g" data-t="waterways">waterways</span> are visually distinct from the friendly zone (colored differently to clearly indicate no-build territory). Even theaters without literal water (Mountain, Forest) use theater-appropriate waterway coloring to signal that the area is out of bounds for building. <strong>Waterways can cut through friendly territory</strong>, fragmenting buildable land — the River theater's channels and the Volcanic theater's lava rivers are prime examples. Any grid designated as waterway is unbuildable regardless of its position on the map.</p>
 <p><strong><a href="#dmz">DMZ</a> (~10%):</strong> A dashed black line between zones. Any grid the line touches is a DMZ grid (1-2 grids wide). No building on DMZ grids. See <a href="#dmz">The DMZ</a> for full rules.</p>
 <p><strong>Terrain in enemy territory:</strong> <a href="#terrain-rocks">Rocks</a>, <a href="#terrain-cliffs">cliffs</a>, and <a href="#terrain-trees">trees</a> can appear in the waterways too — same rules apply. The environmental overlay shapes enemy approach paths as well as player build space.</p>
 </div>
@@ -948,10 +962,11 @@ draw();
 <p>If dragged to storage from the board, the piece occupies the <strong>specific slot the player dropped it into</strong> — no auto-reshuffling. The piece stays where the player placed it. The player can tap a stored piece to rotate it, or drag it out to return to State 2 (on the board). A stored piece dragged onto the board follows all State 2 rules — it can go to trash, be placed, or go back to storage, but <strong>cannot go to the Wall Rack</strong>.</p>
 <p><strong>Storage slot swapping:</strong> If the player drags a piece from one storage slot <strong>over another occupied storage slot</strong>, the two pieces <strong>swap positions</strong>. The dragged piece goes into the target slot, and the displaced piece moves to the source slot. This allows the player to sort their storage without playing pieces onto the board.</p>
 
+
 <span id="battles"></span>
 <h2 id="build">Build Phase — Detailed</h2>
 <p>The Build phase is the heart of the game. It's where the player repairs damage, extends fortifications, and manages their limited resources (pieces, spackle, trash, storage). The Build phase runs on a timer and has specific sub-sections that execute in order.</p>
-<p><strong>Build timer scaling:</strong> The base Build timer decreases linearly from <strong>25 seconds</strong> (Campaign 1) to <strong>20 seconds</strong> (Campaign 32) at Commander difficulty. Formula: <code>Math.round(25 − (campaign − 1) × 5/31)</code>. <strong>Sortie 1 gets a +10 second bonus</strong> (building from scratch vs. repairing), so Campaign 1 Sortie 1 = 35 seconds. This timer can also be extended by the <a href="#build" style="color:var(--link)"><span class="g" data-t="time_rollover">Time Rollover</span> System</a> (unused Fight time from the previous sortie, at 50%) and <span class="g" data-t="stonwryt">Stonwryt</span> <a href="#stonwryt" style="color:var(--link)"><span class="g" data-t="alter_time">Alter Time</span></a> purchases. Boss battles use 22 seconds (fixed). All timer values are server-tunable initial estimates. See <a href="#timing" style="color:var(--link)">Phase Timing</a> for the full formula table and rationale.</p>
+<p><strong>Build timer scaling:</strong> The base Build timer decreases linearly from <strong>35 seconds</strong> (Campaign 1) to <strong>22 seconds</strong> (Campaign 32). Formula: <code>35 − (campaign − 1) × 0.42</code>, rounded. This timer can be extended by the <a href="#build" style="color:var(--link)"><span class="g" data-t="time_rollover">Time Rollover</span> System</a> (unused Fight time from the previous sortie, at 50%) and <span class="g" data-t="stonwryt">Stonwryt</span> <a href="#stonwryt" style="color:var(--link)"><span class="g" data-t="alter_time">Alter Time</span></a> purchases. Boss battles use 25 seconds (fixed). See <a href="#timing" style="color:var(--link)">Phase Timing</a> for full analysis.</p>
 
 <h3>Build Phase Sub-Sections (In Order)</h3>
 
@@ -1102,30 +1117,7 @@ draw();
 <p><strong>Implementation:</strong> Each slot maintains a short history (last 1–2 groups drawn). The draw function: roll against the percentage table → check anti-streak → if blocked, re-roll (up to 3 attempts) → if still blocked, pick the least-recently-drawn group. The guaranteed-distribution counter resets per battle.</p>
 </div>
 </section>
-<section id="wind" class="p-build">
-<h2>Wind &amp; Drift System</h2>
-
-<h3>Wind Direction</h3>
-<p>Wind uses <strong>8 compass points</strong>: N, NE, E, SE, S, SW, W, NW. <strong>Cardinal directions</strong> (N, S, E, W) appear in easier campaigns. <strong>Diagonal directions</strong> (NE, SE, SW, NW) are introduced in harder campaigns (Campaign 10+), adding an extra layer of complexity because the player must compensate in two axes simultaneously.</p>
-<h3>Wind Indicator</h3>
-<p>The wind is shown as a <strong>compass with a directional arrow</strong>. The arrow points in the wind direction. The arrow's <strong>length</strong> indicates speed and its <strong>color</strong> indicates drift:</p>
-<table>
-<tr><th>Strength</th><th>Drift</th><th>Arrow</th><th>Color</th><th>Frequency</th></tr>
-<tr><td><strong>Calm</strong></td><td>0 grids</td><td>No arrow shown</td><td>—</td><td>Only on battlefields with no wind component</td></tr>
-<tr><td><strong>Low</strong></td><td>1 grid</td><td>Short arrow</td><td><strong style="color:var(--success)">Green</strong></td><td>Common — most wind battlefields</td></tr>
-<tr><td><strong>Medium</strong></td><td>2 grids</td><td>Medium arrow</td><td><strong style="color:var(--gold)">Yellow</strong></td><td>Uncommon — late campaigns</td></tr>
-<tr><td><strong>High</strong></td><td>3 grids</td><td>Long arrow</td><td><strong style="color:var(--danger)">Red</strong></td><td>Very rare — hardest battlefields only</td></tr>
-</table>
-<p><strong>Compass animation:</strong> The compass arrow subtly shifts ±5° to either side — a gentle animation that conveys active wind without being distracting. No drift badges or flags — the compass itself communicates everything.</p>
-<p><strong>Build phase intro:</strong> For ½ second before Build begins, the compass <strong>fills the screen</strong> with its directional indicator and the label <strong>"Wind Drift"</strong> (when not calm), then animates shrinking to its standard position.</p>
-<p><strong>Compass screen position:</strong> <strong>Upper-right corner</strong> of the screen during Build, between the info panel (top) and tray (bottom). The map fills the maximum space between these two UI elements, and the compass sits in the upper-right of the map area. <strong>32×32pt</strong> at rest. The compass is <strong>hidden during Deploy and Fight</strong> — wind does not affect cannon placement or combat shots (unless the "wind affects Fight shots" design consideration is activated in a future update).</p>
-<p><strong>Desert and Frozen base drift:</strong> These two theaters get <strong>+1 permanent base drift</strong> added to whatever the battle's wind strength is. A "Calm" wind in Desert is still 1-grid drift. This is a theater-specific mechanic, not a Layer D weather effect — it applies even when Layer D is off.</p>
-<p><strong>What drifts:</strong> <span class="g" data-t="wall_piece">Wall pieces</span> shift on placement based on wind direction and strength. <span class="g" data-t="cannon">Cannons</span> are too heavy to drift. Drift is applied at <strong><span class="g" data-t="soft_lock">soft lock</span></strong> — the moment the player lifts their finger, the piece slides to its drifted position. The ghost preview during drag already accounts for drift (shows where the piece WILL land, not where the finger is). <strong>Every time the player picks up a soft-locked piece and drops it again, drift applies again.</strong> Moving a piece in the wind means accepting repeated drift. This makes wind a genuine puzzle: place once, carefully.</p>
-<p><strong>Drift-stop collision:</strong> A drifting wall piece <strong>stops at any obstacle</strong> that would make the placement invalid. Walls, castles, cannons, rocks, cliffs, DMZ grids, waterway grids, and map edges all halt the drift. The piece comes to rest at the last valid position before the collision. This means existing structures act as windbreaks — placing a piece adjacent to an existing wall on the windward side prevents drift entirely. Skilled players exploit <span class="g" data-t="drift_stop">drift-stop</span> to place pieces precisely even in High wind.</p>
-<p><strong><span class="g" data-t="spackle">Spackle</span> does NOT drift.</strong> Spackle is an emergency patch — a panic-mode, last-ditch decision. Adding drift to spackle would feel punishing and unfair. Spackle goes exactly where the player drops it, regardless of wind. This is a deliberate exception to the drift rule.</p>
-</section>
 <section id="deploy" class="p-deploy">
-
 <div class="part-divider"><span style="color:var(--c-deploy)">Part IV — Deploy Phase</span></div>
 <h2>Deploy Phase — Detailed</h2>
 <p>The Deploy phase configures offensive firepower. The bottom panel shows: on the <strong>left side, the number of cannons available to deploy</strong> (e.g., "3 to deploy"). The horizontal carousel displays all unlocked <span class="g" data-t="cannon">cannon</span> types with <strong>unique sprites in light blue</strong>. Not-yet-unlocked types appear grayed out with a lock symbol.</p>
@@ -1231,63 +1223,9 @@ draw();
 <p><strong>During Build:</strong> Cannons show a <strong>projected health bar</strong> based on current enclosure state — the player can see what the post-Deploy bonus WILL be if the enclosure holds through Deploy. This is a preview only; the actual lock-in happens after Deploy.</p>
 <p><strong>Cap:</strong> All bonuses stack but <strong>cap at 200%</strong>. At 200%: perfect accuracy at all ranges and double firepower. A 200% cannon is the ultimate veteran — twice as lethal as a fresh cannon.</p>
 </section>
-<div class="part-divider"><span style="color:var(--c-fight)">Part V — Combat</span></div>
-
-<section id="enemy-ref" class="p-fight">
-<h2>Enemies</h2>
-<p>All enemies move across the map from the waterways toward the friendly zone. Movement is continuous during the Fight phase, not turn-based. Every enemy must <strong>pause before shooting</strong> — faster enemies have a longer pause (catching their breath), slower enemies pause briefly (already aimed). This gives the player a visible warning.</p>
-<p>Troops are deployed from Transport Ships (or theater-equivalent transports). Bombers are launched from Aircraft Carriers. Killing a transport before it drops troops prevents those troops from spawning. Killing a carrier before bombers launch prevents that group of bombers. Ships across all theaters share recognizable silhouette profiles with theater-appropriate skins — the player learns to identify enemy types regardless of theater.</p>
-
-<table>
-<tr><th>Enemy</th><th>Class</th><th>Speed</th><th>Damage</th><th>HP</th><th>Special Ability</th><th>First Appears</th></tr>
-<tr><td><strong>Warship</strong></td><td>Ship</td><td>Slow</td><td>Medium</td><td>Medium</td><td>Standard attacker. No special ability.</td><td>Campaign 1</td></tr>
-<tr><td><strong>Scout Vessel</strong></td><td>Ship</td><td>Fast</td><td>Low</td><td>Low</td><td>Long pause before firing. Evasive maneuvers (Crazy Ivan after hit).</td><td>Campaign 2</td></tr>
-<tr><td><strong>Transport Ship</strong></td><td>Ship</td><td>Slow</td><td>None</td><td>High</td><td>Must touch DMZ/friendly zone to disembark. Continuous troop deployment until destroyed. "Fire rate" = disembark speed. Kill before docking to prevent all troops.</td><td>Campaign 5</td></tr>
-<tr><td><strong>Aircraft Carrier</strong></td><td>Ship</td><td>Very Slow</td><td>None</td><td>Very High</td><td>Launches Bombers from <span class="g" data-t="waterways">waterways</span> (no DMZ touch needed). Each Bomber HP = Carrier HP ÷ bomber count. Bombers return to reload. If ALL destroyed → Carrier destroyed. Cannons hit at ½ range.</td><td>Campaign 7</td></tr>
-<tr><td><strong>Fire Ship</strong></td><td>Ship</td><td>Medium</td><td>Low</td><td>Low</td><td>Fires fireballs that create 1×1 burn zones on impact. <strong>Cannot cross the DMZ.</strong> Burns persist 2 Build phases, then → holes. Area denial from range.</td><td>Campaign 4</td></tr>
-<tr><td><strong>Mortar Ship</strong></td><td>Ship</td><td>Slow</td><td>High</td><td>Medium</td><td>Arcing shots that hit behind walls. Targets cannons. Slow fire rate, devastating accuracy.</td><td>Campaign 9</td></tr>
-<tr><td><strong>Hospital Ship</strong></td><td>Ship</td><td>Very Slow</td><td>None</td><td>High</td><td>End of Fight: distributes own HP to heal other ships evenly. Cannot self-heal. Does NOT count in win condition — leaves if no ships to repair. See <a href="#fight" style="color:var(--text)">Hospital Ship section</a>.</td><td>Campaign 11</td></tr>
-<tr><td><strong>Ground Troops</strong></td><td>Troop</td><td>Variable</td><td>Variable</td><td>Variable</td><td>From Transport. Speed/HP/damage varies by type (fast-weak to slow-strong). Path to castles. Contact damage to walls/cannons. <strong>Reset every sortie. Do NOT count for win state.</strong></td><td>Campaign 1</td></tr>
-<tr><td><strong>Siege Ship</strong></td><td>Troop (2×2)</td><td>Medium</td><td>Extreme (4×4)</td><td>Very High</td><td>Kamikaze: destroys itself on wall contact, annihilating a 4×4 area. 2×2 space becomes area denial. Cannot stack.</td><td>Campaign 7</td></tr>
-<tr><td><strong>Battering Ram</strong></td><td>Troop</td><td>Medium</td><td>Extreme (walls)</td><td>High</td><td>Targets walls ONLY. Will not attack cannons or castles. If all walls are destroyed, battering rams do nothing — they stand idle. Single-minded siege tool.</td><td>Campaign 9</td></tr>
-<tr><td><strong>Bomber</strong></td><td>Troop (Air, 1×2)</td><td>Fast</td><td>High</td><td>Low</td><td>1×2, 1-side leading edge. Fly over walls. Target: random castle (at launch). Area denial on 4th hit to same open ground. Must return to Carrier. Cannon shots go vertical to hit. Can share grid but do NOT stack. <strong>Always visible.</strong></td><td>Campaign 7</td></tr>
-<tr><td><strong>Torpedo Boat</strong></td><td>Ship</td><td>Fast</td><td>High</td><td>Low</td><td>Fast, fragile. Fires a single devastating torpedo at walls. Long reload. High-risk, high-reward.</td><td>Campaign 11</td></tr>
-<tr><td><strong>Smoke Ship</strong></td><td>Ship</td><td>Medium</td><td>None</td><td>Medium</td><td>Deploys smoke screen (3×3) that reduces cannon accuracy by 50% when firing through it. Stays for 1 sortie.</td><td>Campaign 14</td></tr>
-<tr><td><strong>Mine Layer</strong></td><td>Ship</td><td>Slow</td><td>None</td><td>High</td><td>Drops 1×1 sea mines near DMZ. Mines damage walls if the DMZ shifts (War II+). Area denial on enemy side.</td><td>Campaign 17</td></tr>
-<tr><td><strong>Artillery Barge</strong></td><td>Ship</td><td>Very Slow</td><td>Very High</td><td>High</td><td>2×2 ship. Extreme range, extreme damage, very slow fire rate. Targets castles. The heavy hitter.</td><td>Campaign 23</td></tr>
-<tr><td><strong>Sapper</strong></td><td>Troop</td><td>Fast</td><td>Extreme (walls)</td><td>Low</td><td>Carries explosives. Detonates on wall contact, destroying a 2×2 area. Kamikaze troop.</td><td>Campaign 5</td></tr>
-<tr><td><strong>Shield Bearer</strong></td><td>Troop</td><td>Slow</td><td>Low</td><td>Very High</td><td>Carries a large shield. Takes half damage from cannons when facing them. Protects troops behind.</td><td>Campaign 11</td></tr>
-<tr><td><strong>Medic</strong></td><td>Troop</td><td>Medium</td><td>None</td><td>Medium</td><td>Heals all adjacent troops 3 HP/tick. Cannot heal itself. Priority target — kill medics first.</td><td>Campaign 17</td></tr>
-</table>
-<p class="dim">Boss enemies (Mystarchs) in the Boss Finale are unique per theater: Leviathan Mystarch (Coastal), Colossus Mystarch (Mountain), Sandworm Mystarch (Desert), Hydra Mystarch (River), Magma Titan Mystarch (Volcanic), Frost Wyrm Mystarch (Frozen), Storm King Mystarch (Sky), Ancient Treant Mystarch (Forest), Plague Herald Mystarch (Swamp), Crystal Lich Mystarch (Crystal).</p>
-</section>
-
-<section id="bosses" class="p-fight">
-<h2>Boss Mechanics — 10 Unique Encounters</h2>
-<p>Each boss occupies a <strong>3×3 grid footprint</strong>. Bosses <strong>CAN cross the DMZ</strong> — they are the only enemies besides troops that enter the friendly zone. Bosses do NOT use spawn points; they have a <strong>starting position defined in the Enemy Overlay</strong>. Bosses are persistent mega-enemies that survive across all sorties (typically 8–12 for boss battles). They have unique attack patterns, phase transitions, and a <strong>stealth mode</strong> where they disappear and reappear at a different location. During stealth, the boss does NOT fire.</p>
-
-<table style="font-size:.78rem">
-<tr><th>Boss</th><th>Theater</th><th>Speed</th><th>Attack</th><th>HP</th><th>Special Mechanic</th></tr>
-<tr><td><strong>Leviathan</strong></td><td>Coastal</td><td>Slow</td><td>Heavy slam (3×3 area)</td><td>Very High</td><td>Submerges (stealth) every 2 sorties. Resurfaces near a random castle. Creates a tidal wave that pushes walls 1 grid outward on resurface.</td></tr>
-<tr><td><strong>Colossus</strong></td><td>Mountain</td><td>Very Slow</td><td>Boulder throw (ranged, 2×2 impact)</td><td>Extreme</td><td>Climbs to high ground for +range. Stealth = enters a cave, exits a different cave. Vulnerable when throwing (stationary for 3 ticks).</td></tr>
-<tr><td><strong>Sandworm</strong></td><td>Desert</td><td>Fast</td><td>Burrow charge (line damage)</td><td>High</td><td>Burrows underground (stealth), charges in a straight line, erupts under a castle. Leaves sand trail during charge. Vulnerable for 2 ticks after eruption.</td></tr>
-<tr><td><strong>Hydra</strong></td><td>River</td><td>Medium</td><td>Multi-head spit (3 targets)</td><td>High</td><td>3 heads attack simultaneously. Destroying a head = 1/3 total HP. Stealth = dives underwater. Regenerates 5% HP per sortie if not damaged.</td></tr>
-<tr><td><strong>Magma Titan</strong></td><td>Volcanic</td><td>Slow</td><td>Lava breath (cone, 3-wide)</td><td>Very High</td><td>Leaves lava trail when moving. Stealth = sinks into lava, erupts from a lava flow. Armor weakens as HP drops (takes more damage below 50%).</td></tr>
-<tr><td><strong>Frost Wyrm</strong></td><td>Frozen</td><td>Fast</td><td>Ice breath (freezes walls for 1 sortie)</td><td>High</td><td>Frozen walls cannot be repaired in Build. Stealth = blizzard covers the map (reduced visibility). Creates ice grids when landing.</td></tr>
-<tr><td><strong>Storm King</strong></td><td>Sky</td><td>Fast</td><td>Lightning strike (precise, high damage)</td><td>Medium</td><td>Flies between platforms. Stealth = enters thundercloud. Lightning hits the highest-HP cannon first. Cannons at half range against flying boss.</td></tr>
-<tr><td><strong>Ancient Treant</strong></td><td>Forest</td><td>Very Slow</td><td>Root attack (grows through walls)</td><td>Extreme</td><td>Roots grow 1 grid per sortie through walls (ignoring them). Stealth = becomes a tree (indistinguishable from forest until it moves). Spawns tree grids around itself.</td></tr>
-<tr><td><strong>Plague Herald</strong></td><td>Swamp</td><td>Medium</td><td>Poison cloud (area DoT)</td><td>High</td><td>Poison cloud damages walls over time (1% per tick in radius). Stealth = dissolves into swamp water. Spawns lesser plague creatures (mini-troops).</td></tr>
-<tr><td><strong>Crystal Lich</strong></td><td>Crystal</td><td>Slow</td><td>Beam attack (bounces off crystals)</td><td>Very High</td><td>Beam ricochets off crystal formations — can hit multiple targets. Stealth = becomes a crystal (must be identified). Creates reflective crystal shields that bounce player shots.</td></tr>
-</table>
-
-<p><strong>Boss stealth timing:</strong> Every boss enters stealth mode after a set number of ticks (varies by boss, typically every 15–25 ticks). Stealth lasts 5–8 ticks. During stealth, the boss does NOT attack. On reappearance, a <strong>thunderclap sound + shock haptic</strong> alerts the player. The boss always reappears at a predetermined position (deterministic, like all battle elements).</p>
-<p><strong>Between-sortie healing:</strong> Bosses retain their <strong>exact HP between sorties</strong> — no healing. The one exception is the <strong>Hydra</strong>, which regenerates 5% HP per sortie if not damaged during that sortie's Fight phase. When the Hydra regenerates, a <strong>visible green pulse</strong> plays on the Hydra's HP bar at the start of the next Fight countdown, and the HP bar visibly grows. The player must keep pressure on the Hydra every sortie or lose progress. All other bosses: what you dealt stays dealt.</p>
-<p><strong>Boss defeat:</strong> When boss HP reaches 0, a unique death animation plays per boss (Leviathan sinks into the sea, Colossus crumbles, Sandworm explodes from the ground, etc.). This triggers the standard victory celebration if castles are enclosed.</p>
-</section>
-
+<div class="part-divider"><span style="color:var(--c-fight)">Part V — Fight Phase</span></div>
 <section id="fight" class="p-fight">
 <h2>Fight Phase — Real-Time Tick Combat</h2>
-<p class="dim">The ships, troops, and bosses referenced below are catalogued just above in <a href="#enemy-ref" style="color:var(--link)">Enemies</a> and <a href="#bosses" style="color:var(--link)">Boss Mechanics</a>; their concrete numbers are in <a href="#stats" style="color:var(--link)">Unit &amp; Structure Statistics</a> later in this Part.</p>
 
 <h3>Countdown &amp; Fight Timer</h3>
 <p>Every Fight phase begins with a <strong>3… 2… 1… FIGHT!</strong> countdown (2.5–3.0 seconds). <strong>The countdown IS the <span class="g" data-t="map_view">Map View</span> → <span class="g" data-t="world_view">World View</span> transition</strong> — they are the same animation, not separate events. On "3": the flat 2D map dims, warm lamplight glow at edges. On "2": camera pans up from the map to a window revealing dark sky. On "1": fly out the window into darkness. On "FIGHT": crossfade into the 2.5D isometric battlefield with the first cannon firing. The player watches their flat planning map transform into the living battlefield in one continuous sequence. The Fight phase has a <strong>countdown timer</strong> scaling from <strong>25 seconds</strong> (Campaign 1) to <strong>90 seconds</strong> (Campaign 32). Boss battles use 90 seconds (fixed). See <a href="#timing" style="color:var(--link)">Phase Timing</a> for full analysis. If all enemy ships for that <span class="g" data-t="sortie">sortie</span> are destroyed before the timer expires, the Fight phase ends immediately and <strong>unused fight time carries over</strong> (50% to the next sortie's Build phase). If the timer expires with ships still alive, those ships <strong>remain at their current position and HP</strong> for the next sortie's Fight phase (new ships may also spawn from the spawn points).</p>
@@ -1409,7 +1347,7 @@ draw();
 </div>
 
 <h3>Ship Rollover &amp; Victory</h3>
-<p>Ships not destroyed by fight-end <strong>roll over to the next sortie</strong> at current HP and position. New ships may also be added each sortie from spawn points. <strong>Destroying ships is NOT a victory requirement</strong> — victory is castle <span class="g" data-t="enclosure">enclosure</span> only (see <a href="#win" style="color:var(--link)">Victory &amp; Defeat</a>). Ship destruction instead feeds the <a href="#stars" style="color:var(--link)">Ships Destroyed star lever</a> and <span class="g" data-t="battle_score">Battle Score</span>, so clearing the fleet is rewarded without being mandatory. Troops never roll over (they reset each sortie) and do not count toward stars — only ships do. <em>(Exception: the Boss Finale additionally requires the boss's HP to reach 0.)</em></p>
+<p>Ships not destroyed by fight-end <strong>roll over to the next sortie</strong> at current HP and position. <strong>Victory requires destroying ALL ships across all sorties</strong> (plus castle <span class="g" data-t="enclosure">enclosure</span>). Troops do NOT count toward the win condition — only ships. New ships may be added each sortie from spawn points.</p>
 <p><strong>Ship locations during Build &amp; Deploy:</strong> Rolled-over ships are visible on the map during the Build and Deploy phases as <strong>solid red grid blocks</strong> at their last known positions. All ship types use the same generic red block — the player must <strong>remember</strong> which ship type was at each location. This gives the player strategic information for cannon placement without revealing full intelligence.</p>
 <p><strong>Spawn point visibility:</strong> After the first sortie in which a ship has emerged from a spawn point, that spawn point is marked during Build and Deploy as a <strong>light yellow-orange area with cross-hatching</strong> across the 1×4 grid. This marking <strong>only appears for spawn points on the edge of the map</strong> — the player can see the map edge and infer the spawn location. <strong>Stealth spawn points</strong> (those placed closer to the DMZ in later battlefields) are <strong>never marked</strong> — the player must discover them during Fight. On first play, all spawn points are unknown until ships emerge.</p>
 <p><strong>No ship preview:</strong> There is no preview of upcoming ship types or counts. Ships are too far away to identify before they spawn. The edge of the map is as far as the player can see. On replay, the player's advantage comes from <strong>memory</strong>, not from UI previews.</p>
@@ -1558,41 +1496,100 @@ draw();
 </div>
 </section>
 
-<section id="castlehp" class="p-fight">
-<h2>Castle &amp; Wall Health</h2>
+<section id="wind" class="p-fight">
+<h2>Wind &amp; Drift System</h2>
 
-<h3>Wall Block HP</h3>
-<p>Every <span class="g" data-t="wall_block">wall block</span> has HP. An HP indicator <strong>only appears on wall blocks that have been hit</strong> — undamaged walls show no health bar, keeping the board visually clean. As a wall block takes damage, its sprite shows progressive cracking.</p>
-<p><strong>Below 25% HP:</strong> The wall block is <strong>unrepairable</strong>. It still functions during the current Fight (blocks enemies, has remaining HP), but is automatically removed during the next Build phase's cleanup wipe (step 1). Visual: heavy cracks, crumbling appearance, red-tinted.</p>
-<p><strong>At 0% HP:</strong> The wall block is destroyed immediately during Fight, creating an instant gap in the wall perimeter.</p>
-
-<h3 id="castles">Castle HP</h3>
-<p><span class="g" data-t="castle">Castles</span> have <strong>high HP</strong>. Castles are damaged by enemy <a href="#troops">troops</a> and <a href="#bombers">bombers</a>, and — once the perimeter is breached — by <a href="#ships">ship</a> fire as well. While walls stand, ships prefer to target the walls; a breach exposes the castle to direct naval bombardment (see <a href="#fight" style="color:var(--link)">Ships Targeting Castles</a>). This makes wall integrity the castle's first line of defense.</p>
-<p><strong>Castle HP display:</strong> A <strong>3-segment halo ring</strong> surrounds the castle. The halo IS the HP bar. Segments can be partially filled after Fight damage. Halo color: <strong style="color:var(--success)">green</strong> above 66% (2+ segments), <strong style="color:var(--gold)">yellow</strong> above 33% (1+ segments), <strong style="color:var(--danger)">red</strong> below 33%. Visual damage on the castle sprite is progressive: cracks, crumbling towers, collapsing battlements.</p>
-<p><strong>Boss castles:</strong> On every base map, the <strong>starting 4 visible castles</strong> serve as the Boss castles during the Boss Finale. They are the same castles the player has been defending since Campaign 1 — no special markings or different appearance from the other 6 regular castles that appear later in the progression. During the Boss Finale (which uses only 4 castles total, all required), these starting 4 are the ones that appear. The emotional weight comes from familiarity: the player has invested dozens of sorties defending these specific castles and now must defend all 4 with no spare.</p>
-
-<h3>Castle Degradation — 3-Strike Rule</h3>
-<div class="s">
-<div class="ct">Castle Degradation &amp; Enclosure Healing</div>
-<p>Castle degradation <strong>only begins after a castle has been enclosed at least once</strong>. A never-enclosed castle sits as grey and ignored during Fight. Once enclosed and subsequently exposed, the countdown begins:</p>
-<p><strong>3/3 (full):</strong> Castle is healthy. All 3 halo segments filled.</p>
-<p><strong>2/3:</strong> First sortie exposed. Cracks appear. Warning indicator.</p>
-<p><strong>1/3:</strong> Second consecutive sortie exposed. Heavy damage. Urgent flash.</p>
-<p><strong>0/3:</strong> Third consecutive sortie exposed. <strong>Castle destroyed.</strong> Removed permanently.</p>
-<p><strong>Enclosure restores HP:</strong> Each sortie the castle is enclosed, the castle <strong>recovers 1/3 of its total HP</strong>. A castle at 1/3 that is enclosed recovers to 2/3. Two enclosed sorties: 1/3 → 3/3. Troop/bomber damage during Fight can <strong>partially reduce a segment</strong> — the halo visually drains as damage is taken. Green shimmer VFX on recovery; gold pulse on full recovery.</p>
-<p><strong>Example:</strong> A castle at 55% HP (damaged by troops) that is enclosed receives +33% HP → 88%. A castle at 30% enclosed → 63%. The 1/3 recovery is based on total HP, not the current segment display.</p>
-</div>
-
-<h3>Destroyed Cannon Recovery</h3>
-<div class="s">
-<div class="ct">Cannon Ruins, Enclosure Rebuild &amp; Permanent Ruin</div>
-<p>Cannons at 0% modifier that are <strong>enclosed</strong> after Build cleanup → restored to <strong>50%</strong>. This is the ONLY window to save a destroyed cannon — it must be enclosed in the Build phase immediately following its destruction.</p>
-<p><strong>If a 0% cannon is NOT enclosed in that Build phase</strong> and the player does not trash it during the subsequent Deploy phase, it becomes a <strong>permanent ruin</strong>. A ruined cannon can <strong>never be restored</strong>. It remains on the board as a 2×2 obstacle — treated like rocks (blocks wall placement, permanent obstruction). Ruins look like gray rubble on the cannon's 2×2 footprint. The player must plan their Build carefully: enclose destroyed cannons immediately, or trash them during Deploy to recover the slot.</p>
-<p><strong>Trash limits:</strong> The player's cannon trash budget per battle = <strong>⌈total_sorties / 2⌉</strong> (ceiling). A 6-sortie battle gives 3 cannon trashes total. A 5-sortie battle gives 3. A 3-sortie battle gives 2. Once the budget is spent, a destroyed cannon that isn't enclosed WILL become a permanent ruin. This creates genuine stakes: protect your cannons, enclose them if destroyed, or spend your precious trash to clear them before they become permanent obstacles.</p>
-<p><strong>Design consideration:</strong> At 50%, a rebuilt cannon is weak but functional. The player must decide: invest sorties nurturing it back to health via <span class="g" data-t="enclosure">enclosure</span> bonuses, or trash it and deploy fresh. Both strategies have merit. The permanent ruin consequence for inaction ensures the player must make a deliberate choice — doing nothing is the worst option.</p>
-</div>
+<h3>Wind Direction</h3>
+<p>Wind uses <strong>8 compass points</strong>: N, NE, E, SE, S, SW, W, NW. <strong>Cardinal directions</strong> (N, S, E, W) appear in easier campaigns. <strong>Diagonal directions</strong> (NE, SE, SW, NW) are introduced in harder campaigns (Campaign 10+), adding an extra layer of complexity because the player must compensate in two axes simultaneously.</p>
+<h3>Wind Indicator</h3>
+<p>The wind is shown as a <strong>compass with a directional arrow</strong>. The arrow points in the wind direction. The arrow's <strong>length</strong> indicates speed and its <strong>color</strong> indicates drift:</p>
+<table>
+<tr><th>Strength</th><th>Drift</th><th>Arrow</th><th>Color</th><th>Frequency</th></tr>
+<tr><td><strong>Calm</strong></td><td>0 grids</td><td>No arrow shown</td><td>—</td><td>Only on battlefields with no wind component</td></tr>
+<tr><td><strong>Low</strong></td><td>1 grid</td><td>Short arrow</td><td><strong style="color:var(--success)">Green</strong></td><td>Common — most wind battlefields</td></tr>
+<tr><td><strong>Medium</strong></td><td>2 grids</td><td>Medium arrow</td><td><strong style="color:var(--gold)">Yellow</strong></td><td>Uncommon — late campaigns</td></tr>
+<tr><td><strong>High</strong></td><td>3 grids</td><td>Long arrow</td><td><strong style="color:var(--danger)">Red</strong></td><td>Very rare — hardest battlefields only</td></tr>
+</table>
+<p><strong>Compass animation:</strong> The compass arrow subtly shifts ±5° to either side — a gentle animation that conveys active wind without being distracting. No drift badges or flags — the compass itself communicates everything.</p>
+<p><strong>Build phase intro:</strong> For ½ second before Build begins, the compass <strong>fills the screen</strong> with its directional indicator and the label <strong>"Wind Drift"</strong> (when not calm), then animates shrinking to its standard position.</p>
+<p><strong>Compass screen position:</strong> <strong>Upper-right corner</strong> of the screen during Build, between the info panel (top) and tray (bottom). The map fills the maximum space between these two UI elements, and the compass sits in the upper-right of the map area. <strong>32×32pt</strong> at rest. The compass is <strong>hidden during Deploy and Fight</strong> — wind does not affect cannon placement or combat shots (unless the "wind affects Fight shots" design consideration is activated in a future update).</p>
+<p><strong>Desert and Frozen base drift:</strong> These two theaters get <strong>+1 permanent base drift</strong> added to whatever the battle's wind strength is. A "Calm" wind in Desert is still 1-grid drift. This is a theater-specific mechanic, not a Layer D weather effect — it applies even when Layer D is off.</p>
+<p><strong>What drifts:</strong> <span class="g" data-t="wall_piece">Wall pieces</span> shift on placement based on wind direction and strength. <span class="g" data-t="cannon">Cannons</span> are too heavy to drift. Drift is applied at <strong><span class="g" data-t="soft_lock">soft lock</span></strong> — the moment the player lifts their finger, the piece slides to its drifted position. The ghost preview during drag already accounts for drift (shows where the piece WILL land, not where the finger is). <strong>Every time the player picks up a soft-locked piece and drops it again, drift applies again.</strong> Moving a piece in the wind means accepting repeated drift. This makes wind a genuine puzzle: place once, carefully.</p>
+<p><strong>Drift-stop collision:</strong> A drifting wall piece <strong>stops at any obstacle</strong> that would make the placement invalid. Walls, castles, cannons, rocks, cliffs, DMZ grids, waterway grids, and map edges all halt the drift. The piece comes to rest at the last valid position before the collision. This means existing structures act as windbreaks — placing a piece adjacent to an existing wall on the windward side prevents drift entirely. Skilled players exploit <span class="g" data-t="drift_stop">drift-stop</span> to place pieces precisely even in High wind.</p>
+<p><strong><span class="g" data-t="spackle">Spackle</span> does NOT drift.</strong> Spackle is an emergency patch — a panic-mode, last-ditch decision. Adding drift to spackle would feel punishing and unfair. Spackle goes exactly where the player drops it, regardless of wind. This is a deliberate exception to the drift rule.</p>
 </section>
 
+<section id="win" class="p-fight">
+<h2>Victory &amp; Defeat</h2>
+
+<h3>Victory Condition</h3>
+<p>The player wins a battle when <strong>all required castles are enclosed</strong> at the end of any Build phase (including the <span class="g" data-t="last_stand">Last Stand</span>). That's it. Enclosure is the sole win condition.</p>
+<p><strong>Ships do NOT need to be destroyed for victory.</strong> Surviving ships remain as ongoing threats — they damage walls, land troops, and pressure the player's defenses — but the battle ends in victory the moment the enclosure requirement is met at the end of a Build phase. The <a href="#stars" style="color:var(--link)">star system</a> rewards ship destruction as one of three performance levers, driving the player to clear the battlefield even though it isn't strictly required.</p>
+<p><strong>Boss Finale:</strong> The boss's HP must reach 0 AND all required castles must be enclosed. This is the only battle type where killing a specific enemy is required for victory.</p>
+
+<h3><span class="g" data-t="last_stand">Last Stand</span> Build Phase</h3>
+<p>After the final sortie's Fight phase, the game gives the player one additional Build phase — the "Last Stand." This is their final opportunity to enclose castles and repair walls. There is no Deploy or Fight after this. The Last Stand timer = <strong>100% of remaining Fight time from the final sortie</strong> (shown throughout the battle as "Earned: +XX sec"). The player can also spend <span class="g" data-t="stonwryt">Stonwryts</span> on <a href="#stonwryt" style="color:var(--link)"><span class="g" data-t="alter_time">Alter Time</span></a> to extend the Last Stand by up to 30 seconds. <strong>Unused Last Stand time does NOT contribute to star ratings.</strong> The player should use every second to enclose more territory — improving the Area Enclosed star lever — rather than receiving it as a passive bonus.</p>
+<p><strong>Short circuit:</strong> If all required castles are already enclosed when the <span class="g" data-t="last_stand">Last Stand</span> begins, the timer is skipped — <strong>instant victory</strong>. The earned time wasn't needed.</p>
+
+<h3>Defeat Conditions</h3>
+<p>The game ends in defeat <strong>as soon as the player reaches an unwinnable state</strong>. The game does not force the player to play out a lost cause:</p>
+<p><strong>Enclosure failure:</strong> Required castles are not enclosed at the end of any Build phase (including Last Stand). The game ends immediately — no Deploy or Fight.</p>
+<p><strong>Castle destruction:</strong> A castle's degradation counter reaches 3/3, the castle is destroyed, and remaining castles drop below the required count. Immediate defeat.</p>
+<p><strong>Ships remaining after final Fight:</strong> Ships remaining is NOT a defeat condition (ships don't need to be destroyed for victory). However, surviving ships continue to damage walls and land troops, making the Last Stand Build phase harder. The battle proceeds to the Last Stand regardless of ship count.</p>
+<p><strong>Boss timeout:</strong> In Boss Finale battles — all sorties completed, boss still alive. Immediate defeat.</p>
+<p><strong>Mid-Build detection:</strong> If during the Build phase, it becomes mathematically impossible to enclose the required castles (e.g., a castle was just destroyed and the remaining castle count is below the requirement), the Build phase ends immediately in defeat. The player is not forced to waste time building walls around a lost cause.</p>
+<p>There is no "health bar" for the player. The walls ARE the health bar. As long as you can enclose castles and sorties remain, you're in the fight.</p>
+</section>
+<section id="enemy-ref" class="p-fight">
+<h2>Enemies</h2>
+<p>All enemies move across the map from the waterways toward the friendly zone. Movement is continuous during the Fight phase, not turn-based. Every enemy must <strong>pause before shooting</strong> — faster enemies have a longer pause (catching their breath), slower enemies pause briefly (already aimed). This gives the player a visible warning.</p>
+<p>Troops are deployed from Transport Ships (or theater-equivalent transports). Bombers are launched from Aircraft Carriers. Killing a transport before it drops troops prevents those troops from spawning. Killing a carrier before bombers launch prevents that group of bombers. Ships across all theaters share recognizable silhouette profiles with theater-appropriate skins — the player learns to identify enemy types regardless of theater.</p>
+
+<table>
+<tr><th>Enemy</th><th>Class</th><th>Speed</th><th>Damage</th><th>HP</th><th>Special Ability</th><th>First Appears</th></tr>
+<tr><td><strong>Warship</strong></td><td>Ship</td><td>Slow</td><td>Medium</td><td>Medium</td><td>Standard attacker. No special ability.</td><td>Campaign 1</td></tr>
+<tr><td><strong>Scout Vessel</strong></td><td>Ship</td><td>Fast</td><td>Low</td><td>Low</td><td>Long pause before firing. Evasive maneuvers (Crazy Ivan after hit).</td><td>Campaign 2</td></tr>
+<tr><td><strong>Transport Ship</strong></td><td>Ship</td><td>Slow</td><td>None</td><td>High</td><td>Must touch DMZ/friendly zone to disembark. Continuous troop deployment until destroyed. "Fire rate" = disembark speed. Kill before docking to prevent all troops.</td><td>Campaign 5</td></tr>
+<tr><td><strong>Aircraft Carrier</strong></td><td>Ship</td><td>Very Slow</td><td>None</td><td>Very High</td><td>Launches Bombers from <span class="g" data-t="waterways">waterways</span> (no DMZ touch needed). Each Bomber HP = Carrier HP ÷ bomber count. Bombers return to reload. If ALL destroyed → Carrier destroyed. Cannons hit at ½ range.</td><td>Campaign 7</td></tr>
+<tr><td><strong>Fire Ship</strong></td><td>Ship</td><td>Medium</td><td>Low</td><td>Low</td><td>Fires fireballs that create 1×1 burn zones on impact. <strong>Cannot cross the DMZ.</strong> Burns persist 2 Build phases, then → holes. Area denial from range.</td><td>Campaign 4</td></tr>
+<tr><td><strong>Mortar Ship</strong></td><td>Ship</td><td>Slow</td><td>High</td><td>Medium</td><td>Arcing shots that hit behind walls. Targets cannons. Slow fire rate, devastating accuracy.</td><td>Campaign 9</td></tr>
+<tr><td><strong>Hospital Ship</strong></td><td>Ship</td><td>Very Slow</td><td>None</td><td>High</td><td>End of Fight: distributes own HP to heal other ships evenly. Cannot self-heal. Does NOT count in win condition — leaves if no ships to repair. See <a href="#fight" style="color:var(--text)">Hospital Ship section</a>.</td><td>Campaign 11</td></tr>
+<tr><td><strong>Ground Troops</strong></td><td>Troop</td><td>Variable</td><td>Variable</td><td>Variable</td><td>From Transport. Speed/HP/damage varies by type (fast-weak to slow-strong). Path to castles. Contact damage to walls/cannons. <strong>Reset every sortie. Do NOT count for win state.</strong></td><td>Campaign 1</td></tr>
+<tr><td><strong>Siege Ship</strong></td><td>Troop (2×2)</td><td>Medium</td><td>Extreme (4×4)</td><td>Very High</td><td>Kamikaze: destroys itself on wall contact, annihilating a 4×4 area. 2×2 space becomes area denial. Cannot stack.</td><td>Campaign 7</td></tr>
+<tr><td><strong>Battering Ram</strong></td><td>Troop</td><td>Medium</td><td>Extreme (walls)</td><td>High</td><td>Targets walls ONLY. Will not attack cannons or castles. If all walls are destroyed, battering rams do nothing — they stand idle. Single-minded siege tool.</td><td>Campaign 9</td></tr>
+<tr><td><strong>Bomber</strong></td><td>Troop (Air, 1×2)</td><td>Fast</td><td>High</td><td>Low</td><td>1×2, 1-side leading edge. Fly over walls. Target: random castle (at launch). Area denial on 4th hit to same open ground. Must return to Carrier. Cannon shots go vertical to hit. Can share grid but do NOT stack. <strong>Always visible.</strong></td><td>Campaign 7</td></tr>
+<tr><td><strong>Torpedo Boat</strong></td><td>Ship</td><td>Fast</td><td>High</td><td>Low</td><td>Fast, fragile. Fires a single devastating torpedo at walls. Long reload. High-risk, high-reward.</td><td>Campaign 11</td></tr>
+<tr><td><strong>Smoke Ship</strong></td><td>Ship</td><td>Medium</td><td>None</td><td>Medium</td><td>Deploys smoke screen (3×3) that reduces cannon accuracy by 50% when firing through it. Stays for 1 sortie.</td><td>Campaign 14</td></tr>
+<tr><td><strong>Mine Layer</strong></td><td>Ship</td><td>Slow</td><td>None</td><td>High</td><td>Drops 1×1 sea mines near DMZ. Mines damage walls if the DMZ shifts (War II+). Area denial on enemy side.</td><td>Campaign 17</td></tr>
+<tr><td><strong>Artillery Barge</strong></td><td>Ship</td><td>Very Slow</td><td>Very High</td><td>High</td><td>2×2 ship. Extreme range, extreme damage, very slow fire rate. Targets castles. The heavy hitter.</td><td>Campaign 23</td></tr>
+<tr><td><strong>Sapper</strong></td><td>Troop</td><td>Fast</td><td>Extreme (walls)</td><td>Low</td><td>Carries explosives. Detonates on wall contact, destroying a 2×2 area. Kamikaze troop.</td><td>Campaign 5</td></tr>
+<tr><td><strong>Shield Bearer</strong></td><td>Troop</td><td>Slow</td><td>Low</td><td>Very High</td><td>Carries a large shield. Takes half damage from cannons when facing them. Protects troops behind.</td><td>Campaign 11</td></tr>
+<tr><td><strong>Medic</strong></td><td>Troop</td><td>Medium</td><td>None</td><td>Medium</td><td>Heals all adjacent troops 3 HP/tick. Cannot heal itself. Priority target — kill medics first.</td><td>Campaign 17</td></tr>
+</table>
+<p class="dim">Boss enemies (Mystarchs) in the Boss Finale are unique per theater: Leviathan Mystarch (Coastal), Colossus Mystarch (Mountain), Sandworm Mystarch (Desert), Hydra Mystarch (River), Magma Titan Mystarch (Volcanic), Frost Wyrm Mystarch (Frozen), Storm King Mystarch (Sky), Ancient Treant Mystarch (Forest), Plague Herald Mystarch (Swamp), Crystal Lich Mystarch (Crystal).</p>
+</section>
+<section id="bosses" class="p-fight">
+<h2>Boss Mechanics — 10 Unique Encounters</h2>
+<p>Each boss occupies a <strong>3×3 grid footprint</strong>. Bosses <strong>CAN cross the DMZ</strong> — they are the only enemies besides troops that enter the friendly zone. Bosses do NOT use spawn points; they have a <strong>starting position defined in the Enemy Overlay</strong>. Bosses are persistent mega-enemies that survive across all sorties (typically 8–12 for boss battles). They have unique attack patterns, phase transitions, and a <strong>stealth mode</strong> where they disappear and reappear at a different location. During stealth, the boss does NOT fire.</p>
+
+<table style="font-size:.78rem">
+<tr><th>Boss</th><th>Theater</th><th>Speed</th><th>Attack</th><th>HP</th><th>Special Mechanic</th></tr>
+<tr><td><strong>Leviathan</strong></td><td>Coastal</td><td>Slow</td><td>Heavy slam (3×3 area)</td><td>Very High</td><td>Submerges (stealth) every 2 sorties. Resurfaces near a random castle. Creates a tidal wave that pushes walls 1 grid outward on resurface.</td></tr>
+<tr><td><strong>Colossus</strong></td><td>Mountain</td><td>Very Slow</td><td>Boulder throw (ranged, 2×2 impact)</td><td>Extreme</td><td>Climbs to high ground for +range. Stealth = enters a cave, exits a different cave. Vulnerable when throwing (stationary for 3 ticks).</td></tr>
+<tr><td><strong>Sandworm</strong></td><td>Desert</td><td>Fast</td><td>Burrow charge (line damage)</td><td>High</td><td>Burrows underground (stealth), charges in a straight line, erupts under a castle. Leaves sand trail during charge. Vulnerable for 2 ticks after eruption.</td></tr>
+<tr><td><strong>Hydra</strong></td><td>River</td><td>Medium</td><td>Multi-head spit (3 targets)</td><td>High</td><td>3 heads attack simultaneously. Destroying a head = 1/3 total HP. Stealth = dives underwater. Regenerates 5% HP per sortie if not damaged.</td></tr>
+<tr><td><strong>Magma Titan</strong></td><td>Volcanic</td><td>Slow</td><td>Lava breath (cone, 3-wide)</td><td>Very High</td><td>Leaves lava trail when moving. Stealth = sinks into lava, erupts from a lava flow. Armor weakens as HP drops (takes more damage below 50%).</td></tr>
+<tr><td><strong>Frost Wyrm</strong></td><td>Frozen</td><td>Fast</td><td>Ice breath (freezes walls for 1 sortie)</td><td>High</td><td>Frozen walls cannot be repaired in Build. Stealth = blizzard covers the map (reduced visibility). Creates ice grids when landing.</td></tr>
+<tr><td><strong>Storm King</strong></td><td>Sky</td><td>Fast</td><td>Lightning strike (precise, high damage)</td><td>Medium</td><td>Flies between platforms. Stealth = enters thundercloud. Lightning hits the highest-HP cannon first. Cannons at half range against flying boss.</td></tr>
+<tr><td><strong>Ancient Treant</strong></td><td>Forest</td><td>Very Slow</td><td>Root attack (grows through walls)</td><td>Extreme</td><td>Roots grow 1 grid per sortie through walls (ignoring them). Stealth = becomes a tree (indistinguishable from forest until it moves). Spawns tree grids around itself.</td></tr>
+<tr><td><strong>Plague Herald</strong></td><td>Swamp</td><td>Medium</td><td>Poison cloud (area DoT)</td><td>High</td><td>Poison cloud damages walls over time (1% per tick in radius). Stealth = dissolves into swamp water. Spawns lesser plague creatures (mini-troops).</td></tr>
+<tr><td><strong>Crystal Lich</strong></td><td>Crystal</td><td>Slow</td><td>Beam attack (bounces off crystals)</td><td>Very High</td><td>Beam ricochets off crystal formations — can hit multiple targets. Stealth = becomes a crystal (must be identified). Creates reflective crystal shields that bounce player shots.</td></tr>
+</table>
+
+<p><strong>Boss stealth timing:</strong> Every boss enters stealth mode after a set number of ticks (varies by boss, typically every 15–25 ticks). Stealth lasts 5–8 ticks. During stealth, the boss does NOT attack. On reappearance, a <strong>thunderclap sound + shock haptic</strong> alerts the player. The boss always reappears at a predetermined position (deterministic, like all battle elements).</p>
+<p><strong>Between-sortie healing:</strong> Bosses retain their <strong>exact HP between sorties</strong> — no healing. The one exception is the <strong>Hydra</strong>, which regenerates 5% HP per sortie if not damaged during that sortie's Fight phase. When the Hydra regenerates, a <strong>visible green pulse</strong> plays on the Hydra's HP bar at the start of the next Fight countdown, and the HP bar visibly grows. The player must keep pressure on the Hydra every sortie or lose progress. All other bosses: what you dealt stays dealt.</p>
+<p><strong>Boss defeat:</strong> When boss HP reaches 0, a unique death animation plays per boss (Leviathan sinks into the sea, Colossus crumbles, Sandworm explodes from the ground, etc.). This triggers the standard victory celebration if castles are enclosed.</p>
+</section>
 <section id="stats" class="p-fight">
 <h2>Unit &amp; Structure Statistics — Balance Framework</h2>
 <p>All game balance is derived from <strong>base units</strong>. Tuning one base value cascades correctly through all dependent calculations. The tables below show both relative percentages (for design overview) and absolute values (for implementation). <strong><span class="g" data-t="tick">1 tick</span> = 0.5 seconds</strong> (2 ticks per second). A standard Fight phase runs 50–180 ticks (25–90 seconds). See <a href="#timing" style="color:var(--link)">Phase Timing</a> for full analysis.</p>
@@ -1697,50 +1694,52 @@ draw();
 <p><strong>Battering Ram vs Wall:</strong> Once a Ram reaches the wall, it deals 40 dmg every 3 ticks (100% accuracy). A wall block dies in 8 ticks (4 sec). A Ram chews through a wall section alarmingly fast. But the Ram has 200 HP and moves at 0.6 speed — the player has time to kill it during approach (8 Standard Cannon shots = 16 ticks during a ~20 tick approach).</p>
 </div>
 
-<h3>Open Balance &amp; Flow Questions — Resolve in Playtest</h3>
-<div class="s" style="border-left-color:var(--warn)">
-<div class="ct">Known Unknowns — Decide With Real Combat Data, Not on Paper</div>
-<p>These four items survive on-paper analysis and can only be settled with a working prototype. They are tracked here (not as design flaws) so the balance pass has them in one place. Instrument the analytics events listed under <a href="#production" style="color:var(--link)">Backend Architecture</a> before tuning — without per-cannon and per-battle data, none of these can be answered.</p>
-<p><strong>Balance — Lightning Cannon dominance:</strong> Lightning's 9.0 <span class="g" data-t="edps">eDPS</span> is ~70% above Standard's 5.3, and its short 10-grid range puts it <em>closer</em> to the action rather than further (so range-based counters don't naturally apply). The per-type deployment limit helps, but a Lightning + Standard mix may still beat pure Standard. <strong>Resolution path:</strong> log per-cannon-type win contribution across ~100 prototype battles. If Lightning appears in &gt;60% of winning loadouts, raise its unlock cost, lower its eDPS toward ~7.0, or design Crystal/Fog encounters where its short range is a genuine liability.</p>
-<p><strong>Balance — Chain Shot variance:</strong> Chain Shot swings from ~4.7 eDPS single-target to ~9.2 against 3+ clustered ships — it is either the worst or best cannon with little middle ground, gated entirely on the player's ability to bait clusters. <strong>Resolution path:</strong> either add a minimum-targets floor so it always hits ≥2 (narrowing the range), or accept the variance as skill expression and ensure onboarding teaches clustering. Decide before ship — do not leave it unresolved.</p>
-<p><strong>Flow — early-game Deploy is thin:</strong> In Campaign 1 the player places ~2 cannons in a 12-second Deploy — barely an interaction until 4+ cannons and multiple types exist (Campaign 8+). Cannon persistence and the move bonus give it <em>some</em> texture. <strong>Watch:</strong> if early Deploy feels like dead air, front-load a second cannon-type unlock or add a brief "reposition for bonus" prompt in Campaigns 1–3.</p>
-<p><strong>Flow — early-game Fight passivity:</strong> With 2 auto-firing cannons against 2–3 slow ships, early Fights can feel like watching, not playing. The Build puzzle is the real early hook. <strong>Watch:</strong> if early Fights feel passive, introduce one Sapper (a priority kill demanding directed fire) a campaign earlier, or tighten the early Fight timer so auto-fire alone isn't quite enough.</p>
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- PART VI — CASTLES                                       -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="part-divider"><span style="color:var(--c-castle)">Part VI — Castles</span></div>
+
+</section>
+<section id="castlehp" class="p-castle">
+<h2>Castle &amp; Wall Health</h2>
+
+<h3>Wall Block HP</h3>
+<p>Every <span class="g" data-t="wall_block">wall block</span> has HP. An HP indicator <strong>only appears on wall blocks that have been hit</strong> — undamaged walls show no health bar, keeping the board visually clean. As a wall block takes damage, its sprite shows progressive cracking.</p>
+<p><strong>Below 25% HP:</strong> The wall block is <strong>unrepairable</strong>. It still functions during the current Fight (blocks enemies, has remaining HP), but is automatically removed during the next Build phase's cleanup wipe (step 1). Visual: heavy cracks, crumbling appearance, red-tinted.</p>
+<p><strong>At 0% HP:</strong> The wall block is destroyed immediately during Fight, creating an instant gap in the wall perimeter.</p>
+
+<h3 id="castles">Castle HP</h3>
+<p><span class="g" data-t="castle">Castles</span> have <strong>high HP</strong>. Castles can <strong>only be damaged by enemy troops and bombers</strong>. Ships cannot damage castles directly.</p>
+<p><strong>Castle HP display:</strong> A <strong>3-segment halo ring</strong> surrounds the castle. The halo IS the HP bar. Segments can be partially filled after Fight damage. Halo color: <strong style="color:var(--success)">green</strong> above 66% (2+ segments), <strong style="color:var(--gold)">yellow</strong> above 33% (1+ segments), <strong style="color:var(--danger)">red</strong> below 33%. Visual damage on the castle sprite is progressive: cracks, crumbling towers, collapsing battlements.</p>
+<p><strong>Boss castles:</strong> On every base map, the <strong>starting 4 visible castles</strong> serve as the Boss castles during the Boss Finale. They are the same castles the player has been defending since Campaign 1 — no special markings or different appearance from the other 6 regular castles that appear later in the progression. During the Boss Finale (which uses only 4 castles total, all required), these starting 4 are the ones that appear. The emotional weight comes from familiarity: the player has invested dozens of sorties defending these specific castles and now must defend all 4 with no spare.</p>
+
+<h3>Castle Degradation — 3-Strike Rule</h3>
+<div class="s">
+<div class="ct">Castle Degradation &amp; Enclosure Healing</div>
+<p>Castle degradation <strong>only begins after a castle has been enclosed at least once</strong>. A never-enclosed castle sits as grey and ignored during Fight. Once enclosed and subsequently exposed, the countdown begins:</p>
+<p><strong>3/3 (full):</strong> Castle is healthy. All 3 halo segments filled.</p>
+<p><strong>2/3:</strong> First sortie exposed. Cracks appear. Warning indicator.</p>
+<p><strong>1/3:</strong> Second consecutive sortie exposed. Heavy damage. Urgent flash.</p>
+<p><strong>0/3:</strong> Third consecutive sortie exposed. <strong>Castle destroyed.</strong> Removed permanently.</p>
+<p><strong>Enclosure restores HP:</strong> Each sortie the castle is enclosed, the castle <strong>recovers 1/3 of its total HP</strong>. A castle at 1/3 that is enclosed recovers to 2/3. Two enclosed sorties: 1/3 → 3/3. Troop/bomber damage during Fight can <strong>partially reduce a segment</strong> — the halo visually drains as damage is taken. Green shimmer VFX on recovery; gold pulse on full recovery.</p>
+<p><strong>Example:</strong> A castle at 55% HP (damaged by troops) that is enclosed receives +33% HP → 88%. A castle at 30% enclosed → 63%. The 1/3 recovery is based on total HP, not the current segment display.</p>
 </div>
 
+<h3>Destroyed Cannon Recovery</h3>
+<div class="s">
+<div class="ct">Cannon Ruins, Enclosure Rebuild &amp; Permanent Ruin</div>
+<p>Cannons at 0% modifier that are <strong>enclosed</strong> after Build cleanup → restored to <strong>50%</strong>. This is the ONLY window to save a destroyed cannon — it must be enclosed in the Build phase immediately following its destruction.</p>
+<p><strong>If a 0% cannon is NOT enclosed in that Build phase</strong> and the player does not trash it during the subsequent Deploy phase, it becomes a <strong>permanent ruin</strong>. A ruined cannon can <strong>never be restored</strong>. It remains on the board as a 2×2 obstacle — treated like rocks (blocks wall placement, permanent obstruction). Ruins look like gray rubble on the cannon's 2×2 footprint. The player must plan their Build carefully: enclose destroyed cannons immediately, or trash them during Deploy to recover the slot.</p>
+<p><strong>Trash limits:</strong> The player's cannon trash budget per battle = <strong>⌈total_sorties / 2⌉</strong> (ceiling). A 6-sortie battle gives 3 cannon trashes total. A 5-sortie battle gives 3. A 3-sortie battle gives 2. Once the budget is spent, a destroyed cannon that isn't enclosed WILL become a permanent ruin. This creates genuine stakes: protect your cannons, enclose them if destroyed, or spend your precious trash to clear them before they become permanent obstacles.</p>
+<p><strong>Design consideration:</strong> At 50%, a rebuilt cannon is weak but functional. The player must decide: invest sorties nurturing it back to health via <span class="g" data-t="enclosure">enclosure</span> bonuses, or trash it and deploy fresh. Both strategies have merit. The permanent ruin consequence for inaction ensures the player must make a deliberate choice — doing nothing is the worst option.</p>
+</div>
 </section>
 
-<section id="win" class="p-fight">
-<h2>Victory &amp; Defeat</h2>
-
-<h3>Victory Condition</h3>
-<p>The player wins a battle when <strong>all required castles are enclosed</strong> at the end of any Build phase (including the <span class="g" data-t="last_stand">Last Stand</span>). That's it. Enclosure is the sole win condition.</p>
-<p><strong>Ships do NOT need to be destroyed for victory.</strong> Surviving ships remain as ongoing threats — they damage walls, land troops, and pressure the player's defenses — but the battle ends in victory the moment the enclosure requirement is met at the end of a Build phase. The <a href="#stars" style="color:var(--link)">star system</a> rewards ship destruction as one of three performance levers, driving the player to clear the battlefield even though it isn't strictly required.</p>
-<p><strong>Boss Finale:</strong> The boss's HP must reach 0 AND all required castles must be enclosed. This is the only battle type where killing a specific enemy is required for victory.</p>
-
-<h3><span class="g" data-t="last_stand">Last Stand</span> Build Phase</h3>
-<p>After the final sortie's Fight phase, the game gives the player one additional Build phase — the "Last Stand." This is their final opportunity to enclose castles and repair walls. There is no Deploy or Fight after this. The Last Stand timer = <strong>100% of remaining Fight time from the final sortie</strong> (shown throughout the battle as "Earned: +XX sec"). The player can also spend <span class="g" data-t="stonwryt">Stonwryts</span> on <a href="#stonwryt" style="color:var(--link)"><span class="g" data-t="alter_time">Alter Time</span></a> to extend the Last Stand by up to 30 seconds. <strong>Unused Last Stand time does NOT contribute to star ratings.</strong> The player should use every second to enclose more territory — improving the Area Enclosed star lever — rather than receiving it as a passive bonus.</p>
-<p><strong>Short circuit:</strong> If all required castles are already enclosed when the <span class="g" data-t="last_stand">Last Stand</span> begins, the timer is skipped — <strong>instant victory</strong>. The earned time wasn't needed.</p>
-
-<h3>Defeat Conditions</h3>
-<p>The game ends in defeat <strong>as soon as the player reaches an unwinnable state</strong>. The game does not force the player to play out a lost cause:</p>
-<p><strong>Enclosure failure:</strong> Required castles are not enclosed at the end of any Build phase (including Last Stand). The game ends immediately — no Deploy or Fight.</p>
-<p><strong>Castle destruction:</strong> A castle's degradation counter reaches 3/3, the castle is destroyed, and remaining castles drop below the required count. Immediate defeat.</p>
-<p><strong>Ships remaining after final Fight:</strong> Ships remaining is NOT a defeat condition (ships don't need to be destroyed for victory). However, surviving ships continue to damage walls and land troops, making the Last Stand Build phase harder. The battle proceeds to the Last Stand regardless of ship count.</p>
-<p><strong>Boss timeout:</strong> In Boss Finale battles — all sorties completed, boss still alive. Immediate defeat.</p>
-<p><strong>Mid-Build detection:</strong> If during the Build phase, it becomes mathematically impossible to enclose the required castles (e.g., a castle was just destroyed and the remaining castle count is below the requirement), the Build phase ends immediately in defeat. The player is not forced to waste time building walls around a lost cause.</p>
-<p>There is no "health bar" for the player. The walls ARE the health bar. As long as you can enclose castles and sorties remain, you're in the fight.</p>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- PART VI — PROGRESSION                                  -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<div class="part-divider"><span style="color:var(--c-prog)">Part VI — Progression</span></div>
-
-<section id="loss" class="p-prog">
+<section id="loss" class="p-castle">
 <h2>Loss &amp; Replay</h2>
 
 <h3>Defeat Display</h3>
-<p>When the player loses, a popup displays <strong>"Defeated"</strong> along with the <strong>reason for defeat</strong> (e.g., "Castle enclosure failed," "Boss survived — no sorties left," "Castle destroyed (3/3 degradation)"). The popup also shows <strong>near-miss metrics</strong> (see <a href="#replay" style="color:var(--link)">Defeat Replay</a>) and the player's <strong>remaining strikes</strong>.</p>
+<p>When the player loses, a popup displays <strong>"Defeated"</strong> along with the <strong>reason for defeat</strong> (e.g., "Castle enclosure failed," "Ships remaining — no sorties left," "Castle destroyed (3/3 degradation)"). The popup also shows <strong>near-miss metrics</strong> (see <a href="#replay" style="color:var(--link)">Defeat Replay</a>) and the player's <strong>remaining strikes</strong>.</p>
 
 <h3>Three-Strike Drop-Back Rule</h3>
 <div class="s">
@@ -1768,6 +1767,11 @@ draw();
 <h3>Tactical Hints</h3>
 <p>If the player loses the same battle 3 times in a row, the game offers a brief <strong>tactical hint</strong>. The game never auto-skips or reduces difficulty. Respect the player's ability to learn.</p>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- PART VII — PROGRESSION                                  -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="part-divider"><span style="color:var(--c-prog)">Part VII — Progression</span></div>
 <section id="layers" class="p-prog">
 <h2 id="campaigns">Difficulty Layers &amp; Combination Matrix</h2>
 <p>Five named <span class="g" data-t="layer">difficulty layers</span> are introduced individually, then combined following the "Introduce → Isolate → Combine" pattern. The matrix grows <strong>naturally to its mathematical conclusion</strong> — every possible combination of the 5 layers is explored before the boss finale. There is no artificial campaign limit. The game takes as many campaigns as the combinatorial structure requires.</p>
@@ -2347,25 +2351,6 @@ document.getElementById('campaign-quotes-container').innerHTML = qHtml;
 </script>
 
 </section>
-<section id="difficulty" class="p-prog">
-<h2>Difficulty Levels</h2>
-<p>The 4 player-selectable difficulty <strong>levels</strong> below are independent from the 5 campaign <strong>layers</strong> (A–E) described in <a href="#campaigns" style="color:var(--link)">Difficulty Layers &amp; Combination Matrix</a> above. Layers are baked into each campaign; levels are chosen by the player and can change at any time.</p>
-<div class="s">
-<div class="ct">4 Levels — 190 Battles × 4 = 760 Unique Experiences Per War</div>
-<p>The player selects a difficulty level from the campaign screen. Each level modifies the battle parameters, effectively creating 760 distinct battles from the 190 base maps. Difficulty can be changed at any time — stars earned on each level are tracked separately.</p>
-<table style="font-size:.78rem">
-<tr><th>Level</th><th>Build Timer</th><th>Pieces</th><th>Ships</th><th>Spackle</th><th>Stars</th><th>Leaderboard</th></tr>
-<tr><td><strong>1 — Recruit</strong></td><td>+40%</td><td>+20% Group A/B draw rate</td><td>-2 ships per sortie</td><td>+2 extra</td><td>★★★ achievable; no ★★★!</td><td>Separate</td></tr>
-<tr><td><strong>2 — Commander</strong></td><td>Baseline (current GDD values)</td><td>Baseline</td><td>Baseline</td><td>Baseline</td><td>★★★ + ★★★! achievable</td><td>Main board</td></tr>
-<tr><td><strong>3 — Veteran</strong></td><td>-10%</td><td>+15% Group E/F/G/H</td><td>+1 ship per sortie</td><td>-1 spackle</td><td>★★★ + ★★★!</td><td>Separate</td></tr>
-<tr><td><strong>4 — Legend</strong></td><td>-20%</td><td>+25% Group G/H</td><td>+2 ships, harder types</td><td>-2 spackle</td><td>★★★ + ★★★!</td><td>Separate</td></tr>
-</table>
-<p><strong>Harder means everything changes</strong> — not just shorter timers. Higher difficulty introduces harder piece shapes (more heptominoes, fewer monominoes), more and tougher ships (Torpedo Boats replace Warships), more fragile terrain, and stronger wind drift. Lower difficulty adds more time, friendlier pieces, fewer enemies, and extra spackle.</p>
-<p><strong>Assist Mode:</strong> After 5 consecutive defeats on the same battle (at any difficulty), the game silently activates Assist Mode: +5 seconds Build timer, +1 extra spackle, same enemies. No UI indicator — the player doesn't know. Assist Mode wins are tracked internally (no ★★★! possible) but count as legitimate victories. Assist Mode <strong>turns off when the player wins the battle</strong> — the player can then replay it without Assist Mode to earn a clean victory and ★★★! eligibility. <strong>Assist Mode never activates on previously won battlefields</strong> — it only helps players push past battles they've never beaten. Once a battle is won (with or without Assist), it is marked as cleared and future replays are always clean.</p>
-<p><strong>Leaderboard separation:</strong> Each difficulty level has its own leaderboard. A Level 4 Legend player competes only against other Legend players. The Friends board shows all difficulty levels with a difficulty badge next to each score.</p>
-</div>
-</section>
-
 <section id="stars" class="p-prog">
 <h2>Star System — Three-Lever Averaging</h2>
 <p>Every battle awards a <span class="g" data-t="star">star</span> rating based on performance across <strong>three independent levers</strong>: Ships Destroyed, Cannon Health, and Area Enclosed. Each lever earns 1–3 stars independently. The final star rating = <strong>average of the three levers, rounded up</strong>. ★★★! is a hidden bonus that requires exceptional performance across all three.</p>
@@ -2422,7 +2407,7 @@ document.getElementById('campaign-quotes-container').innerHTML = qHtml;
 <p><strong>Battle Score = ships_destroyed_% + area_enclosed_% + avg_cannon_health_%</strong></p>
 <p>Example: 80% ships + 45% area + 110% cannons = <strong>235</strong>. Maximum per battle = 100 + 100 + 200 = <strong>400</strong>. <span class="g" data-t="battle_score">Battle Score</span> is the universal performance metric used for <a href="#leaderboard" style="color:var(--link)">leaderboard ranking</a>, <a href="#race" style="color:var(--link)"><span class="g" data-t="weekend_race">Weekend Race</span></a> movement, and server-side analytics. Unlike the rounded star rating (which collapses detail into 0–3★), <span class="g" data-t="battle_score">Battle Score</span> preserves the full resolution of the player's performance. Two players with identical ★★★ ratings may have <span class="g" data-t="battle_score">Battle Score</span>s of 287 vs 312 — the leaderboard knows who played better.</p>
 </section>
-<section id="storage" class="p-prog">
+<section id="storage" class="p-build">
 <h2>Wall Storage</h2>
 <p>During any Build phase, the player can drag a piece to the storage zone (right side of the bottom panel) to save it for a later sortie. Storage persists within the current campaign and resets at campaign boundaries.</p>
 <h3>Slot Progression</h3>
@@ -2441,7 +2426,7 @@ document.getElementById('campaign-quotes-container').innerHTML = qHtml;
 <p>Abilities and tools unlock at specific progression milestones. <strong>Cannon unlocks are driven exclusively by accumulated stars</strong> — not by completing battles or campaigns. A player who earns ★★★ on every battle unlocks cannons faster than one who earns ★ on each. This makes the star system the primary progression currency and rewards excellence.</p>
 <table style="font-size:.8rem">
 <tr><th>Milestone</th><th>Unlock</th></tr>
-<tr><td>Campaign 1</td><td>Standard Cannon, 1 trash/sortie, 1 spackle/sortie (storage unlocks at Campaign 2)</td></tr>
+<tr><td>Campaign 1</td><td>Standard Cannon, 1 storage slot, 1 trash/sortie, 1 spackle/sortie</td></tr>
 <tr><td>15★</td><td>Scatter Shot cannon</td></tr>
 <tr><td>30★</td><td>Long Cannon</td></tr>
 <tr><td>50★</td><td>Fire Cannon</td></tr>
@@ -2611,9 +2596,9 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 </section>
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- PART VII — ECONOMY & META                              -->
+<!-- PART VIII — ECONOMY & META                              -->
 <!-- ═══════════════════════════════════════════════════════ -->
-<div class="part-divider"><span style="color:var(--c-econ)">Part VII — Economy &amp; Meta</span></div>
+<div class="part-divider"><span style="color:var(--c-econ)">Part VIII — Economy &amp; Meta</span></div>
 <section id="dailies" class="p-econ">
 <h2>Daily Challenges — Skill-Building <span class="g" data-t="game_pack">Game Pack</span>s</h2>
 <p>Daily Challenges <strong>unlock after Campaign 1 completion</strong>. All challenges are designed to build core gameplay skills — there are <strong>no mini-games outside the game's mechanics</strong>. Every challenge uses the same walls, cannons, ships, and terrain the player encounters in campaign battles.</p>
@@ -3260,7 +3245,6 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 <section id="nicknames" class="p-econ">
 <h2>Piece Naming System</h2>
 <p>Every piece ships with a unique default name displayed in <strong>white text</strong> in the Wall Rack and Shape Catalog. Player-named pieces display in <strong>gold text</strong>. All 198 names are in the <a href="#piece-catalog" style="color:var(--link)">Shape Catalog</a>. The "no the" rule was for generating defaults — <strong>players can name pieces anything within reason</strong> (16 character max, subject to AI screening and community review). A1 "ByMyself" is permanently locked — creator's signature.</p>
-<p><strong>AI-assisted naming:</strong> name submission is screened and enhanced by the hybrid language model (on-device first, cloud fallback) — moderation (fail-closed, layered with a denylist baseline) plus optional creative name suggestions drawn from the piece's shape, group, and theater. See <a href="#ai" style="color:var(--link)">AI-Enhanced Experience → Intelligent Piece Naming</a> for the full design.</p>
 
 <h3>Shape Catalog — Single Piece View</h3>
 <p><strong>Tapping a piece</strong> in the Shape Catalog opens a detail view:</p>
@@ -3286,7 +3270,7 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 <h3>My Named Pieces Panel</h3>
 <p>A "My Pieces" tab shows all pieces the player has naming rights for: piece shape + ID, approved custom name (gold), days remaining, approval status (Pending/Approved/Rejected/Expired), "Renew" button for expiring names (instant approval if previously approved).</p>
 </section>
-<section id="future" class="p-econ">
+<section id="future" class="p-exp">
 <h2>Future Release Framework</h2>
 
 <h3>New Theater (Horizontal Expansion)</h3>
@@ -3331,9 +3315,6 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 <h3>Endless Mode (Under Evaluation)</h3>
 <p>Unlocked at 570 stars (all 190 battles, all 3 stars). Infinite sorties with escalating difficulty. Leaderboards. Weekly challenges with specific constraints ("Desert only, Tier 6+ pieces only, no Mortar").</p>
 
-<h3>Spectator / "Watch a Pro" (Under Evaluation)</h3>
-<p><a href="#replay" style="color:var(--link)">Featured Fortresses</a> already showcase top players' <em>builds</em>, but there is no way to watch a top player's <em>battle</em>. Because battles are <strong>deterministic</strong>, a spectator feature is unusually powerful: a player stuck on Battle 47 could watch a ★★★! replay of that exact battle, then attempt the identical puzzle. Concept: a curated "Replay of the Day" plus a browsable gallery of top-scoring battle replays (not just fortress screenshots), surfaced from the existing <a href="#replay" style="color:var(--link)">replay export</a> infrastructure. <strong>Low priority, post-launch</strong> — the replay pipeline already exists; this is purely about surfacing it for discovery and aspiration.</p>
-
 <h3>Future Wall Variants (Not in Base Game)</h3>
 <p>These are kept on the list for future evaluation. They must not contradict the "easy to play" philosophy:</p>
 <p><strong>Moat Pieces:</strong> Placed outside walls to slow ground troops. Don't count toward enclosure but create a defensive perimeter.</p>
@@ -3342,13 +3323,12 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 </section>
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- PART VIII — EXPERIENCE & POLISH                           -->
+<!-- PART IX — EXPERIENCE & POLISH                           -->
 <!-- ═══════════════════════════════════════════════════════ -->
-<div class="part-divider"><span style="color:var(--c-exp)">Part VIII — Experience &amp; Polish</span></div>
+<div class="part-divider"><span style="color:var(--c-exp)">Part IX — Experience &amp; Polish</span></div>
 <section id="tutorial" class="p-exp">
 <h2>Tutorial &amp; First-Launch Experience</h2>
 <p>On first open of the app, the player enters a <strong>video-guided demo</strong> on a scaled-down battlefield. The design philosophy: <strong>watch first, then do</strong>. The player can interrupt any video at any time to try it themselves, and can return to the video whenever they want. No text-heavy instructions. No modal popups blocking gameplay. Just "here's how it works — now you try."</p>
-<p><strong>AI-enhanced onboarding:</strong> where a model tier is available (on-device or cloud) the demo's guidance layer becomes adaptive — contextual hints that respond to what the player is (or isn't) doing, an "Ask the Stonewright" free-text helper grounded in the real rules, and adaptive pacing for veterans vs. newcomers. The tutorial battle itself stays scripted and deterministic; only the guidance adapts. See <a href="#ai" style="color:var(--link)">AI-Enhanced Experience → The Living Tutorial</a>.</p>
 
 <h3>Demo Battlefield</h3>
 <div class="s">
@@ -3481,7 +3461,7 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 </section>
 <section id="mobile" class="p-exp">
 <h2>Mobile UX Design</h2>
-<p>The game is built mobile-first for iPhone and Android. Every interaction must be achievable with <strong>one finger</strong> in either portrait or landscape mode (exception: 2-finger targeting during Fight). Target 60fps on iPhone 11+ and equivalent mid-range Android. <strong>Both portrait and landscape orientations are supported</strong> — the UI adapts (tray position, phase bar, button layout) while gameplay remains identical.</p>
+<p>The game is built mobile-first for iPhone. Every interaction must be achievable with <strong>one finger</strong> in either portrait or landscape mode (exception: 2-finger targeting during Fight). Target 60fps on iPhone 12+. <strong>Both portrait and landscape orientations are supported</strong> — the UI adapts (tray position, phase bar, button layout) while gameplay remains identical.</p>
 
 <h3>Build Phase Screen</h3>
 <p><strong>Top 65%:</strong> The game map. Pinch to zoom. Pan by dragging. Castles (3×3, dark blue) and cannons (2×2, light blue) are clearly visible at default zoom. Wind indicator prominently displayed when drift is active. Cleanup preview (red/blue pulsing outlines) updates in real-time.</p>
@@ -3573,7 +3553,7 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 <p><strong>Formula:</strong> <code>Math.round(25 + (campaign − 1) × 65/31)</code></p>
 <p><strong>Boss Finale:</strong> 90 seconds (fixed).</p>
 <p><strong>Rationale:</strong> The Fight timer determines how long the player has to destroy ships (for <span class="g" data-t="battle_score">Battle Score</span>), protect walls, and defend castles. Since victory requires only castle enclosure (not ship destruction), the Fight timer is NOT a pass/fail gate — it's a scoring opportunity. Ships surviving the timer remain for the next sortie. The timer must be long enough for <strong>all ships to exit spawn points + 5 seconds</strong> so every ship enters play. Most fights end before the timer — either because all ships die, or because the player has achieved their defensive goals and is waiting out the clock.</p>
-<p><strong>Why fights usually end early:</strong> With the balanced cannon eDPS from the stats section, a well-targeted defense kills enemy fleets faster than the timer allows. Example: Campaign 16 with 6 cannons at ~5.3 eDPS each = 31.8 combined DPS. A fleet of 6 ships at ~130 HP average = 780 total HP. Kill time = 780 / 31.8 = ~25 ticks = ~12.5 seconds. The 56s timer is a generous buffer. Players who want high <span class="g" data-t="battle_score">Battle Score</span> push for 100% ship kills; players fighting for survival may let ships live and focus on wall protection.</p>
+<p><strong>Why fights usually end early:</strong> With the balanced cannon eDPS from the stats section, a well-targeted defense kills enemy fleets faster than the timer allows. Example: Campaign 16 with 6 cannons at ~5.3 eDPS each = 31.8 combined DPS. A fleet of 6 ships at ~130 HP average = 780 total HP. Kill time = 780 / 31.8 = ~25 ticks = ~12.5 seconds. The 55s timer is a generous buffer. Players who want high <span class="g" data-t="battle_score">Battle Score</span> push for 100% ship kills; players fighting for survival may let ships live and focus on wall protection.</p>
 <table style="font-size:.72rem">
 <tr><th>Cam</th><th>1</th><th>4</th><th>8</th><th>12</th><th>16</th><th>20</th><th>24</th><th>28</th><th>32</th><th>Boss</th></tr>
 <tr><td><strong>Fight Timer</strong></td><td>25s</td><td>31s</td><td>40s</td><td>48s</td><td>56s</td><td>65s</td><td>73s</td><td>82s</td><td>90s</td><td>90s</td></tr>
@@ -3649,7 +3629,7 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 <tr><td><strong><span class="g" data-t="dmz">DMZ</span></strong></td><td>Dashed black line</td><td>Grids touched by DMZ line = DMZ grids. Not visually different — turn red only on invalid placement. 1–2 grids wide.</td></tr>
 <tr><td><strong><span class="g" data-t="fragile_grid">Fragile grids</span></strong></td><td>Theater-specific</td><td>Ice=translucent blue. Crust=orange glow. Crag=crumbling stone. Bog=dark water. Fissure=cracked sand. Fract=prismatic crystal.</td></tr>
 <tr><td><strong>Cleanup preview (exterior)</strong></td><td>Pulsing red outline + X</td><td>Will be removed. Red + X = "can't stay here."</td></tr>
-<tr><td><strong>Cleanup preview (interior)</strong></td><td>Pulsing blue outline + ω</td><td>Will convert to <span class="g" data-t="stonwryt">Stonwryts</span> (4 blocks = 10 ω, rounded down). Blue + ω = "earning currency."</td></tr>
+<tr><td><strong>Cleanup preview (interior)</strong></td><td>Pulsing blue outline + ω</td><td>Will convert to <span class="g" data-t="stonwryt">Stonwryts</span> (4 blocks = 1 ω). Blue + ω = "earning currency."</td></tr>
 <tr><td><strong>Invalid placement</strong></td><td>Red blocks with X overlay</td><td>Each invalid <span class="g" data-t="grid">grid</span> within the piece/cannon turns red with X. Universal language: red + X = "can't go there."</td></tr>
 </table>
 </section>
@@ -3668,15 +3648,9 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 <tr><td><strong>Language</strong></td><td>EN, ES, FR, DE, JA, KO, ZH, PT, IT, RU</td><td>All UI text. All in-game messages. Language-agnostic iconography used everywhere possible.</td></tr>
 <tr><td><strong>Colorblind Mode</strong></td><td>Off (default) / Protanopia / Deuteranopia / Tritanopia</td><td>Adjusts all game colors: enemy red→orange, cannon blue→cyan, HP bar green→blue, group tints shifted. All game objects already have <strong>unique sprites + color</strong> (shape alone identifies them), but this ensures color-reliant UI elements (HP bars, cleanup preview, tiled floor) remain distinguishable.</td></tr>
 <tr><td><strong>High Contrast</strong></td><td>Off (default) / On</td><td>Increases border thickness on all game objects, brightens text, adds outlines to pieces during drag. Helps in bright ambient light or for low-vision players.</td></tr>
-<tr><td><strong>Notifications</strong></td><td>Per-category toggles (default: off until earned)</td><td>Separate toggles for: Daily Challenge reset, Streak-about-to-break, Weekend Race ending soon, Challenge package ready, Piece-name approved/rejected. Permission is requested <strong>after the player's first ★★★</strong> (not on launch). See Notification Strategy below.</td></tr>
 <tr><td><strong>Restore Purchases</strong></td><td>Button</td><td>Restores all previously purchased items (ad-free, team colors, avatar packs, active piece names) from the App Store receipt. Also triggers an iCloud sync to restore game progress. Use after reinstalling or switching devices. Automatic on first launch if iCloud data exists — this button is the manual fallback.</td></tr>
 <tr><td><strong>Restart Game</strong></td><td>Button → Confirmation</td><td>Resets <strong>all progress</strong> to the first battle: campaigns, stars, cannon unlocks, <span class="g" data-t="stonwryt">Stonwryt</span> balance (to zero), challenge progress, storage contents, streak counter, earned avatars, daily challenge history — everything. <strong>Preserved (not reset):</strong> App Store purchases (ad-free, team colors, avatar packs, active piece names, Commander's Pack, Commander's Circle). Requires a <strong>double confirmation</strong>: "Reset all progress?" → "This cannot be undone. Type RESTART to confirm." The iCloud save is also reset.</td></tr>
 </table>
-<h3>Notification Strategy</h3>
-<div class="s">
-<div class="ct">Pre-Submission — Define Before Launch (Maps to the Settings Above)</div>
-<p>Push notifications drive retention but over-notifying causes uninstalls, so the taxonomy is fixed and every category is individually toggleable. <strong>Permission is requested after the player's first ★★★</strong> — once the game has proven its value — never on first launch. Categories and frequency caps: <strong>Daily Challenge reset</strong> (≤1/day, only if the player has an active streak); <strong>Streak about to break</strong> (1 reminder, evening of a missed day); <strong>Weekend Race ending soon</strong> (1, only if opted in and currently placing); <strong>Challenge package ready to open</strong> (on event, ≤1/day); <strong>Piece name approved/rejected</strong> (on moderation result). Default state for every category is <strong>off until the relevant feature is unlocked</strong>, and all are switchable in <a href="#settings" style="color:var(--link)">Settings → Notifications</a>. Copy is localized and uses the Commander name.</p>
-</div>
 </section>
 <section id="audio" class="p-exp">
 <h2>Audio Design &amp; Haptic Feedback</h2>
@@ -3754,14 +3728,18 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 <tr><th>Transition</th><th>Wipe Color</th><th>Sound</th><th>Details</th></tr>
 <tr><td>Battle Start → Build</td><td>White</td><td>Stone grinding open</td><td>The map is revealed by the wipe, fortress walls appearing. Wind compass fills screen first (if drift active), then "Wind Drift" label, then compass shrinks to position.</td></tr>
 <tr><td>Build → Deploy</td><td>Light blue (cannon color)</td><td>Metallic rack</td><td>The tray transforms: Build zones (trash, spackle, Wall Rack, storage) slide out, cannon carousel slides in filling the full tray width. Cannon trash bin appears on the left (RH) or right (LH). Isolation cleanup wipe has already played. A brief flash highlights all enclosures.</td></tr>
-<tr><td>Deploy → Fight (3-2-1)</td><td>Red</td><td>War drums</td><td>Red wipe reveals the waterways with ships at spawn points. 3-2-1-FIGHT countdown plays over the full map. Below countdown: phase-specific message (e.g., "Watch out for friendly fire, [Name]" in Campaign 11+). Camera button appears in corner.</td></tr>
-<tr><td>Fight → Build (next sortie)</td><td>White</td><td>All-clear horn</td><td>Damage persists. Spackle dissolves. The board is revealed in its post-battle state. Sortie counter advances ("Sortie 4/7").</td></tr>
+<tr><td>Deploy → Fight (3-2-1)</td><td>Cinematic</td><td>War drums</td><td><strong>Cinematic transition, not a wipe.</strong> The camera lifts from the flat Deploy map up to the castle window, zooms out through it into the world beyond, and crossfades from the 2D Map View into the 2.5D isometric battlefield. The 3-2-1-FIGHT countdown plays over the crossfade. On arrival, the waterways are revealed with ships at spawn points. Below the countdown: phase-specific message (e.g., "Watch out for friendly fire, [Name]" in Campaign 11+). Camera button appears in corner. Skippable after first view (quick crossfade fallback).</td></tr>
+<tr><td>Fight → Build (next sortie)</td><td>Cinematic</td><td>All-clear horn</td><td><strong>Reverse cinematic.</strong> The camera spins away from the 2.5D battlefield, travels back toward the castle window, and crossfades to the flat 2D Map View for the next Build phase. Damage persists. Spackle dissolves. The board is revealed in its post-battle state. Sortie counter advances ("Sortie 4/7"). Skippable after first view.</td></tr>
 <tr><td>Last Fight → Last Stand</td><td>Gold</td><td>Urgent drumroll</td><td>"LAST STAND" text appears large, then shrinks. Earned time counter glows and starts counting down. No Deploy phase.</td></tr>
 </table>
+<div class="s">
+<div class="ct">Map ↔ Battlefield Cinematic — Implementation</div>
+<p>The Deploy→Fight and Fight→Build transitions are the game's signature moment. Critically, <strong>the two gameplay states never interoperate</strong> — the flat 2D Map View (Flutter Canvas) and the 2.5D isometric battlefield (Flame) are fully independent scenes. The connective animation is a fixed, generic cinematic (the commander looking out the castle window at the world beyond) that plays the same way every battle and does <strong>not</strong> depict the player's specific fortress. There is no live sprite morphing and no shared coordinate space between the two views.</p>
+<p><strong>Two-path build:</strong> (1) First-view cinematic — a pre-rendered video asset played via the <code>video_player</code> plugin, crossfading into and out of the live scenes for maximum polish. (2) Skip path — a scripted quick crossfade with the 3-2-1 overlay, used once the player has seen the full cinematic (same skip pattern as Victory Skip). Because the cinematic is generic and shared, it ships as one small asset regardless of theater or fortress.</p>
+</div>
 </section>
 <section id="victory" class="p-exp">
 <h2>Victory Celebration</h2>
-<p class="dim">The results screen that follows the celebration also hosts the AI <a href="#ai" style="color:var(--link)">post-battle debrief</a> ("what went right / what went wrong") — a short, personal coaching note generated on-device from the battle summary. It is advisory only and never affects stars or Battle Score.</p>
 <div class="s">
 <div class="ct">The Moment of Triumph — Make It Spectacular</div>
 <p><strong>Trigger:</strong> All required castles enclosed (confirmed at end of any Build phase including Last Stand). The enclosure check passes with a golden flash. Ship destruction is NOT required.</p>
@@ -3786,107 +3764,22 @@ document.getElementById('battle-table-container').innerHTML = bHtml;
 <h3>Star Rating Criteria</h3>
 <div class="s">
 <div class="ct">Baseline Star Formula (Server-Tunable Per Battle)</div>
-<p>Star criteria are shown on the <strong>battle page</strong> (before starting) and during the <strong>Build phase</strong> as a collapsible panel. The player always knows what they're aiming for. Stars are awarded by the <strong>three-lever averaging system</strong> defined in full under <a href="#stars" style="color:var(--link)">Star System</a> — this section is a quick recap of that single source of truth, not a separate formula.</p>
-<p><strong>★ (1 Star):</strong> Victory — required castles enclosed. Completing the battle is always worth at least 1 star. Ships do not need to be destroyed.</p>
-<p><strong>★★ / ★★★:</strong> The rounded-up average of the three independent levers — <strong>Ships Destroyed</strong>, <strong>Cannon Health</strong>, and <strong>Area Enclosed</strong> (each rated ★–★★★). Any two levers at ★★★ guarantees ★★★ overall. ★★★ should be <strong>easy to achieve in early campaigns</strong> and <strong>challenging but doable in later campaigns</strong>.</p>
-<p><strong>★★★! (Exceptional):</strong> Requires at least <strong>2 of the 3 levers at the hidden ! threshold</strong> plus the third at ★★★ (see <a href="#stars" style="color:var(--link)">Star System</a> for exact per-lever thresholds). It is <strong>hidden</strong> — never shown as a goal, never predictable mid-battle. Target frequency: <strong>1 per 15–20 battles</strong> for a skilled player.</p>
-<p>All thresholds are <strong>server-side tunable</strong> per battle. The baseline above is the default. The server can tighten or loosen the per-lever criteria based on aggregate player data to maintain the target difficulty curve and ★★★! frequency.</p>
+<p>Star criteria are shown on the <strong>battle page</strong> (before starting) and during the <strong>Build phase</strong> as a collapsible panel. The player always knows what they're aiming for.</p>
+<p><strong>★ (1 Star):</strong> Victory — required castles enclosed. Completing the battle is always worth 1 star. Ships do not need to be destroyed.</p>
+<p><strong>★★ (2 Stars):</strong> Victory + ≥50% walls remaining + ≥50% earned time unused. Reward for efficient play.</p>
+<p><strong>★★★ (3 Stars):</strong> Victory + ≥75% walls remaining + ≥75% time unused + all cannons alive. Requires strong defense and time management. Should be <strong>easy to achieve in early campaigns</strong> and <strong>challenging but doable in later campaigns</strong>.</p>
+<p><strong>★★★! (Exceptional):</strong> Victory + ≥90% walls + ≥90% time + all cannons alive + no castle degradation during the entire battle. A total surprise — the player should never be able to predict it mid-battle. Target frequency: <strong>1 per 15–20 battles</strong> for a skilled player. Server-tuned thresholds adjust per battle to maintain this frequency.</p>
+<p>All thresholds are <strong>server-side tunable</strong> per battle. The baseline above is the default. The server can tighten or loosen criteria based on aggregate player data to maintain the target difficulty curve and ★★★! frequency.</p>
 </div>
 </section>
 
-<section id="ai" class="p-exp">
-<h2>AI-Enhanced Experience — Hybrid On-Device + Cloud</h2>
-<p>Rivenkeep uses a small language model to make the game warmer, clearer, and more personal — for language tasks only: moderation, suggestion, explanation, coaching, and flavor. None of these needs a high-performing model; they are short text generation and structured extraction, so a small model is sufficient everywhere. The model is reached through a <strong>three-tier hybrid</strong> behind a single <code>LanguageProvider</code> interface, so game code never knows which tier answered:</p>
-<p><strong>Tier 1 — On-device (first line, preferred).</strong> On iOS, Apple's <strong>Foundation Models</strong> (the on-device family behind Apple Intelligence). On Android, <strong>Gemini Nano</strong> (via ML Kit GenAI / AICore) where the device supports it. Private, free, offline — nothing leaves the device.</p>
-<p><strong>Tier 2 — Dedicated cloud fallback (three features only).</strong> For piece-name moderation, the living tutorial, and daily/challenge framing (features 1, 3, 6), when no capable on-device model is present the request routes through a Firebase Cloud Function to a small, inexpensive hosted model. Only the minimal text needed is sent (a submitted name, a tutorial prompt, a challenge descriptor) — never board state, battle data, or personal data. This tier is disclosed in the privacy policy. All other AI features skip this tier and go straight to their baseline.</p>
-<p><strong>Tier 3 — Templated / denylist baseline (always-on floor).</strong> If neither model tier is available, every feature still works: moderation falls back to a curated denylist + pattern filter that <strong>fails closed</strong>; debrief, tutorial, flavor, recaps, and narration fall back to templated text. No player is ever blocked or left without the feature.</p>
-<p>This is a <strong>first-class, planned part of the experience</strong>, not a bolt-on — but it is deliberately lightweight. Piece-name moderation is the one safety-critical path; everything else is advisory polish.</p>
-<p><strong>Not every feature uses all three tiers.</strong> The cloud fallback is reserved for the three features where consistent quality on every device matters most and calls are infrequent; the rest run on-device only and fall straight to the templated/denylist baseline when no on-device model is present. This keeps cloud cost trivial and keeps the board state, battle data, and recaps entirely on the device.</p>
-<table style="font-size:.78rem">
-<tr><th>#</th><th>AI feature</th><th>Tier 1</th><th>Cloud backstop?</th><th>Baseline floor</th></tr>
-<tr><td>1</td><td>Piece naming — moderation + suggestions</td><td>On-device</td><td><strong>Yes — cloud</strong> (safety-critical; a name is public anyway)</td><td>Denylist + pattern filter (fail-closed)</td></tr>
-<tr><td>2</td><td>Post-battle debrief</td><td>On-device</td><td>No</td><td>Templated text</td></tr>
-<tr><td>3</td><td>Living tutorial — adaptive onboarding</td><td>On-device</td><td><strong>Yes — cloud</strong> (first-impression / conversion)</td><td>Scripted video-guided demo</td></tr>
-<tr><td>4</td><td>"Ask the Emissary" — rules help</td><td>On-device</td><td>No</td><td>Searchable FAQ / codex</td></tr>
-<tr><td>5</td><td>Dynamic flavor &amp; narrative</td><td>On-device</td><td>No</td><td>Templated text</td></tr>
-<tr><td>6</td><td>Daily &amp; challenge framing</td><td>On-device</td><td><strong>Yes — cloud</strong> (shared, low-frequency content)</td><td>Templated text</td></tr>
-<tr><td>7</td><td>Accessibility — board narration + plain-language settings</td><td>On-device</td><td>No (high-frequency; keeps board state on-device)</td><td>Templated narration</td></tr>
-<tr><td>8</td><td>Recaps &amp; replay commentary</td><td>On-device</td><td>No</td><td>Templated text</td></tr>
-</table>
-
-<div class="s" style="border-left-color:#ef5350">
-<div class="ct" style="color:#ef5350">The AI Firewall — One Inviolable Rule</div>
-<p><strong>AI never touches determinism.</strong> The combat simulation — ship AI, troop pathfinding, RNG, damage, enclosure, stars, Battle Score, and anything that feeds a leaderboard — is 100% deterministic and contains <strong>zero AI</strong>. Every feature in this section operates on a <strong>post-hoc structured summary</strong> or on <strong>player-facing text only</strong>, runs <strong>outside the timed simulation</strong> (never on a combat tick), and is <strong>non-authoritative</strong>: its output is never read back into game state, scoring, ranking, or the replay system. AI makes the game more enjoyable to <em>read, learn, and personalize</em>; it never decides what happens in a battle. Two identical runs of a battle are still byte-identical regardless of what any AI feature said about them.</p>
-</div>
-
-<h3>1 · Intelligent Piece Naming — Moderation + Creative Suggestions</h3>
-<p>The <a href="#nicknames" style="color:var(--link)">Piece Naming System</a> lets players name pieces they have mastered. The hybrid language model powers two halves of it:</p>
-<p><strong>Moderation (safety-critical).</strong> Every submitted name is screened on-device before it can ever appear to another player. The model performs content classification + entity extraction to flag profanity, hate, sexual content, violence, personal data (phone numbers, emails, addresses), impersonation, and evasive leetspeak. Output is a typed verdict via guided generation: <code>{ verdict: allow | review | reject, categories: [...], confidence }</code>. Three-tier flow: <strong>on-device classify → auto-allow / auto-reject / queue-for-review → community report backstop</strong> for anything that slips through. Because moderation must work on every device and must <strong>fail closed</strong>, a curated denylist + pattern filter is the always-on safety baseline; the model is the intelligent primary layer layered on top (defense in depth, never the only line). This directly satisfies the child-safety requirement for user-generated content.</p>
-<p><strong>Creative suggestions.</strong> When a player goes to name a piece, the model offers 3–4 evocative, on-theme suggestions generated from the piece's shape, group, and the current theater — e.g. for a hooked heptomino in the Frozen theater: "The Frost Hook," "Warden's Cradle," "Hammerfall." The player can accept, tweak, or ignore them. Suggestions are themselves passed through the same moderation pass. Guided generation returns a typed <code>[PieceNameSuggestion]</code> so the UI is never parsing free text. Optionally, an accepted name gets a one-line lore blurb for the piece's codex entry (pure flavor).</p>
-
-<h3>2 · Post-Battle Debrief — "What Went Right / What Went Wrong"</h3>
-<p>The signature AI feature. After every battle, on the <a href="#victory" style="color:var(--link)">results screen</a>, the model produces a short, personal, plain-language debrief — the kind a good coach gives. It does <strong>not</strong> watch the battle; it reads a <strong>structured summary</strong> the deterministic sim emits at battle end, so it can never affect the outcome it is describing.</p>
-<p><strong>Input (structured, not raw sim):</strong> stars per lever (Ships / Cannon Health / Area) and the raw Battle Score; cannons used, their types and final HP, and which were lost; ships destroyed vs. total and which types survived; number and location of wall breaches and the tick of the first breach; closest-call moment (lowest castle HP); Build/Deploy/Fight time used vs. available; sorties taken; difficulty level. (All of this already exists for the analytics event schema — the debrief reuses it.)</p>
-<p><strong>Output (guided generation, typed):</strong> <code>Debrief { strengths: [String] (2–3), improvements: [String] (2–3), nextTip: String }</code>. Concrete and specific, tied to <em>this</em> battle: "You maxed your enclosure (★★★ Area) and kept every cannon alive — excellent turtle. But you only sank 3 of 9 ships, so your Battle Score left points on the table. Those warships clustered on the east spawn — a Chain Shot there would have multiplied your damage. Next battle: try one Chain Shot covering the eastern approach." </p>
-<p><strong>Tone-adaptive.</strong> Encouraging and explanatory for new players (early campaigns, low difficulty, high retry count → the player is learning); terse and tactical for veterans (Legend level, high stars → respect their time). The tone hint is derived from progression state and passed in the prompt.</p>
-<p><strong>Guardrails.</strong> Runs async on the results screen (never blocks the score or the next battle), cached so re-opening a result is instant, and purely advisory — it cannot change stars, score, unlocks, or anything ranked. On devices with no model tier available, a <strong>templated rules-based debrief</strong> built from the same summary fills in (deterministic sentences keyed off the lever gaps), so every player gets <em>a</em> debrief; the AI makes it feel written-for-you.</p>
-
-<h3>3 · The Living Tutorial — Adaptive Onboarding</h3>
-<p>The <a href="#tutorial" style="color:var(--link)">tutorial</a> is the player's first impression, and it is where AI earns its place fastest. The tutorial <em>battle</em> stays fully scripted and deterministic; the <strong>guidance layer</strong> on top of it is adaptive:</p>
-<ul>
-<li><strong>Contextual coaching.</strong> The tutor watches which actions the player has and hasn't performed (picked up a piece, rotated, enclosed, placed a cannon) and generates the next hint in plain language — rephrasing and escalating help if the player stalls, staying out of the way if they're flying. A player who hasn't rotated in 8 seconds hears "Try tapping the piece to rotate it — that L-shape fits the corner better turned once."</li>
-<li><strong>"Ask the Stonewright."</strong> At any point the player can ask a free-text question ("how do I get more cannons?", "why won't this place here?") and get an answer (on-device where available, cloud fallback otherwise) grounded in the actual rules via tool-calling (the model calls into a rules lookup rather than inventing). Answers are short and cite the real mechanic.</li>
-<li><strong>Adaptive pacing.</strong> Detects the breeze-through veteran (offer "Skip ahead — you've got this") vs. the struggling newcomer (slow down, add an extra guided placement). Reads only interaction telemetry, never the sim's internals.</li>
-</ul>
-<p>Baseline when no model tier is available: the existing video-guided demo with the fixed hint script.</p>
-
-<h3>4 · "Ask the Emissary" — Rules Help &amp; Narrative Voice</h3>
-<p>Rivenkeep gives its on-device help two in-world personas, so AI assistance feels native rather than bolted on. The <strong>Stonewright</strong> is the master builder — the voice of <em>building &amp; gameplay</em> help (placement, enclosure, "how do I…"), surfaced in the <a href="#tutorial" style="color:var(--link)">tutorial</a> as "Ask the Stonewright." The <strong>Emissary</strong> is the herald and lore-keeper — the voice of <em>rules knowledge and narrative flavor</em>.</p>
-<p>"Ask the Emissary" is a persistent help assistant reachable from the pause menu and the codex. The player asks anything about mechanics in natural language — "what counters a Shield Bearer?", "why didn't my wall enclose the castle?", "what does the dotted line on my cannon mean?" — and gets a short, correct answer grounded in the game's own rules through tool-calling over a rules knowledge base (so it explains <em>Rivenkeep's</em> rules, not generic tower-defense lore, and never hallucinates a mechanic that doesn't exist). Especially valuable for the deep systems (enclosure edge cases, the 3-lever star math, troop counters). The Emissary is also the voice of the dynamic narrative below.</p>
-
-<h3>5 · Dynamic Flavor &amp; Narrative — The Emissary's Voice</h3>
-<p>The flavor and lore in this subsection are delivered in the <strong>Emissary's</strong> voice (the same persona as the rules help), keeping the game's narrative cohesive.</p>
-<ul>
-<li><strong>Commander &amp; battle messages.</strong> The fixed pool of <a href="#nicknames" style="color:var(--link)">battle messages</a> becomes context-aware and varied — victory/defeat/near-miss/streak lines that reference what actually happened ("Three castles held against the Leviathan — the Stonewrights will sing of the east wall"). Generated outside the sim, cached, cosmetic only.</li>
-<li><strong>Campaign &amp; war interstitials.</strong> Short lore beats between campaigns that reflect the player's real journey (a barely-held castle, a flawless run) — flavor that makes the long arc feel personal.</li>
-<li><strong>Boss intros.</strong> Tailored taunts keyed to the boss and the player's history with it ("You fled the Sandworm last time, Commander. It remembers.").</li>
-</ul>
-
-<h3>6 · Daily &amp; Challenge Framing</h3>
-<p>The <a href="#dailies" style="color:var(--link)">daily challenge</a> and <a href="#challenges" style="color:var(--link)">achievement challenge</a> <em>logic</em> stays deterministic and authored. AI generates the <strong>framing</strong> — themed titles and a one-line "mission briefing" that gives each day's challenge a flavor hook ("The Crystal Siege: enclose two castles using only pentominoes"). Text only; the constraints and rewards are fixed data.</p>
-
-<h3>7 · Accessibility — Board Narration &amp; Plain-Language Settings</h3>
-<ul>
-<li><strong>Board narration.</strong> On demand, the model turns the structured board state into speech-ready prose for low-vision players: "Your eastern wall has a two-cell breach. Three warships approach from the southeast, one within firing range. Your Lightning cannon is at 40% health." Reads state, emits text → VoiceOver / TTS.</li>
-<li><strong>Plain-language settings.</strong> "Make the game a little easier" → the assistant proposes concrete changes (difficulty level, Assist Mode, extra spackle) and applies them on confirm. Natural-language front-end over the existing <a href="#settings" style="color:var(--link)">settings</a>.</li>
-</ul>
-
-<h3>8 · Recaps &amp; Replay Commentary</h3>
-<ul>
-<li><strong>Campaign / weekly recaps.</strong> A short narrative summary of the player's performance trend, highlights, and a suggested goal — built from the analytics summary, delivered on a natural return-to-game beat.</li>
-<li><strong>Replay commentary.</strong> When watching a top player's battle via the <a href="#future" style="color:var(--link)">Spectator / Watch-a-Pro</a> feature, AI generates light commentary explaining what the pro did well ("Notice they leave the south open until sortie 3, baiting the fleet into Chain Shot range"). Educational flavor over the replay's event summary — never altering the deterministic replay itself.</li>
-</ul>
-
-<h3>Technical &amp; Safety Constraints (applies to all of the above)</h3>
-<table style="font-size:.78rem">
-<tr><th>Constraint</th><th>Rule</th></tr>
-<tr><td>Determinism firewall</td><td>No AI on a combat tick, in the sim, or in anything scored/ranked/replayed. Post-hoc summaries and player-facing text only.</td></tr>
-<tr><td>API</td><td>Single <code>LanguageProvider</code> Dart interface. iOS impl → Apple Foundation Models; Android impl → Gemini Nano (ML Kit GenAI); cloud impl → Cloud Function to a small hosted model; baseline impl → templated/denylist. All use guided generation into typed structs so the game never parses free text; tool-calling for rules-grounded answers.</td></tr>
-<tr><td>Timing</td><td>All generation happens off the timed loop (results screen, menus, naming UI). Async; never blocks gameplay, scoring, or transitions. Results cached.</td></tr>
-<tr><td>Privacy</td><td>On-device by default. Cloud is reached only by features 1/3/6 and only on devices without an on-device model — it receives a submitted name, a tutorial prompt, or a generic challenge descriptor, never board state, battle data, or recaps (those features are on-device-only). Disclosed in the privacy policy. See <a href="#production" style="color:var(--link)">Production</a>.</td></tr>
-<tr><td>Device availability</td><td>On-device model where available (iOS Foundation Models / Android Gemini Nano) is Tier 1 for all eight features. Only features 1/3/6 have a cloud backstop; the rest fall straight to a templated/denylist baseline. <strong>Moderation</strong> always has the fail-closed denylist baseline (safety-critical). No player is ever blocked.</td></tr>
-<tr><td>Safety / UGC</td><td>Moderation is layered (on-device model + denylist baseline + community reports) and fails closed. Generated suggestions are themselves moderated. No generated content references real people.</td></tr>
-<tr><td>Future models</td><td>The single <code>LanguageProvider</code> interface means any tier's model can be swapped for a better one without touching game code — a stronger on-device model, a different cloud model, etc. The determinism firewall holds regardless of provider or tier.</td></tr>
-</table>
-</section>
-
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- PART IX — REFERENCE                                      -->
+<!-- PART X — REFERENCE                                      -->
 <!-- ═══════════════════════════════════════════════════════ -->
-<div class="part-divider"><span style="color:var(--c-ref)">Part IX — Reference</span></div>
+<div class="part-divider"><span style="color:var(--c-ref)">Part X — Reference</span></div>
 
 <footer style="text-align:center;padding:40px;color:var(--text-dim);font-size:.78rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)">
-  Rivenkeep — GDD v6.3.0 — 190 Battles • 10 Theaters • 32 Campaigns + Boss • 16 Piece Tiers (4×4)<br>
+  Rivenkeep — GDD v6.2.0 — 190 Battles • 10 Theaters • 32 Campaigns + Boss • 16 Piece Tiers (4×4)<br>
   Build → Deploy → Fight • Single Player • Pre-Built Maps • ★★★! • War System • Side-Touching Only
 </footer>
 
@@ -4314,25 +4207,25 @@ el.innerHTML = html;
 <h3>Technical Requirements</h3>
 <div class="s">
 <div class="ct">Platform &amp; Performance Targets</div>
-<p><strong>Platform:</strong> iOS (App Store) and Android (Google Play), released simultaneously from a single Flutter codebase. <strong>Minimum iOS:</strong> 15. <strong>Minimum Android:</strong> API 24 (Android 7.0). <strong>Minimum device:</strong> iPhone 11 / equivalent mid-range Android (4GB RAM). <strong>Target devices:</strong> iPhone 15 and Pixel 8 (development/testing primary).</p>
+<p><strong>Platform:</strong> iOS (App Store) and Android (Google Play), released simultaneously from a single codebase. <strong>Minimum iOS:</strong> 15. <strong>Minimum Android:</strong> API 24 (Android 7.0). <strong>Minimum device:</strong> iPhone 11 / equivalent mid-range Android (4GB RAM). <strong>Target devices:</strong> iPhone 15 and Pixel 8 (development/testing primary).</p>
 <p><strong>Engine &amp; language:</strong> Flutter + Dart. The Fight phase runs on the <strong>Flame</strong> 2D game engine (game loop, isometric component tree, sprite batching); the Build/Deploy phases use Flutter's own <code>CustomPainter</code>/Canvas and widget/gesture system for the flat top-down puzzle UI. Both share one Dart codebase and Flutter's Skia/Impeller rendering pipeline.</p>
-<p><strong>Architecture:</strong> A pure-Dart <strong>Core/ logic layer</strong> (grid, piece state machine, enclosure flood-fill, tick combat, A* pathfinding, star calculation) with zero rendering or platform dependencies — fully unit-testable and deterministic. A separate <strong>Render/ layer</strong> (Flame + Flutter) draws the Core state. Seeded deterministic RNG via a pure-Dart generator (e.g. a Mersenne-Twister/xorshift implementation) so battles reproduce exactly.</p>
-<p><strong>Cross-platform services:</strong> <code>games_services</code> plugin (Game Center on iOS + Google Play Games on Android — one API, per-platform leaderboard/achievement IDs), <code>in_app_purchase</code> plugin (App Store + Play Billing), Firebase via FlutterFire (Firestore, Cloud Functions, Remote Config, Anonymous Auth, Analytics, Crashlytics), Google Mobile Ads SDK (interstitials + rewarded video), <code>video_player</code> (cinematic phase transitions).</p>
-<p><strong>Performance:</strong> 60fps sustained on target devices. 30fps floor on minimum devices. Memory budget: 250MB. Battery: &lt;30% drain per hour of continuous play. Thermal: no throttling in sessions under 15 minutes. Flame's game loop targets 60fps out of the box; Rivenkeep's modest per-fight object count sits well inside its range.</p>
-<p><strong>App size:</strong> Target 120–180MB initial install per platform. Current campaign stays loaded; previous/future campaigns compressed and decompressed on demand. Asset streaming for theater-specific sprites.</p>
+<p><strong>Architecture:</strong> A pure-Dart <strong>Core/ logic layer</strong> (grid, piece state machine, enclosure flood-fill, tick combat, A* pathfinding, star calculation) with zero rendering or platform dependencies — fully unit-testable and deterministic. A separate <strong>Render/ layer</strong> (Flame + Flutter) draws the Core state. This mirror of logic-vs-render separation is what makes the game portable and the simulation reproducible.</p>
+<p><strong>Cross-platform services:</strong> <code>games_services</code> plugin (Game Center on iOS + Google Play Games on Android — one API, per-platform leaderboard/achievement IDs), <code>in_app_purchase</code> plugin (App Store + Play Billing), Firebase via FlutterFire (Firestore, Cloud Functions, Remote Config, Anonymous Auth, Analytics), Google Mobile Ads SDK (interstitials + rewarded video), <code>video_player</code> (cinematic phase transitions).</p>
+<p><strong>Performance:</strong> 60fps sustained on target devices. 30fps floor on minimum devices. Memory budget: 250MB. Battery: &lt;30% drain per hour of continuous play. Thermal: no throttling in sessions under 15 minutes. Flame's FlameGame loop targets 60fps out of the box; the modest per-fight object count (a few dozen sprites) sits well inside its comfort range.</p>
+<p><strong>App size:</strong> Target 120–180MB initial install per platform. Current campaign stays loaded; previous/future campaigns compressed and decompressed on demand. Asset streaming for theater-specific sprites. Transition cinematics are shared, generic assets (not player-specific).</p>
 <p><strong>Code quality:</strong> Zero tolerance for bugs. Tight, elegant code. No duplicate code. Follow all professional releasable coding standards. Full unit test coverage for the pure-Dart Core/ layer (deterministic, no mocks needed for simulation). Widget/golden tests for the Flutter UI layer. The code must be maintainable by a single developer over years.</p>
 </div>
 
 <h3>Backend Architecture — Cross-Platform Services + Firebase</h3>
 <div class="s">
 <div class="ct">Three-Layer Backend: Platform Game Services + Firebase + Client</div>
-<p>Rivenkeep uses free platform game services (Game Center on iOS, Google Play Games on Android) and Firebase for everything requiring custom server logic. One Dart codebase talks to both platforms through cross-platform plugins. No custom server infrastructure to maintain — everything scales to zero when idle and grows automatically with the user base. Firebase (Firestore) is the single source of truth for cross-device data, so the same save works across an iPhone, an Android tablet, or a reinstall.</p>
+<p>Rivenkeep uses free platform game services (Game Center on iOS, Google Play Games on Android) and Firebase for everything requiring custom server logic. One Dart codebase talks to both platforms through cross-platform plugins. No custom server infrastructure to maintain — everything scales to zero when idle and grows automatically with the user base. Firebase is the single source of truth for cross-device data, so the same save works whether the player switches from an iPhone to an Android tablet or reinstalls.</p>
 </div>
 
 <h4>Layer 1 — Platform Game Services (Free, Zero Maintenance)</h4>
 <div class="s">
 <div class="ct">games_services (Game Center + Play Games) + in_app_purchase</div>
-<p><strong>Leaderboards &amp; achievements (games_services plugin):</strong> One Dart API drives both Apple Game Center and Google Play Games. Each leaderboard and achievement is registered in both consoles; calls pass a per-platform ID and the plugin routes to whichever platform the app is running on. Battle Score submission, the four leaderboard types, and 182 achievements work identically on iOS and Android.</p>
+<p><strong>Leaderboards &amp; achievements (games_services plugin):</strong> One Dart API drives both Apple Game Center and Google Play Games. Each leaderboard and achievement is registered in both consoles; calls pass a per-platform ID and the plugin routes to whichever platform the app is running on. Battle Score submission, the four leaderboard types, and 182 achievements all work identically on iOS and Android.</p>
 <table style="font-size:.78rem">
 <tr><th>Feature</th><th>games_services call</th><th>Implementation</th></tr>
 <tr><td>Overall Leaderboard</td><td><code>submitScore()</code></td><td>Submit <span class="g" data-t="battle_score">Battle Score</span> after each battle with both iOS + Android leaderboard IDs. Platform hosts ranking + regional filtering.</td></tr>
@@ -4342,33 +4235,20 @@ el.innerHTML = html;
 <tr><td>Sortable sub-scores</td><td>score context / metadata</td><td>Ships/area/cannon sub-scores packed into the platform score's context (iOS) / metadata (Android). Client unpacks for column sorting.</td></tr>
 <tr><td>182 Achievements</td><td><code>unlock()</code> / <code>increment()</code></td><td>Each challenge maps to an achievement in both consoles. Progress via percentComplete.</td></tr>
 </table>
-<p><strong>Purchases (in_app_purchase plugin):</strong> One Dart API drives both the App Store and Google Play Billing. Subscriptions, non-consumables, and the piece-naming products are each registered in both stores. Verification runs server-side via a Firebase Cloud Function that validates against Apple's and Google's endpoints.</p>
+<p><strong>Purchases (in_app_purchase plugin):</strong> One Dart API drives both App Store and Google Play Billing. Subscriptions, non-consumables, and the piece-naming products are each registered in both stores. Receipt/purchase verification runs server-side via a Firebase Cloud Function that validates against Apple's and Google's verification endpoints.</p>
 <table style="font-size:.78rem">
 <tr><th>Product Type</th><th>Plugin Type</th><th>Products</th></tr>
 <tr><td>Subscriptions</td><td>auto-renewing</td><td>Ad-Free, Commander's Pack, Commander's Circle (registered in both stores)</td></tr>
 <tr><td>One-time (permanent)</td><td>non-consumable</td><td>Team Colors (20), Enemy Colors (20), Civ Skins (6), Avatar Packs (7), Challenge Express, Replay Filters, Seasonal Skins</td></tr>
 <tr><td>Piece Naming (duration)</td><td>non-consumable</td><td>16 products (4 durations × 4 tier prices). Expiration managed by Firebase.</td></tr>
 </table>
-<p><strong>Cloud save:</strong> Platform cloud-save (Game Center / Play Games saved games) is a secondary redundancy layer only; the primary cross-device store is Firestore (Layer 2), which behaves identically on both platforms and avoids divergence between the two ecosystems.</p>
+<p><strong>Cloud save:</strong> Platform cloud-save (Game Center / Play Games saved games) is used as a secondary redundancy layer; the primary cross-device store is Firestore (Layer 2), which works identically on both platforms and avoids divergence between the two ecosystems.</p>
 </div>
 
 <h4>Layer 2 — Firebase (Custom Server Logic)</h4>
 <div class="s">
 <div class="ct">Firestore + Cloud Functions + Remote Config</div>
-<p><strong>Firebase project setup:</strong> One Firebase project ("rivenkeep-prod") with both an iOS app and an Android app registered under it (shared Firestore, Functions, Config). Added to the Flutter project via FlutterFire (<code>firebase_core</code>, <code>cloud_firestore</code>, <code>firebase_auth</code>, <code>cloud_functions</code>, <code>firebase_remote_config</code>, <code>firebase_analytics</code>, <code>firebase_crashlytics</code>). Anonymous authentication links to the platform game-services player ID — no login screen, no email/password. The player never sees Firebase.</p>
-
-<p><strong>Player state — the primary cross-device store</strong> (replaces the former Apple-only cloud sync). All player state lives in Firestore under the anonymous user's document and syncs at phase boundaries + on app background/foreground:</p>
-<table style="font-size:.78rem">
-<tr><th>Data</th><th>Firestore path</th><th>Sync Frequency</th></tr>
-<tr><td>Game progress (stars, campaigns, wars)</td><td><code>players/{uid}/progress</code></td><td>Phase boundary + app state change</td></tr>
-<tr><td>Stonwryt balance &amp; purchase history</td><td><code>players/{uid}/economy</code></td><td>After every purchase/earn event</td></tr>
-<tr><td>Cannon state (HP, positions, carry)</td><td><code>players/{uid}/cannons</code></td><td>End of each battle</td></tr>
-<tr><td>Challenge progress (182 challenges)</td><td><code>players/{uid}/challenges</code></td><td>On completion event</td></tr>
-<tr><td>Daily streak counter &amp; shield</td><td><code>players/{uid}/streak</code></td><td>Daily</td></tr>
-<tr><td>Settings (handedness, colors, accessibility)</td><td><code>players/{uid}/settings</code></td><td>On change</td></tr>
-<tr><td>Featured Fortress submissions</td><td><code>featured_fortresses/{id}</code> (shared)</td><td>On ★★★! submission</td></tr>
-</table>
-<p>Firestore offline persistence caches all of this locally, so the game reads/writes instantly and syncs when connectivity returns. Player state is ~50KB per user — trivially inside the free tier.</p>
+<p><strong>Firebase project setup:</strong> One Firebase project ("rivenkeep-prod") with both an iOS app and an Android app registered under it (shared Firestore, Functions, Config). Added to the Flutter project via FlutterFire (<code>firebase_core</code>, <code>cloud_firestore</code>, <code>firebase_auth</code>, <code>cloud_functions</code>, <code>firebase_remote_config</code>, <code>firebase_analytics</code>). Anonymous authentication links to the platform game-services player ID — no login screen, no email/password. The player never sees Firebase.</p>
 
 <p><strong>Firestore collections (NoSQL database):</strong></p>
 <table style="font-size:.78rem">
@@ -4409,13 +4289,12 @@ el.innerHTML = html;
 </table>
 
 <p><strong>Free tier covers Rivenkeep:</strong> Firestore: 1GB storage, 50K reads/day, 20K writes/day. Cloud Functions: 125K invocations/month, 40K GB-seconds. Authentication: unlimited users. Remote Config: unlimited. At 50K MAU with typical engagement, Rivenkeep stays well within free tier. Firebase Blaze (pay-as-you-go) kicks in only if the game goes viral — and at that point, revenue covers the cost ($25-50/month for 200K MAU).</p>
-<p><strong>Analytics event schema (Firebase Analytics — free):</strong> Server-tuning of star thresholds and the Stonwryt economy — and resolving the open balance questions (Lightning, Chain Shot) under <a href="#stats" style="color:var(--link)">Unit &amp; Structure Statistics</a> — requires instrumented events. Without them you are tuning blind. Define ~20 events with parameters, including: <code>battle_start</code> (campaign, battle, difficulty, theater); <code>battle_end</code> (result, stars, Battle Score, per-lever %, cannon types used + final HP, sorties); <code>cannon_placed</code> / <code>cannon_lost</code> (type); <code>purchase</code> and <code>ad_watch</code>; <code>stonwryt_earn</code> / <code>stonwryt_spend</code> (source/item); <code>challenge_complete</code>; <code>daily_streak_tick</code>; <code>battle_retry</code> and <code>drop_back</code> (the churn-point signal); and <code>name_submit</code> / <code>name_moderation_result</code>. This schema feeds the weekly <code>tuneStarThresholds</code> Cloud Function and the per-cannon-type win-contribution analysis the balance pass depends on.</p>
 </div>
 
 <h4>Layer 3 — Client-Side Architecture</h4>
 <div class="s">
 <div class="ct">Dart Service Layer Pattern</div>
-<p>The app accesses all backend services through a thin Dart service layer. No direct plugin/Firebase calls from game logic — all backend interaction goes through service classes (abstract interfaces + concrete implementations), so the Core/ layer stays pure and testable.</p>
+<p>The app accesses all backend services through a thin Dart service layer. No direct plugin/Firebase calls from game logic — all backend interaction goes through service classes (abstract interfaces with concrete implementations), so the Core/ logic layer stays pure and testable.</p>
 <p><strong>Service classes (Dart):</strong></p>
 <p><code>SyncService</code> — Firestore read/write for player state. Exposes <code>save(progress)</code>, <code>Future restore()</code>, <code>resolveConflict(a, b)</code>. Called at phase boundaries.</p>
 <p><code>LeaderboardService</code> — games_services wrapper. Exposes <code>submitScore(battleScore, subScores, difficulty, campaign)</code>, <code>Future fetchLeaderboard(scope)</code>. Called after every battle.</p>
@@ -4424,7 +4303,6 @@ el.innerHTML = html;
 <p><code>RaceService</code> — Firestore wrapper. Exposes <code>Future joinRace()</code>, <code>Future submitBattleScore(battleId, score)</code>, <code>Future fetchRaceStatus()</code>. Called from race UI and after battles.</p>
 <p><code>ConfigService</code> — Remote Config wrapper. Exposes <code>Future fetch()</code>, <code>value(key)</code>. Called on app launch (cached 12hr).</p>
 <p><code>AdService</code> — Google Mobile Ads wrapper. Exposes <code>showInterstitial()</code>, <code>showRewardedVideo(onReward)</code>, <code>bool isAdFree()</code>. Called at ad placement points.</p>
-<p><code>AIService</code> — hybrid language-model wrapper (see the AI Layer section). Exposes <code>Future&lt;String&gt; generate(prompt, schema)</code> routing on-device first, cloud fallback, templated baseline floor. Called off the timed loop only.</p>
 <p><strong>Offline-first:</strong> The game works fully offline. Firestore offline persistence caches data locally and syncs when connectivity returns. Leaderboard submissions queue and submit on reconnection. The player never sees a "no connection" error during gameplay — only non-critical features (Weekend Race live updates, piece name status) require real-time connectivity.</p>
 </div>
 
@@ -4435,16 +4313,16 @@ el.innerHTML = html;
 <p><strong>Phase 3 (Breadth):</strong> Add games_services leaderboards + achievements. Submit Battle Scores. Track challenges.</p>
 <p><strong>Phase 4 (Economy):</strong> Add in_app_purchase (IAP). Expand Firebase: Firestore (piece naming, race pools), Cloud Functions (name screening, race lifecycle), Remote Config (tunable values). Add Google Mobile Ads (interstitials + rewarded video).</p>
 <p><strong>Phase 5 (Polish):</strong> Add Featured Fortress submissions. Add star threshold tuning. Add purchase-verification webhook (App Store + Play notifications → Cloud Function). Load testing on both platforms.</p>
-<p><strong>Firebase Cloud Functions language:</strong> TypeScript (Node.js runtime). Each function is 20-80 lines. Total server-side code: ~500 lines across 8 functions. Deployable with <code>firebase deploy --only functions</code>. TypeScript is syntactically close to Dart (typed, async/await, classes) — a trivial context switch from the client code.</p>
+<p><strong>Firebase Cloud Functions language:</strong> TypeScript (Node.js runtime). Each function is 20-80 lines. Total server-side code: ~500 lines across 8 functions. Deployable with <code>firebase deploy --only functions</code>. TypeScript is syntactically close to Dart (typed, async/await, classes) — trivial context switch from the client code.</p>
 </div>
 <div class="s">
 <div class="ct">~18–24 Months — GDD-First, Build When Inspired</div>
 <p>This is a personal passion project, not a revenue-driven startup. The GDD is <strong>fully fleshed out before development begins</strong>. Claude assists with the entire build from the GDD. Development happens on nights and weekends when energy and motivation align — there is no deadline, no sprint, no crunch.</p>
 <p><strong>Phase 1 — Core Loop (Months 1–4):</strong> Pure-Dart Core/ layer: grid system, piece placement state machine, enclosure detection (exterior flood fill), cannon mechanics. Flutter Canvas/CustomPainter for the 2D <span class="g" data-t="map_view">Map View</span> (Build/Deploy). One Coastal map playable end-to-end. This is the "is this actually fun?" phase. If the core loop isn't fun with one map and basic pieces, nothing else matters.</p>
-<p><strong>Phase 2 — Depth (Months 5–8):</strong> All 8 piece groups functional. 3 cannon types. Troop pathfinding (weighted A*). Ship AI (grid-scoring). 3 theaters playable (Coastal, River, Forest). 5 campaigns. Save/restore + Firestore sync. This is the "vertical slice" — enough game to show someone and get feedback.</p>
-<p><strong>Phase 3 — Breadth (Months 9–14):</strong> All 10 theaters. All 32 campaigns + Boss Finale. All 11 ship types. All cannon types. 2.5D Fight rendering (Flame). 3-2-1 Map→World cinematic transition. Daily challenges. Star system + Battle Score. Tutorial. This is the bulk of content creation — the longest phase because 190 battlefields need designing.</p>
+<p><strong>Phase 2 — Depth (Months 5–8):</strong> All 8 piece groups functional. 3 cannon types. Troop pathfinding (weighted A*). Ship AI (grid-scoring). 3 theaters playable (Coastal, River, Forest). 5 campaigns. Save/restore + iCloud sync. This is the "vertical slice" — enough game to show someone and get feedback.</p>
+<p><strong>Phase 3 — Breadth (Months 9–14):</strong> All 10 theaters. All 32 campaigns + Boss Finale. All 11 ship types. All cannon types. 2.5D Fight rendering. 3-2-1 Map→World transition. Daily challenges. Star system + Battle Score. Tutorial. This is the bulk of content creation — the longest phase because 190 battlefields need designing.</p>
 <p><strong>Phase 4 — Economy &amp; Social (Months 15–18):</strong> Stonwryt economy. Challenges (182). Leaderboards. Weekend Race. Piece naming system. Monetization (in_app_purchase, ads). Featured Fortresses. Camera Roll replay export.</p>
-<p><strong>Phase 5 — Polish (Months 19–22):</strong> Performance optimization. Accessibility pass. Sound design. Settings screen. Lore integration (progressive revelation). Art polish — AI-generated sprites curated and cleaned. Game Center + Play Games integration.</p>
+<p><strong>Phase 5 — Polish (Months 19–22):</strong> Performance optimization. Accessibility pass. Sound design. Settings screen. Lore integration (progressive revelation). Art polish — AI-generated sprites curated and cleaned. Game Center integration.</p>
 <p><strong>Phase 6 — Ship (Months 23–24):</strong> TestFlight beta. Bug fixes. App Store submission. Marketing assets (screenshots, preview video, App Store description). Soft launch if desired.</p>
 <p><strong>Reality check:</strong> Solo development on a game this complex will take longer than planned. The 18–24 month estimate assumes consistent 10–15 hours/week. Gaps are expected — life, work, and burnout happen. The GDD exists so that when Jack returns after a break, the design is fully documented and development can resume without rediscovery.</p>
 <p><strong>Team:</strong> 1 developer (Jack), AI-assisted development (Claude), AI-generated art (Midjourney/Scenario.gg + human curation). Contract artist for final sprite polish if needed. No employees. No investors. No pressure.</p>
@@ -4468,12 +4346,6 @@ el.innerHTML = html;
 <p><strong>Reduced Motion:</strong> Setting that disables particle effects, shortens phase transition animations, replaces the 2D→2.5D camera transition with a fade, and reduces cannon fire visual intensity. Required by Apple's Human Interface Guidelines.</p>
 <p><strong>Dynamic Type:</strong> All non-gameplay text (menus, settings, store, campaign cards, popup text) scales with the system Dynamic Type setting. In-game grid text (labels, HP bars) uses fixed sizes for readability.</p>
 <p><strong>Colorblind modes:</strong> Already specified in Settings — Protanopia, Deuteranopia, Tritanopia adjustments. High Contrast mode increases border thickness and brightens text.</p>
-</div>
-
-<h3>Privacy &amp; Data Policy</h3>
-<div class="s">
-<div class="ct">Pre-Submission Requirement — Close Before First External TestFlight</div>
-<p>Rivenkeep collects: Game Center ID, region, purchase history, custom piece names (user-generated content), Featured Fortress screenshots, and gameplay analytics. Both stores <strong>require</strong> a privacy disclosure at submission — Apple's App Privacy "nutrition label" and Google Play's Data Safety form. The <a href="#production" style="color:var(--link)">Backend Architecture</a> defines where data flows (Firestore, Firebase, plus the AI cloud-fallback tier) but the user-facing policy must still be written. <strong>Action items (before the first external test build on either platform):</strong> publish a privacy policy (including the AI cloud-fallback disclosure); implement an account data-export and data-delete path (GDPR/CCPA right-to-delete) from Firestore; complete Apple's App Privacy questionnaire AND Google Play's Data Safety form; surface a consent/notice flow on first launch for analytics. User-generated piece names are covered by the AI + community moderation pipeline (see <a href="#nicknames" style="color:var(--link)">Piece Naming</a>).</p>
 </div>
 
 <h3>App Store Listing Strategy</h3>

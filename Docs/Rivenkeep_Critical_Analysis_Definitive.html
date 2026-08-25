@@ -52,8 +52,8 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <body>
 <header>
 <h1>Critical Analysis — Definitive</h1>
-<div class="sub">Rivenkeep GDD v6.2.4 — The Final Honest Assessment</div>
-<div class="meta">Generated 2026-05-31 • Re-checked against GDD v6.2.4 • Merges Critical Analysis v1–v5 • Resolved items logged below • 16 open items remain (several now documented in the GDD)</div>
+<div class="sub">Rivenkeep GDD v6.3.0 — The Final Honest Assessment</div>
+<div class="meta">Generated 2026-05-31 • Re-checked against GDD v6.3.0 • Merges Critical Analysis v1–v5 • Resolved items logged below • 16 open items remain (several now documented in the GDD)</div>
 </header>
 <nav>
 <a href="#verdict">Verdict</a>
@@ -68,9 +68,10 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 
 <section id="verdict">
 <h2>The Verdict</h2>
-<p>This is the <strong>definitive critical analysis</strong> of Rivenkeep, merging every issue raised across five prior analysis passes (v1 through v5) and re-checking each against GDD v6.2.4. <strong>Resolved items have been removed</strong> from the active lists and logged at the bottom for the record.</p>
+<p>This is the <strong>definitive critical analysis</strong> of Rivenkeep, merging every issue raised across five prior analysis passes (v1 through v5) and re-checking each against GDD v6.3.0. <strong>Resolved items have been removed</strong> from the active lists and logged at the bottom for the record.</p>
 <p><strong>v6.2.0 note:</strong> a full fresh-eyes pass reconciled several internal contradictions present in v6.1.0 — the Build-timer spec (two conflicting formulas), the "destroy all ships" vs. enclosure-only victory wording, the "ships cannot damage castles" prose vs. the rule that they can after a breach, and an obsolete walls/time star formula that contradicted the canonical 3-lever system. The document was also reorganized (Wind moved to Build, the enemy cast moved ahead of the Fight mechanics, the one-section "Castles" part dissolved into Combat, Loss & Replay moved to Progression). Several open items below are now <span class="green">documented in the GDD</span> (annotated inline) even though they remain genuinely open work. <strong>v6.2.1</strong> additionally relocated the player-selectable Difficulty Levels from the Overview to Part VI Progression (beside Difficulty Layers), reconciled the Chain Shot eDPS figure (BAL-2), and fixed two minor consistency nits. <strong>v6.2.2</strong> corrected two section header colors (Wall Storage → Progression orange, Future Release Framework → Economy &amp; Meta pink).</p>
-<p>The GDD v6.2.4 is, bluntly, <strong>one of the most complete indie game design documents in existence</strong> — ~4,650 lines, 84 glossary terms, every core system specified to algorithm level, a fair monetization model, a thoughtful psychological foundation, and a full backend architecture. Across the analysis history, <strong>62 of 78 raised issues have been resolved.</strong></p>
+<p><strong>v6.3.0 note (framework pivot):</strong> the build stack changed to Flutter + Dart + Flame, cross-platform iOS + Android. This only touched infrastructure/privacy items — INFRA-1 (backend now cross-platform game services + Firebase), INFRA-2 (Firestore sync schema, was iCloud/CloudKit), and POL-1 (both stores' data-safety forms + AI cloud-fallback disclosure) have been updated accordingly. The AI layer became a three-tier hybrid with cloud backstop for features 1/3/6 only. <strong>Every balance and flow item below (BAL, FLOW) is engine-agnostic and unchanged</strong> — they live in the pure-logic Core, which ports across engines untouched.</p>
+<p>The GDD v6.3.0 is, bluntly, <strong>one of the most complete indie game design documents in existence</strong> — ~4,730 lines, 84 glossary terms, every core system specified to algorithm level, a fair monetization model, a thoughtful psychological foundation, and a full backend architecture. Across the analysis history, <strong>62 of 78 raised issues have been resolved.</strong></p>
 <p>What remains is honest and worth stating plainly: <strong>two genuine balance risks</strong> that can only be settled by playtesting, <strong>two flow concerns</strong> about early-game pacing, <strong>three policy/compliance gaps</strong> that must be closed before App Store submission, <strong>one discovery feature</strong> worth considering, and <strong>ten infrastructure tasks</strong> that are the real work of turning this document into a shipped game. None of these are design flaws. They are the known unknowns of an ambitious solo project.</p>
 <div class="sr">
 <div class="sb"><div class="sn" style="color:var(--danger)">2</div><div class="sl">Balance Open</div></div>
@@ -109,7 +110,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <p>These three items are not gameplay issues — they are App Store requirements and operational policies that have never been specified. They will block submission or create legal exposure if ignored.</p>
 
 <div class="item cat-policy"><div class="title"><span class="tag tag-policy">POL-1</span> Privacy &amp; Data Policy (was P3-6)</div>
-<div class="body">The game collects: Game Center ID, region, purchase history, custom piece names (user-generated content), Featured Fortress screenshots, and analytics. Apple <strong>requires</strong> a privacy policy URL and a completed App Privacy "nutrition label" at submission. The GDD specifies what data flows where (CloudKit, Firebase) but not the user-facing privacy policy, consent flow, or data-deletion mechanism (GDPR/CCPA right-to-delete). <strong>Action:</strong> Write a privacy policy. Implement account-data export/delete. Complete Apple's privacy questionnaire. Required before first TestFlight external build. <span class="green">✎ v6.2.0: skeleton folded into the GDD → Production → “Privacy &amp; Data Policy.”</span></div></div>
+<div class="body">The game collects: Game Center ID, region, purchase history, custom piece names (user-generated content), Featured Fortress screenshots, and analytics. Both stores <strong>require</strong> a privacy disclosure at submission — Apple's App Privacy "nutrition label" and Google Play's Data Safety form. The GDD specifies what data flows where (Firestore, Firebase, plus the AI cloud-fallback tier) but not the user-facing privacy policy, consent flow, or data-deletion mechanism (GDPR/CCPA right-to-delete). <strong>Action:</strong> Write a privacy policy (including the AI cloud-fallback disclosure). Implement account-data export/delete from Firestore. Complete Apple's App Privacy questionnaire AND Google Play's Data Safety form. Required before first external test build on either platform. <span class="green">✎ v6.2.0: skeleton folded into the GDD → Production → “Privacy &amp; Data Policy.”</span></div></div>
 
 <div class="item cat-policy"><div class="title"><span class="tag tag-policy">POL-2</span> Push Notification Strategy (was P3-7)</div>
 <div class="body">The game has natural notification hooks (daily challenge reset, streak-about-to-break, Weekend Race ending soon, challenge package ready to open, piece name approved/rejected). But none are specified, and notification permission timing/copy is undefined. Over-notifying causes uninstalls; under-notifying loses the retention value. <strong>Action:</strong> Define the notification taxonomy (which events, what copy, what frequency cap), the permission-request timing (after first ★★★, not on launch), and a settings toggle per category. Maps to the existing Settings Menu section. <span class="green">✎ v6.2.0: folded into the GDD → Settings → “Notification Strategy” + a Notifications settings row.</span></div></div>
@@ -133,10 +134,10 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <p>These ten items are not bugs or design gaps — they are the content-production and engineering tasks that turn a complete GDD into a shipped game. They remain as a permanent checklist for the development phase. This is, honestly, where the multi-year effort actually lives.</p>
 
 <div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-1</span> Server Architecture</div>
-<div class="body"><span class="green">Largely specified in v6.0.0's Backend Architecture section</span> (CloudKit + GameKit + Firebase). Remaining work: actually building the 8 Cloud Functions, defining Firestore security rules, and load-testing Weekend Race matchmaking at scale.</div></div>
+<div class="body"><span class="green">Largely specified in the v6.3.0 Backend Architecture section</span> (cross-platform games_services + in_app_purchase + Firebase). Remaining work: building the 8 Cloud Functions, defining Firestore security rules, mirroring leaderboard/achievement IDs across Game Center + Play Games, and load-testing Weekend Race matchmaking at scale.</div></div>
 
-<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-2</span> iCloud Sync Data Schema</div>
-<div class="body">The 7 CloudKit record types are named, but the field-level schema, conflict-resolution strategy, and migration plan for schema changes across app updates need full specification before save/restore is built.</div></div>
+<div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-2</span> Firestore Sync Data Schema</div>
+<div class="body">The 7 player-state record types are named, but the Firestore field-level schema, conflict-resolution strategy, and migration plan across app updates need full specification before save/restore is built. Firestore is the single cross-device store on both platforms.</div></div>
 
 <div class="item cat-infra"><div class="title"><span class="tag tag-infra">INFRA-3</span> Cannon Carry vs Determinism (marketing nuance)</div>
 <div class="body">Cannon HP carry means "every battle is identical for every player" is only true for the first battle of each campaign. The marketing claim needs the honest framing: "same starting conditions = same outcome." Not a code issue — a messaging precision issue for the App Store listing. <span class="green">✎ v6.2.0: caveat folded into the GDD → Design Philosophy (Deterministic Puzzles).</span></div></div>
@@ -165,7 +166,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 
 <section id="resolved">
 <h2 class="green">Resolved Log — For the Record (62 Items)</h2>
-<p>Every issue raised across analyses v1–v5 that GDD v6.2.4 has resolved. Kept here so no concern is ever silently dropped.</p>
+<p>Every issue raised across analyses v1–v5 that GDD v6.3.0 has resolved. Kept here so no concern is ever silently dropped.</p>
 
 <h3 class="green">Virality (8/8 resolved)</h3>
 <p class="green">✅ V-1 Challenge a Friend (deep links) · V-2 9:16 vertical replay export · V-3 Defeat sharing + near-miss data · V-4 Social proof (Featured Fortresses) · V-5 ★★★! frequency targeted (1 per 15–20 battles) · V-6 Seasonal events (Winter Siege skeleton + quarterly plan) · V-7 Piece naming system (full social layer) · V-8 → moved to FUT-1 (spectator)</p>
@@ -191,7 +192,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 
 </div>
 <footer>
-Rivenkeep Critical Analysis (Definitive) — GDD v6.2.4 — 78 total issues across v1–v5 · 62 resolved · 16 open<br>
+Rivenkeep Critical Analysis (Definitive) — GDD v6.3.0 — 78 total issues across v1–v5 · 62 resolved · 16 open<br>
 Open: BAL-1 (Lightning), BAL-2 (Chain Shot), FLOW-1 (Deploy), FLOW-2 (Fight), POL-1 (Privacy), POL-2 (Notifications), POL-3 (Analytics), FUT-1 (Spectator), FUT-2 (Endless), INFRA-1–10<br>
 This is the definitive analysis. All prior analysis documents are superseded.
 </footer>
