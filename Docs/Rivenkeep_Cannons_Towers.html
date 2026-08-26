@@ -47,7 +47,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <header>
 <h1>Rivenkeep — Cannon &amp; Tower Design</h1>
 <div class="sub">The Defender's Combat Model · Commander, Not Soldier</div>
-<div class="meta">v1.3.0 · Module of the GDD (v6.2.4) · Source of truth for cannons, groups, Areas of Responsibility &amp; towers · Companion docs planned: Ships, Troops</div>
+<div class="meta">v1.9.1 · Module of the GDD (v6.2.5) · Source of truth for cannons, groups, Areas of Responsibility &amp; towers · Companion docs planned: Ships, Troops</div>
 </header>
 
 <nav>
@@ -59,10 +59,9 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <a href="#firepower">Firepower</a>
 <a href="#verbs">Fight Verbs</a>
 <a href="#levers">Levers</a>
+<a href="#nurture">Health</a>
 <a href="#archetypes">Archetypes</a>
 <a href="#towers">Towers</a>
-<a href="#minigames">Mini-Games</a>
-<a href="#mastery">Mastery Loop</a>
 <a href="#future">Future</a>
 <a href="#open">Open Questions</a>
 </nav>
@@ -103,26 +102,39 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 
 <section id="groups">
 <h2><span class="n">3</span>Groups &amp; Areas of Responsibility</h2>
-<p><strong>Cannons that touch <em>side by side</em> (orthogonally) during Deploy become a group.</strong> A group is commanded as one unit and owns a single <strong>Area of Responsibility (AoR)</strong> — always a <strong>circle</strong> — and its crews auto-fire at anything inside it (holding fire when it is empty). Grouping is a <strong>Deploy-phase decision only</strong> — no merging or splitting during the Fight. You live with your plan.</p>
+<p><strong>Cannons and towers are 2×2 footprints. Two pieces that touch <em>side by side</em> — sharing at least one cell-edge (not just a corner) — form a group.</strong> A group is commanded as one unit and owns a single <strong>Area of Responsibility (AoR)</strong> — always a <strong>circle</strong> — and its crews auto-fire at anything inside it (holding fire when it is empty). Grouping is a <strong>Deploy-phase decision only</strong> — no merging or splitting during the Fight. You live with your plan.</p>
 <ul>
-<li><strong>Adjacency is orthogonal, not diagonal.</strong> Two cannons touching edge-to-edge group up. Two cannons touching only at a <em>corner</em> (pure diagonal) do <strong>not</strong> — until a third cannon touches both of them, at which point all three snap into one group. This lets fort shape, not just proximity, decide grouping.</li>
-<li><strong>One active tower per group (last-moved wins).</strong> If two towers end up touching the same group, only the <strong>most-recently-placed/moved</strong> tower connects; the other(s) <strong>gray out with an icon</strong> showing they're inactive. Move the winner away and a grayed tower can take over. No stacking tower effects.</li>
+<li><strong>Adjacency is orthogonal, not diagonal.</strong> Because pieces are 2×2, only <em>one</em> cell-edge needs to touch — the footprints can sit offset. Pieces touching only at a <em>corner</em> (pure diagonal) do <strong>not</strong> group, until a third piece bridges both, at which point all three snap into one group. Fort shape, not just proximity, decides grouping.</li>
+<li><strong>A tower touches exactly one group.</strong> If a tower ends up touching <em>two</em> groups, those groups <strong>fuse into one big group</strong> — the tower is a bridge, exactly like a bridging cannon. This holds <em>even if that tower is grayed out</em> (physical touch merges groups; active/inactive only decides whose buff applies).</li>
+<li><strong>Multiple towers, one active — a priority stack for resilience.</strong> A group may hold <em>several</em> towers; only the <strong>#1</strong> is active, the rest sit grayed as backups. Order is set in Deploy by <strong>last-tap</strong>: placing or tapping a tower makes it #1 and pushes the old #1 down to #2, and so on. Because towers are destructible and enemies target them, this is <strong>insurance</strong> — snipe the active tower and the next auto-promotes, so a key group's buff isn't a single point of failure. The cost is honest: extra towers eat fort space and barrels. (Only one buff applies at a time — no stacking.)</li>
 <li><strong>More cannons → BIGGER AoR <em>and</em> more firepower.</strong> Each cannon contributes area (~1→base, 2→2×, 3→3×; exact scaling TBD) and every cannon can fire at anything in the zone — so a bigger group both sees wider and hits harder. Grouping is genuinely advantageous.</li>
-<li><strong>Lone Wolf cannons are the exception.</strong> They <em>shrink</em> a mixed group's AoR (antisocial), so they want to be alone. Two Lone Wolves <em>can</em> group together, but their <strong>AoR size does not grow</strong> — instead their accuracy tightens (see Falloff). Lone Wolves trade coverage for reliability.</li>
-<li><strong>A lone cannon is just a group of one</strong> — so "solo vs cluster" and "group vs AoR" are one system, not two.</li>
+<li><strong>Big groups get more from one tower.</strong> A tower buffs the <em>whole</em> group, so the single 2×2 tower slot pays off across every cannon in a large group — another reason to consolidate. (The counterweight is the spatial/shape tension below.)</li>
+<li><strong>Lone Wolf cannons are the exception.</strong> They <em>shrink</em> a mixed group's AoR (antisocial), so they want to be alone. Two Lone Wolves <em>can</em> group, but their <strong>AoR size does not grow</strong> — their accuracy tightens instead (see Falloff). Lone Wolves trade coverage for reliability.</li>
+<li><strong>A lone cannon is just a group of one</strong> — so "solo vs cluster" and "group vs AoR" are one system.</li>
+<li><strong>Placement — the one terrain rule.</strong> A cannon's 2×2 footprint needs solid open ground; it <strong>cannot sit on a fragile grid</strong> (ice, crust, crag, bog, fissure, fract) — cannons are too heavy, the ground won't bear the weight and recoil. This is a property of the <em>terrain</em>, not the cannon: no cannon type is ever locked out of a board, some ground just can't hold a gun. (This is the only placement constraint — otherwise every cannon plays every board.)</li>
 </ul>
 <div class="s"><div class="ct">The core tension (revised)</div><p>Grouping grows coverage <em>and</em> firepower, so the trade is not "wide vs hard." It runs on three axes at once: <strong>(1) Domain</strong> — one big group loads a single domain; splitting lets you run Sea here and Air there. <strong>(2) Direction</strong> — one big zone answers one approach; several zones answer several. <strong>(3) Shape (spatial tension)</strong> — because every AoR is a <em>circle</em>, a few big circles leave scalloped gaps along a straight coastline and waste coverage out to sea, whereas a <em>line of smaller overlapping circles</em> hugs the shore as a clean defensive wall. So big groups win on raw density; small groups win on fit. The deterministic fleet punishes whichever balance you chose wrong.</p></div>
 </section>
 
 <section id="falloff">
 <h2><span class="n">4</span>AoR Accuracy Falloff</h2>
-<p>Hit chance is highest at the centre of an AoR and falls off <strong>linearly</strong> to the edge:</p>
-<p style="text-align:center;font-family:'IBM Plex Mono',monospace;font-size:1rem;color:var(--gold);background:var(--surface);padding:12px;border-radius:6px">P(hit) = 100% − 75% × (distance ÷ radius)</p>
-<p>Dead centre every cannon hits <strong>100%</strong> of the time; at the very edge, <strong>25%</strong>. So a 4-cannon group firing at a ship on its fringe lands, on average, <strong>one</strong> hit. Push the ship toward the centre and all four connect. You <em>want</em> the threat in your core — which is exactly why you place carefully in Deploy and rarely need to move in the Fight. <strong>Overlap the fringes</strong> of neighbouring circles and a seam ship is fired on by both groups, restoring good odds — the intended Deploy fix, not a Fight scramble.</p>
-<h3>Lone Wolves fall off differently — tight, not soft</h3>
-<p>A Lone Wolf's zone does not grow with company, so it compensates with <strong>accuracy</strong>: it falls off from <strong>100% centre to only 60% at the edge</strong> (versus 25% for a normal cannon) — a small but <em>reliable</em> circle. Group <strong>two</strong> Lone Wolves and the edge climbs to <strong>90%</strong> (the AoR stays the same size). So Lone Wolves are the precision answer: where a normal group gives a big, soft-edged zone, a Lone Wolf pair gives a small circle that hits nearly everything inside it. Different tool, different shape.</p>
+<p>Hit chance is highest at the centre of an AoR and falls off <strong>linearly</strong> to an edge floor <em>F</em>:</p>
+<p style="text-align:center;font-family:'IBM Plex Mono',monospace;font-size:1rem;color:var(--gold);background:var(--surface);padding:12px;border-radius:6px">P(hit) = 100% − (100% − F) × (distance ÷ radius)</p>
+<p>For a plain, uncoordinated cannon the floor is <strong>F = 25%</strong>: dead centre it hits 100%, at the very edge 25%, so a 4-cannon group firing at a ship on its fringe lands, on average, <strong>one</strong> hit. Push the ship toward the centre and all four connect. You <em>want</em> the threat in your core — which is why you place carefully in Deploy and rarely need to move in the Fight.</p>
+<h3>Coordination — one stat, expressed as a bigger bright core</h3>
+<p>The edge floor is not a fixed number; it rises with a single quantity, <strong>Coordination</strong>. Everything that used to be a separate "bonus" is now the same stat at a different value:</p>
+<p style="text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.95rem;color:var(--gold);background:var(--surface);padding:12px;border-radius:6px">F = 25% + 15% × (coordination), soft-capped below 100%</p>
+<table>
+<tr><th>Situation</th><th>Coordination</th><th>Edge floor F</th></tr>
+<tr><td>Mixed group (no same-type partner)</td><td>0</td><td>~25%</td></tr>
+<tr><td>Pure same-type group (each cannon has a partner)</td><td>~1</td><td>~40%</td></tr>
+<tr><td>Lone Wolf (precision baked in)</td><td>~2.3</td><td>~60%</td></tr>
+<tr><td>Two Lone Wolves grouped</td><td>~4.3</td><td>~90%</td></tr>
+</table>
+<p>So the old Battery bonus, the pure-group bonus, and the Lone Wolf's tight falloff are no longer three rules — they are <strong>one line with different inputs</strong>. A bigger pure battery just has more coordinating partners, so its floor rises for free (no new number to tune), still counterweighted by the domain-lock and circle-fit tensions. Numbers to balance, but the <em>shape</em> is the point: one generating stat, not a ladder of exceptions.</p>
+<div class="s"><div class="ct">Express it as a growing core, not a higher edge number</div><p>Same math, better feel: instead of showing the player "your edge is 40% not 25%," render Coordination as a <strong>larger high-accuracy centre</strong> — a disciplined group's bright core visibly <em>bulges outward</em>, and only the thin rim is chancy. This is the more elegant framing and the more legible one: the player <em>sees</em> coordination paying off in the size of the reliable zone, rather than experiencing invisible better-odds. It directly answers the "will anyone perceive the probability?" risk.</p></div>
 <h3>Overlap stacks the fringes</h3>
-<p>Where two AoRs overlap, a ship at the shared edge is inside <em>both</em> groups' fringes and is fired on by both at ~25% each — doubling the barrels and restoring good odds at the seam. <strong>Overlap is the deliberate cure for edge-weakness</strong>, and it is a Deploy decision, not a Fight scramble.</p>
+<p>Where two AoRs overlap, a ship at the shared edge sits in <em>both</em> groups' rims and is fired on by both — stacking the barrels and restoring good odds at the seam. <strong>Overlap is the deliberate cure for edge-weakness</strong>, and it is a Deploy decision, not a Fight scramble.</p>
 <figure>
 <svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:560px">
 <defs>
@@ -158,6 +170,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <h2><span class="n">5</span>Firepower Model — Probabilistic, Not Assigned</h2>
 <p>A group does <strong>not</strong> lock onto one target and does not have to concentrate fire. Each cannon independently fires at something in the AoR (per its <a href="#levers">target personality</a>). So firepower is a matter of <em>odds</em>: more barrels in a zone means more shots in the water each tick, which means a higher chance any given ship goes down before it reaches the wall.</p>
 <ul>
+<li><strong>Cannons prefer the shot most likely to land.</strong> When several targets sit in the AoR, a crew's default is to fire at the one with the <strong>highest hit probability</strong> — i.e. whatever is nearest the centre — over a low-odds target out at the fringe. (Special <a href="#archetypes">target-personality</a> archetypes override this: the Marksman chases the highest-<em>value</em> threat, the Interdictor the enemy nearest your wall, the Finisher the lowest-HP one.) This default also rewards <a href="#verbs">hold-fire</a>: let a ship reach your centre and it becomes both the high-% shot <em>and</em> the preferred one.</li>
 <li><strong>Overkill is wasted</strong> — piling cannons on a lone target is inefficient, which naturally discourages over-stacking without any artificial group cap.</li>
 <li><strong>A group need not always be hitting</strong>, or hitting the same ship — a big group simply makes it <em>likely</em> that things in its AoR die fast.</li>
 <li><strong>Immediate engagement:</strong> the instant a ship enters an AoR, the whole group opens fire. Idle guns read as <em>coiled</em>: their muzzles slowly, randomly <strong>sweep the horizon searching</strong> for targets — then the moment a ship enters the zone, every barrel <strong>snaps to the same bearing in unison</strong>. Searching, then a coordinated lock, sells "ready and hunting," never "asleep or broken."</li>
@@ -166,36 +179,39 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <p>Some theaters hide the fleet in fog. If a group can't <em>see</em> the ships in its AoR, how does it fire? Proposed resolution (needs prototyping; the fog-bearing theaters live in the Ships doc):</p>
 <ul>
 <li><strong>Speculative fire.</strong> A group whose zone holds an unseen contact fires <strong>blind into the AoR</strong> — suppressing fire at a heavy accuracy penalty. It is deliberately wasteful: you are hunting, not sniping.</li>
-<li><strong>A blind hit reveals.</strong> The moment a speculative shot connects, that ship is <strong>lit up</strong>, the penalty drops, and the group <strong>concentrates</strong> on the revealed target (and any others now visible) at normal falloff. Blind bombardment → contact → focus fire.</li>
+<li><strong>A hit <em>or</em> a near miss reveals.</strong> When a speculative shot connects <em>or</em> lands close, that ship is <strong>lit up</strong>, the penalty drops, and the group <strong>concentrates</strong> on it (and anything else now visible) at normal falloff. Blind bombardment → contact → focus fire.</li>
+<li><strong>Every shot thins the fog a little</strong>, and <strong>a ship that fires reveals itself</strong> for a short time (its muzzle flash gives it away). So the fog naturally burns off as the engagement heats up — it's an opening-moments condition, not a permanent blindfold.</li>
 <li><strong>Reveal tools skip the blind phase.</strong> The <a href="#towers">Spotter</a> (passive fog-lift) and the new <strong>Flare tower</strong> (pulses illumination over the whole AoR) reveal ships <em>before</em> you waste shots — turning a fog zone back into a normal one. This is what makes those towers precious in fog theaters.</li>
 <li><strong>Interactions.</strong> Fog blunts the <a href="#archetypes">Marksman</a> (it can't pick the highest-value threat it can't see — until a reveal); and <a href="#verbs">hold-fire</a> in fog means "don't burn ammo blind — wait for a reveal, then strike." Fog turns information into the scarce resource.</li>
 </ul>
-<div class="s warn"><div class="ct">Open</div><p>This is a proposal, not a lock. Key tuning: how harsh the blind penalty is, whether revealed ships stay lit for a duration or only while in a reveal zone, and whether blind fire should be allowed at all in the very early game (probably not — introduce fog later). Settle against the fog theaters when we build the Ships doc.</p></div>
+<div class="s warn"><div class="ct">Open</div><p>This is a proposal, not a lock. Key tuning: how harsh the blind penalty is, how long a reveal (by hit, near-miss, or enemy fire) lasts, how much each shot thins the fog, and whether blind fire is allowed at all in the very early game (probably not — introduce fog later). Settle against the fog theaters when we build the Ships doc.</p></div>
 </section>
 
 <section id="verbs">
 <h2><span class="n">6</span>The Fight-Phase Verbs</h2>
-<p>Auto-fire runs your plan on its own. When it breaks you have <strong>three group command-verbs</strong> — re-task the AoR, switch domain, and fire-control — plus a separate <strong>Abilities</strong> spend. The two <em>positional</em> verbs cost <strong>silent time</strong> (the group can't fire while it happens), but both can be <strong>cancelled mid-cooldown</strong>, aborting the change and snapping the guns <strong>instantly back online</strong> in their previous state — so the cost is only paid if you <em>complete</em> the change. The two also <strong>stack</strong> (a group can re-task and switch domain at once: doubly silent, doubly committed).</p>
+<p>Auto-fire runs your plan on its own. When it breaks you have <strong>three group command-verbs</strong> — re-task the AoR, switch domain, and fire-control. The two <em>positional</em> verbs cost <strong>silent time</strong> (the group can't fire while it happens). Both can be <strong>cancelled</strong>, but they cancel differently: an AoR move just <em>stops</em> (aiming is free to abandon), while a domain switch has to be <em>un-done</em> — the ammo has to come back out (see below). The two also <strong>stack</strong> (a group can re-task and switch domain at once: doubly silent, doubly committed).</p>
 <h3>A · Re-task the AoR</h3>
 <ul>
 <li><strong>Hold-and-drag</strong> the group's zone to new ground. A <strong>soft-lock holds until you lift your finger</strong>, so you can carefully place a big lazy move.</li>
 <li><strong>Cooldown scales with move distance</strong> — small nudges are cheap; hauling coverage from the east flank to the west is a long silent gap and a real gamble (you uncover the east to cover the west).</li>
 <li>The group and its AoR <strong>desaturate</strong> during the move.</li>
+<li><strong>Cancel is instant</strong> — let go / tap away and the guns simply resume from wherever the zone currently sits. Aiming costs nothing to abandon (unlike a domain switch, which must be un-loaded).</li>
 </ul>
 <h3>B · Switch domain (load new ammo)</h3>
 <ul>
-<li><strong>Per group, whole group switches together.</strong> Crews clear the old ammo and load the new — <strong>no cannon in the group fires</strong> during the reload.</li>
-<li>Deliberately <strong>expensive</strong>, and <strong>restartable</strong>: change your mind mid-reload and the timer resets from full. Indecision is punished — commit to your read.</li>
-<li>A <strong>countdown renders over the group</strong> and the group + AoR desaturate while offline. This is <em>panic mode</em>: you use it when a threat you can see coming (e.g. bombers launched from the back rank, visibly crossing the map) is about to enter a zone loaded for the wrong domain.</li>
+<li><strong>Per group, whole group switches together.</strong> Crews clear the old ammo and load the new — <strong>no cannon in the group fires</strong> during the reload. A <strong>countdown renders over the group</strong> and the group + AoR desaturate while offline. This is <em>panic mode</em>: used when a threat you can see coming (bombers launched from the back rank, visibly crossing the map) is about to enter a zone loaded for the wrong domain.</li>
+<li><strong>Cancel <em>reverses</em> the counter — it does not snap back.</strong> The ammo already pulled has to be re-seated, so cancelling counts the meter <em>back up</em> before the guns fire again. On an 8-count, cancel at 6-remaining and it climbs 6→8 then fires (in the original domain); cancel at 2-remaining and it must climb 2→3→4…→8 first. Bailing late is expensive — so a switch is a real commitment, not a free feint. (This is a stronger version of the old "restartable" rule: adaptation always has a price.)</li>
+<li><strong>Land → Sea, then you want Air?</strong> Switching to a <em>third</em> domain mid-reload takes the <strong>longer of the two paths</strong>: the meter either keeps counting <em>down</em> to 0 or reverses <em>up</em> to 8 — whichever is farther — and the new (third) domain loads when it arrives. Early in the reload (say 6 of 8 left) the down-path is longer, so it rides down to 0 and loads Air; late (3 left) the up-path is longer, so it climbs back to 8 first. A third-domain change is therefore always the <em>most</em> expensive move available — you can never shortcut indecision. (Re-selecting your <em>original</em> domain is still the plain reverse — cancel, above.)</li>
 <li>The <a href="#towers">Forge tower</a> reduces both this and the fire-reload cooldown.</li>
-<li><strong>Cancel any time → immediate fire.</strong> Abort a domain switch (or an AoR move) mid-cooldown and the crews drop what they're doing and re-engage instantly in their old state. Only a completed change costs you the full silent window.</li>
 </ul>
+<div class="s"><div class="ct">UI concept (not final)</div><p>Show the switch as a two-ended <strong>slider between domain icons</strong>: Land / Sea / Air each own a colour + icon, one at each end of the track, with a marker that travels between them and a <strong>tray that fills with the colour of the domain being loaded</strong>. A normal switch slides the marker from the current icon to the target icon; <strong>cancel slides it back</strong> the other way. A <strong>third-domain pick relabels the end the marker is heading toward</strong> (the far end of the longer path) with the new icon + colour — so the destination always shows where you'll end up, which makes the up-vs-down travel read as purposeful instead of arbitrary.</p></div>
+<div class="s warn"><div class="ct">Honest flag</div><p>Reverse-on-cancel plus longer-path-on-third-domain makes fiddling with domains <em>punishing</em> — total silent time can balloon if you flip-flop. That's intended (it enforces "commit to your read"), but it's exactly why domain should normally be <strong>set in Deploy</strong> and switched only for a telegraphed threat. And because the meter sometimes travels up and sometimes down for the same "switch to Air" tap, the countdown UI has to make that direction — and its cost — unmistakably <em>legible</em>, or it reads as arbitrary. Tune only after it's clear.</p></div>
 <h3>C · Fire control — hold / weapons-free</h3>
 <p>A per-group toggle between <strong>weapons-free</strong> (fire the instant anything enters the zone — the default) and <strong>hold fire</strong> (wait, and only open up when you say, or when a ship reaches the high-accuracy centre). This exists because of an enemy behaviour: <strong>a ship that gets hit performs a "crazy Ivan"</strong> — a sharp evasive juke that throws off the next incoming shots. (The manoeuvre is a ship trait, detailed in the Ships doc.)</p>
 <div class="s"><div class="ct">Why this is the strongest of the three verbs</div><p>Fire-control ties three systems into one decision. Because of <a href="#falloff">falloff</a>, a shot at the <em>centre</em> of the zone lands far more reliably than one at the edge; because of the crazy Ivan, your <em>first</em> volley is your cleanest one before the ship starts juking. So <strong>holding fire until the ship reaches your centre, then unloading a coordinated alpha strike, can out-damage firing early and chasing an evading target.</strong> Fire early = chip damage but you trigger evasion and shoot at edge odds; hold = a big, high-percentage opening salvo, at the risk the ship damages your wall or slips through while you wait. Pure commander timing — no aiming — and it finally makes the falloff gradient something you actively <em>play</em>, not just place around.</p></div>
-<h3>Abilities — cannon-focused Stonwryt boosts</h3>
-<p>Separate from the command verbs: spend <strong>Stonwryts mid-battle to boost your cannons</strong> at the right instant — overcharge a group's damage, force a rapid-reload, a one-off barrage. <strong>Cannon-focused only</strong> (they buff the guns, not walls or economy), and naturally occasional because currency is finite — so they punctuate a crisis rather than becoming constant micro.</p>
-<div class="s warn"><div class="ct">Honest flag: watch the verb load</div><p>That is now three command-verbs (AoR / domain / fire-control) plus Abilities. Each is simple, but together they approach the ceiling of a "watch and nudge" Fight — the plate-spinning we deliberately designed <em>out</em>. Mitigation: fire-control and domain are usually <strong>set in Deploy</strong> and only touched in a crisis; Abilities are rare by cost. If prototyping shows the Fight feels busy, the first cut is to demote a verb to a Deploy-only standing order. Do not add a fourth live verb.</p></div>
+<h3>Abilities — moved to Future</h3>
+<p>A cannon-focused Stonwryt-boost verb was considered as a third live action but <strong>parked to protect the verb budget</strong> (see Future). The Fight keeps <strong>three command-verbs only</strong>.</p>
+<div class="s"><div class="ct">Honest flag: guard the verb budget</div><p>Three command-verbs (AoR / domain / fire-control) is the ceiling for a "watch and nudge" Fight — the plate-spinning we deliberately designed <em>out</em>. It stays comfortable because <strong>two of the three (domain and fire-control) are normally set in Deploy</strong> and only touched in a crisis, leaving AoR re-tasking as the main live action. This is exactly why Abilities was pushed to Future: <strong>do not add a fourth live verb.</strong></p></div>
 <div class="s"><div class="ct">Set it in Deploy, adapt in the Fight</div><p>Each group's starting <strong>domain, AoR, and fire-control stance are set during Deploy</strong>. A well-scouted commander walks in already loaded and stanced for the right threat on the right approach; changing mid-fight is the exception, not the default. Lost to bombers last run? Pre-load a group to Air <em>next</em> run — the plan absorbs the lesson.</p></div>
 </section>
 
@@ -216,8 +232,24 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 </table>
 </section>
 
+<section id="nurture">
+<h2><span class="n">8</span>Cannon Health, Nurture &amp; Veterans</h2>
+<p>A cannon is not a disposable turret — it is a <em>persistent asset you raise</em>. This system (carried over from the GDD's combat design and reconciled to the new model) is what makes protecting your guns matter beyond the current sortie, and it reinforces the enclosure win from a second direction.</p>
+<h3>Damage degrades effectiveness on a curve</h3>
+<p>Every cannon has HP; enemy fire chips it during the Fight. Effectiveness follows an <strong>inverted-logistic curve</strong> — near-full HP barely matters, then it falls off a cliff: ~100–75% HP ≈ full performance, 50–25% a sharp drop, below 25% nearly useless, 0% destroyed for the rest of the Fight. In new-model terms, a damaged cannon <strong>contributes less <a href="#falloff">Coordination</a> (its share of the group's bright core shrinks) and less firepower</strong> — so a battered group's zone visibly softens.</p>
+<h3>Nurture between sorties — raise a veteran</h3>
+<p>Between sorties, surviving cannons are rebuilt and rewarded, pushing HP <em>above</em> 100% (a veteran) up to a <strong>200% cap</strong>. Bonuses come from exactly the behaviours the rest of the design already wants:</p>
+<ul>
+<li><strong>Survived</strong> the Fight → a big rebuild (e.g. +50%, capped), so a battered gun comes back.</li>
+<li><strong>Enclosed</strong> (walls around it, best with a castle) → a standing bonus each cycle. This is the key link: <a href="#falloff">lob-over-walls</a> already made you <em>want</em> to enclose your guns; nurture <strong>pays you again</strong> for the same act, so enclosure earns its keep three times over (protection + territory/victory + veteran growth).</li>
+<li><strong>Held position</strong> → an "unmoved" bonus; physically relocating a cannon in Deploy reduces it with distance. (This is the <em>physical</em> Deploy move — distinct from free <a href="#verbs">AoR re-tasking</a> in the Fight, which doesn't touch nurture.)</li>
+</ul>
+<p>A veteran above 100% contributes <strong>extra Coordination and firepower</strong>; at 200% it's a maxed asset — near-perfect bright core and roughly double output. Veterans <strong>carry between battles within a campaign</strong> (only cannons at ≥100% persist; a new campaign resets everyone to 100%). This is a <em>soft, within-campaign</em> progression — distinct from the <strong>permanent per-archetype Stonwryt mastery</strong> ranks — and it's the source of real attachment ("that's my 200% Standard from three battles back").</p>
+<div class="s"><div class="ct">Why it fits the new model</div><p>It rhymes with everything: HP feeds the Coordination stat (so nurture and falloff are one currency, not two), it rewards enclosure (the spine of the whole game), and the "unmoved" bonus gives the physical-placement decision weight without touching the Fight verbs. It also answers the "cannons are disposable" flatness the new doc had — you now grow guns, not just place them.</p></div>
+</section>
+
 <section id="archetypes">
-<h2><span class="n">8</span>Archetype Candidates <span class="pill" style="color:var(--warn)">16 options → pair down to 6–8</span></h2>
+<h2><span class="n">9</span>Archetype Candidates <span class="pill" style="color:var(--warn)">16 options → pair down to 6–8</span></h2>
 <p>These 16 are <strong>options, not shippable cannons.</strong> During the (siloed) Ships session we build them against the bestiary and <strong>pair down to 6–8</strong> — more than that adds confusion for little gain. The enemies decide which roles earn a slot, so the final set is a real counter-web, not a guess. Each finalist ships in <span class="tag t-land">Land</span> <span class="tag t-sea">Sea</span> <span class="tag t-air">Air</span> cuts and obeys the rule below. Includes <strong>three Lone Wolves</strong>. Multi-hit here means <strong>multi-target</strong> (one shot strikes several enemies) — the preferred flavour over "many bullets."</p>
 <table>
 <tr><th>#</th><th>Candidate</th><th>Primary role</th><th>Signature quirk</th><th>Honest weakness</th></tr>
@@ -242,78 +274,49 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 </section>
 
 <section id="towers">
-<h2><span class="n">9</span>Utility Tower Candidates <span class="pill" style="color:var(--warn)">11 → pair down to ~6</span></h2>
-<p>Towers are <strong>2×2, deal no damage, and enhance only the one group they physically touch.</strong> <strong>One active tower per group</strong> (a lone cannon may take one too; a second touching tower grays out — last-moved wins). They are the roster's <em>second growth axis</em> — coverage, information, sustain, tempo, and output multipliers the damage cannons deliberately lack. Here are <strong>11 candidates</strong>; we pair down against the ships (target ~6). A tower slot is a real cost: one fewer barrel, plus 2×2 of fort space.</p>
+<h2><span class="n">10</span>Utility Towers — One Amplifier per Subsystem <span class="pill" style="color:var(--warn)">6 axes → ~6 towers</span></h2>
+<p>Towers are <strong>2×2, deal no damage, and enhance only the one group they touch.</strong> A group may hold <strong>several towers, but only the #1 is active</strong> — the rest are grayed backups that <strong>auto-promote if the active one is destroyed</strong> (order set in Deploy by last-tap; see Groups). Stacking towers is <em>resilience</em>, not extra buffs — one effect applies at a time. The cannons have a generating structure (archetype × domain); the towers now have one too — <strong>each tower amplifies exactly one game subsystem it plugs into.</strong> That single rule both organises the list and guarantees distinctness: six subsystems, six towers, no overlap. Where an axis holds more than one candidate <em>expression</em>, we pick the best one when the ships tell us which subsystems actually get stressed — and drop any axis no enemy pressures. A tower slot is a real cost: one fewer barrel, plus 2×2 of fort space.</p>
 <table>
-<tr><th>Tower</th><th>Enhances its group by…</th><th>Note</th></tr>
-<tr><td><strong>Stonewright Post</strong></td><td>Repairs the group's cannons and adjacent walls over time</td><td><strong>First tower taught</strong> — fits the Stonewrights backstory</td></tr>
-<tr><td><strong>Spotter</strong></td><td>Extends the AoR and lifts fog of war — spots ships sooner, reveals their type earlier</td><td>Coverage + information</td></tr>
-<tr><td><strong>Flare</strong></td><td>Fires flares over the whole AoR, illuminating ships hidden in fog</td><td>The active fog-reveal (vs Spotter's passive lift); precious in fog theaters</td></tr>
-<tr><td><strong>Forge</strong></td><td>Cuts fire-reload and domain-switch cooldowns</td><td>Reliever for the switch tax</td></tr>
-<tr><td><strong>Sights</strong></td><td>Improves accuracy/tracking vs fast movers; tightens the out-of-domain penalty</td><td>The precision specialist</td></tr>
-<tr><td><strong>Powder Store</strong></td><td>Amplifies shot damage</td><td>Raw damage multiplier</td></tr>
-<tr><td><strong>Magazine</strong></td><td>Raises fire rate (more shots per tick)</td><td>Volume, not per-shot power</td></tr>
-<tr><td><strong>Jammer</strong></td><td>Slows enemies inside the AoR so they linger in the kill zone</td><td>More shots land</td></tr>
-<tr><td><strong>Bulwark</strong></td><td>Boosts the group's cannon durability / damage resistance</td><td>Survivability for a forward battery</td></tr>
-<tr><td><strong>Rally Flag</strong></td><td>Speeds AoR moves and shortens the recover-from-cancel gap</td><td>Commander mobility (complements Forge on the Fight verbs)</td></tr>
-<tr><td><strong>Decoy Mast</strong></td><td>Draws enemy targeting to itself, sparing the group's cannons</td><td>Sacrificial protection — leans into towers being priority targets</td></tr>
+<tr><th>Subsystem</th><th>Amplifies…</th><th>Tower (candidate expressions)</th></tr>
+<tr><td><strong>Coverage</strong></td><td>the spatial core (AoR size)</td><td><strong>Spotter</strong> — grows the group's AoR</td></tr>
+<tr><td><strong>Output</strong></td><td>firepower (kill faster)</td><td>one offense tower — <strong>Powder Store</strong> (damage) <em>or</em> Magazine (fire rate) <em>or</em> Sights (accuracy); these are three flavours of the same axis — pick one</td></tr>
+<tr><td><strong>Sustain</strong></td><td>staying alive</td><td><strong>Stonewright Post</strong> (repair — first taught, fits the backstory) <em>or</em> Bulwark (armour) <em>or</em> Decoy Mast (draws fire) <em>or</em> Camouflage (hides the group so the enemy can't target it)</td></tr>
+<tr><td><strong>Tempo</strong></td><td>the verb system (cooldowns)</td><td><strong>Forge</strong> (cuts reload + domain-switch) <em>or</em> Rally Flag (faster AoR moves / cancel-recovery)</td></tr>
+<tr><td><strong>Reveal</strong></td><td>fog / information</td><td><strong>Flare</strong> (active illumination pulse); Spotter also lifts fog passively</td></tr>
+<tr><td><strong>Control</strong></td><td>the enemy (pointing outward)</td><td><strong>Jammer</strong> — slows enemies in the zone so they linger</td></tr>
 </table>
-<div class="s"><div class="ct">Fixed rules</div><p>Towers are <strong>not upgradeable</strong> and give <strong>no in-battle-improvable</strong> effects — this keeps the <em>cannons</em> the special, invested pieces. Towers are <strong>destructible</strong>: kill the tower and the group loses its enhancement, so <strong>enemies prioritise towers</strong> — a forward tower is a real risk (the Decoy Mast weaponises that fact). Overlap to watch when pairing down: Powder vs Magazine (damage vs rate), Forge vs Rally (which cooldowns), Spotter vs Flare (passive vs active fog reveal). (Parked: Relay — see Future.)</p></div>
-</section>
-
-<section id="minigames">
-<h2><span class="n">10</span>Mini-Games — The Casual Layer</h2>
-<p>The mini-games are <strong>the "Candy Crush" of Rivenkeep</strong>: a big, standalone, genuinely fun casual layer that also happens to teach the game. Each core skill (walling, enclosure, deploying, setting an AoR, switching domains, grouping, tower placement, fire-control) has <strong>several</strong> mini-games on a climbing difficulty ladder — deep enough that a player could happily live here for a long time without touching a campaign.</p>
-<ul>
-<li><strong>Generatively harder.</strong> Because a player may stick with them indefinitely, mini-games are <strong>procedurally generated</strong> to keep escalating past any hand-authored ceiling — endless difficulty, not a fixed tutorial.</li>
-<li><strong>Randomness is allowed here.</strong> Mini-games are <strong>not on the leaderboards</strong>, so unlike the deterministic ranked battles they can use RNG freely — fresh layouts every attempt, no fairness/seeding constraint.</li>
-<li><strong>The economy on-ramp.</strong> Mini-games are the main <strong>early Stonwryt earner</strong>, and the natural home for <strong>more frequent ads</strong> (rewarded/optional). Earning up front here means <em>battles</em> can carry far fewer ads — the casual layer subsidises the campaign's clean feel.</li>
-<li><strong>Also the practice area.</strong> The same system doubles as a no-stakes sandbox to rehearse a skill or a specific battle situation on demand.</li>
-<li><strong>They deepen by combining phases</strong> until the top of the ladder <em>is</em> Campaign 1, Battle 1 — so the first real battle lands as "wait, this is easy," and there is never a cliff.</li>
-<li><strong>User-generated boards.</strong> Let players <em>build</em> mini-games too, with <strong>rewards for creators</strong> — and the best community boards get <strong>promoted into the game</strong> for everyone. A near-endless content firehose that costs us little to sustain.</li>
-</ul>
-<div class="s warn"><div class="ct">Honest flag: UGC is a big, separate build</div><p>User-generated boards are a strong long-term play, but they are their own project: a builder tool, sharing/discovery, a rewards/curation pipeline, and <strong>moderation</strong> (reuse the on-device name/content moderation from the GDD, extended to boards). Ship the generative + practice + ads layer first; treat UGC as a later milestone, not launch scope.</p></div>
-</section>
-
-<section id="mastery">
-<h2><span class="n">11</span>Determinism &amp; the Mastery Loop</h2>
-<p>The Fight's skill is not reflexes; it is <strong>reading and adapting</strong>. Because the simulation is deterministic, the crises are deterministic — the same flank hits at the same tick every run — so mastery is a loop:</p>
-<p style="text-align:center;color:var(--gold);font-family:'Chakra Petch',sans-serif;letter-spacing:1px">plan → watch it tested → get hit → learn why → fold into next Deploy → win</p>
-<ul>
-<li><strong>Failure is intended, early, and humane.</strong> The first <em>loss</em> is deliberately tuned to land around the <strong>5th–8th sortie</strong> of play — after a few easy wins, early enough to teach while the stakes are trivial. The lesson is the point: <em>failure is a normal, fun part of the loop.</em> Some of the best games are the ones where you fail several times but inch closer each run until it clicks — that feeling is the target, not an accident.</li>
-<li><strong>Failure is cheap.</strong> A loss never drains permanent Stonwryts or upgrades — only the consumables spent that run. Retry is instant, and the identical crisis rewards the player who <em>learned</em>.</li>
-<li><strong>The post-battle AI debrief is the coach:</strong> "your east group sat idle all game while the west wall fell at tick 40 — pre-task it west." This loop is only possible <em>because</em> of determinism; it turns the core technical thesis into the central skill of the game.</li>
-<li><strong>A perfectly-planned battle needs zero Fight input.</strong> If we've done our jobs, the Fight is a spectacle of your plan working — you intervene only when it doesn't. The 3-lever star system rewards the quality of the plan (turtle / perfect-defence / annihilation are just different plan qualities).</li>
-</ul>
+<div class="s"><div class="ct">Fixed rules &amp; the pair-down</div><p>Towers are <strong>not upgradeable</strong> and give <strong>no in-battle-improvable</strong> effect — the <em>cannons</em> stay the special, invested pieces. Towers are <strong>destructible</strong>, so <strong>enemies prioritise them</strong> (the Decoy Mast weaponises that fact). The pair-down keeps the <strong>axes fixed</strong> and chooses the best <em>expression</em> per axis against the bestiary — and cuts any axis the ships never stress. So a tower earns its slot only when some enemy makes its subsystem matter. (Parked: Relay — see Future.)</p></div>
 </section>
 
 <section id="future">
-<h2><span class="n">12</span>Parked / Future ("War 2" &amp; later)</h2>
+<h2><span class="n">11</span>Parked / Future ("War 2" &amp; later)</h2>
 <div class="s future"><div class="ct">Deliberately deferred — do not build yet</div>
 <ul>
+<li><strong>Manual live tower-switch.</strong> Multiple towers already auto-promote when the active one dies (shipping behaviour). A future option: let the commander <em>tap to swap</em> the active tower mid-Fight — but on a <strong>warm-up cost</strong> (a short window where <em>neither</em> buff applies), mirroring the domain reload so adaptation still costs something. Parked because a free instant swap would be a fourth live verb and break the "adaptation has a price" theme; revisit only if M4 shows the Fight has headroom.</li>
+<li><strong>Abilities (cannon-focused Stonwryt boosts).</strong> Spend Stonwryts mid-battle to boost the guns (overcharge, rapid-reload, one-off barrage) — buffs cannons only, never walls or economy. A good future lever, but held back now to protect the three-verb Fight budget. Revisit only if the Fight proves it has room for a fourth action.</li>
 <li><strong>Friendly fire (symmetric).</strong> Cannons don't target friendlies. Likely first version: heavily-reduced splash <em>can</em> chip your own wall — just enough to discourage letting troops camp on it, not enough to feel punishing. Ships wouldn't be immune to their own splash either (reward letting them cluster). Ship behind a late-game flag; playtest OFF by default.</li>
 <li><strong>Overheat / cooldown rhythms</strong> per cannon — a firing cadence to manage. Risks re-introducing soldier-skill; good War-2 candidate.</li>
-<li><strong>Commander-triggered cannon actives</strong> — per-cannon special abilities. Overlaps the timed-consumable ability verb; park to avoid muddying "commander not soldier."</li>
+<li><strong>Commander-triggered cannon actives</strong> — per-cannon special abilities. Overlaps the parked Abilities idea; park to avoid muddying "commander not soldier."</li>
 <li><strong>Relay tower</strong> — lets two non-touching groups share an AoR. Powerful but a complexity spike; for now, groups that want to combine simply touch.</li>
 </ul></div>
 </section>
 
 <section id="open">
-<h2><span class="n">13</span>Open Questions — To Prototype Before Locking</h2>
+<h2><span class="n">12</span>Open Questions — To Prototype Before Locking</h2>
 <p>Honest list of what is <em>not</em> settled, so we don't mistake a sketch for a decision:</p>
 <ul>
 <li><strong>Falloff needs work.</strong> The linear 100%→25% model is a starting point, not a final answer — the curve shape, the edge floor, and how it reads on screen all need tuning and prototyping. This is the mechanic the "watch, don't fiddle" promise rests on, so it gets first prototyping attention.</li>
 <li><strong>The multi-target family.</strong> Candidates 4–7 (Splasher / Chain / Sweeper / Saturation — blob vs jump vs line vs wide) all "one shot hits many." They're the preferred flavour over multi-shot, but four is too many — resolve which <em>feel</em> distinct against the ships and expect to keep only 1–2.</li>
 <li><strong>Control &amp; personality clusters.</strong> Frost / Suppressor / Disabler (and the Jammer tower) overlap on "control"; Marksman / Interdictor / Finisher overlap on "who do I shoot." Pair down against real enemies.</li>
-<li><strong>The third Fight verb.</strong> Abilities (timed consumables) is the proposal; the "firing-orders toggle" is the alternative. Decide during the roster pass.</li>
+<li><strong>Does the domain switch earn its rules-weight?</strong> The switch carries a lot of machinery (restartable, stackable, cancelable, countdown) for a lever we expect to be mostly set-in-Deploy. The <a href="#">ships/troops/bombers</a> are what will justify it — the bestiary needs enough telegraphed "switch moments" (the bomber run is the archetype) to make switching a real live decision. The Ships session is the <strong>validation pass</strong>: if we can't invent enough switch-moments, the mechanic should shed rules to match its real usage.</li>
 <li><strong>The whole model is unvalidated until the bestiary exists.</strong> A defender's toolkit is only as good as the crises it answers. The <em>first</em> thing to prototype (a stripped Fight with a couple of dummy ships) is the single question: <strong>does managing AoRs feel like commanding, or like flailing?</strong> If falloff-coverage feels good there, the model is validated; if not, we rethink before investing in ships.</li>
 </ul>
-<div class="s"><div class="ct">Next documents</div><p><strong>Ships</strong> is built in its own <strong>siloed session</strong> — the bestiary developed freely on its own terms first, then brought to this cannon design so meshing the two is a genuine pair-down (16 archetypes → 8, 10 towers → ~6) to exactly what works against each other, with no good idea lost early. Then <strong>Troops</strong> (their own levers: target priority, path behaviour, formation tricks; revealed on landing). The GDD will eventually reference all three module docs rather than duplicating them.</p></div>
+<div class="s"><div class="ct">Next documents</div><p><strong>Ships</strong> is built in its own <strong>siloed session</strong> — the bestiary developed freely on its own terms first, then brought to this cannon design so meshing the two is a genuine pair-down (16 archetypes → 6–8, 6 tower axes → ~6) to exactly what works against each other, with no good idea lost early. Then <strong>Troops</strong> (their own levers: target priority, path behaviour, formation tricks; revealed on landing). The GDD will eventually reference all three module docs rather than duplicating them.</p></div>
 </section>
 
 </div>
 <footer>
-Rivenkeep — Cannon &amp; Tower Design Document · v1.3.0 · Module of the GDD (v6.2.4) · Defender combat model — cannons, groups, AoR, towers
+Rivenkeep — Cannon &amp; Tower Design Document · v1.9.1 · Module of the GDD (v6.2.5) · Defender combat model — cannons, groups, AoR, towers
 </footer>
 </body>
 </html>
