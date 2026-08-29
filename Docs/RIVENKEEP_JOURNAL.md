@@ -1,43 +1,77 @@
 # Rivenkeep — Project Journal
-**Last Updated:** 2026-05-31
-**GDD Version:** v6.2.4 (50 sections, 9 Parts — AI-Enhanced Experience section added). SDD: v1.1.0.
-**Prototype:** HTML prototype v2 (Build→Deploy→Fight loop, drag from tray, extended timers)
+**Last Updated:** 2026-08-29
+**Design docs:** 6 module docs at **v2.0.0** (Why, Fleet_Memory, Cannons_Towers, Ships, Campaign, Victory), governed by The Why. Underlying GDD "how" at v6.3.0. **Resolve & Intensity designed 2026-08-29 (per-ship resolve network)** — see LOCKED + session below; Fleet_Memory/Victory/Ships edits pending → v2.0.1.
+**Phase:** DESIGN — ongoing. NOT prototyping yet (see Design Philosophy below).
 
 ---
 
-## ⭐ CURRENT STATE — START HERE (for a new session)
+## ⭐ START HERE — Master Control Panel (read first, every new session)
 
-**To continue this project in a fresh chat, upload these two files:**
-1. `Rivenkeep_GDD.html` — THE source of truth. Everything about the game is here.
-2. `RIVENKEEP_JOURNAL.md` — this file (full decision history).
+### How to start a new session
+Upload **only this journal** (`RIVENKEEP_JOURNAL.md`) and say what you want to work on. Claude reads this panel and then tells you **which other docs to upload** for that task (see the Document Index) *before* doing the work. Do NOT bulk-upload everything — the GDD alone is ~4,700 lines and can exhaust a single turn's token budget.
 
-**Optional supporting files** (upload if working on those areas):
-- `Rivenkeep_Critical_Analysis_Definitive.html` — the live issue tracker (16 open items, 62 resolved)
-- `Rivenkeep_Balance_Analysis.html` — deep numbers-first balance audit vs game-balance theory + Rampart (cannon cost curve, TTK/timer math, difficulty scaling, economy). 3 P0 / 4 P1 / 5 P2 findings. Recomputed from the GDD stat tables.
-- `Rivenkeep_SDD.html` — Software Design Document + build plan. Architecture (deterministic Core ⟂ SpriteKit render, GameplayKit), asset pipeline, 13 milestones M0–M12 (vertical-slice-first), v1.1.0 (versioned; Appendix A "Build Playbook" — full agentic prompt sequence M0–M12 for Devin Desktop / Claude Code). 188 check-off items, per-phase testing, 14 Windsurf/Claude prompts. Includes first-class AI layer (Apple Foundation Models): piece-name moderation+suggestions (M9), debrief/tutor/rules-help/flavor/narration/recaps (M11). Progress persists in browser localStorage.
-- `Rivenkeep_Map_View_Briefs.html` — 10/10 theater mood boards + portrait UI mockups + piece-catalog detail mockup
-- `Rivenkeep_AI_Image_Prompts.md` — Midjourney workflow + 10 theater hero-image prompts
+### Jack's Design Philosophy — LOCKED (do not re-litigate — this has been restated across three chats)
+- **Design-first, fully.** Every element is spelled out ahead of time. We keep designing — in depth, adding new parts as needed — until the design is **elegant and there is genuinely nothing left to design.** Only then do we prototype.
+- **Prototyping is tweaking, not changing.** The prototype builds small parts to see how the design is fulfilled and to tune *felt* values — it never discovers or redesigns. **Designs are the facts; the prototype is just feelings.**
+- **Why this inverts the usual "prototype early" wisdom.** That wisdom exists because human teams forget ideas, drift, and can't hold a whole design in their heads — so they're forced to find the design by building. Those failure modes are removed here: the docs hold every idea without loss, there is no committee pulling different directions, and Claude verifies each design against game theory and real successful/failed games and flags seams and blind alleys while they are still a paragraph — not a month of code. Design-first is the method this setup is built for.
+- **Even felt elements get designed — as specified targets.** Anything only playing can confirm (does managing AoRs feel like commanding? the exact magnitude of the cognition creep? legibility under full load?) is still designed: state the *intended feel* precisely (e.g. "subtle in magnitude, legible in kind") so nothing is left blank. Prototyping later confirms we hit a written target.
+- **No hurry to release.** Release, monetization, and the build come in time; not the focus now.
 
-**The ONLY current GDD is v6.2.4.** All earlier versions (v4.x–v6.2.2) are superseded and were deleted to avoid confusion. Ignore any reference below to an older "SOURCE OF TRUTH" filename — those are historical log entries, not the current file.
+### How Claude must work on this project — LOCKED
+- **Be honest, always — Jack should never have to ask for it.** Verify designs against game theory and the corpus of real games; flag risks, seams, and blind alleys early and plainly; give calibrated praise-and-risk together. Never just cheer-lead. (Jack strongly dislikes having to request honesty.)
+- **Keep THIS journal current.** It is the through-line record of every decision, across all chats — the one doc that carries continuity. Update it *as* decisions are made, not only at the end.
+- **Warn about chat length.** Long chats are problematic — flag when the conversation is getting long and *before* a compaction is likely, so context is not lost mid-thought.
+- **Style:** terse, peer-level; low tolerance for over-explanation or hedging; no scope-scolding during ideation.
 
-**FILENAME / VERSIONING CONVENTION (as of this handoff):** Filenames are now **stable** (`Rivenkeep_GDD.html`, `Rivenkeep_SDD.html`, etc.) — versions are tracked **internally** in each document (title/meta/footer + the SDD changelog) and externally via **git/GitHub**. Do NOT put version numbers in filenames; that breaks git history continuity. Internal version strings are still maintained (GDD v6.2.5, SDD v1.0.2).
+### Document Index — what to upload for what
+Stable filenames; versions live *inside* each doc + in git, never in filenames.
 
-**Project status as of this handoff:**
-- GDD design phase is COMPLETE. Every gameplay system, economy, monetization stream, UI layout, challenge, leaderboard, social feature, backend architecture, and future roadmap is fully specified.
-- Final integrity pass done (v6.1.0): castle-HP-vs-ships contradiction fixed, duplicate Leaderboard Structure removed, redundant Wall Stacking section consolidated, layers-vs-levels distinction clarified, Quick Answers master index added at top.
-- **Fresh-eyes pass + reorganization done (v6.2.0):** reconciled 6 internal contradictions (Build timer specified two ways → unified to the Phase-Timing 25→20s/+10s-S1/Boss-22 model; "destroy all ships" victory wording → enclosure-only; "ships cannot damage castles" prose → ships hit exposed castles after a breach; obsolete walls/time star formula → canonical 3-lever; stale "ships remaining" defeat reason; interior "4 blocks = 1 ω" → 10). Closed lore numbering gap (X→XI→**XIV** → renumbered Battle Messages to XII). Fixed Cam-1 storage-slot error. Reorganized: Wind & Drift → Build (it's a Build mechanic); enemy cast (Enemies, Bosses) moved ahead of Fight mechanics; one-section "Part VI — Castles" dissolved into Combat; Loss & Replay → Progression; renumbered to **9 Parts**; nav rewritten to match. Folded in 7 Critical-Analysis items (BAL-1/2, FLOW-1/2, INFRA-3, FUT-1, POL-1/2/3).
-- 16 open items remain, ALL tracked in the Definitive Critical Analysis: 2 balance (Lightning, Chain Shot — playtest only), 2 flow (early-game Deploy/Fight pacing), 3 policy (privacy, notifications, analytics — pre-submission), 2 future (spectator, endless mode), 10 infrastructure (content production + engineering).
-- NO outstanding tasks from the design phase. The next phase is prototype development + content production (the INFRA items).
+| Doc | What it is | Upload when working on… |
+|---|---|---|
+| `RIVENKEEP_JOURNAL.md` | **This file** — through-line / decision record + this panel | Always (the only file Jack must upload) |
+| `Rivenkeep_Why.html` | **The "why"** — design philosophy & first principles; the standing guide governing all docs (v2.0.0) | Any design decision (it governs everything) |
+| `Rivenkeep_GDD.html` | **The "how"** — master mechanics, numbers, economy, UI, roadmap (v6.3.0). **LARGE ~4,700 lines** | Only when GDD detail is needed; upload selectively — it can blow the token budget |
+| `Rivenkeep_Fleet_Memory.html` | Attacker's mind — 3-channel cognition, baiting, flagship, resolve (v2.0.0) | Enemy AI, cognition, resolve/intensity, baiting |
+| `Rivenkeep_Cannons_Towers.html` | Defender toolkit — 8 cannons, groups, AoR, 7 towers (v2.0.0) | Defender tools, cannons, towers, AoR, Fight verbs |
+| `Rivenkeep_Ships.html` | Enemy roster — lineage × axis, troops, bombers (v2.0.0) | Enemy roster/bestiary, troops, formations |
+| `Rivenkeep_Campaign.html` | Campaign layout, difficulty model, cognition ramp (v2.0.0) | Campaign structure, difficulty, progression staging |
+| `Rivenkeep_Victory.html` | Win condition, sortie resolution, ammo, stars/Battle Score (v2.0.0) | Victory, sorties, scoring, ammo, breakthrough |
 
-**Key facts a new session must not re-litigate** (these are LOCKED decisions):
-- Victory = enclose required castles only. Ships NOT required (except Boss Finale).
-- Stars = 3-lever average (Ships / Cannon Health / Area Enclosed), rounded up. ★★★! = 2 levers maxed + 1 at ★★★.
-- Battle Score = raw sum of 3 lever % (max 400). Powers leaderboards + Weekend Race.
-- 4 difficulty LEVELS (Recruit/Commander/Veteran/Legend) × 190 battles = 760 experiences. Separate from the 5 difficulty LAYERS (A–E) baked into campaigns.
-- Stonwryt economy is ×10 scale, 25 purchasable items, pause-panel UI (time stops), earned-only (never purchasable with real money).
-- Cannons carry between battles within a campaign (≥100%), cap 200% (perfect accuracy + double firepower), move bonus +5%→0% by distance.
-- Backend = CloudKit + GameKit + Firebase (Option A, chosen by Jack). ~500 lines server-side TypeScript.
-- Studio name "Riquochet Studios" is an INTENTIONAL spelling (not a typo of Ricochet).
+*Legacy / situational (predate the module set — upload only for their area):* `Rivenkeep_SDD.html` (build plan/architecture), `Rivenkeep_Critical_Analysis_Definitive.html` (issue tracker), `Rivenkeep_Balance_Analysis.html` (numbers audit), `Rivenkeep_Map_View_Briefs.html` (theater mood/UI), `Rivenkeep_AI_Image_Prompts.md` (art prompts).
+
+### Current design state
+- **Six module docs, all at v2.0.0**, governed by `Rivenkeep_Why.html`, internally consistent (consolidated 2026-08-28). GDD v6.3.0 is the underlying "how."
+- The game: a Rampart-like **Build→Deploy→Fight** tower-defense that is a **thinking game — strategy is the fun.** Difficulty is the enemy's *cognition*, not its stats. Deterministic → skill (not luck) decides → fair leaderboards via Battle Score.
+
+### STILL TO DESIGN (the queue — design phase is NOT done), priority order
+1. **The Build phase — pieces & enclosure.** ← NEXT. Half the core loop; a huge share of the strategy. Piece taxonomy + 16-tier escalation, enclosure check, damage carryover, triage geometry, layers C & E. (Docs: GDD + Cannon.)
+2. **Stonwryt economy & meta-progression.** Currency, purchases, how stars/veterancy/3-cannon-carry/unlocks form the progression arc. (Docs: GDD.)
+3. **Terrain & theater mechanics (Layer A).** The 10 environmental systems in depth — especially vs a blind mind. (Docs: GDD + Fleet_Memory.)
+4. **The Fight phase as one unified experience.** Assemble the three verbs + grid-reading + moment-to-moment (currently scattered across Cannon + Fleet_Memory).
+- *Later / not foundation:* regenerate the 190-battle generator against the new lineage/cognition vocabulary (data-gen); the 10 boss set-pieces (the Mystarchs).
+- ✅ **DONE 2026-08-29: Resolve & Intensity** — designed as a **per-ship resolve network**; see LOCKED lines + session entry below. First design-first-era case where a proposed model (a global scalar + a UI-ish "barometer") was corrected mid-session to a better one (the network, behaviour-only read) before any prototype — the method working as intended.
+
+### LOCKED decisions (do not re-litigate — full detail lives in the module docs)
+- **Victory** = enclose required castles at end of any Build phase (incl. Last Stand); ships not required (except Boss Finale = boss HP 0 too). Defeat = required castles un-enclosable, or a castle at 3/3 degradation dropping below required; mid-Build impossibility = clean immediate loss (never a lost cause).
+- **Stars** = 3-lever avg (Ships / Cannon Health / Area Enclosed), rounded up; hidden ★★★!; 0★ pacifist easter egg. **Battle Score** = ships%+area%+cannon% (max 400) = the skill-ranked leaderboard metric (the fairness engine).
+- **Difficulty is COGNITION, not stats** — enemies get harder by thinking better; HP/gun/quantity bumps are subordinate, never a parallel treadmill. Cognition rises as a fine, continuous, monotonic per-battle creep (subtle in magnitude, observable in kind).
+- **Fleet mind = 3 channels**: LOS (live vision), Contact (persistent hard facts), Effect (decaying fear grid). Blind + deterministic + learns within a battle.
+- **Ship pool** = capped, fixed emergence order, fixed spawn-rate, deterministic; sortie COUNT is emergent from outcomes. Pool empties → time rolls to the Last Stand.
+- **Sortie = one wave** → HELD (spends its ammo; timer backstops), REPEL (break resolve early → rout, bank time), or BREAKTHROUGH (a required enclosure breached — event, not terminator). All survivors retreat to spawn, re-emerge first in prior order (sunk stays dead), carrying damage, a cognition-tick smarter → player learns motivation, not script. Retreating ships take fire (annihilation = a repel with a full sink).
+- **Ammo** = ships shoot only what they carry (finite, relative per-lineage); cannons effectively unlimited (static). Ammo = the sortie's diegetic clock; the GDD **time-rollover economy is kept whole** (unused Build→Deploy→Fight; 50% unused Fight→next Build; 100% final Fight→Last Stand) — ending early banks more. Felt, not managed (no ammo UI).
+- **Toolkit paired down**: 8 cannons (Standard, Piercer, Marksman, Interdictor, Suppressor, Breaker, Splasher, Saturation) + 7 towers (Spotter, Powder, Stonewright, Camouflage, Rally, Flare, Jammer). Superset preserved in the docs.
+- **Cannon carry**: within a campaign = all cannons' veterancy (cap 200%); BETWEEN campaigns = only the 3 best carry (player picks, with recommendation); difficulty tuned to assume the veteran core.
+- **Flagship ↔ Boss**: every battle has a flagship (coordination hub + morale anchor); a boss is a rare, promoted flagship (fanatical/near-unbreakable resolve, bespoke mechanics). NOT every flagship is a boss.
+- Studio name **"Riquochet Studios"** is an intentional spelling (not a typo of Ricochet).
+- **RESOLVE = a per-ship NETWORK, not a global scalar** (designed 2026-08-29). Every ship carries its own resolve value (0–1 internal, NEVER shown). Resolve maps deterministically to a MOTION SIGNATURE — that mapping IS the entire display; no morale bar, no UI readout (a bar is bookkeeping — read morale off behaviour, like a real battle line). Each hull's resolve is pushed by: (a) its own experience — damage it takes, fear cells it crosses, its own progress; (b) PEER influence — pulled toward nearby hulls' resolve (panic contagion: a fleeing hull drags neighbours down → rout cascade; a steady cluster stiffens a waverer); (c) ANCHOR broadcast — top-down support from command nodes. Propagation reuses the command-confusion batching (Fleet_Memory) — resolve rides the same lagged net as fear/contact. Deterministic: same battle → same cascade → same break points.
+- **Anchor hierarchy + reroute.** Flagship = primary anchor, strongest broadcast (**its broadcast strength IS the intensity dial**). Below it: Herald / Rally-type (dedicated morale anchors) > Quartermaster / command support > capital ships (Leviathan etc., anchor nearby via their own high resolve) > peers. Kill the flagship and the net RE-ANCHORS on the highest surviving node — weaker, lower baseline, fragmented, propagation reverts to slow/local. A **Herald boss = a resilient primary anchor**: killing the flagship isn't enough while the Herald still anchors → "break their will through the standard, not the hull" = remove the top anchor so the net loses its floor.
+- **The MOTION SIGNATURE = the definitive tell (a DESIGN FACT, not a prototype question).** Two orthogonal components, never confusable: **LATERAL = fear** (reading the fear grid — the hull still faces/nets FORWARD to its objective, just skirts/routes AROUND a HOT cell); **FORE-AFT = nerve** (resolve). Nerve reads as a rearward gradient: **Committed** (drives straight forward, ignores fear cells), **Steady** (forward + lateral fear-avoidance — the default), **Wavering** (net motion develops a REARWARD component — drifts back, hangs behind the objective, lines sag aft), **Breaking/Routing** (commits to the rearward run — flees to spawn), **Gone** (reached spawn, off-field). You cannot confuse "advancing around a danger" (lateral) with "drifting back toward the exit" (aft). Retreat is self-indicating: the hull runs to spawn and leaves the field — you SEE it.
+- **Sortie & battle outcomes are EMERGENT from the network** (locks against Victory). A hull routs when its own resolve crosses its personal rout threshold → runs to spawn. **REPEL** (sortie) = a rout cascade tips the wave — enough hulls rout that the committed remainder loses cohesion and disengages early → banks time. **HELD** = anchors hold the net above rout until ammo is spent → orderly reload-withdrawal. **BREAKTHROUGH** = breach event, independent of resolve. Battle **RETREAT** = across sorties the net has degraded so far (losses, dead anchors) that a re-formed wave instantly cascades — the fleet stops committing (hulls may remain). Battle **ANNIHILATION** = pool exhausted. Repels drop the net baseline = the **break-their-will** currency; held sorties don't demoralise = the **grind** currency. Stalemate drains per-hull resolve (no progress → lose heart) → guarantees termination, no infinite stalemate.
+- **The intensity dial = ONE knob, a STRATEGY-SELECTOR not a power knob**, set per battle on the flagship (its broadcast strength). Up → lower personal rout thresholds, stronger anchor broadcast, higher recovery, and **LOWER contagion susceptibility** (fanatical hulls resist panic; skittish hulls catch it instantly → skittish fleets cascade fast, fanatical fleets don't cascade and must be ground down hull-by-hull). Per-lineage resting points from the Ships doc: skittish Recon/Corsair/Sower/Support/Wraith; fanatical Bulwark/Breacher/Leviathan/Provocateur; Herald = pinned max.
+- **Fanatical CUTS BOTH WAYS (the drawback).** Bluffable = evasive but fragile of will (skirts your guns → HARD to kill, but routs → EASY to break). Fanatical = brave but exploitable by positioning (ignores the fear grid → drives straight INTO kill-zones → EASY to slaughter, but won't rout → CAN'T be bluffed). Neither is strictly harder; they demand OPPOSITE strategies. Vs fanatical you don't bluff — you build the meat-grinder and let their fearlessness walk them in (feign weakness to keep them overcommitted). The definitive "fanatical → switch to grind" read is behavioural: they DON'T skirt and DON'T drift back — they drive undeviating into your scald.
+- **DRAINS** (per-hull, perception-based): cluster/fast visible sinks esp. high-value (hard — but bluffable in *timing*: a held alpha concentrates the morale hit); crossing HOT/SCALDING + turned back (**bluffable — fear-projection drains morale**); no progress/stalemate (partly bluffable — deny apparent progress); flagship/anchor killed (hard, discrete, biggest — crater + re-anchor to a weaker node). **RESTORES:** progress/breach/breakthrough ("we're winning" → presses harder — a breakthrough RAISES enemy resolve); anchor rally while it lives; between-sortie regroup (bounded by recovery).
+- **Flagship deploys FIRST and takes STATION, program DORMANT until the wave assembles** (gut-checked & adopted 2026-08-29). It arrives first to the back line as the anchor point and holds; its coordination + anchor broadcast do NOT switch on until enough of the wave has formed on it. Creates an **ASSEMBLY WINDOW** at each sortie's opening: broadcast off → no top-down anchor yet → the fleet is at its shakiest and most baitable, and the flagship is briefly catchable before its screen closes. A high-risk reach/alpha in that window seeds a cascade cheaply — but it's a gamble (flagship far back, window short), never a free snipe that skips the screen. Window closes as escorts arrive and the broadcast comes online. Decapitation play: fight through the screen (Marksman/back-line) OR catch it in the assembly window → net re-anchors weaker → now bluffable → break it.
+- **SUPERSEDES the mid-session scalar proposal.** The 2026-08-29 first pass proposed a single global Fleet-Resolve scalar (R) + per-wing modulation + a "flagship rally-effort barometer" read. Jack corrected both: resolve is a per-ship NETWORK, and there is NO barometer/UI — the read is the motion signature (behaviour). The network is strictly better (gives "one hull runs, another stays," the flagship-death reroute, and fanatical contagion-immunity for free). The scalar and the barometer are DEAD — do not resurrect.
 
 ---
 
@@ -1042,3 +1076,64 @@ Grok generated a "CANNON CONFIG" mockup of the domain switch. Verdict:
 - **⚠ SIGNAL:** Grok's caption ("switched to Air early… 5,4,3,2,1,0 becomes AIR") used the SIMPLE "just keep counting down" model and did NOT represent our late-switch **reverse (longer-path)** behaviour. An intelligent system asked to visualise the rule defaulted to the simpler one and dropped the reversal — a yellow flag that the longer-path rule may be too clever to read. NOT changing it now, but **"longer-path vs. just-continue-the-count" is a top item to settle in the M4 prototype.** (For an *early* switch, both models agree; only the late-switch reversal differs.)
 
 **DESIGN PHILOSOPHY (user, explicit):** prefers "too much that can be edited down" over "too little and unimaginative." The design phase is for dreaming big and exploring; parked ideas are kept because they may inspire others. If the game never ships, that's OK — the design is fun in itself. North star for this phase = **elegance: everything feels natural and fits together** (evaluate for coherence/fit, not scope). Assistant should be in explore-mode and save scope-scolding for explicit pair-down asks. Design's recurring signature to preserve: the same principle expressed across many layers (coverage-vs-concentration; lob→enclose→victory; falloff+crazy-Ivan+hold). **190 boards plan:** define board 1 + board 190 (hardest), interpolate between — treat difficulty as a small vector of parameters (AoR scaling, falloff, threat tempo, approaches, fog density, domain pressure); campaign = a path through that space; theaters = regions; bosses = spikes. (Future session.)
+
+---
+
+## SESSION: 2026-08-28 — Module-doc design arc + v2.0.0 consolidation
+
+The stretch that took the design from "attacker foundation only" to a complete, coherent, internally-consistent foundation. Six module docs now sit under `Rivenkeep_Why.html`, all at **v2.0.0**.
+
+### What was designed
+- **Fleet Memory → v2.0.0.** Confirmed the 3-channel mind (LOS / Contact / Effect); fixed stale "two-channel" phrasing (the 3 UI registers mirror the 2 *persistent* channels — LOS is live, not a remembered register; troops ride the full 3-channel mind).
+- **Ships (roster sweep) → NEW, v2.0.0.** The bestiary as **lineage × axis** over the 3-channel mind. Troops + bombers folded in (GDD mechanics kept, spelled-out TYPES dropped). Herald reframed **boss-only** (resolve is a flagship *intensity knob*, not a common lineage).
+- **The pair-down → LOCKED.** 16 archetypes → **8 cannons** (Standard, Piercer, Marksman, Interdictor, Suppressor, Breaker, Splasher, Saturation) + **7 towers** (Spotter, Powder, Stonewright, Camouflage, Rally, Flare, Jammer). Superset preserved. AoR re-task made a **costed crawl** (Cannon doc).
+- **Campaign → NEW, v2.0.0.** Meshed the GDD skeleton (Introduce→Isolate→Combine, 5-layer matrix / 32 campaigns, triage, 10 theaters, 190-battle generator, boss finale) with the cognition model + locked cast. **Cognition ramp = a fine, continuous, monotonic per-battle creep** (subtle magnitude, observable kind). HP/quantity **subordinate to cognition**, superseding older GDD text. Expansion-lineage debut schedule locked (Provocateur/Corsair in Pairs; Wraith mid-Triples; Mimic late/Quads; boss forms in the finale).
+- **Victory → NEW, v2.0.0.** Battle win kept from GDD (enclose required castles; stars + Battle Score). Added: the **capped, fixed-order ship pool** with emergent sortie count; the **three sortie end-states** (repel / held / breakthrough) with unified retreat-to-spawn and same-ships-same-order; **ammo** as the sortie's diegetic clock with the **time-rollover economy kept whole**; breakthrough with real-but-recoverable stakes + the anti-death-spiral guarantee; **3-best-cannon carry between campaigns**.
+- **The Why → NEW, v2.0.0.** The design-philosophy / first-principles doc — the "why" to the GDD's "how"; the standing guide. Holds the north star, the guiding principles, the fairness-as-values argument, and the foundational tensions.
+
+### Resolved (previously open)
+- **Win-condition seam** (long-standing cross-doc open) → unified in Victory.
+- **Multi-target cannon question** (Splasher / Chain / Sweeper / Saturation) → resolved by the pair-down (kept Splasher + Saturation; cut Chain + Sweeper).
+- **Ammo ↔ time-rollover** → reconciled: ammo decides *when* the wave withdraws; the GDD rollover runs underneath (ending early banks more time toward the Last Stand).
+
+### Method note (why this arc mattered)
+Jack's **design-first philosophy** was made explicit and LOCKED (see panel). The prototype-early reflex was set aside: design fully first, prototype only to tune *felt* values against written targets. Claude's standing job: verify against game theory + real games, flag seams early, be honest without being asked, and keep this journal current.
+
+### Next
+**Resolve & Intensity** (the thinnest load-bearing piece). Then Build / enclosure, Stonwryt economy, terrain (Layer A), the unified Fight phase.
+
+---
+
+## SESSION: 2026-08-29 (cont.) — Resolve reframed to a per-ship network; four corrections
+
+The resolve piece, hardened. The first pass (earlier same day) proposed a global scalar + a flagship-rally "barometer" read. Jack pushed on four points; the model is stronger for it and is now definitive (design-first: facts, not prototype punts). The whole layer now sits as a peer of the fear grid — fear is a spatial field of the *defender's danger* (on the map); resolve is a network field of the *fleet's will* (on the hulls). Both propagate with lag, both read as shapes/behaviour, both deterministic, both manipulable — the design's recurring signature (same principle across layers).
+
+### The four corrections
+- **Per-ship network (was: global scalar).** Every hull carries its own resolve; hulls influence neighbours (panic contagion + steady-cluster stiffening) under a top-down anchor broadcast. Gives "one hull routs, another stays," the flagship-death reroute, and fanatical contagion-immunity — none of which a scalar could produce. Propagation reuses the command-confusion batching (resolve rides the same lagged net as fear/contact). Fully deterministic.
+- **Anchor hierarchy + reroute.** Flagship = primary (its broadcast strength = the intensity dial). On its death the net re-anchors on the next node (Herald > Quartermaster > capital > peers) — weaker, fragmented, slow/local. Herald boss = a resilient primary anchor you must kill to drop the floor ("break their will through the standard, not the hull").
+- **The tell is DEFINITIVE, not a felt-target** (fixes the punt Jack rightly rejected — "prototype is sanding, not sawing"). Two orthogonal motion components: LATERAL = fear (nets forward, skirts around a HOT cell), FORE-AFT = nerve. Wavering = rearward drift; routing = the run to spawn; retreated = off-field. You cannot confuse advancing-around (lateral) with drifting-back (aft). No UI, no barometer — motion IS the display (real battles have no morale bar; you read behaviour). The binding rule that makes "no UI" honest: a hull's motion is a deterministic FUNCTION of its resolve, so behaviour is a faithful render of the network by construction, never a lossy approximation.
+- **Fanatical cuts both ways.** Evasive+breakable (skittish) vs committed+slaughterable (fanatical) — a strategy-selector, not a power knob. Fanatical fleets ignore the fear grid and drive into kill-zones; vs them you build the grinder and let them come. This is also the definitive "switch to grind" read (they don't skirt, don't drift back — they drive straight in). Satisfies the anti-treadmill law: high intensity is a *different problem with its own exploit*, never "more HP."
+
+### Flagship deploy behaviour (gut-checked, adopted)
+Flagship comes out FIRST and takes STATION (back line), program DORMANT until the wave assembles on it. Verdict: consistent and good — it arrives first to *hold station as the anchor point*, not to charge in first (resolves the "why is the screened ship in front" objection). Creates an assembly window (broadcast off → fleet shakiest & most baitable, flagship briefly catchable before the screen forms). Caveat handled: not a free snipe (far back, short window, high-risk reach) — rewards aggression without letting a player skip the screen. Reinforces the network: an opening alpha *before the anchor is up* seeds a cheap cascade, and the fleet firms up as it assembles and the broadcast comes online (a within-sortie resolve ramp — shaky open → anchored mid).
+
+### Retracted
+The global scalar (R, and τ_rout / τ_commit / ρ as global constants) and the flagship-rally-effort barometer. Dead. Thresholds are now per-hull; the read is behavioural (the motion signature).
+
+### Definitive vs sanding (honouring "design is facts, prototype is feelings")
+DESIGN FACTS (locked): the network structure; the anchor hierarchy + reroute; the motion-signature tell (lateral = fear / fore-aft = nerve); resolve→motion as a deterministic function; fanatical-as-tradeoff; the assembly window; and the emergent map to Held / Repel / Breakthrough / Retreat / Annihilation. SANDING MAGNITUDES (specified targets; final values tuned in prototype — feelings, not facts): per-hull rout thresholds and anchor broadcast strengths per intensity tier; contagion susceptibility per tier; the cascade tipping fraction (target: once a cascade starts, the wave visibly unravels over ~2–3s); recovery rate; the relative drain weights (cluster-sink vs scald-crossing vs stalemate-tick vs anchor-kill).
+
+### Verification (game theory + real games)
+- Total War morale (the doc's own precedent), now matched *exactly*: per-unit morale, rout on threshold, panic contagion/cascade, general's death cratering + re-anchoring on sub-commanders, army-wide collapse when the net can't hold. The scalar under-modelled this; the network is the faithful version.
+- Real crowd/panic dynamics: morale as a contagion field on a network of agents is the standard model — cascades, thresholds, and immune (fanatical) nodes are textbook.
+- Signaling core preserved: resolve reads the (bluffable) fear grid, so "break their will" is a well-defined deception against a deterministic receiver.
+- Anti-turtle & two-paths hold: a turtle gets Held/breakthrough, not repels (can't ratchet the net down the fast way) → relies on slow stalemate-drain + risks breakthrough (valid-but-costly). Fanatical fleets can't be repelled → the grind path is never vestigial.
+
+### Cross-doc edits PENDING (to BUILD next — say the word and I produce the updated docs, not deltas)
+- **Fleet_Memory** §12 ledger: replace the single-scalar "Fleet resolve" row + the "evaluated at sortie boundaries" line with the per-ship network (per-hull rout continuous mid-Fight; cascade→repel mid-Fight; battle-Retreat checked at the boundary). Its "three ways a battle ends" = label *battle-level*, cross-ref Victory's *sortie-level* three. §14 resolve open-Q → CLOSED (design done; only sanding magnitudes remain).
+- **Victory** §4: note repel is an emergent rout-cascade (per-hull nerve = network state), and repels drop the net baseline (the break-will mechanism).
+- **Ships** §4 + line 514: the intensity knob = the flagship's anchor-broadcast strength in the network; add contagion-susceptibility to the dial; add the flagship-first / assembly-window behaviour; resolve tendencies = per-lineage resting points + contagion susceptibility. Line-514 "numbers pending" → "sanding magnitudes" per above.
+- All three → **v2.0.1** when applied.
+
+### Next
+Build phase — pieces & enclosure (queue #1). Docs to upload: GDD (selectively — ~4,700 lines) + Cannon.

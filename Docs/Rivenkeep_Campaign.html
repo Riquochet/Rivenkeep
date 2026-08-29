@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — Campaign Layout</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
+header{padding:46px 40px 30px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+header .sub{font-size:.85rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim)}
+.ctn{max-width:1040px;margin:0 auto;padding:0 40px}
+nav{position:sticky;top:0;z-index:110;background:rgba(10,12,16,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:9px 40px;display:flex;gap:15px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}nav a:hover{color:var(--accent)}
+section{padding:34px 0;border-bottom:1px solid var(--border)}
+h2{font-family:'Chakra Petch',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+h2 .n{color:var(--dim);font-size:.9rem;margin-right:10px}
+h3{font-family:'Chakra Petch',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:22px 0 8px;color:var(--accent)}
+p{margin-bottom:10px;font-size:.9rem}
+a{color:var(--link)}em{color:var(--text);font-style:italic}
+code{font-family:'IBM Plex Mono',monospace;font-size:.82em;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--gold)}
+ul{margin:6px 0 12px 20px}li{font-size:.88rem;margin-bottom:6px}
+.s{background:var(--surface);padding:14px 18px;margin:14px 0;border-radius:0 6px 6px 0;border-left:3px solid var(--border)}
+.s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.8rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;color:var(--gold)}
+.s.pillar{border-left-color:var(--accent)}.s.warn{border-left-color:var(--warn)}.s.warn .ct{color:var(--warn)}.s.future{border-left-color:var(--purple)}.s.future .ct{color:var(--purple)}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{padding:7px 10px;border:1px solid var(--border);font-size:.8rem;text-align:left;vertical-align:top}
+th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.64rem;letter-spacing:1px}
+.tag{display:inline-block;padding:1px 7px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.t-land{background:rgba(139,195,74,.15);color:var(--land);border:1px solid rgba(139,195,74,.35)}
+.t-sea{background:rgba(79,195,247,.13);color:var(--sea);border:1px solid rgba(79,195,247,.35)}
+.t-air{background:rgba(206,147,216,.15);color:var(--air);border:1px solid rgba(206,147,216,.35)}
+.full{color:var(--success);font-weight:600}.red{color:var(--danger)}.mid{color:var(--warn)}.dim{color:var(--dim)}
+.lead{font-size:1.02rem;color:var(--text)}
+.pill{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;background:var(--surface2);border:1px solid var(--border);color:var(--dim)}
+figure{margin:16px 0;text-align:center}figcaption{font-size:.76rem;color:var(--dim);margin-top:8px;font-style:italic}
+footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
+@media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.35rem}.ctn{padding:0 16px}nav{padding-left:16px;padding-right:16px}th,td{font-size:.73rem;padding:5px 6px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Rivenkeep — Campaign Layout &amp; Progression</h1>
+<div class="sub">How the War Teaches, Escalates &amp; Stays a Thinking Game</div>
+<div class="meta">v2.0.0 · Module of the GDD (v6.3.0) · Meshes the campaign skeleton with the cognition model &amp; the locked cast · Companions: Fleet Memory v2.0.0, Cannon &amp; Tower v2.0.0, Ships v2.0.0</div>
+</header>
+
+<nav>
+<a href="#read">What This Is</a>
+<a href="#skeleton">Skeleton</a>
+<a href="#difficulty">Difficulty Model</a>
+<a href="#cognition">Cognition Ramp</a>
+<a href="#roster">Roster Map</a>
+<a href="#toolkit">Toolkit Order</a>
+<a href="#foundation">Foundation</a>
+</nav>
+
+<div class="ctn">
+
+<section id="read">
+<h2><span class="n">1</span>What This Doc Is</h2>
+<p class="lead">The campaign-layout module. It does not invent the campaign — the GDD already carries the full skeleton (Introduce→Isolate→Combine, the five-layer difficulty matrix across 32 campaigns, the castle-triage ramp, ten theaters, the 190-battle generator, the boss finale). This doc <strong>meshes that skeleton with the two things it predates</strong>: the blind-mind cognition model (Fleet Memory) and the locked cast (the paired-down 8 cannons + 7 towers and the lineage×axis roster).</p>
+<div class="s"><div class="ct">Relationship to the other docs</div><p>The GDD keeps the full 190-battle generator until it is migrated here — nothing is lost. This module states the campaign <em>design</em>: the difficulty model, the cognition ramp, the roster mapping, the toolkit teaching order, and the foundational tensions the layout must respect. Where it contradicts older GDD text on <em>how enemies get harder</em>, this doc supersedes it.</p></div>
+<div class="s pillar"><div class="ct">The one goal everything here serves</div><p>Rivenkeep is a <strong>thinking game</strong>: strategy is the fun. Every layout choice below is judged by a single test — does it keep the player making <em>interesting decisions against a mind</em>, rather than executing a memorised optimisation against a number? That test, not "is it hard," governs the campaign.</p></div>
+</section>
+
+<section id="skeleton">
+<h2><span class="n">2</span>The Inherited Skeleton <span class="pill">from the GDD — kept whole</span></h2>
+<p>The GDD's campaign structure is strong and stays intact. In brief:</p>
+<div class="s"><div class="ct">Introduce → Isolate → Combine</div><p>No battle ever asks the player to handle more than one new thing at a time. New mechanic → familiar terrain and enemies; new enemy → terrain off. Challenge comes from <em>combining things already understood</em>, never from confusion — the player must always understand why they lost. This teaching law now governs the <em>toolkit</em> too (§6).</p></div>
+<div class="s"><div class="ct">Theaters are variety; layers are difficulty</div><p>Ten theaters (Coastal, River, Swamp, Forest, Mountain, Volcanic, Desert, Frozen, Sky, Crystal) are <em>freshness</em> — scenery and feel, never punishment. Difficulty comes from five named layers, mixed independently of theater.</p></div>
+<table>
+<tr><th>Layer</th><th>What it dials</th></tr>
+<tr><td>A · Terrain</td><td>The theater's environmental mechanic (fire, DMZ advance, sandstorm, lava, ice, fog, decay, bounce).</td></tr>
+<tr><td>B · Advanced enemies</td><td>Beyond the basics — the roster's harder lineages. <em>Reframed below</em> into breadth (new lineages) + depth (sharper minds).</td></tr>
+<tr><td>C · Piece complexity</td><td>Wall-piece pool escalation across 16 tiers (A-series → H-series).</td></tr>
+<tr><td>D · Weather &amp; events</td><td>Fog, storms, wind, night, monsoon, eruptions.</td></tr>
+<tr><td>E · Territory</td><td>Enclosure gets spatially harder — castles spread, walls pre-damaged, obstacles crowd the castles.</td></tr>
+</table>
+<div class="s"><div class="ct">The combination matrix — 32 campaigns</div><p>The five layers are introduced singly, then every combination is explored: 1 base + 5 singles + 10 pairs + 10 triples + 5 quads + 1 full = <strong>32 campaigns</strong>, then the boss finale. Each campaign is a unique layer-combination teaching a distinct interaction. Alongside it, two monotonic ramps rise with campaign number — <strong>castle triage</strong> (1/4 → 9/10 → 4/4 boss; more required, fewer spares) and <strong>piece tier</strong> (1 → 16). Difficulty knobs that need no new rules — just tighter margins on decisions the player already makes.</p></div>
+<div class="s"><div class="ct">Determinism — the puzzle has a solution</div><p>Every battle is deterministic: same spawns, same terrain, same destinations, for everyone. Retrying is learning, not grinding; leaderboards are fair; a solution exists. This is the bedrock — and, as §7 argues, the sharpest double-edge in the whole design.</p></div>
+<div class="s future"><div class="ct">Boss finale — the ten Mystarchs</div><p>A separate mode after Campaign 32: ten boss battles (one per theater — Leviathan, Colossus, Sandworm, Hydra, Magma Titan, Frost Wyrm, Storm King, Ancient Treant, Plague Herald, Crystal Lich), each a promoted flagship chassis dialled to max intensity, on a compact 4/4 map so the boss <em>is</em> the challenge, not the enclosure. Boss set-pieces are their own later step.</p></div>
+</section>
+
+<section id="difficulty">
+<h2><span class="n">3</span>The Difficulty Model, Reconciled <span class="pill">supersedes older GDD text</span></h2>
+<p class="lead">The skeleton escalates the <em>board</em>. The cognition model escalates the <em>enemy</em>. They are orthogonal, and together they are the whole difficulty curve — but the enemy side is not a second parallel track bolted on. It has <strong>one</strong> axis, and it is the mind.</p>
+<div class="s pillar"><div class="ct">Two orthogonal difficulty families</div>
+<ul>
+<li><strong>Board difficulty — combinatorial.</strong> The five layers (A–E) combined, plus castle triage and piece tiers. This is <em>situation</em> complexity: what the terrain, weather, geography, and piece pool throw at you. The GDD owns this and it is excellent.</li>
+<li><strong>Enemy difficulty — cognitive.</strong> How well the fleet <em>thinks</em> — the quality of its estimator (fear-reading, sight, contact-verification, anticipation). This is the axis the GDD was missing, and the one that makes "harder later" without a stat treadmill.</li>
+</ul></div>
+<div class="s warn"><div class="ct">Tougher hulls and stronger guns are PART OF the cognitive improvement — not a parallel track</div><p>The load-bearing correction, and it supersedes any GDD text implying enemies get harder by inflating HP or fielding faster, stronger guns as a difficulty lever in their own right. There is <strong>one</strong> enemy-improvement curve and it is led by the mind. A little more hull or a slightly quicker gun may ride <em>inside</em> that curve as minor seasoning — never as a separate, parallel escalation. The moment "the wave got tougher" means "the health bars got bigger" rather than "the fleet outsmarted my old plan," the thinking game has decayed into an arcade grind. Enemy strength is a subordinate component of enemy <em>intelligence</em>, full stop.</p></div>
+<div class="s"><div class="ct">Why this is the whole point</div><p>Escalating by HP/DPS converts strategy into optimisation: find the damage build, repeat it forever. Escalating by <em>cognition</em> keeps the decision space alive at every level — you are always out-thinking a mind, never out-gunning a number. A plan that beat a naive fleet stops working against a sharper one not because the numbers grew but because the fleet no longer falls for it — so the player must <em>think again</em>. That is the fun, and it is why difficulty lives on the estimator.</p></div>
+</section>
+
+<section id="cognition">
+<h2><span class="n">4</span>The Cognition Ramp — Fine, Continuous, Felt Not Seen</h2>
+<p class="lead">The enemy mind does not step up in tiers. It <strong>creeps</strong> — a little sharper each battle, across the whole War, so slowly the player rarely catches the exact moment it changed.</p>
+<div class="s pillar"><div class="ct">The experience we are designing for</div><p>The target feeling is not "a hard wall appeared." It is: <em>"my usual opening isn't landing like it used to… why? What can I do differently?"</em> The fleet that used to keep shelling the gun you relocated now probes the empty spot first. The scouts that never spotted your forward battery now do. The raiders that hit where fear was low now hit where you're <em>about</em> to move it. No banner, no tier-up — just a rising, quiet pressure to adapt. Frustration becomes curiosity, and curiosity is the engine of a thinking game.</p></div>
+<div class="s"><div class="ct">How it rises</div><p>Cognition is a <strong>monotonic per-battle creep</strong>, not a combinatorial layer — it does not join A–E (that would wreck the clean 32-campaign math). It behaves like the castle-triage and piece-tier ramps: it advances with battle number, independent of which layers a campaign exercises. Early War (Campaigns 1–~8): naive estimators — short sight, fast fear-decay, trusts stale contacts, reacts to the board as it stands. Mid War (~9–~22): the estimator tightens — slower decay, longer sight, begins to verify. Late War (~23–32): the sharp forms — verification over trust, anticipation over reaction, threading seams it used to blunder. The named apexes from the roster (Farseer, Counter-Battery, Pathfinder, Nightstalker) are the <em>far</em> end of a smooth slope, not discrete unlocks.</p></div>
+<div class="s warn"><div class="ct">The hard constraint: subtle, but observable</div><p>Subtlety must never cross into invisibility. The GDD's own law — the player always understands why they lost — still binds. A sharper mind therefore has to <em>show</em> in behaviour the attentive player can read: the fleet that now verifies a gone-quiet fix visibly <em>probes</em> the spot before committing; the anticipating raider visibly strikes the flank you just uncovered. So "why isn't my strategy working?" always has a discoverable answer — "they stopped falling for the bait; they're checking now." If the rise is felt but its cause can never be seen, the game reads as cheating, and the curiosity we are chasing curdles into resentment. Subtle in <em>magnitude</em>, legible in <em>kind</em>.</p></div>
+</section>
+
+<section id="roster">
+<h2><span class="n">5</span>Roster Mapping &amp; Debut Schedule</h2>
+<p>The 190-battle generator's "Key Enemies" column still speaks the old type vocabulary. It remaps onto the lineage roster:</p>
+<table>
+<tr><th>GDD code</th><th>Lineage</th></tr>
+<tr><td>WS Warship</td><td>Bombard</td></tr>
+<tr><td>Sc Scout</td><td>Recon</td></tr>
+<tr><td>Tr Transport</td><td>Runner (+ its troops)</td></tr>
+<tr><td>Ca Carrier</td><td>Skyfall (+ bombers)</td></tr>
+<tr><td>FS Fire Ship</td><td>Sower (area-deny) / Breacher (kamikaze burn)</td></tr>
+<tr><td>SS Shield</td><td>Bulwark (ship) / Aegis (troop)</td></tr>
+<tr><td>HS Hospital</td><td>Chirurgeon-Fleet</td></tr>
+<tr><td>ST Siege Ship</td><td>Breacher</td></tr>
+<tr><td>Sa Sappers</td><td>Breacher / Sapper troop</td></tr>
+<tr><td>Bm Bomber</td><td>bombers (Skyfall-launched)</td></tr>
+<tr><td>BR Ram</td><td>Linebreaker troop / Breacher</td></tr>
+</table>
+<p>Old Artillery Barge → Leviathan; old Torpedo Boat → Corsair. Regenerating the generator against this vocabulary — and adding a cognition-tier column (§4) — is the mechanical follow-up.</p>
+<div class="s"><div class="ct">Expansion-lineage debut schedule</div><p>The channel-exploit lineages have no old-code equivalent, so they enter as Layer-B <em>breadth</em> introductions, one at a time, on the Introduce→Isolate→Combine law:</p>
+<ul>
+<li><strong>Provocateur &amp; Corsair</strong> — the Pairs stage (Campaigns 7–16): the force-exposure and hit-and-run pressures, once the player is comfortable reading the fear grid.</li>
+<li><strong>Wraith</strong> — mid-Triples (~Campaigns 20–23): stealth / fog exploitation, after the Reveal tower is a familiar tool.</li>
+<li><strong>Mimic</strong> — late, the Quads stage (Campaigns 27–31): the deception on-ramp (the fleet baiting <em>back</em>), reserved for a player who has mastered baiting.</li>
+<li><strong>Herald, Leviathan, Mimic (boss forms)</strong> — the finale only, as promoted flagship chassis.</li>
+</ul></div>
+</section>
+
+<section id="toolkit">
+<h2><span class="n">6</span>Toolkit Teaching Order <span class="pill">the counter arrives with its threat</span></h2>
+<p>The locked 8 cannons and 7 towers obey the same Introduce→Isolate→Combine law as everything else: each is introduced <strong>with, or just before, the threat it answers</strong> — taught in isolation, then folded in. A new pressure and its counter arrive as a matched pair, in a battle where nothing else is new.</p>
+<div class="s"><div class="ct">Cannons</div>
+<ul>
+<li><strong>Standard</strong> — Campaign 1, the baseline every board opens on.</li>
+<li><strong>Suppressor</strong> — early, the first survivability tool once incoming fire mounts.</li>
+<li><strong>Piercer</strong> — with the first Bulwark / heavy hull.</li>
+<li><strong>Interdictor</strong> + <strong>Breaker</strong> — with the first Breacher / breakthrough threat (kill-at-the-wall and buy-time, taught together).</li>
+<li><strong>Marksman</strong> — with the first back-line support (Quartermaster / Chirurgeon).</li>
+<li><strong>Splasher</strong> — with the first stacked troop clump; <strong>Saturation</strong> with the first wide swarm or bomber cloud.</li>
+</ul></div>
+<div class="s"><div class="ct">Towers</div>
+<ul>
+<li><strong>Stonewright</strong> first — repair is the gentlest amplifier and fits the "fix what broke" loop the player already lives in.</li>
+<li><strong>Spotter</strong> (coverage), then <strong>Flare</strong> (first fog / stealth), <strong>Jammer</strong> (first fast juker), <strong>Camouflage</strong> (first Contact-hunter that punishes exposed guns), <strong>Powder</strong> and <strong>Rally</strong> as output and verb-speed begin to matter.</li>
+</ul></div>
+<div class="s"><div class="ct">Why symmetry matters</div><p>Introducing a threat and its answer together means the player never faces an unanswerable wave and never holds a tool with no purpose. Every new piece — enemy or counter — enters against a background already mastered, so the <em>only</em> new thing to reason about is the interaction itself. That is the teaching law doing double duty, and it is what keeps the widening system legible as it grows.</p></div>
+</section>
+
+<section id="foundation">
+<h2><span class="n">7</span>Foundational Tensions — The Load-Bearing Risks</h2>
+<p class="lead">An honest read of the foundation, judged by one question: does it keep <em>strategy</em> the fun? The core is sound and mutually reinforcing. These are the tensions that, mishandled, quietly convert the thinking game back into an arcade or a solved puzzle. Foundation, not polish.</p>
+<div class="s warn"><div class="ct">1 · Determinism vs renewable strategy — the deepest tension</div><p>A deterministic puzzle with one solution stops being strategy the instant it is solved — it becomes execution of a memorised line. The design leans hard on determinism ("retrying is learning"). That is only true if each board has a <strong>wide space of viable solutions</strong>, not a single dominant one. If boards collapse to one optimal answer, replay is rote and "strategy is the fun" fails after first solve. The cognition ramp and the no-forced-playstyle rule protect this (a memorised line breaks when the mind sharpens; every threat has several answers) — but board design must <em>actively</em> preserve solution-space width. This is the number-one imperative for the north star.</p></div>
+<div class="s warn"><div class="ct">2 · Retry can bypass reasoning</div><p>Determinism plus retry has a dark side: a player can brute-force a board by memorising spawn timings instead of <em>reasoning</em> about the fleet — pattern-matching, not strategy. The line between "retry to understand" and "retry to memorise" must fall on the side of understanding, which the cognition creep helps enforce (memorisation ages out) but which also argues against boards whose only solution is a single precise, memorised sequence.</p></div>
+<div class="s warn"><div class="ct">3 · Legibility under load — the make-or-break</div><p>The deepest ambient risk. The system is dimensional: cannons as concept×domain, enemies as lineage×axis, memory as three channels, five layers, seven towers, triage, the cognition creep, the Fight verbs. Depth is only strategic if it is <em>legible</em> — the player must reason about interactions and predict outcomes. Past that ceiling, "strategy" degenerates into guessing or guide-following, and the whole design lives or dies here. Two things hold the line: the <strong>generators</strong> (you don't memorise 112 ships, you read any ship as lineage×axis; you don't memorise 24 cannons, you read them as concept×domain) and the <strong>legibility law</strong> (every enemy has a tell, the fear grid is visible, outcomes are deterministic). The imperative: as systems combine, protect legibility above all — an illegible interaction is a non-strategic one.</p></div>
+<div class="s warn"><div class="ct">4 · Enclosure must stay a choice, not a dominant turtle</div><p>The spine is that enclosed guns are ghosts the fleet can't target. If enclosure were pure upside, the dominant strategy would be "turtle everything" and the game would solve itself. It is saved by real cost and real counters — the Build puzzle makes full enclosure genuinely hard (limited pieces, damage carryover), and breakthrough threats (Breacher, troops that breach and reveal from inside, bombers over the walls, the Sower denying ground) punish the pure turtle. The tension to protect: enclosure stays a <em>tradeoff</em> — safe but spatially costly and coverage-limited — never strictly better, never strictly punished.</p></div>
+<div class="s warn"><div class="ct">5 · The Fight phase must reward reading, not reaction</div><p>A thinking game with a real-time phase risks sliding into arcade — plugging holes by fast re-tasking (APM). The AoR-crawl change is the key defence: slow, costed re-tasks turn the Fight into "watch and nudge," deliberate not twitchy, and the Deploy-first philosophy keeps live actions rare. The line to hold: the Fight rewards <em>anticipation and reading the mind</em>, not reflexes. If success ever comes down to speed, the identity has eroded.</p></div>
+<div class="s"><div class="ct">The verdict</div><p>The core — a blind, deterministic mind whose difficulty is its <em>intelligence</em>; enclosure discipline; castle triage; no forced playstyle; difficulty by cognition, not stats — is genuinely elegant and rare. It is a real answer to the treadmill problem and points squarely at strategy-as-fun. The surface is ambitious and sits near the ceiling of manageable dimensionality; the layer set has mild internal overlap (A/D both environmental; C/E both Build-difficulty; E and triage both enclosure pressure) that a later tightening could address but need not. The whole is elegant <em>if and only if</em> legibility is protected as the systems fold together — that is the foundation's single point of failure, and everything above (the generators, the tells, the determinism, the matched teaching) exists to hold it. Build to keep the player reasoning, and strategy will be the fun.</p></div>
+</section>
+
+</div>
+<footer>Rivenkeep — Campaign Layout &amp; Progression · v2.0.0 · Meshing the GDD skeleton with the cognition model &amp; the locked cast · Foundation for a thinking game</footer>
+</body>
+</html>

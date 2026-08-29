@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — The Why</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
+header{padding:46px 40px 30px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+header .sub{font-size:.85rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim)}
+.ctn{max-width:1040px;margin:0 auto;padding:0 40px}
+nav{position:sticky;top:0;z-index:110;background:rgba(10,12,16,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:9px 40px;display:flex;gap:15px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}nav a:hover{color:var(--accent)}
+section{padding:34px 0;border-bottom:1px solid var(--border)}
+h2{font-family:'Chakra Petch',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+h2 .n{color:var(--dim);font-size:.9rem;margin-right:10px}
+h3{font-family:'Chakra Petch',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:22px 0 8px;color:var(--accent)}
+p{margin-bottom:10px;font-size:.9rem}
+a{color:var(--link)}em{color:var(--text);font-style:italic}
+code{font-family:'IBM Plex Mono',monospace;font-size:.82em;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--gold)}
+ul{margin:6px 0 12px 20px}li{font-size:.88rem;margin-bottom:6px}
+.s{background:var(--surface);padding:14px 18px;margin:14px 0;border-radius:0 6px 6px 0;border-left:3px solid var(--border)}
+.s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.8rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;color:var(--gold)}
+.s.pillar{border-left-color:var(--accent)}.s.warn{border-left-color:var(--warn)}.s.warn .ct{color:var(--warn)}.s.future{border-left-color:var(--purple)}.s.future .ct{color:var(--purple)}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{padding:7px 10px;border:1px solid var(--border);font-size:.8rem;text-align:left;vertical-align:top}
+th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.64rem;letter-spacing:1px}
+.tag{display:inline-block;padding:1px 7px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.t-land{background:rgba(139,195,74,.15);color:var(--land);border:1px solid rgba(139,195,74,.35)}
+.t-sea{background:rgba(79,195,247,.13);color:var(--sea);border:1px solid rgba(79,195,247,.35)}
+.t-air{background:rgba(206,147,216,.15);color:var(--air);border:1px solid rgba(206,147,216,.35)}
+.full{color:var(--success);font-weight:600}.red{color:var(--danger)}.mid{color:var(--warn)}.dim{color:var(--dim)}
+.lead{font-size:1.02rem;color:var(--text)}
+.pill{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;background:var(--surface2);border:1px solid var(--border);color:var(--dim)}
+figure{margin:16px 0;text-align:center}figcaption{font-size:.76rem;color:var(--dim);margin-top:8px;font-style:italic}
+footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
+@media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.35rem}.ctn{padding:0 16px}nav{padding-left:16px;padding-right:16px}th,td{font-size:.73rem;padding:5px 6px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Rivenkeep — The Why</h1>
+<div class="sub">Design Philosophy &amp; First Principles · The Standing Guide for Every Build Decision</div>
+<div class="meta">v2.0.0 · The foundation doc — the "why" to the GDD's "how" · Read before every design decision · Companions (the "how"): GDD, Fleet Memory, Cannon &amp; Tower, Ships, Campaign, Victory</div>
+</header>
+
+<nav>
+<a href="#read">How to Use This</a>
+<a href="#northstar">North Star</a>
+<a href="#fair">Skill, Not Luck</a>
+<a href="#principles">The Principles</a>
+<a href="#thinking">What "Thinking" Means</a>
+<a href="#tensions">Foundational Tensions</a>
+<a href="#standing">The Commitment</a>
+</nav>
+
+<div class="ctn">
+
+<section id="read">
+<h2><span class="n">1</span>How to Use This Doc</h2>
+<p class="lead">Every other doc says <em>how</em> Rivenkeep works — the GDD and the module docs (Fleet Memory, Cannon &amp; Tower, Ships, Campaign) hold mechanics, numbers, structure. This doc says <strong>why</strong>. It is the reasoning the "how" has to serve, and it is the standard every future decision is measured against.</p>
+<div class="s pillar"><div class="ct">The rule</div><p>When a design choice comes up — a new mechanic, a tuning value, a cut, a feature — it is not judged by "is it cool" or "is it hard." It is judged by the principles below, and above all by the one test in §2. If a choice can't be defended here, it doesn't belong in the "how," however clever it is. When this doc and a "how" doc disagree about intent, this doc wins; the "how" gets fixed.</p></div>
+<div class="s warn"><div class="ct">The standing commitment</div><p>This build proceeds on <strong>brutal honesty at every step</strong> (§7). The foundational tensions in §6 are not solved — they are permanent load-bearing risks that every step must be checked against. This doc is updated as the thinking sharpens; it is never allowed to drift into comfortable self-congratulation.</p></div>
+</section>
+
+<section id="northstar">
+<h2><span class="n">2</span>The North Star — Strategy Is the Fun</h2>
+<p class="lead">Rivenkeep is a <strong>thinking game</strong>. The fun is strategy: reading a situation, choosing among real options, and outwitting an opponent. It is not a reflex game, not a spectacle game, not a collection game. Everything else is in service of that or it is cut.</p>
+<div class="s pillar"><div class="ct">The one test — apply it to every decision</div><p><strong>Does this keep the player making an interesting decision against a mind — rather than executing a memorised optimisation against a number?</strong> If it deepens the decision, it belongs. If it lets the player stop thinking (a dominant build, a stat check, a rote line), it is a failure however fun it looks in isolation. "Interesting decision" has a precise meaning here: several options, none strictly dominant, each with legible consequences the player can reason about before committing.</p></div>
+<div class="s"><div class="ct">Thinking, not arcade — the concrete line</div><p>A thinking game and an arcade game can look similar for a second and are opposites underneath. The dividing line: <em>success comes from what you decided, never from how fast you can act.</em> Reaction speed, execution precision under time pressure, and twitch are arcade currencies and are deliberately kept out of the win condition. The Build puzzle is untimed thinking; the Fight is "watch and nudge," not plate-spinning (this is why the AoR re-task was made a slow, costed crawl rather than an instant snap). If a battle is ever won by clicking faster, the identity has broken.</p></div>
+</section>
+
+<section id="fair">
+<h2><span class="n">3</span>Skill, Not Luck — the Fairness That Makes It Epic</h2>
+<p class="lead">Because the game is deterministic, two players facing the same battle face <em>exactly</em> the same problem. There is no RNG to bless one and curse another. The only variable is <strong>how well each player played</strong> — and that is what makes Rivenkeep both fair and, potentially, big.</p>
+<div class="s pillar"><div class="ct">Why determinism is a "why," not just a "how"</div><p>Determinism is usually treated as a technical choice. Here it is a <em>values</em> choice. Same spawns, same terrain, same destinations, for everyone, every time. That means: a loss is always the player's to own ("I didn't solve it," never "the dice hated me"), which converts frustration into motivation to retry. And it means <strong>leaderboards measure skill, not fortune</strong> — a ranking is an honest comparison of decision quality, so competition is real and a strategy guide is even possible. A game where the difference between players is <em>how they think</em>, not who got lucky, is a game people can respect, master, and argue about. That is the ground an epic, widely-played game stands on.</p></div>
+<div class="s warn"><div class="ct">The obligation determinism creates</div><p>Fairness is only delivered if the loss is <em>legible</em> — the player must be able to see why they lost and what they could have done. Determinism without legibility is just an unfair puzzle with a hidden answer. So the fairness promise of §3 is only kept if the legibility principle of §4 is kept. They stand or fall together.</p></div>
+</section>
+
+<section id="principles">
+<h2><span class="n">4</span>The Guiding Principles</h2>
+<p>The load-bearing design laws. Each exists to protect the north star; each has teeth (it rules choices in and out).</p>
+<div class="s pillar"><div class="ct">Difficulty is cognition, not stats</div><p>Enemies get harder by <em>thinking better</em> — sharper estimators, not bigger health bars or faster guns. Inflating numbers converts strategy into optimisation (find the damage build, repeat); escalating intelligence keeps the decision space alive forever. Any hull/gun growth is a minor component <em>inside</em> the one cognition-led improvement curve, never a parallel stat-treadmill. This is the single most important principle and the reason the game can stay strategic to Battle 190.</p></div>
+<div class="s pillar"><div class="ct">Legibility is the beam that holds the roof</div><p>Depth is only strategic if the player can <em>reason</em> about it and predict outcomes. Every enemy has a tell; the fear grid is visible; outcomes are deterministic; and large spaces are made legible by <strong>generators</strong> (read any ship as lineage×axis, any cannon as concept×domain — never memorise a list). An interaction the player can't reason about is not a hard decision, it is a coin flip — and a coin flip is not strategy. When depth and legibility conflict, legibility wins.</p></div>
+<div class="s pillar"><div class="ct">Determinism with a wide solution space</div><p>A deterministic board with <em>one</em> answer is a lock with one key — solved once, then dead. Determinism is only compatible with strategy if every board admits <strong>many viable solutions</strong>, no single dominant line. Board design must actively protect solution-space width; a board that funnels to one optimal sequence has failed the north star even if it is "hard."</p></div>
+<div class="s pillar"><div class="ct">No forced playstyle</div><p>The fleet gets harder to <em>exploit</em>, never harder to beat <em>only one way</em>. Every threat has more than one answer; the clever techniques (feint, bait, deception) are the <em>elegant</em> path, never the mandatory one. A player who refuses to feint can still win every board. Any enemy beatable by exactly one trick is a bug — it has replaced a decision with a requirement.</p></div>
+<div class="s pillar"><div class="ct">Variety of minds is the strategic engine</div><p>Because a solved board stops being strategic, renewable strategy comes from the <em>breadth of different minds</em> the campaign marches past the player — lineage × axis × cognition-creep × geometry. Every board is a fresh mind to read. This makes variety load-bearing, not decorative: the campaign layout is where "strategy is the fun" is actually won or lost.</p></div>
+<div class="s"><div class="ct">Supporting laws</div>
+<ul>
+<li><strong>Enclosure is a tradeoff, never a dominant turtle.</strong> Enclosed guns are safe (ghosts to the fleet) but spatially costly and coverage-limited; breakthrough threats punish the pure turtle. Protect the tension — never let hiding be strictly best or strictly punished.</li>
+<li><strong>The Fight rewards reading, not reaction.</strong> Anticipation and belief-manipulation win the Fight; speed does not. Keep live actions rare and costed.</li>
+<li><strong>Introduce → Isolate → Combine.</strong> Never more than one new thing at a time — for enemies, terrain, <em>and</em> the toolkit. Challenge comes from combining the understood, never from confusion.</li>
+<li><strong>Dream big, then edit down.</strong> Generate wide first (no scope-scolding in ideation); cut later, deliberately, against these principles — and preserve the superset when we cut, so nothing good is lost early.</li>
+</ul></div>
+</section>
+
+<section id="thinking">
+<h2><span class="n">5</span>What "Thinking" Actually Means Here</h2>
+<p class="lead">Be precise about the kind of thinking this game rewards, because it shapes everything. The fleet is <strong>deterministic</strong> — a fixed policy over its seed and observation-history. "Cognition" is a <em>better fixed policy</em>. The player is not dueling a live, adapting opponent; they are <strong>learning and exploiting a legible fixed mind.</strong></p>
+<div class="s pillar"><div class="ct">This is a good choice — and its consequences must be owned</div><p>A fixed, legible mind is exactly what makes the game fair, solvable, replayable, and rankable (§3). But it means the thinking is the <em>player's</em> act of reading a system, not an ongoing arms race — and therefore <strong>within a single board, once the mind is read, the board is solved.</strong> The "signaling game" — baiting, feinting, denying the fleet contacts — is real depth, but it is <em>puzzle</em> depth (find the exploit in a fixed policy), not adversarial depth (outwit a reacting rival). Design honestly for what it is.</p></div>
+<div class="s pillar"><div class="ct">Where the renewable strategy actually lives</div><p>Follows directly: since a solved board is no longer strategy, the game stays strategic only through the <strong>stream of genuinely different minds</strong> across the campaign. The renewability is <em>between</em> boards, not <em>within</em> one. So the strategic lifeblood of the game is variety-of-minds (§4), delivered by the campaign layout. If boards repeat their strategic <em>shape</em> — same read, same answer, new paint — the game solves itself no matter how elegant the engine. The campaign doc is not "content planning"; it is where the core promise is kept or broken.</p></div>
+<div class="s"><div class="ct">The subtle-mind constraint this forces</div><p>The cognition creep must be <em>felt but observable</em>: subtle in magnitude (the player rarely catches the exact moment it sharpened) yet legible in kind (the sharper behaviour shows, so "why isn't my old plan working?" always has a discoverable answer — "they stopped falling for the bait; they verify now"). Felt-but-invisible reads as cheating and poisons the fairness promise; felt-but-observable turns frustration into the curiosity that <em>is</em> the fun.</p></div>
+</section>
+
+<section id="tensions">
+<h2><span class="n">6</span>The Foundational Tensions — Permanent Load-Bearing Risks</h2>
+<p class="lead">These are not solved and will not be "finished." They are the pressure points where the thinking game quietly decays into an arcade grind or a dead puzzle. Every step is checked against them. Honest status, not reassurance.</p>
+<div class="s warn"><div class="ct">1 · Determinism vs renewable strategy — the deepest tension</div><p>Determinism gives the fair, solvable puzzle; strategy needs an open decision space. They coexist <em>only</em> if every board has many viable solutions (§4) and if the campaign supplies fresh minds (§5). A board that solves to one line, or a campaign that repeats strategic shapes, breaks the north star while still feeling "hard." Number-one thing to get right.</p></div>
+<div class="s warn"><div class="ct">2 · Retry can bypass reasoning</div><p>Determinism + retry has a dark side: brute-forcing a board by memorising spawn timings instead of reasoning about the fleet — pattern-matching dressed as strategy. The line must fall on <em>understanding</em>. The cognition creep helps (memorised lines age out), but it argues against boards whose only solution is one precise memorised sequence.</p></div>
+<div class="s warn"><div class="ct">3 · Legibility under load — the single point of failure</div><p>The system is deeply dimensional (cannons concept×domain, enemies lineage×axis, three memory channels, five layers, seven towers, triage, cognition creep, the Fight verbs). Depth is strategic only while legible; past the ceiling it degenerates into guessing or guide-following and the whole edifice fails at once. The generators and the legibility law hold the line. Guard legibility above every other consideration as systems combine — this is the one thing that, if lost, loses everything.</p></div>
+<div class="s warn"><div class="ct">4 · Enclosure dominance (the turtle) &amp; 5 · the Fight sliding to arcade</div><p>If enclosure were pure upside, "turtle everything" would solve the game — it is saved only by the hard Build puzzle and breakthrough threats, so keep it a genuine tradeoff. And the real-time Fight is the one arcade risk — the costed AoR-crawl and Deploy-first design keep it deliberate, but the line to hold forever is: the Fight rewards reading, never reflexes.</p></div>
+<div class="s"><div class="ct">The elegance verdict</div><p>The <em>core</em> — a blind, deterministic mind whose difficulty is its intelligence; enclosure discipline; castle triage; no forced playstyle; cognition over stats — is genuinely elegant and rare, a real answer to the treadmill problem, and it points straight at strategy-as-fun. The <em>surface</em> is ambitious and sits near the ceiling of manageable dimensionality; the difficulty-layer set has mild internal overlap (terrain/weather both environmental; pieces/territory both Build-difficulty; territory and triage both enclosure pressure) — tolerable, tightenable later, not worth breaking the clean combinatorics for now. The whole is elegant <strong>if and only if</strong> legibility survives the fold-together. Build to keep the player reasoning about a fresh mind each board, and strategy will be the fun.</p></div>
+</section>
+
+<section id="standing">
+<h2><span class="n">7</span>The Commitment</h2>
+<div class="s pillar"><div class="ct">Brutal honesty at every step</div><p>As the game is built, each step gets an honest read against this doc — what it strengthens, what it risks, where it strains a principle or a tension. No step is waved through because it is exciting or because momentum is nice. Praise and risk are reported together, calibrated. When a step violates a principle, that is said plainly, and the step is changed or the principle is consciously and explicitly revised here — never quietly ignored.</p></div>
+<div class="s"><div class="ct">This doc is alive</div><p>The principles and tensions above are the current best understanding, not scripture. When play or prototyping teaches us something sharper, this doc changes first, and the "how" follows. The foundation is only worth anything if it stays honest.</p></div>
+</section>
+
+</div>
+<footer>Rivenkeep — The Why · v2.0.0 · Design philosophy &amp; first principles · The "why" to the GDD's "how" · Read before every design decision · A thinking game where strategy is the fun</footer>
+</body>
+</html>

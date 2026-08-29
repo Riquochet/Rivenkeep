@@ -47,7 +47,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <header>
 <h1>Rivenkeep — Cannon &amp; Tower Design</h1>
 <div class="sub">The Defender's Combat Model · Commander, Not Soldier</div>
-<div class="meta">v1.9.1 · Module of the GDD (v6.2.5) · Source of truth for cannons, groups, Areas of Responsibility &amp; towers · Companion docs planned: Ships, Troops</div>
+<div class="meta">v2.0.0 · Module of the GDD (v6.3.0) · Source of truth for cannons, groups, Areas of Responsibility &amp; towers · Companions: Fleet Memory, Ships (with Troops folded in), Campaign, Victory · Governed by The Why</div>
 </header>
 
 <nav>
@@ -62,6 +62,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <a href="#nurture">Health</a>
 <a href="#archetypes">Archetypes</a>
 <a href="#towers">Towers</a>
+<a href="#shortlist">Shortlist</a>
 <a href="#future">Future</a>
 <a href="#open">Open Questions</a>
 </nav>
@@ -189,14 +190,17 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 
 <section id="verbs">
 <h2><span class="n">6</span>The Fight-Phase Verbs</h2>
-<p>Auto-fire runs your plan on its own. When it breaks you have <strong>three group command-verbs</strong> — re-task the AoR, switch domain, and fire-control. The two <em>positional</em> verbs cost <strong>silent time</strong> (the group can't fire while it happens). Both can be <strong>cancelled</strong>, but they cancel differently: an AoR move just <em>stops</em> (aiming is free to abandon), while a domain switch has to be <em>un-done</em> — the ammo has to come back out (see below). The two also <strong>stack</strong> (a group can re-task and switch domain at once: doubly silent, doubly committed).</p>
+<p>Auto-fire runs your plan on its own. When it breaks you have <strong>three group command-verbs</strong> — re-task the AoR, switch domain, and fire-control. The two <em>positional</em> verbs both take time and desaturate the group, but they cost <em>differently</em>. A <strong>domain switch</strong> goes fully <strong>silent</strong> (the group can't fire while it reloads). An <strong>AoR move keeps firing</strong> — at reduced rate and accuracy — while its zone <strong>crawls</strong> to the new ground (see below). Both can be <strong>cancelled</strong>, and they cancel differently too: an AoR move <em>freezes where it is</em>, while a domain switch has to be <em>un-done</em> — the ammo has to come back out. The two also <strong>stack</strong> — a group can re-task and switch domain at once, in which case the domain reload keeps it silent while its coverage crawls, so when the ammo finishes the guns come back online already re-laid on the new ground.</p>
 <h3>A · Re-task the AoR</h3>
 <ul>
-<li><strong>Hold-and-drag</strong> the group's zone to new ground. A <strong>soft-lock holds until you lift your finger</strong>, so you can carefully place a big lazy move.</li>
-<li><strong>Cooldown scales with move distance</strong> — small nudges are cheap; hauling coverage from the east flank to the west is a long silent gap and a real gamble (you uncover the east to cover the west).</li>
-<li>The group and its AoR <strong>desaturate</strong> during the move.</li>
-<li><strong>Cancel is instant</strong> — let go / tap away and the guns simply resume from wherever the zone currently sits. Aiming costs nothing to abandon (unlike a domain switch, which must be un-loaded).</li>
+<li><strong>Hold-and-drag</strong> the group's zone to new ground. A <strong>soft-lock holds until you lift your finger</strong>, so you can carefully place a big lazy move; on release, the zone <strong>crawls</strong> to its new home.</li>
+<li><strong>The AoR travels — it does not teleport.</strong> The zone's centre slides toward the new position at a <strong>baseline one grid per tick</strong> (the <a href="#towers">Rally Flag tower</a> and certain cannon identities modify this). A small nudge finishes almost at once; hauling coverage from the east flank to the west is a long crawl and a real gamble — you uncover the east progressively as the west comes online.</li>
+<li><strong>The guns keep firing, but degraded, for the whole crawl.</strong> Unlike a domain switch, the group does <em>not</em> go silent — it fires throughout at <strong>reduced rate of fire and reduced accuracy</strong>. Think of it as the crews working out a <strong>new gun-laying</strong> on the move: shots are slower and looser until the lay settles.</li>
+<li><strong>Firing solutions follow the AoR.</strong> The guns engage whatever the <em>moving</em> zone currently covers, tracking the crawl — they do not keep shooting the old ground. Old targets fall out of the zone as its centre slides off them; new ones enter as it arrives.</li>
+<li><strong>On completion, full stats snap back instantly.</strong> The moment the zone reaches its destination, rate of fire and accuracy are <strong>restored to normal</strong> — the re-lay is done. There is no lingering penalty once the move finishes.</li>
+<li><strong>Cancel freezes the crawl in place.</strong> Let go / tap away mid-move and the zone <strong>stops wherever it currently sits</strong> — it does not snap back to the start and does not jump ahead. The guns then finish laying onto that partial position and recover to full. (Contrast the domain switch, whose cancel must <em>reverse</em> the reload.)</li>
 </ul>
+<div class="s"><div class="ct">Why this makes AoR a different cost than a domain switch</div><p>The two positional verbs feel distinct on purpose. A <strong>domain switch</strong> takes the group fully <em>offline</em> (no fire) and its cancel must be <em>un-done</em> — reload reversed. An <strong>AoR move</strong> never goes offline; it pays in <em>degraded fire during a crawl</em>, restores the instant it lands, and its cancel simply <em>freezes</em> where it is. So re-tasking is the softer, always-firing adaptation — a moving, weakened coverage gradient — while a domain switch is the hard, silent commitment. That keeps AoR the main live verb without making it free: a long haul is a real, readable vulnerability window.</p></div>
 <h3>B · Switch domain (load new ammo)</h3>
 <ul>
 <li><strong>Per group, whole group switches together.</strong> Crews clear the old ammo and load the new — <strong>no cannon in the group fires</strong> during the reload. A <strong>countdown renders over the group</strong> and the group + AoR desaturate while offline. This is <em>panic mode</em>: used when a threat you can see coming (bombers launched from the back rank, visibly crossing the map) is about to enter a zone loaded for the wrong domain.</li>
@@ -211,7 +215,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <div class="s"><div class="ct">Why this is the strongest of the three verbs</div><p>Fire-control ties three systems into one decision. Because of <a href="#falloff">falloff</a>, a shot at the <em>centre</em> of the zone lands far more reliably than one at the edge; because of the crazy Ivan, your <em>first</em> volley is your cleanest one before the ship starts juking. So <strong>holding fire until the ship reaches your centre, then unloading a coordinated alpha strike, can out-damage firing early and chasing an evading target.</strong> Fire early = chip damage but you trigger evasion and shoot at edge odds; hold = a big, high-percentage opening salvo, at the risk the ship damages your wall or slips through while you wait. Pure commander timing — no aiming — and it finally makes the falloff gradient something you actively <em>play</em>, not just place around.</p></div>
 <h3>Abilities — moved to Future</h3>
 <p>A cannon-focused Stonwryt-boost verb was considered as a third live action but <strong>parked to protect the verb budget</strong> (see Future). The Fight keeps <strong>three command-verbs only</strong>.</p>
-<div class="s"><div class="ct">Honest flag: guard the verb budget</div><p>Three command-verbs (AoR / domain / fire-control) is the ceiling for a "watch and nudge" Fight — the plate-spinning we deliberately designed <em>out</em>. It stays comfortable because <strong>two of the three (domain and fire-control) are normally set in Deploy</strong> and only touched in a crisis, leaving AoR re-tasking as the main live action. This is exactly why Abilities was pushed to Future: <strong>do not add a fourth live verb.</strong></p></div>
+<div class="s"><div class="ct">Honest flag: guard the verb budget</div><p>Three command-verbs (AoR / domain / fire-control) is the ceiling for a "watch and nudge" Fight — the plate-spinning we deliberately designed <em>out</em>. It stays comfortable because <strong>two of the three (domain and fire-control) are normally set in Deploy</strong> and only touched in a crisis, leaving AoR re-tasking as the main live action — and even that now carries a transitional cost (degraded fire while the zone crawls), so it rewards deliberate moves over twitchy ones. This is exactly why Abilities was pushed to Future: <strong>do not add a fourth live verb.</strong></p></div>
 <div class="s"><div class="ct">Set it in Deploy, adapt in the Fight</div><p>Each group's starting <strong>domain, AoR, and fire-control stance are set during Deploy</strong>. A well-scouted commander walks in already loaded and stanced for the right threat on the right approach; changing mid-fight is the exception, not the default. Lost to bombers last run? Pre-load a group to Air <em>next</em> run — the plan absorbs the lesson.</p></div>
 </section>
 
@@ -288,8 +292,50 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <div class="s"><div class="ct">Fixed rules &amp; the pair-down</div><p>Towers are <strong>not upgradeable</strong> and give <strong>no in-battle-improvable</strong> effect — the <em>cannons</em> stay the special, invested pieces. Towers are <strong>destructible</strong>, so <strong>enemies prioritise them</strong> (the Decoy Mast weaponises that fact). The pair-down keeps the <strong>axes fixed</strong> and chooses the best <em>expression</em> per axis against the bestiary — and cuts any axis the ships never stress. So a tower earns its slot only when some enemy makes its subsystem matter. (Parked: Relay — see Future.)</p></div>
 </section>
 
+<section id="shortlist">
+<h2><span class="n">11</span>The Recommended Shortlist <span class="pill" style="color:var(--warn)">a proposal · nothing above is cut</span></h2>
+<p class="lead">§9 and §10 stay the full superset — every one of the 16 archetypes and every tower expression is preserved. This section layers a <strong>recommendation</strong> on top: the shippable set the bestiary actually makes necessary, read off the Ships doc's Counter-Web Map (§12 there). It is a proposal for the joint pair-down, not a decision — treat §9/§10 as the menu and this as the suggested order.</p>
+<div class="s pillar"><div class="ct">The method, and the asymmetry</div><p>Keep a cannon only where some enemy makes its job necessary <em>and</em> it can't collapse into another lever or a tower; every proposed cut leaves its target answerable another way (the no-forced-playstyle rule, applied in both directions). The cut is deliberately <strong>asymmetric</strong>: the defender toolkit stays small — legibility beats variety — while the enemy roster stays wide and is <em>staged</em> across the campaign rather than culled, because breadth is the anti-boredom budget.</p></div>
+<h3>Cannons — 8 of the 16</h3>
+<p>Six locks, plus two that fill the widest gap. The kit spans: baseline · armour · priority · wall · survive · position · clump · wide.</p>
+<table>
+<tr><th>Keep</th><th>Role it holds</th><th>Why the bestiary needs it</th></tr>
+<tr><td><strong>Standard</strong></td><td>baseline / teacher</td><td>The default every board opens on — non-negotiable.</td></tr>
+<tr><td><strong>Piercer</strong> <span class="dim">(LW)</span></td><td>armour-crack</td><td>Bulwark, Leviathan, Aegis, Heavy Bomber, Mimic — Leviathan exists for it.</td></tr>
+<tr><td><strong>Marksman</strong> <span class="dim">(LW)</span></td><td>priority-delete</td><td>The whole back-line family (Quartermaster, Herald, Chirurgeon, Mimic) is unanswerable without it.</td></tr>
+<tr><td><strong>Interdictor</strong></td><td>last line at the wall</td><td>The breakthrough answer — Breacher, Runner-landing, Ram.</td></tr>
+<tr><td><strong>Suppressor</strong></td><td>make a zone survivable</td><td>The most-stressed lever in the set (eight lineages).</td></tr>
+<tr><td><strong>Breaker</strong></td><td>knockback / buy time</td><td>The only knockback — the unique time-buy vs a committed hull.</td></tr>
+<tr><td><strong>Splasher</strong></td><td>clump-clear</td><td>Troop stacking (×4) deliberately makes clumps the primary dense threat.</td></tr>
+<tr><td><strong>Saturation</strong></td><td>thin a wide swarm</td><td>The only wide-area answer — broad swarms and bomber clouds (which don't stack).</td></tr>
+</table>
+<p>The three deliberate gaps — anti-heal, anti-fast-mover, enemy-special-lock — are each covered by other means (Marksman on the healer; a fire-control alpha in your falloff centre plus the Jammer tower; Marksman again), so none forces a playstyle. The first two <strong>add-backs</strong> if you'd rather run 9–10: <strong>Frost</strong> (a dedicated anti-evasion / anti-hazard cannon), then <strong>Finisher</strong> (anti-heal, if the regen lineage ships early).</p>
+<div class="s pillar"><div class="ct">Coverage &amp; no-one-off check</div><p>The eight answer every threat <em>angle</em> — most by cannon, the rest by tower or verb: general hull → Standard/Suppressor; armour → Piercer; priority / back-line → Marksman; breakthrough at the wall → Interdictor (+Breaker); surviving a hot zone → Suppressor; buying time / shoving → Breaker; dense clump → Splasher; wide swarm or bomber cloud → Saturation. The three <em>not</em> on the list — fast jukers, healers, enemy specials — are covered without a cannon (a fire-control alpha in your falloff centre + the Jammer tower; Marksman on the healer; Marksman on the caster), and stealth / hazards are tower jobs (Flare, Camouflage, Stonewright). Nothing is uncovered.</p>
+<p>On one-offs: two cannons are always-on generalists (<strong>Standard, Suppressor</strong>); the other six are <em>load-for-matchup</em> specialists — not one-offs, because each answers a recurring <em>category</em> across many lineages, not a single enemy. The one to watch is <strong>Saturation</strong>: its breadth depends on wide / dispersed formations recurring. If bomber clouds stay rare (air-density is still an open knob) and troop waves never spread wide, Saturation drifts toward one-off. Keep it honest by making <em>wide lines and clouds a staple</em> — the roster already carries the axes (Swarm's wide-line, the bomber cloud/stream) so it always has work. Splasher is safe by construction: troop stacking (×4) structurally manufactures the clumps it answers.</p></div>
+<div class="s"><div class="ct">The eight not on the shortlist (still on the menu in §9)</div><p><strong>Chain, Sweeper</strong> — multi-target redundancy (a spaced wave → Saturation + focus; a file → Interdictor-at-the-tip + Saturation). <strong>Rapid</strong> — fast movers die to a fire-control alpha + Jammer; feeble vs armour. <strong>Frost</strong> — collapses into the Jammer tower (both slow) + Suppressor. <strong>Burner</strong> — ground-denial answered by Flare + Stonewright. <strong>Finisher</strong> — a healer is answered by Marksman on it + focus-fire. <strong>Disabler</strong> — collapses into Marksman (kill the special-user). <strong>Overwatch</strong> — coverage is the Spotter tower's job, not a barrel.</p></div>
+<h3>Towers — 7 expressions across the 6 axes</h3>
+<p>All six axes survive (each is stressed). Five are clean single picks; Sustain splits into two distinct jobs.</p>
+<table>
+<tr><th>Axis</th><th>Recommended</th><th>Note</th></tr>
+<tr><td>Coverage</td><td><strong>Spotter</strong></td><td>Also absorbs the cut Overwatch cannon's job.</td></tr>
+<tr><td>Output</td><td><strong>Powder Store</strong> (damage)</td><td>What the Bulwark/Leviathan tanks demand. <em>Sights (accuracy) is the swap if evasion bites.</em></td></tr>
+<tr><td>Sustain</td><td><strong>Stonewright + Camouflage</strong></td><td>Two load-bearing jobs — repair (wall-breakers) and conceal (the vision war). This is the +1 over six.</td></tr>
+<tr><td>Tempo</td><td><strong>Rally Flag</strong></td><td>The AoR-crawl speed knob — now core, not flavour. <em>Forge is the swap if domain-switching runs frequent.</em></td></tr>
+<tr><td>Reveal</td><td><strong>Flare</strong></td><td>Makes the fog war real (Recon / Wraith / Mimic / Sower-smoke).</td></tr>
+<tr><td>Control</td><td><strong>Jammer</strong></td><td>Now the main non-cannon answer to jukers, since Rapid/Frost are off the shortlist.</td></tr>
+</table>
+<p>Strict-six alternative (considered, not taken): folding <strong>Camouflage into Reveal</strong> — that axis becoming "see <em>and</em> un-see," pick one per group — would have dropped Sustain back to Stonewright alone. Rejected to keep repair and concealment both available on the same group.</p>
+<h3>Roster — kept whole, staged not cut</h3>
+<p>Nothing in the Ships doc is culled. Every lineage stresses a kept lever, so the roster is <em>sequenced</em>, not trimmed: the canonical eight lead the campaign (each teaches one layer), the expansion eight arrive as mid/late richness (Mimic latest). That sequencing is the <strong>campaign-layout step</strong>, not this one. Two ripples worth noting now — with Rapid/Frost off the shortlist, Corsair/Wraith lean on Jammer + fire-control; with Finisher off it, Chirurgeon-Fleet becomes a "Marksman the healer" fight.</p>
+<div class="s"><div class="ct">Decisions — all three settled</div>
+<ul>
+<li><strong>Cannon slot 8 — SETTLED.</strong> Eight cannons; slot 8 = <strong>Saturation</strong>. Coverage checked below — every enemy angle is answered and no cannon is a one-off.</li>
+<li><strong>Tower count — SETTLED: seven.</strong> Sustain ships two expressions — <strong>Stonewright</strong> (repair) and <strong>Camouflage</strong> (conceal). Tempo = Rally (Forge the swap); Output = Powder (Sights the swap).</li>
+<li><strong>Herald — SETTLED: boss-only.</strong> The resolve layer lives as an intensity knob on the flagship (Ships doc §4), not a common lineage.</li>
+</ul></div>
+</section>
 <section id="future">
-<h2><span class="n">11</span>Parked / Future ("War 2" &amp; later)</h2>
+<h2><span class="n">12</span>Parked / Future ("War 2" &amp; later)</h2>
 <div class="s future"><div class="ct">Deliberately deferred — do not build yet</div>
 <ul>
 <li><strong>Manual live tower-switch.</strong> Multiple towers already auto-promote when the active one dies (shipping behaviour). A future option: let the commander <em>tap to swap</em> the active tower mid-Fight — but on a <strong>warm-up cost</strong> (a short window where <em>neither</em> buff applies), mirroring the domain reload so adaptation still costs something. Parked because a free instant swap would be a fourth live verb and break the "adaptation has a price" theme; revisit only if M4 shows the Fight has headroom.</li>
@@ -302,7 +348,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 </section>
 
 <section id="open">
-<h2><span class="n">12</span>Open Questions — To Prototype Before Locking</h2>
+<h2><span class="n">13</span>Open Questions — To Prototype Before Locking</h2>
 <p>Honest list of what is <em>not</em> settled, so we don't mistake a sketch for a decision:</p>
 <ul>
 <li><strong>Falloff needs work.</strong> The linear 100%→25% model is a starting point, not a final answer — the curve shape, the edge floor, and how it reads on screen all need tuning and prototyping. This is the mechanic the "watch, don't fiddle" promise rests on, so it gets first prototyping attention.</li>
@@ -316,7 +362,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 
 </div>
 <footer>
-Rivenkeep — Cannon &amp; Tower Design Document · v1.9.1 · Module of the GDD (v6.2.5) · Defender combat model — cannons, groups, AoR, towers
+Rivenkeep — Cannon &amp; Tower Design Document · v2.0.0 · Module of the GDD (v6.3.0) · Defender combat model — cannons, groups, AoR, towers
 </footer>
 </body>
 </html>

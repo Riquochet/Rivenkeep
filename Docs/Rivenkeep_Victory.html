@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — The Victory Model</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
+header{padding:46px 40px 30px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+header .sub{font-size:.85rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim)}
+.ctn{max-width:1040px;margin:0 auto;padding:0 40px}
+nav{position:sticky;top:0;z-index:110;background:rgba(10,12,16,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:9px 40px;display:flex;gap:15px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}nav a:hover{color:var(--accent)}
+section{padding:34px 0;border-bottom:1px solid var(--border)}
+h2{font-family:'Chakra Petch',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+h2 .n{color:var(--dim);font-size:.9rem;margin-right:10px}
+h3{font-family:'Chakra Petch',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:22px 0 8px;color:var(--accent)}
+p{margin-bottom:10px;font-size:.9rem}
+a{color:var(--link)}em{color:var(--text);font-style:italic}
+code{font-family:'IBM Plex Mono',monospace;font-size:.82em;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--gold)}
+ul{margin:6px 0 12px 20px}li{font-size:.88rem;margin-bottom:6px}
+.s{background:var(--surface);padding:14px 18px;margin:14px 0;border-radius:0 6px 6px 0;border-left:3px solid var(--border)}
+.s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.8rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;color:var(--gold)}
+.s.pillar{border-left-color:var(--accent)}.s.warn{border-left-color:var(--warn)}.s.warn .ct{color:var(--warn)}.s.future{border-left-color:var(--purple)}.s.future .ct{color:var(--purple)}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{padding:7px 10px;border:1px solid var(--border);font-size:.8rem;text-align:left;vertical-align:top}
+th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.64rem;letter-spacing:1px}
+.tag{display:inline-block;padding:1px 7px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.t-land{background:rgba(139,195,74,.15);color:var(--land);border:1px solid rgba(139,195,74,.35)}
+.t-sea{background:rgba(79,195,247,.13);color:var(--sea);border:1px solid rgba(79,195,247,.35)}
+.t-air{background:rgba(206,147,216,.15);color:var(--air);border:1px solid rgba(206,147,216,.35)}
+.full{color:var(--success);font-weight:600}.red{color:var(--danger)}.mid{color:var(--warn)}.dim{color:var(--dim)}
+.lead{font-size:1.02rem;color:var(--text)}
+.pill{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;background:var(--surface2);border:1px solid var(--border);color:var(--dim)}
+figure{margin:16px 0;text-align:center}figcaption{font-size:.76rem;color:var(--dim);margin-top:8px;font-style:italic}
+footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
+@media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.35rem}.ctn{padding:0 16px}nav{padding-left:16px;padding-right:16px}th,td{font-size:.73rem;padding:5px 6px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Rivenkeep — The Victory Model</h1>
+<div class="sub">How a Battle Is Won, How a Sortie Ends, and Why the Fleet Pulls Back</div>
+<div class="meta">v2.0.0 · Module of the GDD (v6.3.0) · Battle win &amp; star system kept from the GDD; sortie-resolution + ammo layer added · Companions: Fleet Memory v2.0.0, Cannon &amp; Tower v2.0.0, Ships v2.0.0, Campaign v2.0.0 · Governed by The Why</div>
+</header>
+
+<nav>
+<a href="#read">What This Is</a>
+<a href="#battle">Battle Win</a>
+<a href="#pool">The Ship Pool</a>
+<a href="#sortie">Sortie Resolution</a>
+<a href="#ammo">Ammo</a>
+<a href="#breakthrough">Breakthrough</a>
+<a href="#carry">Cannon Carry</a>
+<a href="#serves">Why It Works</a>
+</nav>
+
+<div class="ctn">
+
+<section id="read">
+<h2><span class="n">1</span>What This Doc Is</h2>
+<p class="lead">The victory model: how a <em>battle</em> is won, how each <em>sortie</em> resolves, and the ammo logic that ties them together. The battle win-condition and star system are the GDD's — kept intact because they are already right. What this adds is the <strong>sortie-resolution layer</strong> (the three end-states) and the <strong>ammo</strong> model that gives them a real-world cause.</p>
+<div class="s pillar"><div class="ct">The shape in one breath</div><p>You win a battle by <strong>enclosing the required castles</strong> — nothing else. Stars and Battle Score grade <em>how well</em> you did. Underneath, a battle is a series of <strong>sorties</strong> — waves drawn from a capped, fixed-order ship pool — and each wave attacks until it has <em>spent its ammo</em> and withdraws to reload, unless you rout it first or it breaches you along the way. How the sorties go decides how much of the pool you ever face.</p></div>
+</section>
+
+<section id="battle">
+<h2><span class="n">2</span>The Battle Win — Kept From the GDD</h2>
+<div class="s"><div class="ct">Victory: enclosure, full stop</div><p>The player wins the moment <strong>all required castles are enclosed at the end of any Build phase</strong> (including the Last Stand). That is the sole win condition. Ships never have to be destroyed — surviving ships stay a threat, but the battle is won the instant the enclosure requirement is met. Clean, legible, and the crisp goal a strategy game needs.</p></div>
+<div class="s"><div class="ct">Defeat: the walls are the health bar</div><p>Defeat is reached only at a genuinely unwinnable state, and the game never forces a lost cause: required castles un-enclosable at the end of a Build phase, or a castle degraded to 3/3 dropping you below the required count. If mid-Build it becomes mathematically impossible to enclose, the battle ends immediately — a clean loss the player understands, never a drawn-out death.</p></div>
+<div class="s pillar"><div class="ct">Stars &amp; Battle Score — the skill metric (this is the fairness engine)</div><p>Three independent levers — <strong>Ships Destroyed, Cannon Health, Area Enclosed</strong> — each 1–3 stars, averaged and rounded up, with a hidden ★★★! for near-perfect play. Beneath the stars, <strong>Battle Score</strong> = ships% + area% + cannon% (max 400) is the real prize: full-resolution performance, so two players with identical ★★★ have different scores and <em>the leaderboard knows who played better</em>. This one mechanic <em>is</em> the fairness vision of The Why §3 — skill, not luck, ranked honestly — already built. It is why ship-killing is rewarded without ever being required.</p></div>
+</section>
+
+<section id="pool">
+<h2><span class="n">3</span>The Ship Pool — Capped, Ordered, Deterministic</h2>
+<p class="lead">A battle does not throw its whole fleet at the player at once. It has a <strong>fixed pool</strong> of ships with a <strong>set emergence order</strong> and <strong>set spawn-rate</strong>. What varies is how much of that pool the player ever meets — and that is driven entirely by how the sorties end.</p>
+<div class="s pillar"><div class="ct">Bounded, so it is not a treadmill</div><p>The pool is <strong>capped</strong>. "More ships might still be coming" is never runaway escalation — it is the fleet committing more of a finite, pre-set reserve. This is the resolution to the anti-treadmill rule (The Why §4): the thing that makes a returning wave dangerous is that it <em>learned</em> (persisted Contact + a cognition tick), not that it is endless. Order and rate being fixed keeps the whole thing deterministic — identical play meets an identical battle.</p></div>
+<div class="s"><div class="ct">Sortie count is emergent — and that is a feature</div><p>Because the pool is drained by performance, the number of sorties is <em>not</em> a fixed number. A player who repels efficiently drains the pool fast and reaches the Last Stand sooner; a player who merely holds faces more of it. <strong>When the pool empties, the threat is spent</strong> — the remaining Fight time rolls over to the Last Stand, and the player encloses freely. Emergent battle length is not a fairness problem: two players who play identically get the identical battle; a better player simply earns a shorter one.</p></div>
+</section>
+
+<section id="sortie">
+<h2><span class="n">4</span>Sortie Resolution — Three End-States</h2>
+<p class="lead">A sortie is one committed <strong>wave</strong>. It attacks, spends its ammo, and pulls back to reload — that withdrawal is the natural end of the sortie. Its <em>outcome</em> is one of three, gated by the fleet's visible resolve and its ammo.</p>
+<table>
+<tr><th>Outcome</th><th>Cause</th><th>What it means</th></tr>
+<tr><td><strong>Held</strong></td><td>The wave spends its ammo (backstopped by the Fight timer)</td><td>You <em>weathered the full magazine</em>; the fleet withdraws to reload. The par outcome.</td></tr>
+<tr><td><strong>Repel</strong></td><td>You break the fleet's resolve before its ammo runs out</td><td>You <em>rout</em> them early — they flee with rounds still in the rack, and the unused Fight time rolls forward (banked toward the Last Stand). The skilled outcome.</td></tr>
+<tr><td><strong>Breakthrough</strong></td><td>The wave breaches a required castle's enclosure (an event, not a timer)</td><td>Damage locks in; the wave, having succeeded, still withdraws to reload. A real setback (see §6).</td></tr>
+</table>
+<div class="s pillar"><div class="ct">All survivors retreat to spawn — and re-emerge first, in order, smarter</div><p>Whatever the outcome, the surviving ships fall back to their spawn points and reload during the pause. Next sortie they are the <strong>first out, in the same order they came before</strong> — minus any that were sunk (dead stays dead), each carrying the damage it took last time. This is the player's hard-won intelligence made mechanical: <em>you have seen this wave.</em> You know what came from where and what it wanted. The cognition tick means it may execute <em>better</em> than before — but you know its <strong>motivation, not its script</strong>, which is exactly the knowledge a thinking game runs on: the lineage's goal is stable and knowable, its skill is what rises.</p></div>
+<div class="s"><div class="ct">Retreat is not safe passage</div><p>A withdrawal happens inside the Fight — so retreating ships and troops <strong>take incoming fire as they flee</strong>. This folds "annihilation" into the model with no extra concept: annihilation is simply a repel where you sank the whole wave on its way out, and a total sink drains the pool toward the Last Stand.</p></div>
+<div class="s warn"><div class="ct">Honest watch-out — same ships, same order can calcify</div><p>"You see the same wave again" is a strength only while the wave is still worth re-reading. If the cognition creep is too faint and the new-ship injections too light, a strong player turns re-engagement into a memorised re-run — solved, not strategic. The creep and the injections must carry real weight here; this is the determinism-vs-renewable-strategy tension (The Why §6) living inside one mechanic.</p></div>
+</section>
+
+<section id="ammo">
+<h2><span class="n">5</span>Ammo — Why the Fleet Pulls Back</h2>
+<p class="lead">The engine under the sortie rhythm. <strong>Ships can only shoot what they carry.</strong> A wave spends its magazines and must fall back to reload — that, not an arbitrary clock, is why a sortie ends and why even a <em>winning</em> wave withdraws.</p>
+<div class="s pillar"><div class="ct">The asymmetry — attacker on a clock, defender not</div><p>Ships are mobile, so their ammo is <strong>finite</strong>. Cannons are static, so they sit on <strong>effectively unlimited</strong> stores — a fortress hoards powder a fleet can't carry. This is literally true of ships versus forts, and it hands the defender a structural edge: every enemy shot is a spent resource; yours is not. Ammo becomes the sortie's <strong>diegetic clock</strong> — the wave attacks until its punch is spent, then reloads during the Build/Deploy pause. The Fight timer does <em>not</em> disappear, though: it stays the phase's <strong>time budget</strong>, and the time you don't spend rolls forward (see below). Ammo decides <em>when the wave withdraws</em>; the timer measures <em>how much time you banked</em> doing it.</p></div>
+<div class="s pillar"><div class="ct">Time is the commodity — ending early pays</div><p>The GDD's time economy runs underneath all of this and is kept whole: unused Build time rolls to Deploy, unused Deploy to Fight, <strong>50% of unused Fight time rolls to the next sortie's Build</strong>, and on the final sortie <strong>100% of remaining Fight time rolls to the Last Stand</strong>. Ammo and rollover interlock cleanly: a <strong>repel</strong> (or a full annihilation) ends the Fight <em>before</em> the wave's clock runs out, so more time rolls forward — you are paid twice for routing them, once in the cut-short wave and again in the banked time. A <strong>held</strong> sortie spends the whole magazine and burns most of the timer, so little rolls over. The Last Stand is the culmination of everything banked — every sortie you ended early feeds the final chance to enclose. Time saved is time to win with.</p></div>
+<div class="s"><div class="ct">Relative, per-lineage — a fiction on the Firepower axis</div><p>Amounts are <em>relative</em>, never exact counts, and they read straight off lineage × axis: heavy shooters (Bombard, Leviathan) carry big, slow-firing loads; raiders (Corsair) carry little and run dry fast — hit-and-run made literal; and the delivery lineages barely shoot at all — a Runner or a Breacher culminates by <em>dropping its payload</em>, not by emptying a magazine, so ammo is nearly moot for them. Firepower-axis ships carry more; evasion-axis ships less.</p></div>
+<div class="s warn"><div class="ct">Keep it felt, not managed</div><p>Ammo must stay a <em>felt</em> property — the player sees the fire slacken and the wave pull back to reload — never a numeric magazine bar on every hull. A managed ammo stat would be exactly the cognitive load that erodes the thinking game (The Why §4). The player reasons about "they're nearly spent," not about counters.</p></div>
+<div class="s"><div class="ct">The strategy it unlocks</div><p>Two new decisions fall out, both serving strategy-as-fun. <strong>Bait them into wasting ammo</strong> — a feint that draws fire on a decoy now costs them <em>rounds</em>, not just position; deception gains an attrition payoff. And <strong>outlast the magazine</strong> — weather their fire until they are dry — becomes a genuine option. It stays valid-but-costly, never dominant: pure turtling invites breakthrough and kills nothing, tanking your Battle Score, so the breakthrough threats and the star gradient hold it in check.</p></div>
+</section>
+
+<section id="breakthrough">
+<h2><span class="n">6</span>Breakthrough — Hurt, Not Devastate</h2>
+<p class="lead">Breakthrough is the sharp end of the sortie loop, and it must cost enough to sting without ever dropping the player into a hopeless spiral. The design goal: <em>one breakthrough hurts and is recoverable; repeated breakthroughs on the same front are what lose the battle.</em></p>
+<div class="s"><div class="ct">The event, defined objectively</div><p>A breakthrough is not a fuzzy damage threshold — it is a single legible event: <strong>the wave breaks a required castle's enclosure</strong>. That is the exact mirror of the win condition, so it is unambiguous and it threatens the one thing that matters. When a required ring falls, the sortie's outcome is stamped breakthrough.</p></div>
+<div class="s"><div class="ct">The locked-in cost — three layers that scale</div>
+<ul>
+<li><strong>The ring is broken</strong> → that castle drops out of enclosure and must be re-enclosed next Build. The immediate pressure.</li>
+<li><strong>Cannons in the breach zone are lost</strong> → the emotional cost: the veterans you nurtured, gone. This is where breakthrough <em>hurts</em>.</li>
+<li><strong>A degradation tick on the newly-exposed castle</strong> → the compounding cost, nudging it toward 3/3 destruction.</li>
+</ul>
+<p>So one breakthrough is a real wound — rebuild the ring, mourn the guns, watch the degradation — but survivable. Defeat only arrives when breakthroughs <em>compound</em>: a castle taken to 3/3 that drops you below the required count. Never fatal on its own; fatal only as the last straw.</p></div>
+<div class="s pillar"><div class="ct">The anti-death-spiral guarantee</div><p>Why the breaching wave withdraws instead of pressing its advantage: a wave that punches through has <strong>culminated</strong> — it concentrated force and spent ammo to breach, and real doctrine is breach → consolidate → exploit with a <em>fresh</em> wave, never overextend a spent one into a defender about to counterattack and rebuild. So it falls back to reload and lets the next, heavier, wiser wave exploit — which, not by accident, hands the player the rebuild window. Ships do not vanish; they <em>retreat having succeeded</em>, the same motion as any withdrawal. Combined with the mid-Build impossibility check (if you genuinely cannot re-enclose, the battle ends at once in a clean loss), this delivers the guarantee: the player always has either a real path to recover or a clean, understood defeat — <strong>never a drawn-out lost cause</strong>. That resolves the two-minds worry: reset the board so recovery is always possible; let the <em>locked-in damage</em> carry the stakes.</p></div>
+</section>
+
+<section id="carry">
+<h2><span class="n">7</span>Cannon Carry — Three Veterans Across Campaigns</h2>
+<div class="s"><div class="ct">Within a campaign, then a chosen few beyond it</div><p>Inside a campaign, cannon veterancy carries battle-to-battle as the GDD has it — guns grow toward 200% across a campaign's fights, and losing one to a breach is a real loss. At a <strong>campaign boundary</strong>, only the <strong>three best cannons carry forward</strong> — the player chooses them, with our recommendation — as a long emotional through-line: three veterans that survive the whole War. Every other cannon resets fresh at the new campaign.</p></div>
+<div class="s pillar"><div class="ct">Why capped carry — a principle check</div><p>Carrying only three (capped at 200%) is deliberate, not stingy. A full veteran fleet carried across campaigns would make later battles <em>easier</em> and let the player win by out-<em>gunning</em> instead of out-<em>thinking</em> — the exact stat-snowball The Why forbids, wearing a friendlier coat. Three keeps it an emotional attachment, never a power ramp. It also protects the fairness goal: less carried strength keeps campaign starts comparable on the leaderboard. Two conditions make it honest — difficulty is tuned to <em>assume</em> you hold a small veteran core (so it never trivialises), and the clean-slate-per-campaign reset is preserved for everything else.</p></div>
+</section>
+
+<section id="serves">
+<h2><span class="n">8</span>Why It Works — the North-Star Check</h2>
+<p class="lead">An honest read of the whole model against the one test: does it keep strategy the fun?</p>
+<div class="s"><div class="ct">What it gets right</div>
+<ul>
+<li><strong>The win stays a crisp goal</strong> (enclose the required castles) while Battle Score turns <em>how well</em> into an honest, skill-ranked number — the fairness engine, already built.</li>
+<li><strong>The capped, ordered pool</strong> makes escalation bounded and deterministic — the anti-treadmill rule satisfied, and emergent battle length rewarding the strong player.</li>
+<li><strong>Ammo</strong> gives the sortie a diegetic clock (with the GDD time economy intact beneath it — ending early banks more time toward the Last Stand), explains the pullback with real logic, and opens two genuine strategies (bait-to-waste, outlast-the-magazine) — depth from an intuitive asymmetry, not a new managed system.</li>
+<li><strong>Same-ships-same-order</strong> makes the information war symmetric and teaches motivation-not-script — stable roles, rising skill: the ideal knowledge structure for a game that must never fully solve.</li>
+<li><strong>Breakthrough</strong> hurts without devastating, and the withdraw-to-reload reset guarantees recover-or-lose-cleanly — no death spirals, the player always understands the state.</li>
+</ul></div>
+<div class="s warn"><div class="ct">The two things to keep honest</div><p>First, <strong>the re-run risk</strong>: "same wave again" stays strategic only if the cognition creep and new-ship injections carry real weight — otherwise re-engagement calcifies into a memorised sequence. Second, <strong>the ammo-turtle</strong>: outlast-the-magazine must stay valid-but-costly, held in check by breakthrough threats and the star gradient, or it drifts toward a dominant auto-win. Both are live instances of the foundational tensions — watch them as the numbers get tuned.</p></div>
+</section>
+
+</div>
+<footer>Rivenkeep — The Victory Model · v2.0.0 · Battle win (GDD, kept) + sortie resolution + ammo · A capped pool, three end-states, and a fleet that must reload · Governed by The Why</footer>
+</body>
+</html>

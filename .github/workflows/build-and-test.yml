@@ -1,0 +1,30 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Select Xcode version
+      run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+    
+    - name: Build app
+      run: xcodebuild -workspace Rivenkeep.xcworkspace -scheme Rivenkeep -destination 'generic/platform=iOS Simulator' build
+    
+    - name: Run app tests
+      run: xcodebuild -workspace Rivenkeep.xcworkspace -scheme Rivenkeep -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' test
+    
+    - name: Test RivenkeepCore package
+      run: swift test --package-path Packages/RivenkeepCore
+    
+    - name: Test RivenkeepAI package
+      run: swift test --package-path Packages/RivenkeepAI

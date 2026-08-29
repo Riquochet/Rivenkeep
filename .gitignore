@@ -1,0 +1,65 @@
+# ─── macOS ───────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# ─── Xcode ───────────────────────────────────────────────
+# Build generated
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Per-user Xcode settings (keep shared schemes, ignore personal)
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# ─── Swift Package Manager ───────────────────────────────
+.build/
+.swiftpm/
+# Package.resolved is COMMITTED on purpose — this is an app (top of the dependency tree),
+# so a tracked lockfile gives you and CI reproducible builds. (If this were a LIBRARY you
+# would ignore it instead, since the consuming app owns version resolution.)
+# Package.resolved
+
+# ─── CocoaPods / Carthage (only if used) ─────────────────
+Pods/
+Carthage/Build/
+
+# ─── Fastlane (if used for builds/TestFlight) ────────────
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# ─── Secrets / config (never commit) ─────────────────────
+*.p12
+*.mobileprovision
+*.cer
+GoogleService-Info.plist        # Firebase config — keep out of public repos
+Secrets.xcconfig
+.env
+
+# ─── Editors / tooling ───────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*~
+.windsurf/
+
+# ─── Misc ────────────────────────────────────────────────
+*.log
+*.tmp

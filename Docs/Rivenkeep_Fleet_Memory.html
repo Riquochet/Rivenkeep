@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — The Attacker's Mind</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
+header{padding:46px 40px 30px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+header .sub{font-size:.85rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim)}
+.ctn{max-width:1040px;margin:0 auto;padding:0 40px}
+nav{position:sticky;top:0;z-index:110;background:rgba(10,12,16,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:9px 40px;display:flex;gap:15px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}nav a:hover{color:var(--accent)}
+section{padding:34px 0;border-bottom:1px solid var(--border)}
+h2{font-family:'Chakra Petch',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+h2 .n{color:var(--dim);font-size:.9rem;margin-right:10px}
+h3{font-family:'Chakra Petch',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:22px 0 8px;color:var(--accent)}
+p{margin-bottom:10px;font-size:.9rem}
+a{color:var(--link)}em{color:var(--text);font-style:italic}
+code{font-family:'IBM Plex Mono',monospace;font-size:.82em;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--gold)}
+ul{margin:6px 0 12px 20px}li{font-size:.88rem;margin-bottom:6px}
+ol{margin:6px 0 12px 22px}ol li{font-size:.88rem;margin-bottom:6px}
+.s{background:var(--surface);padding:14px 18px;margin:14px 0;border-radius:0 6px 6px 0;border-left:3px solid var(--border)}
+.s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.8rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;color:var(--gold)}
+.s.pillar{border-left-color:var(--accent)}.s.pillar .ct{color:var(--accent)}
+.s.warn{border-left-color:var(--warn)}.s.warn .ct{color:var(--warn)}
+.s.future{border-left-color:var(--purple)}.s.future .ct{color:var(--purple)}
+.s.effect{border-left-color:var(--danger)}.s.effect .ct{color:var(--danger)}
+.s.contact{border-left-color:var(--gold)}.s.contact .ct{color:var(--gold)}
+.s.ref{border-left-color:var(--success)}.s.ref .ct{color:var(--success)}
+.s.law{border-left-color:var(--purple);background:var(--surface2)}.s.law .ct{color:var(--purple)}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{padding:7px 10px;border:1px solid var(--border);font-size:.8rem;text-align:left;vertical-align:top}
+th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.64rem;letter-spacing:1px}
+.tag{display:inline-block;padding:1px 7px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.t-land{background:rgba(139,195,74,.15);color:var(--land);border:1px solid rgba(139,195,74,.35)}
+.t-sea{background:rgba(79,195,247,.13);color:var(--sea);border:1px solid rgba(79,195,247,.35)}
+.t-air{background:rgba(206,147,216,.15);color:var(--air);border:1px solid rgba(206,147,216,.35)}
+.t-eff{background:rgba(239,83,80,.13);color:var(--danger);border:1px solid rgba(239,83,80,.35)}
+.t-con{background:rgba(255,213,79,.13);color:var(--gold);border:1px solid rgba(255,213,79,.35)}
+.t-los{background:rgba(155,125,255,.15);color:var(--purple);border:1px solid rgba(155,125,255,.4)}
+.tier{display:inline-block;padding:1px 7px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.tier-cold{background:rgba(102,187,106,.14);color:var(--success);border:1px solid rgba(102,187,106,.4)}
+.tier-warm{background:rgba(255,167,38,.14);color:var(--warn);border:1px solid rgba(255,167,38,.4)}
+.tier-hot{background:rgba(239,83,80,.15);color:var(--danger);border:1px solid rgba(239,83,80,.45)}
+.tier-scald{background:rgba(239,83,80,.28);color:#fff;border:1px solid rgba(239,83,80,.7)}
+.full{color:var(--success);font-weight:600}.red{color:var(--danger)}.mid{color:var(--warn)}.dim{color:var(--dim)}
+.lead{font-size:1.02rem;color:var(--text)}
+.pill{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;background:var(--surface2);border:1px solid var(--border);color:var(--dim)}
+.eq{text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.95rem;color:var(--gold);background:var(--surface);padding:12px;border-radius:6px;margin:10px 0}
+figure{margin:16px 0;text-align:center}figcaption{font-size:.76rem;color:var(--dim);margin-top:8px;font-style:italic}
+footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
+@media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.35rem}.ctn{padding:0 16px}nav{padding-left:16px;padding-right:16px}th,td{font-size:.73rem;padding:5px 6px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Rivenkeep — The Attacker's Mind</h1>
+<div class="sub">Fleet Cognition &amp; Memory Model · Blind · Deterministic · Learning-Within-the-Loop</div>
+<div class="meta">v2.0.0 · Module of the GDD · Shared foundation for the planned Ships &amp; Troops docs · Companion to the Cannon &amp; Tower doc (v2.0.0)</div>
+</header>
+
+<nav>
+<a href="#intent">Design Intent</a>
+<a href="#thesis">Thesis</a>
+<a href="#battle">The Battle</a>
+<a href="#signaling">Signaling Game</a>
+<a href="#channels">Channels</a>
+<a href="#effect">Fear Gradient</a>
+<a href="#contact">Contact</a>
+<a href="#occlusion">Occlusion</a>
+<a href="#baiting">Baiting</a>
+<a href="#propagation">Propagation</a>
+<a href="#ui">Commander UI</a>
+<a href="#cognition">Cognition Axis</a>
+<a href="#lineages">Anchor Lineages</a>
+<a href="#matrix">Evolution Matrix</a>
+<a href="#determinism">Determinism</a>
+<a href="#keepthrow">Keep / Throw</a>
+<a href="#open">Open Questions</a>
+</nav>
+
+<div class="ctn">
+
+<section id="intent">
+<h2>Design Intent — A Thinking Game</h2>
+<p class="lead">This is the <strong>Sudoku of its genre</strong>: a thinking game, hard focus, one problem you reason your way through. Not a reflex game, and not a numbers treadmill. The cognitive demand is the <em>point</em> — the rest of this document is the machinery that makes that demand <em>rewarding</em> rather than exhausting.</p>
+<div class="s pillar"><div class="ct">Real strategy, not a treadmill</div><p>The failure this design refuses is the tower-defense treadmill: bigger enemies → build bigger and more cannons → bigger enemies. That is stat inflation in a strategy costume. Here the enemy gets <strong>smarter, not tougher</strong>, and you beat it by <em>outthinking</em> it — by tricking a thinking opponent, not out-scaling a dumb one. Difficulty is <a href="#cognition">Cognition</a>, never hit points; the entire model exists to make that literally true.</p></div>
+<div class="s pillar"><div class="ct">The loop is the debugging loop</div><p>The core loop is the one every engineer knows: write a little, watch it run, it fails, read <em>why</em>, fix it, run again. <strong>Deploy is where you write the plan; the Fight is where you watch it run; the next Deploy is where you fix it.</strong> The Fight is for <em>monitoring and adapting</em> — reading what the fleet does and timing your fire-control; the structural moves (re-tasking an AoR) land in the next Deploy, not mid-Fight. You are not fighting at twitch speed — you are iterating on a system. This loop is why <a href="#determinism">determinism</a> is load-bearing: you cannot debug a system where the same input gives a different result. Determinism is what makes the Fight a <em>diagnosis</em> instead of a coin-flip.</p></div>
+<div class="s pillar"><div class="ct">The load is the point — but only the right kind</div><p>A thinking game <em>should</em> demand hard focus. But there are two kinds of load, and only one is the game:</p>
+<ul>
+<li><strong>Reasoning load</strong> (Sudoku, debugging) — the effort is in your <em>thinking</em>: hypothesis, feedback, refinement. <span class="full">This is the game.</span></li>
+<li><strong>Bookkeeping load</strong> (a cargo manifest) — the effort is <em>clerical tracking</em>: holding a hundred cells and ledger entries in your head. <span class="red">This is the failure.</span></li>
+</ul>
+<p>The whole discipline is keeping the load on the first side, and three things do it: <strong>(1)</strong> the <a href="#channels">three channels live at three fidelities</a> — a soft <em>haze</em> (fear), a few hard <em>glints</em> (contact), and live vision — so you reason about <em>shapes</em>, not cells; the fidelities summarize so you never hold a spreadsheet. <strong>(2)</strong> The Fight must be <strong>diagnostic</strong> — legible enough that you see <em>why</em> a plan failed, so the loop stays hypothesis→test→refine (reasoning) and never memorize-everything (bookkeeping). <strong>(3)</strong> Structural action is deferred to Deploy, so the Fight is <em>read</em> and Deploy is <em>act</em> — never both at once. If the game ever feels like a spreadsheet, that is bad load leaking in, and the fix is always more summarizing and clearer diagnosis — never more to track.</p></div>
+<div class="s"><div class="ct">Why this document exists before a single ship</div><p>Ships are the <strong>most complicated part of the game</strong>, and everything else fails if the fleet's mind is wrong — so we proved the mind first, with real game theory, before designing one ship. We already built 16 ships once, in the GDD, on an unproven foundation, and threw them all away. Not twice. This is the foundation, deliberately ahead of the roster; the roster comes <em>after</em> it is solid, and we <em>expect</em> the roster to stress-test and edit this document. That is the foundation doing its job — not a sign it was incomplete.</p></div>
+</section>
+
+<section id="thesis">
+<h2>What A Ship Is</h2>
+<p class="lead">A ship is not a scripted mover and not an omniscient one. It is a <strong>deterministic policy that acts on what it has perceived</strong> — nothing more. Everything in this document follows from that one sentence.</p>
+<p>Four decisions from the design conversation, and the single model they collapse into:</p>
+<div class="s pillar"><div class="ct">The four decisions → one architecture</div>
+<ul>
+<li><strong>Blindness.</strong> Ships and troops are as blind to the defender as the defender is to them. They never read the true cannon roster, AoR radii, loaded domains, HP, or fire-control stances. — This is a restriction on the <em>input</em>.</li>
+<li><strong>Determinism.</strong> Play the same battle the same way and the fleet reacts identically, shot for shot. — This makes the policy a <em>pure function</em>.</li>
+<li><strong>Learning.</strong> The fleet gets smarter <em>inside</em> a battle through contact, and carries that knowledge across sorties within the battle. — This is the <em>state</em> the function reads.</li>
+<li><strong>Counter-web.</strong> The roster exists to make the defender's levers matter, and grows in many directions as the player descends. — This is what the <em>lineages</em> are for.</li>
+</ul></div>
+<div class="s law"><div class="ct">The collapse</div><p>Fleet behavior = a pure deterministic function of <strong>(seed + that unit's observation history)</strong>. No wall-clock, no unseeded randomness, no peek at ground truth. Blindness restricts the input; determinism makes it a pure function; learning is the accumulated observation state. Three of the four decisions are the same decision viewed from three sides — and the fourth (counter-web) is delivered by the lineage matrix that rides on top.</p></div>
+<div class="s law"><div class="ct">Legibility is a hard constraint (fairness)</div><p>Every hidden-information mechanic in this model must be one the player can <em>reason about</em>. The fleet's blindness and its knowledge are governed by <strong>physical, visible</strong> rules — line of sight, terrain occluders, distance, walls — never by opaque bookkeeping. A bait only counts if the player <em>could have predicted</em> it would work. If a mechanic ever makes the fleet look <em>dumb</em> rather than <em>blind</em>, the fix is always to make the reason for its blindness visible — never to let the fleet cheat.</p></div>
+<h3>The inversion — and why it is the game's soul</h3>
+<p>The player and the fleet both learn, on opposite clocks:</p>
+<div class="s"><div class="ct">Who learns when</div>
+<ul>
+<li><strong>The player learns across loops.</strong> Each replay of a battle, the human folds last attempt's crises into a better plan. Knowledge is the only thing that carries between replays.</li>
+<li><strong>The fleet learns within a battle, and forgets between battles.</strong> Inside one battle it sharpens sortie over sortie (the battle is the loop — see <a href="#battle">The Battle Is The Loop</a>). On the player's replay, the seed resets and the fleet forgets everything it "knew" — because if the puzzle shifted under the player between attempts, knowledge would stop being the thing that carries.</li>
+</ul></div>
+<p>That is <em>Edge of Tomorrow</em> exactly: Cage remembers across resets; the enemy fights adaptively inside each reset and starts fresh next loop. The four decisions, followed through honestly, land the design directly on its own north-star touchstone. Nobody set out to build that — it fell out of the constraints.</p>
+</section>
+
+<section id="battle">
+<h2>The Battle Is The Loop — Sorties &amp; The Tension Ramp</h2>
+<p class="lead">A <strong>battle</strong> is the loop. It is long — potentially an hour — so it is broken into <strong>sorties</strong>: Build → Deploy → Fight cycles the player can pick up and put down without committing to one marathon session. The sortie is a <em>pacing</em> device, not a reset; the roster and its deployment can end a sortie early, but the tension is meant to build across the whole battle, and the battle's end is the respite — the celebration.</p>
+<div class="s law"><div class="ct">The persistence boundary</div>
+<ul>
+<li><strong>Across sorties, within a battle — everything persists:</strong> unsunk ships remain (carrying their damage), cannon health / veterans, walls (damaged), boss HP, and <strong>the fleet's memory — the Contact ledger and the Effect fear-grid</strong> (line of sight is live, so it re-acquires each Fight).</li>
+<li><strong>Troops are the exception</strong> — cleared at every sortie end. They are the ephemeral wave, redeployed fresh from surviving transports.</li>
+<li><strong>The battle is the only reset.</strong> On the player's <em>replay</em> of a battle the seed resets and the fleet forgets. A <em>won</em> battle simply ends — the celebration is the release.</li>
+</ul></div>
+<div class="s pillar"><div class="ct">Memory outlives its gatherers — but the network degrades</div><p>Stored knowledge is fleet-wide: what has <em>propagated</em> survives the units that gathered it, and clearing troops or losing hulls doesn't wipe the shared fear map or the contact ledger — next sortie's fresh hulls inherit it. But the fleet's <em>living intelligence</em> is a network, and <strong>sinking ships degrades it three ways</strong>, all emergent and all intuitive: <strong>(1)</strong> you lose whatever the sunk ship had observed but not yet shared — propagation is slow, so kill the knower before it radios; <strong>(2)</strong> you blind the sector it was watching, so you can rearrange your fort there unseen until the fleet regains eyes; <strong>(3)</strong> fewer hulls means a thinner net that spreads and refreshes everything slower. So old facts persist, but <em>new</em> facts come slower and staler the more you sink — and sinking the <strong>observer</strong> (a scout) hurts most. You can't erase the fleet's mind, but you can starve and blind it.</p></div>
+<div class="s warn"><div class="ct">Assessed &amp; set aside — full hive-mind memory loss</div><p>Considered: a hard hive mind where sinking a ship <em>erases</em> fleet memory. Recommendation against, three reasons. <strong>(1) It cannibalizes the signaling game</strong> — if erasing by sinking is reliable, players skip the subtle baiting that is the whole point; <em>erase beats mislead</em>. <strong>(2) It inverts the tension ramp</strong> — attrition would make the fleet <em>dumber</em> across the battle, flattening the climb to the climax. <strong>(3) Legibility / fairness</strong> — the player can't predict what a sink erases unless the memory-to-ship map is visible, and a hive that forgets everything on one loss is too fragile to be a fair adversary. The <em>soft</em> hive mind above already delivers the part worth having ("they think my gun is where it was, but I moved it" is a <em>stale belief</em>, not erased memory). The adopted alternative is the <strong>Flagship</strong> (next): coordination-decapitation, not knowledge-erasure.</p></div>
+<div class="s pillar"><div class="ct">The Flagship — the coordination hub (adopted)</div><p>The fleet's <strong>top propagation node</strong>: a single, visually unmistakable command ship, screened in the back line. While it lives, the network coordinates fast — fear and contact spread quickly and the next-sortie plan is tightly synchronized. <strong>Sink it and coordination collapses</strong>: propagation reverts to slow and local, and the fleet can no longer spread new information or act as one plan. Critically, it keeps everything it has <em>learned</em> — <strong>the ramp holds; stored knowledge is untouched</strong> — so this is a <em>coordination</em> lever, not a knowledge switch. The payoff: a decapitated fleet is <em>more baitable</em> (stale, divergent local beliefs), so killing the flagship <strong>rewards the signaling skill</strong> rather than replacing it — the exact opposite of the rejected hard-hive version. It is a legible, hard-won decapitation play (you must fight through the screen), it gives the back-line-targeting cannon personality its reason to exist, and it makes the fleet <em>protect</em> its flagship (screening behaviour). The coordination collapse must read on screen — the fleet visibly fragments and slows.</p></div>
+<h3>The tension ramp — the fleet is dumbest in sortie 1 and smartest at the climax</h3>
+<p>This is the engine that makes a battle <em>build</em>. Sortie 1: the fleet walks in with empty maps — naive, easily baited, blundering into your cores. By the final sortie it holds a rich fear gradient and a full contact ledger — it knows your fort, has found your breaches, fears your kill-zones. Difficulty <em>within a single battle</em> escalates purely through accumulated cognition.</p>
+<div class="s pillar"><div class="ct">The same curve at two scales — the design's recurring signature</div><p>The intra-battle ramp (memory accumulating sortie over sortie) is the <em>same</em> "smarter fleet → harder" curve as the campaign-scale <a href="#cognition">Cognition axis</a> (lineages evolving across 190 boards). One principle expressed at two scales: the fleet gets smarter <em>within</em> a battle and <em>across</em> the game. Coverage-vs-concentration recurs down the layers; so does this.</p></div>
+<div class="s"><div class="ct">Partial decay — so the ramp is a ratchet, not a sawtooth</div><p>Fear cools a notch at each sortie boundary (the "lost sight of the threat" gap), which is what keeps <a href="#baiting">baiting</a> alive — a bluff <em>can</em> fade, so a flank becomes reusable. But decay is <em>partial and slow</em> relative to the battle, so net fear <strong>ratchets upward</strong> as the battle wears on; the map trends hotter. Deliberate silence still cools one specific region (the bait); the whole map does not reset. Decay rate is the <a href="#cognition">Cognition</a> knob — forgetful early fleets, stubborn late ones.</p></div>
+<div class="s pillar"><div class="ct">Build/Deploy is simultaneous planning — both minds think at once</div><p>The between-sortie phase is not just the player's planning time; it is the <em>fleet's</em>. While you build and deploy, the fleet consolidates memory, propagates across the network, and computes its next-sortie plan — <strong>deterministically</strong>, from its (last-observed, possibly stale) knowledge. Neither side sees the other's moves before the Fight. The Fight is the <em>resolution of two committed plans</em>. This is a thinking-game structure (plan → commit → resolve) and a performance win — the heavy AI compute runs in the low-intensity phase, off the real-time path (which matters on mobile). Guardrail: the plan must stay <em>legible</em> (see the Legibility law) — the player has to anticipate what the fleet will do with its thinking time, or the puzzle breaks.</p></div>
+<div class="s contact"><div class="ct">…which makes Build/Deploy the bait window</div><p>Because both sides plan blind and the fleet plans from <em>last-observed</em> state, this is where you <em>invalidate its plan</em>: repair the breach it intends to pour through, relocate the exposed gun it is hunting, wall in a veteran to turn it back into a ghost. The fleet opens the next Fight executing a plan built against a fort you have already changed — and corrects only on fresh observation (and later still, if the sightline is blocked). Baiting, moved up to the planning layer.</p></div>
+<div class="s pillar"><div class="ct">The Fight is mostly holding fire — and holding fire is a memory move</div><p>Plan-primary means the fight verbs are deliberately <strong>expensive</strong> (their costs live in the Cannon &amp; Tower doc): re-tasking an AoR and switching a domain are costly recovery tools, so the plan dominates — yet a poor plan is <em>not</em> an automatic loss, because those verbs are a paid safety valve. The verb the commander actually leans on is <strong>fire-control</strong>: mostly <em>holding</em>, releasing at the right moment. And holding is not passive — a silent battery stays off the fleet's fear-grid, so the fleet routes as if that ground is safe. The primary live action is therefore a <em>belief move</em>: withhold the signal to keep the fleet mistaken, then spend it — reveal + alpha — the instant a valuable target has committed into your core. "Hold until the right moment" = manage the fleet's fear in real time, then cash it in. The Fight is for <em>monitoring and adapting</em>; the structural fix — re-tasking an AoR — lands in the next Deploy, which is the loop's "fix" step (see <a href="#intent">Design Intent</a>). (Verb costs and the fire-control mechanics themselves are the Cannon &amp; Tower doc's to specify; this is only the memory-side consequence.)</p></div>
+<h3>How a battle ends — Resolve &amp; the castle win</h3>
+<p>The number of sorties is <strong>not fixed</strong>. A battle runs until the fleet <em>resolves</em> — and the player's whole job is to keep the required castles alive until it does. <strong>Castles surviving to the fleet's resolution is the win.</strong></p>
+<div class="s pillar"><div class="ct">Resolve is another manipulable belief</div><p>The fleet carries a <strong>resolve</strong> — its will to keep fighting (the morale/rout concept). It is computed from the fleet's <em>perceptions</em>, not ground truth: its own losses, its progress (contact — breaches made, distance to the castles), and the danger it meets (the fear grid). So resolve is <em>another belief the player manipulates</em> — the signaling game pointed at morale. "The ships think they are losing" is exactly that: a belief that can be true, or bluffed.</p></div>
+<div class="s law"><div class="ct">Three ways a battle ends</div>
+<ul>
+<li><strong>Retreat</strong> — resolve collapses; the fleet withdraws. <span class="full">Win, if the castles held.</span> (It "thinks" it is losing — whether or not it truly was.)</li>
+<li><strong>Annihilation</strong> — a committed fleet is ground to the last ship. <span class="full">Win, if the castles held.</span> ("Surviving the onslaught is enough.")</li>
+<li><strong>Breakthrough</strong> — a required castle is destroyed before either. <span class="red">Loss.</span></li>
+</ul></div>
+<p>Two strategic paths fall straight out, and the player reads the fleet's resolve (a behavioural tell, like the fear tells) to choose between them:</p>
+<div class="s"><div class="ct">Break their will vs grind them out</div>
+<ul>
+<li><strong>Break their will</strong> — convince the fleet it is losing so it retreats early: sink ships visibly, keep castles unreachable, punish pushes hard, project a scalding defense. A psychological win — they give up though they might have won. Rewards efficient, punishing defense and the deception skill.</li>
+<li><strong>Grind them out</strong> — a committed or unbluffable fleet can't be broken; you must <em>survive</em> until it is annihilated. Pure endurance — hold the castles through the full onslaught. You can even <em>feign weakness</em> to keep an aggressive fleet overcommitted so it grinds itself down (risky — it might actually break through).</li>
+</ul></div>
+<div class="s pillar"><div class="ct">The stalemate valve — why "surviving is enough" works, and why battles always end</div><p>A fleet making <em>no progress</em> loses heart: resolve <strong>decays under stalemate</strong>. So a purely impregnable turtle still wins — by outlasting the fleet's will, not by sinking a thing. This is the mechanism behind "sometimes just surviving is enough," and it also guarantees battles <em>terminate</em>: a finite fleet, attrited each sortie and bleeding resolve when stalled, must eventually break through, break morale, or run out of hulls. No infinite stalemate.</p></div>
+<div class="s"><div class="ct">Resolve is a lineage / boss knob</div><p>The spread of resolve keeps both experiences alive. <strong>Skittish</strong> fleets break easily (satisfying early bluff-wins); <strong>fanatical</strong> fleets and <strong>bosses</strong> are near-unbreakable — they fight to the last ship, so the pure survival test always exists and the player can't just bluff a cheap retreat every battle. Killing the <a href="#battle">Flagship</a> is a resolve blow as well as a coordination one — decapitation makes a fleet waver, and can tip it into rout.</p></div>
+<div class="s ref"><div class="ct">Precedent — the rout, made manipulable</div><p>This is the <em>Total War</em> morale model: units break and flee when they believe the battle is lost, a general's death craters morale (the flagship), and you win far more often by breaking the enemy's <em>will</em> than by killing every soldier — which is also how real battles actually ended (the rout, not the massacre). The one new turn is making that morale a <em>belief the player manipulates</em>, which is just this game's signaling core reaching the battle-resolution layer.</p></div>
+<div class="s warn"><div class="ct">The honest tuning risks</div><p>This model is only as good as its numbers, all deferred: <strong>legibility</strong> — resolve needs a clear tell or the bluff-vs-grind choice is guesswork; <strong>balance</strong> — if bluffing retreat is too easy the grind path is vestigial, too hard and "surviving is enough" never fires; <strong>pacing</strong> — a fleet that breaks too early feels anticlimactic, too late feels grindy. The resolve spread across lineages is the lever, and getting it right is real work, not a given. <span class="dim">Seam: the belief-and-manipulation nature of resolve is this document's; the win-condition specifics — castle degradation, which castles are "required," enclosure as the <em>means</em> of protection — belong to the GDD / Cannon &amp; Tower docs and must be integrated there, not forked here. This also evolves the old "enclose to win" into "enclose to <em>protect</em>, survive with them intact" — keep the idea, refine the definition.</span></p></div>
+</section>
+
+<section id="signaling">
+<h2><span class="n">1</span>The Genre Is Signaling, Not Shooting</h2>
+<p>Name the structure and the rest of the design becomes derivable rather than a matter of taste. This is a <strong>deterministic signaling game</strong>:</p>
+<ul>
+<li>The player is the <strong>sender</strong> — every cannon that fires (or holds) is a signal.</li>
+<li>The fleet is the <strong>receiver</strong> — it updates a belief about the board from those signals and acts on the posterior.</li>
+</ul>
+<p>So the player is not fighting the fleet. The player is <strong>shaping the fleet's beliefs about the board.</strong> Baiting is textbook deception: feed evidence that pushes the receiver's posterior away from the truth, in a direction you exploit.</p>
+<div class="s pillar"><div class="ct">Why determinism is a requirement, not a preference</div><p>You can only deceive an opponent whose inference rule you can predict. A <em>random</em> fleet cannot be baited — there is nothing to model, so there is no skill in feinting at it. Deception is only well-defined against a stable, learnable update rule. Poker bluffing collapses against a pure-random caller; it works because opponents update on bets predictably. The same law holds here: <strong>determinism is the precondition for the entire endgame skill to exist</strong> — replay-fairness is a bonus, not the reason.</p></div>
+<div class="s ref"><div class="ct">Precedent — telegraphing is depth, not easy-mode</div><p><em>Into the Breach</em> telegraphs exact enemy intent a turn ahead and is fully deterministic; it is celebrated as a <em>thinking</em> game, not a shallow one. Telegraphing doesn't reduce difficulty — it relocates it from execution and luck to reasoning. (Honest limit: ItB has no hidden state and no learning, so it validates determinism-as-depth, not our belief layer — that is what the stealth precedents below are for.)</p></div>
+<div class="s warn"><div class="ct">Why this does <em>not</em> degenerate into Pac-Man</div><p>The stock objection: a deterministic, learnable opponent, once solved, is solved <em>forever</em> — Pac-Man's ghosts collapse into memorized routes. That happens to Pac-Man because it has <strong>one tiny maze and a four-direction action space</strong>: a single optimal line exists to memorize. Rivenkeep does not degenerate because <strong>the player's decision space per board is combinatorially vast</strong> — 8 archetypes × 3 domains, placement across a large board, group/AoR shapes, wall layouts, domain loadouts, and the whole bait-and-timing layer. There is no single "the solution" to route around; there is a space of viable strategies, and the deterministic fleet is a <em>responsive</em> opponent inside it. Honest distinction: a <em>perfectly copied</em> playthrough of one board <em>does</em> replay identically — but that is <strong>reproducibility</strong> (the feature that powers replays, leaderboards, and the very possibility of baiting), not <strong>degeneracy</strong> (every player converging on one trivial memorized line). The branching factor prevents the latter. <strong>190 boards</strong> and the <a href="#cognition">Cognition axis</a> are reinforcement on top, not the primary defense.</p></div>
+</section>
+
+<section id="channels">
+<h2><span class="n">2</span>Three Channels — The Fleet's Entire Mind</h2>
+<p>The fleet learns three <em>different kinds</em> of thing, with different properties. Keeping them separate is what makes the model both fair and legible — and it maps cleanly onto how a fog-of-war RTS separates <em>live vision</em>, <em>explored-and-remembered</em> ground, and danger you can only <em>infer</em>.</p>
+<table>
+<tr><th>Channel</th><th>Source</th><th>Nature</th><th>Localizes?</th><th>Persists?</th><th>Answers</th></tr>
+<tr><td><span class="tag t-los">Line of sight</span></td><td>What a unit can <em>see</em> now — gated by occluders (trees, rocks, cliffs, walls) and distance</td><td class="full">Live, current vision</td><td class="full">Yes, while open</td><td class="red">No — live only</td><td>"What can I see <em>right now</em>?"</td></tr>
+<tr><td><span class="tag t-con">Contact</span></td><td>Written when LOS, a connecting shot, or a troop touch <em>confirms</em> something</td><td class="full">Hard, confirmed fact</td><td>Yes — until contradicted</td><td>Yes</td><td>"What is there, and where?"</td></tr>
+<tr><td><span class="tag t-eff">Effect</span></td><td>Incoming fire the unit <em>survives</em> — a coarse bearing/area per shell</td><td class="red">No — general area only</td><td>Yes, decaying</td><td>Yes</td><td>"Where does it <em>hurt</em>?"</td></tr>
+</table>
+<div class="s pillar"><div class="ct">LOS is the sensor; Contact is the memory it writes</div><p>Vision and memory are different things. <strong>Line of sight is live</strong> — a unit sees a grid only while the sightline is open, and loses the view the instant it closes. <strong>Contact is what that vision leaves behind</strong> — once LOS (or a landed shot, or a troop) confirms a wall / castle / gun, the fact persists even after the unit can no longer see it (the "ghost building"), revised only by a contradicting observation. <strong>Effect is separate from both</strong> — never <em>seen</em>, only <em>felt</em>, inferred from being hit. So LOS feeds Contact; Effect stands alone.</p></div>
+<div class="s law"><div class="ct">The asymmetry law</div><p><strong>The fleet sees and confirms what it faces; it only estimates what hits it.</strong> Walls, castles, and <em>exposed</em> cannons get <em>found</em> — via line of sight, a landed shot, or a troop touch. AoRs and <em>enclosed</em> cannons get <em>guessed</em> — they are the <em>source</em> of fire, occluded from sight, and a source is non-identifiable (see <a href="#occlusion">Occlusion</a>). <strong>What it can reach is knowable; what reaches it is guessed.</strong></p></div>
+<div class="s contact"><div class="ct">Breaching reveals the next layer</div><p>The fort is concentric and walls block sight, so the fleet sees only the wall it is <em>facing</em>. Break through, and line of sight opens to the <em>next</em> wall behind it — now confirmable. A deep fort reveals itself <strong>progressively, layer by layer, as it is breached</strong>; the inner sanctum stays invisible until the fleet is inside the outer one. Concealment is layered by construction — a gun behind two intact walls is doubly a ghost.</p></div>
+<p>This split does three jobs. LOS + Contact give the fleet enough hard information to drive at an objective (the anti-wander guarantee); Effect keeps the defender's guns behind a fog that survives arbitrary sampling; the layered LOS gate keeps your interior hidden until it is breached. The cheating fleet and the flailing fleet are both closed by the same structure.</p>
+<div class="s ref"><div class="ct">Precedent — the RTS fog rule, three-for-three</div><p>Every fog-of-war RTS separates exactly these three: the <strong>lit vision</strong> around your units (LOS), the <strong>greyed-out explored map</strong> that remembers seen terrain and buildings after you leave (Contact), and the <strong>enemy activity you infer</strong> from pressure and contact (Effect). Shipped for thirty years. Kill the scout and the lit area shrinks, the greyed map goes stale, and you fall back to inference.</p></div>
+<figure>
+<svg viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:720px">
+<rect x="0" y="0" width="720" height="260" fill="#0d1017" rx="8"/>
+<line x1="360" y1="20" x2="360" y2="240" stroke="#2a2f3d" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="180" y="34" fill="#ef5350" font-family="'Chakra Petch',sans-serif" font-size="13" letter-spacing="2" text-anchor="middle">EFFECT — ESTIMATE</text>
+<text x="540" y="34" fill="#ffd54f" font-family="'Chakra Petch',sans-serif" font-size="13" letter-spacing="2" text-anchor="middle">CONTACT — CONFIRM</text>
+<!-- EFFECT side -->
+<circle cx="120" cy="150" r="70" fill="rgba(239,83,80,0.10)" stroke="rgba(239,83,80,0.4)" stroke-width="1" stroke-dasharray="5 5"/>
+<circle cx="120" cy="150" r="42" fill="rgba(239,83,80,0.14)" stroke="none"/>
+<text x="120" y="150" fill="#ef5350" font-family="'IBM Plex Mono',monospace" font-size="10" text-anchor="middle">a gun is</text>
+<text x="120" y="164" fill="#ef5350" font-family="'IBM Plex Mono',monospace" font-size="10" text-anchor="middle">somewhere here</text>
+<g stroke="#ef5350" stroke-width="1.5" opacity="0.7">
+<path d="M175 110 L235 150" stroke-dasharray="3 3" marker-end="url(#ar)"/>
+<path d="M172 150 L235 165" stroke-dasharray="3 3"/>
+<path d="M175 190 L235 180" stroke-dasharray="3 3"/>
+</g>
+<rect x="238" y="140" width="30" height="30" rx="3" fill="#1a1e28" stroke="#4fc3f7" stroke-width="1.5"/>
+<text x="253" y="200" fill="#8891a4" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">ship, hit from</text>
+<text x="253" y="212" fill="#8891a4" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">a bearing</text>
+<!-- CONTACT side -->
+<rect x="470" y="120" width="26" height="60" rx="2" fill="#2a2f3d" stroke="#4a5164"/>
+<text x="483" y="196" fill="#8891a4" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">wall</text>
+<rect x="600" y="135" width="30" height="30" rx="3" fill="#1a1e28" stroke="#4fc3f7" stroke-width="1.5"/>
+<path d="M598 150 L500 150" stroke="#ffd54f" stroke-width="2" marker-end="url(#ar2)"/>
+<circle cx="490" cy="150" r="9" fill="none" stroke="#ffd54f" stroke-width="2"/>
+<circle cx="490" cy="150" r="3" fill="#ffd54f"/>
+<text x="483" y="210" fill="#ffd54f" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">CONFIRMED HERE</text>
+<text x="615" y="196" fill="#8891a4" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">ship, shot lands</text>
+<defs>
+<marker id="ar" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#ef5350"/></marker>
+<marker id="ar2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#ffd54f"/></marker>
+</defs>
+</svg>
+<figcaption>Being hit tells the fleet a gun is <em>somewhere</em> in a wide disc. Landing a shot tells it a wall/castle/exposed-gun is <em>exactly there</em>.</figcaption>
+</figure>
+</section>
+
+<section id="effect">
+<h2><span class="n">3</span>The Effect Channel — The Fear Gradient</h2>
+<p>The fleet's read of the defender is <strong>emotional, not analytical</strong>. It does not hold "an AoR of radius 6 centred near grid 20,14." It holds <em>"the north shore is dangerous, the south feels open."</em> A fear map, not an intel map.</p>
+<div class="s effect"><div class="ct">How the fear map is built</div><p>Recorded on a <strong>medium-resolution grid — about 10×10 fear cells</strong> over the play area (not per-cell, not blobby regions): the location of <em>incoming</em> hits, weighted by how <em>often</em> a unit crossing a cell is hit and at what <em>percentage</em>. Each incoming shell gives the fleet a <strong>general direction and area</strong> it came from — never a point — and those accumulate into the grid. Constant, high-% hits → <span class="tier tier-scald">scalding</span>. Occasional, low-% → <span class="tier tier-warm">warm</span>. Never hit → <span class="tier tier-cold">cold</span>. Formally this is a <strong>Monte-Carlo estimate of the defender's aggregate falloff field</strong> — the fleet is sampling your coverage by walking through it and tallying how often it bleeds. Overlapping AoRs smear together into one field; the fleet never resolves the individual circles.</p></div>
+<h3>Named tiers, not a number — the fear map <em>is</em> a stealth alert level</h3>
+<p>The single most important framing decision: build the fear map as a <strong>stealth alert system</strong>, never as an exposed heat value. The stealth genre solved "make a hidden AI belief legible" twenty-five years ago and shipped it repeatedly.</p>
+<table>
+<tr><th>Region tier</th><th>Fleet reads it as</th><th>Behavioral tell (nerve vs confidence)</th></tr>
+<tr><td><span class="tier tier-cold">COLD</span></td><td>"Open water. Go."</td><td>Straight, confident approach; delivery commits here.</td></tr>
+<tr><td><span class="tier tier-warm">WARM</span></td><td>"Something's out there."</td><td>Hesitant, skirting; hugs the region's edge, probes.</td></tr>
+<tr><td><span class="tier tier-hot">HOT</span></td><td>"That flank kills."</td><td>Actively avoids; routes delivery around it.</td></tr>
+<tr><td><span class="tier tier-scald">SCALDING</span></td><td>"Do not go there."</td><td>Refuses unless forced (breach only there); screens support furthest from it.</td></tr>
+</table>
+<div class="s ref"><div class="ct">Precedent — the stealth alert-state playbook</div><p>Metal Gear's Normal / Caution / Alert; Thief's light gem; the "?" / "!" over a guard. Three moves make a hidden belief readable: <strong>(1)</strong> quantize into a few named tiers, never a raw number; <strong>(2)</strong> give each tier an unmistakable behavioral + audiovisual tell; <strong>(3)</strong> animate the <em>decay</em> — the guard walks to your last-known position, finds nothing, gives up, returns to patrol. Map straight on: a region's fear tier <em>is</em> an alert level; the fleet committing into stale-soft ground <em>is</em> the guard walking to last-known-position; per-sortie decay <em>is</em> the search-then-give-up.</p></div>
+<h3>Decay</h3>
+<p>Fear <strong>fades between sorties</strong> if a region stops hurting. A flank that terrified the fleet last sortie, left un-punished, cools — and the fleet edges back in. Decay rate is a <a href="#cognition">Cognition-axis</a> knob (fast-forgetting early fleets, stubborn late ones). Crucially, decay is <em>shown as behavior, never as a bar</em> (see <a href="#ui">Commander UI</a>).</p>
+<div class="s warn"><div class="ct">Why ~10×10 is the right resolution — on theory, not taste</div><p>A ~10×10 fear grid is simultaneously the <em>more legible</em> choice (a readable heat overlay — "they're avoiding the northeast near the point," which per-cell noise and blobby regions both fail to convey), the <em>more exploitable</em> choice (a cell can be baited), and the <em>more tunable</em> choice. It is also what defeats counter-battery localization: a cell spans many possible gun positions, so a fear field at this resolution cannot be inverted to a gun. Medium-coarse-but-visible is the stealth sweet spot, chosen deliberately, not a compromise.</p></div>
+</section>
+
+<section id="contact">
+<h2><span class="n">4</span>The Contact Channel — Confirmed Targets</h2>
+<p>The anti-wander guarantee. Without it, a perfectly-fogged fleet just mills around — and "the enemy flails" is as dead as "the enemy cheats." The fix is a hard-fact channel running alongside the soft fear map.</p>
+<div class="s contact"><div class="ct">What confirms a target</div>
+<ul>
+<li>A ship's shot <strong>connects</strong> with a wall, cannon, or castle → that structure's location is a <em>confirmed fact</em>, not a guess.</li>
+<li>A troop ashore <strong>reaches and strikes</strong> a structure → same. Troops ashore are close-recon: they see local ground truth and feed it in.</li>
+<li>Confirmed facts <strong>persist into the next sortie</strong> as hard map annotations. The fleet walks in already knowing the perimeter geometry it touched — no re-scouting the walls it already breached.</li>
+</ul></div>
+<div class="s contact"><div class="ct">Contact never fades — it is revised, not decayed</div><p>A confirmed fact is a <em>permanent</em> per-grid ledger of last-observed truth; it does <strong>not</strong> lose confidence on a timer. It is overwritten only by a <em>contradicting observation</em> — a later shot that lands on a grid the fleet believed was walled and finds it <em>empty</em> updates the entry to empty. No fuzzy decay parameter, and fully deterministic. Two consequences fall out:</p>
+<ul>
+<li><strong>Stale positives (ghost structures).</strong> Abandon a wall — let it break and don't rebuild — and the fleet keeps shelling the ghost until a shot re-observes the gap.</li>
+<li><strong>Stale negatives (the hidden breach) — the stronger bait.</strong> Remove or relocate a wall the fleet confirmed, and it still believes that grid is <em>blocked</em>: troops path <em>around</em> an opening that is actually clear, and ships don't exploit it, until the fleet re-observes. You can carry an open breach the fleet is blind to — the contact-channel twin of the hold-feint.</li>
+</ul>
+<p><strong>Line of sight (channel 3) writes contact, and sight is physical.</strong> A ship confirms or refreshes a grid it can <em>see</em>. Line of sight is broken by <strong>trees, rocks, cliffs, and walls</strong>, and capped by <strong>distance</strong> — each lineage has a <em>sight range</em>; a piece too far to make out isn't confirmed even in the clear. Fog is one more occluder on top. So the hidden breach is <em>not</em> fog-only: it lives <strong>anywhere the sightline is broken</strong> — behind terrain, behind a wall, far to the rear, or in fog. <span class="dim">Fairness (see the Legibility law): the player can always see <em>why</em> a piece is or isn't visible to the fleet, because every occluder is a thing on the board. Sight range is a <a href="#cognition">Cognition-axis</a> knob — short-sighted early fleets are easy to keep blind; long-sighted late fleets (and the recon lineage) are hard to hide from.</span></p></div>
+<p>This deepens the loop rather than easing it. The fleet remembering the breach it found last sortie and massing there is your <strong>overcommit-punish</strong> setup — you quietly reinforce the remembered breach into a kill-box (see <a href="#baiting">Baiting</a>).</p>
+<h3>Searching fire — spending a reveal to buy a contact</h3>
+<p>Some units convert fog into facts on purpose: they fire semi-randomly to <em>probe</em> for walls, castles, and exposed guns. Two rules keep this honest:</p>
+<div class="s"><div class="ct">Rules for searching fire</div>
+<ul>
+<li><strong>"Semi-random" means seeded, not random.</strong> A deterministic search pattern, <em>weighted by the current fear gradient</em> — the fleet probes where it suspects a soft breach, not uniformly. Same battle → same probes. (Unseeded randomness here would break determinism, which breaks baiting, which breaks the game.)</li>
+<li><strong>It must cost.</strong> A unit that fires to search <em>reveals itself</em> (your own muzzle-flash rule, pointed back at it) and burns a reload. So probing is a real gamble: aggressive lineages probe; cautious ones wait for scouts. Searching fire is a <a href="#cognition">Cognition-axis</a> behavior, not a universal one.</li>
+</ul></div>
+</section>
+
+<section id="occlusion">
+<h2><span class="n">5</span>Enclosure Occludes The Flash</h2>
+<p>The keystone that resolves "static cannons never move, so won't the fleet eventually fix them?" — the counter-battery-radar problem. The answer: <strong>the fleet maps where it gets hurt (effect), never where the gun is (cause)</strong>, and a cannon's <em>channel membership is decided by how you place it.</em></p>
+<div class="s law"><div class="ct">The occlusion rule</div>
+<ul>
+<li><strong>Enclosed cannon</strong> — its muzzle flash is hidden behind its own walls. The fleet sees the shell arc down but never sees the origin light up. It is a pure <em>source</em>, so it only ever feeds the <span class="tag t-eff">effect</span> channel. <strong>Permanently a ghost</strong> — felt, never found.</li>
+<li><strong>Exposed cannon</strong> (a Lone Wolf shoved forward for reach; an un-walled gun) — its flash is visible, so it can be <em>fixed</em> exactly as a wall is fixed, and it crosses onto the <span class="tag t-con">contact</span> channel: once seen it is a confirmed target that <em>persists across sorties</em> and can be hunted and baited.</li>
+</ul></div>
+<figure>
+<svg viewBox="0 0 720 250" xmlns="http://www.w3.org/2000/svg" width="100%" style="max-width:720px">
+<rect x="0" y="0" width="720" height="250" fill="#0d1017" rx="8"/>
+<line x1="360" y1="18" x2="360" y2="232" stroke="#2a2f3d" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="180" y="32" fill="#66bb6a" font-family="'Chakra Petch',sans-serif" font-size="13" letter-spacing="2" text-anchor="middle">ENCLOSED — GHOST</text>
+<text x="540" y="32" fill="#ef5350" font-family="'Chakra Petch',sans-serif" font-size="13" letter-spacing="2" text-anchor="middle">EXPOSED — FIXED</text>
+<!-- ENCLOSED -->
+<g>
+<rect x="70" y="120" width="20" height="20" fill="#2a2f3d"/><rect x="90" y="120" width="20" height="20" fill="#2a2f3d"/><rect x="110" y="120" width="20" height="20" fill="#2a2f3d"/>
+<rect x="70" y="140" width="20" height="20" fill="#2a2f3d"/><rect x="110" y="140" width="20" height="20" fill="#2a2f3d"/>
+<rect x="70" y="160" width="20" height="20" fill="#2a2f3d"/><rect x="90" y="160" width="20" height="20" fill="#2a2f3d"/><rect x="110" y="160" width="20" height="20" fill="#2a2f3d"/>
+<rect x="90" y="140" width="20" height="20" rx="2" fill="#1a1e28" stroke="#8bc34a" stroke-width="1.5"/>
+<path d="M100 138 Q170 60 245 150" fill="none" stroke="#ffd54f" stroke-width="2" stroke-dasharray="4 3"/>
+<circle cx="245" cy="150" r="5" fill="#ffd54f"/>
+<rect x="250" y="140" width="26" height="26" rx="3" fill="#1a1e28" stroke="#4fc3f7" stroke-width="1.5"/>
+<text x="263" y="196" fill="#8891a4" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">ship sees shell,</text>
+<text x="263" y="208" fill="#8891a4" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">not the flash</text>
+<text x="100" y="205" fill="#66bb6a" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">flash hidden</text>
+</g>
+<!-- EXPOSED -->
+<g>
+<rect x="470" y="140" width="24" height="24" rx="2" fill="#1a1e28" stroke="#ef5350" stroke-width="1.5"/>
+<circle cx="482" cy="152" r="16" fill="none" stroke="#ffa726" stroke-width="1.5" opacity="0.8"/>
+<circle cx="482" cy="152" r="24" fill="none" stroke="#ffa726" stroke-width="1" opacity="0.4"/>
+<text x="482" y="196" fill="#ef5350" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">flash visible</text>
+<rect x="620" y="140" width="26" height="26" rx="3" fill="#1a1e28" stroke="#4fc3f7" stroke-width="1.5"/>
+<path d="M618 152 L500 152" stroke="#ef5350" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#lock)"/>
+<text x="600" y="128" fill="#ef5350" font-family="'IBM Plex Mono',monospace" font-size="9" text-anchor="middle">LINE OF SIGHT → FIX</text>
+</g>
+<defs><marker id="lock" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L7,4 L0,8 Z" fill="#ef5350"/></marker></defs>
+</svg>
+<figcaption>Walls hide the muzzle flash. The fleet reads the enclosed gun only as danger-in-a-region; the exposed gun it can line up and remember.</figcaption>
+</figure>
+<h3>The three locks — why "static" doesn't leak</h3>
+<ol>
+<li><strong>Broken sightline (mechanical, the hard lock).</strong> A wall blocks line of sight — to the muzzle flash, to the gun itself, and to anything behind it. Enclosure breaks every sightline into the interior, so the fleet gets neither a flash-bearing nor a visual fix on an enclosed gun. (The shells still lob up and over — the fleet <em>feels</em> them as incoming fire; it just can't trace them home.) Flash-occlusion and visual-occlusion are <strong>one rule</strong>: walls stop sightlines. This also makes walls a deliberate <em>concealment tool</em> — screen a gun, a relocation, or a breach by putting a wall between it and the fleet's eyes.</li>
+<li><strong>Disc, not point (structural).</strong> A hit proves only that <em>some AoR reaches this spot</em> — and an AoR is a large circle, so it localizes to a whole <em>disc</em> of possible gun positions, never a barrel. The inverse problem is non-identifiable: many cannon layouts produce the identical hurt-map. <span class="dim">Bearing is <em>available but coarse by design</em>: a shell gives the fleet a general direction and area — feeding the ~10×10 fear grid — never a point, so even perfect bearing math lands in a cell spanning many gun positions. And an enclosed gun lobs its shell up and over, so the bearing points at the <em>wall</em>, not the gun behind it. Coarse-by-design is the feature, not a leak.</span></li>
+<li><strong>The AoR is fluid though the gun is fixed (the actual answer).</strong> The fleet was never chasing the cannon — it chases the <em>danger</em>, and danger geography is the AoR, which you move live (re-task drag), hide (hold-fire — the group never enters the map), or relocate (Deploy, at a nurture cost). The bolted-down object is simply not the thing the fleet is trying to find.</li>
+</ol>
+<div class="s pillar"><div class="ct">Enclosure now pays a fourth time — and placement becomes a two-axis gamble</div><p>Enclosure already paid three ways: <em>protection</em>, <em>territory/victory</em>, and <em>veteran nurture</em>. Now it pays a fourth: <strong>concealment</strong>. And the placement decision the player reads live becomes two axes crossed — <strong>coverage vs concealment</strong> (push a gun forward for reach, or wall it in for invisibility) × <strong>the veteran you're risking</strong> (expose your 200% gun and it becomes a named target the fleet remembers <em>across sorties</em>; enclose it and it's a phantom that still bleeds them). Exposure carries a <em>persistent</em> cost, not a per-sortie one.</p></div>
+</section>
+
+<section id="baiting">
+<h2><span class="n">6</span>Baiting — Play The Model, Not The Fleet</h2>
+<p>The endgame skill, and the reason the whole architecture exists: <strong>memory is a trap the player springs.</strong> Because the fleet acts on a <em>belief</em> about the board, and beliefs go stale, the deep move is to poison what the fleet thinks it knows.</p>
+<div class="s"><div class="ct">Three trap patterns (all deterministic, all readable)</div>
+<ul>
+<li><strong>Bait-and-relocate.</strong> Fire from a spot, then move the AoR (or the gun in Deploy). The fear map still reads that region HOT and cools only slowly, so the fleet routes into your relocated guns. It can't tell "the gun moved" from "the gun went silent" — a spatial field can't distinguish them, and that ambiguity <em>is</em> the exploit.</li>
+<li><strong>Hold-feint.</strong> A battery that held fire last sortie never entered the fear map — that ground reads COLD. Route delivery there, then spring the alpha. Withholding a signal is itself a move; the receiver updates on absence.</li>
+<li><strong>Overcommit-punish.</strong> The contact channel remembers a breach; the fleet masses delivery on it next sortie. You've quietly reinforced it into a kill-box.</li>
+<li><strong>Hidden breach.</strong> Because contact is revised only by contradiction (never decayed), a wall you remove or relocate stays "walled" in the fleet's ledger — so it won't path troops through the opening or exploit it, until it re-observes the gap. Open a breach the fleet is blind to; in fog it may never find it (see <a href="#contact">Contact</a>).</li>
+</ul></div>
+<div class="s pillar"><div class="ct">Three systems, retro-justified</div><p>This single skill gives independent reasons-to-exist to three verbs that were otherwise "nice to have": the <strong>cannon-move verb</strong> (relocate to bait — you asked for exactly this), <strong>hold-fire</strong> (silence keeps a battery off the fleet's map — so it hides the gun <em>and</em> wins the crazy-Ivan alpha window), and <strong>enclosure</strong> (you protect the veteran you're about to bait with). Fire-control becomes information warfare on both sides, which is why it is the strongest of the three Fight verbs.</p></div>
+<div class="s ref"><div class="ct">Precedent — this is the stealth "search the last-known-position" loop, and poker slow-play</div><p>The guard walking to where you <em>were</em> while you slip behind him is bait-and-relocate. Alien: Isolation makes an entire game of luring the creature away from your last-known area, and it reads as tense and fair. Checking a monster hand to keep an opponent's model of you wrong (slow-play) is hold-feint — a canonical strategic tradition, not a bolt-on.</p></div>
+</section>
+
+<section id="propagation">
+<h2><span class="n">7</span>Propagation — One Fear Map, Spreading Slowly</h2>
+<p>Decision: the fear map is <strong>fleet-wide with slow propagation</strong> — one shared belief, not per-ship islands. It reads cleanly as a single overlay, makes information a contested resource, and creates its own baitable texture.</p>
+<div class="s"><div class="ct">How knowledge moves</div>
+<ul>
+<li>Contacts and fear flow <strong>ship→ship and troop→troop on a lag</strong> — reuse the troop "command-confusion" batching (more units → slower coordination), the same signature one layer down.</li>
+<li><strong>Scouts are the premium accelerant</strong> — wide vision, fast propagation into the shared map. Kill the scout and the flank <em>re-blinds</em>: fear stops spreading there and stale beliefs linger. (Straight StarCraft: the info-gatherer is a priority kill.)</li>
+<li><strong>The Flagship is the network's top node</strong> — while it lives, propagation is fast and coordinated; sink it and the whole network reverts to slow and local, though nothing already learned is lost (see <a href="#battle">The Battle Is The Loop</a>).</li>
+<li><strong>Troops ashore are close-recon</strong>, feeding hard ground truth into the contact channel from inside the perimeter.</li>
+<li>Propagation lag is itself a texture: <em>"the north's fear hasn't reached the freshly-arrived southern ships yet"</em> — a real, legible, baitable seam.</li>
+</ul></div>
+</section>
+
+<section id="ui">
+<h2><span class="n">8</span>The Commander's UI — Fog Of The Enemy's Mind</h2>
+<p>This is the payoff, not a readout. The tension you want has an exact source, and naming it says what to draw.</p>
+<div class="s pillar"><div class="ct">The dramatic engine</div><p>You never get certainty — you get a <strong>belief about their belief</strong>, and acting on a wrong guess is the drama. It's the sensation of every stealth game: not "am I hidden" but "do they <em>think</em> they saw me." So the UI's job is to show <strong>enough to create dread, never enough to remove doubt.</strong> A literal, accurate readout of the fleet's memory is the <em>wrong</em> design even though it's the obvious one — it converts a signaling game into open-information and kills the bluff the instant the receiver's cards face up.</p></div>
+<h3>Three registers — mirrored from the two <em>persistent</em> channels (Contact and Effect)</h3>
+<table>
+<tr><th>Register</th><th>Channel</th><th>Fidelity</th><th>Render</th></tr>
+<tr><td><strong>Exposure glint</strong> — which of <em>your</em> pieces the fleet has confirmed</td><td><span class="tag t-con">contact</span></td><td class="full">Hard, reliable</td><td>A small "spotted" glint on a found wall / castle / exposed gun. Enclosed guns show nothing.</td></tr>
+<tr><td><strong>Fear haze</strong> — where the fleet is scared</td><td><span class="tag t-eff">effect</span></td><td class="mid">Soft, uncertain</td><td>A dim tiered haze over the <em>enemy's</em> approach lanes — "they seem to fear the north." Coarse, never numeric.</td></tr>
+<tr><td><strong>Decay</strong> — a bluff fading</td><td><span class="tag t-eff">effect</span></td><td class="dim">Behavioral only</td><td>No timer. The feared region visibly loses the fleet's nerve — ships edge back in. You <em>read</em> "my bluff is fading."</td></tr>
+</table>
+<div class="s warn"><div class="ct">The honest risk — two fogs can read as noise</div><p>The player already reasons under board fog; now they also reason under enemy-mind fog, and stacked uncertainty reads as <em>noise</em> rather than <em>tension</em> unless the player feels agency over it. The mitigation is derivable, not empirical: make <strong>exactly one register hard and reliable</strong> — the exposure glint — so the commander always has a firm floor of "here's what I know they know," and let fear-haze and decay float soft on top. <strong>One solid rail, two atmospheric layers.</strong> Wrong toward all-soft → noise; wrong toward all-hard → the bluff dies. This is the same reason stealth games give you a <em>reliable</em> light gem <em>and</em> an <em>unreliable</em> sense of suspicion. <strong>The two fogs must render in visibly distinct visual languages</strong> — board fog (what <em>you</em> can't see) versus mind fog (what the <em>fleet</em> knows and fears) — so the player never conflates them; the exact treatment is a UI-design-phase decision, not settled here. This whole risk is the <em>bad-load</em> risk (see <a href="#intent">Design Intent</a>): stacked fogs become bookkeeping unless the fidelities summarize them into shapes the player reasons about. The one-hard-rail-plus-soft-haze structure is exactly that summarizing — it is what keeps the load reasoning-flavored, not clerical.</p></div>
+<div class="s ref"><div class="ct">Precedent — the motion tracker</div><p>Alien: Isolation's tracker tells you <em>something is near</em> and pointedly not exactly what or where; the dread is entirely in the imprecision. Stealth detection meters (the filling eye/gem) are the exposure-glint at register 1 — a legible commitment state, never a coordinate. RTS minimaps that remember seen buildings but grey out unscouted ground are the contact-vs-effect split, already shipped. Nothing here is novel UI — it's proven UI pointed at a new target: the enemy's <em>mind</em>.</p></div>
+</section>
+
+<section id="cognition">
+<h2><span class="n">9</span>The Cognition Axis — Difficulty As Estimator Quality</h2>
+<p>How the roster gets "harder as you descend" without being "more hit points." Difficulty is a <strong>monotonic decrease in how exploitable the fleet's inference is</strong> — the quality of its guess rises; the fog never lifts.</p>
+<table>
+<tr><th></th><th>Early fleet (shallow boards)</th><th>Late fleet (deep boards)</th></tr>
+<tr><td>Fear decay</td><td>Fast — forgets quickly</td><td>Slow — stubborn beliefs</td></tr>
+<tr><td>Fear resolution</td><td>Low — treats a HOT region as uniformly deadly</td><td>Higher — partially separates overlapping AoRs</td></tr>
+<tr><td>Verification</td><td>None — trusts the map, blunders into cores</td><td><strong>Cross-checks</strong> remembered fear against current vision; a region gone quiet gets <em>probed</em>, not trusted</td></tr>
+<tr><td>Propagation</td><td>Slow, patchy</td><td>Fast, coordinated</td></tr>
+<tr><td>Sight range (perception)</td><td>Short — forward pieces stay unseen; easy to hide from</td><td>Long — the recon lineage sees deep; hard to conceal anything</td></tr>
+<tr><td>Searching fire</td><td>Rare</td><td>Deliberate, gradient-weighted</td></tr>
+<tr><td class="dim">Player must…</td><td class="dim">run <em>one</em> trick — baits land easily and <em>teach the signaling language</em></td><td class="dim"><em>combine</em> tricks (relocate + hold-feint + reinforce) to fool a receiver that verifies</td></tr>
+</table>
+<div class="s law"><div class="ct">The structural floor</div><p>Every estimator, at every tier, slams into the same non-identifiability wall and <strong>never crosses into a gun-fix</strong>. Difficulty raises the quality of the guess; it never removes the fog. That is a designable, theory-grounded curve from board 1 to board 190 — and it is Cognition, not HP. This <em>is</em> the anti-treadmill promise from <a href="#intent">Design Intent</a>, made mechanical: the enemy gets smarter, never tougher. This is the "more than more-hit-points" evolution, and it is exactly a <em>less manipulable inference rule</em> in signaling terms.</p></div>
+</section>
+
+<section id="lineages">
+<h2><span class="n">10</span>Two Anchor Lineages — Named Strategies Over The Channels</h2>
+<p>Both fall directly out of the memory model; both get harder by converting <span class="tag t-eff">effect</span>-guesses into <span class="tag t-con">contact</span>-facts <em>better</em>, not by gaining HP. These are the first two entries of the future roster, and they double as the <em>minimal test cast's</em> most interesting members.</p>
+<div class="s contact"><div class="ct">The Hunter — punishes exposure</div><p>Operates purely on the <strong>contact channel</strong>: it can only meaningfully attack a cannon it holds a <em>confirmed fix</em> on — an exposed, flash-visible gun, or one a scout/troop has pinned. Against a fully-enclosed fort it is nearly inert, shelling danger-guesses for scraps. Its whole design pressure is <em>make the player afraid to expose a gun</em>. It is also the perfect bait victim: feed it a fix, relocate the gun, watch it pound dead ground. (Your GDD Mortar/Heavy, reborn as a channel-native unit instead of a perfect-information cheater.)</p></div>
+<div class="s effect"><div class="ct">The Provocateur — forces the exposure</div><p>A durable, aggressive nuisance whose job is to <strong>draw fire</strong>: push into a soft flank so hard the player must open up on it — and every gun that fires while <em>un-enclosed</em> reveals a flash the fleet banks as a contact. It weaponizes the hold-fire dilemma: engage it and you light up your batteries; hold and it breaches. It turns "should I fire" into "should I reveal," the signaling game at its sharpest. (The Decoy-Mast logic, pointed outward — the enemy running a decoy on <em>you</em>.)</p></div>
+</section>
+
+<section id="matrix">
+<h2><span class="n">11</span>The Evolution Matrix — Lineage × Axis <span class="pill">preview · roster sweep is next session</span></h2>
+<p>Ships rhyme within a <strong>lineage</strong> (a fleet role) and diverge along <strong>axes</strong> — the same generating structure the cannon matrix uses (role × ammunition), one layer out. A small set of base lineages × a handful of evolution axes is the big combinatorial generator; the vast list gets built next session and paired down against the cannons the session after.</p>
+<table>
+<tr><th>Base lineages (fleet roles)</th><th>Evolution axes (growth directions)</th></tr>
+<tr><td>
+<span class="pill">bombard-walls</span> <span class="pill">hunt-cannons</span> <span class="pill">deliver-troops</span> <span class="pill">deliver-air</span> <span class="pill">support</span> <span class="pill">screen / tank</span> <span class="pill">area-deny</span> <span class="pill">recon</span>
+</td><td>
+<strong>1. Durability</strong> — armour / regen / shields <span class="dim">(the one HP-ish axis)</span><br>
+<strong>2. Evasion</strong> — sharper crazy-Ivan, speed, unpredictable jukes<br>
+<strong>3. Cognition</strong> — better fear-estimate, sees through fog, learns/propagates faster<br>
+<strong>4. Coordination</strong> — escorted formations, deliberate clump/space/file, screens its support<br>
+<strong>5. Firepower</strong> — harder/faster hits, AoE on shots<br>
+<strong>6. Specials</strong> — discrete lockable actions (heal pulse, launch, smoke, shield-project, disable-your-tower)<br>
+<strong>7. Payload</strong> — more/nastier troops or bombers, faster dock/launch
+</td></tr>
+</table>
+<div class="s pillar"><div class="ct">Two properties this buys</div>
+<ul>
+<li><strong>The evolution axes <em>are</em> the counter-web axes.</strong> A ship's growth directions are the escalation of the defender's levers — one structure expressed twice. Introduce them in roughly the order the player earns the answering lever (Introduce → Isolate → Combine).</li>
+<li><strong>"Easy early, hard late" runs mostly on axes 3 and 4, not 1.</strong> Early ships are blind blunderers that path into your bright cores and die cheap; late ships are sharp, coordinated hunters that avoid cores, find seams, and screen their support. Durability is just one of seven levers — the escalation is <em>perception and coordination</em>.</li>
+</ul></div>
+<div class="s future"><div class="ct">Minimal test cast (the spanning set, not the bestiary)</div><p>The fewest units that exercise every mechanic once, agreed as the starting place: <strong>Warship</strong> (control unit — the fire→reveal→fear loop, non-juker), <strong>Scout</strong> (recon + propagation node; kill it, flank re-blinds), <strong>Transport</strong> (memory-routing + primary bait victim + sea→land switch-moment), <strong>Carrier</strong> (sea→air switch-moment + air-density question), <strong>Support</strong> (the silent hider — never enters the fear map, gives back-line targeting its reason), and optional <strong>Hunter</strong> (the trap against cannons specifically). A test instrument, deliberately not a pair-down.</p></div>
+</section>
+
+<section id="determinism">
+<h2><span class="n">12</span>Determinism Ledger</h2>
+<p>Every place the model touches state, and the confirmation that reproducibility holds. This is the contract the eventual SDD implements against.</p>
+<table>
+<tr><th>Mechanism</th><th>Deterministic because…</th></tr>
+<tr><td>Grid-scoring movement (kept from the GDD's shape)</td><td>Pure function of board state; ties broken by lowest grid index (row-major).</td></tr>
+<tr><td>Fear map (effect channel)</td><td>Updated only from observed hit events, which are a deterministic function of player inputs. Same inputs → same field evolution.</td></tr>
+<tr><td>Confirmed targets (contact channel)</td><td>Recorded only on connecting hits / troop touches — deterministic events.</td></tr>
+<tr><td>Searching fire</td><td><strong>Seeded</strong> search pattern weighted by the fear gradient — never live randomness.</td></tr>
+<tr><td>Line of sight (channel 3)</td><td>Geometric visibility computed from board state (occluders + distance) — deterministic. Opening a sightline (e.g. a breach) writes contact facts deterministically.</td></tr>
+<tr><td>Between-sortie planning</td><td>The fleet's next-sortie plan is a pure function of its memory at sortie end; computed during Build/Deploy, off the real-time path. Same memory → same plan.</td></tr>
+<tr><td>Crazy Ivan / hit response</td><td>Deterministic flee-impulse on the deterministic hit event (kept from the GDD).</td></tr>
+<tr><td>Propagation lag</td><td>Batching by spawn order (deterministic group assignment), same as troop command-confusion. Flagship alive → fast batching; sunk → slow/local. Deterministic either way.</td></tr>
+<tr><td>Cross-sortie memory</td><td>Persists <em>within a battle</em>; <strong>resets on the player's replay</strong> (seed reset). Fleet-wide: <em>propagated</em> knowledge outlives sunk ships and cleared troops, but sinking a ship deterministically loses its un-propagated intel, blinds its sector, and thins the propagation network. Contact facts are revised only by contradicting observation — including line of sight, blocked by terrain/walls and capped by distance — never time-decayed.</td></tr>
+<tr><td>Unit persistence across sorties</td><td>Unsunk ships persist (with their damage), boss HP persists, cannon veterans persist; <strong>troops are cleared each sortie</strong>. All deterministic given identical play.</td></tr>
+<tr><td>Fleet resolve</td><td>A deterministic function of perceived losses, progress (contact) and danger (fear); retreat / rout decisions evaluated at sortie boundaries. Same battle → same resolve curve → same break point.</td></tr>
+</table>
+<div class="s law"><div class="ct">The invariant</div><p>Fleet behavior = pure function of (seed + observation history); observation history = pure function of player inputs. Therefore: play the same battle the same way → identical fleet reaction, shot for shot, sortie for sortie. Deviate → different, but fully reproducible.</p></div>
+</section>
+
+<section id="keepthrow">
+<h2><span class="n">13</span>Keep The Idea, Throw The Definition</h2>
+<p>Reconciling this model with the pre-redesign GDD ship/troop content, per the session's mandate.</p>
+<div class="s"><div class="ct">Keep (load-bearing ideas)</div>
+<ul>
+<li>Deterministic per-type grid-scoring <em>shape</em>; tie-break by grid index; recalc cadence.</li>
+<li>Per-type target priorities and fallback chains (walls → cannons → castles, etc.).</li>
+<li>Fleet shield (ships hiding behind hulls); ship stacking; crazy Ivan.</li>
+<li>The three delivery layers (sea ships / land troops / air bombers) = the three defender domains.</li>
+<li>Transports, carriers, kamikazes, support ships; A* troop pathfinding + formation stacking; fog + smoke.</li>
+</ul></div>
+<div class="s warn"><div class="ct">Throw (superseded definitions)</div>
+<ul>
+<li>The fixed 14-ship roster and all absolute stat tables (rebuilt next session as lineage × axis).</li>
+<li>Ship <strong>range</strong> and range-based accuracy falloff — replaced by AoR-avoidance: ships score for <em>low incoming hit-probability</em>, loitering in weak fringes, gaps, and behind shields.</li>
+<li>"Tap a ship to focus fire" and anything assuming the player aims.</li>
+<li><strong>Perfect-information scoring</strong> — the old functions read <code>dCannon</code>, cannon HP, and true AoRs. Every such input is replaced by an inferred one from the effect/contact channels. This is the biggest single change.</li>
+</ul></div>
+</section>
+
+<section id="open">
+<h2><span class="n">14</span>Open Questions &amp; Next Documents</h2>
+<div class="s warn"><div class="ct">Not yet locked — numbers &amp; edges to settle by reasoning, then tune</div>
+<ul>
+<li><strong>Tier count &amp; thresholds</strong> for the fear map (3? 4?) and the hit-% → tier update curve.</li>
+<li><strong>Decay rate</strong> per Cognition tier, and <strong>propagation lag</strong> values.</li>
+<li><strong>Searching-fire reveal cost</strong> — how punishing self-exposure is, and which lineages probe.</li>
+<li><strong>Contact update trigger — resolved.</strong> Facts never time-decay (revised on contradiction), and line of sight updates them, broken by trees/rocks/cliffs/walls and capped by distance (see <a href="#contact">Contact</a>). Remaining tuning: exact <em>sight-range</em> values per lineage, and how perception range is rendered so the player can read it at a glance.</li>
+<li><strong>Arc-bearing — resolved.</strong> Ships get a coarse direction/area from an incoming shell by design (feeds the ~10×10 fear grid), never a point; lock #2 is now "coarse by design," not a worry.</li>
+<li><strong>Air density</strong> — bombers frequent enough that loading Air is sometimes right, rare enough that no dedicated flak is missed.</li>
+<li><strong>Resolve tuning &amp; tell</strong> — the numbers behind retreat/rout (thresholds, stalemate-decay rate, the resolve spread across lineages), and how the fleet's resolve reads on screen so the bluff-vs-grind choice isn't guesswork.</li>
+</ul></div>
+<div class="s future"><div class="ct">Next documents</div>
+<ul>
+<li><strong>Ships (roster sweep)</strong> — the dream-big list: every lineage × axis expression, developed freely. Vast on purpose.</li>
+<li><strong>Troops</strong> — their own levers (target priority, path behaviour, formation tricks, revealed on landing), all riding this same three-channel mind.</li>
+<li><strong>Pair-down (joint session)</strong> — bring ships/troops to the Cannon &amp; Tower doc and cut both sides to exactly what works against each other (16 archetypes → 6–8, 6 tower axes → ~6). This memory model is the substrate all of it runs on.</li>
+</ul></div>
+</section>
+
+</div>
+<footer>Rivenkeep — The Attacker's Mind · v2.0.0 · Fleet Cognition &amp; Memory Model · Blind · Deterministic · Learning-Within-the-Loop · Companion to the Cannon &amp; Tower doc</footer>
+</body>
+</html>
