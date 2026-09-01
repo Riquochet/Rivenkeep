@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — Removed-Content Archive v1.3.0</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#80cbc4;--accent2:#7c4dff;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#b2dfdb;
+--c-found:var(--accent);--c-battle:#26c6da;--c-build:#66bb6a;--c-deploy:#42a5f5;--c-fight:#ef5350;--c-castle:#7c4dff;--c-prog:#ffa726;--c-econ:#f48fb1;--c-exp:#8891a4;--c-ref:var(--accent)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
+a{color:var(--link);text-decoration:none}a:hover{color:#e0f2f1;text-decoration:underline}
+header{padding:55px 40px 40px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg));position:relative}
+header::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:300px;background:radial-gradient(ellipse,rgba(79,195,247,.08),transparent 70%);pointer-events:none}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2.8rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px}
+header .sub{font-size:1rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--dim)}
+.ctn{max-width:1200px;margin:0 auto;padding:0 40px}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,12,16,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:10px 40px;display:flex;gap:18px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}nav a:hover{color:var(--accent)}
+section{padding:50px 0;border-bottom:1px solid var(--border)}
+h2{font-family:'Chakra Petch',sans-serif;font-size:1.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+h3{font-family:'Chakra Petch',sans-serif;font-size:1.1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:28px 0 10px;color:var(--text)}
+h4{font-size:.95rem;font-weight:600;margin:18px 0 6px;color:var(--gold)}
+p{margin-bottom:12px;font-size:.93rem}p.dim{color:var(--dim)}
+a.ref{color:var(--accent);text-decoration:none;font-size:.7rem;vertical-align:super}a.ref:hover{text-decoration:underline}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:.84rem}
+th{font-family:'IBM Plex Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.5px;color:var(--dim);text-align:left;padding:8px 10px;border-bottom:2px solid var(--border)}
+td{padding:8px 10px;border-bottom:1px solid rgba(42,47,61,.4);vertical-align:top}tr:hover td{background:rgba(79,195,247,.03)}
+
+/* Part-colored section bars */
+.part-divider{margin:40px 0 20px;padding:12px 0;border-top:2px solid var(--accent);text-align:center}
+.part-divider span{font-family:'Chakra Petch',sans-serif;font-size:.75rem;letter-spacing:3px;text-transform:uppercase}
+.s{background:var(--surface);padding:14px 18px;margin:16px 0;border-radius:0 6px 6px 0}
+.s p{margin-bottom:5px;font-size:.85rem}.s p:last-child{margin-bottom:0}
+.s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.85rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px}
+/* Auto-bar: all content in Part sections gets left bar + indent */
+section[class*="p-"] > p,section[class*="p-"] > table,section[class*="p-"] > div:not(.part-divider):not(.sr){
+  border-left:3px solid var(--border);padding-left:15px;margin-left:0}
+section[class*="p-"] > h3{border-left:none;padding-left:0;margin-left:0}
+/* Override auto-bar color per Part */
+.p-found > p,.p-found > table,.p-found > div:not(.part-divider):not(.sr){border-left-color:var(--c-found)}
+.p-battle > p,.p-battle > table,.p-battle > div:not(.part-divider):not(.sr){border-left-color:var(--c-battle)}
+.p-build > p,.p-build > table,.p-build > div:not(.part-divider):not(.sr){border-left-color:var(--c-build)}
+.p-deploy > p,.p-deploy > table,.p-deploy > div:not(.part-divider):not(.sr){border-left-color:var(--c-deploy)}
+.p-fight > p,.p-fight > table,.p-fight > div:not(.part-divider):not(.sr){border-left-color:var(--c-fight)}
+.p-castle > p,.p-castle > table,.p-castle > div:not(.part-divider):not(.sr){border-left-color:var(--c-castle)}
+.p-prog > p,.p-prog > table,.p-prog > div:not(.part-divider):not(.sr){border-left-color:var(--c-prog)}
+.p-econ > p,.p-econ > table,.p-econ > div:not(.part-divider):not(.sr){border-left-color:var(--c-econ)}
+.p-exp > p,.p-exp > table,.p-exp > div:not(.part-divider):not(.sr){border-left-color:var(--c-exp)}
+.p-ref > p,.p-ref > table,.p-ref > div:not(.part-divider):not(.sr){border-left-color:var(--c-ref)}
+/* Part colors applied to section bars and h2 */
+.p-found .s{border-left:3px solid var(--c-found)}.p-found h2{color:var(--c-found)}
+.p-battle .s{border-left:3px solid var(--c-battle)}.p-battle h2{color:var(--c-battle)}
+.p-build .s{border-left:3px solid var(--c-build)}.p-build h2{color:var(--c-build)}
+.p-deploy .s{border-left:3px solid var(--c-deploy)}.p-deploy h2{color:var(--c-deploy)}
+.p-fight .s{border-left:3px solid var(--c-fight)}.p-fight h2{color:var(--c-fight)}
+.p-castle .s{border-left:3px solid var(--c-castle)}.p-castle h2{color:var(--c-castle)}
+.p-prog .s{border-left:3px solid var(--c-prog)}.p-prog h2{color:var(--c-prog)}
+.p-econ .s{border-left:3px solid var(--c-econ)}.p-econ h2{color:var(--c-econ)}
+.p-exp .s{border-left:3px solid var(--c-exp)}.p-exp h2{color:var(--c-exp)}
+.p-ref .s{border-left:3px solid var(--c-ref)}.p-ref h2{color:var(--c-ref)}
+
+/* Cards grid */
+.cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:16px 0}
+.cd{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px}
+.cd .ct2{font-family:'Chakra Petch',sans-serif;font-size:.95rem;font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.cd .cb{font-size:.85rem;color:var(--dim);line-height:1.55}
+
+/* Stat boxes */
+.sr{display:flex;gap:14px;margin:16px 0;flex-wrap:wrap}
+.sb{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px;flex:1;min-width:100px;text-align:center}
+.sb .sn{font-family:'Chakra Petch',sans-serif;font-size:1.8rem;font-weight:700;color:var(--accent)}
+.sb .sl{font-size:.68rem;color:var(--dim);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+
+/* Layer badges */
+.lt{display:inline-block;padding:2px 6px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.64rem;font-weight:500;margin:0 1px;text-transform:uppercase}
+.la{background:rgba(255,152,0,.2);color:#ffb74d}.lb{background:rgba(244,67,54,.2);color:#ef9a9a}.lc{background:rgba(124,77,255,.2);color:#b39ddb}.ld{background:rgba(38,198,218,.2);color:#80deea}.le{background:rgba(102,187,106,.2);color:#a5d6a7}
+
+/* Theater badges */
+.theme-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px;border:1px solid}
+.theme-coastal{background:rgba(33,150,243,.12);border-color:#2196f3;color:#2196f3}
+.theme-mountain{background:rgba(141,110,99,.15);border-color:#8d6e63;color:#8d6e63}
+.theme-desert{background:rgba(255,152,0,.12);border-color:#ff9800;color:#ff9800}
+.theme-river{background:rgba(38,198,218,.12);border-color:#26c6da;color:#26c6da}
+.theme-volcanic{background:rgba(244,67,54,.12);border-color:#f44336;color:#f44336}
+.theme-frozen{background:rgba(179,229,252,.15);border-color:#b3e5fc;color:#b3e5fc}
+.theme-sky{background:rgba(206,147,216,.12);border-color:#ce93d8;color:#ce93d8}
+.theme-forest{background:rgba(76,175,80,.12);border-color:#4caf50;color:#4caf50}
+.theme-swamp{background:rgba(104,159,56,.12);border-color:#689f38;color:#689f38}
+.theme-crystal{background:rgba(225,190,231,.12);border-color:#e1bee7;color:#e1bee7}
+
+/* Piece group colors */
+.gd-ab::before{content:"●";color:#66bb6a;margin-right:3px}.gd-cd::before{content:"●";color:#ffd54f;margin-right:3px}.gd-ef::before{content:"●";color:#7c4dff;margin-right:3px}.gd-gh::before{content:"●";color:#ef5350;margin-right:3px}
+.gd-ab,.gd-cd,.gd-ef,.gd-gh{font-weight:600}
+
+/* Piece shapes */
+.shapes-container{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.shape{display:inline-flex;flex-direction:column;align-items:center;gap:2px;padding:5px 6px;border:1px solid var(--border);border-radius:4px;background:var(--surface2)}
+.shape .sg{display:grid;gap:1px}.shape .sg .c{width:10px;height:10px;border-radius:1px}.shape .sg .w{background:#fff}.shape .sg .o{background:transparent}
+.shape .sn2{font-family:'IBM Plex Mono',monospace;font-size:.55rem;color:var(--dim);font-weight:500}
+
+/* Battle table */
+.battle-table{font-size:.74rem}.battle-table th{font-size:.62rem;padding:4px 6px}.battle-table td{padding:4px 6px;font-size:.74rem}
+.battle-table tr.nt td{border-top:2px solid var(--accent)}
+
+/* Glossary terms */
+.g{border-bottom:1px dotted #ffd54f;cursor:pointer;color:#ffd54f;transition:color .15s}
+.g:hover{color:var(--accent)}
+.g-def{display:none;margin:4px 0 6px;padding:8px 12px;background:#1a2233;border-left:3px solid var(--accent);border-radius:0 4px 4px 0;font-size:.8rem;line-height:1.5;color:var(--dim);animation:gslide .15s ease-out}
+.g-def.open{display:block}
+.g-def strong{color:var(--text)}
+@keyframes gslide{from{opacity:0;max-height:0}to{opacity:1;max-height:200px}}
+
+/* Changed text marking */
+.changed{background:rgba(79,195,247,.08);border-left:2px solid var(--accent);padding-left:6px;margin-left:-8px}
+
+/* Timeline */
+.tl{position:relative;padding-left:28px;margin:16px 0}.tl::before{content:'';position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--border)}
+.ti{position:relative;margin-bottom:16px;padding-left:14px}.ti::before{content:'';position:absolute;left:-24px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.ti .tll{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--accent);text-transform:uppercase;letter-spacing:1px}
+.ti .tlc{font-size:.85rem;color:var(--dim);margin-top:3px}
+
+@media(max-width:768px){header{padding:40px 18px 30px}h1{font-size:2rem}.ctn{padding:0 18px}nav{padding:8px 18px;gap:12px}.cg{grid-template-columns:1fr}}
+</style>
+<style>
+.arch-wrap{max-width:1100px;margin:0 auto;padding:32px 24px 90px}
+.lead p{color:var(--dim);font-size:.92rem;line-height:1.65;margin-bottom:10px}
+.lead .k{color:var(--text)}
+.idx{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px 22px;margin:24px 0}
+.idx h2{font-family:'Chakra Petch',sans-serif;font-size:.95rem;letter-spacing:1px;text-transform:uppercase;margin:0 0 10px;color:var(--accent)}
+.idx ol{margin:0;padding-left:20px;columns:2;column-gap:36px}
+.idx li{margin:4px 0;font-size:.82rem;break-inside:avoid}
+.idx a{color:var(--link)}
+.sec-head h2{font-family:'Chakra Petch',sans-serif;text-transform:uppercase;letter-spacing:2px;font-size:1.15rem;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:8px;margin:44px 0 4px}
+.sec-head p{color:var(--dim);font-size:.82rem;margin:0 0 4px}
+.arch-entry{margin:26px 0;padding:18px 20px;background:var(--surface);border:1px solid var(--border);border-radius:8px}
+.arch-entry h2.src{font-family:'Chakra Petch',sans-serif;font-size:1.05rem;letter-spacing:.5px;margin:0 0 8px;color:var(--text)}
+.arch-entry h2.src .ln{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim);letter-spacing:0}
+.badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.66rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:4px;margin:0 0 12px}
+.badge.out{background:rgba(239,83,80,.14);color:var(--danger);border:1px solid var(--danger)}
+.badge.owned{background:rgba(128,203,196,.13);color:var(--accent);border:1px solid var(--accent)}
+.badge.mixed{background:rgba(124,77,255,.16);color:#b39dff;border:1px solid var(--accent2)}
+.arch-note{font-size:.85rem;color:var(--dim);margin:0 0 14px;line-height:1.55;border-left:3px solid var(--warn);padding-left:12px}
+.arch-note strong{color:var(--text)} .arch-note code{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--link)}
+.arch-orig section{margin:0}
+.arch-src{background:#0d1017;border:1px solid var(--border);border-radius:6px;padding:12px 14px;overflow-x:auto;font-family:'IBM Plex Mono',monospace;font-size:.72rem;line-height:1.6;color:var(--dim);white-space:pre-wrap;word-break:break-word;margin:0}
+.vlabel{font-family:'IBM Plex Mono',monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:1px;color:var(--dim);margin:2px 0 6px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Rivenkeep</h1>
+  <div class="sub">Removed-Content Archive</div>
+  <div class="meta">v1.3.0 — verbatim record of everything stripped in the GDD (the v6.3.0 &rarr; v6.4.0 pair-down, the v6.5.0 extraction, and the v6.6.0 Build extraction) · companion to Rivenkeep_GDD.html · <strong>v1.3.0: added the Wall Rack Selection &amp; Feedback block (also cut in the v6.6.0 Build extraction; the Build part is in Build &sect;12, the selection-frame + cannon-frame UX awaits a home). (v1.2.0: Deploy Tray Layout + cannon carousel.)</strong></div>
+</header>
+<div class="arch-wrap">
+<div class="lead">
+<p>This file is the <span class="k">verbatim record of every block removed from the Rivenkeep GDD</span> during the v6.3.0&nbsp;&rarr;&nbsp;v6.4.0 pair-down, when the GDD was reshaped into a starting-place hub that references the module docs instead of duplicating them. It is the safety net for that pass — nothing here was rewritten; the markup is preserved exactly, so <span class="k">view-source (or selecting the block) recovers the original</span>.</p>
+<p>Everything is grouped by its source GDD section. Three groups: <span class="k">eleven extracted sections</span> whose detail is now owned by a module doc (summarised-and-linked in the GDD), <span class="k">eight surgical removals</span> from otherwise-kept sections (designed-out targeting/control content the module docs replaced), and <span class="k">one superseded block</span> (the obsolete flat-roster stat tables, moved out of the GDD in the v6.5.0 extraction). Badges: <span class="badge owned">Owned by</span> = extracted, a doc owns it; <span class="badge out">Designed out</span> = the design changed, this no longer applies (also used for <em>superseded</em>: replaced by a newer model); <span class="badge mixed">Mixed</span> = both. Several extracted entries below now carry a &ldquo;migrated&rdquo; note — their numbers/detail have since moved into the owning doc, which is canonical; the archive keeps the historical GDD original. Companion to <a href="Rivenkeep_GDD.html" style="color:var(--link)">Rivenkeep_GDD.html</a> v6.5.0.</p>
+</div>
+<div class="idx"><h2>Index</h2><ol>
+<li><a href="#arch-theory">Game Theory &amp; Player Psychology</a></li>
+<li><a href="#arch-philosophy">Design Philosophy</a></li>
+<li><a href="#arch-fog">Fog of War</a></li>
+<li><a href="#arch-deploy">Deploy Phase — Detailed</a></li>
+<li><a href="#arch-cannonhp">Cannon Health &amp; Performance</a></li>
+<li><a href="#arch-enemies">Enemies</a></li>
+<li><a href="#arch-bosses">Boss Mechanics — 10 Unique Encounters</a></li>
+<li><a href="#arch-fight">Fight Phase — Real-Time Tick Combat</a></li>
+<li><a href="#arch-win">Victory &amp; Defeat</a></li>
+<li><a href="#arch-stars">Star System — Three-Lever Averaging</a></li>
+<li><a href="#arch-starearn">Star Earning Examples &amp; Battle Score</a></li>
+<li><a href="#arch-s_controls">Controls — one-/two-finger para</a></li>
+<li><a href="#arch-s_flow">Balance flow-note — “directed fire”</a></li>
+<li><a href="#arch-s_camera">Mobile UX — camera-controls-during-Fight para</a></li>
+<li><a href="#arch-s_tutorial">Tutorial — “how to target ships” video</a></li>
+<li><a href="#arch-s_stonwryt">Stonwryt spending — “Focus Fire” option</a></li>
+<li><a href="#arch-s_audio">Audio design — targeting-input cues (×3)</a></li>
+<li><a href="#arch-s_gloss_def">Reference Glossary — deleted / redefined terms</a></li>
+<li><a href="#arch-s_gloss_idx">Reference Glossary — dangling index entries</a></li>
+  <li><a href="#arch-deploy-tray">Deploy Tray Layout + cannon carousel (Build-region cut, awaiting a home)</a></li>
+  <li><a href="#arch-wallrack">Wall Rack Selection &amp; Feedback (Build-region cut)</a></li>
+</ol></div>
+<div class="sec-head"><h2>Extracted sections</h2><p>Detail now owned by a module doc; summarised-and-linked in the GDD.</p></div>
+<div class="arch-entry" id="arch-theory">
+  <h2 class="src">Game Theory &amp; Player Psychology <span class="ln">(lines 368–418)</span></h2>
+  <span class="badge owned">Owned by · The Why</span>
+  <div class="arch-note">Extracted; replaced in the GDD by a short pointer to <strong>The Why</strong>. <strong>&#9888; Caveat:</strong> the applied-psychology detail below — flow, loss-aversion, variable-ratio reinforcement, the four nested engagement loops, the anti-frustration table — has been <strong>folded into <a href="Rivenkeep_Why.html" style="color:var(--link)">The Why §7 (Applied Psychology)</a></strong> — canonical there. In the fold-in, the designed-out bits were fixed (the &ldquo;2-finger targeting&rdquo; anti-frustration row and the &ldquo;one more tick of targeting&rdquo; near-miss example). This block is kept as the historical GDD original.</div>
+  <div class="arch-orig"><section class="p-found">
+<h2 id="theory">Game Theory &amp; Player Psychology</h2>
+<p>This section documents the psychological principles underlying every design decision. A developer reading this should understand <em>why</em> each mechanic exists, not just what it does. Every mechanic must serve the core goal: <strong>make the game easy enough that anyone can pick it up, but challenging enough that players keep coming back — even when they fail.</strong></p>
+
+<h3>Flow State (Csikszentmihalyi)</h3>
+<p>The game must keep players in the "flow channel" — the zone between boredom (too easy) and anxiety (too hard). Rivenkeep achieves this through <strong>dynamic challenge scaling</strong>: the 16 piece tiers, 5 difficulty layers, and their combinatorial progression create a smooth difficulty curve. The player is always slightly challenged but never overwhelmed, because they've already mastered each component individually before facing combinations.</p>
+<p><strong>Time pressure calibration</strong> is critical. Build phase timers are tight enough to create urgency but generous enough that a skilled player can finish with time to spare (banking bonus time for the <span class="g" data-t="last_stand">Last Stand</span>). This "just enough time" feeling is the hallmark of flow — the player is fully engaged because idle moments don't exist.</p>
+<p><strong>Clear goals with immediate feedback:</strong> Every action has instant visual feedback — pieces snap to grid, ghost preview shows landing, wall blocks glow on placement, cannon HP bars update in real-time. The player never wonders "did that work?"</p>
+
+<h3>Loss Aversion (Kahneman &amp; Tversky)</h3>
+<p>Humans feel losses approximately 2× more intensely than equivalent gains. The design uses this deliberately:</p>
+<p>The <strong>drop-back mechanic</strong> (lose a battle, drop back one) creates a sting that motivates retry. But the campaign floor prevents cascading loss. The sting motivates; the floor prevents rage-quit. This is the same principle as Dark Souls bonfires.</p>
+<p><strong>Cannon investment</strong> makes protection personal. A cannon at 140% (6 consecutive enclosed sorties) represents real investment. Losing it to a bomber hurts emotionally. Players will prioritize protecting veteran cannons, creating organic decision-making that doesn't need to be scripted.</p>
+<p><strong>Castle degradation</strong> (the 3-strike counter) creates escalating dread. Watching a castle tick from 1/3 to 2/3 makes the player feel the loss approaching and motivates urgent protective action.</p>
+
+<h3>Variable Ratio Reinforcement (Skinner)</h3>
+<p>The most addictive reinforcement schedule — rewards at unpredictable intervals. The <strong>dual piece selection</strong> system is the primary vector: two pieces, but what you get is random from the tier pool. Sometimes you get exactly what you need. Sometimes both pieces are terrible. The trash, storage, and spackle systems are "pressure valves" — they let the player manage bad luck without eliminating it entirely.</p>
+<p>The <strong>★★★!</strong> (4-star) exclamation mark is a rare achievement that can happen on any battle. The player doesn't know when it'll happen. When it does — dopamine spike. This is the slot machine principle applied to skill-based gameplay.</p>
+<p><strong>Frequency target:</strong> A skilled player should earn ★★★! roughly <strong>once every 15–20 battles</strong>. This is rare enough to feel genuinely hard-earned and surprising, but common enough that every player experiences it multiple times during a full playthrough. Server-tuned star thresholds should target this frequency. The exclamation mark should be a <strong>total surprise</strong> — the player should never be able to predict it mid-battle. Every player should have at least one ★★★! by Campaign 15 — early enough to hook them on chasing the next one.</p>
+
+<h3>Near-Miss Psychology</h3>
+<p>Near-misses are more motivating than clear failures. The design creates abundant near-miss scenarios: a pentomino that <em>almost</em> fits a gap but is one cell off ("if I'd rotated it..."), one wall block missing from enclosure at the end of Build ("I was so close..."), a ship at 3% HP rolling over to the next sortie ("one more tick of targeting..."). Each near-miss creates a learning loop that fuels the "just one more try" impulse.</p>
+
+<h3>The Zeigarnik Effect</h3>
+<p>Incomplete tasks create psychological tension that motivates completion. The <strong>earned time bank</strong> is visible throughout the battle, growing with good play. The player doesn't want to "waste" their banked time by losing. A battle with ★★☆ on the home screen is an incomplete task. The player wants to fill that third star. The campaign progress bar ("4/6 battles complete") calls to the player. Every incomplete element pulls them back.</p>
+
+<h3>Endowment Effect &amp; Self-Determination Theory</h3>
+<p>People value things they've invested in. Walls carefully placed across multiple sorties feel "mine." Losing them is personal. A cannon at 130% is a companion, not just a number. This emotional investment makes the Build phase feel important, not just a chore between fights.</p>
+<p>Self-Determination Theory identifies three needs: <strong>autonomy</strong> (meaningful choices every sortie), <strong>competence</strong> (visible skill improvement through stars and drift mastery), and <strong>relatedness</strong> (identical-for-all-players maps create shared experience).</p>
+
+<h3>Four Nested Engagement Loops</h3>
+<div class="s">
+<div class="ct">The "Just One More" Architecture</div>
+<p><strong>Micro loop (10–30 sec):</strong> Place one piece → see result → choose next. Immediate feedback, tiny decisions.</p>
+<p><strong>Phase loop (30–90 sec):</strong> Complete Build → Deploy → Fight. Three distinct activities prevent monotony.</p>
+<p><strong>Battle loop (2–5 min):</strong> Multiple sorties, earned time growing, ships accumulating. "One more sortie" becomes "let me finish this battle."</p>
+<p><strong>Campaign loop (20–60 min across sessions):</strong> Star collection, unlock milestones approaching. "I'm 3 stars from unlocking the Mortar." Long-term pull that spans days of play.</p>
+</div>
+
+<h3>Anti-Frustration Design</h3>
+<p>Every frustration point has a designed mitigation:</p>
+<table>
+<tr><th>Frustration Source</th><th>Mitigation</th><th>Principle</th></tr>
+<tr><td>Bad piece RNG</td><td>Dual Wall Rack, trash, storage, spackle</td><td>Agency over randomness</td></tr>
+<tr><td>Losing progress</td><td>Campaign floor, 1-battle drop-back</td><td>Bounded loss</td></tr>
+<tr><td>Piece doesn't fit</td><td>Tap to rotate, soft-lock adjustment period</td><td>Forgiveness before commitment</td></tr>
+<tr><td>Can't see placement precisely</td><td>Magnify halo, zoom, 4×4 ghost <span class="g" data-t="bounding_box">bounding box</span></td><td>Information clarity</td></tr>
+<tr><td>Wind drift misplaces piece</td><td>Drift-stop collision with existing walls, spackle emergency</td><td>Skill-based recovery</td></tr>
+<tr><td>Castle degrading</td><td>Visual recovery ring with heal VFX, 1/3 recovery per sortie</td><td>Visible, bounded countdown</td></tr>
+<tr><td>Fight phase chaos</td><td>2-finger targeting, auto-target fallback, 3-2-1 countdown</td><td>Graceful degradation of control</td></tr>
+<tr><td>Stuck on a battle</td><td>Hints after 3 losses, replay earlier battles for stars</td><td>Lateral progress always available</td></tr>
+</table>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-philosophy">
+  <h2 class="src">Design Philosophy <span class="ln">(lines 421–448)</span></h2>
+  <span class="badge owned">Owned by · The Why</span>
+  <div class="arch-note">Extracted; the load-bearing laws are owned by <strong>The Why §4–§5</strong>. The prior framing (Build-First, Easy-to-Play/Hard-to-Master, the map-system framing, Single-Player-Only, etc.) is preserved here.</div>
+  <div class="arch-orig"><section class="p-found">
+<h2>Design Philosophy</h2>
+
+<h3>Introduce → Isolate → Combine</h3>
+<p>No battle ever asks the player to handle more than <strong>one new thing</strong> at a time. When a new mechanic appears, the terrain and enemies are familiar. When a new enemy appears, the terrain mechanic is off. Challenge comes from <em>combining</em> things the player already knows, never from confusion. The player should always understand <em>why</em> they lost.</p>
+
+<h3>Build First</h3>
+<p>The phase order is <strong>Build → Deploy → Fight</strong>. Always. The player builds/repairs walls FIRST, then places cannons, then battles. Every sortie begins with a puzzle (piece placement) and ends with action (combat). After the Fight phase, any wall damage carries into the next sortie's Build phase — what the enemy broke, you must fix.</p>
+
+<h3>Easy to Play, Hard to Master</h3>
+<p>Like Marble Master and Brick n' Balls, the core interaction must be dead-simple on a phone screen: grab a piece, drag to position, tap to rotate, release to place. One finger does everything. Complexity comes from the <em>decisions</em>, not the <em>controls</em>. A 6-year-old should be able to play Battle 1. A veteran gamer should be sweating at Battle 90.</p>
+
+<h3>Theaters Are Variety, Layers Are Difficulty</h3>
+<p>Switching theaters is about <em>freshness</em> — different scenery, sounds, and feel. It is NOT about being harder. Difficulty comes from the five named layers (A through E) that are mixed and combined independently of theater. A player going from Coastal to Mountain in Campaign 1 should feel change, not punishment.</p>
+
+<h3>Deterministic Puzzles Reward Replay</h3>
+<p>The game uses a <strong>three-layer map system</strong>: 10 base maps + 190 environmental overlays + 190 enemy overlays — all pre-constructed, identical for all players. No procedural generation. Because every element is consistent — same spawns, same terrain, same ship destinations — the player <strong>gets better every replay</strong>. They learn where the Sapper comes from, which wall section gets hit first, where to place the Long Cannon. This is a puzzle game. The puzzle has a solution. Retrying is not grinding — it is learning. Leaderboards are fair, strategy guides are possible. <em>(Precision note: because cannon performance carries within a campaign, two players are perfectly comparable on the <strong>first battle of each campaign</strong>, where everyone starts from the same clean state; later battles in a campaign share identical maps and spawns but may differ in carried-cannon strength. The honest framing is "identical starting conditions produce identical outcomes.")</em> See <a href="#map" style="color:var(--link)">Maps &amp; Terrain</a> for details.</p>
+
+<h3>Single Player Only</h3>
+<p>This is strictly a one-person game. No multiplayer, co-op, or PvP. The game's identity is the solitary puzzle-and-defend loop. Leaderboards and star comparisons provide indirect competition without requiring networking infrastructure or matchmaking.</p>
+
+<h3>Consistent Map Structure</h3>
+<p>Each theater has its own <strong>unique base map</strong> — a completely different battlefield with distinct castle positions, DMZ shape, and zone layout. The Coastal map plays nothing like the Mountain map. What is consistent: every base map has 10 castle positions and a DMZ. <strong>Spawn points are defined in the <a href="#ship-spawn">Enemy Overlay</a></strong> (2–4 per battle, varying by battlefield). The <strong>environmental overlay</strong> (rocks, trees, cliffs) is unique per battle and varies by theater style. This creates 10 distinct spatial puzzles that the player masters over the course of a War.</p>
+
+<h3>Build Is Hard</h3>
+<p>Wall <span class="g" data-t="isolation_cleanup">isolation cleanup</span> happens <strong>AFTER</strong> the player builds, not before. Fight debris (fragments, craters, burn zones) remains on the board during the Build phase. The player must work around existing damage. This matches the original Rampart arcade difficulty and makes the Build phase a genuine puzzle under pressure. Newly-placed wall blocks that are isolated (touching 0–1 other blocks) will also be cleaned up after the Build phase ends — the player must plan connections or lose their pieces.</p>
+
+<h3>Enclose the Same Castles</h3>
+<p>The game's mechanics naturally incentivize defending the same castles across sorties: castle recovery is gradual (1/3 per enclosed sortie), cannon investment is location-specific, and switching castles mid-battle means abandoning existing walls and cannons. Switching is a valid but costly strategic pivot — the game rewards commitment.</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-fog">
+  <h2 class="src">Fog of War <span class="ln">(lines 639–656)</span></h2>
+  <span class="badge owned">Owned by · Cannon &amp; Tower §5</span>
+  <div class="arch-note">Extracted; the defender fog-fire model (blind → reveal → concentrate; Spotter/Flare skip the blind phase) is owned by <strong>Cannon &amp; Tower §5</strong>. The GDD-level fog constants were summarised back into the GDD.</div>
+  <div class="arch-orig"><section class="p-battle">
+<h2>Fog of War</h2>
+<p>Fog of war applies in <a href="#theaters">theaters</a> with limited visibility: Forest, Mountain (clouds), Desert (sandstorm), Frozen (blizzard), Crystal (darkness).</p>
+
+<h3>Universal Rules</h3>
+<div class="s">
+<p><strong>The friendly zone is always fully visible.</strong> The player can see all of their own land, walls, castles, cannons, and terrain at all times. Fog only affects the waterways.</p>
+<p><strong><a href="#troops">Troops</a> and <a href="#bombers">bombers</a> are always visible.</strong> Troops are on the player's land — the garrison can always see and hear them. Bombers are airborne troops — always visible even over enemy territory. <strong>Fog of war only hides <a href="#ships">ships</a> in the <span class="g" data-t="waterways">waterways</span>.</strong></p>
+</div>
+
+<h3>Ship Visibility</h3>
+<div class="s">
+<p>Hidden ships show as <strong>yellow "?" markers</strong> in the approximate area (±2 grids from actual position). Ships become visible when they:</p>
+<p>— <strong>Fire</strong> (~3 seconds visible)</p>
+<p>— <strong>Are hit</strong> by a cannon (~5 seconds visible)</p>
+<p>— A shot <strong>lands near them</strong> within 3 grids (~4 seconds visible, 3×3 area exposed)</p>
+<p>— Enter the <strong>outermost edge</strong> of visibility (faint shimmer)</p>
+<p><strong><a href="#bombers">Carriers</a></strong> are fully exposed when launching bombers (~6 seconds). In the Crystal theater, each <a href="#theaters">shot bounce</a> clears a 3×3 fog area.</p>
+</div>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-deploy">
+  <h2 class="src">Deploy Phase — Detailed <span class="ln">(lines 1148–1193)</span></h2>
+  <span class="badge owned">Owned by · Cannon &amp; Tower §6/§8</span>
+  <div class="arch-note">Extracted; the Deploy-time setup and the defender toolkit are owned by <strong>Cannon &amp; Tower</strong>. <strong>&#9888;</strong> The deploy <strong>numbers</strong> (cannon count, slot-earning, type-limit formulas, carousel UX) live here until the numbers pass gives them a home — the Deploy cannon-economy has no module-doc owner yet. <em>(The health-bar display rules that were in this area migrated to Cannon §8 alongside the Cannon Health numbers.)</em></div>
+  <div class="arch-orig"><section class="p-deploy">
+<h2>Deploy Phase — Detailed</h2>
+<p>The Deploy phase configures offensive firepower. The bottom panel shows: on the <strong>left side, the number of cannons available to deploy</strong> (e.g., "3 to deploy"). The horizontal carousel displays all unlocked <span class="g" data-t="cannon">cannon</span> types with <strong>unique sprites in light blue</strong>. Not-yet-unlocked types appear grayed out with a lock symbol.</p>
+<p><strong>Selection:</strong> When a cannon is selected (tapped in the carousel or on the board), it shows the universal <strong>selection frame</strong> — same visual language as <span class="g" data-t="wall_piece">wall pieces</span>. First-sortie cannons have a bright frame with swap icon; previous-sortie cannons have a dimmer frame with no icon.</p>
+<p><strong>Deploy timer:</strong> The Deploy phase timer scales from <strong>12 seconds</strong> (Campaign 1) to <strong>15 seconds</strong> (Campaign 32), increasing with cannon count. Formula: <code>Math.round(12 + (campaign − 1) × 3/31)</code>, rounded. Deploy time INCREASES as campaigns progress because the player has more cannons to manage — more new placements, more repositioning decisions, and potentially type changes. The 12-second minimum ensures even early campaigns have enough time for board recognition (~5 sec) plus thoughtful placement. Unused Deploy time rolls forward to the Fight phase. Boss battles use 25 seconds (fixed). The wind compass is <strong>NOT shown</strong> during Deploy (wind does not affect cannon placement).</p>
+<p><strong>Ready button:</strong> The Ready button is available during Deploy, identical to Build. Tapping it ends Deploy immediately — any unused Deploy time rolls forward to the Fight phase via the <a href="#build">Time Rollover System</a>. The player is not required to place any cannons. If all cannons are trashed or none placed, the Fight proceeds with no offensive firepower (no shots, no bonuses). This is a valid but desperate strategic choice.</p>
+<p><strong>Cannon persistence:</strong> Cannons placed in a previous sortie <strong>remain in their positions</strong> for the next sortie's Deploy phase. The player does not need to re-place them. They can move, swap, or trash cannons during Deploy, but the default state is "everything stays where it was." New cannon slots (earned from Fight performance) appear empty in the carousel for placement. This makes Deploy progressively faster — the player only needs to place new cannons and optionally reposition existing ones.</p>
+<p><strong>Locked cannon preview:</strong> Long-pressing a locked cannon in the Deploy carousel shows a <strong>preview tooltip</strong>: cannon name, stats (damage, range, fire rate, accuracy), special ability description, and the unlock threshold (<strong>"Unlock at 50★ — you have 42★"</strong>). This creates <strong>anticipation</strong> ("I'm 8 stars from the Mortar!") and informs strategy before the unlock.</p>
+
+<h3 id="cannons">Cannon Slots &amp; Earning</h3>
+<div class="s">
+<div class="ct">Cannon Count System</div>
+<p>Each battle defines a <strong>starting cannon count</strong> and a <strong>maximum cannon count</strong>. Starting cannons are derived from the campaign number. Maximum cannons factor in the campaign, sortie count, and fleet size (a battle with more ships needs more firepower):</p>
+<p><strong>Starting cannons:</strong> <code>min(2 + floor(campaign / 6), 7)</code> — scales from 2 (Cam 1) to 7 (Cam 32). Boss battles: 6 (fixed).</p>
+<p><strong>Maximum cannons:</strong> <code>min(startCannons + sorties + floor(totalShips / 5), 12)</code> — factors in how many sorties the player has to earn slots AND how many ships they face. More ships = higher cap = more firepower available. Boss battles: 12 (fixed).</p>
+<table style="font-size:.72rem">
+<tr><th>Example</th><th>Cam</th><th>Start</th><th>Sorties</th><th>Ships</th><th>Max</th><th>Notes</th></tr>
+<tr><td>Early</td><td>1</td><td>2</td><td>3</td><td>6</td><td>6</td><td>2 + 3 + 1 = 6. Comfortable.</td></tr>
+<tr><td>Mid</td><td>12</td><td>4</td><td>5</td><td>12</td><td>11</td><td>4 + 5 + 2 = 11. Must earn well to fill.</td></tr>
+<tr><td>Late</td><td>24</td><td>6</td><td>6</td><td>18</td><td>12</td><td>6 + 6 + 3 = 15 → capped at 12.</td></tr>
+<tr><td>Full Stack</td><td>32</td><td>7</td><td>8</td><td>22</td><td>12</td><td>7 + 8 + 4 = 19 → capped at 12.</td></tr>
+<tr><td>Boss</td><td>Boss</td><td>6</td><td>12</td><td>20+</td><td>12</td><td>Fixed 6/12.</td></tr>
+</table>
+<p><strong>Earning new slots:</strong> After each Fight phase, the player earns cannon slots based on performance:</p>
+<p>— <strong>1 slot guaranteed</strong> per completed sortie (always).</p>
+<p>— <strong>+1 bonus slot</strong> if ≥50% of that sortie's ships were destroyed.</p>
+<p>— <strong>+1 bonus slot</strong> if all ships from that sortie were destroyed (clean sweep).</p>
+<p>Maximum earned per sortie = 3 (guaranteed + both bonuses). Earned slots accumulate toward the battle's maximum cannon count — once the max is reached, no more slots are earned.</p>
+<p><strong>Unplaced cannon slots roll over</strong> to the next sortie. Cannon slots do NOT carry over between battles — each battle starts fresh.</p>
+</div>
+
+<h3>Cannon Placement Rules</h3>
+<p>Cannons occupy a <strong>2×2 grid footprint</strong>. All 4 grids of the 2×2 must be <strong>open ground</strong> — no rocks, walls, castles, other cannons, DMZ grids, ground damage, or terrain features. Cannons CAN be placed inside or outside enclosures. They CAN be placed adjacent to cliffs. They CANNOT be placed on any <strong><span class="g" data-t="fragile_grid">fragile grid</span></strong> (ice, crust, crag, bog, fissure, or fract) — the ground is too unstable for cannon weight and recoil.</p>
+<p><strong>Cannon type deployment limits:</strong> Each cannon type has a <strong>per-battle deployment limit</strong> — the maximum number of that type the player can place. This simulates production capacity: the Stonwryts haven't optimized mass production of advanced cannon types yet.</p>
+<p><strong>Early campaigns (1–6):</strong> No type limits. The Deploy carousel shows an <strong>∞ symbol</strong> next to each cannon type. The player can fill all slots with Standard Cannons if they want.</p>
+<p><strong>Campaign 7+:</strong> Type limits appear. A <strong>countdown counter</strong> in the upper-right corner of each cannon card in the carousel shows how many of that type remain (e.g., "3" = 3 more available). The counter grays out at 0. Limits start generous (e.g., max 5 of any type) and tighten as campaigns progress. When a new cannon type is first introduced (star milestone unlock), it starts at <strong>limit 1–2</strong> — limited production. As the player earns more stars, the limit increases. This creates a natural diversity incentive: the player CAN'T fill all slots with Lightning cannons because only 3 are available. They MUST use a mix.</p>
+<p><strong>Formula:</strong> Base limit per type = <code>max(2, floor(totalStars / unlock_threshold_for_that_type))</code>, capped at 5. Example: Lightning unlocks at 75★. At 75★, limit = floor(75/75) = 1 (just unlocked). At 150★, limit = 2. At 375★, limit = 5 (max). Standard Cannon (always available): limit = ∞. This means early-unlocking cannons reach max limit faster than late-unlocking ones.</p>
+
+<h3>First-Sortie Cannons (Just Placed This Sortie)</h3>
+<p>First-sortie cannons appear <strong>brighter than established cannons</strong> — a vivid light blue glow that distinguishes them. When selected, the bright <strong>selection frame</strong> with swap icon appears. The player has full flexibility: place, move, <strong>drag on and off the board freely</strong> (off-board = dropped anywhere in the tray area), and <strong>change its type</strong> by tapping a different type in the carousel while the cannon is selected. Only cannons with the bright glow can have their type changed in-place.</p>
+<p>Once the Deploy phase ends, cannons are <strong>locked in place for this sortie's Fight</strong>. However, cannons <strong>CAN be moved in subsequent Deploy phases</strong> — the player can reposition any surviving cannon. Moving a cannon incurs a distance-based penalty to the move bonus (see <a href="#cannonhp" style="color:var(--link)">Cannon Health &amp; Performance</a>): keeping a cannon in place earns +5%, while moving it reduces or eliminates that bonus based on distance. <strong>While dragging a cannon from its previous position</strong>, the game displays a <strong>light frame outline at the cannon's original position</strong> and a <strong>dashed line from the current drag position to the origin</strong>. This visual indicator disappears when the player releases the cannon.</p>
+
+<h3>Previous-Sortie Cannons</h3>
+<p>Cannons placed in a previous sortie can be <strong>moved to any open ground</strong> on the board during Deploy — no movement limit or range restriction. To <strong>change type</strong>, the player trashes the cannon and places a new type next sortie — the slot is consumed this sortie, so the cannon misses this Fight. The player CAN voluntarily <strong>trash a previous-sortie cannon</strong> by selecting it and tapping the cannon trash bin. Trashed cannons are visible inside the trash with their HP bars; the player can recover them (same type) before Deploy ends.</p>
+<p>Cannons on <strong>invalid positions</strong> at the start of Deploy (e.g., ground destroyed beneath them) show <strong>red blocks with X</strong> on the invalid grids. They are NOT automatically moved anywhere — the player can move them to valid ground. If still on invalid ground when <strong>Deploy ends</strong>, they are <strong>destroyed</strong> (not trashed — gone permanently, slot freed next sortie).</p>
+<p><strong>No cannon requirement:</strong> The player is not required to have any cannons for the Fight phase. If all cannons are trashed or none are placed, the Fight proceeds — the player simply has no offensive firepower (no shots, no bonuses). This is a valid (if desperate) strategic choice.</p>
+<p><strong>Why allow voluntary trashing:</strong> A previous-sortie cannon at &lt;25% HP from the last Fight was rebuilt to at least 50% in the Pre-Build lock-in. If it survives the next Fight above 25%, it's back to at least 100%. The math naturally discourages trashing healthy cannons — the rebuild system rewards keeping them. But giving the player the choice respects their agency.</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-cannonhp">
+  <h2 class="src">Cannon Health &amp; Performance <span class="ln">(lines 1197–1250)</span></h2>
+  <span class="badge owned">Owned by · Cannon &amp; Tower §8</span>
+  <div class="arch-note">Extracted; the health / nurture / veteran model (inverted-logistic HP, enclosed &amp; unmoved bonuses, 200% cap) is owned by <strong>Cannon &amp; Tower §8</strong>. <strong>Contains one designed-out line:</strong> the old “cannons do NOT carry between campaigns — all reset to 100%” is superseded by <strong>Victory §7</strong> (three best carry). <strong>&rarr; Migrated:</strong> the exact bonus percentages, the two lock-in windows, the move-distance table, and the health-bar display rules have now been moved into <strong>Cannon §8</strong> (reconciled, carry fix included) — canonical there. This block is the historical GDD original.</div>
+  <div class="arch-orig"><section class="p-deploy">
+<h2>Cannon Health &amp; Performance</h2>
+
+<h3>HP During Fight — Inverted Logistic Curve</h3>
+<p>Every cannon has hit points. During the Fight phase, enemy fire damages cannons. As a cannon's HP drops, its effectiveness degrades along an <strong>inverted logistic curve</strong> — the cannon stays relatively effective in the upper HP range, then rapidly falls off as HP approaches critical levels.</p>
+<table>
+<tr><th>HP Range</th><th>Effectiveness</th><th>Visual / Behavior</th></tr>
+<tr><td>100–75%</td><td>100–90%</td><td>Barely noticeable degradation. Full damage, range, accuracy. Cannon looks clean.</td></tr>
+<tr><td>75–50%</td><td>90–70%</td><td>Gradual decline. Slight accuracy loss. Range slightly reduced. Minor smoke.</td></tr>
+<tr><td>50–25%</td><td>70–30%</td><td>Sharp dropoff. Accuracy, damage, and range all degrade noticeably. Smoke and sparks.</td></tr>
+<tr><td>25–1%</td><td>30–5%</td><td>Nearly useless. Fires slowly, misses often, very short range. Flames visible.</td></tr>
+<tr><td>0%</td><td>Destroyed</td><td>Cannon is lost for the remainder of this Fight phase. May be restored at the start of the next Build phase if its performance modifier is > 0%.</td></tr>
+</table>
+
+<h3>Health Bar Display</h3>
+<p><strong>General rule:</strong> Units at 100% HP show <strong>no health bar</strong> — the board stays visually clean. Health bars appear only when damaged. <strong>Exception: cannons ALWAYS show their health bar</strong> (performance modifiers must be trackable). <strong>Cannon health bars are visible during Build and Deploy phases too</strong> — so the player can assess cannon condition while making placement decisions. Castle and wall health bars show during Build/Deploy only if below 100%.</p>
+<p><strong>Exact percentages during Build &amp; Deploy:</strong> During Build and Deploy phases, cannon health bars display the <strong>exact percentage centered below the bar</strong> (e.g., "147%"). This lets the player make precise decisions about which cannons to protect and where to invest <span class="g" data-t="enclosure">enclosure</span>. <strong>During Fight, only the health bar is shown</strong> — no percentage text. The bar alone communicates health at a glance without cluttering the action.</p>
+<p><strong>Unit</strong> = any entity on the map: ships, troops, walls, cannons, castles.</p>
+<p>Cannon health bars: <strong style="color:var(--success)">Green</strong> at 100%. <strong style="color:var(--gold)">Yellow</strong> at 51–99%. <strong style="color:var(--danger)">Red</strong> at ≤50%. For bonuses above 100%, a <strong style="color:#8bc34a">light green section overlays from the left</strong>. <strong>Cannon HP caps at 200%</strong> (max +100% bonus). At 200%, the cannon fires a <strong>perfect shot every time at all ranges with double firepower</strong>.</p>
+<p><strong>Accuracy and firepower scale with bonus:</strong> Higher cannon HP = more accurate AND more powerful shots. At 100% = normal accuracy and damage. At 150% = noticeably better accuracy, 50% more damage. At 200% = <strong>perfect accuracy at all ranges AND double firepower</strong>. This rewards the player for protecting and nurturing their cannons across sorties. <strong>All bonuses display as a number on the cannon</strong> during Build and Deploy (e.g., "+7%" or "147%") so the player always knows each cannon's investment value.</p>
+
+<h3>Between-Sortie Performance System</h3>
+<p>Cannon bonuses happen at <strong>two lock-in windows</strong> per sortie cycle. Each window uses the board state at that moment.</p>
+
+<h4>Lock-In 1: Pre-Build (After Fight Ends, Before Build Starts)</h4>
+<p>These bonuses are based on the cannon's state at the <strong>end of the Fight phase</strong> — did it survive? Was it enclosed? Was it moved last Deploy? Applied automatically before the player touches anything.</p>
+<p><strong>Rebuild:</strong> Every surviving cannon (HP > 0%) gets <strong>+50%</strong> (capped at 100%). A cannon at 60% → 100%. At 30% → 80%.</p>
+<p><strong>Enclosed with castle:</strong> +8%. Castle garrison provides repair resources.</p>
+<p><strong>Enclosed without castle:</strong> +6%. Behind walls but no garrison.</p>
+<p><strong>Survived exposed:</strong> +4%. Small reward for durability.</p>
+<p>These lock in immediately. The player sees updated HP bars at the start of Build. This is the reward for protecting cannons during Fight.</p>
+
+<h4>Lock-In 2: Post-Deploy (After Deploy Ends, Before Fight Starts)</h4>
+<p>These bonuses are based on the cannon's state at the <strong>end of the Deploy phase</strong> — is it currently enclosed after any Build repairs and Deploy repositioning? How far was it moved?</p>
+<p><strong>Enclosed with castle:</strong> +6%.</p>
+<p><strong>Enclosed without castle:</strong> +4%.</p>
+<p><strong>Survived exposed:</strong> +1%.</p>
+<p><strong>Move bonus (distance-based):</strong> The bonus decreases by 1% per grid distance from the cannon's original position. Lore: the farther the Stonewrights must haul the cannon, the less time they have to improve it.</p>
+<table>
+<tr><th>Grid distance moved</th><th>Move bonus</th></tr>
+<tr><td>0 (unmoved)</td><td>+5%</td></tr>
+<tr><td>1–2</td><td>+4%</td></tr>
+<tr><td>3–4</td><td>+3%</td></tr>
+<tr><td>5–6</td><td>+2%</td></tr>
+<tr><td>7–8</td><td>+1%</td></tr>
+<tr><td>9+</td><td>+0%</td></tr>
+</table>
+<p>Distance is measured as <strong>Manhattan distance</strong> (|Δrow| + |Δcol|) from the cannon's position at the start of Deploy to its position at the end. The move bonus stacks with enclosure bonus. While dragging, the cannon's projected bonus updates in real-time.</p>
+<p>These lock in after Deploy. The cannon's HP bar updates and the <strong>combined bonus percentage displays as a number on the cannon</strong> (e.g., "+7%") with a celebration animation before the Fight countdown begins.</p>
+
+<h4>Cannon Carry Between Battles</h4>
+<p>Cannons with performance bonuses <strong>carry forward to the next battle within the same campaign</strong>. At the start of a new battle, carried cannons appear in the cannon carousel in their normal type slots. If multiple cannons of the same type were carried (e.g., two Standard cannons at different percentages), the <strong>highest-percentage cannon deploys first</strong> when the player selects that type. <strong>Cannons below 100% are NOT saved</strong> — only cannons at or above 100% carry forward. The number of cannons deployable per sortie remains the same (determined by the formula). <strong>Cannons do NOT carry between campaigns</strong> — at the start of a new campaign, all cannons reset to 100%. This gives the player continuity within a campaign and a strong incentive to protect their veteran cannons, while ensuring each campaign starts fresh.</p>
+
+<p><strong>During Build:</strong> Cannons show a <strong>projected health bar</strong> based on current enclosure state — the player can see what the post-Deploy bonus WILL be if the enclosure holds through Deploy. This is a preview only; the actual lock-in happens after Deploy.</p>
+<p><strong>Cap:</strong> All bonuses stack but <strong>cap at 200%</strong>. At 200%: perfect accuracy at all ranges and double firepower. A 200% cannon is the ultimate veteran — twice as lethal as a fresh cannon.</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-enemies">
+  <h2 class="src">Enemies <span class="ln">(lines 1255–1280)</span></h2>
+  <span class="badge owned">Owned by · Ships §5–§8 / Campaign §5</span>
+  <div class="arch-note">Extracted; the roster is now <em>generated</em> as <strong>lineage &times; axis</strong> (Ships §5–§8) with the debut schedule in <strong>Campaign §5</strong>. This old <strong>flat</strong> table (Warship / Scout / Transport / Carrier / … / Sapper, with “First Appears” columns) is kept as a <strong>reconciliation seed</strong> for mapping old names onto the new roster.</div>
+  <div class="arch-orig"><section class="p-fight">
+<h2>Enemies</h2>
+<p>All enemies move across the map from the waterways toward the friendly zone. Movement is continuous during the Fight phase, not turn-based. Every enemy must <strong>pause before shooting</strong> — faster enemies have a longer pause (catching their breath), slower enemies pause briefly (already aimed). This gives the player a visible warning.</p>
+<p>Troops are deployed from Transport Ships (or theater-equivalent transports). Bombers are launched from Aircraft Carriers. Killing a transport before it drops troops prevents those troops from spawning. Killing a carrier before bombers launch prevents that group of bombers. Ships across all theaters share recognizable silhouette profiles with theater-appropriate skins — the player learns to identify enemy types regardless of theater.</p>
+
+<table>
+<tr><th>Enemy</th><th>Class</th><th>Speed</th><th>Damage</th><th>HP</th><th>Special Ability</th><th>First Appears</th></tr>
+<tr><td><strong>Warship</strong></td><td>Ship</td><td>Slow</td><td>Medium</td><td>Medium</td><td>Standard attacker. No special ability.</td><td>Campaign 1</td></tr>
+<tr><td><strong>Scout Vessel</strong></td><td>Ship</td><td>Fast</td><td>Low</td><td>Low</td><td>Long pause before firing. Evasive maneuvers (Crazy Ivan after hit).</td><td>Campaign 2</td></tr>
+<tr><td><strong>Transport Ship</strong></td><td>Ship</td><td>Slow</td><td>None</td><td>High</td><td>Must touch DMZ/friendly zone to disembark. Continuous troop deployment until destroyed. "Fire rate" = disembark speed. Kill before docking to prevent all troops.</td><td>Campaign 5</td></tr>
+<tr><td><strong>Aircraft Carrier</strong></td><td>Ship</td><td>Very Slow</td><td>None</td><td>Very High</td><td>Launches Bombers from <span class="g" data-t="waterways">waterways</span> (no DMZ touch needed). Each Bomber HP = Carrier HP ÷ bomber count. Bombers return to reload. If ALL destroyed → Carrier destroyed. Cannons hit at ½ range.</td><td>Campaign 7</td></tr>
+<tr><td><strong>Fire Ship</strong></td><td>Ship</td><td>Medium</td><td>Low</td><td>Low</td><td>Fires fireballs that create 1×1 burn zones on impact. <strong>Cannot cross the DMZ.</strong> Burns persist 2 Build phases, then → holes. Area denial from range.</td><td>Campaign 4</td></tr>
+<tr><td><strong>Mortar Ship</strong></td><td>Ship</td><td>Slow</td><td>High</td><td>Medium</td><td>Arcing shots that hit behind walls. Targets cannons. Slow fire rate, devastating accuracy.</td><td>Campaign 9</td></tr>
+<tr><td><strong>Hospital Ship</strong></td><td>Ship</td><td>Very Slow</td><td>None</td><td>High</td><td>End of Fight: distributes own HP to heal other ships evenly. Cannot self-heal. Does NOT count in win condition — leaves if no ships to repair. See <a href="#fight" style="color:var(--text)">Hospital Ship section</a>.</td><td>Campaign 11</td></tr>
+<tr><td><strong>Ground Troops</strong></td><td>Troop</td><td>Variable</td><td>Variable</td><td>Variable</td><td>From Transport. Speed/HP/damage varies by type (fast-weak to slow-strong). Path to castles. Contact damage to walls/cannons. <strong>Reset every sortie. Do NOT count for win state.</strong></td><td>Campaign 1</td></tr>
+<tr><td><strong>Siege Ship</strong></td><td>Troop (2×2)</td><td>Medium</td><td>Extreme (4×4)</td><td>Very High</td><td>Kamikaze: destroys itself on wall contact, annihilating a 4×4 area. 2×2 space becomes area denial. Cannot stack.</td><td>Campaign 7</td></tr>
+<tr><td><strong>Battering Ram</strong></td><td>Troop</td><td>Medium</td><td>Extreme (walls)</td><td>High</td><td>Targets walls ONLY. Will not attack cannons or castles. If all walls are destroyed, battering rams do nothing — they stand idle. Single-minded siege tool.</td><td>Campaign 9</td></tr>
+<tr><td><strong>Bomber</strong></td><td>Troop (Air, 1×2)</td><td>Fast</td><td>High</td><td>Low</td><td>1×2, 1-side leading edge. Fly over walls. Target: random castle (at launch). Area denial on 4th hit to same open ground. Must return to Carrier. Cannon shots go vertical to hit. Can share grid but do NOT stack. <strong>Always visible.</strong></td><td>Campaign 7</td></tr>
+<tr><td><strong>Torpedo Boat</strong></td><td>Ship</td><td>Fast</td><td>High</td><td>Low</td><td>Fast, fragile. Fires a single devastating torpedo at walls. Long reload. High-risk, high-reward.</td><td>Campaign 11</td></tr>
+<tr><td><strong>Smoke Ship</strong></td><td>Ship</td><td>Medium</td><td>None</td><td>Medium</td><td>Deploys smoke screen (3×3) that reduces cannon accuracy by 50% when firing through it. Stays for 1 sortie.</td><td>Campaign 14</td></tr>
+<tr><td><strong>Mine Layer</strong></td><td>Ship</td><td>Slow</td><td>None</td><td>High</td><td>Drops 1×1 sea mines near DMZ. Mines damage walls if the DMZ shifts (War II+). Area denial on enemy side.</td><td>Campaign 17</td></tr>
+<tr><td><strong>Artillery Barge</strong></td><td>Ship</td><td>Very Slow</td><td>Very High</td><td>High</td><td>2×2 ship. Extreme range, extreme damage, very slow fire rate. Targets castles. The heavy hitter.</td><td>Campaign 23</td></tr>
+<tr><td><strong>Sapper</strong></td><td>Troop</td><td>Fast</td><td>Extreme (walls)</td><td>Low</td><td>Carries explosives. Detonates on wall contact, destroying a 2×2 area. Kamikaze troop.</td><td>Campaign 5</td></tr>
+<tr><td><strong>Shield Bearer</strong></td><td>Troop</td><td>Slow</td><td>Low</td><td>Very High</td><td>Carries a large shield. Takes half damage from cannons when facing them. Protects troops behind.</td><td>Campaign 11</td></tr>
+<tr><td><strong>Medic</strong></td><td>Troop</td><td>Medium</td><td>None</td><td>Medium</td><td>Heals all adjacent troops 3 HP/tick. Cannot heal itself. Priority target — kill medics first.</td><td>Campaign 17</td></tr>
+</table>
+<p class="dim">Boss enemies (Mystarchs) in the Boss Finale are unique per theater: Leviathan Mystarch (Coastal), Colossus Mystarch (Mountain), Sandworm Mystarch (Desert), Hydra Mystarch (River), Magma Titan Mystarch (Volcanic), Frost Wyrm Mystarch (Frozen), Storm King Mystarch (Sky), Ancient Treant Mystarch (Forest), Plague Herald Mystarch (Swamp), Crystal Lich Mystarch (Crystal).</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-bosses">
+  <h2 class="src">Boss Mechanics — 10 Unique Encounters <span class="ln">(lines 1284–1303)</span></h2>
+  <span class="badge owned">Owned by · Ships §4 / Campaign</span>
+  <div class="arch-note">Extracted; bosses are rare promoted flagships (<strong>Ships §4</strong>) staged by the Boss Finale (<strong>Campaign</strong>). The full per-boss set-piece table, stealth timings, and the Hydra-regen exception are kept here — the detailed set-pieces are a later design pass.</div>
+  <div class="arch-orig"><section class="p-fight">
+<h2>Boss Mechanics — 10 Unique Encounters</h2>
+<p>Each boss occupies a <strong>3×3 grid footprint</strong>. Bosses <strong>CAN cross the DMZ</strong> — they are the only enemies besides troops that enter the friendly zone. Bosses do NOT use spawn points; they have a <strong>starting position defined in the Enemy Overlay</strong>. Bosses are persistent mega-enemies that survive across all sorties (typically 8–12 for boss battles). They have unique attack patterns, phase transitions, and a <strong>stealth mode</strong> where they disappear and reappear at a different location. During stealth, the boss does NOT fire.</p>
+
+<table style="font-size:.78rem">
+<tr><th>Boss</th><th>Theater</th><th>Speed</th><th>Attack</th><th>HP</th><th>Special Mechanic</th></tr>
+<tr><td><strong>Leviathan</strong></td><td>Coastal</td><td>Slow</td><td>Heavy slam (3×3 area)</td><td>Very High</td><td>Submerges (stealth) every 2 sorties. Resurfaces near a random castle. Creates a tidal wave that pushes walls 1 grid outward on resurface.</td></tr>
+<tr><td><strong>Colossus</strong></td><td>Mountain</td><td>Very Slow</td><td>Boulder throw (ranged, 2×2 impact)</td><td>Extreme</td><td>Climbs to high ground for +range. Stealth = enters a cave, exits a different cave. Vulnerable when throwing (stationary for 3 ticks).</td></tr>
+<tr><td><strong>Sandworm</strong></td><td>Desert</td><td>Fast</td><td>Burrow charge (line damage)</td><td>High</td><td>Burrows underground (stealth), charges in a straight line, erupts under a castle. Leaves sand trail during charge. Vulnerable for 2 ticks after eruption.</td></tr>
+<tr><td><strong>Hydra</strong></td><td>River</td><td>Medium</td><td>Multi-head spit (3 targets)</td><td>High</td><td>3 heads attack simultaneously. Destroying a head = 1/3 total HP. Stealth = dives underwater. Regenerates 5% HP per sortie if not damaged.</td></tr>
+<tr><td><strong>Magma Titan</strong></td><td>Volcanic</td><td>Slow</td><td>Lava breath (cone, 3-wide)</td><td>Very High</td><td>Leaves lava trail when moving. Stealth = sinks into lava, erupts from a lava flow. Armor weakens as HP drops (takes more damage below 50%).</td></tr>
+<tr><td><strong>Frost Wyrm</strong></td><td>Frozen</td><td>Fast</td><td>Ice breath (freezes walls for 1 sortie)</td><td>High</td><td>Frozen walls cannot be repaired in Build. Stealth = blizzard covers the map (reduced visibility). Creates ice grids when landing.</td></tr>
+<tr><td><strong>Storm King</strong></td><td>Sky</td><td>Fast</td><td>Lightning strike (precise, high damage)</td><td>Medium</td><td>Flies between platforms. Stealth = enters thundercloud. Lightning hits the highest-HP cannon first. Cannons at half range against flying boss.</td></tr>
+<tr><td><strong>Ancient Treant</strong></td><td>Forest</td><td>Very Slow</td><td>Root attack (grows through walls)</td><td>Extreme</td><td>Roots grow 1 grid per sortie through walls (ignoring them). Stealth = becomes a tree (indistinguishable from forest until it moves). Spawns tree grids around itself.</td></tr>
+<tr><td><strong>Plague Herald</strong></td><td>Swamp</td><td>Medium</td><td>Poison cloud (area DoT)</td><td>High</td><td>Poison cloud damages walls over time (1% per tick in radius). Stealth = dissolves into swamp water. Spawns lesser plague creatures (mini-troops).</td></tr>
+<tr><td><strong>Crystal Lich</strong></td><td>Crystal</td><td>Slow</td><td>Beam attack (bounces off crystals)</td><td>Very High</td><td>Beam ricochets off crystal formations — can hit multiple targets. Stealth = becomes a crystal (must be identified). Creates reflective crystal shields that bounce player shots.</td></tr>
+</table>
+
+<p><strong>Boss stealth timing:</strong> Every boss enters stealth mode after a set number of ticks (varies by boss, typically every 15–25 ticks). Stealth lasts 5–8 ticks. During stealth, the boss does NOT attack. On reappearance, a <strong>thunderclap sound + shock haptic</strong> alerts the player. The boss always reappears at a predetermined position (deterministic, like all battle elements).</p>
+<p><strong>Between-sortie healing:</strong> Bosses retain their <strong>exact HP between sorties</strong> — no healing. The one exception is the <strong>Hydra</strong>, which regenerates 5% HP per sortie if not damaged during that sortie's Fight phase. When the Hydra regenerates, a <strong>visible green pulse</strong> plays on the Hydra's HP bar at the start of the next Fight countdown, and the HP bar visibly grows. The player must keep pressure on the Hydra every sortie or lose progress. All other bosses: what you dealt stays dealt.</p>
+<p><strong>Boss defeat:</strong> When boss HP reaches 0, a unique death animation plays per boss (Leviathan sinks into the sea, Colossus crumbles, Sandworm explodes from the ground, etc.). This triggers the standard victory celebration if castles are enclosed.</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-fight">
+  <h2 class="src">Fight Phase — Real-Time Tick Combat <span class="ln">(lines 1307–1566)</span></h2>
+  <span class="badge mixed">Mixed · Cannon / Fleet Memory / Ships / Victory (+ designed-out)</span>
+  <div class="arch-note">The Fight section split across four module docs. <strong>Designed-out sub-parts inside this block:</strong> the old three firing modes (auto / directed / hold), the “tap a ship” targeting tutorial prompt, roll-over-<em>in-place</em> (→ Victory §4: survivors retreat to spawn and re-emerge smarter), staging ships that “can be hit” (→ Ships §4 safe-launch-zone: cannot), and the old boss-retreat behaviour. The ship-AI grid-scoring, Hospital-Ship heal math, and troop/bomber Fight behaviour are <em>owned</em> (Fleet Memory / Ships / Victory) and kept here verbatim. <strong>Note:</strong> the Last Garrison desperation-state block that followed this section is <em>not</em> here — it stayed in the GDD (no module doc owns it yet).</div>
+  <div class="arch-orig"><section class="p-fight">
+<h2>Fight Phase — Real-Time Tick Combat</h2>
+<p class="dim">The ships, troops, and bosses referenced below are catalogued just above in <a href="#enemy-ref" style="color:var(--link)">Enemies</a> and <a href="#bosses" style="color:var(--link)">Boss Mechanics</a>; their concrete numbers are in <a href="#stats" style="color:var(--link)">Unit &amp; Structure Statistics</a> later in this Part.</p>
+
+<h3>Countdown &amp; Fight Timer</h3>
+<p>Every Fight phase begins with a <strong>3… 2… 1… FIGHT!</strong> countdown (2.5–3.0 seconds). <strong>The countdown IS the <span class="g" data-t="map_view">Map View</span> → <span class="g" data-t="world_view">World View</span> transition</strong> — they are the same animation, not separate events. On "3": the flat 2D map dims, warm lamplight glow at edges. On "2": camera pans up from the map to a window revealing dark sky. On "1": fly out the window into darkness. On "FIGHT": crossfade into the 2.5D isometric battlefield with the first cannon firing. The player watches their flat planning map transform into the living battlefield in one continuous sequence. The Fight phase has a <strong>countdown timer</strong> scaling from <strong>25 seconds</strong> (Campaign 1) to <strong>90 seconds</strong> (Campaign 32). Boss battles use 90 seconds (fixed). See <a href="#timing" style="color:var(--link)">Phase Timing</a> for full analysis. If all enemy ships for that <span class="g" data-t="sortie">sortie</span> are destroyed before the timer expires, the Fight phase ends immediately and <strong>unused fight time carries over</strong> (50% to the next sortie's Build phase). If the timer expires with ships still alive, those ships <strong>remain at their current position and HP</strong> for the next sortie's Fight phase (new ships may also spawn from the spawn points).</p>
+
+<h3>Tick-Based Combat System</h3>
+<p>The Fight phase runs on a <strong>real-time tick clock</strong>, not discrete rounds. The clock ticks at ~2 ticks/sec (500ms). Enemy ships and troops move, pause, and fire on their own schedules. <span class="g" data-t="cannon">Cannons</span> fire based on reload speed (ticks). The player directs fire via touch.</p>
+
+<h3 id="ships">Ship Sizes &amp; Speed</h3>
+<table>
+<tr><th>Ship Type</th><th>Size</th><th>Speed</th></tr>
+<tr><td>Scout, Fire Ship</td><td>1×2</td><td>Fast</td></tr>
+<tr><td>Warship, Transport, Mortar Ship</td><td>1×2</td><td>Medium</td></tr>
+<tr><td><span class="g" data-t="hospital_ship">Hospital Ship</span></td><td>2×2</td><td>Very Slow (heavy supplies)</td></tr>
+<tr><td>Siege Ship</td><td>2×2</td><td>Slow</td></tr>
+<tr><td>Aircraft Carrier</td><td>2×4</td><td>Very Slow</td></tr>
+</table>
+
+<h3>Deterministic Battles — This Is a Puzzle Game</h3>
+<div class="s">
+<div class="ct">Every Battle Is Identical Every Time</div>
+<p>The order of ships coming out of each spawn point is <strong>fixed</strong>. Which ships come from which spawn point is <strong>fixed</strong>. The troops aboard each Transport are <strong>fixed</strong>. This is <strong>not a skills game — it is a puzzle game</strong>. The player can study a battle, learn the spawn order, and develop a precise strategy. On replay, the same ships appear in the same order from the same spawn points with the same troops. The "surprise" of troop types only exists the first time the player encounters a sortie.</p>
+</div>
+
+<h3 id="ship-spawn">Ship Spawn Points</h3>
+<div class="s">
+<div class="ct">Defined Per Battlefield in the Enemy Overlay</div>
+<p>Spawn point locations are defined in the <strong>Enemy Overlay</strong> (Layer 3), not the base map. They vary from battlefield to battlefield within the same <span class="g" data-t="theater">theater</span>. The Enemy Overlay also determines the number of ships, their spawn order, and which ships appear in which sortie. Each ship type uses deterministic AI to find its best tactical position.</p>
+<p><strong>Earlier battlefields:</strong> Spawn points are at the <strong>far edge of the waterways</strong>. Ships have a long approach, giving the player time to prepare.</p>
+<p><strong>Later battlefields:</strong> Spawn points can be placed <strong>closer to the DMZ</strong>. Ships spawning closer to the friendly zone are harder to detect and respond to — especially in fog of war theaters. The closer the spawn point, the more "stealthy" the approach feels, even without a stealth mechanic.</p>
+<p>Only one ship spawns per point at a time; ships queue. Spawn speed scales with <a href="#layers" style="color:var(--text)">Layer B</a>.</p>
+<p><strong>Spawn grid:</strong> Each spawn point is a <strong>1×4 grid</strong> centered within a <strong>7×6 staging area</strong>. Ships exit from the long side (4-grid edge) in either direction, but must exit into a valid enemy ship location. If the 1×4 is at the edge of the battlefield, ships can only exit in one direction. Once spawned, ships move at <strong>fast speed</strong> until completely out of the 7×6 staging box, then resume normal speed. <strong>Ships cannot fire while in the staging area</strong>, but they <strong>can be hit</strong> by cannon fire.</p>
+</div>
+
+<h3>The DMZ in Combat</h3>
+<p>The <a href="#dmz" style="color:var(--link)">DMZ</a> separates friendly zone and <span class="g" data-t="waterways">waterways</span>. Only <a href="#transport">Transports</a> and <a href="#bosses">Bosses</a> cross it. The DMZ advances 1 grid per sortie after Deploy ends (except Coastal, River, Swamp). See <a href="#dmz" style="color:var(--link)">Part II — The DMZ</a> for complete rules on advance mechanics, protection zones, and <span class="g" data-t="fragile_grid">fragile grid</span> interaction.</p>
+
+<h3>Player Targeting — How the Player Directs Cannons</h3>
+<div class="s">
+<div class="ct">Touch-to-Target with <span class="g" data-t="auto_fire">Auto-Fire</span> Fallback</div>
+<p>Cannons have <strong>three firing modes</strong> during the Fight phase:</p>
+<p><strong><span class="g" data-t="auto_fire">Auto-fire</span> (default — no touch):</strong> When the player is NOT touching the map, all cannons independently <strong>auto-target the nearest enemy in range</strong>. Each cannon picks its own target based on proximity. Auto-fire has a <strong>-15% accuracy penalty</strong> and fires <strong>slightly slower</strong> than directed modes (the cannon "decides" where to aim — processing time). Auto-fire ensures defenses are never idle.</p>
+<p><strong>Hold-fire (touch and hold):</strong> The player <strong>touches and holds a point on the map</strong>. All cannons in range concentrate fire on that location. A <strong>faint accuracy circle appears around the player's finger</strong> — this circle represents the spread area where shots will land based on the combined accuracy of all firing cannons. <strong>Close targets = tighter circle. Farther targets = wider circle.</strong> The player can drag their finger to track a moving ship. Full accuracy (no penalty).</p>
+<p><strong>Touch-lock (tap on a ship):</strong> A quick <strong>tap</strong> on an enemy ship <strong>locks onto that ship for 5 seconds</strong>. A bright crosshair appears on the target and all cannons in range fire at it. The crosshair <strong>fades from bright to nothing</strong> over 5 seconds. The player can tap a <strong>second ship</strong> to lock a second target simultaneously. <strong>Third tap</strong> removes the first lock (cycling). Up to 2 simultaneous locks.</p>
+<p><strong>While touching (Hold or Touch-lock),</strong> faint range circles appear around ALL cannons, with an <strong>arc (or line) from each cannon to its range circle</strong>.</p>
+<p><strong>Shot trajectory:</strong> The cannonball takes time to travel. <strong>Higher trajectory = longer distance but slower travel time. Lower trajectory = shorter distance but faster arrival.</strong> More powerful cannons (Long, Doom) fire lower trajectories and hit sooner. Less powerful cannons (Standard, Scatter) use higher arcs and take longer. <strong>Cannons never fall short</strong> — their "range" stat is arrival speed, not reach. All cannons within range will hit; the question is when.</p>
+<p><strong>Two-finger targeting:</strong> Two fingers simultaneously create two Hold-fire target points. Cannons split between the two points based on range.</p>
+<p><strong>Hitting bombers:</strong> All cannons can hit bombers. Cannon fire aimed at bombers goes <strong>"only up"</strong> on the arc — steep vertical shots. The altitude means shots take longer to arrive (half normal arrival speed) but every cannon can reach.</p>
+</div>
+
+<h3>Enemy Movement &amp; Behavior</h3>
+<p>Ships move continuously from spawn points toward their <strong>AI-determined best tactical position</strong>. <strong>All ship movement is grid-locked</strong> — ships move from grid to grid, not smoothly between them. This represents the player's tactical map knowledge of ship positions. If a cannon hits a grid, it hits any ship on that grid. Ship movement may appear jerky — this is intentional: this is a tactical map, not a simulation. <strong>Ships fire OVER troops</strong>, not through them — ship projectiles arc above ground units. <strong>Ships prefer to target walls</strong> (their goal is to breach the perimeter). Troops prefer <strong>cannons and <span class="g" data-t="castle">castles</span></strong> (their goal is to destroy defenses).</p>
+<p>Every enemy must <strong>pause before shooting</strong> — fast enemies pause longer (catching breath), slow enemies pause briefly (already aimed).</p>
+<p><strong>"<span class="g" data-t="crazy_ivan">Crazy Ivan</span>" evasive maneuvers:</strong> Triggered when a shot <strong>hits within 1 grid</strong> of the ship (near miss or direct hit). There is a <strong>slight delay before the evasion</strong>. The ship makes a sudden lateral move. More common for lighter ships.</p>
+<p><strong>Ship stacking:</strong> Two or more ships <strong>can occupy the same grid</strong>. They simply pass through each other. The disadvantage: a single cannon shot hitting that grid <strong>damages all ships in it</strong>. This is also an enemy tactic to <strong>hide numbers</strong> — only the first ship into the grid is displayed; additional ships are "hidden" behind it. All ships in the same grid act, react, and fire normally regardless of stacking. The player discovers the true count when the front ship is destroyed or the stack separates.</p>
+
+<h3>Ship AI — Deterministic Tactical Positioning</h3>
+<div class="s">
+<div class="ct">Implementation Spec — Grid-Scoring Functions</div>
+<p>Every ship evaluates valid enemy-zone grids using a <strong>deterministic scoring function</strong> specific to its type. The ship moves toward the <strong>highest-scoring grid</strong> each tick. <strong>Ties are broken by lowest grid index</strong> (row-major: row × 64 + col) — this ensures identical positioning on every replay.</p>
+<p>Ships recalculate their target grid <strong>every 4 ticks</strong> (2 seconds) — often enough to react to wall breaches and cannon destruction, infrequent enough to look deliberate (not jittery). Between recalculations, the ship moves toward its current target grid along the shortest path. <strong>Rocks can appear in the <span class="g" data-t="waterways">waterways</span></strong> — ships must navigate around them. Ship pathfinding uses simple obstacle avoidance: if the direct path is blocked by a rock, the ship routes around it via the nearest unblocked adjacent grid. Rocks in <span class="g" data-t="waterways">waterways</span> create natural chokepoints that constrain ship approach angles, adding another layer to the map designer's toolkit.</p>
+<p><strong>Valid grids:</strong> A grid is valid for a ship if (a) it is in the waterways, (b) it is outside any staging area, and (c) the ship's full footprint fits (1×2 or 2×2 or 2×4 depending on type). Ships CAN share grids (stacking).</p>
+
+<h4>Scoring Factors (Inputs to All Functions)</h4>
+<table style="font-size:.78rem">
+<tr><th>Factor</th><th>Symbol</th><th>Definition</th></tr>
+<tr><td>Distance to DMZ</td><td><code>dDMZ</code></td><td>Shortest distance from the grid to the DMZ line (in grids). Lower = closer to the front.</td></tr>
+<tr><td>Distance to nearest wall</td><td><code>dWall</code></td><td>Shortest distance to the nearest player wall block.</td></tr>
+<tr><td>Distance to nearest cannon</td><td><code>dCannon</code></td><td>Shortest distance to the nearest player cannon.</td></tr>
+<tr><td>Distance to nearest castle</td><td><code>dCastle</code></td><td>Shortest distance to the nearest enclosed (non-grey) castle.</td></tr>
+<tr><td>In firing range</td><td><code>inRange</code></td><td>1 if the ship's primary target type is within the ship's range stat, 0 otherwise.</td></tr>
+<tr><td>Clear line of fire</td><td><code>clearLOS</code></td><td>1 if no rocks between the grid and the nearest target (arcing shots ignore walls). 0 otherwise.</td></tr>
+<tr><td>Fleet shield</td><td><code>shield</code></td><td>Number of friendly ships between this grid and the DMZ. Higher = more protected.</td></tr>
+<tr><td>Grid occupancy</td><td><code>occ</code></td><td>Number of ships already on this grid. Stacking hides numbers but concentrates damage risk.</td></tr>
+<tr><td>Targets damaged wall</td><td><code>dmgWall</code></td><td>1 if the nearest wall within range has HP < 75%. 0 otherwise.</td></tr>
+</table>
+
+<h4>Per-Type Scoring Functions</h4>
+<table style="font-size:.72rem">
+<tr><th>Ship Type</th><th>Primary Target</th><th>Score Function</th><th>Behavior Summary</th></tr>
+<tr><td><strong>Warship</strong></td><td>Walls</td><td><code>inRange×100 + clearLOS×50 − dWall×3 − occ×30 + dmgWall×40</code></td><td>Get in range of walls, prefer clear shots, spread out, focus damaged sections.</td></tr>
+<tr><td><strong>Scout</strong></td><td>Damaged walls</td><td><code>inRange×80 + dDMZ×5 + dmgWall×60 − occ×20</code></td><td>Stay back at max range, probe weak spots in the perimeter.</td></tr>
+<tr><td><strong>Transport</strong></td><td>DMZ dock point</td><td><code>−troopPathCost×10</code></td><td>Minimize troop travel time. Score = negative A* cost from dock point to nearest enclosed castle. Once docked, stays until DMZ shifts.</td></tr>
+<tr><td><strong>Fire Ship</strong></td><td>Walls</td><td><code>inRange×100 − dDMZ×8 − occ×25</code></td><td>Close to DMZ, within fireball range. Maximize area denial uptime.</td></tr>
+<tr><td><strong>Mortar Ship</strong></td><td>Cannons</td><td><code>inRange×100 + shield×20 − dCannon×3 − occ×15</code></td><td>Behind warships, within arcing range of cannons. Use fleet as shield.</td></tr>
+<tr><td><strong>Hospital Ship</strong></td><td>Fleet rear</td><td><code>dDMZ×10 + shield×15 − occ×10</code></td><td>Far from DMZ, behind all other ships. Maximize survival to heal at end of Fight.</td></tr>
+<tr><td><strong>Carrier</strong></td><td>Castles (bombers)</td><td><code>shield×15 − dCastle×5 − occ×10</code></td><td>Behind fleet but closer = faster bomber turnaround. Risk/reward positioning.</td></tr>
+<tr><td><strong>Torpedo Boat</strong></td><td>Walls</td><td><code>inRange×100 + clearLOS×60 − dWall×5 − occ×20</code></td><td>Rush into range, fire devastating torpedo, reposition. Aggressive.</td></tr>
+<tr><td><strong>Smoke Ship</strong></td><td>Fleet support</td><td><code>−dDMZ×3 + nearbyWarships×25 − occ×15</code></td><td>Near the front line, close to warships. Deploy smoke screen to cover the fleet.</td></tr>
+<tr><td><strong>Mine Layer</strong></td><td>DMZ line</td><td><code>−dDMZ×10 − occ×20</code></td><td>As close to the DMZ as possible. Drop mines on the boundary.</td></tr>
+<tr><td><strong>Artillery Barge</strong></td><td>Castles</td><td><code>inRange×100 + dDMZ×5 − dCastle×2 + shield×10 − occ×15</code></td><td>Extreme range, hang back far. Target castles from safety. The heavy hitter.</td></tr>
+</table>
+<p class="dim"><code>nearbyWarships</code> = count of warships within 5 grids. <code>troopPathCost</code> = A* cost from the dock point to the nearest enclosed castle using the troop cost table (see <a href="#troops" style="color:var(--link)">Troop Pathfinding</a>). All factors are computed from the current board state at evaluation time.</p>
+
+<h4>Movement Behavior</h4>
+<p><strong>Ship movement toward target grid:</strong> Ships move 1 grid per tick × their speed stat along the shortest grid-locked path to their target grid. Ships CAN pass through each other (stacking). A ship that reaches its target grid <strong>stops and begins firing</strong> after the pause-before-shooting delay.</p>
+<p><strong>Repositioning:</strong> If the board state changes (wall destroyed, cannon destroyed, ship sunk), the next recalculation (every 4 ticks) may produce a new target grid. The ship begins moving toward the new target. This creates organic repositioning — ships shift to exploit new breaches without scripted behavior.</p>
+<p><strong>Target fallback:</strong> All ships switch to secondary and tertiary targets when their primary target type is completely destroyed. <strong>Walls → cannons → castles</strong> (for Warships, Scouts, Fire Ships, Torpedo Boats). <strong>Cannons → walls → castles</strong> (for Mortar Ships). <strong>Castles → cannons → walls</strong> (for Artillery Barges). If all walls, cannons, AND castles are destroyed, ships <strong>stand down</strong> — there is nothing left for them to do. (The player has already lost if all structures are gone.)</p>
+<p><strong>Hit response:</strong> When a ship takes a hit, it immediately recalculates (ignoring the 4-tick cycle) with a <strong>temporary +50 bonus to <code>dDMZ</code></strong> (flee impulse) that decays over 4 ticks. This creates the <span class="g" data-t="crazy_ivan">Crazy Ivan</span> evasive behavior — the ship briefly retreats, then returns to its optimal position.</p>
+<p><strong>Battering Ram and Siege Ship:</strong> These are classified as troops, not ships. They spawn in the waterways and move toward the DMZ using ship movement (grid-locked, toward DMZ). Once they cross the DMZ into the friendly zone, they switch to the <a href="#troops">troop pathfinding algorithm</a> (weighted A*) to reach their targets.</p>
+</div>
+
+<h3>Accuracy &amp; Range Mechanic</h3>
+<div class="s">
+<div class="ct">Closer = More Accurate, Faster Fire Rate</div>
+<p>Accuracy and fire rate are core combat mechanics that create meaningful positioning decisions for both ships and cannons:</p>
+<p><strong>Range falloff (accuracy):</strong> The closer a target, the more accurate the shot. At point-blank range: near-100% accuracy. At maximum range: significantly reduced accuracy. This applies to both player cannons AND enemy ships.</p>
+<p><strong>Proximity fire rate bonus:</strong> Ships and cannons that are <strong>closer to their target fire slightly faster</strong>. At minimum range: +15% fire rate. At maximum range: base fire rate. The scaling is linear between min and max range. This is a subtle bonus — not enough to dramatically change balance, but enough that ships are incentivized to push closer for damage output. This creates the natural tension: ships WANT to get close for faster shots, but closer means the player's cannons hit more accurately too.</p>
+<p><strong>Ship accuracy penalty (movement):</strong> Ships are <strong>less accurate while moving</strong>. A ship that has been <strong>stationary for several ticks becomes increasingly accurate</strong> — it settles, aims, and fires with precision. This creates a risk/reward: a stationary ship is a better shooter but also an easier target for the player.</p>
+<p><strong>Hit disrupts accuracy:</strong> When a ship takes a hit, it <strong>wants to move</strong> (evasion/repositioning). Moving resets its accuracy buildup. The player can disrupt a well-aimed ship by landing a hit, forcing it to reposition and re-aim.</p>
+<p><strong>Cannon accuracy advantage:</strong> Player cannons are <strong>more accurate than ships</strong> because they're stationary. Ships compensate with numbers and positioning.</p>
+<p class="dim"><strong>Design consideration — wind affecting fight shots:</strong> Should wind blow cannon and ship shots off course during Fight, forcing both sides to adapt? This would add a skill layer (compensate for wind drift on shots, not just piece placement) but may be "too much" complexity. Recommend testing: if wind affects Fight shots, it should be a subtle effect (±0.5 grid) at High wind only, introduced as a Layer D mechanic in later campaigns. Low/Medium wind should NOT affect shots.</p>
+</div>
+
+<h3>Ballistic Arcs &amp; 3D Visual Style</h3>
+<div class="s">
+<div class="ct">Every Shot Has an Arc — 3D Perspective</div>
+<p>All ship cannons and player cannons fire with <strong>ballistic arcs</strong>. The farther the target, the higher (and longer) the arc. This should be animated with a <strong>3D perspective effect</strong>: the projectile appears to get <strong>closer to the camera</strong> as it climbs (growing larger) and <strong>farther from the camera</strong> as it falls (shrinking). At the peak of the arc, the projectile is at its largest on screen. This creates depth and drama, especially for long-range Mortar and Doom Cannon shots.</p>
+<p><strong>Visual style target:</strong> The entire battlefield should have a <strong>3D isometric look</strong> reminiscent of Age of Empires — elevated terrain has visible depth, walls have height, castles have towers, and cannons have visible barrels that track their targets. This is a visual polish goal, not a gameplay requirement — the game plays on a 2D grid, but renders with 3D depth cues.</p>
+</div>
+
+<h3>Ship Rollover &amp; Victory</h3>
+<p>Ships not destroyed by fight-end <strong>roll over to the next sortie</strong> at current HP and position. New ships may also be added each sortie from spawn points. <strong>Destroying ships is NOT a victory requirement</strong> — victory is castle <span class="g" data-t="enclosure">enclosure</span> only (see <a href="#win" style="color:var(--link)">Victory &amp; Defeat</a>). Ship destruction instead feeds the <a href="#stars" style="color:var(--link)">Ships Destroyed star lever</a> and <span class="g" data-t="battle_score">Battle Score</span>, so clearing the fleet is rewarded without being mandatory. Troops never roll over (they reset each sortie) and do not count toward stars — only ships do. <em>(Exception: the Boss Finale additionally requires the boss's HP to reach 0.)</em></p>
+<p><strong>Ship locations during Build &amp; Deploy:</strong> Rolled-over ships are visible on the map during the Build and Deploy phases as <strong>solid red grid blocks</strong> at their last known positions. All ship types use the same generic red block — the player must <strong>remember</strong> which ship type was at each location. This gives the player strategic information for cannon placement without revealing full intelligence.</p>
+<p><strong>Spawn point visibility:</strong> After the first sortie in which a ship has emerged from a spawn point, that spawn point is marked during Build and Deploy as a <strong>light yellow-orange area with cross-hatching</strong> across the 1×4 grid. This marking <strong>only appears for spawn points on the edge of the map</strong> — the player can see the map edge and infer the spawn location. <strong>Stealth spawn points</strong> (those placed closer to the DMZ in later battlefields) are <strong>never marked</strong> — the player must discover them during Fight. On first play, all spawn points are unknown until ships emerge.</p>
+<p><strong>No ship preview:</strong> There is no preview of upcoming ship types or counts. Ships are too far away to identify before they spawn. The edge of the map is as far as the player can see. On replay, the player's advantage comes from <strong>memory</strong>, not from UI previews.</p>
+
+<h3>Hospital Ship — Full Healing Mechanic</h3>
+<div class="s">
+<div class="ct">Hospital Ship (2×2, Very Slow) — Heals Other Ships</div>
+<p>The Hospital Ship is a support vessel that <strong>distributes its own HP to heal other ships</strong> at the end of each Fight phase. <strong>Multiple Hospital Ships</strong> can appear in a sortie — all distribute healing evenly across the fleet, combining their HP pools.</p>
+<p><strong>Healing algorithm:</strong> At the end of the Fight phase, if any Hospital Ship is alive, it distributes HP from itself to all other surviving ships <strong>evenly</strong>. Ships cannot exceed 100% HP. <strong>Ships at 0% HP cannot be resurrected</strong> — dead ships stay dead. The Hospital Ship reduces its own HP by the total amount distributed. If it distributes all its HP, it is destroyed.</p>
+<p><strong>The Hospital Ship does NOT heal itself.</strong> It is purely selfless — it sacrifices its own HP pool to keep the fleet alive.</p>
+<p><strong>The Hospital Ship does NOT count toward the win condition.</strong> If the Hospital Ship is the only ship remaining (all combat ships destroyed), it <strong>leaves the battlefield</strong> — there is nothing left to repair. The player wins. Hospital Ships are support vessels, not combatants.</p>
+<p><strong>Distribution rules:</strong> Health is split evenly among all surviving ships. If the even split is not perfectly divisible, the <strong>remainder goes to the weakest ship</strong> (lowest HP%). If a ship reaches 100% before all allocated health is applied, the <strong>overflow redistributes to remaining ships</strong> that haven't hit 100%. This cascading distribution ensures no health is wasted.</p>
+<p><strong>Example:</strong> 4 ships at 95%, 94%, 55%, 45% + Hospital Ship at 26%. Even split: 5% each → 100%, 99%, 60%, 50%. Remaining 6%: 1% each to the 3 non-full ships → 100%, 100%, 61%, 51%. Remaining 3%: 1% to 61% and 2% to 51% (weakest gets more). Result: 100%, 100%, 62%, 53%. Hospital Ship at 0% (destroyed — gave everything).</p>
+<p><strong>Damage reduces healing capacity.</strong> A Hospital Ship at 80% can distribute up to 80%. At 20%, only 20%. The player should prioritize damaging or sinking the Hospital Ship to limit fleet recovery. Even hitting it without sinking it reduces its healing impact.</p>
+</div>
+
+<h3 id="transport">Troop Transport &amp; Ground Combat</h3>
+<div class="s">
+<div class="ct">Transport Ships — Deterministic Deployment</div>
+<p>A <strong>single Transport Ship type</strong> carries all ground troop types (except Bombers). The Transport docks on the <strong>friendly-zone grids just beyond the DMZ</strong>. Once docked, its "fire rate" is the <strong>disembark rate</strong>. Continuous until destroyed. <strong>Transports never empty.</strong> Once docked, a Transport <strong>does not move again unless the DMZ shifts</strong>.</p>
+<p><strong>Docking at a wall:</strong> If the Transport docks adjacent to a wall, troops disembark into the <strong>surrounding grids of the dock point</strong> and immediately attack the wall. Troops can exit from <strong>any side of the ship's 1×2 grid</strong> — even backward. They fan out to adjacent grids and attack whatever wall is blocking them.</p>
+<p><strong>Troop composition is fixed per sortie:</strong> The specific troop types aboard each Transport are predetermined and identical every time the player plays that sortie. The "surprise" only exists <strong>the first time</strong> the player encounters that sortie — after that, the player knows exactly which troops are coming from which Transport and can plan accordingly.</p>
+<p><strong>Transport sunk mid-deployment:</strong> Sinking the Transport <strong>stops further troop deployment</strong>, but troops already on the ground <strong>continue their mission</strong>.</p>
+<p><strong>Troops reset every sortie.</strong> All troops cleared at sortie end. Only ships persist. Troops do NOT count for the win condition.</p>
+</div>
+
+<h3 id="bombers">Aircraft Carrier &amp; Bomber Mechanics</h3>
+<div class="s">
+<div class="ct">Carriers and Bombers — Linked HP System</div>
+<p>Aircraft Carriers launch Bombers from the waterways — <strong>no DMZ touch needed</strong> (Bombers are aerial).</p>
+<p><strong>Shared HP:</strong> Each Bomber's HP = Carrier HP ÷ number of Bombers. A Carrier with 5 Bombers → each Bomber has 1/5 the Carrier's HP.</p>
+<p><strong>Bomber flight path:</strong> Bombers fly in a <strong>straight line toward a castle</strong> but can deviate <strong>1 grid on either side</strong> (<span class="g" data-t="crazy_ivan">Crazy Ivan</span>). Which castle is targeted is <strong>determined when the bomber takes off</strong> from the Carrier — it is purely random among all surviving castles. If the targeted castle is <strong>destroyed while the bomber is in flight</strong>, the bomber <strong>immediately turns around, lands on the Carrier</strong>, and is reassigned to a different random castle on its next launch.</p>
+<p><strong>Carrier launch rate:</strong> The Carrier's "fire rate" is really <strong>how fast the bombers fly</strong> — a faster carrier means bombers arrive sooner. A landed bomber takes 4 ticks (2 seconds) before it can be launched again.</p>
+<p><strong>Carrier exposure:</strong> When a Carrier launches a bomber, the Carrier is <strong>fully exposed</strong> for ~6 seconds (relevant in fog of war theaters).</p>
+<p><strong>Bomber visibility:</strong> Bombers are <strong>troops</strong>, so they are <strong>always visible</strong> — even over enemy territory. Fog of war does not hide them.</p>
+<p><strong>Bomber size:</strong> 1×2, with the <strong>1-grid side as the leading edge</strong> (nose-forward flight).</p>
+<p><strong>Bomber grid sharing:</strong> Multiple bombers can occupy the same grid but do <strong>NOT stack</strong> — each takes damage independently. No 4× stacking bonus like ground troops.</p>
+<p><strong>Cannon fire vs bombers:</strong> All cannons can target bombers. Cannon shots aimed at bombers fire <strong>steeply upward</strong>. If the shot <strong>hits</strong>, the arc stops at the bomber (impact). If the shot <strong>misses</strong>, the cannonball <strong>falls back to earth</strong> — it may hit something below (wall, troop, open ground). All bombers fly at the <strong>same altitude</strong>. If a bomber's flight path <strong>crosses a cannon shot already in the air</strong>, the shot can hit the bomber — but only if the shot is "at altitude" (the upward portion of the arc, not the falling portion). This creates incidental hits on bombers flying through active fire zones.</p>
+<p><strong>Bomber area denial:</strong> Bomblets hitting open ground do NOT create area denial on the first hit. The same open ground grid must be hit <strong>4 times</strong> before it becomes a crater (area denial). Bomblets hitting walls or castles cause direct damage as normal.</p>
+<p><strong>Castle targeting:</strong> Which castle a bomber targets is determined at launch — <strong>purely random</strong> among surviving castles. RNG may send <strong>2 sequential bombers to the same castle</strong>. If the targeted castle is destroyed mid-flight, the bomber turns around, lands, and is reassigned to a different random castle on its next launch.</p>
+<p><strong>Carrier sunk, bombers airborne:</strong> If the Carrier is destroyed while Bombers are deployed, the Bombers <strong>complete their current bombing run</strong> but then <strong>crash at the Carrier's sunk location</strong> when they attempt to return. One last strike, then they're gone.</p>
+<p><strong>All bombers destroyed → Carrier destroyed:</strong> If ALL Bombers are killed, the Carrier is also destroyed. Killing Bombers IS killing the Carrier.</p>
+</div>
+
+<h3 id="troops">Troop Combat — Adjacency &amp; Stacking</h3>
+<div class="s">
+<div class="ct">How Troops Deal Damage</div>
+<p>Troops cause damage to structures they are <strong>side-adjacent to</strong> (4-way). A troop adjacent to <strong>multiple walls damages ALL of them</strong> — a troop touching 3 or 4 walls damages all 3 or 4 simultaneously. Walls are the impediments troops must get through; they attack every surface they contact.</p>
+<p><strong>Wall-targeting troop (<span class="g" data-t="battering_ram">Battering Ram</span>):</strong> This troop specifically targets walls to make them <strong>hard to repair</strong>. It prefers <strong>multi-layer wall sections</strong> and attacks only the <strong>4 diagonal walls</strong> (not side-by-side walls). After destroying a wall block, the Battering Ram <strong>prefers to move diagonally</strong> to its next target and <strong>likes to destroy every other wall block</strong> — leaving a checkerboard of gaps that creates maximum isolation-cleanup vulnerabilities. The goal is to leave walls touching diagonally instead of side-by-side, making the player's repair work as expensive as possible.</p>
+<p><strong>Troop stacking (up to 4×):</strong> When troops of the <strong>same type</strong> occupy the same grid, they <strong>merge</strong>:</p>
+<p>— <strong>1 troop:</strong> 1× damage, 1× HP</p>
+<p>— <strong>2 troops:</strong> 2× damage, 1.5× HP</p>
+<p>— <strong>3 troops:</strong> 3× damage, 2× HP</p>
+<p>— <strong>4 troops:</strong> 4× damage, 2.5× HP — <strong>maximum stack</strong></p>
+<p>Stacking happens <strong>anywhere on the map</strong> when same-type troops occupy the same grid. A single cannon shot hitting a stacked grid damages the entire stack — making stacks dangerous but fragile (a well-aimed shot eliminates 4 threats at once). Troops arriving at a full stack (4) <strong>queue behind</strong> and seek an alternate route or different target, bunching up at chokepoints.</p>
+<p><strong>Speed/HP variation by type:</strong> Fast troops (low HP, low damage, flood breaches) vs. heavy troops (high HP, high damage, one breach is enough). The Transport deploys a mix — the player never knows what's coming.</p>
+</div>
+
+<h3>Troop Pathfinding Algorithm — A* with Weighted Terrain</h3>
+<div class="s">
+<div class="ct">Implementation Spec — Deterministic Weighted A*</div>
+<p>Every troop uses <strong>A* pathfinding</strong> with a weighted cost table to find the lowest-cost path to its target. The path considers terrain difficulty, obstacles that must be destroyed, and other troops. The algorithm is deterministic — same board state produces same path.</p>
+
+<p><strong>Target selection priority:</strong> Troops path toward <strong>enclosed (non-grey) castles</strong> (nearest first). If no enclosed castles exist (all grey), fallback: <strong>cannons</strong> (nearest), then <strong>walls</strong> (nearest). Bombers always target castles (see below).</p>
+
+<h4>Cost Table (Per Grid Entered)</h4>
+<table style="font-size:.8rem">
+<tr><th>Terrain / Obstacle</th><th>Cost</th><th>Rationale</th></tr>
+<tr><td>Open ground</td><td><strong>1</strong></td><td>Baseline. No resistance.</td></tr>
+<tr><td>Damaged tree</td><td><strong>2</strong></td><td>½ speed through splintered tree.</td></tr>
+<tr><td>Cliff</td><td><strong>2</strong></td><td>½ speed, fully exposed while climbing.</td></tr>
+<tr><td>Healthy tree</td><td><strong>4</strong></td><td>¼ speed through dense foliage.</td></tr>
+<tr><td><span class="g" data-t="wall_block">Wall block</span></td><td><strong>hits_to_destroy + 1</strong></td><td>The troop must destroy the wall to pass through. Cost = the number of hits that specific troop type needs to destroy the block (based on wall HP ÷ troop damage per tick) + 1 for the movement into the cleared grid. A damaged wall is cheaper to path through than a full-HP wall.</td></tr>
+<tr><td>Same-type troop (stackable, stack &lt; 4)</td><td><strong>1</strong></td><td>Can merge with existing stack. No delay.</td></tr>
+<tr><td>Troop (unstackable — different type or full stack)</td><td><strong>∞ (impassable)</strong></td><td>Cannot move through. Must path around.</td></tr>
+<tr><td>Rocks</td><td><strong>∞ (impassable)</strong></td><td>Permanent, indestructible.</td></tr>
+<tr><td>DMZ grids</td><td><strong>∞ (impassable)</strong></td><td>Troops have already crossed the DMZ — they don't path back.</td></tr>
+<tr><td><span class="g" data-t="area_denial">Area denial</span> (fire, holes)</td><td><strong>∞ (impassable)</strong></td><td>Troops cannot walk over ground damage.</td></tr>
+<tr><td><span class="g" data-t="cannon">Cannons</span></td><td><strong>Target — 0</strong></td><td>Cannons are a target (for Heavy, etc). Troop arrives adjacent and attacks.</td></tr>
+<tr><td><span class="g" data-t="castle">Castles</span></td><td><strong>Target — 0</strong></td><td>Primary target. Troop arrives adjacent and attacks.</td></tr>
+<tr><td>Diagonal multiplier</td><td><strong>×1.414</strong></td><td>√2 cost for diagonal movement. Applies on top of the terrain cost.</td></tr>
+</table>
+
+<p><strong>Wall cost example:</strong> An Infantry troop (5 dmg/tick) approaching a wall block at 100 HP needs 100 ÷ 5 = 20 hits. Cost = 20 + 1 = 21. A wall block at 30 HP needs 30 ÷ 5 = 6 hits. Cost = 6 + 1 = 7. The pathfinder naturally routes troops toward damaged walls (lower cost) and away from healthy walls — no special logic needed.</p>
+
+<p><strong>There is always a path.</strong> Because walls have a finite cost (not ∞), the A* algorithm will always find a path to a castle or cannon — the troop just has to destroy walls along the way. The only truly impassable obstacles are rocks, DMZ, area denial, and unstackable troops.</p>
+
+<h4>Re-Evaluation Frequency</h4>
+<p>The goal is <strong>every troop re-evaluates its path every <span class="g" data-t="tick">tick</span></strong>. With the board at 64×48 and A* only searching the friendly zone (~1,500 grids), a single pathfind is fast. However, late-game battles may have 15–20 troops on the ground simultaneously.</p>
+<p><strong>Adaptive batching:</strong> The game attempts all troop pathfinds per tick. If the per-tick pathfinding budget is exceeded (target: 4ms total across all troops), troops are split into rotation groups:</p>
+<p>— <strong>≤8 troops:</strong> All re-evaluate every tick (full responsiveness).</p>
+<p>— <strong>9–16 troops:</strong> Split into 2 groups. Group A re-evaluates on even ticks, Group B on odd ticks.</p>
+<p>— <strong>17–24 troops:</strong> Split into 3 groups. Each group re-evaluates every 3rd tick.</p>
+<p>— <strong>25+ troops:</strong> Split into 4 groups. Each group re-evaluates every 4th tick.</p>
+<p>Between re-evaluations, a troop follows its last computed path. The batching simulates <strong>command confusion</strong> — more troops means slower coordination. This is a feature, not a compromise: large troop swarms should feel chaotic and slightly uncoordinated.</p>
+<p><strong>Group assignment is deterministic:</strong> troops are assigned to groups by spawn order (troop 0 = group 0, troop 1 = group 1, etc., wrapping). This ensures identical replay behavior.</p>
+
+<h4>Deadlock Fallback (No Path Available)</h4>
+<p>If A* returns no path (e.g., troop is completely boxed in by rocks, area denial, and unstackable troops on all sides), the troop uses a <strong>greedy 8-grid fallback</strong>:</p>
+<p><strong>Step 1:</strong> Find the 8 neighboring grids (including diagonals). Pick the <strong>passable grid closest to the target</strong> (straight-line / as the crow flies).</p>
+<p><strong>Step 2:</strong> If that grid is blocked by another troop of the <strong>same type</strong>, treat it as temporarily passable — that troop will likely move on its own tick, clearing the grid. Move toward it (the troops coordinate implicitly because same-type troops move at the same speed and typically have similar targets).</p>
+<p><strong>Step 3:</strong> If the best grid is blocked by a <strong>different-type troop</strong> (truly impassable), try the next-closest grid among the 8 neighbors.</p>
+<p><strong>Step 4:</strong> If ALL 8 neighbors are truly impassable (surrounded by rocks, AoD, and different-type troops on all sides), the troop <strong>does not move</strong>. It waits until a grid is cleared (troop moves away, AoD cycles out, wall is destroyed by another troop). The troop re-evaluates every tick (or on its batch tick) and will resume movement as soon as any neighbor becomes passable.</p>
+</div>
+
+<h3>Bomber Targeting</h3>
+<p><a href="#bombers">Bombers</a> fly over walls and target castles only. They do not use A* — they fly in a straight line toward their assigned castle with ±1 grid <span class="g" data-t="crazy_ivan">Crazy Ivan</span> deviation. Never-enclosed (grey) castles are ignored. If all castles are grey: fallback to cannons, then walls. See <a href="#bombers">Aircraft Carrier &amp; Bomber Mechanics</a> for full bomber behavior.</p>
+
+<p><strong>Troops adjacent to a cannon:</strong> While troops deal damage to a cannon, the cannon's shots cause <strong>3 HP damage per shot</strong> to all adjacent troops — the cannon's blast and recoil hurt nearby ground units. This makes cannon-adjacent troops take attrition even without direct player targeting. A stack of 4 infantry (125 effective HP) adjacent to a cannon firing every 4 ticks dies from recoil alone in ~167 ticks (83 seconds) — slow but meaningful in long boss fights.</p>
+<p><strong>Uniform damage:</strong> Troops deal the <strong>same damage per tick to all structure types</strong> — walls, cannons, and castles. The damage values in the <a href="#stats">Troop Types table</a> apply regardless of target. The TTK differences come from structure HP: walls (100 HP) fall faster than cannons (150 HP) which fall faster than castles (500 HP).</p>
+
+<h3>Friendly Fire &amp; Collateral Damage</h3>
+<div class="s">
+<div class="ct">Introduced at Campaign 11 (First BC Combo) — Not Before</div>
+<p><strong><span class="g" data-t="friendly_fire">Friendly fire</span> is OFF in Campaigns 1–10.</strong> It is introduced at Campaign 11 (the first BC layer combo — advanced enemies + hard pieces). During the 3-2-1-FIGHT transition for every battle in Campaign 11+, a message appears overlaid on the transition: <strong>"Watch out for friendly fire, [Commander Name]."</strong> The 2.5–3.0 second transition is long enough for this message to be read.</p>
+<p><strong>Targeting tutorial prompt (Campaigns 1–2):</strong> During the first Fight phase of Campaign 1 and Campaign 2 battles, a pulsing prompt appears after the first enemy ship reaches firing range: <strong>"Tap a ship to focus fire!"</strong> The prompt disappears after the player taps any ship (or after 5 seconds). This teaches the targeting mechanic even when <span class="g" data-t="auto_fire">auto-fire</span> would suffice — the player learns that targeting is faster than <span class="g" data-t="auto_fire">auto-fire</span>, a skill that becomes essential in later campaigns.</p>
+<p><strong>Enemy ships firing over own troops:</strong> Ship shots <strong>arc over troops</strong> — they do NOT pass through troop clusters. Ships target walls and structures behind their own troops without hitting them. <strong>However, area-of-effect damage IS an exception.</strong> If a ship's shot has an area of effect (e.g., Mortar Ship splash damage) that overlaps friendly troop positions, those troops WILL take damage. Similarly, if a <a href="#bombers">bomber's</a> attack hits its own troops, those troops take damage. The player can exploit this — positioning walls to force enemy bombers and AoE ships to damage their own troops is a valid tactical strategy.</p>
+<p><strong>Player cannon collateral:</strong> Cannon shots that land on a <strong>wall block, another cannon, or a castle</strong> cause <strong>½ damage</strong> to those friendly structures. A cannon does NOT damage itself. Shooting enemy troops stacked against your wall damages both — an intentional tactical tradeoff.</p>
+<p><strong>Strategic implication:</strong> A skilled player could deliberately shoot their own walls to create a planned breach — a legitimate (if desperate) tactic.</p>
+</div>
+
+<h3>Area Denial &amp; Ground Damage</h3>
+<div class="s">
+<div class="ct">Ground Damage Visuals &amp; Behavior</div>
+<p>Fire Ships, Siege Ships, and Bombers leave <strong>area denial effects</strong> on the map: burn zones, craters, rubble. These block both wall placement AND cannon placement. Key rules:</p>
+<p><strong>Carry-over damage:</strong> If ground damage persists into the next Build phase, the damaged grids show as <strong>holes</strong> (dark pit visual) or <strong>holes with fire</strong> (if from fire-based attacks). Interior holes look like breaches in the floor. All carry-over damage is impassable (troops, enemies cannot cross). Damage that does NOT carry over is <strong>cleared during Build Step 1</strong> (the cleanup wipe) along with <span class="g" data-t="spackle">spackle</span> removal and wall repair.</p>
+<p><strong>Troop blocking:</strong> Troops <strong>cannot walk over ground damage</strong> — not in the current Fight phase, and not in the next Fight phase if the damage persists. Area denial affects both sides: it blocks the player's building AND blocks enemy troop pathing.</p>
+<p><strong>Enemy rock collision:</strong> Enemies (ships and troops) <strong>cannot travel over rocks</strong>. Rocks are impassable terrain for everyone. This makes rock placement on the base map a strategic element — rocks near spawn points funnel enemies into kill zones.</p>
+</div>
+
+<h3>Ships Targeting Castles</h3>
+<p><strong>Ships can damage castles directly.</strong> While most ship fire targets walls (their goal is to breach the perimeter), ships WILL target exposed castles — particularly if the enclosure has already been breached. Castle damage from ships follows the same HP system as wall damage. This makes wall integrity even more critical: a breached perimeter exposes castles to direct naval bombardment.</p>
+
+<h3>Boss Retreat Behavior</h3>
+<p>When a <strong>Mystarch boss</strong> is attacking a castle and takes cannon fire, it will <strong>attempt to retreat</strong> to avoid continued attack. The boss moves away from the cannon that hit it, seeking a position outside that cannon's effective range while maintaining proximity to its target castle. If multiple cannons hit the boss, it retreats toward the direction with the least cannon coverage. The retreat is not permanent — after 4–6 ticks (2–3 seconds) without taking fire, the boss resumes its attack approach. This creates a push-pull dynamic: concentrated cannon fire drives the boss back, but the player must sustain pressure or the boss returns. Spread cannons across multiple positions to keep the boss permanently suppressed, or focus fire from one direction to create a predictable retreat path.</p>
+
+</section></div>
+</div>
+<div class="arch-entry" id="arch-win">
+  <h2 class="src">Victory &amp; Defeat <span class="ln">(lines 1731–1749)</span></h2>
+  <span class="badge owned">Owned by · Victory §2</span>
+  <div class="arch-note">Extracted; enclosure-as-sole-win (plus the boss-finale HP-0 exception) and the unwinnable-only defeat rule are owned by <strong>Victory §2</strong>.</div>
+  <div class="arch-orig"><section class="p-fight">
+<h2>Victory &amp; Defeat</h2>
+
+<h3>Victory Condition</h3>
+<p>The player wins a battle when <strong>all required castles are enclosed</strong> at the end of any Build phase (including the <span class="g" data-t="last_stand">Last Stand</span>). That's it. Enclosure is the sole win condition.</p>
+<p><strong>Ships do NOT need to be destroyed for victory.</strong> Surviving ships remain as ongoing threats — they damage walls, land troops, and pressure the player's defenses — but the battle ends in victory the moment the enclosure requirement is met at the end of a Build phase. The <a href="#stars" style="color:var(--link)">star system</a> rewards ship destruction as one of three performance levers, driving the player to clear the battlefield even though it isn't strictly required.</p>
+<p><strong>Boss Finale:</strong> The boss's HP must reach 0 AND all required castles must be enclosed. This is the only battle type where killing a specific enemy is required for victory.</p>
+
+<h3><span class="g" data-t="last_stand">Last Stand</span> Build Phase</h3>
+<p>After the final sortie's Fight phase, the game gives the player one additional Build phase — the "Last Stand." This is their final opportunity to enclose castles and repair walls. There is no Deploy or Fight after this. The Last Stand timer = <strong>100% of remaining Fight time from the final sortie</strong> (shown throughout the battle as "Earned: +XX sec"). The player can also spend <span class="g" data-t="stonwryt">Stonwryts</span> on <a href="#stonwryt" style="color:var(--link)"><span class="g" data-t="alter_time">Alter Time</span></a> to extend the Last Stand by up to 30 seconds. <strong>Unused Last Stand time does NOT contribute to star ratings.</strong> The player should use every second to enclose more territory — improving the Area Enclosed star lever — rather than receiving it as a passive bonus.</p>
+<p><strong>Short circuit:</strong> If all required castles are already enclosed when the <span class="g" data-t="last_stand">Last Stand</span> begins, the timer is skipped — <strong>instant victory</strong>. The earned time wasn't needed.</p>
+
+<h3>Defeat Conditions</h3>
+<p>The game ends in defeat <strong>as soon as the player reaches an unwinnable state</strong>. The game does not force the player to play out a lost cause:</p>
+<p><strong>Enclosure failure:</strong> Required castles are not enclosed at the end of any Build phase (including Last Stand). The game ends immediately — no Deploy or Fight.</p>
+<p><strong>Castle destruction:</strong> A castle's degradation counter reaches 3/3, the castle is destroyed, and remaining castles drop below the required count. Immediate defeat.</p>
+<p><strong>Ships remaining after final Fight:</strong> Ships remaining is NOT a defeat condition (ships don't need to be destroyed for victory). However, surviving ships continue to damage walls and land troops, making the Last Stand Build phase harder. The battle proceeds to the Last Stand regardless of ship count.</p>
+<p><strong>Boss timeout:</strong> In Boss Finale battles — all sorties completed, boss still alive. Immediate defeat.</p>
+<p><strong>Mid-Build detection:</strong> If during the Build phase, it becomes mathematically impossible to enclose the required castles (e.g., a castle was just destroyed and the remaining castle count is below the requirement), the Build phase ends immediately in defeat. The player is not forced to waste time building walls around a lost cause.</p>
+<p>There is no "health bar" for the player. The walls ARE the health bar. As long as you can enclose castles and sorties remain, you're in the fight.</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-stars">
+  <h2 class="src">Star System — Three-Lever Averaging <span class="ln">(lines 2388–2432)</span></h2>
+  <span class="badge owned">Owned by · Victory §2</span>
+  <div class="arch-note">Extracted; the three-lever average (rounded up) and the hidden &#9733;&#9733;&#9733;! are owned by <strong>Victory §2</strong>. The per-lever threshold tables, the adaptive-tuning rule, and the 0&#9733; easter egg have been <strong>migrated into <a href="Rivenkeep_Victory.html" style="color:var(--link)">Victory §2</a></strong> — canonical there. This block is the historical GDD original.</div>
+  <div class="arch-orig"><section class="p-prog">
+<h2>Star System — Three-Lever Averaging</h2>
+<p>Every battle awards a <span class="g" data-t="star">star</span> rating based on performance across <strong>three independent levers</strong>: Ships Destroyed, Cannon Health, and Area Enclosed. Each lever earns 1–3 stars independently. The final star rating = <strong>average of the three levers, rounded up</strong>. ★★★! is a hidden bonus that requires exceptional performance across all three.</p>
+
+<h3>Lever 1: Ships Destroyed</h3>
+<table>
+<tr><th>Rating</th><th>Criteria</th></tr>
+<tr><td>★</td><td>Destroyed <strong>any</strong> ships (at least 1)</td></tr>
+<tr><td>★★</td><td>Destroyed <strong>60%+</strong> of total ships</td></tr>
+<tr><td>★★★</td><td>Destroyed <strong>90%+</strong> of total ships</td></tr>
+<tr><td>★★★!</td><td>Destroyed <strong>100%</strong> of all ships</td></tr>
+</table>
+
+<h3>Lever 2: Cannon Health</h3>
+<table>
+<tr><th>Rating</th><th>Criteria</th></tr>
+<tr><td>★</td><td><strong>1+ cannon</strong> survives the battle</td></tr>
+<tr><td>★★</td><td><strong>Majority</strong> (>50%) of cannons survive</td></tr>
+<tr><td>★★★</td><td><strong>All cannons</strong> survive with average HP <strong>≥100%</strong></td></tr>
+<tr><td>★★★!</td><td><strong>All cannons</strong> survive with average HP <strong>≥125%</strong></td></tr>
+</table>
+
+<h3>Lever 3: Area Enclosed</h3>
+<table>
+<tr><th>Rating</th><th>Criteria</th></tr>
+<tr><td>★</td><td><strong>Any</strong> open space enclosed (minimum victory)</td></tr>
+<tr><td>★★</td><td><strong>35%+</strong> of friendly-zone open space enclosed</td></tr>
+<tr><td>★★★</td><td><strong>50%+</strong> of friendly-zone open space enclosed</td></tr>
+<tr><td>★★★!</td><td><strong>85%+</strong> of friendly-zone open space enclosed</td></tr>
+</table>
+
+<h3>Final Rating Calculation</h3>
+<p><strong>Average the three levers, round up.</strong> Example: Ships = ★ (1), Cannons = ★★ (2), Enclosure = ★★★ (3) → average = 2.0 → final = ★★. Another example: Ships = ★★ (2), Cannons = ★★★ (3), Enclosure = ★★ (2) → average = 2.33 → rounds up to ★★★.</p>
+<p><strong>★★★! requires excellence:</strong> To earn ★★★!, <strong>at least 2 of the 3 levers must be at ★★★!</strong> and the remaining lever must be <strong>at least ★★★</strong>. Simple averaging cannot reach ★★★! — it demands near-perfect performance across the board.</p>
+<p><strong>★★★! is hidden.</strong> It does not appear in any UI as a goal. When earned, it is a surprise reward — the exclamation mark flies in with a special animation. The player cannot predict or target it because the ! thresholds are not shown.</p>
+<p><strong>Frequency target:</strong> A skilled player should earn ★★★! roughly <strong>once every 15–20 battles</strong>. Server-tuned thresholds target this frequency.</p>
+
+<h3>0★ — The Pacifist Easter Egg</h3>
+<p>It is possible to earn <strong>0 stars</strong>. If the player kills no ships AND no cannons survive, but the minimum enclosure requirement is met (castles enclosed = victory), the result is 0★. The <strong>first and only time</strong> a player achieves 0★ in each campaign, they earn a Stonwryt bonus: <strong>10 Stonwryts per campaign level</strong>. Campaign 1 = 10 Stonwryts (trivially easy). Campaign 32 = 320 Stonwryts (extremely difficult to survive without killing anything or losing all cannons). This is an undocumented easter egg — no hint in the UI. Players discover it organically or through community sharing. The reward only triggers once per campaign — replaying for 0★ yields nothing.</p>
+
+<h3>Star Display During Gameplay</h3>
+<p>The <strong>info panel</strong> at the top of the screen shows the current projected star rating for each lever in real-time. Three small star indicators update as the battle progresses. <strong>Long-press on any star</strong> opens a graph overlay showing what the player needs to achieve for each star level in that category. The ! threshold is NOT shown — it remains hidden.</p>
+
+<h3>Adaptive Star Thresholds</h3>
+<p>Star thresholds are not permanently fixed. <strong>Server-side analytics</strong> track completion rates per battle for each of the three levers independently. If a lever's 3-star rate is too high (>40% of players), its threshold tightens. If the 1-star rate is too low, it loosens. Changes are gradual. Offline play uses the last-fetched thresholds.</p>
+<p><strong>Last Stand time does NOT contribute to stars.</strong> The player should use that time to enclose more territory (improving the Area Enclosed lever) rather than receiving it as a passive bonus.</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-starearn">
+  <h2 class="src">Star Earning Examples &amp; Battle Score <span class="ln">(lines 2435–2441)</span></h2>
+  <span class="badge owned">Owned by · Victory §2</span>
+  <div class="arch-note">Extracted; <strong>Battle Score = ships% + area% + cannon%</strong> (max 400) is owned by <strong>Victory §2</strong>. The worked star-averaging examples have been <strong>migrated into <a href="Rivenkeep_Victory.html" style="color:var(--link)">Victory §2</a></strong>. This block is the historical GDD original.</div>
+  <div class="arch-orig"><section class="p-prog">
+<h2>Star Earning Examples &amp; <span class="g" data-t="battle_score">Battle Score</span></h2>
+<p>A player who focuses on ship killing but neglects their cannons and barely encloses: Ships ★★★ (3) + Cannons ★ (1) + Enclosure ★ (1) = avg 1.67 → ★★. A player who builds a massive enclosed fortress but ignores ships: Ships ★ (1) + Cannons ★★★ (3) + Enclosure ★★★ (3) = avg 2.33 → ★★★. The system rewards balanced play without punishing specialization — any two levers at ★★★ guarantees ★★★ overall regardless of the third.</p>
+
+<h3 id="battle-score">Battle Score — The Raw Performance Number</h3>
+<p>The <strong><span class="g" data-t="battle_score">Battle Score</span></strong> is the unrounded sum of the three star lever percentages:</p>
+<p><strong>Battle Score = ships_destroyed_% + area_enclosed_% + avg_cannon_health_%</strong></p>
+<p>Example: 80% ships + 45% area + 110% cannons = <strong>235</strong>. Maximum per battle = 100 + 100 + 200 = <strong>400</strong>. <span class="g" data-t="battle_score">Battle Score</span> is the universal performance metric used for <a href="#leaderboard" style="color:var(--link)">leaderboard ranking</a>, <a href="#race" style="color:var(--link)"><span class="g" data-t="weekend_race">Weekend Race</span></a> movement, and server-side analytics. Unlike the rounded star rating (which collapses detail into 0–3★), <span class="g" data-t="battle_score">Battle Score</span> preserves the full resolution of the player's performance. Two players with identical ★★★ ratings may have <span class="g" data-t="battle_score">Battle Score</span>s of 287 vs 312 — the leaderboard knows who played better.</p>
+</section></div>
+</div>
+<div class="sec-head"><h2>Superseded — replaced by a newer model</h2><p>Content removed from the GDD because a later design replaced it — kept as a historical tuning seed, not current truth.</p></div>
+<div class="arch-entry" id="arch-unitstats">
+  <h2 class="src">Unit &amp; Structure Statistics — cannon / ship / boss tables <span class="ln">(GDD stats section; removed v6.5.0)</span></h2>
+  <span class="badge out">Obsolete · superseded roster / lineup</span>
+  <div class="arch-note">Removed from the GDD in v6.5.0. The per-cannon table (Scatter Shot, Long Cannon, Chain Shot, Lightning, Doom, Mirror, Mortar, Healing) is the <strong>pre-pair-down cannon list</strong> — the lineup is now 8 archetypes &times; 3 domains with a Coordination stat (<a href="Rivenkeep_Cannons_Towers.html" style="color:var(--link)">Cannon &amp; Tower</a>) and Chain Shot was cut, so these fixed range / damage / eDPS values no longer map. The ship + boss tables are the <strong>old flat roster</strong>, superseded by lineage &times; axis (<a href="Rivenkeep_Ships.html" style="color:var(--link)">Ships</a>). The <strong>Balance Relationships</strong> prose and the <strong>Lightning / Chain</strong> balance questions depend on those obsolete units. <strong>&#9888; Tuning seed only</strong> — re-derive against the new roster in the numbers pass; do not treat these values as current. <em>(The two early-game <strong>flow</strong> watch-items at the end of this block — thin early Deploy, early Fight passivity — are NOT obsolete and were retained live in the GDD stats section; the base-unit framework was also retained there.)</em></div>
+  <div class="arch-orig"><section class="p-fight">
+<h2>Unit &amp; Structure Statistics — Balance Framework <span class="ln" style="color:var(--warn)">[obsolete tables — seed only]</span></h2>
+<h3>Cannon Types — Absolute Values</h3>
+<table style="font-size:.72rem">
+<tr><th>Cannon</th><th>Range (grids)</th><th>Damage</th><th>Reload (ticks)</th><th>Accuracy</th><th><span class="g" data-t="edps">eDPS</span></th><th>Special</th><th>Role</th><th>Unlock</th></tr>
+<tr><td><strong>Standard</strong></td><td>12</td><td>25</td><td>4</td><td>85%</td><td>5.3</td><td>—</td><td>Reliable all-rounder. Never wrong to place.</td><td>Campaign 1</td></tr>
+<tr><td><strong>Scatter Shot</strong></td><td>8</td><td>15 ×3</td><td>5</td><td>70%</td><td>6.3</td><td>3 projectiles in cone spread. Each can hit different targets.</td><td>Anti-group. Devastating vs clustered fleet. Weak vs single tough targets.</td><td>15★</td></tr>
+<tr><td><strong>Long Cannon</strong></td><td>22</td><td>30</td><td>6</td><td>80%</td><td>4.0</td><td>Extreme range. Can fire before ships are in Warship range.</td><td>Sniper. Kills threats others can't reach. Essential in large maps.</td><td>30★</td></tr>
+<tr><td><strong>Fire Cannon</strong></td><td>10</td><td>20</td><td>5</td><td>85%</td><td>3.4</td><td>Impact leaves 1×1 burn zone lasting 1 sortie. Blocks building AND troop movement.</td><td>Area denial. Damage is secondary — the burn zones shape the battlefield.</td><td>50★</td></tr>
+<tr><td><strong>Mortar</strong></td><td>18</td><td>40</td><td>8</td><td>55%</td><td>2.8</td><td>Arcing shot ignores walls/terrain. Hits targets behind cover.</td><td>Counter to Mortar Ships and Artillery Barges hiding behind rocks. High risk/reward.</td><td>75★</td></tr>
+<tr><td><strong>Chain Shot</strong></td><td>12</td><td>22</td><td>4</td><td>85%</td><td>4.7–9.2</td><td>On hit, chains to nearest enemy within 3 grids. Max 2 chains (3 targets total). Each chain does <strong>60%</strong> of previous hit.</td><td>Fleet multiplier. Competitive single-target (4.7); devastating against 3+ clustered ships (9.2). <strong>Encounter design determines value</strong> — clustered spawns reward it, spread spawns punish it.</td><td>100★</td></tr>
+<tr><td><strong>Healing Cannon</strong></td><td>8</td><td>0</td><td>3</td><td>100%</td><td>0</td><td>Fires at friendly walls. Restores 15 HP per hit. Cannot target enemies. Always hits.</td><td>Defensive. Keeps walls alive during Fight. Essential for long boss battles.</td><td>130★</td></tr>
+<tr><td><strong>Lightning</strong></td><td>10</td><td>20</td><td>2</td><td>90%</td><td>9.0</td><td>Fastest cannon. Rapid fire. Visible electrical arcs. <strong>Takes 2× damage from all sources</strong> (fragile mechanism).</td><td>Highest single-target DPS but <strong>dies first</strong> when walls breach. Short range (10 grids) forces front-line placement. The definitive glass cannon — devastating DPS at extreme personal risk. Countered by: Torpedo Boats (punch holes near Lightning), Fire Ships (area denial forces repositioning), and any enemy that breaches walls.</td><td>160★</td></tr>
+<tr><td><strong>Mirror Cannon</strong></td><td>14</td><td>25</td><td>4</td><td>85%</td><td>5.3</td><td>Shot bounces off cliffs and crystal formations. Angle = reflection. Max 1 bounce. Full damage after bounce.</td><td>Trick shot specialist. Standard DPS but can hit around corners. Shines in Crystal theater.</td><td>200★</td></tr>
+<tr><td><strong>Doom Cannon</strong></td><td>16</td><td>80</td><td>16</td><td>75%</td><td>3.8</td><td>Massive shot with 2×2 impact area. Screen shake on fire. Everything in impact zone takes full damage.</td><td>Boss-killer. One shot = 80% of a Warship. Low DPS but devastating per-shot. Miss hurts badly.</td><td>250★</td></tr>
+</table>
+<p class="dim"><strong><span class="g" data-t="edps">eDPS</span></strong> = (Damage ÷ Reload ticks) × Accuracy. For Scatter, assumes 1 target hit per projectile. For Chain Shot, range shows single-target (4.7) to 3-target clustered (9.2) with 60% chain decay. Lightning has highest eDPS (9.0) but shortest range — it must be placed near the front line to work, making it vulnerable. Standard (5.3) is the safe middle. Doom (3.8) has lowest eDPS but highest per-shot alpha damage.</p>
+
+<h3>Ship Types — Absolute Values</h3>
+<table style="font-size:.72rem">
+<tr><th>Ship</th><th>Size</th><th>HP</th><th>Speed (grids/tick)</th><th>Damage</th><th>Reload (ticks)</th><th>Accuracy</th><th>eDPS to walls</th><th>Appears</th></tr>
+<tr><td><strong>Warship</strong></td><td>1×2</td><td>100</td><td>0.8</td><td>15</td><td>5</td><td>70%</td><td>2.1</td><td>Cam 1</td></tr>
+<tr><td><strong>Scout</strong></td><td>1×2</td><td>40</td><td>1.5</td><td>8</td><td>8</td><td>55%</td><td>0.6</td><td>Cam 2</td></tr>
+<tr><td><strong>Transport</strong></td><td>1×2</td><td>150</td><td>1.0</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Cam 5</td></tr>
+<tr><td><strong>Fire Ship</strong></td><td>1×2</td><td>35</td><td>1.0</td><td>20 + burn</td><td>6</td><td>75%</td><td>2.5</td><td>Cam 4</td></tr>
+<tr><td><strong>Mortar Ship</strong></td><td>1×2</td><td>120</td><td>0.6</td><td>30</td><td>10</td><td>80%</td><td>2.4</td><td>Cam 9</td></tr>
+<tr><td><strong>Hospital Ship</strong></td><td>2×2</td><td>200</td><td>0.4</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Cam 11</td></tr>
+<tr><td><strong>Carrier</strong></td><td>2×4</td><td>250</td><td>0.3</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Cam 7</td></tr>
+<tr><td><strong>Torpedo Boat</strong></td><td>1×2</td><td>50</td><td>1.4</td><td>50</td><td>20</td><td>90%</td><td>2.3</td><td>Cam 11</td></tr>
+<tr><td><strong>Smoke Ship</strong></td><td>1×2</td><td>80</td><td>0.8</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Cam 14</td></tr>
+<tr><td><strong>Mine Layer</strong></td><td>1×2</td><td>120</td><td>0.5</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Cam 17</td></tr>
+<tr><td><strong>Artillery Barge</strong></td><td>2×2</td><td>200</td><td>0.3</td><td>50</td><td>12</td><td>80%</td><td>3.3</td><td>Cam 23</td></tr>
+<tr><td><strong>Battering Ram</strong></td><td>1×2 troop</td><td>200</td><td>0.6</td><td>40 (walls only)</td><td>3</td><td>100%</td><td>13.3</td><td>Cam 9</td></tr>
+<tr><td><strong>Siege Ship</strong></td><td>2×2 troop</td><td>300</td><td>0.7</td><td>Instant kill 4×4 area</td><td>Kamikaze</td><td>100%</td><td>∞ (once)</td><td>Cam 7</td></tr>
+</table>
+<p class="dim"><strong>Speed:</strong> 0.3 = very slow (Carrier), 0.8 = standard (Warship), 1.5 = fast (Scout). The DMZ is ~12 grids from spawn points, so a Warship reaches the DMZ in 15 ticks (7.5 sec). A Scout reaches it in 8 ticks (4 sec). <strong>Battering Ram</strong> has the highest sustained eDPS (13.3) because it's a troop that walks to walls — the player has the entire approach time to kill it. If it reaches the wall, it's devastating. <strong>Artillery Barge</strong> is the most dangerous ship (3.3 eDPS at extreme range from behind the fleet). <strong>Torpedo Boat</strong> fires one massive shot then waits — scary but predictable.</p>
+
+<h3>Troop Types — Absolute Values</h3>
+<table style="font-size:.72rem">
+<tr><th>Troop</th><th>HP</th><th>Speed (grids/tick)</th><th>Damage per tick</th><th>Target Priority</th><th>Special</th></tr>
+<tr><td><strong>Infantry</strong></td><td>50</td><td>0.5</td><td>5</td><td>Nearest wall → cannon → castle</td><td>Baseline troop. Reliable damage over time.</td></tr>
+<tr><td><strong>Sapper</strong></td><td>30</td><td>0.7</td><td>Instant: 200 (2×2)</td><td>Nearest wall section</td><td>Kamikaze. Detonates on wall contact. Fast, fragile. Kill before arrival.</td></tr>
+<tr><td><strong>Heavy</strong></td><td>120</td><td>0.3</td><td>8</td><td>Cannons → walls → castles</td><td>Tanks cannon fire. Targets cannons first — the player's worst nightmare for invested cannons.</td></tr>
+<tr><td><strong>Bomber (air)</strong></td><td>60</td><td>0.8</td><td>Bomblets: 30 total</td><td>Castles only</td><td>Flies over walls. Drops bomblets that scatter before/after castle. Must return to Carrier to reload (8 ticks). Cannons hit at ½ range.</td></tr>
+<tr><td><strong>Scout Troop</strong></td><td>15</td><td>1.0</td><td>3</td><td>Castles</td><td>Extremely fast, extremely fragile. Floods breaches in groups of 4–6. Overwhelming if walls break.</td></tr>
+<tr><td><strong>Shield Bearer</strong></td><td>150</td><td>0.3</td><td>3</td><td>Nearest wall</td><td>Takes 50% reduced damage from cannons when facing them. Troops directly behind take 0% cannon damage. Kill from the side or behind.</td></tr>
+<tr><td><strong>Medic</strong></td><td>40</td><td>0.5</td><td>0</td><td>Stays behind other troops</td><td>Heals all adjacent troops 3 HP/tick. Cannot heal self. Priority kill target — remove medics first or troops become nearly immortal.</td></tr>
+</table>
+<p class="dim"><strong>TTK (time to kill) by Standard Cannon:</strong> Infantry = 2 shots (4 ticks, 2 sec). Sapper = 2 shots (must kill before wall contact — at 0.7 speed from DMZ, ~17 ticks to arrive, so 2 shots in 8 ticks is comfortable). Heavy = 5 shots (10 ticks, 5 sec — tough). Shield Bearer from front = 12 shots (effectively 300 HP due to 50% resist). Medic = 2 shots but often hidden behind Shield Bearer. <strong>Design intent:</strong> Infantry dies quickly but comes in numbers. Sappers are priority kills. Heavies absorb fire so Sappers/Scout Troops can breach. Shield Bearer + Medic combo is the "puzzle" troop formation — requires flanking or Mortar/Chain tactics.</p>
+
+<h3>Structure HP — Absolute Values</h3>
+<table style="font-size:.72rem">
+<tr><th>Structure</th><th>HP</th><th>TTK by Warship</th><th>TTK by Infantry</th><th>Notes</th></tr>
+<tr><td><strong>Wall Block (1×1)</strong></td><td>100</td><td>~10 shots (18 sec)</td><td>20 ticks (10 sec)</td><td>Removed at &lt;25 HP in Build cleanup. Shows cracks below 75 HP.</td></tr>
+<tr><td><strong>Spackle Block</strong></td><td>100</td><td>~10 shots (18 sec)</td><td>20 ticks (10 sec)</td><td>Same HP as walls. Disappears after Fight phase regardless of HP.</td></tr>
+<tr><td><strong>Castle (3×3)</strong></td><td>500</td><td>varies</td><td>100 ticks (50 sec)</td><td>Damaged by troops, bombers, AND ships (ships target exposed castles after a breach). Takes ~2 full sorties of sustained troop assault to destroy from full HP. 3-segment halo HP display.</td></tr>
+<tr><td><strong>Cannon (2×2)</strong></td><td>150 at 100%</td><td>~14 shots (25 sec)</td><td>30 ticks (15 sec)</td><td>Performance scales linearly with HP modifier. At 200%: 300 effective HP. Destroyed at 0%.</td></tr>
+</table>
+
+<h3>Boss HP &amp; Combat Parameters</h3>
+<div class="s">
+<div class="ct">Balanced for 8–12 Sortie Encounters</div>
+<p>Boss HP is calibrated so that a well-equipped player (6–12 cannons, mix of types) can defeat the boss in 8–10 sorties of sustained fire, accounting for stealth downtime and the need to also handle regular ships.</p>
+<table style="font-size:.72rem">
+<tr><th>Boss</th><th>HP</th><th>Damage/hit</th><th>Reload (ticks)</th><th>Stealth Interval</th><th>Stealth Duration</th><th>Design Notes</th></tr>
+<tr><td><strong>Leviathan</strong></td><td>8,000</td><td>60 (3×3 area)</td><td>8</td><td>Every 20 ticks</td><td>6 ticks</td><td>Heavy damage, frequent stealth. Resurface push damages walls. Mid-tier HP.</td></tr>
+<tr><td><strong>Colossus</strong></td><td>12,000</td><td>45 (2×2 area)</td><td>10</td><td>Every 25 ticks</td><td>8 ticks</td><td>Highest HP. Slow, tanky, methodical. Stationary when throwing = vulnerable window.</td></tr>
+<tr><td><strong>Sandworm</strong></td><td>6,000</td><td>70 (line damage)</td><td>15</td><td>Every 15 ticks</td><td>5 ticks</td><td>Lowest HP but most frequent stealth + highest single-hit damage. Erupts under castles.</td></tr>
+<tr><td><strong>Hydra</strong></td><td>9,000</td><td>20 ×3 heads</td><td>6</td><td>Every 20 ticks</td><td>6 ticks</td><td>Three simultaneous attacks. Each head = 3,000 HP (destroy independently). Fast fire rate.</td></tr>
+<tr><td><strong>Magma Titan</strong></td><td>10,000</td><td>50 (cone, 3-wide)</td><td>8</td><td>Every 22 ticks</td><td>7 ticks</td><td>Leaves lava trail. Takes +50% damage below 50% HP (armor weakening).</td></tr>
+<tr><td><strong>Frost Wyrm</strong></td><td>7,000</td><td>35 (freeze effect)</td><td>6</td><td>Every 18 ticks</td><td>6 ticks</td><td>Freeze = walls can't be repaired next Build. Fast fire rate. Moderate HP. Hit-and-run pattern.</td></tr>
+<tr><td><strong>Storm King</strong></td><td>5,000</td><td>80 (precision)</td><td>10</td><td>Every 16 ticks</td><td>5 ticks</td><td>Lowest HP boss. Highest single-target damage. Targets highest-HP cannon. Cannons at ½ range vs flyer.</td></tr>
+<tr><td><strong>Ancient Treant</strong></td><td>14,000</td><td>25 (roots, bypass walls)</td><td>4</td><td>Every 25 ticks</td><td>8 ticks</td><td>Highest HP in game. Low damage but attacks ignore walls completely. Roots grow through enclosures.</td></tr>
+<tr><td><strong>Plague Herald</strong></td><td>8,000</td><td>15 (DoT cloud, 3×3)</td><td>Continuous</td><td>Every 20 ticks</td><td>6 ticks</td><td>Poison deals 1 HP/tick to all walls in 3×3 radius. Spawns mini-troops. Attrition boss.</td></tr>
+<tr><td><strong>Crystal Lich</strong></td><td>9,000</td><td>40 (beam, bounces)</td><td>8</td><td>Every 20 ticks</td><td>7 ticks</td><td>Beam ricochets off crystals — can hit 2–3 targets. Creates crystal shields that deflect cannon shots.</td></tr>
+</table>
+<p class="dim"><strong>Expected kill time:</strong> With 8 cannons averaging 5.3 eDPS (Standard), focused fire = 42.4 eDPS. At 75% uptime (stealth reduces to ~75%), effective = 31.8 DPS. Leviathan (8,000 HP) dies in 8,000 / 31.8 = 252 ticks = 126 seconds ≈ 2.1 minutes of pure fight time across multiple sorties. With 90-tick fight phases, that's ~3 sorties of focused boss fire — but the player also fights regular ships, so realistic boss kill time is 6–10 sorties. Colossus (12,000 HP) takes ~9–12 sorties. Storm King (5,000 HP) takes 4–6 sorties but is deadly to cannons. These ranges fit the 8–12 sortie boss battle design.</p>
+</div>
+
+<h3>Balance Relationships — Quick Reference</h3>
+<div class="s">
+<div class="ct">How Everything Interacts</div>
+<p><strong>Cannon vs Ship:</strong> Standard Cannon kills Warship in 5 shots (~10 sec). 4 cannons focused-fire kill a Warship in ~2.5 sec. This means a 4-cannon defense can handle 2–3 Warships simultaneously. Late-game fleets of 6–8 ships require 6+ cannons or smart use of Chain/Scatter.</p>
+<p><strong>Ship vs Wall:</strong> A single Warship takes ~18 sec to destroy one wall block. A wall perimeter of 20 blocks survives a single Warship for ~6 minutes — far longer than any Fight phase. But 4 Warships focused on the same wall section break through in ~4.5 seconds. <strong>Concentrated fire is the threat, not individual ships.</strong></p>
+<p><strong>Troop vs Castle:</strong> Infantry deals 5 dmg/tick to castles (500 HP). One infantry trooper takes 100 ticks (50 sec) to destroy a castle alone. But a transport drops troops continuously — 3 infantry on a castle deal 15/tick = 33 seconds to destruction. <strong>Transports must be killed before docking.</strong></p>
+<p><strong>Sapper vs Wall:</strong> A Sapper reaches the wall in ~17 ticks (8.5 sec) from DMZ. A Standard Cannon kills it in ~5 shots (10 sec). <strong>Tight timing — the player must prioritize Sappers immediately or lose a 2×2 section.</strong> This is the designed tension for Sapper encounters.</p>
+<p><strong>Battering Ram vs Wall:</strong> Once a Ram reaches the wall, it deals 40 dmg every 3 ticks (100% accuracy). A wall block dies in 8 ticks (4 sec). A Ram chews through a wall section alarmingly fast. But the Ram has 200 HP and moves at 0.6 speed — the player has time to kill it during approach (8 Standard Cannon shots = 16 ticks during a ~20 tick approach).</p>
+</div>
+
+<h3>Open Balance &amp; Flow Questions — Resolve in Playtest</h3>
+<div class="s" style="border-left-color:var(--warn)">
+<div class="ct">Known Unknowns — Decide With Real Combat Data, Not on Paper</div>
+<p>These four items survive on-paper analysis and can only be settled with a working prototype. They are tracked here (not as design flaws) so the balance pass has them in one place. Instrument the analytics events listed under <a href="#production" style="color:var(--link)">Backend Architecture</a> before tuning — without per-cannon and per-battle data, none of these can be answered.</p>
+<p><strong>Balance — Lightning Cannon dominance:</strong> Lightning's 9.0 <span class="g" data-t="edps">eDPS</span> is ~70% above Standard's 5.3, and its short 10-grid range puts it <em>closer</em> to the action rather than further (so range-based counters don't naturally apply). The per-type deployment limit helps, but a Lightning + Standard mix may still beat pure Standard. <strong>Resolution path:</strong> log per-cannon-type win contribution across ~100 prototype battles. If Lightning appears in &gt;60% of winning loadouts, raise its unlock cost, lower its eDPS toward ~7.0, or design Crystal/Fog encounters where its short range is a genuine liability.</p>
+<p><strong>Balance — Chain Shot variance:</strong> Chain Shot swings from ~4.7 eDPS single-target to ~9.2 against 3+ clustered ships — it is either the worst or best cannon with little middle ground, gated entirely on the player's ability to bait clusters. <strong>Resolution path:</strong> either add a minimum-targets floor so it always hits ≥2 (narrowing the range), or accept the variance as skill expression and ensure onboarding teaches clustering. Decide before ship — do not leave it unresolved.</p>
+<p><strong>Flow — early-game Deploy is thin:</strong> In Campaign 1 the player places ~2 cannons in a 12-second Deploy — barely an interaction until 4+ cannons and multiple types exist (Campaign 8+). Cannon persistence and the move bonus give it <em>some</em> texture. <strong>Watch:</strong> if early Deploy feels like dead air, front-load a second cannon-type unlock or add a brief "reposition for bonus" prompt in Campaigns 1–3.</p>
+<p><strong>Flow — early-game Fight passivity:</strong> With 2 auto-firing cannons against 2–3 slow ships, early Fights can feel like watching, not playing. The Build puzzle is the real early hook. <strong>Watch:</strong> if early Fights feel passive, introduce one Sapper (a priority kill demanding directed fire) a campaign earlier, or tighten the early Fight timer so auto-fire alone isn't quite enough.</p>
+</div>
+
+
+</section></div>
+</div>
+<div class="sec-head"><h2>Surgical removals from kept sections</h2><p>Designed-out targeting/control content the module docs replaced; the surrounding section stayed in the GDD.</p></div>
+<div class="arch-entry" id="arch-s_controls">
+  <h2 class="src">Controls — one-/two-finger para <span class="ln">(line 785)</span></h2>
+  <span class="badge out">Designed out · Cannon §5–§6</span>
+  <div class="arch-note">Old control paragraph from the Controls section. The two-finger split-target and touch-to-target inputs are retired; the Fight is now auto-fire + the three verbs. Replaced in-place with a verb-model paragraph.</div>
+  <div class="arch-orig"><section class="p-build">
+<p>Every interaction in the game — piece placement, rotation, <span class="g" data-t="cannon">cannon</span> targeting — is designed for <strong>one finger</strong>. The player never needs two hands or two fingers simultaneously, with one exception: during the Fight phase, the player can use <strong>up to two fingers</strong> to target two different areas simultaneously.</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-s_flow">
+  <h2 class="src">Balance flow-note — “directed fire” <span class="ln">(line 1725)</span></h2>
+  <span class="badge out">Designed out</span>
+  <div class="arch-note">A balance flow-note (in the stats section) that referenced “directed fire.” Reworded in-place — the response to a priority kill is now re-tasking a group’s Area of Responsibility / fire-control.</div>
+  <div class="arch-orig"><section class="p-fight">
+<p><strong>Flow — early-game Fight passivity:</strong> With 2 auto-firing cannons against 2–3 slow ships, early Fights can feel like watching, not playing. The Build puzzle is the real early hook. <strong>Watch:</strong> if early Fights feel passive, introduce one Sapper (a priority kill demanding directed fire) a campaign earlier, or tighten the early Fight timer so auto-fire alone isn't quite enough.</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-s_camera">
+  <h2 class="src">Mobile UX — camera-controls-during-Fight para <span class="ln">(line 3520)</span></h2>
+  <span class="badge out">Designed out</span>
+  <div class="arch-note">The “Camera controls during Fight” paragraph described the old touch-to-target scheme (touch-and-hold targets, 1–2 finger targeting, range circles). Rewritten in-place: pan/zoom unchanged; touch-and-hold now <em>issues a Fight verb</em>.</div>
+  <div class="arch-orig"><section class="p-exp">
+<p><strong>Camera controls during Fight:</strong> Pan and zoom work the same as Build and Deploy. Pinch to zoom, drag to pan. One-finger <strong>touch-and-hold</strong> (200ms+) triggers targeting instead of pan. Two-finger pinch zooms. Quick drag = pan, deliberate hold = target. <strong>Camera button</strong> in corner (screenshot — restarts countdown). <strong>X button</strong> (pause/exit). 1–2 finger targeting on the map. Range circles appear while touching. Cannon HP bars visible above each cannon (green/yellow/red + light green overlay for bonus). Enemy HP bars. Sortie progress bar. Tick counter.</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-s_tutorial">
+  <h2 class="src">Tutorial — “how to target ships” video <span class="ln">(line 3415)</span></h2>
+  <span class="badge out">Designed out</span>
+  <div class="arch-note">The tutorial’s third video taught “how to target ships” (tap / hold, two-finger split, auto-vs-player targeting). Replaced in-place with the auto-fire + three-verbs tutorial.</div>
+  <div class="arch-orig"><section class="p-exp">
+<p>A third video plays, showing <strong>how to target ships</strong>: tapping a ship to focus fire, watching cannons retarget, seeing range circles appear. The video shows the difference between auto-fire (nearest enemy) and player targeting (specific enemy).</p>
+</section></div>
+</div>
+<div class="arch-entry" id="arch-s_stonwryt">
+  <h2 class="src">Stonwryt spending — “Focus Fire” option <span class="ln">(line 2771)</span></h2>
+  <span class="badge out">Designed out · Cannon §6</span>
+  <div class="arch-note">A Stonwryt (currency) spending option that bought <strong>5 seconds of all-cannon focus-fire</strong>. There is no manual focus-fire in the new model, so the purchase is gone.</div>
+  <div class="arch-orig"><table class="battle-table"><tbody>
+<tr><td>Fight</td><td>Focus Fire</td><td>52</td><td>All cannons target one specific ship for 5 seconds</td><td>Max 2 per Fight</td></tr>
+</tbody></table></div>
+</div>
+<div class="arch-entry" id="arch-s_audio">
+  <h2 class="src">Audio design — targeting-input cues (×3) <span class="ln">(lines 3742–3744)</span></h2>
+  <span class="badge out">Designed out</span>
+  <div class="arch-note">Three audio-design rows for the retired targeting inputs (touch-to-target, tap-to-prioritize, two-finger split). The countdown and cannon-fire audio rows around them were kept.</div>
+  <div class="arch-orig"><table class="battle-table"><tbody>
+<tr><td>Touch-to-target (hold)</td><td>Soft radar "ping" + range circle hum</td><td>Light sustained vibration</td></tr>
+<tr><td>Tap-to-prioritize</td><td>Sharp "lock on" beep</td><td>Crisp double-tap</td></tr>
+<tr><td>Two-finger split target</td><td>Double ping (stereo left/right)</td><td>Two simultaneous taps</td></tr>
+</tbody></table></div>
+</div>
+<div class="arch-entry" id="arch-s_gloss_def">
+  <h2 class="src">Reference Glossary — deleted / redefined terms <span class="ln">(lines 4614, 4615, 4618, 4663, 4664)</span></h2>
+  <span class="badge out">Designed out / redefined</span>
+  <div class="arch-note">Glossary source. <strong>auto_fire</strong> &amp; <strong>hold_fire</strong> were <em>redefined</em> (terms kept, new meanings in the GDD); <strong>directed_fire</strong> &amp; <strong>touch_lock</strong> were <em>deleted</em>; <strong>crazy_ivan</strong> was reworded (the concept survives as a Ships trait). The old definitions are shown below.</div>
+  <div class="vlabel">verbatim source</div>
+  <pre class="arch-src">  auto_fire: {term:'&lt;span class="g" data-t="auto_fire"&gt;Auto-Fire&lt;/span&gt;', def:'Default cannon targeting when the player is NOT touching the screen. Each cannon independently targets the nearest enemy in range. -15% accuracy penalty vs &lt;span class="g" data-t="directed_fire"&gt;directed fire&lt;/span&gt;. Ensures defenses are never idle.'},
+  directed_fire: {term:'&lt;span class="g" data-t="directed_fire"&gt;Directed Fire&lt;/span&gt;', def:'Player touch-and-hold on the map. All cannons in range concentrate fire on the touch point. Full accuracy. Can drag to track moving targets. Two-finger split targeting creates two simultaneous focus points.'},
+  crazy_ivan: {term:'Crazy Ivan', def:'Random evasive maneuver by enemy ships. A sudden direction change that causes cannon shots to miss. Creates aiming uncertainty even with &lt;span class="g" data-t="directed_fire"&gt;directed fire&lt;/span&gt;. Named after the submarine tactic from "The Hunt for Red October."'},
+  hold_fire: {term:'Hold-Fire', def:'Firing mode where the player touches and holds a point on the map. All cannons in range concentrate fire there. An accuracy circle around the finger shows shot spread — tighter at close range, wider at distance.'},
+  touch_lock: {term:'Touch-Lock', def:'Firing mode where the player taps an enemy ship to lock onto it for 5 seconds. Crosshair fades from bright to nothing. Up to 2 simultaneous locks. Third tap removes the first lock (cycling).'},</pre>
+</div>
+<div class="arch-entry" id="arch-s_gloss_idx">
+  <h2 class="src">Reference Glossary — dangling index entries <span class="ln">(lines 4715, 4731, 4741)</span></h2>
+  <span class="badge out">Designed out</span>
+  <div class="arch-note">The glossary’s category-list and section-reference entries that still pointed at the deleted <code>directed_fire</code> / <code>touch_lock</code> terms — removed so the tap-to-expand glossary has no dangling lookups.</div>
+  <div class="vlabel">verbatim source</div>
+  <pre class="arch-src">  'Fight Phase': ['tick','auto_fire','hold_fire','touch_lock','directed_fire','last_garrison','friendly_fire','crazy_ivan','area_denial','dmz_advance'],
+  tick:'fight', auto_fire:'fight', directed_fire:'fight', last_garrison:'fight',
+  hold_fire:'fight', touch_lock:'fight', battering_ram:'fight',</pre>
+</div>
+<div class="arch-entry" id="arch-deploy-tray">
+  <h2 class="src">Deploy Tray Layout + Cannon Carousel <span class="ln">(from the GDD Controls section, cut in the v6.6.0 Build extraction)</span></h2>
+  <span class="badge out">Awaiting a home</span>
+  <div class="arch-note">Cut from the GDD's Controls/tray section during the v6.6.0 Build-phase extraction. This is <strong>Deploy</strong> content (the cannon carousel), not Build, so it did not move to <a href="Rivenkeep_Build.html" style="color:var(--link)">the Build doc</a> &mdash; it is <em>not designed out</em>, it simply awaits a Deploy-phase module home (Deploy has no owning doc yet). The Build Tray Layout that sat beside it is now in <a href="Rivenkeep_Build.html" style="color:var(--link)">Build &sect;8</a>.</div>
+  <div class="vlabel">verbatim source</div>
+  <div class="arch-orig">
+<h4>Deploy Tray Layout</h4>
+<p>During Deploy, the tray is a <strong>completely different layout</strong> — the wall piece zones are gone. The entire tray is the cannon carousel.</p>
+<div class="cg">
+<div class="cd"><div class="ct2">🗑️ Cannon Trash (Far Left for RH / Far Right for LH)</div><div class="cb">A trash bin for cannons. The player can trash a cannon by <strong>selecting it on the board and then tapping the trash bin</strong>, or by <strong>dragging it to the trash</strong>. <strong>Trashed cannons:</strong> the freed slot <strong>reappears in the next sortie's Deploy phase</strong>. Trashing is a deliberate strategic choice — the player recovers the slot.
+<br><br><strong>Destroyed cannons</strong> (reduced to 0% HP during Fight) are <strong>gone for this entire battle</strong>. The slot does NOT reopen in subsequent sorties. This is the consequence of failing to protect a cannon — the loss is permanent for the battle. This makes cannon protection emotionally meaningful: a destroyed cannon is worse than a trashed one.
+<br><br><strong>Tap the trash</strong> to open it — reveals all trashed cannons with their HP bars visible. The player can <strong>drag or tap-select a trashed cannon</strong> to recover it back onto the board (same as selecting from the new cannon carousel). Tap the trash again to close it.
+<br><br><strong>Invalid-position cannons</strong> (e.g., ground destroyed beneath them) show a <strong>red block with X</strong> on the invalid grids at the start of Deploy. They are NOT automatically moved to the trash — the player can move them to valid ground during Deploy. If they are still on invalid ground when <strong>Deploy ends</strong>, they are <strong>destroyed</strong> (not trashed — the slot is lost for this battle). The trash bin is <strong>only for player-initiated trashing</strong>.
+<br><br><strong>New cannons</strong> (first-sortie) dragged to the trash are simply removed from the board — same as dragging them back into the carousel. No slot is consumed.</div></div>
+<div class="cd"><div class="ct2">🎯 Cannon Carousel (Full Width)</div><div class="cb">The cannon carousel fills the <strong>entire remaining tray width</strong>. All unlocked cannon types are shown as icons, scrollable horizontally. <strong>Arrows on either side</strong> let the player scroll the carousel in both directions — even if all cannons are already placed or locked. Tap a cannon type to select it, then tap the board to place. Or drag directly from the carousel to the board.
+<br><br>The cannon limit counter is visible above the carousel: "4/6 deployed." Each cannon type shows a stats tooltip on long-press.</div></div>
+</div>
+  </div>
+</div>
+<div class="arch-entry" id="arch-wallrack">
+  <h2 class="src">Wall Rack Selection &amp; Feedback <span class="ln">(from the GDD Controls section, cut in the v6.6.0 Build extraction)</span></h2>
+  <span class="badge mixed">Mixed · Build (in Build §12) + Deploy (awaiting a home)</span>
+  <div class="arch-note">Cut from the GDD's Controls section during the v6.6.0 Build extraction. The <strong>tap-to-store/trash shortcut</strong> is Build interaction and lives in <a href="Rivenkeep_Build.html" style="color:var(--link)">Build &sect;12</a>. The <strong>universal selection frame</strong> and the <strong>new-vs-old cannon distinction</strong> (bright vs dim frame + a11y swap icon) are cross-phase / Deploy UX with no owning doc yet — preserved here verbatim so nothing is lost.</div>
+  <div class="vlabel">verbatim source</div>
+  <div class="arch-orig">
+<h3>Wall Rack Selection &amp; Feedback</h3>
+<p><strong>Selection frame:</strong> When any item is selected (piece, <span class="g" data-t="spackle">spackle</span>, cannon — tapped in tray or on the board), it shows a <strong>selection frame</strong> — a visible outline that scales up slightly. This is the universal "this is selected" indicator across all phases. Only one item can be selected at a time.</p>
+<p><strong>New vs old distinction (cannons):</strong> First-<span class="g" data-t="sortie">sortie</span> cannons display a <strong>bright selection frame</strong> (vivid team-color glow). Previous-sortie cannons display a <strong>dimmer frame</strong> (muted, desaturated). The brightness difference communicates "new and customizable" vs "established." <strong>a11y consideration:</strong> Brightness alone may not be sufficient for all users. In addition to brightness, first-sortie cannons show a small <strong>swap icon</strong> (two arrows) on their frame, and previous-sortie cannons show no icon — providing a shape-based distinction alongside the brightness difference.</p>
+<p><strong>Tap-to-store/trash shortcut:</strong> With a piece selected (from tray or soft-locked on board), the player can <strong>tap a storage slot</strong> to store it or <strong>tap the trash zone</strong> to trash it — no drag needed. If the target is invalid (full storage, no trashes remaining, wrong zone), a <strong>"no" haptic</strong> fires and nothing happens.</p>
+  </div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rivenkeep — Mini-Games</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
+header{padding:46px 40px 30px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
+h1{font-family:'Chakra Petch',sans-serif;font-size:2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px}
+header .sub{font-size:.85rem;color:var(--dim);letter-spacing:2px;text-transform:uppercase;font-weight:300}
+header .meta{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim)}
+.ctn{max-width:1040px;margin:0 auto;padding:0 40px}
+nav{position:sticky;top:0;z-index:110;background:rgba(10,12,16,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:9px 40px;display:flex;gap:15px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--dim);text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:.66rem;text-transform:uppercase;letter-spacing:1px;white-space:nowrap}nav a:hover{color:var(--accent)}
+section{padding:34px 0;border-bottom:1px solid var(--border)}
+h2{font-family:'Chakra Petch',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
+h2 .n{color:var(--dim);font-size:.9rem;margin-right:10px}
+h3{font-family:'Chakra Petch',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:22px 0 8px;color:var(--accent)}
+p{margin-bottom:10px;font-size:.9rem}
+a{color:var(--link)}em{color:var(--text);font-style:italic}
+code{font-family:'IBM Plex Mono',monospace;font-size:.82em;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--gold)}
+ul{margin:6px 0 12px 20px}li{font-size:.88rem;margin-bottom:6px}
+.s{background:var(--surface);padding:14px 18px;margin:14px 0;border-radius:0 6px 6px 0;border-left:3px solid var(--border)}
+.s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.8rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;color:var(--gold)}
+.s.pillar{border-left-color:var(--accent)}.s.warn{border-left-color:var(--warn)}.s.warn .ct{color:var(--warn)}.s.future{border-left-color:var(--purple)}.s.future .ct{color:var(--purple)}
+table{border-collapse:collapse;width:100%;margin:12px 0}
+th,td{padding:7px 10px;border:1px solid var(--border);font-size:.8rem;text-align:left;vertical-align:top}
+th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.64rem;letter-spacing:1px}
+.tag{display:inline-block;padding:1px 7px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
+.t-land{background:rgba(139,195,74,.15);color:var(--land);border:1px solid rgba(139,195,74,.35)}
+.t-sea{background:rgba(79,195,247,.13);color:var(--sea);border:1px solid rgba(79,195,247,.35)}
+.t-air{background:rgba(206,147,216,.15);color:var(--air);border:1px solid rgba(206,147,216,.35)}
+.full{color:var(--success);font-weight:600}.red{color:var(--danger)}.mid{color:var(--warn)}.dim{color:var(--dim)}
+.lead{font-size:1.02rem;color:var(--text)}
+.pill{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;background:var(--surface2);border:1px solid var(--border);color:var(--dim)}
+figure{margin:16px 0;text-align:center}figcaption{font-size:.76rem;color:var(--dim);margin-top:8px;font-style:italic}
+footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
+@media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.35rem}.ctn{padding:0 16px}nav{padding-left:16px;padding-right:16px}th,td{font-size:.73rem;padding:5px 6px}}
+</style>
+</head>
+<body>
+<header>
+<h1>Rivenkeep — Mini-Games</h1>
+<div class="sub">The Skill On-Ramp — How Players Become Strategists</div>
+<div class="meta">v0.1.0 · Module of the GDD · <strong>DESIGN BRIEF — requirements + starting design captured; full design pending</strong> · Seeded from the GDD's Skill-Building Game Packs · Companions: The Why (§4), Cannon &amp; Tower, Ships, Victory, Campaign · Governed by The Why</div>
+</header>
+
+<nav>
+<a href="#is">What This Is</a>
+<a href="#rules">Non-Negotiables</a>
+<a href="#ladder">The Skill Ladder</a>
+<a href="#packs">Starting Packs</a>
+<a href="#downside">The No-Downside Reframe</a>
+<a href="#scope">What Lives Here</a>
+<a href="#open">Open / Pending</a>
+</nav>
+
+<div class="ctn">
+
+<section id="is">
+<h2><span class="n">1</span>What This Doc Is</h2>
+<p class="lead">The mini-games are a <strong>major part of the game — the "candy-crush" of Rivenkeep</strong> — and they get designed to the same standard as everything else. This doc is the <em>starting</em> design: the requirements, the skill-building structure, and the good bones pulled out of the GDD's <a href="Rivenkeep_GDD.html">Skill-Building Game Packs</a>. It is a brief, not the finished design (see <a href="#open">Open / Pending</a>).</p>
+<div class="s pillar"><div class="ct">Why they exist — the on-ramp to the north star</div><p>Rivenkeep's north star is <strong>strategy is the fun</strong> — but that fun is only reachable by a player who can <em>read</em> the fleet, and reading is a learned skill. The mini-games are how a raw player builds that skill until the strategy game becomes intuitive. They are recorded as a supporting law in <a href="Rivenkeep_Why.html">The Why</a> (§4, "skill is taught, not assumed"): a player who can't read the mind can't enjoy the strategy, so the game must build the reader. They also defend two of the Why's standing tensions — they grow the <em>reasoning</em> that stops retry becoming brute-force, and they train the <em>legibility-reading</em> the system leans on as it combines.</p></div>
+</section>
+
+<section id="rules">
+<h2><span class="n">2</span>The Non-Negotiables</h2>
+<p>Jack's requirements — the fixed points the full design must honour:</p>
+<ul>
+<li><strong>They build ALL the skill needed to intuit the game.</strong> Every drill teaches a real skill the campaign will demand — never a throwaway diversion.</li>
+<li><strong>Built entirely from the real game's mechanics.</strong> Same walls, cannons, ships, terrain, wind, enclosure as the campaign. <span class="dim">(This is the GDD's own aligned principle: "no mini-games outside the game's mechanics." Kept — the name "mini-games" is Jack's; the substance is skill-drills inside the real game, not separate match-3-style toys.)</span></li>
+<li><strong>Fun, with ZERO downside.</strong> No punishment, no loss states that take something away. Players should <em>want</em> to replay them over and over — this is the retention engine, the candy-crush hook.</li>
+<li><strong>Endlessly replayable.</strong> A drill you return to for its own sake, not a checkbox you clear once.</li>
+<li><strong>Designed to full standard.</strong> Design-first, in depth, verified against game theory and real games, honest about seams — never an afterthought.</li>
+</ul>
+</section>
+
+<section id="ladder">
+<h2><span class="n">3</span>The Skill Ladder — The Core Structure</h2>
+<p class="lead">The mini-games assemble a player's skill <strong>bottom-up</strong>, in four rungs (Jack's structure):</p>
+<table>
+<tr><th>Rung</th><th>Teaches</th><th>Why it comes here</th></tr>
+<tr><td><strong>1 · Parts of a phase</strong></td><td>One isolated skill inside one phase — wall placement, piece efficiency, reading wind, cannon targeting, reading a ship's movement.</td><td>Introduce → Isolate: a single new thing at a time (the Why's teaching law). The atoms of play.</td></tr>
+<tr><td><strong>2 · A full phase</strong></td><td>A whole phase end-to-end — a complete Build, or a complete Fight — combining the parts into one coherent phase.</td><td>Combine the atoms into the first whole unit of the loop.</td></tr>
+<tr><td><strong>3 · Two phases together</strong></td><td>The seams between phases — Build→Deploy, or Deploy→Fight — where a decision in one phase pays off (or bites) in the next.</td><td>The seams are where real strategy starts: planning for what comes next. This is the rung the current packs under-serve (see below).</td></tr>
+<tr><td><strong>4 · A single full run</strong></td><td>One complete Build → Deploy → Fight loop — the whole game in miniature.</td><td>The graduation drill: the player now runs the entire loop, ready for the campaign.</td></tr>
+</table>
+<div class="s"><div class="ct">The ladder mirrors the Why's Introduce → Isolate → Combine</div><p>This is the same law the campaign obeys, pointed at teaching the <em>player</em> instead of escalating the <em>enemy</em>: never more than one new thing at a time, challenge from combining the understood. The mini-games teach the mechanics in isolation and in small combinations; the campaign then teaches the <em>minds</em> those mechanics face.</p></div>
+</section>
+
+<section id="packs">
+<h2><span class="n">4</span>The Starting Packs — Seeded From the GDD</h2>
+<p>The GDD already sketches seven "Game Packs." They are a strong seed — each teaches a real skill in the real mechanics — and they map (imperfectly) onto the ladder. Kept as the starting set, to be systematised in the full design:</p>
+<table>
+<tr><th>Pack (GDD)</th><th>What it drills</th><th>Teaches</th><th>Ladder rung</th></tr>
+<tr><td><strong>Speed Enclosure</strong></td><td>Enclose as much area as possible under a time limit.</td><td>Fast wall placement, spatial planning under pressure.</td><td>1 · Build part</td></tr>
+<tr><td><strong>Efficient Enclosure</strong></td><td>Enclose a target % with a limited piece budget, no timer.</td><td>Piece efficiency, coverage per piece.</td><td>1–2 · Build part → full Build</td></tr>
+<tr><td><strong>Wind Mastery</strong></td><td>Build in strong, shifting wind.</td><td>Drift-stop exploitation, windbreak placement.</td><td>1 · Build part</td></tr>
+<tr><td><strong>Ship Hunting</strong></td><td>Sink approaching ships with pre-placed cannons (no building).</td><td>Cannon targeting, reading ship movement &amp; weaknesses.</td><td>1 · Fight part</td></tr>
+<tr><td><strong>Castle Defense</strong></td><td>Build walls, then watch troops attack the castle.</td><td>Defensive wall design, anticipating breach points.</td><td>3 · Build→Fight seam</td></tr>
+<tr><td><strong>Cannon Endurance</strong></td><td>Deploy cannons, survive multiple Fight waves without rebuilding (cannon health carries).</td><td>Placement optimisation, type selection, cannon preservation.</td><td>3 · Deploy→Fight seam</td></tr>
+<tr><td><strong>Full Siege</strong></td><td>A compressed full-loop battle: one Build, one Deploy, one Fight.</td><td>The complete loop under unusual constraints.</td><td>4 · Full run</td></tr>
+</table>
+<div class="s warn"><div class="ct">Gap to close in the full design — the ladder isn't systematic yet</div><p>The seven packs are a grab-bag, not a clean ladder. Rung 1 (parts) is well covered on the Build side but thin on the Fight/Deploy side; there is no deliberate <strong>Rung 2 "one full phase"</strong> drill distinct from the parts; and <strong>Rung 3 "two phases"</strong> is only implied (Castle Defense, Cannon Endurance). The full design should lay the packs onto the four rungs deliberately — a clear progression a new player climbs — rather than a themed rotation. The rotation/cadence (how packs are surfaced) is a separate concern from the ladder (what they teach).</p></div>
+</section>
+
+<section id="downside">
+<h2><span class="n">5</span>The No-Downside Reframe — The #1 Design Decision</h2>
+<div class="s warn"><div class="ct">A live contradiction with the GDD, to resolve</div><p>The GDD's current packs are <strong>"complete-or-lose"</strong>: you climb levels 1→5, and <em>a loss ends the run</em> (Level-1 loss = no reward). That is a real <strong>downside</strong> — losing costs you the run — and it directly conflicts with Jack's rule that the mini-games have <strong>zero downside</strong> and make players want to replay endlessly. The reframe is the first thing the full design must settle.</p></div>
+<p><strong>Direction (proposed, to design out):</strong> make the drills <em>progress-only</em>. A run never takes anything away — you always keep your best result, and replaying can only match or improve it. "Levels" become a personal-best climb (beat your own mark), not a lose-and-restart gauntlet. Failure just means "that attempt didn't beat your best — try again," with no loss of standing, currency, or streak. This keeps the tension that makes a climb fun (can I do better?) while removing the sting that makes players stop. The exact shape — endless-climb vs fixed rungs, how "better" is scored per pack — is for the full design.</p>
+</section>
+
+<section id="scope">
+<h2><span class="n">6</span>What Lives Here vs Elsewhere</h2>
+<p>The GDD's "Daily Challenges" section bundles three different things. Only the first is this doc's:</p>
+<ul>
+<li><strong>The drills / skill-building — HERE.</strong> The pack designs, the ladder, the teaching goals, the no-downside model.</li>
+<li><strong>Leaderboards &amp; scoring → the <a href="Rivenkeep_Victory.html">Victory doc</a>.</strong> Battle Score (ships% + area% + cannon%), sub-scores, regions, per-level/per-campaign/friends boards — these are the victory/score system, not mini-game design. (Note: the GDD says daily challenges do <em>not</em> feed the leaderboard — consistent with no-downside.)</li>
+<li><strong>Streaks, reward packages, package timers, Stonwryt payouts → the economy / meta-progression doc</strong> (queued). The 14-day cycle, streak shields, package-timer retention loop, and currency rewards are economy systems that <em>wrap</em> the drills; they must honour the no-downside rule but they are not the drills.</li>
+</ul>
+<p class="dim">Keeping these separate is deliberate: the drill is the skill-builder; the economy decides how it is rewarded and surfaced. Designing them apart keeps each legible.</p>
+</section>
+
+<section id="open">
+<h2><span class="n">7</span>Open / Pending</h2>
+<div class="s future"><div class="ct">Sequencing — why the full design waits</div><p>The mini-games are <strong>built from the phases</strong> (parts → full phase → two phases → full run), so they can't be finished until the <strong>Build phase</strong> and the unified <strong>Fight phase</strong> are locked. This doc captures the requirements and the seed now; the full design follows those two.</p></div>
+<ul>
+<li><strong>The no-downside reframe</strong> (§5) — settle the progress-only model and how "better" is scored per pack.</li>
+<li><strong>Systematise the ladder</strong> (§4) — lay the packs deliberately onto the four rungs; fill the Fight/Deploy "parts" gap and the explicit "full phase" and "two phases" rungs.</li>
+<li><strong>Surfacing &amp; cadence</strong> — daily-gated (the GDD's 14-day rotation) vs always-available climb; how the ladder is presented so a new player naturally walks up it.</li>
+<li><strong>Onboarding vs endless</strong> — do the drills double as the first-launch tutorial, or sit alongside it? (The GDD's tutorial is a separate video-guided demo.)</li>
+<li><strong>Numbers</strong> — all per-pack difficulty levers (time limits, piece budgets, wave counts, wind strength) are the layer above the design, deferred.</li>
+</ul>
+</section>
+
+</div>
+<footer>Rivenkeep — Mini-Games · v0.1.0 · The skill on-ramp — downside-free drills that build the player into a strategist · Design brief, full design pending the Build &amp; Fight phases · Governed by The Why</footer>
+</body>
+</html>

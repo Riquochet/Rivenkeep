@@ -47,7 +47,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <header>
 <h1>Rivenkeep — The Victory Model</h1>
 <div class="sub">How a Battle Is Won, How a Sortie Ends, and Why the Fleet Pulls Back</div>
-<div class="meta">v2.0.0 · Module of the GDD (v6.3.0) · Battle win &amp; star system kept from the GDD; sortie-resolution + ammo layer added · Companions: Fleet Memory v2.0.0, Cannon &amp; Tower v2.0.0, Ships v2.0.0, Campaign v2.0.0 · Governed by The Why</div>
+<div class="meta">v2.0.2 · Module of the GDD · Battle win &amp; star system kept from the GDD; sortie-resolution + ammo layer added · Companions: Fleet Memory, Cannon &amp; Tower, Ships, Campaign · Governed by The Why · <strong>v2.0.2: §2 star thresholds migrated in from the GDD (per-lever tables, hidden ★★★! rule, adaptive tuning, 0★ easter egg)</strong></div>
 </header>
 
 <nav>
@@ -74,6 +74,18 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <div class="s"><div class="ct">Victory: enclosure, full stop</div><p>The player wins the moment <strong>all required castles are enclosed at the end of any Build phase</strong> (including the Last Stand). That is the sole win condition. Ships never have to be destroyed — surviving ships stay a threat, but the battle is won the instant the enclosure requirement is met. Clean, legible, and the crisp goal a strategy game needs.</p></div>
 <div class="s"><div class="ct">Defeat: the walls are the health bar</div><p>Defeat is reached only at a genuinely unwinnable state, and the game never forces a lost cause: required castles un-enclosable at the end of a Build phase, or a castle degraded to 3/3 dropping you below the required count. If mid-Build it becomes mathematically impossible to enclose, the battle ends immediately — a clean loss the player understands, never a drawn-out death.</p></div>
 <div class="s pillar"><div class="ct">Stars &amp; Battle Score — the skill metric (this is the fairness engine)</div><p>Three independent levers — <strong>Ships Destroyed, Cannon Health, Area Enclosed</strong> — each 1–3 stars, averaged and rounded up, with a hidden ★★★! for near-perfect play. Beneath the stars, <strong>Battle Score</strong> = ships% + area% + cannon% (max 400) is the real prize: full-resolution performance, so two players with identical ★★★ have different scores and <em>the leaderboard knows who played better</em>. This one mechanic <em>is</em> the fairness vision of The Why §3 — skill, not luck, ranked honestly — already built. It is why ship-killing is rewarded without ever being required.</p></div>
+<h3>The star thresholds — migrated from the GDD</h3>
+<p>The per-lever thresholds below were the GDD's; they live here now (they were the deferred "numbers layer" for scoring). Each lever scores 1–3 independently; the battle rating is their <strong>average, rounded up</strong>.</p>
+<table>
+<tr><th>Lever</th><th>★</th><th>★★</th><th>★★★</th><th>★★★! (hidden)</th></tr>
+<tr><td><strong>Ships Destroyed</strong></td><td>any (≥1)</td><td>60%+</td><td>90%+</td><td>100%</td></tr>
+<tr><td><strong>Cannon Health</strong></td><td>1+ survives</td><td>majority (&gt;50%) survive</td><td>all survive, avg HP ≥100%</td><td>all survive, avg HP ≥125%</td></tr>
+<tr><td><strong>Area Enclosed</strong></td><td>any (minimum win)</td><td>35%+ of friendly open space</td><td>50%+</td><td>85%+</td></tr>
+</table>
+<p><strong>★★★! demands excellence, and is hidden.</strong> It is earned only when <strong>≥2 levers hit ★★★!</strong> and the third is at least ★★★ — plain averaging can never reach it. It appears in no UI as a goal; when earned it flies in as a surprise. Server-tuned thresholds target the frequency The Why sets (≈ once every 15–20 battles for a skilled player).</p>
+<p><strong>Adaptive thresholds.</strong> Thresholds are not permanently fixed — server-side analytics track each lever's rate independently and nudge gradually: a lever whose 3-star rate runs too high (&gt;40% of players) tightens; a too-rare 1-star loosens. Offline play uses the last-fetched values. <strong>Last Stand time does not feed stars</strong> — spend it enclosing more territory (the Area lever), not as a passive bonus.</p>
+<div class="s"><div class="ct">The 0★ pacifist easter egg</div><p>Zero stars is reachable: kill no ships <em>and</em> lose every cannon, yet still meet the minimum enclosure (castles enclosed = win) → 0★. The <strong>first</strong> 0★ in each campaign pays a Stonwryt bonus of <strong>10 × campaign level</strong> (Cam 1 = 10, trivial; Cam 32 = 320, brutally hard to survive with no kills and no surviving gun). Undocumented — discovered organically; pays once per campaign.</p></div>
+<p class="dim">Worked examples — Ships ★★★(3) + Cannons ★(1) + Enclosure ★(1) = 1.67 → ★★; Ships ★(1) + Cannons ★★★(3) + Enclosure ★★★(3) = 2.33 → ★★★. Any two levers at ★★★ guarantee ★★★ overall. Beneath the stars, Battle Score = ships% + area% + cannon% (max 400): 80% + 45% + 110% = 235; two identical ★★★ can post 287 vs 312.</p>
 </section>
 
 <section id="pool">
@@ -85,11 +97,11 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 
 <section id="sortie">
 <h2><span class="n">4</span>Sortie Resolution — Three End-States</h2>
-<p class="lead">A sortie is one committed <strong>wave</strong>. It attacks, spends its ammo, and pulls back to reload — that withdrawal is the natural end of the sortie. Its <em>outcome</em> is one of three, gated by the fleet's visible resolve and its ammo.</p>
+<p class="lead">A sortie is one committed <strong>wave</strong>. It attacks, spends its ammo, and pulls back to reload — that withdrawal is the natural end of the sortie. Its <em>outcome</em> is one of three, gated by the wave's visible resolve (the per-ship network — Ships §4) and its ammo.</p>
 <table>
 <tr><th>Outcome</th><th>Cause</th><th>What it means</th></tr>
 <tr><td><strong>Held</strong></td><td>The wave spends its ammo (backstopped by the Fight timer)</td><td>You <em>weathered the full magazine</em>; the fleet withdraws to reload. The par outcome.</td></tr>
-<tr><td><strong>Repel</strong></td><td>You break the fleet's resolve before its ammo runs out</td><td>You <em>rout</em> them early — they flee with rounds still in the rack, and the unused Fight time rolls forward (banked toward the Last Stand). The skilled outcome.</td></tr>
+<tr><td><strong>Repel</strong></td><td>You break the wave's resolve before its ammo runs out — a <em>rout cascade</em> in the per-ship network (Ships §4): enough hulls cross their rout threshold that the committed remainder loses cohesion</td><td>You <em>rout</em> them early — they flee with rounds still in the rack, and the unused Fight time rolls forward (banked toward the Last Stand). A repel also <strong>drops the fleet's resolve baseline</strong>, ratcheting it toward a battle Retreat — so repels are the currency of "break their will." The skilled outcome.</td></tr>
 <tr><td><strong>Breakthrough</strong></td><td>The wave breaches a required castle's enclosure (an event, not a timer)</td><td>Damage locks in; the wave, having succeeded, still withdraws to reload. A real setback (see §6).</td></tr>
 </table>
 <div class="s pillar"><div class="ct">All survivors retreat to spawn — and re-emerge first, in order, smarter</div><p>Whatever the outcome, the surviving ships fall back to their spawn points and reload during the pause. Next sortie they are the <strong>first out, in the same order they came before</strong> — minus any that were sunk (dead stays dead), each carrying the damage it took last time. This is the player's hard-won intelligence made mechanical: <em>you have seen this wave.</em> You know what came from where and what it wanted. The cognition tick means it may execute <em>better</em> than before — but you know its <strong>motivation, not its script</strong>, which is exactly the knowledge a thinking game runs on: the lineage's goal is stable and knowable, its skill is what rises.</p></div>
@@ -142,6 +154,6 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 </section>
 
 </div>
-<footer>Rivenkeep — The Victory Model · v2.0.0 · Battle win (GDD, kept) + sortie resolution + ammo · A capped pool, three end-states, and a fleet that must reload · Governed by The Why</footer>
+<footer>Rivenkeep — The Victory Model · v2.0.2 · Battle win (GDD, kept) + sortie resolution + ammo · A capped pool, three end-states, and a fleet that must reload · Governed by The Why</footer>
 </body>
 </html>
