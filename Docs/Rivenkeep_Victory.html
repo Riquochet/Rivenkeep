@@ -47,7 +47,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <header>
 <h1>Rivenkeep — The Victory Model</h1>
 <div class="sub">How a Battle Is Won, How a Sortie Ends, and Why the Fleet Pulls Back</div>
-<div class="meta">v2.0.2 · Module of the GDD · Battle win &amp; star system kept from the GDD; sortie-resolution + ammo layer added · Companions: Fleet Memory, Cannon &amp; Tower, Ships, Campaign · Governed by The Why · <strong>v2.0.2: §2 star thresholds migrated in from the GDD (per-lever tables, hidden ★★★! rule, adaptive tuning, 0★ easter egg)</strong></div>
+<div class="meta">v2.0.5 · Module of the GDD · Battle win &amp; star system kept from the GDD; sortie-resolution + ammo layer added · Companions: Fleet Memory, Cannon &amp; Tower, Ships, Campaign, Fight · Governed by The Why · <strong>v2.0.5: §4 replay clarified — the checkpoint is the BATTLE (Jack); the whole battle is the replayable, scored unit, sortie/phase are pacing subdivisions not save points (dissolves the earlier deferred fork). v2.0.3: §4 cross-linked to the Fight doc, which owns reading the end-states as they develop</strong></div>
 </header>
 
 <nav>
@@ -97,7 +97,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 
 <section id="sortie">
 <h2><span class="n">4</span>Sortie Resolution — Three End-States</h2>
-<p class="lead">A sortie is one committed <strong>wave</strong>. It attacks, spends its ammo, and pulls back to reload — that withdrawal is the natural end of the sortie. Its <em>outcome</em> is one of three, gated by the wave's visible resolve (the per-ship network — Ships §4) and its ammo.</p>
+<p class="lead">A sortie is one committed <strong>wave</strong>. It attacks, spends its ammo, and pulls back to reload — that withdrawal is the natural end of the sortie. Its <em>outcome</em> is one of three, gated by the wave's visible resolve (the per-ship network — Ships §4) and its ammo. This doc owns the three end-states as <em>mechanics</em>; <a href="Rivenkeep_Fight.html">the Fight doc</a> owns <em>reading which one is coming</em> before it is stamped (fire slackening → held; signatures cascading aft → repel tipping; a Committed hull driving a seam → breakthrough imminent). One coupling clarified (Jack): the <strong>checkpoint is always the battle</strong> — the whole battle is the replayable, scored unit. A battle runs as waves of sorties and a sortie as its phases, but those are pacing / document subdivisions, not save points, so an individual sortie's outcome is a step within a battle run rather than a separately-replayable result. Replaying (win or lose) re-runs the battle deterministically; the end-states below are the resolution of each sortie <em>within</em> a run, and Battle Score (§2) totals the run.</p>
 <table>
 <tr><th>Outcome</th><th>Cause</th><th>What it means</th></tr>
 <tr><td><strong>Held</strong></td><td>The wave spends its ammo (backstopped by the Fight timer)</td><td>You <em>weathered the full magazine</em>; the fleet withdraws to reload. The par outcome.</td></tr>
@@ -154,6 +154,6 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 </section>
 
 </div>
-<footer>Rivenkeep — The Victory Model · v2.0.2 · Battle win (GDD, kept) + sortie resolution + ammo · A capped pool, three end-states, and a fleet that must reload · Governed by The Why</footer>
+<footer>Rivenkeep — The Victory Model · v2.0.5 · Battle win (GDD, kept) + sortie resolution + ammo · A capped pool, three end-states, and a fleet that must reload · Governed by The Why</footer>
 </body>
 </html>
