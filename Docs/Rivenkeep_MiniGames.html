@@ -6,7 +6,9 @@
 <title>Rivenkeep — Mini-Games</title>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+:root{--doc-version:"v0.1.0";--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+.ver::after{content:var(--doc-version)}
+
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
 header{padding:46px 40px 30px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
@@ -47,7 +49,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <header>
 <h1>Rivenkeep — Mini-Games</h1>
 <div class="sub">The Skill On-Ramp — How Players Become Strategists</div>
-<div class="meta">v0.1.0 · Module of the GDD · <strong>DESIGN BRIEF — requirements + starting design captured; full design pending</strong> · Seeded from the GDD's Skill-Building Game Packs · Companions: The Why (§4), Cannon &amp; Tower, Ships, Victory, Campaign · Governed by The Why</div>
+<div class="meta"><span class="ver"></span> · Module of the GDD · <strong>DESIGN BRIEF — requirements + starting design captured; full design pending</strong> · Seeded from the GDD's Skill-Building Game Packs · Companions: The Why (§4), Cannon &amp; Tower, Ships, Victory, Campaign · Governed by The Why</div>
 </header>
 
 <nav>
@@ -139,6 +141,6 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 </section>
 
 </div>
-<footer>Rivenkeep — Mini-Games · v0.1.0 · The skill on-ramp — downside-free drills that build the player into a strategist · Design brief, full design pending the Build &amp; Fight phases · Governed by The Why</footer>
+<footer>Rivenkeep — Mini-Games · <span class="ver"></span> · The skill on-ramp — downside-free drills that build the player into a strategist · Design brief, full design pending the Build &amp; Fight phases · Governed by The Why</footer>
 </body>
 </html>

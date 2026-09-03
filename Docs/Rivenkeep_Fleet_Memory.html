@@ -6,7 +6,9 @@
 <title>Rivenkeep — The Attacker's Mind</title>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+:root{--doc-version:"v2.3.0";--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+.ver::after{content:var(--doc-version)}
+
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Source Sans 3',sans-serif;line-height:1.7;overflow-x:hidden}
 header{padding:46px 40px 30px;text-align:center;border-bottom:1px solid var(--border);background:linear-gradient(180deg,#0f1219,var(--bg))}
@@ -21,6 +23,7 @@ section{padding:34px 0;border-bottom:1px solid var(--border)}
 h2{font-family:'Chakra Petch',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
 h2 .n{color:var(--dim);font-size:.9rem;margin-right:10px}
 h3{font-family:'Chakra Petch',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:22px 0 8px;color:var(--accent)}
+h4{font-family:'Chakra Petch',sans-serif;font-size:.86rem;font-weight:600;letter-spacing:.5px;margin:16px 0 6px;color:var(--text)}
 p{margin-bottom:10px;font-size:.9rem}
 a{color:var(--link)}em{color:var(--text);font-style:italic}
 code{font-family:'IBM Plex Mono',monospace;font-size:.82em;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--gold)}
@@ -63,7 +66,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <header>
 <h1>Rivenkeep — The Attacker's Mind</h1>
 <div class="sub">Fleet Cognition &amp; Memory Model · Blind · Deterministic · Learning-Within-the-Loop</div>
-<div class="meta">v2.0.4 · Module of the GDD · Shared foundation for the Ships &amp; Troops doc · Companion to the Cannon &amp; Tower and Fight docs · <strong>v2.0.4: mind-fog render enriched (&sect;8) — the fort saturation doubles as a battle-health gauge, and a wall breach fires a sun-ray reveal to the next layer. v2.0.3: two-fog visual languages settled (board=opacity+reveal lens; mind=twilight&rarr;noon saturation)</strong> · Governed by The Why</div>
+<div class="meta"><span class="ver"></span> · Module of the GDD · Shared foundation for the Ships &amp; Troops doc · Companion to the Cannon &amp; Tower and Fight docs · <strong><span class="ver"></span>: &sect;7 &mdash; RESOLVE IS QUEUE-WIDE (Jack): the network spans the whole fleet including unsailed reserves, so resolve damage accumulates across the battle rather than resetting per sortie, breaking their will is a campaign rather than a per-wave trick, and reserves can be demoralised before they arrive. Plus a FOURTH resolve input: PURPOSE. A hull needs something to be for, so sinking every core leaves screens with nothing holding their resolve up and it collapses queue-wide &mdash; which gives resolve a cause the player can attack directly and a structural spine they can see. Previously &mdash; v2.2.0: &sect;3 &mdash; recorded that the fear grid stays ~10&times;10 as the board grows to 128&times;80, so each cell becomes ~13&times;8 grids, improving all three grounds the resolution was chosen for (harder to invert to a gun, clearer as a heat shape at overview, more baitable by one silent battery). Also recorded that this requirement independently reproduced the board&apos;s approach-depth figure &mdash; a contact must cross 2&ndash;3 fear cells for fear navigation to be visible, giving 26&ndash;38 grids. Previously &mdash; <span class="ver"></span>: &sect;7 &mdash; THE POPULATION THIS LAYER NEEDS recorded (~6 hulls to function, 8+ to read well) AND shown to be available from Campaign 1: the sizing model caps attention in CONTACTS, not hulls, so 2 contacts of 3&ndash;4 hulls each is a trivially legible wave with a fully alive resolve network. Resolve needs no staging; what it constrains is early FORMATION authoring &mdash; opening waves arrive as loose clumps, never as sparse singletons. Supersedes an earlier claim that resolve could not come online until the mid-War, which compared hulls against contacts and was wrong. Sizing model owned by <a href="Rivenkeep_Victory.html#sizing" style="color:var(--link)">Victory &sect;3</a>. v2.0.4: mind-fog render enriched (&sect;8) — the fort saturation doubles as a battle-health gauge, and a wall breach fires a sun-ray reveal to the next layer. v2.0.3: two-fog visual languages settled (board=opacity+reveal lens; mind=twilight&rarr;noon saturation)</strong> · Governed by The Why</div>
 </header>
 
 <nav>
@@ -250,6 +253,9 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 </section>
 
 <section id="contact">
+<div class="s pillar"><div class="ct">The grid stays 10&times;10 as the board grows &mdash; and that helps <span class="sub">new &middot; <span class="ver"></span></span></div><p>The board is being resized upward (128&times;80 derived, <a href="Rivenkeep_Victory.html#board">Victory &sect;3</a>), and the fear grid does <strong>not</strong> scale with it. It stays about 10&times;10 over the play area, so each cell grows from roughly 6&times;5 grids to roughly <strong>13&times;8 grids</strong>.</p>
+<p>That is an improvement on all three grounds this resolution was chosen for. A larger cell spans <em>more</em> possible gun positions, so the field is even harder to invert into a counter-battery fix. It reads more clearly as a heat shape at overview zoom, where a cell becomes a substantial patch rather than a smudge. And it is more baitable, because one silent battery now shapes a bigger region of the fleet's belief &mdash; which makes hold-fire a stronger information weapon rather than a weaker one.</p>
+<p><strong>It also turned out to be one of the requirements that sized the board.</strong> For fear <em>navigation</em> to be visible at all &mdash; a hull skirting a hot cell, probing a cooling one, committing through a cold one &mdash; a contact must cross two or three cells on its approach. At ~13 grids per cell that is 26&ndash;38 grids of approach depth, which independently reproduced the figure the player-side band arithmetic gave. The fleet's mind and the player's reading time wanted the same board.</p></div>
 <h2><span class="n">4</span>The Contact Channel — Confirmed Targets</h2>
 <p>The anti-wander guarantee. Without it, a perfectly-fogged fleet just mills around — and "the enemy flails" is as dead as "the enemy cheats." The fix is a hard-fact channel running alongside the soft fear map.</p>
 <div class="s contact"><div class="ct">What confirms a target</div>
@@ -349,6 +355,23 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <li><strong>Troops ashore are close-recon</strong>, feeding hard ground truth into the contact channel from inside the perimeter.</li>
 <li>Propagation lag is itself a texture: <em>"the north's fear hasn't reached the freshly-arrived southern ships yet"</em> — a real, legible, baitable seam.</li>
 </ul></div>
+<div class="s pillar"><div class="ct">The population this layer needs &mdash; and why it is available from Campaign 1 <span class="sub">corrected &middot; <span class="ver"></span></span></div><p>Propagation, contagion, batching and the rout cascade are <strong>statistical mechanics</strong>: they need bodies to run through. A cascade across three hulls is not a cascade, and an intensity dial with two hulls to act on degenerates into a per-hull toughness stat, which is exactly what it was designed not to be. The layer wants roughly <strong>6 hulls to function and 8 or more to read well</strong> &mdash; the specified feel is a wave visibly unravelling over ~2&ndash;3 s (Ships &sect;4), and that needs enough hulls for the unravelling to be sequential rather than a single step.</p>
+<p><strong>That population is available immediately, and the reason is the contact/hull distinction.</strong> The fleet-sizing model (<a href="Rivenkeep_Victory.html#sizing">Victory &sect;3</a>) caps the player's <em>attention</em> in contacts, not hulls, and a formation holding shape is one contact whatever its hull count. So an opening battle can field <strong>2 contacts made of 3&ndash;4 hulls each</strong> &mdash; six to eight bodies for the network, two objects for the eye. The wave is trivially legible <em>and</em> the resolve layer is fully alive, because the coherence that makes it easy to read is the same coherence that gives fear and panic somewhere to spread.</p>
+<p>So resolve is online from Campaign 1, at full strength, and it needs no staging. What it <em>does</em> constrain is <strong>early formation authoring</strong>: opening waves must arrive in coherent formations rather than as lone hulls. A pair of unescorted singletons is both a thinner read and a dead resolve network &mdash; worse on every axis, and the kind of "simple" that is really just empty. Loose, sloppy, easily-shredded clumps are the right early shape (that looseness is also the Cognition tell &mdash; a shallow fleet holds its shape badly), not sparse ones.</p>
+<p class="dim">This box corrects an earlier pass which computed this floor in hulls, compared it against a contact count, and concluded the resolve layer could not come online until the mid-War. Those are two different quantities and the conclusion was wrong. Nothing about the resolve design changes; only the schedule claim, which is withdrawn.</p></div>
+<div class="s pillar"><div class="ct">RESOLVE IS QUEUE-WIDE, not per-sortie — and PURPOSE is one of its inputs <span class="sub">new &middot; <span class="ver"></span></span></div><p>Two rulings from Jack extend the resolve network beyond the hulls currently on the board, and they change what the player is actually working on.</p>
+<h4>1 &middot; The network spans the whole queue</h4>
+<p><em>"This is all about the resolve. The resolve is gone, no ships will continue to fight &mdash; BUT that is for the whole queue of ships, not just one sortie."</em></p>
+<p>So resolve is not a property of the wave in front of you. It is a property of <strong>the fleet</strong>, reserves included. A rout cascade in sortie three lowers the baseline of hulls that have not sailed yet; an anchor killed in sortie two is an anchor the reserves no longer have. The consequences are worth being explicit about because they reframe the player's job:</p>
+<ul>
+<li><strong>Resolve damage accumulates across the battle</strong> rather than resetting each sortie. It is the one quantity the player builds up over the whole engagement, which makes it the closest thing in the game to a progress bar &mdash; and, correctly, one that is never shown.</li>
+<li><strong>Breaking their will is a campaign against the fleet, not a trick per wave.</strong> Repels are the deposits; the fleet Retreat (Victory &sect;4a) is the withdrawal. That is why repels were always called the currency.</li>
+<li><strong>Reserves can be demoralised before they ever arrive.</strong> A late-battle formation drawn from a battered queue comes out already shaky, which is the fading fleet expressed in nerve rather than in hull count.</li>
+</ul>
+<h4>2 &middot; Purpose holds resolve up &mdash; and a hull without purpose has nothing holding it</h4>
+<p>Resolve was previously fed by own-experience, peer contagion and the anchor broadcast. Jack&apos;s carrier example adds a fourth and more structural input: <strong>a hull needs something to be for</strong>. Sink every carrier and the escorts are not merely frightened &mdash; they have no objective, so there is nothing for their resolve to rest on, and it collapses queue-wide (Victory &sect;4a; the core/screen structure and the coreless residual are in Ships &sect;9).</p>
+<p>This is the best thing that has happened to the resolve layer, for two reasons. It gives resolve a <strong>cause the player can attack directly</strong> rather than only a set of pressures to apply &mdash; you can reason about what the fleet is <em>for</em> and remove it, which is a strategic act rather than an accumulation of chip damage. And it means resolve is not purely psychological bookkeeping: it has a structural spine that the player can see (which hulls are cores, which are screens, and which formations still have one).</p>
+<p class="dim">Reading it, unchanged in kind: still no bar, still the motion signature (lateral = fear, fore-aft = nerve). What purpose collapse adds is a distinctive read at the top end &mdash; a coreless residual moves like hulls with nowhere to be, and that is a shape the player learns to recognise as the battle&apos;s end approaching.</p></div>
 </section>
 
 <section id="ui">
@@ -475,6 +498,6 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 </section>
 
 </div>
-<footer>Rivenkeep — The Attacker's Mind · v2.0.4 · Fleet Cognition &amp; Memory Model · Blind · Deterministic · Learning-Within-the-Loop · Companion to the Cannon &amp; Tower and Fight docs</footer>
+<footer>Rivenkeep — The Attacker's Mind · <span class="ver"></span> · Fleet Cognition &amp; Memory Model · Blind · Deterministic · Learning-Within-the-Loop · Companion to the Cannon &amp; Tower and Fight docs</footer>
 </body>
 </html>
