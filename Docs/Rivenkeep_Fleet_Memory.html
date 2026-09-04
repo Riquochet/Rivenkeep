@@ -60,13 +60,14 @@ th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans
 figure{margin:16px 0;text-align:center}figcaption{font-size:.76rem;color:var(--dim);margin-top:8px;font-style:italic}
 footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
 @media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.35rem}.ctn{padding:0 16px}nav{padding-left:16px;padding-right:16px}th,td{font-size:.73rem;padding:5px 6px}}
+#history{padding:20px 0 26px;opacity:.85}#history h2{font-family:'Source Sans 3',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:none;color:var(--dim);margin-bottom:6px}#history p{font-size:.68rem;color:var(--dim);line-height:1.5}#history table{font-size:.66rem;margin:8px 0}#history th{background:transparent;color:var(--dim);font-size:.6rem;font-weight:600;border-color:var(--border)}#history td{color:var(--dim);font-size:.66rem;line-height:1.5;border-color:var(--border)}
 </style>
 </head>
 <body>
 <header>
 <h1>Rivenkeep — The Attacker's Mind</h1>
 <div class="sub">Fleet Cognition &amp; Memory Model · Blind · Deterministic · Learning-Within-the-Loop</div>
-<div class="meta"><span class="ver"></span> · Module of the GDD · Shared foundation for the Ships &amp; Troops doc · Companion to the Cannon &amp; Tower and Fight docs · <strong><span class="ver"></span>: &sect;7 &mdash; RESOLVE IS QUEUE-WIDE (Jack): the network spans the whole fleet including unsailed reserves, so resolve damage accumulates across the battle rather than resetting per sortie, breaking their will is a campaign rather than a per-wave trick, and reserves can be demoralised before they arrive. Plus a FOURTH resolve input: PURPOSE. A hull needs something to be for, so sinking every core leaves screens with nothing holding their resolve up and it collapses queue-wide &mdash; which gives resolve a cause the player can attack directly and a structural spine they can see. Previously &mdash; v2.2.0: &sect;3 &mdash; recorded that the fear grid stays ~10&times;10 as the board grows to 128&times;80, so each cell becomes ~13&times;8 grids, improving all three grounds the resolution was chosen for (harder to invert to a gun, clearer as a heat shape at overview, more baitable by one silent battery). Also recorded that this requirement independently reproduced the board&apos;s approach-depth figure &mdash; a contact must cross 2&ndash;3 fear cells for fear navigation to be visible, giving 26&ndash;38 grids. Previously &mdash; <span class="ver"></span>: &sect;7 &mdash; THE POPULATION THIS LAYER NEEDS recorded (~6 hulls to function, 8+ to read well) AND shown to be available from Campaign 1: the sizing model caps attention in CONTACTS, not hulls, so 2 contacts of 3&ndash;4 hulls each is a trivially legible wave with a fully alive resolve network. Resolve needs no staging; what it constrains is early FORMATION authoring &mdash; opening waves arrive as loose clumps, never as sparse singletons. Supersedes an earlier claim that resolve could not come online until the mid-War, which compared hulls against contacts and was wrong. Sizing model owned by <a href="Rivenkeep_Victory.html#sizing" style="color:var(--link)">Victory &sect;3</a>. v2.0.4: mind-fog render enriched (&sect;8) — the fort saturation doubles as a battle-health gauge, and a wall breach fires a sun-ray reveal to the next layer. v2.0.3: two-fog visual languages settled (board=opacity+reveal lens; mind=twilight&rarr;noon saturation)</strong> · Governed by The Why</div>
+<div class="meta"><span class="ver"></span> · Module of the GDD · Shared foundation for the Ships &amp; Troops doc · Companion to the Cannon &amp; Tower and Fight docs · Governed by The Why · Version history moved to the bottom of this doc.</div>
 </header>
 
 <nav>
@@ -87,6 +88,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <a href="#determinism">Determinism</a>
 <a href="#keepthrow">Keep / Throw</a>
 <a href="#open">Open Questions</a>
+<a href="#history">Version History</a>
 </nav>
 
 <div class="ctn">
@@ -515,6 +517,22 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <li><strong>Troops</strong> — their own levers (target priority, path behaviour, formation tricks, revealed on landing), all riding this same three-channel mind.</li>
 <li><strong>Pair-down (joint session)</strong> — bring ships/troops to the Cannon &amp; Tower doc and cut both sides to exactly what works against each other (16 archetypes → 6–8, 6 tower axes → ~6). This memory model is the substrate all of it runs on.</li>
 </ul></div>
+</section>
+
+
+<section id="history">
+<h2>Version History</h2>
+<p>Kept here as a self-contained backup of this doc's changelog; the journal is the authoritative record.</p>
+<table>
+<tr><th>Version</th><th>Changes</th></tr>
+<tr><td><strong>v2.4.0</strong></td><td>&sect;7 — purpose is removed, never inverted; the orphan fork's resolve arbitration; escort tightness added as a fourth belief register.</td></tr>
+<tr><td><strong>v2.3.0</strong></td><td>&sect;7 — RESOLVE IS QUEUE-WIDE: the network spans the whole fleet including unsailed reserves, so resolve damage accumulates across the battle rather than resetting per sortie. Plus a fourth resolve input: PURPOSE — sinking every core leaves screens with nothing holding their resolve up, and it collapses queue-wide.</td></tr>
+<tr><td><strong>v2.2.0</strong></td><td>&sect;3 — recorded that the fear grid stays ~10&times;10 as the board grows to 128&times;80, improving all three grounds the resolution was chosen for. Also recorded that this requirement independently reproduced the board's approach-depth figure.</td></tr>
+<tr><td><strong>v2.1.0</strong></td><td>&sect;7 — the population this layer needs (~6 hulls to function, 8+ to read well) shown to be available from Campaign 1, since the sizing model caps attention in contacts, not hulls. Supersedes an earlier claim that resolve could not come online until the mid-War, which compared hulls against contacts and was wrong.</td></tr>
+<tr><td><strong>v2.0.4</strong></td><td>Mind-fog render enriched — the fort's saturation doubles as a battle-health gauge, and a wall breach fires a sun-ray reveal to the next layer.</td></tr>
+<tr><td><strong>v2.0.3</strong></td><td>Two-fog visual languages settled (board = opacity + reveal lens; mind = twilight&rarr;noon saturation).</td></tr>
+<tr><td><strong>v2.0.0</strong></td><td>Doc created — the 3-channel mind (LOS / Contact / Effect), blind, deterministic, learning within the loop.</td></tr>
+</table>
 </section>
 
 </div>

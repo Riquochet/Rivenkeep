@@ -43,13 +43,14 @@ th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans
 figure{margin:16px 0;text-align:center}figcaption{font-size:.76rem;color:var(--dim);margin-top:8px;font-style:italic}
 footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
 @media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.35rem}.ctn{padding:0 16px}nav{padding-left:16px;padding-right:16px}th,td{font-size:.73rem;padding:5px 6px}}
+#history{padding:20px 0 26px;opacity:.85}#history h2{font-family:'Source Sans 3',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:none;color:var(--dim);margin-bottom:6px}#history p{font-size:.68rem;color:var(--dim);line-height:1.5}#history table{font-size:.66rem;margin:8px 0}#history th{background:transparent;color:var(--dim);font-size:.6rem;font-weight:600;border-color:var(--border)}#history td{color:var(--dim);font-size:.66rem;line-height:1.5;border-color:var(--border)}
 </style>
 </head>
 <body>
 <header>
 <h1>Rivenkeep — Campaign Layout &amp; Progression</h1>
 <div class="sub">How the War Teaches, Escalates &amp; Stays a Thinking Game</div>
-<div class="meta"><span class="ver"></span> · Module of the GDD · Meshes the campaign skeleton with the cognition model &amp; the locked cast · Companions: The Why, Fleet Memory, Cannon &amp; Tower, Ships, Victory · <strong><span class="ver"></span>: &sect;4 &mdash; the ramp gains QUEUE DEPTH as a dial (4&ndash;5 &rarr; 15&ndash;20 formations), and the SORTIES dial is corrected: it is set by the fleet (queue depth &divide; elimination rate) rather than by the player&apos;s construction schedule, following the win-condition correction. NEW board-authoring law: sorties provided must exceed Build phases demanded with margin for a lost ring, which couples the castle-triage ladder to queue depth &mdash; they must now be ramped TOGETHER, a new checkable constraint on the 190-battle generator. Previously &mdash; v2.2.0: &sect;4 &mdash; the ramp table rebuilt to four dials with the contact ceiling raised to 8 (a TRAINED destination bounded by the &le;4-decision-bearing law, not a wall), and SORTIE COUNT added as a fourth dial (3&rarr;10) with its nature stated: a construction schedule following the requirement ladder&apos;s wall demand, which skill moves only &minus;1/+2 through the rebuild tax. Mean formation size shown to FALL across the ramp (4&rarr;3 hulls) even as hull count rises, because late fleets disperse &mdash; the Coordination axis deliberately spending the player&apos;s attention budget, and the main reason the late War feels sharper without anything getting bigger. Previously &mdash; v2.1.0: &sect;4 &mdash; THE CONTACT RAMP added as the third monotonic ramp beside castle triage and piece tier, with the two enemy counts held strictly apart: CONTACTS (the attention budget: 2&rarr;6, hard ceiling 8) and APPROACHES (1&rarr;3) are the screws; HULLS (6&rarr;24) are the statistical substrate and explicitly NOT a pressure dial, since hulls inside existing formations cost no legibility. The choreography law is extended to three screws that must turn singly &mdash; contacts, approaches, cognition &mdash; and the Fight&apos;s spacing law is shown to tighten as approaches rise. The opening battles are stated as a designed on-ramp that is simple to read but not sparse. Sizing model owned by <a href="Rivenkeep_Victory.html#sizing" style="color:var(--link)">Victory &sect;3</a>. Sizing model owned by <a href="Rivenkeep_Victory.html#sizing" style="color:var(--link)">Victory &sect;3</a>. v2.0.1: verified aligned in the pre-Build audit; companion versions synced</strong> · Governed by The Why</div>
+<div class="meta"><span class="ver"></span> · Module of the GDD · Meshes the campaign skeleton with the cognition model &amp; the locked cast · Companions: The Why, Fleet Memory, Cannon &amp; Tower, Ships, Victory · Governed by The Why · Version history moved to the bottom of this doc.</div>
 </header>
 
 <nav>
@@ -61,6 +62,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <a href="#roster">Roster Map</a>
 <a href="#toolkit">Toolkit Order</a>
 <a href="#foundation">Foundation</a>
+<a href="#history">Version History</a>
 </nav>
 
 <div class="ctn">
@@ -209,6 +211,21 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <div class="s warn"><div class="ct">4 · Enclosure must stay a choice, not a dominant turtle</div><p>The spine is that enclosed guns are ghosts the fleet can't target. If enclosure were pure upside, the dominant strategy would be "turtle everything" and the game would solve itself. It is saved by real cost and real counters — the Build puzzle makes full enclosure genuinely hard (limited pieces, damage carryover), and breakthrough threats (Breacher, troops that breach and reveal from inside, bombers over the walls, the Sower denying ground) punish the pure turtle. The tension to protect: enclosure stays a <em>tradeoff</em> — safe but spatially costly and coverage-limited — never strictly better, never strictly punished.</p></div>
 <div class="s warn"><div class="ct">5 · The Fight phase must reward reading, not reaction</div><p>A thinking game with a real-time phase risks sliding into arcade — plugging holes by fast re-tasking (APM). The AoR-crawl change is the key defence: slow, costed re-tasks turn the Fight into "watch and nudge," deliberate not twitchy, and the Deploy-first philosophy keeps live actions rare. The line to hold: the Fight rewards <em>anticipation and reading the mind</em>, not reflexes. If success ever comes down to speed, the identity has eroded.</p></div>
 <div class="s"><div class="ct">The verdict</div><p>The core — a blind, deterministic mind whose difficulty is its <em>intelligence</em>; enclosure discipline; castle triage; no forced playstyle; difficulty by cognition, not stats — is genuinely elegant and rare. It is a real answer to the treadmill problem and points squarely at strategy-as-fun. The surface is ambitious and sits near the ceiling of manageable dimensionality; the layer set has mild internal overlap (A/D both environmental; C/E both Build-difficulty; E and triage both enclosure pressure) that a later tightening could address but need not. The whole is elegant <em>if and only if</em> legibility is protected as the systems fold together — that is the foundation's single point of failure, and everything above (the generators, the tells, the determinism, the matched teaching) exists to hold it. Build to keep the player reasoning, and strategy will be the fun.</p></div>
+</section>
+
+
+<section id="history">
+<h2>Version History</h2>
+<p>Kept here as a self-contained backup of this doc's changelog; the journal is the authoritative record.</p>
+<table>
+<tr><th>Version</th><th>Changes</th></tr>
+<tr><td><strong>v2.4.0</strong></td><td>Infrastructure pass — tag balance and dangling-anchor check, single current-version literal, confirmed script-free. No content change.</td></tr>
+<tr><td><strong>v2.3.0</strong></td><td>&sect;4 — the ramp gains QUEUE DEPTH as a dial (4&ndash;5 &rarr; 15&ndash;20 formations), and the SORTIES dial corrected: set by the fleet (queue depth &divide; elimination rate) rather than the player's construction schedule. New board-authoring law: sorties provided must exceed Build phases demanded, coupling the castle-triage ladder to queue depth.</td></tr>
+<tr><td><strong>v2.2.0</strong></td><td>&sect;4 — the ramp table rebuilt to four dials, contact ceiling raised to 8 (a trained destination, not a wall), sortie count added as a fourth dial (3&rarr;10). Mean formation size shown to fall across the ramp even as hull count rises, because late fleets disperse.</td></tr>
+<tr><td><strong>v2.1.0</strong></td><td>&sect;4 — THE CONTACT RAMP added as a third monotonic ramp beside castle triage and piece tier. Contacts (the attention budget) and approaches held strictly apart from hulls (the statistical substrate, not a pressure dial). The choreography law extended to three screws that must turn singly.</td></tr>
+<tr><td><strong>v2.0.1</strong></td><td>Verified aligned in the pre-Build audit; companion versions synced.</td></tr>
+<tr><td><strong>v2.0.0</strong></td><td>Doc created — meshed the GDD skeleton (Introduce&rarr;Isolate&rarr;Combine, the 5-layer matrix, 32 campaigns, 10 theaters, boss finale) with the cognition model and the locked cast.</td></tr>
+</table>
 </section>
 
 </div>

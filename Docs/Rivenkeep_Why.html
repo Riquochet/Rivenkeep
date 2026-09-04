@@ -43,13 +43,14 @@ th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans
 figure{margin:16px 0;text-align:center}figcaption{font-size:.76rem;color:var(--dim);margin-top:8px;font-style:italic}
 footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
 @media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.35rem}.ctn{padding:0 16px}nav{padding-left:16px;padding-right:16px}th,td{font-size:.73rem;padding:5px 6px}}
+#history{padding:20px 0 26px;opacity:.85}#history h2{font-family:'Source Sans 3',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:none;color:var(--dim);margin-bottom:6px}#history p{font-size:.68rem;color:var(--dim);line-height:1.5}#history table{font-size:.66rem;margin:8px 0}#history th{background:transparent;color:var(--dim);font-size:.6rem;font-weight:600;border-color:var(--border)}#history td{color:var(--dim);font-size:.66rem;line-height:1.5;border-color:var(--border)}
 </style>
 </head>
 <body>
 <header>
 <h1>Rivenkeep — The Why</h1>
 <div class="sub">Design Philosophy &amp; First Principles · The Standing Guide for Every Build Decision</div>
-<div class="meta"><span class="ver"></span> · The foundation doc — the "why" to the GDD's "how" · Read before every design decision · Companions (the "how"): GDD, Fleet Memory, Cannon &amp; Tower, Ships, Campaign, Victory, Build · <strong><span class="ver"></span>: &sect;6 &mdash; tension #4 (enclosure dominance / the turtle) is now answered STRUCTURALLY rather than by balance, following the win-condition correction: enclosing cannot win because the attack must still be beaten back, which requires destroying the fleet&apos;s purpose-bearing hulls, so a player who never fights cannot win by building. The turtle line stays available but is structurally inferior (many sorties of castle degradation; unemerged reserves credited only in proportion to cores destroyed). General lesson recorded: the strongest fix for a dominance risk is a win condition that does not admit it, not a cost that discourages it. Previously &mdash; v2.2.0: &sect;6 &mdash; tension #3 REFRAMED (Jack): the legibility ceiling is a TRAINED quantity, not a low cap to hide behind. Late campaign targets 8 simultaneous contacts, made safe by a new law &mdash; at most 4 decision-bearing at once, with the surplus legitimately ignorable, since above the tracking edge a player rightly samples rather than tracks. Determinism (tracking becomes prediction) and the mini-games (the explicit ladder) are the two mechanisms that raise the ceiling, which is the strongest argument yet that the mini-games are a pillar. And the coupling recorded: coverage allocation and attention allocation are the same skill at two scales, so raising the contact count deepens the game instead of merely loading it. Previously &mdash; v2.1.0: &sect;6 &mdash; tension #3 (legibility under load) now carries a NUMBER, derived rather than asserted: 6 simultaneous contacts as the design target and 8 as a hard ceiling, &le;3 live approaches, and 16&ndash;24 hulls held as a strictly separate quantity from contacts. Grounded in measured attentive-tracking limits (3&ndash;5 items, ~4 size-independent groups, up to ~8 when slow). Fleet size is sized against legibility rather than difficulty. Corollary recorded: the ceiling is a function of player skill, so the mini-games are load-bearing against this tension. v2.0.3: §2 reconciled — the Build puzzle is "low-pressure timed," not "untimed" (the GDD's timed Build was correct); Build §2 owns the timer-band rationale</strong> · <strong>v2.0.4: locked the seed model — one fixed seed per battle (restart = the identical battle); the 190 seeds chosen far apart so every battle is a distinct problem (§3)</strong> · <strong>v2.0.5: seed model refined — the one seed fans into independent per-subsystem streams (piece / fleet / general); the piece stream is play-consumed, so identical play deals identical pieces</strong></div>
+<div class="meta"><span class="ver"></span> · The foundation doc — the "why" to the GDD's "how" · Read before every design decision · Companions (the "how"): GDD, Fleet Memory, Cannon &amp; Tower, Ships, Campaign, Victory, Build · Version history moved to the bottom of this doc.</div>
 </header>
 
 <nav>
@@ -61,6 +62,7 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <a href="#tensions">Foundational Tensions</a>
 <a href="#psychology">Applied Psychology</a>
 <a href="#standing">The Commitment</a>
+<a href="#history">Version History</a>
 </nav>
 
 <div class="ctn">
@@ -197,6 +199,23 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <h2><span class="n">8</span>The Commitment</h2>
 <div class="s pillar"><div class="ct">Brutal honesty at every step</div><p>As the game is built, each step gets an honest read against this doc — what it strengthens, what it risks, where it strains a principle or a tension. No step is waved through because it is exciting or because momentum is nice. Praise and risk are reported together, calibrated. When a step violates a principle, that is said plainly, and the step is changed or the principle is consciously and explicitly revised here — never quietly ignored.</p></div>
 <div class="s"><div class="ct">This doc is alive</div><p>The principles and tensions above are the current best understanding, not scripture. When play or prototyping teaches us something sharper, this doc changes first, and the "how" follows. The foundation is only worth anything if it stays honest.</p></div>
+</section>
+
+
+<section id="history">
+<h2>Version History</h2>
+<p>Kept here as a self-contained backup of this doc's changelog; the journal is the authoritative record.</p>
+<table>
+<tr><th>Version</th><th>Changes</th></tr>
+<tr><td><strong>v2.4.0</strong></td><td>&sect;4 — two laws promoted to full guiding principles: the felt target (&ldquo;real, and always just barely overwhelming&rdquo;) and the translation step (real numbers are inputs, not authorities), plus the derive-everything supporting law.</td></tr>
+<tr><td><strong>v2.3.0</strong></td><td>&sect;6 — tension #4 (enclosure dominance / the turtle) answered STRUCTURALLY rather than by balance, following the win-condition correction: enclosing cannot win because the attack must still be beaten back. General lesson recorded: the strongest fix for a dominance risk is a win condition that does not admit it, not a cost that discourages it.</td></tr>
+<tr><td><strong>v2.2.0</strong></td><td>&sect;6 — tension #3 REFRAMED: the legibility ceiling is a TRAINED quantity, not a low cap to hide behind. Late campaign targets 8 simultaneous contacts, made safe by a new law — at most 4 decision-bearing at once. Determinism and the mini-games are the two mechanisms that raise the ceiling.</td></tr>
+<tr><td><strong>v2.1.0</strong></td><td>&sect;6 — tension #3 (legibility under load) now carries a number: 6 contacts target, 8 hard ceiling, &le;3 live approaches, 16&ndash;24 hulls held as a strictly separate quantity. Grounded in measured attentive-tracking limits.</td></tr>
+<tr><td><strong>v2.0.5</strong></td><td>Seed model refined — the one seed fans into independent per-subsystem streams (piece / fleet / general); the piece stream is play-consumed, so identical play deals identical pieces.</td></tr>
+<tr><td><strong>v2.0.4</strong></td><td>Locked the seed model — one fixed seed per battle (restart = the identical battle); the 190 seeds chosen far apart so every battle is a distinct problem.</td></tr>
+<tr><td><strong>v2.0.3</strong></td><td>&sect;2 reconciled — the Build puzzle is &ldquo;low-pressure timed,&rdquo; not &ldquo;untimed&rdquo; (the GDD's timed Build was correct); Build &sect;2 owns the timer-band rationale.</td></tr>
+<tr><td><strong>v2.0.0</strong></td><td>Doc created — the design-philosophy / first-principles doc, holding the north star, the guiding principles, the fairness-as-values argument, and the foundational tensions.</td></tr>
+</table>
 </section>
 
 </div>

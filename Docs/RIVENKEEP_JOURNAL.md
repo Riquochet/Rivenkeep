@@ -1,6 +1,6 @@
 # Rivenkeep — Project Journal
-**Last Updated:** 2026-09-03 (cont.20c)
-**Design docs (current):** GDD v6.7.0 (paired-down hub) · Removed-Content Archive v1.3.0 · The **Why v2.4.0** · **Build v1.6.0** · Deploy v1.4.0 · Shape Catalog v1.0.0 · **Cannons & Towers v2.8.0** · **Ships v2.8.0** · **Fleet Memory v2.4.0** · **Campaign v2.4.0** · **Victory v2.8.0** · Fight v1.5.0 · Mini-Games v0.1.0. Governed by The Why. **Every HTML doc single-sources its own version** — one `--doc-version` in `:root`, rendered via `<span class="ver"></span>`. **Design detail lives in the module docs — this journal holds the control panel, the current design canon, and session records.**
+**Last Updated:** 2026-09-04 (cont.25 + addendum)
+**Design docs (current):** GDD v6.7.0 (paired-down hub) · Removed-Content Archive v1.3.0 · The **Why v2.4.0** · **Build v1.9.0** · **Deploy v1.5.0** · Shape Catalog v1.0.0 · **Cannons & Towers v2.9.0** · **Ships v2.8.0** · **Fleet Memory v2.4.0** · **Campaign v2.4.0** · **Victory v2.11.0** · **Fight v1.8.0** · Mini-Games v0.1.0. Governed by The Why. **Every HTML doc single-sources its own version** — one `--doc-version` in `:root`, rendered via `<span class="ver"></span>`. **Design detail lives in the module docs — this journal holds the control panel, the current design canon, and session records.**
 **Phase:** DESIGN — ongoing (not prototyping yet; see Design Philosophy).
 **Stack:** Flutter + Dart + Flame · iOS + Android · IntelliJ. *(Swift + SpriteKit / CloudKit / GameKit / StoreKit were evaluated and rejected as Apple-only.)*
 **Layout:** ⭐ panel → DESIGN CANON → RECENT SESSIONS → ARCHIVE (full pre-redesign history, preserved).
@@ -78,7 +78,7 @@ Stable filenames; versions live *inside* each doc + in git, never in filenames.
 1. **The Build phase — DONE (`Rivenkeep_Build.html` v1.1.0; GDD culled to hub stubs at v6.6.0, cont.8–9).** The Build doc is the complete owner — piece taxonomy + full 16-tier table + selection algorithm, enclosure flood-fill + the 2×2 minimum-enclosure rule, triage geometry (first-class), the six-step carryover machine + wall-HP/castle-degradation, the full piece state machine + rotation, wind, the C×E rebuild-tax loop. The GDD Controls/Build/Spackle/Pieces/Wind sections are now hub stubs linking the Build doc (anchors + the naming-linked catalog visual preserved); the Deploy-tray block was archived. Nothing left on this item.
 2. **The Fight phase — DOC CREATED (`Rivenkeep_Fight.html` v1.0.0, cont.11).** A new module doc owning only the **connective tissue** (Jack's call: reference the others, own the seams) — the four things nobody owned: (1) the **sortie tempo** (the beat structure: 3-2-1 → assembly window → first contact → steady watch → the one big fire-control call → maybe-correction → withdrawal read; two act-beats, the rest read-beats = the anti-plate-spinning promise made checkable); (2) the assembled **grid-read** (every on-screen layer composed into one picture, one-hard-rail-plus-soft-haze; the bad-load red line); (3) the **attention economy** (the doc's sharpest original claim — actions are cheap/rare, *attention* is the bottleneck; reframes "no morale bar" and the 3-verb ceiling as attention decisions); (4) **reading the ending** (seeing Held/Repel/Breakthrough develop before Victory stamps it). Reverse cross-links added to Cannons (§6 → v2.0.4, + companion list de-pinned + third-domain rule dropped + §5 fog-reveal render), Fleet Memory (holding-fire thread + two-fog visual languages → v2.0.3), Victory (§4 → v2.0.3). **FORK RESOLVED (cont.11 cont.):** domain-switch legibility — Jack tabled the third-domain-mid-reload change entirely; a switch now only cancels (reverses) or plays through, so the meter direction is unambiguous. **FOGS SPECIFIED (Jack):** board fog = opacity + reveal lens; mind fog = twilight→noon saturation; DMZ/spawns/safe-zones always visible. Remaining = felt targets awaiting prototype.
 0. ✅ **FLEET SIZING + THE CANNON ECONOMY — DONE (cont.13), REVISED + HARDENED (cont.14).** Sizing model owned by **Victory §3** (`Rivenkeep_Victory.html#sizing`); cannon economy rebuilt in **Deploy §2** (`#slots`); wall budget in **Build §5** (`#wallbudget`); contact ramp in **Campaign §4** (`#contactramp`); throughput in **Cannon §5** (`#throughput`). Run greenfield — no legacy number inherited. See the cont.13 record below.
-0b. **ALL THREE PHASE TIMERS — NOW UNBLOCKED, and it is the next session.** #0 is closed, so the derived inputs exist: sortie ≈45 s target and ~1 grid/s ship speed (Victory §3 calibration), and **8–9 pieces for a late-War sortie 1** with 3–4 s per piece plus 5–8 s recognition (Build §5) → sortie 1 wants ≈35–45 s, so the current 25→20 s Build band is short and Deploy's 12–15 s is void. Calibrate against Rampart. Docs: journal + Build + Deploy + Victory + Fight. **Suggested: Sonnet-tier, medium effort** — bounded arithmetic against a benchmark, with the hard inputs already derived.
+0b. ✅ **ALL THREE PHASE TIMERS — DONE (cont.24), then FOLLOWED UP (cont.25).** **Build = 54 s flat, whole campaign** (no taper, no Sortie-1 bonus, no Boss value; 54 not 55 so the day-display below lands on an exact 3.0); **Deploy = load-scaled by formula** `5 s + 5·(new guns) + 5·(groups)`, floor 15 s; **Fight = 70 s backstop** over a **~55 s natural sortie**. Rollover restructured. cont.25 fixed a hidden circularity in Build §5's wall-construction figure (now 1 Build, always — the fleet clock was computed under the deleted 20 s clock), designed the Build clock's **days-based display** (seconds underneath, days on screen — 1 day ≈ 18 s), adopted **wall-watching** (wall damage visible live in the Fight, Fight §3b — the CALL-OUT is now RESOLVED), and added **piecemeal damage** (uncoordinated ships/troops spread hits to exploit the existing orphan-cleanup rule, Build §11). Owners: Build §2/§5/§11, Deploy §11, Fight §3/§3b, Victory §2/§5.
 3. **Terrain & theater mechanics (Layer A).** The 10 environmental systems in depth — especially vs a blind mind. (Docs: GDD + Fleet_Memory.)
 4. **Stonwryt economy & meta-progression.** Currency, purchases, how stars/veterancy/3-cannon-carry/unlocks form the progression arc. (Docs: GDD.)
 5. **Campaign layout — FRAMEWORK DONE (Campaign v2.0.1, audited aligned).** Introduce→Isolate→Combine, the 5-layer matrix, cognition ramp, roster debut schedule, toolkit teaching order, boss finale are all in the Campaign doc. Remaining piece = the **190-battle generator regen** against the new lineage/cognition vocabulary (a later / data-gen item, below), not new design.
@@ -106,7 +106,7 @@ Jack: the mini-games are a MAJOR part of the game — **"the candy-crush of our 
 - **Fleet mind = 3 channels**: LOS (live vision), Contact (persistent hard facts), Effect (decaying fear grid). Blind + deterministic + learns within a battle.
 - **Ship pool** = capped, fixed emergence order, fixed spawn-rate, deterministic; sortie COUNT is emergent from outcomes. Pool empties → time rolls to the Last Stand.
 - **Sortie = one wave** → HELD (spends its ammo; timer backstops), REPEL (break resolve early → rout, bank time), or BREAKTHROUGH (a required enclosure breached — event, not terminator). All survivors retreat to spawn, re-emerge first in prior order (sunk stays dead), carrying damage, a cognition-tick smarter → player learns motivation, not script. Retreating ships take fire (annihilation = a repel with a full sink).
-- **Ammo** = ships shoot only what they carry (finite, relative per-lineage); cannons effectively unlimited (static). Ammo = the sortie's diegetic clock; the GDD **time-rollover economy is kept whole** (unused Build→Deploy→Fight; 50% unused Fight→next Build; 100% final Fight→Last Stand) — ending early banks more. Felt, not managed (no ammo UI).
+- **Ammo** = ships shoot only what they carry (finite, relative per-lineage); cannons effectively unlimited (static). Ammo = the sortie's diegetic clock. **⚠ The rollover economy is NO LONGER "kept whole" — restructured cont.24** (Victory §5): unused Build→Deploy at 100%; **Deploy→Fight and Fight→next Build are both DROPPED** as inert; unused Deploy and unused Fight feed **one visible Last Stand bank at 50%**; final Fight→Last Stand at 100%. One currency, one sink: time you did not need → Last Stand → Area → score. Ending early still banks more. Felt, not managed (no ammo UI).
 - **Toolkit paired down**: 8 cannons (Standard, Piercer, Marksman, Interdictor, Suppressor, Breaker, Splasher, Saturation) + 7 towers (Spotter, Powder, Stonewright, Camouflage, Rally, Flare, Jammer). Superset preserved in the docs.
 - **Cannon carry**: within a campaign = all cannons' veterancy (cap 200%); BETWEEN campaigns = only the 3 best carry (player picks, with recommendation); difficulty tuned to assume the veteran core.
 - **Flagship ↔ Boss**: every battle has a flagship (coordination hub + morale anchor = the standard bearer, the resolve network's primary anchor); a boss is a rare, promoted flagship (fanatical resolve + bespoke mechanics). NOT every flagship is a boss. *(Full flagship spec — flag icon, buff, field promotion, deployment — in Ships §4 v2.0.1.)*
@@ -249,7 +249,9 @@ GDD reached full feature-completeness around v5.0.2 (46 sections / 10 Parts — 
 - 5 DIFFICULTY LEVELS: Recruit, Soldier, Commander (baseline), Veteran, Legend. 190×5=950 experiences. Separate leaderboards.
 - Assist Mode: silently activates after 5 consecutive defeats. +5s Build, +1 spackle. No ★★★!. No UI indicator.
 - Fight transition: dramatic crossfade (map on table → window → dark sky → 2.5D battlefield). 2.5-3.0 sec. NOT a camera tilt.
-- All phase timers are server-side configurable. Current formulas = initial estimates. Rampart arcade timing as baseline.
+- **PHASE TIMERS — DERIVED cont.24, TUNED cont.25 addendum, all server-tunable.** **Build 54 s flat** (45 s worst-case rebuild tax + 9 s discretionary remainder — 54 rather than 55 so the on-screen day display lands on an exact 3.0; the clock does not scale, the tax does — freedom falls 69% → 44% → 17% after a breakthrough). **Deploy = 5 s + 5·(new guns) + 5·(groups), floor 15 s** → sortie 1: 20/40/65 s, sortie 2+: 15/15–20/20–25 s. **Fight 70 s** = 54 s natural sortie, exactly (39-grid passage at 1 grid/s + countdown + withdrawal — no rounding needed, it matches Build without being fitted to it) + 18 s stationary-fire overhang; it is a **backstop, not a budget**. Owners: Build §2, Deploy §11, Fight §3.
+- **⚠ Rampart's own figures, corrected cont.24.** The old note "Rampart normal = 21 s" is **under-recorded**: the arcade build phase is **~30 s** (Atari Lynx 26 s), the cannon-placement phase is short (~10 s), and the battle phase **cease-fires after ~10 s of combat**. So Rampart's Build : Fight ratio is about **3 : 1** — it is overwhelmingly a *building* game punctuated by short violent bursts. The old 25→20 s Build band was calibrated against a short reading of a short anchor.
+- **⚠ The "2–5 minute battle" target is VOID (cont.24), by roughly 5×.** The derived clocks give **~5 min early → 17–25 min late** (7–10 sorties at ~140 s, plus a ~175 s sortie 1 and the Last Stand). The battle remains the only checkpoint. Logged as a Campaign-structure question, not a timer one.
 - Cannon type limits: max per type = floor(totalStars/unlock_threshold), cap 5. Standard = ∞. Cam 1-6 = all ∞.
 - 3-strike drop-back: same campaign only. Battle 1 = no drop-back.
 - Piece naming pricing: all IAP conform to Apple App Store price tiers.
@@ -257,6 +259,191 @@ GDD reached full feature-completeness around v5.0.2 (46 sections / 10 Parts — 
 
 
 ---
+
+---
+
+## SESSION: 2026-09-04 (cont.24) — ALL THREE PHASE TIMERS (queue item #5 → DONE) + the Marksman re-priced
+
+Jack: "Queue item #5 — the three phase timers." Uploaded journal + Build + Fight + Deploy + Victory + Cannons. Greenfield per Victory §3 — the old set (Build 25→20 s, Deploy 12→15 s, Fight 90 s) treated as void, not as a starting point. Hard input taken as given and not re-opened: the rebuild tax (Build v1.6.0 §11) and its consequence that the worst Build in the game is a **late repair sortie with a breakthrough re-plug**, wanting a floor near **40–45 s** — not sortie 1.
+
+### The Rampart anchor — searched, and it inverts the intuition
+Worth leading with, because it reframed the whole session. The record's `Rampart normal = 21 s` is **under-recorded**. Actual figures: arcade build phase **~30 s** (Lynx 26 s); cannon placement short (~10 s); battle phase **cease-fires after ~10 s of combat**. That is a Build : Fight ratio of about **3 : 1** — Rampart, the benchmark this design keeps calling correct, is overwhelmingly a *building* game punctuated by short violent bursts.
+
+Two consequences. (1) The standing worry that a long Build is disproportionate to the Fight is **not supported by the anchor** — by Rampart's ratio a 55 s Build would want an 18 s Fight. (2) The old 25→20 s band was short partly because the anchor it was checked against was itself recorded short.
+
+**The translation step, run properly.** *What was scarce for a Rampart player?* **Execution seconds** — one small screen, visible holes, rotate-and-drop speed, pre-computing the next placement while the current piece moves. Rampart's build phase is a dexterity test with a spatial skin. *What is scarce here?* **Deliberation seconds** — the triage set decision, the courtyard-vs-command-granularity call off the cannon slate, the seam a sharpening fleet will pick. A deliberation second buys visibly less *work* than an execution second. *Which way does it push?* **Up on duration** — importing 30 s would import a phase completable only by executing fast, which is the arcade failure the design red-lines. And the harsher-end bias is **not** thereby dropped: it was already spent upstream, in the tax. The squeeze lives in *what fills the clock*, not in the clock's length. Under-length is not harshness; it is the failure mode.
+
+So what imports from Rampart is the **shape, not the number**: *enough time to close a ring under real pressure, never enough to make it pretty* is exactly the discretionary curve below.
+
+### 1 · THE BUILD CLOCK — 55 s, flat, whole campaign (Build v1.7.0 §2)
+`45 s (worst mandatory Build, §5) + 10 s (two discretionary pieces at the harsh end of 5 s) = 55 s`
+
+The tax sets the floor from below — 17 / 25 / 30 s spoken for, 45 s at the worst — and a clock at the floor is a phase with no game in it. The remainder is the smallest one that still contains a decision: a choice plus its follow-through.
+
+**The law: the clock does not scale — the tax does.** Freedom falls **69% → 55% → 45% → 18% after a breakthrough**, and no number moves. Three rules already in the doc set forbid the alternative: a tapering clock on a growing tax is **escalation on two axes** (what §11 itself refused when it rejected a perimeter-proportional tax), a **third screw** against the choreography law, and **invisible** besides — nobody reads a 5 s drift across 32 campaigns.
+
+**Two rules deleted, both redundant under a flat clock.** The *+10 s Sortie-1 bonus* — sortie 1 carries **no tax**, so it is already the loosest Build in the battle (7–9 fresh pieces + recognition ≈ 33–40 s). The *fixed 22 s Boss* — the Boss demands 4/4 castles, so the tax is already at maximum share there. Both were compensating for a clock that scaled.
+
+**Ready is what makes a flat clock safe at the low end.** An early Build has 38 s of slack, and slack is only dead air if you must sit in it. The clock is a **ceiling on deliberation, never a floor on phase duration** — the early game runs fast because the player ends it, the late game runs long because the tax fills it.
+
+### 2 · THE DEPLOY CLOCK — the contradiction was worse than recorded (Deploy v1.5.0 §11)
+The flagged conflict had **three layers**, not one:
+1. **12–15 s** — void, table artifact. Already on record.
+2. **20→30 s is also void**, on the same arithmetic. It never covered its own model either: 5–8 + (3–6 × 7) = **26–50 s**, and against the *derived* slot table (which reaches **12**, not 7) the same model gives **41–80 s**. The prior note treated 20→30 s as the survivor. It is not.
+3. **The model itself is void — the real finding.** "Seconds per cannon" was right when Deploy meant *placing every gun, every phase*. Deploy now sites **only new guns** (~0.4/sortie late) and edits **one order card per group** (3 groups late), pre-filled with defaults. Charging per cannon prices a job the phase stopped doing.
+
+`Deploy = 5 s recognition + 5 s × (new guns sited) + 5 s × (commanded groups) · floor 15 s`
+
+Sortie 1: **20 / 40 / 65 s** (early/mid/late), Boss 45 s. Sortie 2+: **15 / 15–20 / 20–25 s**. Floor = recognition + one group + one seam read, so beat 5 always physically exists.
+
+**Deploy is load-scaled and Build is flat for a structural reason, not a preference.** Build's work is bounded above by a smoothly-growing mandatory floor and below by Ready — one number covers it. Deploy's has a **tenfold spike at sortie 1**, when the whole opening slate is sited at once. A flat clock would starve sortie 1 or waste every Deploy after it.
+
+**Pacing falls out as a feature.** Build is flat while its tax grows; Deploy shrinks 65 → 22 s. Pre-Fight time per late sortie goes **120 s (sortie 1) → 77 s (sortie 5)** — the battle *accelerates*, planning front-loads onto the sortie where the plan is actually made, and the back half is quick, tight and mostly repair. Two derived clocks pointing opposite directions, no pacing rule.
+
+**Flagged upstream rather than papered over:** the 65 s late sortie-1 Deploy is the longest non-Fight phase in the game, and it comes from §2's grant of **9 slots at sortie 1**. The fix is a smaller opening grant with faster in-battle growth — but that is **§2's derivation to re-open**, and re-cutting the fleet to smooth a phase timer runs the dependency chain backwards. Logged as cross-reference debt.
+
+**Retired the option list:** A adopted; B (untimed) rejected — it breaks the only mechanism converting saved time into score; C (idle-bounded) rejected for a better reason than opacity — an extending timer prices *activity*, which would fight beat 5, the beat the floor exists to protect.
+
+### 3 · THE FIGHT CLOCK — 70 s backstop over a ~55 s natural sortie (Fight v1.6.0 §3)
+**A stale figure found and corrected.** Victory §3's `~45 s sortie` was derived against "a ~25-grid approach" — and the board derivation *in the same section* then set approach depth at **39 grids** (5 launch + 18 reading + 16 engagement). The sortie target was stale by the width of its own board. Re-derived beat by beat: 3 (countdown) + 5 (launch) + 18 (reading band) + 16 (engagement band) + 12 (withdrawal) = **~55 s natural**. Ship speed does not move — it is pinned twice over (the slow-contact tracking regime, and route 2 of the k₁ cross-check).
+
+**One passage per sortie is load-bearing** (the star arithmetic runs on arrivals *per passage*), which makes the **~40 s of transit a hard floor on sortie length that no tuning reaches**. A short sortie is only possible by ending it early — a repel in the reading band can close at ~25 s — never by making the passage quicker.
+
+`54 s (one passage) + 18 s (stationary-fire overhang) ≈ 70 s`
+
+The timer's job is to end a **stalemate**, never a fight in progress — ammo decides when the wave withdraws (Victory §5). Flat across the campaign, because approach depth is board geometry and the board is 128×80 throughout; what scales is **how much of the clock the wave uses**.
+
+**⚠ Method note worth keeping: the harsher-end bias RUNS BACKWARDS on this one clock.** For Build and Deploy, harsher = shorter. For the Fight, harsher = **longer** — a short clock cuts a held wave off before it empties its magazine and hands the player an outcome they never weathered. A clock that fires often is a clock doing the enemy's job badly. Written into Fight §3 explicitly so no future pass "corrects" it by shortening.
+
+Cross-check that held it: the clock also caps the Last Stand. At 100% final-Fight rollover, a decisive battle buys up to **70 s of unopposed building — one Build-sized window, and no more**. Materially longer and the Area lever is won at leisure; shorter and the pool-empties-early reward is too thin to chase.
+
+### 4 · THE ROLLOVER ECONOMY — restructured; two links were inert (Victory v2.9.0 §5)
+The GDD's three-phase chain was *kept whole* through every prior pass. Deriving the clocks killed two of its links.
+
+| Link | Rate | Status |
+|---|---|---|
+| Build → Deploy | 100% | **Kept** — same sortie, immediate, and the seam read is unbounded |
+| Deploy → Fight | — | **DROPPED.** The Fight clock is a *backstop, not a budget*: added seconds are inert in the ordinary case, and where the backstop *would* have fired they fund the wave's extra magazine. Saving Deploy time bought you a longer beating. |
+| Fight → next Build | — | **DROPPED.** 55 s covers the *worst* Build by construction; relief into a sufficient clock buys dead air. |
+| Deploy → the bank | 50% | **New** — replaces the dropped link |
+| Fight → the bank | 50% | The old 50% survives, reason intact |
+| Final Fight → Last Stand | 100% | Unchanged |
+
+**Why 50% and not 100%:** a Fight ended early is already paid twice — once in the wave you cut short, again in the banked time — so a full rate is a third payment for one act. What changed is that the other half is **no longer destroyed**. It was never a loss; it was an unnamed split.
+
+**The fix that actually mattered.** Under the old rule the Last Stand was funded by the *final sortie's remainder alone*, so the "visibly-growing Last Stand bank" that Build §2 and The Why §7 both lean on as a Zeigarnik hook **could not exist** — there was nothing to watch grow until the battle was over. A live contradiction between the economy and the psychology it served. Now every sortie feeds one visible rising number.
+
+**One currency, one sink:** *time you did not need → Last Stand → Area → score.* Build time does not convert (the clock is sufficient by construction); Fight time does not convert (the enemy sets the length); Last Stand time converts into Area, a star lever and a Battle Score component.
+
+**Consequence, stated honestly:** a breakthrough now hurts more, because the next Build inherits no relief. The anti-death-spiral guarantee (§6) is unaffected — it is a guarantee about *possibility*, and 55 s covers the ~45 s worst case with 10 s of discretion left. Recovery stays possible; it stops being comfortable. Per the standing bias, the correct direction.
+
+### 5 · THE MARKSMAN, RE-PRICED — ×1.5 → ×2.5 (Cannons v2.9.0 §4, §5)
+Held for this session per cont.20's rule against re-pricing twice; the flag is now **CLOSED**.
+
+1. **The anchor, applied properly.** Deliberate aimed fire ~**3 rpm** against a mechanical **15–30 rpm**. Our baseline reload is 4 s = **15 rpm** — the bottom of the mechanical band — so the ratio imports cleanly: **×5**.
+2. **The translation check kills ×5, and the game is what kills it.** At 20 s against an 8-grid diametral transit (r = 4, 8 s in zone) the Marksman gets 0.4 shots/passage ≈ **11 passages per core**. A committed slot that cannot pay inside one battle is not costly, it is dead. So the ceiling is a stated design requirement: *one well-sited Marksman must delete at least one core per battle.*
+3. **Inverting that gives the number.** 3 hits at the 0.67 Lone Wolf path-mean ≈ **4.5 shots**; a 7-sortie late battle offers ~**6 core-bearing passages** (not 7–10 — preparation sorties field no cores at all, which is the Marksman's designed dwell weakness doing arithmetic work). Required ≥ 0.75 shots/passage against an 8 s window caps reload at **≤ 10.7 s**. Take the cap, not below it: **10 s = ×2.5**.
+
+**Output:** 0.8 shots × 0.67 ÷ 3 = **≈0.18 cores/passage ≈ 1.07 per late battle** — the requirement it was inverted from. Per slot **≈3.4×** a forward-centred 4-gun group, down from ~5×.
+
+**Why it is elegant rather than merely harsher:** a 10 s reload against an 8 s transit means **the second shot structurally never lands on the same passage** — "a second shot gets you killed" enforced by geometry instead of by a multiplier, the doctrine finally translated rather than costumed. And the 2 s overhang means back-to-back contacts *steal* the shot, punishing the wide late wave precisely where the Marksman is already weakest.
+
+**⚠ A first for the method, worth recording.** This is the one case so far where the real-world anchor was **harsher than the game can afford**. Every prior translation check found an imported figure too slack and pushed against the player. Here the design's own structure — transit window × shots-to-kill × core-bearing passages — set the limit, not the player's comfort. The bias still applied: the number sits *at* the cap.
+
+### The ramp — one number changes across the campaign, and it is not a timer
+| Stage | Build | Deploy (S1 / S2+) | Fight | Sortie total | Battle |
+|---|---|---|---|---|---|
+| Cam 1–6 | 55 s (69% free) | 20 / 15 s | 70 s cap, ~45 s used | ~85–115 s | 3 sorties ≈ **4–5 min** |
+| Cam 7–22 | 55 s (55% free) | 40 / 15–20 s | 70 s cap | ~110–150 s | 5–6 sorties ≈ **10–15 min** |
+| Cam 23–32 | 55 s (45% free) | 65 / 20–25 s | 70 s cap, filled | ~140–190 s | 7–10 sorties ≈ **17–25 min** |
+| After a breakthrough | 55 s (18% free) | — | — | — | — |
+
+What escalates is the **rebuild tax**, and therefore freedom. Consistent with the choreography law (one screw per campaign) and with difficulty-as-cognition.
+
+### ⚠ Risks and debts opened by this session
+1. **CALL-OUT FOR JACK, the one open decision — the sortie's shape (Fight §3).** Build 55 s and the natural sortie 55 s are *identical*, both derived from locked inputs without either being fitted to the other. The Fight's natural length is **not** adjustable (shortening it means breaking the board derivation, which three independent requirements set at 36–40 grids, or raising ship speed, which collapses the tracking ceiling and doubles TKP, re-opening k₁ = 0.45). So the only lever is Build's discretionary margin. Four options written into Fight §3 with trade-offs: **1 · 55 s as written (recommended — what the arithmetic returned)**; 2 · 70 s Build-dominant, closer to Rampart's real ratio; 3 · 45–50 s Fight-dominant, but the worst Build becomes 100% mandatory and flirts with the red line; 4 · move the diff read out of Build via a damage-preview overlay during the Fight's read beats — the most interesting and the riskiest, since it spends Fight attention, the single point of failure.
+2. **Battle length is 17–25 min late against a battle-only checkpoint.** The "2–5 minute" target is void by ~5×. Interruption is covered (hide the app, resume on 3-2-1), but replaying a 25-minute battle to refine execution is a heavy ask of the determinism-as-strategy promise. **Campaign-structure question, not a timer one** — and the reason option 3's shorter battles are not purely a downside.
+3. **Deploy §2's slot table is the sortie-1 spike's real owner.** Logged, not acted on.
+4. **The per-gun 5 s constant is the number most likely to come back from prototype different.** If siting a gun on a 128×80 board with pan costs more than 5 s in practice, the sortie-1 spike is worse than 65 s and debt #3 becomes urgent rather than logged.
+5. **Spot-check owed:** Build §5's "3 late wall Builds" was computed under the *old* 20 s clock (⌈9 pieces ÷ ~5 per Build⌉ + re-plugs), so it is mildly circular now that the clock is 55 s. The tax was **not** re-opened per Jack's instruction, and the two-clock margin still reconciles — but if the wall clock is ever re-derived, that term is where the circularity lives.
+
+### Docs written
+**Build v1.7.0** (§2 the clock + the flat-clock law + the two deleted rules + the rollover rewrite; §5 hand-off marked answered) · **Deploy v1.5.0** (§11 fully rewritten from DEFERRED to RESOLVED — three-layer contradiction, the formula, the table, the pacing shape, the upstream flag, the retired options) · **Fight v1.6.0** (§3 gains the beat-by-beat sortie duration, the 70 s backstop derivation, the inverted-bias note, and the CALL-OUT) · **Victory v2.9.0** (§3 sea-speed row corrected — the ~45 s/~25-grid target was stale; §5 rollover economy restructured) · **Cannons & Towers v2.9.0** (§4 flag closed, §5 spec row re-derived, §9 archetype row, header note) · this journal.
+
+### Next
+The design queue's remaining big items, in priority order:
+1. **#6 MINI-GAMES (MAJOR — "the candy-crush").** Now fully unblocked *and* newly well-supplied: all three phases have owning docs and all three have derived clocks, so the 4-rung ladder (phase-parts → full phase → two phases → full run) can be built against real durations rather than placeholders. Docs: journal + MiniGames + Build + Deploy + Fight + Why. **Opus, high.**
+2. **#3 Terrain & theater mechanics (Layer A)** — the 10 environmental systems in depth, especially against a blind mind. Docs: journal + GDD + Fleet_Memory + Ships. **Opus, high.**
+3. **#4 Stonwryt economy & meta-progression** — currency, purchases, how stars/veterancy/3-cannon-carry/unlocks form the arc. Note *Alter Time* now has real clocks to act on. Docs: journal + GDD + Victory + Campaign. **Opus, medium.**
+4. **The cannon economy's own session** (tabled at cont.12b, and debt #3 above now points at it) — the slot table, the opening grant vs in-battle growth curve. Docs: journal + Deploy + Victory + Cannons. **Opus, medium.**
+5. **The numbers layer** — resolve magnitudes, air density, ammo loads, cognition-creep rate, troop/bomber counts, batching tiers. Probably earns a revived `Rivenkeep_Balance_Analysis.html` as a single tuning-values doc. **Opus, high.**
+
+Smaller debts carried: cannon **recoil damage to adjacent walls** (Victory §3 void list — still has a natural price as self-inflicted tax); the **per-lineage wall-damage rows** owed to Ships §5/§7/§8; the **Campaign §4** note that decapitation debuts at 5–8 guns.
+
+---
+
+## SESSION: 2026-09-04 (cont.25) — Timer follow-through: a hidden circularity fixed, the clock's display designed, wall-watching adopted, piecemeal damage added
+
+Jack, on cont.24's output: confirmed **Build = 55 s** (Option 1). Four more instructions, all rulings rather than questions:
+
+### 1 · Fixed — a circular figure Build §5 was still carrying
+Build §5 said wall construction takes **"1 Build early, 3 late"** — but that number was computed under the deleted 20 s clock (each Build could only lay ~5 pieces). Under the real 55 s clock, sortie 1 has **no tax yet** (nothing exists to repair), so nearly the whole 55 s is placement time: ~47–50 s at ~3.5 s/piece is **13–14 pieces**, comfortably above the 7–9 a late wall needs. **Construction now finishes in one Build, every time, at every campaign stage.** The two-clock "race" in §5/§2 simplifies to one race: not "can I finish the fort in time," but "can I keep repairing it faster than the fleet breaks it" — the rebuild tax, alone, from sortie 2 on.
+
+The same stale figure was buried a second time, in §11's tax-budget derivation (`wall Builds + 1 recovery + (sorties × T) ≤ sorties`). Re-run with wall Builds = 1 (not 1/3): the late-game bound loosens from **T ≤ 0.43 to T ≤ 0.71** — considerably more schedule headroom than previously known. The tax pieces themselves (2/3/3–4) were derived from combat mechanics, not fitted to this bound, so they don't move; what moves is the margin, which is exactly where the new piecemeal-damage mechanic (below) has room to land.
+
+### 2 · The countdown's display — seconds underneath, days on screen
+Per Jack: keep every mechanical number in seconds (nothing above changes), but the on-screen countdown should read in **days**, for siege realism. Conversion: **1 day ≈ 18 s**, so the flat 55 s Build reads as **"3 days."** Presentation layer only — round numbers, not derived to a decimal, since it's flavor, not mechanics.
+
+The payoff: the same freedom-table numbers from §2, translated, become the exact fiction Jack described — *"workers need X days; the fleet returns in 3."*
+
+| Stage | Tax, in days | Reads as |
+|---|---|---|
+| Cam 1–6 | ~1 day | "Repairs take about a day. Two more to build as you like." |
+| Cam 7–22 | ~1.5 days | "A day and a half forced, a day and a half free." |
+| Cam 23–32 | ~1.5–2 days | "Most of your time is already owed before you start." |
+| After a breakthrough | ~2.5 days | "You have half a day. Patch the breach and hope." |
+
+Left open, not decided: whether Deploy (dusk) and Fight (the night's siege) get a matching frame. Build's display works standalone either way.
+
+### 3 · Watching the Wall — adopted, and it's simpler than "Option 4" was
+Jack's framing: the commander's job in the Fight includes monitoring what will need rebuilding and what needs enclosing; Build should feel like Rampart — pressure to close the castle, sometimes just barely enough time. This landed as a real mechanic, written into **Fight §3b** (new section) rather than as the tabled "damage-preview overlay":
+
+**The rule is the one already governing cannon health, applied to walls.** A wall segment shows nothing until it's hit; then it shows its state (crack at "doomed," rubble at destroyed) and stays visible for the rest of the Fight. Required-castle walls get slightly stronger visual weight, since that's the actual lose condition. No new fidelity channel — it's the existing "your side, hard rail" bucket (Fight §4), the same one cannon health already sits in.
+
+**What it does to the feel:** you watch your wall crack while you're still mid-Fight, unable to touch it — the literal Rampart moment. By the time Build opens, you already know the repair bill because you watched it accrue.
+
+**What it costs and buys back, honestly:** costs one more thing to watch during the Fight's already-scarce attention (§5) — real added load, not free. Buys back: the Build-phase diff-read (previously 3–5 s of "what changed since last Build") shrinks to a ~1–2 s confirmation, since you already know roughly what broke. **The clock does not move** — 55 s was set against a conservative worst case and stays there; the saving is a small, honest margin (~13 s discretionary at the worst case instead of the nominal 10 s), not a re-tune. Small but real, and it compounds: a permanent few seconds of margin, every sortie, forever.
+
+Cross-referenced into **Victory §2**, since it's also where the mechanic pays off on fairness: the player is never surprised cold by a falling enclosure count — they watch the risk build during the Fight, which is what the red line (no board punishes a threat that gave no reason to be watched) actually requires.
+
+### 4 · Piecemeal damage — ships and troops that spread hits instead of concentrating them
+Jack: ships and troops should be able to damage walls so an area becomes hard to rebuild — "like hitting every other wall piece." Built on a mechanism that already existed, no new system:
+
+**The existing isolation-cleanup rule (Build §3, step 4) already removes any wall block touching 0–1 neighbours, single-pass.** If a damage source hits cells 1, 3, 5 instead of 1, 2, 3 — skips instead of clusters — cells 2 and 4 now touch zero remaining wall-neighbours and get cleared automatically, for free, by a rule already in the doc. Three hits produce a five-cell-wide ruin instead of a three-cell one.
+
+Given a home: this is what an **uncoordinated** attacker does instead of concentrating (Ships §9's Coordination axis, already the legibility and contact-count dial, now also the "does a gap breach or does it spread" dial). A coordinated Bombard group still breaches immediately, unchanged. An uncoordinated one, or independent troop squads landing at separate points along a beach, don't breach — they leave a wider, worse-shaped ruin for fewer raw hits than concentrating would have cost. **Neither dominates**: concentrated fire is scarier now; scattered fire is scarier later. New row added to Build §11's causes table (`Troops landing, PIECEMEAL`), old row renamed `Troops landing, coordinated` for contrast.
+
+Scope note written in: this changes gap **shape**, not gap **count** — the 2–3 gaps/sortie budget is untouched, and the standing rule against proliferating small gaps (§7) isn't violated, since a piecemeal event still reads as *one* gap on the ledger, just a worse one.
+
+### Docs written
+**Build v1.9.0** (§2 gains the days-display block and a margin footnote; §5's construction-race figure fixed in two places; §11 gains the piecemeal-damage row + mechanism paragraph + the corrected T-bound + the diff-read discount) · **Fight v1.8.0** (§3's CALL-OUT replaced with a RESOLVED record; new §3b "Watching the Wall" section, added to nav) · **Victory v2.11.0** (§2 gains a one-line cross-reference to the wall-watching mechanic's fairness payoff) · this journal.
+
+### What's still open, honestly
+- Deploy and Fight don't yet have a matching day/night display frame — flagged as an option, not a gap, since Jack asked specifically about Build.
+- The wall-watching mechanic adds real attention load to the Fight phase (§5's existing bottleneck) — this is acknowledged in the doc as a genuine trade, not a free improvement, and is worth a specific eye in prototype: does watching wall state compete badly with contact-tracking on a wide late wave?
+- The piecemeal-damage mechanism assumes walls are effectively one cell thick for the purposes of the orphan rule (a cell between two gaps has no other neighbours to save it). True for a simple perimeter; worth a second look if thick/layered walls ever become a base-game feature rather than a War II hook.
+
+### Next
+Unchanged from cont.24's recommendation: **#6 mini-games** is the natural next session — the ladder can now be built against real durations, including the new days-display fiction and the wall-watching drill. Docs: journal + MiniGames + Build + Deploy + Fight + Why. **Opus, high.**
+
+### cont.25 addendum — the clock tuned to 54 s for the display, one message after cont.25 landed
+Jack, immediately after reviewing cont.25: the 18 s/day conversion is right; move Build from 55 to 54 s so the display reads an exact **3.0 days**, not 3.06. Design the readout as two numbers at two speeds — a large day counter (3→2→1→0, one tick per 18 s) and a smaller hour counter sweeping 23→0 *within* each day, resetting every time the day ticks. Since 18 s holds 24 hour-values, the hour figure changes every **18 ÷ 24 = 0.75 s** — faster than a real second on purpose, so the small number visibly races while the big number holds still. That mismatch is the anxiety Jack wanted, cheaply, with no new mechanic.
+
+**Applied.** Build's clock: **54 s** (45 s tax floor + 9 s discretionary, down from 10 s — the tax floor doesn't move, only the remainder shrinks by the one second the display needed). Freedom table barely moves (69/54/44/17%, was 69/55/45/18%). A genuinely nice side effect: the Fight's natural sortie already summed to **54 s exactly** from its own independent beats (3+5+18+16+12) — previously rounded up to "55 s" in the write-up for a clean match with Build's old 55 s. That rounding is no longer needed: Build and the Fight now land on the *identical* number, 54, from two derivations that never touched each other. Better coincidence than the one it replaces.
+
+Every "55 s" reference chased down and fixed across Build, Fight, and Victory (nine occurrences total); nothing left pointing at the old number.
+
+**Versions:** Build **v1.9.0** · Fight **v1.8.0** · Victory **v2.11.0**.
 
 ## RECENT SESSIONS — the module-doc redesign arc (2026-08)
 
@@ -1880,5 +2067,3 @@ Grok generated a "CANNON CONFIG" mockup of the domain switch. Verdict:
 - **⚠ SIGNAL:** Grok's caption ("switched to Air early… 5,4,3,2,1,0 becomes AIR") used the SIMPLE "just keep counting down" model and did NOT represent our late-switch **reverse (longer-path)** behaviour. An intelligent system asked to visualise the rule defaulted to the simpler one and dropped the reversal — a yellow flag that the longer-path rule may be too clever to read. NOT changing it now, but **"longer-path vs. just-continue-the-count" is a top item to settle in the M4 prototype.** (For an *early* switch, both models agree; only the late-switch reversal differs.)
 
 **DESIGN PHILOSOPHY (user, explicit):** prefers "too much that can be edited down" over "too little and unimaginative." The design phase is for dreaming big and exploring; parked ideas are kept because they may inspire others. If the game never ships, that's OK — the design is fun in itself. North star for this phase = **elegance: everything feels natural and fits together** (evaluate for coherence/fit, not scope). Assistant should be in explore-mode and save scope-scolding for explicit pair-down asks. Design's recurring signature to preserve: the same principle expressed across many layers (coverage-vs-concentration; lob→enclose→victory; falloff+crazy-Ivan+hold). **190 boards plan:** define board 1 + board 190 (hardest), interpolate between — treat difficulty as a small vector of parameters (AoR scaling, falloff, threat tempo, approaches, fog density, domain pressure); campaign = a path through that space; theaters = regions; bosses = spikes. (Future session.)
-
----
