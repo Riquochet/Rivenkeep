@@ -1,6 +1,6 @@
 # Rivenkeep — Project Journal
 **Last Updated:** 2026-09-03 (cont.20c)
-**Design docs (current):** GDD v6.7.0 (paired-down hub) · Removed-Content Archive v1.3.0 · The **Why v2.4.0** · Build v1.5.0 · Deploy v1.4.0 · Shape Catalog v1.0.0 · **Cannons & Towers v2.7.0** · **Ships v2.7.0** · **Fleet Memory v2.4.0** · **Campaign v2.4.0** · **Victory v2.7.0** · Fight v1.5.0 · Mini-Games v0.1.0. Governed by The Why. **Every HTML doc single-sources its own version** — one `--doc-version` in `:root`, rendered via `<span class="ver"></span>`. **Design detail lives in the module docs — this journal holds the control panel, the current design canon, and session records.**
+**Design docs (current):** GDD v6.7.0 (paired-down hub) · Removed-Content Archive v1.3.0 · The **Why v2.4.0** · **Build v1.6.0** · Deploy v1.4.0 · Shape Catalog v1.0.0 · **Cannons & Towers v2.8.0** · **Ships v2.8.0** · **Fleet Memory v2.4.0** · **Campaign v2.4.0** · **Victory v2.8.0** · Fight v1.5.0 · Mini-Games v0.1.0. Governed by The Why. **Every HTML doc single-sources its own version** — one `--doc-version` in `:root`, rendered via `<span class="ver"></span>`. **Design detail lives in the module docs — this journal holds the control panel, the current design canon, and session records.**
 **Phase:** DESIGN — ongoing (not prototyping yet; see Design Philosophy).
 **Stack:** Flutter + Dart + Flame · iOS + Android · IntelliJ. *(Swift + SpriteKit / CloudKit / GameKit / StoreKit were evaluated and rejected as Apple-only.)*
 **Layout:** ⭐ panel → DESIGN CANON → RECENT SESSIONS → ARCHIVE (full pre-redesign history, preserved).
@@ -1056,6 +1056,41 @@ Cannons & Towers **v2.6.0** (§4 falloff rebuild + the derivation box + the chor
 Table item **#4 — the rebuild tax** (wall damage per sortie), which is the last missing input to the wall clock and therefore to the race in §2. Docs: journal + Build + Ships + Victory. **Opus, medium.** Then #5 (the three phase timers), which is now genuinely unblocked — the fleet's clock is fully derived.
 
 Two smaller debts worth picking up opportunistically: the **Campaign §4** note that decapitation debuts at 5–8 guns, and the **Lone Wolf coordination = 3** anchor if any real-game precedent turns up.
+
+---
+
+## ⚠ RECOVERY NOTE — 2026-09-04: Cannons/Ships/Victory were lost, then recovered from chat history
+
+**What happened.** cont.19 and cont.20 (below) were real sessions that produced real file writes — Cannons & Towers, Ships and Victory all reached **v2.8.0**, and this journal was updated to say so. But at some point after that, **the actual HTML files reverted to their pre-cont.19 state (v2.6.0)** while the journal kept the v2.8.0 record. Cause unconfirmed — most likely a stale local copy re-uploaded over the real ones — but the effect was that a later session (cont.21, the rebuild tax) started from that stale v2.6.0 Cannons file without knowing cont.19/20 had already touched it.
+
+**What was recovered.** The cont.19/20 chat was still open. Read back through it and pulled the exact edit scripts (the actual `old_str`/`new_str` pairs used to write Cannons/Ships/Victory to v2.8.0) rather than reconstructing from the session-log prose. Re-applied them to the current files:
+- **Ships v2.8.0** — clean, no conflict with anything cont.21 touched. Recovered in full: the shared-screen curve re-derived from the 1943 convoy operations-research finding (exponent 0.775, replacing the geometric √x), the translation check on what transfers from that anchor and what does not, and the four-doctrine table for which formations are escort-scaled at all.
+- **Victory v2.8.0** — same, clean. Recovered in full: rosters rebuilt on the real curve (*Q* = 4/9/11, superseding 5/10/15), core-kill rate derived from the approach-coverage limit instead of assumed, the consequence that pure decapitation can no longer reliably finish inside the sortie cap, the wide-or-heavy sortie law, and the felt-target law.
+- **Cannons & Towers — CANNOT be cleanly recovered. Two incompatible sessions wrote the same section.**
+
+### ⚠ The real conflict: the Lone Wolf floor
+Both cont.19 (this chat, recovered) and cont.21 (a separate chat, already delivered as the working v2.7.0) independently treated "Lone Wolf floor taken as a midpoint" as their job to fix — same flagged item, two different derivations, two different answers:
+
+| | Method | Result |
+|---|---|---|
+| **cont.19/20 lineage** | Anchored on Vietnam sniper rounds-per-kill (1.3–1.7/kill → P(hit) 0.67 → F = 2P−1) | **Coordination 0.5, F = 34%** — down from 64%. Also fixes a real standing contradiction: §9 already called the Lone Wolf "penalty when grouped" while the old table gave two grouped Lone Wolves the *highest* floor in the game (~90%). cont.19's number resolves that; cont.21's does not touch it. |
+| **cont.21 lineage** (delivered, currently live as v2.7.0) | Two-shot passage window: a hull needs 3 hits, one Lone Wolf gets exactly 2 shots per passage, so require 2 passages to kill reliably | **F = 62% required vs. 64% set — 64% stands, unchanged**, just re-labeled as derived |
+
+These cannot both be canon. cont.19's is anchored to the same real-world evidence class the standing rule asks for and independently resolves a contradiction that cont.21's leaves standing. cont.21's Marksman reload fix (×(1+0.25·shields-per-core)) is also a different mechanism from what cont.20 flagged as the correct move — cont.20 pointed at a *real fire-rate* anchor (deliberate aimed fire ~3 rpm vs. a mechanical 15–30 rpm) that cont.21 never used.
+
+**Recommendation, not a ruling:** the cont.19/20 lineage looks more sound — it's anchored, and it closes an open contradiction cont.21 didn't know existed. But this is Jack's call, not mine to make unilaterally. Both full candidate files exist; pick one and the other's numbers (Lone Wolf F=34%, Marksman reload tied to real fire-rate) become canon, or say if a third path is wanted.
+
+### ✅ RESOLVED (cont.23) — Jack chose the cont.19/20 lineage
+**Cannons & Towers is now v2.8.0, the cont.19/20 lineage.** The Lone Wolf floor is **coordination 0.5, F = 34%**, derived from Vietnam sniper rounds-per-kill — not the cont.21 alternative (64% re-labeled as derived). This also closes the standing §9-vs-§4 contradiction that cont.21's version left open.
+
+**Consequence for the Marksman:** cont.21's shields-per-core reload formula is **discarded along with the rest of that lineage**. The Marksman reload reverts to a flat **×1.5**, now carrying the kill-time derivation cont.19 gave it, and stays flagged as **translated too gently** — per cont.20's own deferral, it waits for item #5 (the phase timers) rather than being re-priced twice.
+
+**Not discarded:** Build v1.6.0's conclusion that late contacts should arrive at 8 by Cam 23 and hold. That came from the rebuild-tax's own reasoning (gap-count escalation and contact-count escalation can't both turn at once) and lives in Build.html, not Cannons — it's independent of this decision and happens to agree with the direction cont.20 flagged.
+
+
+
+### Also unresolved: was cont.21's Build v1.6.0 work checked against Victory's real Q/core-count numbers?
+Build v1.6.0 (the rebuild tax) used "14 cores across 7 convoys" and "5–6 wall-breaking cores" — both still hold under the recovered Victory v2.8.0 roster (14 cores unchanged; Bombard 3 + Breacher 2 + Leviathan ~1 ≈ 6). Sortie range (3–10) is also unchanged. So Build v1.6.0 does **not** need rework, but this was a spot-check, not a full re-derivation — worth a second look if #5 (the timers) turns up something that doesn't reconcile.
 
 ---
 
