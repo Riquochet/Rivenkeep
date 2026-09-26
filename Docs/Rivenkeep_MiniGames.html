@@ -6,7 +6,7 @@
 <title>Rivenkeep — Mini-Games</title>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--doc-version:"v0.1.0";--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff;--sea:#4fc3f7;--land:#8bc34a;--air:#ce93d8}
+:root{--doc-version:"v2.0.0";--bg:#0a0c10;--surface:#12151c;--surface2:#1a1e28;--border:#2a2f3d;--text:#e0e4ec;--dim:#8891a4;--accent:#4fc3f7;--gold:#ffd54f;--danger:#ef5350;--success:#66bb6a;--warn:#ffa726;--link:#4fc3f7;--purple:#9b7dff}
 .ver::after{content:var(--doc-version)}
 
 *{margin:0;padding:0;box-sizing:border-box}
@@ -23,24 +23,29 @@ section{padding:34px 0;border-bottom:1px solid var(--border)}
 h2{font-family:'Chakra Petch',sans-serif;font-size:1.4rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px}
 h2 .n{color:var(--dim);font-size:.9rem;margin-right:10px}
 h3{font-family:'Chakra Petch',sans-serif;font-size:1rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:22px 0 8px;color:var(--accent)}
+h4{font-family:'Chakra Petch',sans-serif;font-size:.85rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin:16px 0 6px;color:var(--text)}
 p{margin-bottom:10px;font-size:.9rem}
 a{color:var(--link)}em{color:var(--text);font-style:italic}
 code{font-family:'IBM Plex Mono',monospace;font-size:.82em;background:var(--surface2);padding:1px 5px;border-radius:3px;color:var(--gold)}
-ul{margin:6px 0 12px 20px}li{font-size:.88rem;margin-bottom:6px}
+ul,ol{margin:6px 0 12px 20px}li{font-size:.88rem;margin-bottom:6px}
 .s{background:var(--surface);padding:14px 18px;margin:14px 0;border-radius:0 6px 6px 0;border-left:3px solid var(--border)}
 .s .ct{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:.8rem;margin-bottom:5px;text-transform:uppercase;letter-spacing:1px;color:var(--gold)}
-.s.pillar{border-left-color:var(--accent)}.s.warn{border-left-color:var(--warn)}.s.warn .ct{color:var(--warn)}.s.future{border-left-color:var(--purple)}.s.future .ct{color:var(--purple)}
+.s.pillar{border-left-color:var(--accent)}.s.warn{border-left-color:var(--warn)}.s.warn .ct{color:var(--warn)}
+.s.call{border-left-color:var(--gold);background:rgba(255,213,79,.06)}.s.call .ct{color:var(--gold)}
+.s.derived{border-left-color:var(--success)}.s.derived .ct{color:var(--success)}
+.s.ruling{border-left-color:var(--purple);background:rgba(155,125,255,.06)}.s.ruling .ct{color:var(--purple)}
+.eq{font-family:'IBM Plex Mono',monospace;font-size:.84rem;background:var(--surface2);border:1px solid var(--border);border-radius:5px;padding:10px 14px;margin:12px 0;text-align:center;color:var(--gold)}
+.rk{color:var(--gold);font-size:1.05em;letter-spacing:1px}
 table{border-collapse:collapse;width:100%;margin:12px 0}
 th,td{padding:7px 10px;border:1px solid var(--border);font-size:.8rem;text-align:left;vertical-align:top}
 th{background:var(--surface);color:var(--accent);font-family:'Chakra Petch',sans-serif;text-transform:uppercase;font-size:.64rem;letter-spacing:1px}
 .tag{display:inline-block;padding:1px 7px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;text-transform:uppercase;letter-spacing:.5px}
-.t-land{background:rgba(139,195,74,.15);color:var(--land);border:1px solid rgba(139,195,74,.35)}
-.t-sea{background:rgba(79,195,247,.13);color:var(--sea);border:1px solid rgba(79,195,247,.35)}
-.t-air{background:rgba(206,147,216,.15);color:var(--air);border:1px solid rgba(206,147,216,.35)}
+.t-b{background:rgba(255,213,79,.13);color:var(--gold);border:1px solid rgba(255,213,79,.35)}
+.t-d{background:rgba(155,125,255,.15);color:var(--purple);border:1px solid rgba(155,125,255,.35)}
+.t-f{background:rgba(239,83,80,.13);color:var(--danger);border:1px solid rgba(239,83,80,.35)}
 .full{color:var(--success);font-weight:600}.red{color:var(--danger)}.mid{color:var(--warn)}.dim{color:var(--dim)}
 .lead{font-size:1.02rem;color:var(--text)}
 .pill{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'IBM Plex Mono',monospace;font-size:.62rem;background:var(--surface2);border:1px solid var(--border);color:var(--dim)}
-figure{margin:16px 0;text-align:center}figcaption{font-size:.76rem;color:var(--dim);margin-top:8px;font-style:italic}
 footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-family:'IBM Plex Mono',monospace;border-top:1px solid var(--border)}
 @media(max-width:768px){header{padding:32px 16px 22px}h1{font-size:1.35rem}.ctn{padding:0 16px}nav{padding-left:16px;padding-right:16px}th,td{font-size:.73rem;padding:5px 6px}}
 #history{padding:20px 0 26px;opacity:.85}#history h2{font-family:'Source Sans 3',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.5px;text-transform:none;color:var(--dim);margin-bottom:6px}#history p{font-size:.68rem;color:var(--dim);line-height:1.5}#history table{font-size:.66rem;margin:8px 0}#history th{background:transparent;color:var(--dim);font-size:.6rem;font-weight:600;border-color:var(--border)}#history td{color:var(--dim);font-size:.66rem;line-height:1.5;border-color:var(--border)}
@@ -49,109 +54,496 @@ footer{text-align:center;padding:30px;color:var(--dim);font-size:.72rem;font-fam
 <body>
 <header>
 <h1>Rivenkeep — Mini-Games</h1>
-<div class="sub">The Skill On-Ramp — How Players Become Strategists</div>
+<div class="sub">The Yard and the Muster — How Players Become Strategists</div>
+<div class="meta">Full design · <span class="ver"></span></div>
 </header>
 
 <nav>
 <a href="#is">What This Is</a>
 <a href="#rules">Non-Negotiables</a>
-<a href="#ladder">The Skill Ladder</a>
-<a href="#packs">Starting Packs</a>
-<a href="#downside">The No-Downside Reframe</a>
-<a href="#scope">What Lives Here</a>
-<a href="#open">Open / Pending</a>
-<a href="#history">Version History</a>
+<a href="#downside">No-Downside</a>
+<a href="#rooks">Rooks</a>
+<a href="#doors">The Two Doors</a>
+<a href="#boards">Group Boards</a>
+<a href="#ladder">The Ladder</a>
+<a href="#atoms">Atom Inventory</a>
+<a href="#drills">The 20 Groups</a>
+<a href="#levers">Levers &amp; Seeds</a>
+<a href="#clocks">Durations &amp; Clock</a>
+<a href="#stonwryts">Stonwryts</a>
+<a href="#streak">The Streak</a>
+<a href="#coach">The Coach</a>
+<a href="#onboard">Onboarding</a>
+<a href="#bounds">Boundaries</a>
+<a href="#fail">Failure Philosophy</a>
+<a href="#seed">The GDD's Seven</a>
+<a href="#callouts">CALL-OUTs</a>
+<a href="#check">North-Star Check</a>
+<a href="#history">History</a>
 </nav>
 
 <div class="ctn">
 
 <section id="is">
 <h2><span class="n">1</span>What This Doc Is</h2>
-<p class="lead">The mini-games are a <strong>major part of the game — the "candy-crush" of Rivenkeep</strong> — and they get designed to the same standard as everything else. This doc is the <em>starting</em> design: the requirements, the skill-building structure, and the good bones pulled out of the GDD's <a href="Rivenkeep_GDD.html">Skill-Building Game Packs</a>. It is a brief, not the finished design (see <a href="#open">Open / Pending</a>).</p>
-<div class="s pillar"><div class="ct">Why they exist — the on-ramp to the north star</div><p>Rivenkeep's north star is <strong>strategy is the fun</strong> — but that fun is only reachable by a player who can <em>read</em> the fleet, and reading is a learned skill. The mini-games are how a raw player builds that skill until the strategy game becomes intuitive. They are recorded as a supporting law in <a href="Rivenkeep_Why.html">The Why</a> (§4, "skill is taught, not assumed"): a player who can't read the mind can't enjoy the strategy, so the game must build the reader. They also defend two of the Why's standing tensions — they grow the <em>reasoning</em> that stops retry becoming brute-force, and they train the <em>legibility-reading</em> the system leans on as it combines.</p></div>
+<p class="lead">The mini-games are a <strong>major part of the game — the "candy-crush" of Rivenkeep</strong>. This is the full design, second pass, rebuilt around Jack's rulings on v1.0.0. Headline changes: mini-games get <strong>their own rating currency</strong> (<a href="#rooks">Rooks</a>, <span class="rk">♜</span>) completely separate from campaign stars; the unit of play is a <strong><a href="#boards">group board</a></strong> of levels you climb, not a single drill; <strong>the battle rung is cut</strong> — battles are campaign-only; the Muster runs a <strong>7-day plan</strong>; and there is a <strong>Stonwryt grind door</strong> that is inflation-neutral by arithmetic.</p>
+<div class="s pillar"><div class="ct">Why they exist — the on-ramp to the north star</div><p>Rivenkeep's north star is <strong>strategy is the fun</strong> — but that fun is only reachable by a player who can <em>read</em> the fleet, and reading is a learned skill. The mini-games are how a raw player builds that skill until the strategy game becomes intuitive. Recorded as a supporting law in <a href="Rivenkeep_Why.html">The Why</a> (§4, "skill is taught, not assumed"). They also defend two of the Why's standing tensions — they grow the <em>reasoning</em> that stops retry becoming brute-force, and they train the <em>legibility-reading</em> the system leans on as it combines.</p></div>
+<div class="s ruling"><div class="ct">The line that organises this whole doc — Jack, cont.27</div><p><em>"The campaigns should seem to be hard. Edge of Tomorrow took 300–400 days. That is a little extreme, but we do want them to fail. The mini games are the opposite. They might fail the first time, but they won't the second."</em></p><p>Which resolves into one sentence that decides a dozen smaller questions below: <strong>the Yard is where you succeed; the campaign is where you fail.</strong> That inversion is also what makes the whole prescription system work — a struggling player is being sent somewhere they are going to win. Full treatment in <a href="#fail">§17</a>.</p></div>
 </section>
 
 <section id="rules">
 <h2><span class="n">2</span>The Non-Negotiables</h2>
-<p>Jack's requirements — the fixed points the full design must honour:</p>
+<p>Jack's requirements. <strong>These plus everything marked <span class="tag t-d">ruled</span> below are the locked content</strong>; the rest is derived and correctable.</p>
 <ul>
-<li><strong>They build ALL the skill needed to intuit the game.</strong> Every drill teaches a real skill the campaign will demand — never a throwaway diversion.</li>
-<li><strong>Built entirely from the real game's mechanics.</strong> Same walls, cannons, ships, terrain, wind, enclosure as the campaign. <span class="dim">(This is the GDD's own aligned principle: "no mini-games outside the game's mechanics." Kept — the name "mini-games" is Jack's; the substance is skill-drills inside the real game, not separate match-3-style toys.)</span></li>
-<li><strong>Fun, with ZERO downside.</strong> No punishment, no loss states that take something away. Players should <em>want</em> to replay them over and over — this is the retention engine, the candy-crush hook.</li>
-<li><strong>Endlessly replayable.</strong> A drill you return to for its own sake, not a checkbox you clear once.</li>
-<li><strong>Designed to full standard.</strong> Design-first, in depth, verified against game theory and real games, honest about seams — never an afterthought.</li>
+<li><strong>They build ALL the skill needed to intuit the game.</strong> Every drill teaches a real skill the campaign will demand.</li>
+<li><strong>Built entirely from the real game's mechanics.</strong> Same walls, cannons, ships, terrain, wind, enclosure as the campaign.</li>
+<li><strong>Fun, with ZERO downside.</strong> No punishment, no loss states that take something away.</li>
+<li><strong>Endlessly replayable</strong> — including in the late campaign, not just as onboarding.</li>
+<li><strong>The retention engine.</strong> "It seems like you are playing a game, but you are learning how to play the campaigns."</li>
+<li><strong>Coaching, not diagnosing.</strong> <span class="tag t-d">ruled</span> "The AI isn't just telling you what is wrong, it is coaching you to be better."</li>
+<li><strong>No battles.</strong> <span class="tag t-d">ruled</span> A battle is reserved entirely for the campaign.</li>
+<li><strong>No leaderboard.</strong> <span class="tag t-d">ruled</span> The Yard is personal; the leaderboard is campaign-only.</li>
+<li><strong>At least one minute per level</strong> <span class="tag t-d">ruled</span> — "or it is over too quickly and didn't teach anything." Longer preferred.</li>
+<li><strong>Progression:</strong> <span class="tag t-d">ruled</span> beat one level, move to the next.</li>
+<li><strong>Onboarding IS the mini-games</strong> <span class="tag t-d">ruled</span> — and skippable. "Who are we to tell them that they are not ready."</li>
+<li><strong>Never condescending.</strong> <span class="tag t-d">ruled</span> Always a coach: gentle early, tough later, never talking down.</li>
 </ul>
-</section>
-
-<section id="ladder">
-<h2><span class="n">3</span>The Skill Ladder — The Core Structure</h2>
-<p class="lead">The mini-games assemble a player's skill <strong>bottom-up</strong>, in four rungs (Jack's structure):</p>
-<table>
-<tr><th>Rung</th><th>Teaches</th><th>Why it comes here</th></tr>
-<tr><td><strong>1 · Parts of a phase</strong></td><td>One isolated skill inside one phase — wall placement, piece efficiency, reading wind, cannon targeting, reading a ship's movement.</td><td>Introduce → Isolate: a single new thing at a time (the Why's teaching law). The atoms of play.</td></tr>
-<tr><td><strong>2 · A full phase</strong></td><td>A whole phase end-to-end — a complete Build, or a complete Fight — combining the parts into one coherent phase.</td><td>Combine the atoms into the first whole unit of the loop.</td></tr>
-<tr><td><strong>3 · Two phases together</strong></td><td>The seams between phases — Build→Deploy, or Deploy→Fight — where a decision in one phase pays off (or bites) in the next.</td><td>The seams are where real strategy starts: planning for what comes next. This is the rung the current packs under-serve (see below).</td></tr>
-<tr><td><strong>4 · A single full run</strong></td><td>One complete Build → Deploy → Fight loop — the whole game in miniature.</td><td>The graduation drill: the player now runs the entire loop, ready for the campaign.</td></tr>
-</table>
-<div class="s"><div class="ct">The ladder mirrors the Why's Introduce → Isolate → Combine</div><p>This is the same law the campaign obeys, pointed at teaching the <em>player</em> instead of escalating the <em>enemy</em>: never more than one new thing at a time, challenge from combining the understood. The mini-games teach the mechanics in isolation and in small combinations; the campaign then teaches the <em>minds</em> those mechanics face.</p></div>
-</section>
-
-<section id="packs">
-<h2><span class="n">4</span>The Starting Packs — Seeded From the GDD</h2>
-<p>The GDD already sketches seven "Game Packs." They are a strong seed — each teaches a real skill in the real mechanics — and they map (imperfectly) onto the ladder. Kept as the starting set, to be systematised in the full design:</p>
-<table>
-<tr><th>Pack (GDD)</th><th>What it drills</th><th>Teaches</th><th>Ladder rung</th></tr>
-<tr><td><strong>Speed Enclosure</strong></td><td>Enclose as much area as possible under a time limit.</td><td>Fast wall placement, spatial planning under pressure.</td><td>1 · Build part</td></tr>
-<tr><td><strong>Efficient Enclosure</strong></td><td>Enclose a target % with a limited piece budget, no timer.</td><td>Piece efficiency, coverage per piece.</td><td>1–2 · Build part → full Build</td></tr>
-<tr><td><strong>Wind Mastery</strong></td><td>Build in strong, shifting wind.</td><td>Drift-stop exploitation, windbreak placement.</td><td>1 · Build part</td></tr>
-<tr><td><strong>Ship Hunting</strong></td><td>Sink approaching ships with pre-placed cannons (no building).</td><td>Cannon targeting, reading ship movement &amp; weaknesses.</td><td>1 · Fight part</td></tr>
-<tr><td><strong>Castle Defense</strong></td><td>Build walls, then watch troops attack the castle.</td><td>Defensive wall design, anticipating breach points.</td><td>3 · Build→Fight seam</td></tr>
-<tr><td><strong>Cannon Endurance</strong></td><td>Deploy cannons, survive multiple Fight waves without rebuilding (cannon health carries).</td><td>Placement optimisation, type selection, cannon preservation.</td><td>3 · Deploy→Fight seam</td></tr>
-<tr><td><strong>Full Siege</strong></td><td>A compressed full-loop battle: one Build, one Deploy, one Fight.</td><td>The complete loop under unusual constraints.</td><td>4 · Full run</td></tr>
-</table>
-<div class="s warn"><div class="ct">Gap to close in the full design — the ladder isn't systematic yet</div><p>The seven packs are a grab-bag, not a clean ladder. Rung 1 (parts) is well covered on the Build side but thin on the Fight/Deploy side; there is no deliberate <strong>Rung 2 "one full phase"</strong> drill distinct from the parts; and <strong>Rung 3 "two phases"</strong> is only implied (Castle Defense, Cannon Endurance). The full design should lay the packs onto the four rungs deliberately — a clear progression a new player climbs — rather than a themed rotation. The rotation/cadence (how packs are surfaced) is a separate concern from the ladder (what they teach).</p></div>
 </section>
 
 <section id="downside">
-<h2><span class="n">5</span>The No-Downside Reframe — The #1 Design Decision</h2>
-<div class="s warn"><div class="ct">A live contradiction with the GDD, to resolve</div><p>The GDD's current packs are <strong>"complete-or-lose"</strong>: you climb levels 1→5, and <em>a loss ends the run</em> (Level-1 loss = no reward). That is a real <strong>downside</strong> — losing costs you the run — and it directly conflicts with Jack's rule that the mini-games have <strong>zero downside</strong> and make players want to replay endlessly. The reframe is the first thing the full design must settle.</p></div>
-<p><strong>Direction (proposed, to design out):</strong> make the drills <em>progress-only</em>. A run never takes anything away — you always keep your best result, and replaying can only match or improve it. "Levels" become a personal-best climb (beat your own mark), not a lose-and-restart gauntlet. Failure just means "that attempt didn't beat your best — try again," with no loss of standing, currency, or streak. This keeps the tension that makes a climb fun (can I do better?) while removing the sting that makes players stop. The exact shape — endless-climb vs fixed rungs, how "better" is scored per pack — is for the full design.</p>
+<h2><span class="n">3</span>The No-Downside Model</h2>
+<p class="lead">Carried from v1.0.0 unchanged in substance — the cont.27 rulings all sit comfortably inside it. Restated tightly.</p>
+<p>The distinction the word was hiding: <strong>downside</strong> is an attempt that takes away something you held; <strong>failure</strong> is an attempt that misses its target. A drill with no failure signal teaches nothing, so the rule is not "no failure":</p>
+<div class="eq">Failure is free, immediate, and always attributable. Nothing is ever taken.</div>
+<p>The third clause comes from a locked red line — <em>every loss must be attributable</em> (<a href="Rivenkeep_Why.html">Why §4</a>) — which in the campaign is a fairness guarantee and in a drill is <strong>the entire product</strong>. A drill that says only "try again" has failed even though it honoured no-downside.</p>
+<div class="s derived"><div class="ct">The derivation — the drills are the campaign loop minus loss aversion</div><p>The campaign is already deterministic, checkpointed at the battle, and replayable win or lose. Its only real downsides are the Strike-3 drop-back and the campaign floor, both deliberate loss-aversion instruments (Why §7). <strong>So the drills are the existing replay rule with the drop-back deleted, and nothing else changed.</strong> No new reward philosophy, and the two modes stay recognisably one game.</p></div>
+<p>The GDD's "complete-or-lose" gauntlet is deleted. Two rules make no-downside <em>felt</em> rather than merely true: <strong>a drill never shows a defeat screen</strong> (that word stays campaign-only — the design already distinguishes "a wound, not a loss" in Victory §2), and <strong>no hidden ★★★! in the Yard</strong>, because bolting an unpredictable jackpot onto <em>unlimited</em> replays is a slot machine, and Why §7's own guardrail is that the randomness must be over pieces, never over the outcome.</p>
+<div class="s"><div class="ct">Where the last two downsides went — and both are now deliberate</div><p>Two things in this design <em>do</em> take something away, and both were ruled in knowingly. <strong>The board reset clears your <span class="rk">♜</span></strong> (<a href="#boards">§6</a>) — Jack: <em>"That is okay, this is just the Yard."</em> And <strong>missing a day resets the streak in full</strong> (<a href="#streak">§13</a>) — <em>"This is a hard stop."</em> Neither is inside a drill: the first is a voluntary act the player chooses, and the second lives on the calendar. The no-downside rule governs <em>playing</em>, and there it still holds absolutely.</p></div>
 </section>
 
-<section id="scope">
-<h2><span class="n">6</span>What Lives Here vs Elsewhere</h2>
-<p>The GDD's "Daily Challenges" section bundles three different things. Only the first is this doc's:</p>
+<section id="rooks">
+<h2><span class="n">4</span>Rooks <span class="rk">♜</span> — the Yard's Own Rating</h2>
+<p class="lead"><span class="tag t-d">ruled</span> The mini-games get a rating of their own, using <span class="rk">♜</span> instead of ★. The two systems are <strong>completely different</strong>: <span class="rk">♜</span> is personal, ★ is public. Mini-games never touch the leaderboard.</p>
+
+<h3>The name</h3>
+<p>Wanted: simple, one word, sits beside "Stars" without confusion. Three candidates, and the recommendation turns on collision rather than taste:</p>
+<table>
+<tr><th>Name</th><th>Reads as</th><th>Verdict</th></tr>
+<tr><td><strong>Rooks</strong></td><td>"Four Rooks on that one." "Two Rooks off a clean board."</td><td class="full"><strong>Recommended.</strong> Literally what <span class="rk">♜</span> is; zero collision anywhere in the design; one syllable; unmistakably not a star.</td></tr>
+<tr><td>Keeps</td><td>"Four Keeps."</td><td class="mid">Best fiction fit (Riven<em>keep</em>) but collides with the fort itself — "protect the keep" already means something.</td></tr>
+<tr><td>Towers</td><td>"Four Towers."</td><td class="red">Collides hard — there are seven tower <em>types</em> in the toolkit.</td></tr>
+</table>
+<p class="dim">Used as <strong>Rooks</strong> throughout. Rename freely; it is a label, not a mechanic.</p>
+
+<h3>Five Rooks, not three — and the count differs on purpose</h3>
+<div class="s derived"><div class="ct">Derivation</div><p>The campaign uses <strong>three</strong> stars because a star is a <em>coarse public bucket</em> — it must be comparable at a glance across millions of players, and the full-resolution number underneath it is Battle Score. A Rook is the opposite: <strong>private, and its only job is to show you moving.</strong> A personal-progress marker wants finer granularity than a public bucket, because "I had three, now I have four" is the entire feeling being sold.</p><p>So <span class="rk">♜</span> runs <strong>1–5</strong>. Different glyph, different count, different resolution, different purpose — the "completely different" ruling made structural rather than cosmetic. It also means no line of UI can ever confuse the two.</p></div>
+
+<h3>What Rooks do and don't do</h3>
+<table>
+<tr><th></th><th>★ Stars (campaign)</th><th><span class="rk">♜</span> Rooks (the Yard)</th></tr>
+<tr><td><strong>Count</strong></td><td>3, plus a hidden ★★★!</td><td>5, no hidden tier</td></tr>
+<tr><td><strong>Scope</strong></td><td>Public — feeds Battle Score and the leaderboard</td><td>Personal only — <strong>never</strong> feeds any board</td></tr>
+<tr><td><strong>Persistence</strong></td><td>Permanent; best result kept forever</td><td>Kept until <em>you</em> reset the board, then cleared</td></tr>
+<tr><td><strong>Gates</strong></td><td>Unlocks, cannon carry, progression</td><td>Only the next level, on a first pass (<a href="#boards">§6</a>)</td></tr>
+<tr><td><strong>Pays</strong></td><td>Stonwryts by star (8 / 23 / 47 / 93)</td><td>Nothing in the Yard; sets the Muster slice (<a href="#stonwryts">§12</a>)</td></tr>
+</table>
+<p>Rooks are earned against thresholds on that level's own score lever (<a href="#drills">§9</a>) — never by surviving a sequence. <strong>1 Rook is "cleared"</strong> and is all that unlocks the next level; Rooks 2–5 are the reason to come back to a level you already beat. Which is the design instruction §17 makes explicit: <em>the difficulty lives in the Rooks, not in the clear.</em></p>
+</section>
+
+<section id="doors">
+<h2><span class="n">5</span>The Two Doors — The Yard and The Muster</h2>
+<p class="lead"><span class="tag t-d">ruled</span> Names confirmed: <strong>the Drill Yard</strong> (or just <strong>the Yard</strong>) and <strong>the Muster</strong>. One pool of drills behind both; only the Muster pays Stonwryts.</p>
+
+<table>
+<tr><th></th><th>The Yard <span class="pill">mini-games</span></th><th>The Muster <span class="pill">daily challenges</span></th></tr>
+<tr><td><strong>What's in it</strong></td><td>Every group board, all rungs, all levels</td><td>Today's drill, from the same pool, on a 7-day plan</td></tr>
+<tr><td><strong>Availability</strong></td><td>Always open, unlimited</td><td>Today only</td></tr>
+<tr><td><strong>Opens at</strong></td><td>Launch — it <em>is</em> the onboarding (<a href="#onboard">§15</a>)</td><td>After Campaign 1 (the GDD's existing gate, kept)</td></tr>
+<tr><td><strong>Pays</strong></td><td><span class="rk">♜</span> and skill. No Stonwryts.</td><td>Stonwryts by <span class="rk">♜</span>, plus the grind door (<a href="#stonwryts">§12</a>)</td></tr>
+<tr><td><strong>Streak</strong></td><td class="full">Counts <span class="tag t-d">ruled</span></td><td class="full">Counts</td></tr>
+<tr><td><strong>Leaderboard</strong></td><td class="red">Never</td><td class="red">Never <span class="tag t-d">ruled</span></td></tr>
+</table>
+
+<div class="s derived"><div class="ct">Why the split is right and not merely tidy — the Yard is farm-proof by construction</div><p>The strongest argument for two doors is what it makes unnecessary. An unlimited drill that paid currency needs a rate limiter, a decay curve, or a daily cap — three mechanisms whose only job is to stop the player doing the thing the design wants. <strong>A door that pays nothing cannot be farmed, so it needs no gate at all</strong>, which is the one property "endlessly replayable" actually demands.</p></div>
+
+<div class="s warn"><div class="ct">The honest cost — and cont.27 raised it rather than lowered it</div><p>With no currency in the Yard, its retention rests on the <span class="rk">♜</span> climb and the board reset. v1.0.0 cited Candy Crush as the precedent for currency-free retention. <a href="#fail">§17</a> examines that precedent properly and finds it only half-supports us — Candy Crush's engine is <em>repeated failure on one level</em>, and Jack has explicitly ruled the opposite for the Yard. So more weight sits on the reset-and-replay loop than v1.0.0 assumed. Still the first thing to measure; now with a clearer idea of what could go wrong.</p></div>
+</section>
+
+<section id="boards">
+<h2><span class="n">6</span>Group Boards — the Unit of Play</h2>
+<p class="lead"><span class="tag t-d">ruled</span> The unit is not a drill, it is a <strong>group board</strong>: one atom, a ladder of levels, getting harder all the way up. <em>"Each of the Atoms should be a full run of minigames where we are making it harder and harder for them."</em></p>
+
+<h3>The lifecycle — three states, and the third is the endless one</h3>
+<ol>
+<li><strong>First pass — locked and linear.</strong> <span class="tag t-d">ruled</span> Level 1 is open; every level after it is locked until the one before is cleared (1 <span class="rk">♜</span>). You walk the ladder in order. This is Introduce → Isolate → Combine enforced by the board itself.</li>
+<li><strong>Board complete.</strong> Every level cleared. The board unlocks as a whole.</li>
+<li><strong>Reset — new seed, free roam.</strong> <span class="tag t-d">ruled</span> The player chooses to reset. It re-seeds (<a href="#levers">§10</a>) — same 20 problems, different boards — and this time <strong>they can skip around freely</strong>. The reset also <strong>clears the board's <span class="rk">♜</span></strong>. Repeatable forever.</li>
+</ol>
+<div class="s derived"><div class="ct">Why the reset clearing Rooks is the right cost — and it is the only cost in the Yard</div><p>Jack ruled it and waved it off ("this is just the Yard"), but it is doing real work and deserves defending. A reset that <em>kept</em> your Rooks would make the second pass pointless — there would be nothing to earn, so the re-seeded boards would be scenery. Clearing them is what makes the second pass a <em>game</em> rather than a tour, and it is the mechanism by which "endlessly replayable" becomes true rather than aspirational.</p><p>And it is not a downside in the sense §3 forbids, because <strong>the player chooses when it happens.</strong> Nothing takes your Rooks; you spend them, deliberately, to get the board back. Closer to a prestige reset than a punishment — and the record of what you did survives it anyway, in your highest level reached and in the campaign you can now play.</p></div>
+
+<h3>What the board looks like</h3>
+<p>A ladder, not a grid — 20 rungs climbing, each showing its <span class="rk">♜</span> out of 5 and its mind tier. Locked levels are visible but dimmed, so the climb is legible from the bottom (Why §7's Zeigarnik hook pointed at a ladder: <em>"three more and the board is clear"</em>). A completed board carries a single mark; a reset board shows its pass count.</p>
+
+<h3>Level count per board — derived, not chosen</h3>
+<div class="s derived"><div class="ct">20 levels, stepping the campaign's own difficulty range</div><p>A group's job is to carry the player from raw to campaign-competent on one atom, so its ladder should span the same difficulty range the campaign does. Campaign difficulty is <strong>cognition creep across 190 battles</strong>, so the ladder samples that range. At <strong>20 levels</strong> each step is ~10 tiers — coarse enough that a step is <em>felt</em>, fine enough that no step is a wall (which §17 requires: the step must be climbable in one retry).</p><p>Cross-check from the other side: a 20-level first pass is 20 × 72–180 s ≈ <strong>24–60 minutes</strong>, which lands on Why §7's campaign-loop band. A group board is one sitting's commitment — the same size as the thing it is teaching. Not fitted to; it fell out.</p></div>
+</section>
+
+<section id="ladder">
+<h2><span class="n">7</span>The Ladder — Four Rungs</h2>
+<p class="lead"><span class="tag t-d">ruled</span> Rung 5 (a full battle) is <strong>cut</strong>. A battle belongs entirely to the campaign. Back to Jack's original four.</p>
+
+<table>
+<tr><th>Rung</th><th>Unit</th><th>Player plays</th><th>Clock</th><th>Teaches</th></tr>
+<tr><td><strong>1 · Parts of a phase</strong></td><td>One atom</td><td>One beat, repeated at rising tier</td><td>72 s</td><td>A single isolated skill: read a shape, close a ring, find a coverage hole, call a motion signature.</td></tr>
+<tr><td><strong>2 · A full phase</strong></td><td>One phase</td><td>The phase twice, tier stepped between</td><td>108 s</td><td>The atoms combined into one coherent phase, on the real clock.</td></tr>
+<tr><td><strong>3 · Two phases</strong></td><td>One seam</td><td>Two phases; the game supplies the third</td><td>126–144 s</td><td>The seams: a decision in one phase paying off — or biting — in the next.</td></tr>
+<tr><td><strong>4 · A single full run</strong></td><td>One sortie</td><td>Build → Deploy → Fight, under a constraint</td><td>180 s</td><td>The whole loop in miniature. The graduation drill.</td></tr>
+</table>
+
+<h3>Rung 3, specified — Jack's two shapes, and there turn out to be three</h3>
+<p><span class="tag t-d">ruled</span> <em>"We create a castle, the player deploys and fights. Or we build and deploy, the player fights and builds."</em> The principle underneath: <strong>the player plays exactly two phases and the game supplies the rest</strong>, which is what keeps rung 3 from collapsing into rung 4. Jack's second shape names a seam v1.0.0 missed entirely, and it is the valuable one.</p>
+<table>
+<tr><th>Seam drill</th><th>Game supplies</th><th>Player plays</th><th>The lesson</th></tr>
+<tr><td><strong>S1 · The Courtyard</strong></td><td>Nothing up front; runs the Fight at the end for you to watch</td><td>Build → Deploy</td><td>The ring you built decides how many guns can sit and how many <em>commands</em> they form. A tight ring is cheap and seats nothing. Deploy §4's granularity premium, paid in wall.</td></tr>
+<tr><td><strong>S2 · The Plan</strong></td><td>The castle, already built</td><td>Deploy → Fight</td><td>The plan is spent in Deploy. Live you have three verbs and a camera — so a Fight that went wrong went wrong a phase earlier.</td></tr>
+<tr><td><strong>S3 · The Tax</strong> <span class="pill">new</span></td><td>The fort and its guns</td><td>Fight → Build</td><td><strong>The rebuild tax.</strong> Watch the wall crack live with your hands off the controls, then open Build and pay for it. Wall-watching and the re-plug in one causal line.</td></tr>
+</table>
+<div class="s derived"><div class="ct">S3 is why cutting the battle rung cost less than expected</div><p>v1.0.0 argued for a battle rung because the <strong>rebuild tax</strong> — the campaign's real late-game difficulty — was undrilled. Jack's Fight→Build pairing drills it directly: the tax <em>is</em> a two-phase seam, and it was hiding in plain sight because v1.0.0 only looked at seams in forward order (Build→Deploy→Fight) and never at the wrap-around.</p><p>What is still not drilled, now deliberately: <strong>the multi-sortie race</strong> — the tax compounding against the queue's drain across 3–10 sorties. That needs a battle, battles are campaign-only, and it is therefore the one skill the Yard hands off. A clean division rather than a gap: <em>the Yard teaches you to pay the tax; the campaign teaches you whether you can afford it.</em></p></div>
+<p><strong>The timer point.</strong> <span class="tag t-d">ruled</span> <em>"The build, deploy would have to have some kind of timer, otherwise it is just all 3 phases."</em> Correct, and it generalises: every played phase in a rung-3 drill runs its <strong>real clock</strong> (Build 54 s, Deploy by formula, Fight 54/70 s). Untimed phases would let the player grind out an optimum — the north-star failure Build §2 names — and would also stretch a two-phase drill until it was indistinguishable from a full run.</p>
+
+<h3>Rung 2, specified — why the phase is played twice</h3>
+<p>Two rulings collide: a level lasts <strong>at least a minute</strong>, and it should <strong>use the real battle clock</strong> so the player gets used to it. But a real Build is 54 s — under the minute. Rather than invent a third clock, a rung-2 level is <strong>the phase run twice with the mind tier stepped up between passes</strong>: 108 s, both clocks real, second pass harder than the first. Better teaching than one long pass, because the step is where the learning is.</p>
+</section>
+
+<section id="atoms">
+<h2><span class="n">8</span>The Atom Inventory — the Superset</h2>
+<p class="lead">Every teachable atom in the three phases, preserved as the superset (dream big, then edit down, keeping the superset). <strong>23 atoms.</strong> Two changed fate in cont.27.</p>
+
+<table>
+<tr><th>#</th><th>Atom</th><th>Owner</th><th>Fate</th></tr>
+<tr><td colspan="4" style="background:var(--surface2)"><strong>BUILD</strong> <span class="tag t-b">8 atoms</span></td></tr>
+<tr><td>B·a</td><td><strong>Piece fit</strong> — read the shape, rotate, place</td><td>Build §7, §12</td><td>Group <strong>B1</strong></td></tr>
+<tr><td>B·b</td><td><strong>Enclosure reading</strong> — will this ring actually close?</td><td>Build §4</td><td>Group <strong>B2</strong></td></tr>
+<tr><td>B·c</td><td><strong>Courtyard sizing</strong> — courtyard or dead space? the 2×2 floor</td><td>Build §4, §5</td><td>Group <strong>B2</strong></td></tr>
+<tr><td>B·d</td><td><strong>Triage reading</strong> — which castle set is cheapest and safest?</td><td>Build §5</td><td>Group <strong>B3</strong></td></tr>
+<tr><td>B·e</td><td><strong>Wind &amp; drift-stop</strong> — lead the drop, brace on the windward side</td><td>Build §10</td><td class="full">Group <strong>B5</strong> <span class="tag t-d">ruled</span> — promoted from modifier</td></tr>
+<tr><td>B·f</td><td><strong>Spackle judgment</strong> — when to borrow against next Build</td><td>Build §9, §11</td><td>Group <strong>B4</strong></td></tr>
+<tr><td>B·g</td><td><strong>The diff-read &amp; re-plug</strong> — find the gaps that matter</td><td>Build §11</td><td>Group <strong>B4</strong></td></tr>
+<tr><td>B·h</td><td><strong>Storage &amp; trash</strong> — the valves that let skill shape luck</td><td>Build §8</td><td>Group <strong>B1</strong> (lever)</td></tr>
+<tr><td colspan="4" style="background:var(--surface2)"><strong>DEPLOY</strong> <span class="tag t-d">6 atoms</span></td></tr>
+<tr><td>D·a</td><td><strong>Coverage reading</strong> — where do the circles fail to reach?</td><td>Deploy §8</td><td>Group <strong>D1</strong></td></tr>
+<tr><td>D·b</td><td><strong>Courtyard → group grammar</strong> — JOIN / FUSE / NEW</td><td>Deploy §4</td><td>Group <strong>D3</strong></td></tr>
+<tr><td>D·c</td><td><strong>Archetype choice</strong> — which of 8 cannons answers this approach?</td><td>Deploy §2</td><td>Group <strong>D3</strong></td></tr>
+<tr><td>D·d</td><td><strong>AoR centring</strong> — forward strips escorts, deep reaches the core</td><td>Cannon §4</td><td>Group <strong>D2</strong></td></tr>
+<tr><td>D·e</td><td><strong>The order card</strong> — domain, fire-control, tower stack</td><td>Deploy §5</td><td>Group <strong>D3</strong> (lever)</td></tr>
+<tr><td>D·f</td><td><strong>Territory</strong> — the forward gun as a stake in the ground</td><td>Deploy §3</td><td class="mid">Group <strong>D2</strong> (lever) — see below</td></tr>
+<tr><td colspan="4" style="background:var(--surface2)"><strong>FIGHT</strong> <span class="tag t-f">9 atoms</span></td></tr>
+<tr><td>F·a</td><td><strong>Shape reads purpose</strong> — geometry / thickness / tightness / quality</td><td>Ships §9</td><td>Group <strong>F1</strong></td></tr>
+<tr><td>F·b</td><td><strong>Motion signature</strong> — lateral = fear, fore-aft = nerve</td><td>Ships §4</td><td>Group <strong>F2</strong></td></tr>
+<tr><td>F·c</td><td><strong>Fire-control timing</strong> — the held alpha</td><td>Fight §6</td><td>Group <strong>F3</strong></td></tr>
+<tr><td>F·d</td><td><strong>AoR crawl scheduling</strong> — start early enough that it lands on time</td><td>Fight §6</td><td>Group <strong>F5</strong></td></tr>
+<tr><td>F·e</td><td><strong>Domain switch timing</strong> — the reload gap between threats</td><td>Fight §6</td><td>Group <strong>F5</strong></td></tr>
+<tr><td>F·f</td><td><strong>Reading the ending</strong> — Held / Repel / Breakthrough</td><td>Fight §8</td><td>Group <strong>F2</strong> (lever)</td></tr>
+<tr><td>F·g</td><td><strong>Wall-watching</strong> — which required ring goes down first</td><td>Fight §3b</td><td>Group <strong>F4</strong></td></tr>
+<tr><td>F·h</td><td><strong>The camera trade</strong> — in for command, out for reading</td><td>Fight §5</td><td class="full">Board-size lever <span class="tag t-d">ruled</span></td></tr>
+<tr><td>F·i</td><td><strong>Ammo read</strong> — the wave's diegetic clock</td><td>Victory §5</td><td>Group <strong>F2</strong> (lever)</td></tr>
+</table>
+
+<div class="s ruling"><div class="ct">"The camera trade is just a larger board" — Jack, and it closes a hole cleanly</div><p>v1.0.0's CALL-OUT 6 worried that the camera trade was a genuine skill no drill isolated, and floated a drill where the only decision was when to zoom. Jack's reading is better and dissolves the problem: <strong>the trade is not a skill with a technique, it is a consequence of board size.</strong> Give a drill a board several times the screen and the trade appears by itself — no drill authored, no new mechanic. It becomes the board-size lever in <a href="#levers">§10</a>, which is also why board size is a difficulty axis rather than a cosmetic setting.</p></div>
+
+<div class="s"><div class="ct">"Territory / DMZ pinning — not sure what this is"</div><p>Fair — it is buried in <a href="Rivenkeep_Deploy.html">Deploy §3</a>. In short: <strong>the DMZ line advances one grid per sortie, squeezing your buildable ground — and a cannon or castle standing forward pins it where it stands.</strong> A forward gun also holds the fragile grid beneath it stable. Both effects last <em>only while the gun stands there</em>: move it or lose it and the line resumes advancing and the ground goes fragile again. So siting a gun forward is a territorial act — it trades growth and safety (an enclosed gun is a ghost to the fleet and collects the enclosure bonus every cycle) for <strong>ground and reach</strong>.</p><p>Why it stays a lever rather than a group: the decision is real, but it is <em>one branch of the placement decision D2 already teaches</em> (where you put the gun), not a separate skill with its own read. Switching the DMZ squeeze on in D2's later levels teaches it where a player will actually meet it. <span class="dim">Flagged honestly — this is the atom I am least sure about demoting; see <a href="#callouts">CALL-OUT 3</a>.</span></p></div>
+</section>
+
+<section id="drills">
+<h2><span class="n">9</span>The 20 Group Boards</h2>
+<p class="lead">Thirteen at rung 1, three at rung 2, three at rung 3, one at rung 4. Each a 20-level ladder (<a href="#boards">§6</a>). <strong>Eight of the thirteen rung-1 groups are reading drills</strong> — a deliberate inversion of the GDD's seed, derived in <a href="#seed">§18</a>.</p>
+
+<h3>Rung 1 — Parts <span class="pill">72 s per level · 20 levels each</span></h3>
+<table>
+<tr><th>Group</th><th>The level</th><th>Atoms</th><th>Score lever</th></tr>
+<tr><td><strong>B1 · The Fit</strong> <span class="tag t-b">build</span></td><td>Open ground, a two-slot draw, one target: cells enclosed per piece spent. Storage and one trash live.</td><td>B·a, B·h</td><td>Cells per piece</td></tr>
+<tr><td><strong>B2 · The Ring</strong> <span class="tag t-b">build</span> <span class="pill">read</span></td><td>Partial rings, alternating questions: <em>is this closed?</em> and <em>which single piece closes it?</em> The 2×2 rule is the trap — a 1-wide slot looks sealed and is dead space.</td><td>B·b, B·c</td><td>Correct calls</td></tr>
+<tr><td><strong>B3 · The Triage</strong> <span class="tag t-b">build</span> <span class="pill">read</span></td><td>A board, a castle layout, a requirement count. Pick the set, then build it. Scored against the <em>best available</em> answer, never one intended solution — Build §5's ≥2-solutions law showing up in the scoring.</td><td>B·d</td><td>Area% per wall cell</td></tr>
+<tr><td><strong>B4 · The Re-Plug</strong> <span class="tag t-b">build</span></td><td>A fort arrives already damaged, clock running. Which gaps are mandatory, which discretionary, where spackle buys more than it costs.</td><td>B·f, B·g</td><td>Required rings held per second</td></tr>
+<tr><td><strong>B5 · The Drift</strong> <span class="tag t-b">build</span> <span class="pill">new</span></td><td>Wind, rising up the ladder from Low to High and from cardinals to diagonals. The skill is drift-stop: brace against structure on the windward side and the piece does not drift at all. Late levels give you nothing to brace against.</td><td>B·e</td><td>Pieces landed on target</td></tr>
+<tr><td><strong>D1 · The Seam</strong> <span class="tag t-d">deploy</span> <span class="pill">read</span></td><td>A fort, its guns, their AoRs, the approaches. Tap every bearing that gets through. Nothing to place.</td><td>D·a</td><td>Holes found / holes present</td></tr>
+<tr><td><strong>D2 · The Centre</strong> <span class="tag t-d">deploy</span></td><td>One formation, one group, one decision: where do you centre the zone? Forward strips escorts; deep reaches the core and lets the formation cross. Later levels add the DMZ squeeze, so the answer starts costing ground. <strong>The highest-leverage lever in the game</strong>, and the one no player finds unaided.</td><td>D·d, D·f</td><td>Cores killed vs. arrivals leaked</td></tr>
+<tr><td><strong>D3 · The Grammar</strong> <span class="tag t-d">deploy</span></td><td>A courtyard layout is given. Site the guns. The real question is how many <em>commands</em> you just created; the JOIN/FUSE/NEW preview is the feedback and the +40% / +75% granularity premium is the cost.</td><td>D·b, D·c, D·e</td><td>Coverage per group</td></tr>
+<tr><td><strong>F1 · The Silhouette</strong> <span class="tag t-f">fight</span> <span class="pill">read</span></td><td>A formation flashes. Name what is inside. Geometry says which core, thickness says value, tightness says how much the fleet believes its own map, quality says the tier. Exposure shortens up the ladder. <strong>The most important reading drill in the game.</strong></td><td>F·a</td><td>Correct reads at exposure <em>t</em></td></tr>
+<tr><td><strong>F2 · The Nerve</strong> <span class="tag t-f">fight</span> <span class="pill">read</span></td><td>Watch a hull or a line. Call it: fear or nerve, holding or breaking, ammo spent or loaded. Then the truth resolves.</td><td>F·b, F·f, F·i</td><td>Correct calls</td></tr>
+<tr><td><strong>F3 · The Alpha</strong> <span class="tag t-f">fight</span></td><td>One battery, held silent. One wave. One decision: when do you reveal? Early is chip damage and a triggered evasion; right is a big salvo before the crazy-Ivan juke.</td><td>F·c</td><td>Ships% from one battery</td></tr>
+<tr><td><strong>F4 · The Wall</strong> <span class="tag t-f">fight</span> <span class="pill">read</span></td><td>A Fight runs and <strong>you have no commands at all.</strong> One question: which required ring goes down first, and where. Then Build opens and you see if you were right.</td><td>F·g</td><td>Predicted vs. actual breach</td></tr>
+<tr><td><strong>F5 · The Cue</strong> <span class="tag t-f">fight</span></td><td>Two known, spaced threats. One group. Walk it from the first to the second in time — the crawl is slow and firing is degraded the whole way, so the skill is starting early, not moving fast.</td><td>F·d, F·e</td><td>Threats met on time</td></tr>
+</table>
+<div class="s"><div class="ct">Why F4 gives the player no commands, deliberately</div><p>It looks like a broken drill — a Fight you cannot fight. That is the point. Fight §3b's honest cost is that wall-watching competes for the same eyes as contact-tracking and fire-control, so isolating it means removing the competition entirely. The strange feeling of watching your wall crack with your hands off the controls is exactly the feeling §3b is trying to install — and it is the cheapest group on this list to build.</p></div>
+
+<h3>Rung 2 — A full phase <span class="pill">108 s · the phase twice, tier stepped</span></h3>
+<table>
+<tr><th>Group</th><th>What it is</th><th>Clock</th><th>Score</th></tr>
+<tr><td><strong>R2·Build</strong></td><td>Two complete Builds: real draw, real tax, real wind, real requirement, cannon slate on screen. Everything B1–B5 isolated, now competing for one clock.</td><td>54 s × 2</td><td>Area% + time banked</td></tr>
+<tr><td><strong>R2·Deploy</strong></td><td>Two complete Deploys against a wave you can <em>see</em> — pure planning with the uncertainty removed. Site, group, order, seam-read, lock in.</td><td>Formula × 2</td><td>Coverage of actual approaches</td></tr>
+<tr><td><strong>R2·Fight</strong></td><td>Two complete sorties, fort given: three verbs, one camera, no building. The GDD's "Ship Hunting" grown into a real phase.</td><td>54 s × 2</td><td>Ships% + cannon%</td></tr>
+</table>
+<p class="dim">Rung 2 is where the drills stop being kind. The rung-1 levels have one channel each; rung 2 hands over the whole phase at once and the clock does not move. This is the rung v0.1.0 didn't have, and the most important one for the campaign transition.</p>
+
+<h3>Rungs 3 and 4</h3>
+<p><strong>S1 · The Courtyard</strong> · <strong>S2 · The Plan</strong> · <strong>S3 · The Tax</strong> — specified in <a href="#ladder">§7</a>. Each ends with a <strong>consequence trace</strong>: a sentence, not a score breakdown — <em>"your ring was 4 cells tighter than the courtyard needed, so the third gun had nowhere to sit, so the east bearing went uncovered, so both transports landed."</em></p>
+<p><strong>R4 · The Sortie</strong> — one complete Build → Deploy → Fight under an authored constraint: pentominoes only, no spackle, gale-force wind, all fragile ground, one cannon type. The GDD's Full Siege. The constraint is what makes it a drill rather than a short battle: it forces one specific muscle to carry the whole loop.</p>
+<div class="s derived"><div class="ct">Why rung 3 needs the consequence trace, and rungs 1, 2 and 4 do not</div><p>Rung 3 is the one rung with <strong>no natural engagement loop under it</strong> — a seam is not an activity, it is the causal link <em>between</em> two activities, and the game gives that link no moment of its own. That is exactly why the GDD's seed only implied it. So its hook has to be authored, and the obvious authored hook is the seam's own subject matter: the causal line, stated out loud. The other rungs have their own loops (a beat, a phase, a sortie) and need no such prop.</p></div>
+</section>
+
+<section id="levers">
+<h2><span class="n">10</span>Levers, Seeds, and Where the Thousands Come From</h2>
+<p class="lead"><span class="tag t-d">ruled</span> <em>"We have difficulty levers in the battle. Use them. We can also modify the size of the board. There are so many levers that we should have 1000s of minigames predefined."</em></p>
+
+<h3>Two axes, and only one of them is difficulty</h3>
+<p><strong>Axis 1 — the mind tier.</strong> Difficulty-as-cognition applied to a drill. Campaign difficulty is a fine, continuous, monotonic per-battle creep across 190 battles, so:</p>
+<div class="eq">tier = battle index, 1 – 190. A group's 20 levels step it by ~10.</div>
+<p>No number invented, and three things fall out free: <strong>late-game relevance</strong> (a Campaign-23 player meets tier-~130 minds and drills at tier ~130, so the Yard is never beneath them <span class="tag t-d">ruled</span>); <strong>calibratable coaching</strong> (the tier means the same thing on both sides of the door — <a href="#coach">§14</a>); and one honest rating per group, <em>highest level cleared</em>.</p>
+<p><strong>Axis 2 — the levers.</strong> Not difficulty tiers; <em>variety</em>. Every one already in the game:</p>
+<table>
+<tr><th>Lever</th><th>Range</th><th>What it changes</th></tr>
+<tr><td><strong>Board size</strong></td><td>~3 bands, up to 128×80</td><td>Pan and zoom distance — and therefore <strong>the camera trade</strong> (F·h). This is why board size is a real axis, not a setting.</td></tr>
+<tr><td><strong>Wind</strong></td><td>4 strengths × 8 directions</td><td>Drift and drift-stop. Diagonals force two-axis compensation.</td></tr>
+<tr><td><strong>Piece tier</strong></td><td>16 tiers / 8 groups</td><td>Which polyominoes the draw hardens toward.</td></tr>
+<tr><td><strong>Theater</strong></td><td>10</td><td>Fragile ground, rock/tree/cliff density, fog, DMZ behaviour, bounce (Crystal).</td></tr>
+<tr><td><strong>Constraint set</strong></td><td>~4</td><td>No spackle, one cannon type, pentominoes only, friendly fire on.</td></tr>
+</table>
+<div class="s derived"><div class="ct">Where "thousands" actually comes from — and it is not thousands of authored levels</div><p>20 groups × 20 levels = <strong>400 authored level templates</strong> — a real but tractable job (the campaign needs 190 battlefields by comparison). The thousands come from <strong>templates × lever settings</strong>: one template instantiated across board sizes, wind states, piece bands, theaters and constraints is dozens of distinct problems, so 400 templates is comfortably five figures of playable levels without hand-authoring one of them.</p><p>The important part: this is <em>not</em> procedural generation of difficulty. The tier ladder is authored and the levers are a finite, hand-checkable set — so every level is a designed problem, which is what keeps the ≥2-solutions law enforceable.</p></div>
+
+<h3>Seeds <span class="tag t-d">ruled</span></h3>
 <ul>
-<li><strong>The drills / skill-building — HERE.</strong> The pack designs, the ladder, the teaching goals, the no-downside model.</li>
-<li><strong>Leaderboards &amp; scoring → the <a href="Rivenkeep_Victory.html">Victory doc</a>.</strong> Battle Score (ships% + area% + cannon%), sub-scores, regions, per-level/per-campaign/friends boards — these are the victory/score system, not mini-game design. (Note: the GDD says daily challenges do <em>not</em> feed the leaderboard — consistent with no-downside.)</li>
-<li><strong>Streaks, reward packages, package timers, Stonwryt payouts → the economy / meta-progression doc</strong> (queued). The 14-day cycle, streak shields, package-timer retention loop, and currency rewards are economy systems that <em>wrap</em> the drills; they must honour the no-downside rule but they are not the drills.</li>
+<li><strong>One seed per group instance</strong> — the whole board of 20 levels is instantiated from a single seed, so the levels within it are a coherent set rather than 20 unrelated rolls.</li>
+<li><strong>Reset re-seeds.</strong> Same 20 problems, different boards. This is the randomness, and it is the endless axis.</li>
+<li><strong>Seeds are NOT global.</strong> Players do not share a seed. <span class="dim">Which is the mechanical reason there could be no Yard leaderboard even if anyone wanted one — there is no common board to compare on. Jack's "no leaderboard" ruling and the seed model agree from different directions.</span></li>
+<li><strong>The Muster is the one exception</strong> and needs it: today's Muster drill is a single fixed seed, so the day's challenge is a shared thing to talk about. It still feeds no board.</li>
 </ul>
-<p class="dim">Keeping these separate is deliberate: the drill is the skill-builder; the economy decides how it is rewarded and surfaced. Designing them apart keeps each legible.</p>
+<div class="s"><div class="ct">The choreography law, and where it binds</div><p>The campaign's law: <strong>piece-pressure and cognition never turn together</strong> — one screw per campaign, or the combined load blows the legibility ceiling (Build §11, Why §6). Applied here it splits on isolation: on <strong>rungs 1–2</strong> a lever and the tier may rise together, because one isolated atom under two screws is still one thing to read. On <strong>rungs 3–4</strong> only one screw turns at a time, exactly as in the campaign. Nice property: the upper rungs behave like the campaign because they <em>are</em> the campaign in miniature, and the lower rungs can be tuned harder than the campaign ever would be.</p></div>
 </section>
 
-<section id="open">
-<h2><span class="n">7</span>Open / Pending</h2>
-<div class="s future"><div class="ct">Sequencing — why the full design waits</div><p>The mini-games are <strong>built from the phases</strong> (parts → full phase → two phases → full run), so they can't be finished until the <strong>Build phase</strong> and the unified <strong>Fight phase</strong> are locked. This doc captures the requirements and the seed now; the full design follows those two.</p></div>
+<section id="clocks">
+<h2><span class="n">11</span>Durations and the Clock</h2>
+
+<h3>Level durations — multiples of 18 seconds</h3>
+<div class="s derived"><div class="ct">The constraint that resolves both rulings at once</div><p>Build's clock displays in <strong>days at 18 s per day</strong>. A drill clock that is not a multiple of 18 s displays as a fractional day — exactly the "fuzzy 3.06" the Build clock moved from 55 to 54 s to avoid. So <strong>every drill clock is a multiple of 18 s</strong>, and the one-minute floor rounds up to the next legal value, 72 s.</p></div>
+<table>
+<tr><th>Rung</th><th>Clock</th><th>Reads as</th><th>Derivation</th></tr>
+<tr><td>1</td><td><strong>72 s</strong></td><td>4 days</td><td>The one-minute floor rounded to the next multiple of 18. Also exactly 4× the Fight's 18 s reading band — so a rung-1 level is four reads, enough to be a skill rather than a coin flip.</td></tr>
+<tr><td>2</td><td><strong>108 s</strong></td><td>6 days</td><td>The real phase clock, twice (54 × 2), tier stepped between passes.</td></tr>
+<tr><td>3</td><td><strong>126–144 s</strong></td><td>7–8 days</td><td>Two real phase clocks summed (54 + 54–65), rounded to the nearest legal multiple.</td></tr>
+<tr><td>4</td><td><strong>180 s</strong></td><td>10 days</td><td>One sortie: 54 Build + 54 Deploy + 70 Fight = 178, rounded to 180.</td></tr>
+</table>
+<p>A first pass up a 20-level board is therefore <strong>24 minutes</strong> (rung 1) to <strong>60 minutes</strong> (rung 4).</p>
+
+<h3>The display — the sweep is out, and the fix is an 18-hour day</h3>
+<p><span class="tag t-d">ruled</span> <em>"The clock should be a big number and a small number. The sweep is too distracting."</em></p>
+<div class="s derived"><div class="ct">Why the sweep existed, and the one change that removes it for free</div><p>The sweep came from an arithmetic accident: a siege day is 18 s and a real day has 24 hours, so the hour figure had to tick every <strong>18 ÷ 24 = 0.75 s</strong> — faster than a second hand. That was originally read as a feature (a small number visibly racing). Jack's ruling says it reads as distraction, which is the right call for a phase whose whole premise is deliberate reading rather than hurry.</p><p>The fix costs nothing but a line of fiction: <strong>make the siege day 18 hours long.</strong> Then one hour is exactly one second, the small number ticks at the calmest rate a clock can have, and the sweep is gone <em>by construction</em> rather than by tuning.</p><div class="eq">1 siege day = 18 hours = 18 real seconds · 1 hour = 1 second, exactly</div><p>Big number: <strong>days</strong>, 3 → 2 → 1 → 0 on a Build (4 → 0 on a rung-1 level). Small number: <strong>hours</strong>, 17 → 0 within each day, resetting as the day ticks. Nothing races, both numbers are legible at a glance, and the siege framing survives — an 18-hour day is free in a fantasy world and not a number any player will interrogate.</p></div>
+<div class="s warn"><div class="ct">⚠ This is a change to Build §2, not just to the Yard</div><p>Build §2 currently specifies a 24-hour day and the 0.75 s sweep, with the mismatch called out as deliberate. The ruling reverses that, so <strong>Build §2 owes an edit</strong>: 24 hours → 18, and the "faster than a real second, and that mismatch is the point" paragraph comes out. Nothing mechanical moves — 54 s is still 3 days, the tax table still reads in days, every derived figure is untouched. Flagged as an owner-change rather than made from here, since the Build doc was not open this session.</p></div>
+
+<h3>Should rung 1 be time-limited at all?</h3>
+<div class="s call"><div class="ct">CALL-OUT · Attempt-limits versus time-limits at rung 1</div><p>Raising this because the evidence points somewhere the design is not currently pointing. Candy Crush's timed levels were mostly 1:00 or 0:30 (hard ones 1:30; the full range 0:10 to 3:00) — and <strong>King removed timed levels entirely in 2018 after negative player reception</strong>, judging them difficult and user-unfriendly. Modern Candy Crush is <em>move</em>-limited. So our 72 s floor is well-calibrated against what a level should <em>last</em>, but the mechanism bounding it is the one the genre's biggest title deleted.</p><p>There is already precedent inside our own design: the GDD's Efficient Enclosure has <strong>no timer</strong> and bounds itself with a <em>piece budget</em>. And <a href="#seed">§18</a> establishes that a drill may relax a campaign law when isolation is the point. So an alternative rung-1 model exists: <strong>bound by attempts, not seconds</strong> — <em>n</em> pieces in B1, <em>n</em> calls in F1/F2, <em>n</em> shots in F3 — still averaging 72 s in practice but never cutting a player off mid-thought.</p><p>Recommendation is a <strong>split</strong>, along a line the design already draws: <em>time-limit the drills whose atom is itself time-pressured</em> (B4 The Re-Plug, F3 The Alpha, F5 The Cue — all three are about acting in time), and <em>attempt-limit the pure reads</em> (B2, D1, F1, F2, F4). Rungs 2–4 keep the real battle clock unconditionally, because getting used to it is the point. A real fork rather than a detail: it decides whether rung 1 feels like a test or a batting cage.</p></div>
+</section>
+
+<section id="stonwryts">
+<h2><span class="n">12</span>The 7-Day Muster and the Grind Door</h2>
+<p class="lead"><span class="tag t-d">ruled</span> The Muster runs a 7-day plan: <strong>Days 1–3 rung 1 · Days 4–5 rung 2 · Day 6 rung 3 · Day 7 rung 4.</strong> Jack's constraint from the last pass still binds: grind a little, inflate nothing.</p>
+
+<table>
+<tr><th>Day</th><th>Rung</th><th>Length</th><th>Slice</th></tr>
+<tr><td>1 · 2 · 3</td><td>1 · a part of a phase</td><td>72 s</td><td>100</td></tr>
+<tr><td>4 · 5</td><td>2 · a full phase</td><td>108 s</td><td>150</td></tr>
+<tr><td>6</td><td>3 · two phases</td><td>126–144 s</td><td>200</td></tr>
+<tr><td>7</td><td>4 · a full run</td><td>180 s</td><td>250</td></tr>
+</table>
+<div class="s derived"><div class="ct">Slices are duration-proportional, and the day cap is the GDD's, unmoved</div><p>Durations 72 : 108 : 144 : 180 reduce to <strong>2 : 3 : 4 : 5</strong>. Against the GDD's daily-challenge ceiling of <strong>250</strong> — which does not move — that gives slices of <strong>100 / 150 / 200 / 250</strong>. Duration is the honest cost, so the split is by duration and nothing is chosen.</p><p>And the week turns out to be doing pedagogy as well as payout: three short easy days, two medium, then two that ask for real time. <strong>The week is itself a climb up the ladder</strong>, so a player who only ever plays the Muster still walks all four rungs every seven days.</p></div>
+
+<h3>Rook payouts — inverted from the locked star rewards</h3>
+<div class="s derived"><div class="ct">6 / 12 / 25 / 50 / 100 %</div><p>Not chosen. The campaign's star payouts are <strong>8 / 23 / 47 / 93</strong> — ratios 1 : 2.9 : 5.9 : 11.6, a doubling ladder. Extended to five buckets and read as a fraction of the top, that is <strong>6% / 12% / 25% / 50% / 100%</strong> of the slice. So a Rook's payout curve is the campaign's own curve re-expressed, and the fifth Rook is worth genuinely chasing rather than being a rounding difference.</p></div>
+<table>
+<tr><th>Day</th><th>Slice</th><th><span class="rk">♜</span></th><th><span class="rk">♜♜</span></th><th><span class="rk">♜♜♜</span></th><th><span class="rk">♜♜♜♜</span></th><th><span class="rk">♜♜♜♜♜</span></th></tr>
+<tr><td>Rung 1 (×3)</td><td>100</td><td>6</td><td>12</td><td>25</td><td>50</td><td>100</td></tr>
+<tr><td>Rung 2 (×2)</td><td>150</td><td>9</td><td>18</td><td>38</td><td>75</td><td>150</td></tr>
+<tr><td>Rung 3</td><td>200</td><td>12</td><td>24</td><td>50</td><td>100</td><td>200</td></tr>
+<tr><td>Rung 4</td><td>250</td><td>15</td><td>30</td><td>63</td><td>125</td><td>250</td></tr>
+</table>
+<p><strong>A week at 5<span class="rk">♜</span> every day = 1,050 Stonwryts.</strong> The GDD's model allowed up to 250 × 7 = <strong>1,750</strong>. So the 7-day plan is <em>less</em> generous than what it replaces, by 700 a week — and that gap is where the grind door lives.</p>
+
+<h3>The grind door — it works, and it fits in the gap the plan just created</h3>
+<p><span class="tag t-d">ruled, optional</span> Jack's reference: <em>"I play Brick n Balls and one of the mini games I have to play about 10–15 games to earn 150 coins. The minimum purchase is 200 coin."</em> The shape being described is a grind <strong>deliberately just short of a purchase</strong> — one session gets you most of the way, so you come back.</p>
+<div class="s derived"><div class="ct">Inflation-neutral by arithmetic rather than by promise</div><p><strong>The Long Muster:</strong> a side door on the Muster screen where any group-board level can be played for Stonwryts, at a flat rate, <strong>capped by the day's remaining headroom under 250</strong>.</p><ul><li><strong>The rate: 6 Stonwryts per level cleared.</strong> Derived, not chosen — 6 is the cheapest purchase in the game (Reinforce Cannon, +1%), so <strong>one level cleared buys exactly one nudge.</strong> The cleanest possible statement of what a grind play is worth, and legible without a tutorial.</li><li><strong>The cap: 100 per day</strong> = the 700/week the 7-day plan handed back, divided by seven. So the grind spends headroom the plan created, and the week's ceiling still lands under the GDD's 1,750. <strong>Nothing inflates, and the proof is subtraction rather than an assurance.</strong></li><li><strong>The feel:</strong> 100 ÷ 6 ≈ <strong>17 levels ≈ 20 minutes</strong> for 100 Stonwryts — against Battle Surge at 93 and Early Cleanup at 235. A full grind session buys one good play, or gets you most of the way to a big one. Compare the reference: 10–15 games for 150 against a 200 minimum. Same order, same shape, same "one more" pull.</li></ul></div>
+<div class="s"><div class="ct">The best property of it, and it is accidental</div><p>The cap is <em>remaining headroom</em>, so the grind is available exactly when a player wants it. On a rung-1 day, 5<span class="rk">♜</span> pays 100 and leaves 100 to grind. On a rung-4 day, 5<span class="rk">♜</span> pays 250 and there is nothing left. <strong>So the grind opens on the short easy days and closes on the big ones</strong> — precisely the "some days you are just too busy for a full play" case Jack raised under the streak. The busy player grinds; the invested player musters; both hit the same ceiling.</p></div>
+<div class="s warn"><div class="ct">The one thing to watch</div><p>A grind door makes it possible to reach the day's cap <em>without ever playing the day's Muster drill</em> — letting a player farm rung 1 forever and never climb. Two cheap guards, and I would take the first: <strong>the Long Muster opens once today's Muster drill has been attempted</strong> (attempted, not cleared — no downside, and an attempt is an honest ask). Alternative if that reads as coercive: the grind rate halves on levels below the player's highest cleared rung, so grinding your comfort zone pays worse than grinding your edge. See <a href="#callouts">CALL-OUT 2</a>.</p></div>
+</section>
+
+<section id="streak">
+<h2><span class="n">13</span>The Streak</h2>
+<p class="lead"><span class="tag t-d">ruled</span> <em>"The streak is just to get them opening the app and playing/completing SOMETHING. There are days where you are just too busy for a full play. A training ground run is just fine."</em> And: <em>"Miss a day and it is a full reset. This is a hard stop."</em></p>
 <ul>
-<li><strong>The no-downside reframe</strong> (§5) — settle the progress-only model and how "better" is scored per pack.</li>
-<li><strong>Systematise the ladder</strong> (§4) — lay the packs deliberately onto the four rungs; fill the Fight/Deploy "parts" gap and the explicit "full phase" and "two phases" rungs.</li>
-<li><strong>Surfacing &amp; cadence</strong> — daily-gated (the GDD's 14-day rotation) vs always-available climb; how the ladder is presented so a new player naturally walks up it.</li>
-<li><strong>Onboarding vs endless</strong> — do the drills double as the first-launch tutorial, or sit alongside it? (The GDD's tutorial is a separate video-guided demo.)</li>
-<li><strong>Numbers</strong> — all per-pack difficulty levers (time limits, piece budgets, wave counts, wind strength) are the layer above the design, deferred.</li>
+<li><strong>Any completion counts</strong> — a campaign battle, a Muster drill, or a single Yard level. The streak measures <em>showing up</em>, not achievement.</li>
+<li><strong>Miss a day, full reset to Day 1.</strong> No decay, no shield, no grace. <span class="dim">This reverses v1.0.0's recommendation (decay, on the campaign-floor precedent) — Jack's call, and defensible on its own terms: the value of a streak is exactly the fear of losing it, and a decaying streak is not really a streak. The permanent DiMaggio shield badges already survive a break, so nothing <em>earned</em> is destroyed; only the counter resets.</span></li>
 </ul>
+<div class="s warn"><div class="ct">⚠ The consequence this ruling has, and it lands on the economy doc</div><p>The GDD's streak rewards are not only Stonwryts — they include <strong>gameplay buffs</strong> that compound across the 14-day cycle (+1 s, +2 s, +3 s Build timer; +1% to +5% easier pieces; +1 spackle; +2 s Last Stand bank; cannon enclosure bonuses), stabilising at 2× Day 14 indefinitely.</p><p>With a <strong>72-second Yard level</strong> qualifying as a day's completion, those buffs become maintainable by any player willing to open the app once a day — which is nearly free. That is not currency inflation, but it is inflation: a permanent +3 s on a 54 s clock is a 5.5% larger Build phase forever, and "+5% easier pieces" reaches into the piece-tier curve Build §7 is carefully choreographing.</p><p><strong>The honest reading:</strong> if the streak's job is retention rather than achievement — and Jack has now ruled that it is — its rewards should be <em>retention-flavoured</em>, not mechanical. Stonwryts and shields, yes. Buffs to the Build clock and the piece draw, no: those are difficulty dials the choreography law owns. <strong>Recommendation for the economy session: move the streak's reward table off gameplay buffs and onto currency, cosmetics and shields.</strong> Flagged rather than acted on — the streak table is the economy doc's.</p></div>
 </section>
 
+<section id="coach">
+<h2><span class="n">14</span>The Coach — Prescription, the Roster, and Tone</h2>
+<p class="lead"><span class="tag t-d">ruled</span> <em>"The AI isn't just telling you what is wrong, it is coaching you to be better."</em> A change of role, not of feature — and it needs no new AI capability.</p>
+
+<h3>The machinery already exists</h3>
+<ul>
+<li>The <strong>post-battle debrief</strong> already reads a <em>structured summary the deterministic sim emits at battle end</em>, is already tone-adaptive off progression state, and is already advisory-only — it cannot touch stars or score.</li>
+<li>The <strong>3-loss hint trigger</strong> already exists (Why §7's anti-frustration table; GDD Tactical Hints).</li>
+<li>The <strong>AI guardrail</strong> already draws the line: the logic stays deterministic and authored; the model generates <em>framing only</em>.</li>
+</ul>
+<p>So the addition is one field on the debrief — <strong>it may attach a starting point on a group board</strong> — and a deterministic table picks it while the model writes the sentence. Guardrail intact by construction.</p>
+
+<h3>A starting point, not a drill <span class="tag t-d">ruled</span></h3>
+<p>The distinction is the whole ruling. The AI does not hand over one level; it hands over <strong>a rung on a ladder</strong>, and the player climbs from there. That is what makes it coaching: a coach does not set you one exercise, they put you into a programme at the right weight.</p>
+<div class="eq">The entry point sits one tier below the board that is beating you.</div>
+<div class="s derived"><div class="ct">Why one tier, and only one</div><p>The flow channel (Why §7, Csikszentmihalyi) says keep the player between boredom and anxiety: someone failing at tier <em>N</em> is above the channel, so the entry must sit below it. But the drop need only be <strong>one</strong> tier, because <strong>isolation is itself the large difficulty reduction</strong> — the Isolate step of Introduce → Isolate → Combine <em>is</em> the relief. Dropping further puts the entry <em>under</em> the channel and makes it boring, wasting the one moment a player is willing to be taught. And because the entry is a ladder rather than a level, the player climbs back <em>past</em> the tier that beat them, which is the actual repair.</p></div>
+
+<h3>The mapping table — lever gap to group</h3>
+<table>
+<tr><th>What the summary shows</th><th>What it means</th><th>Entry on…</th></tr>
+<tr><td>Low <strong>ships%</strong></td><td>Arrivals aren't being accounted for — coverage or targeting</td><td>D1 The Seam · D2 The Centre · F3 The Alpha</td></tr>
+<tr><td>Low <strong>cannon%</strong></td><td>Guns are dying — enclosure, concealment, or AoR overreach</td><td>B2 The Ring · D3 The Grammar</td></tr>
+<tr><td>Low <strong>area%</strong></td><td>Not enclosing enough — triage or piece efficiency</td><td>B3 The Triage · B1 The Fit</td></tr>
+<tr><td><strong>Breakthroughs</strong></td><td>The wall's weakest seam isn't being read</td><td>F4 The Wall · B4 The Re-Plug · <strong>S3 The Tax</strong></td></tr>
+<tr><td><strong>High sortie count</strong> on a win</td><td>Elimination rate is low — purpose isn't being read, so cores aren't being found</td><td>F1 The Silhouette · D2 The Centre</td></tr>
+<tr><td><strong>Threats met late</strong></td><td>Maneuvers started too late</td><td>F5 The Cue</td></tr>
+<tr><td><strong>Pieces mis-landing</strong> in wind</td><td>Drift isn't being read or braced against</td><td>B5 The Drift</td></tr>
+<tr><td><strong>Failing only on fog boards</strong></td><td>The read fails when vision does <span class="tag t-d">Jack's own example</span></td><td>F1 · F2, entered on fog-theater levels</td></tr>
+<tr><td><strong>3 losses, same board</strong></td><td>The existing hint trigger</td><td>The rung-3 seam group for the phase pair the summary blames</td></tr>
+</table>
+
+<h3>The Roster — where suggestions live <span class="tag t-d">ruled</span></h3>
+<p><em>"We should also have a place to store these suggestions so that the player can come back later and see what the AI suggested. The player can either play them or just delete them from his roster."</em></p>
+<ul>
+<li><strong>A persistent list</strong> on the Yard screen. Each entry: the group, the entry level, one line of why, and the date suggested.</li>
+<li><strong>Two actions only</strong> — play it, or dismiss it. No third state, no snooze, no expiry.</li>
+<li><strong>Nothing accumulates silently.</strong> A group already on the Roster is never re-added; a new loss on the same skill <em>updates</em> the existing entry's level instead. Otherwise a struggling player opens the Yard to a wall of evidence about how badly they are doing — the exact opposite of the intent.</li>
+<li><strong>Dismissal is permanent and free</strong> — no confirmation, no re-suggestion of that entry. The player's judgment about their own weaknesses outranks the table's.</li>
+</ul>
+
+<h3>Tone — the rule and the test <span class="tag t-d">ruled</span></h3>
+<p><em>"This should always be like a coach. In the beginning, it might be gentle, but in later stages, it might get tough. It should NEVER be condescending."</em></p>
+<div class="s derived"><div class="ct">A register that scales, and a checkable line</div><p><strong>The register scales with demonstrated competence</strong> — a signal the debrief already receives (progression state, star history, retry count). Early: explanatory and warm — <em>"Your rings held fine. The guns had nowhere to sit — want to look at courtyards?"</em> Late: terse and demanding, the way a coach talks to someone who knows the sport — <em>"You centred forward three sorties running against a screen you'd already read. Deep centre. The Centre, tier 130."</em></p><p><strong>The never-condescending line, made testable:</strong> a line is condescending if it explains something the player has already demonstrated. That is checkable against the same progression state the register scales on — so it is a rule the implementation can enforce rather than a tone note in a doc. Two corollaries: <strong>critique the play, never the player</strong> (the summary describes decisions, so the sentence should too), and <strong>never soften a real problem to be kind</strong> — a coach who won't tell you what is wrong is not being gentle, they are being useless. Rivenkeep's own working rule on honesty says the same thing about this project, and it should say it to the player too.</p><p>Bounds, unchanged: offered once per stall, dismissible, never more than one per battle, never gating. Retry is always one tap away, and a player who ignores every suggestion for a whole campaign has their path unchanged.</p></div>
+</section>
+
+<section id="onboard">
+<h2><span class="n">15</span>Onboarding — the Mini-Games Are the Tutorial</h2>
+<p class="lead"><span class="tag t-d">ruled</span> <em>"Onboarding should be the minigames. If the player doesn't do anything, then we give them a finger that shows them what to do."</em></p>
+<p>A tutorial is by definition <strong>one new thing at a time</strong> — which is the Introduce step, which is exactly what a rung-1 level is. So the teaching content and the drill content are the same content, and it only gets designed once.</p>
+
+<h3>The Induction — a ~10-level sampler <span class="tag t-d">ruled</span></h3>
+<p><em>"We should have a small set of each of the rungs that demonstrates the game. Maybe like 10? But the player can skip all of that and start the battles or daily challenges. Who are we to tell them that they are not ready."</em></p>
+<table>
+<tr><th>Induction level</th><th>Drawn from</th><th>Shows the player</th></tr>
+<tr><td>1 · 2 · 3</td><td>B1 · B2 · B3, level 1</td><td>Pieces fit, rings close, castles get chosen</td></tr>
+<tr><td>4 · 5</td><td>D1 · D2, level 1</td><td>Guns cover ground — and where you aim the zone matters</td></tr>
+<tr><td>6 · 7 · 8</td><td>F1 · F2 · F3, level 1</td><td>Shapes mean something, motion means something, timing means something</td></tr>
+<tr><td>9</td><td>R2·Build, level 1</td><td>A whole phase, on the real clock</td></tr>
+<tr><td>10</td><td>R4 The Sortie, level 1</td><td>The whole loop, once — "this is the game"</td></tr>
+</table>
+<p>Ten levels, ~15 minutes, walking the ladder in miniature so the <em>structure</em> is learned alongside the mechanics. Every level is a real group-board level 1, so nothing here is bespoke tutorial content needing separate maintenance — <strong>the Induction is a playlist, not a mode.</strong></p>
+<div class="s"><div class="ct">Skippable, and it means skippable</div><p>A single always-visible skip: no confirmation, no warning, no "we recommend finishing this first." Straight to the campaign or the Muster. And no consequence — the Induction levels stay on their boards, so a player who skips and then struggles finds the same content waiting, and the Coach (<a href="#coach">§14</a>) will point at it by name.</p><p>Worth stating because it is the tempting thing to get wrong: <strong>a skip that nags is not a skip.</strong> Jack's line is the design rule — <em>who are we to tell them that they are not ready.</em></p></div>
+
+<h3>The finger — the idle prompt <span class="tag t-d">ruled</span></h3>
+<p>If the player does nothing, the game shows them what to do. Escalating, and every stage already has a home in the design:</p>
+<ol>
+<li><strong>~4 s idle</strong> — the target element pulses (Build's existing ghost-preview and magnify-halo language; no new render vocabulary).</li>
+<li><strong>~8 s idle</strong> — a <strong>pointing finger</strong> traces the gesture: the drag path, the rotate tap, the drop point. It <em>traces</em> it rather than describing it.</li>
+<li><strong>~12 s idle</strong> — the AI contextual tutor speaks one line, in the Coach's register. The existing mechanic, which already handles cases like <em>"a player who hasn't rotated in 8 seconds hears: try tapping the piece to rotate it."</em></li>
+</ol>
+<p>The finger is <strong>demonstration before explanation</strong> — the right order for a spatial game, and the reason it comes before the text. It stops the instant the player acts: a nudge, never a script to sit through.</p>
+<div class="s derived"><div class="ct">Why the idle prompt belongs to rung 1 and nowhere else</div><p>An idle timer on a <em>timed</em> drill is a contradiction — the clock is already the prompt. So the finger runs only where a player can be genuinely stuck rather than merely slow: the <strong>Induction and the first pass of a rung-1 board</strong>. From rung 2 up the phase clock does the job, and a player who is idle at rung 2 is <em>thinking</em>, which is the behaviour the whole game exists to reward.</p></div>
+</section>
+
+<section id="bounds">
+<h2><span class="n">16</span>Boundaries — What the Yard Never Touches</h2>
+<p class="lead">The Yard is unlimited. So: <strong>unlimited play must not touch anything that accrues.</strong></p>
+<table>
+<tr><th>The Yard never grants</th><th>Because</th></tr>
+<tr><td><strong>Cannon veterancy</strong></td><td>Unlimited play would max every gun to the 200% cap, deleting the endowment the campaign runs on. Precedent: spackle earns none either.</td></tr>
+<tr><td><strong>Campaign stars or Battle Score</strong></td><td>Those feed the leaderboard, and the seeds are not shared, so there is no comparable board. <span class="tag t-d">ruled</span></td></tr>
+<tr><td><strong>Any leaderboard placement</strong></td><td><span class="tag t-d">ruled</span> Campaigns only. Full stop.</td></tr>
+<tr><td><strong>Unlocks or progression</strong></td><td>Progression is the campaign's to give. A drill builds the player, never the account.</td></tr>
+<tr><td><strong>Stonwryts</strong></td><td>The basis of <a href="#doors">§5</a>. Only the Muster pays — including its grind door.</td></tr>
+<tr><td><strong>Battles</strong></td><td><span class="tag t-d">ruled</span> A battle is the campaign's unit; the Yard tops out at one sortie.</td></tr>
+</table>
+<p><strong>The Yard does grant:</strong> Rooks, highest-level-reached per group, and skill. Deliberately the list that <em>cannot</em> inflate — and note the streak is now the one exception (<a href="#streak">§13</a>), which is why §13 flags what that costs.</p>
+<div class="s"><div class="ct">The boundary conditions imposed on the economy doc</div><p>Packages, streak tables and payout mechanics wrap the drills and belong to the economy doc. This doc owns three constraints on them: <strong>(1) nothing that wraps a drill may create a forfeit</strong> — no expiring slot that costs you a reward you earned, no "playing again might pay you less," no lock-in dilemma; <strong>(2) the day's Stonwryt ceiling stays 250</strong> across the Muster and its grind door combined; <strong>(3) streak rewards should not be gameplay buffs</strong> now that a 72-second level maintains a streak.</p></div>
+</section>
+
+<section id="fail">
+<h2><span class="n">17</span>Failure Philosophy — the Yard Succeeds, the Campaign Fails</h2>
+<div class="s pillar"><div class="ct">One inversion, and it decides a dozen smaller questions</div><p><strong>The Yard is where you succeed. The campaign is where you fail.</strong></p><p>Which is why the whole prescription system works: a struggling player is being sent somewhere they are <em>going to win</em>. A coach who answers a losing streak by handing you something else hard is not coaching, and a drill as punishing as the thing it prepares you for has no reason to exist. It also explains, retroactively, why no-downside was never in tension with teaching: the Yard does not need loss aversion to make you care, because the campaign has already done that.</p><p>Three things it settles concretely: <strong>the tier step must be climbable in one retry</strong> (which sizes the ~10-tier step in <a href="#levers">§10</a>); the Coach's entry point sits <em>below</em> the failure rather than at it; and <strong>1 Rook is easy while 5 is not</strong> — clearing a level should be the expected outcome of a second attempt, with Rooks 2–5 carrying the real challenge. That last one is a direct instruction for the threshold-setting session, and it is the one to hold onto: <em>the difficulty lives in the Rooks, not in the clear.</em></p></div>
+
+<h3>What the Candy Crush comparison actually says</h3>
+<p>Jack asked how long a Candy Crush level is. The answer is more useful than expected, and it cuts three ways.</p>
+<ul>
+<li><strong>On length, we are well calibrated.</strong> Candy Crush's timed levels were mostly 1:00 or 0:30, hard ones 1:30, the full range 0:10 to 3:00. Our 72–180 s sits inside that and above Jack's one-minute floor — so the "over too quickly to teach anything" worry is answered by the genre's own numbers rather than by intuition.</li>
+<li><strong>On mechanism, we are in the mode the genre deleted.</strong> King <strong>removed timed levels entirely in 2018</strong> after negative player reception, judging them difficult and user-unfriendly; modern Candy Crush is move-limited. That is the evidence behind <a href="#clocks">§11</a>'s CALL-OUT.</li>
+<li><strong>On retention, the precedent only half-supports us — and this is the important one.</strong> Candy Crush's actual engine is <em>repeated failure on a single level</em>: a pro player reports 7–10 days and 100–150 lives to pass a new hard level. That is loss aversion at maximum, monetised through lives and boosters. <strong>Jack has ruled the exact opposite for the Yard.</strong></li>
+</ul>
+<div class="s warn"><div class="ct">The honest conclusion — the Yard is not a Candy Crush loop, and it should stop being described as one</div><p>Calling the mini-games "our candy-crush" is right about their <em>role</em> — the daily habit, the endless supply, the thing you open the app for — and wrong about their <em>engine</em>. Candy Crush retains through the sting of near-miss failure against a wall you cannot pass. The Yard explicitly removes that, so its retention has to come from the two things left: <strong>the Rook climb and the board reset.</strong></p><p>That is a thinner engine than v1.0.0 assumed when it cited the genre as precedent, and the closer analogue is not a match-3 at all — it is a <strong>practice mode, or a batting cage</strong>. People do return to those voluntarily, but for a reason Candy Crush does not rely on: <em>the visible transfer of skill to the real thing.</em> Which is fine, and arguably better, but it means the load-bearing claim moves. It is no longer "the climb is compelling"; it is <strong>"the player can feel the Yard making them better at the campaign."</strong></p><p>That is measurable, and it is now the first thing to measure in prototype: does a player who drills F1 for twenty minutes notice their next battle reading differently? If yes, the Yard needs nothing else. If no, no amount of Rook polish will save it — and the honest fix would be to move some reward into the Yard, which reopens every inflation question <a href="#stonwryts">§12</a> just closed by subtraction.</p></div>
+</section>
+
+<section id="seed">
+<h2><span class="n">18</span>Where the GDD's Seven Packs Landed</h2>
+<p>Full accounting, so nothing is silently dropped.</p>
+<table>
+<tr><th>GDD pack</th><th>Became</th><th>Note</th></tr>
+<tr><td><strong>Speed Enclosure</strong></td><td>R2·Build, scored on area% alone</td><td>A full Build with one lever, not a part-drill. Correctly rung 2.</td></tr>
+<tr><td><strong>Efficient Enclosure</strong></td><td>B1 The Fit + B3 The Triage</td><td>Splits: piece efficiency is B1, target-% under a budget is B3. Its "no timer" is now the precedent behind §11's CALL-OUT.</td></tr>
+<tr><td><strong>Wind Mastery</strong></td><td class="full">B5 The Drift — its own group <span class="tag t-d">ruled</span></td><td>v1.0.0 demoted this to a modifier; Jack reversed it, and he is right. Drift-stop is a <em>technique</em> with a right answer and a wrong one, which is what makes it drillable — where board size and theater are merely conditions.</td></tr>
+<tr><td><strong>Ship Hunting</strong></td><td>R2·Fight, plus F1/F2 for its reading half</td><td>The seed's only reading drill, and it was doing two jobs at once.</td></tr>
+<tr><td><strong>Castle Defense</strong></td><td class="mid">Absorbed into S3 The Tax</td><td>Build-then-watch-troops is the Fight→Build seam without the repair half. S3 is the same lesson with the consequence attached, so the pack is superseded rather than kept.</td></tr>
+<tr><td><strong>Cannon Endurance</strong></td><td class="mid">Cut — its subject needs a battle</td><td>Its real subject is preserving accrued value <em>across sorties</em>: multi-sortie, therefore a battle, therefore campaign-only <span class="tag t-d">ruled</span>. v1.0.0 had it mis-runged at 3; the honest resolution is that it is not a drill at all.</td></tr>
+<tr><td><strong>Full Siege</strong></td><td>R4 The Sortie</td><td>Kept, constraint sets included — which turn out to be what makes rung 4 a drill rather than a short battle.</td></tr>
+</table>
+<p><strong>Net: 7 packs → 4 groups + 1 absorbed + 1 cut, and 15 groups added</strong> — the eight Deploy/Fight reading atoms, the explicit rung-2 phase groups, the three seams, and rung 4.</p>
+<div class="s derived"><div class="ct">Why the weighting was inverted — the biggest substantive change from the seed</div><p><strong>Legibility under load is the design's single point of failure</strong> (Why §6, tension #3) and the felt target's test is "can you say what every approach is doing." So the drill set must be majority <em>reading</em>. The GDD's seed is the opposite: three of seven packs were Build-placement drills and exactly one was a reading drill. The set here is <strong>8 reading groups of 13</strong> at rung 1.</p></div>
+<div class="s"><div class="ct">One rule the seed was right about, now canon</div><p>Efficient Enclosure has no timer, and Build's timer law says an untimed Build is an optimiser's paradise. Both correct: <strong>a drill may relax a campaign law when isolation is what the drill is for.</strong> An untimed <em>board</em> lets a player optimise past thinking; an untimed <em>atom</em> is how you learn the atom. The campaign may never relax it; the Yard may, and only toward isolation.</p></div>
+</section>
+
+<section id="callouts">
+<h2><span class="n">19</span>CALL-OUTs — Open Judgment Calls</h2>
+<p class="lead">v1.0.0's six are all closed by Jack's rulings. Three new ones, all narrower than the last set.</p>
+<div class="s call"><div class="ct">1 · Attempt-limits or time-limits at rung 1</div><p>Full treatment in <a href="#clocks">§11</a>. The genre's biggest title deleted timed levels; our own GDD already has an untimed, budget-bounded pack. Recommendation: <strong>split by atom</strong> — time-limit the three drills whose skill <em>is</em> acting in time (B4, F3, F5), attempt-limit the pure reads (B2, D1, F1, F2, F4), keep the real battle clock unconditionally at rungs 2–4. A real fork: it decides whether rung 1 feels like a test or a batting cage.</p></div>
+<div class="s call"><div class="ct">2 · Does the grind door need an attempt gate?</div><p><a href="#stonwryts">§12</a>. A player can reach the day's cap by grinding rung 1 and never touch the day's Muster drill, farming their comfort zone forever. Recommendation: <strong>the Long Muster opens once today's Muster drill has been attempted</strong> — attempted, not cleared, so still no downside. Alternative if that reads as coercive: halve the grind rate below the player's highest cleared rung. Or accept it, on the grounds that a player grinding rung 1 for currency is at least still drilling.</p></div>
+<div class="s call"><div class="ct">3 · Is D·f (territory / the forward gun) really a lever?</div><p><a href="#atoms">§8</a>. Demoted into D2's later levels because it is one branch of the placement decision D2 already teaches. But it is a genuinely distinct trade — <em>ground and reach</em> versus <em>growth and safety</em> — with its own read (how fast is the DMZ coming, and can I afford to garrison that gun), and it is the atom I am least confident about folding in. If prototype shows it is its own read, it wants its own group, and the drill writes itself: <strong>hold the line, or hide the gun.</strong></p></div>
+</section>
+
+<section id="check">
+<h2><span class="n">20</span>North-Star Check</h2>
+<table>
+<tr><th>Law</th><th>How the Yard stands against it</th></tr>
+<tr><td><strong>Strategy is the fun</strong></td><td>The Yard exists because the fun is unreachable without the reading skill. 8 of 13 rung-1 groups are reading drills — the inversion in §18 is this law expressed as a content budget.</td></tr>
+<tr><td><strong>Difficulty is cognition, not stats</strong></td><td class="full">Fully honoured, and for free: the drill difficulty axis <em>is</em> the campaign's cognition creep (tier = battle index). No group has a stat knob; the levers change conditions, not numbers.</td></tr>
+<tr><td><strong>Legibility is the beam</strong></td><td class="full">Every rung-1 group isolates exactly one channel — legibility at maximum. The camera trade returning as a board-size lever is the one place load is deliberately raised, and it is raised on a <em>board</em> rather than on a read.</td></tr>
+<tr><td><strong>Determinism, wide solution space</strong></td><td>B3 scores against the <em>best available</em> triage, never one intended answer — the ≥2-solutions law showing up in the scoring. Rungs 3–4 inherit real boards and their width. And the seed model means a board is deterministic <em>within</em> an instance and fresh across resets, which is the same trick the campaign plays across battles.</td></tr>
+<tr><td><strong>No forced playstyle</strong></td><td class="mid">Watch this one. D2 The Centre teaches a specific lever, and a drill that teaches a technique is one step from one that <em>requires</em> it. The bound: a group may teach the clever line, but <strong>1 Rook must be reachable without it</strong> — the technique may be what the fifth Rook costs, never what clearing costs.</td></tr>
+<tr><td><strong>The felt target — barely overwhelming</strong></td><td class="mid">Deliberately inverted here, and §17 is the justification: the campaign runs at the top of the legible band, the Yard runs comfortably inside it. Overwhelming is the campaign's job. If the Yard is overwhelming, it has failed.</td></tr>
+<tr><td><strong>Introduce → Isolate → Combine</strong></td><td class="full">This is the ladder — and the group board now <em>enforces</em> it: locked-and-linear on a first pass means a player physically cannot combine before they have isolated.</td></tr>
+<tr><td><strong>Every number derived</strong></td><td class="full">Durations from the locked clocks and the 18 s day; 20 levels from the 190-battle creep range; slices 100/150/200/250 duration-proportional against the GDD's unmoved 250 cap; Rook payouts 6/12/25/50/100 inverted from the locked 8/23/47; the grind rate of 6 from the cheapest purchase in the game; the grind cap of 100 from the 700/week the 7-day plan handed back. Two figures ship as route (4) with the route named: <strong>per-level Rook thresholds</strong> and <strong>the top of each group's tier ladder</strong>.</td></tr>
+<tr><td><strong>Dream big, then edit down</strong></td><td class="full">23 atoms enumerated and preserved as the superset in §8; 20 groups layered on top; every cut recorded with its fate in §8 and §18.</td></tr>
+</table>
+<div class="s pillar"><div class="ct">The claim, and the one thing it now rests on</div><p><strong>The claim:</strong> the Yard is not a tutorial with a retention loop bolted on. It is the campaign's own mechanics, difficulty engine and scoring, run at four scales with loss aversion removed — which is why it can be the on-ramp, the endless game and the coach's prescription pad without being designed three times.</p><p><strong>What it rests on, restated after §17:</strong> not that the climb is compelling, but that <strong>the player can feel the Yard making them better at the campaign.</strong> A sharper claim than v1.0.0's and a more testable one. It is also the honest one, because the Yard has given up the engine the genre actually runs on, and this is what it has instead.</p></div>
+</section>
 
 <section id="history">
 <h2>Version History</h2>
-<p>Kept here as a self-contained backup of this doc's changelog; the journal is the authoritative record.</p>
+<p>Kept as a self-contained backup of this doc's changelog; the journal is the authoritative record.</p>
 <table>
 <tr><th>Version</th><th>Changes</th></tr>
-<tr><td><strong>v0.1.0</strong></td><td>Design brief created — requirements and starting design captured (the non-negotiables, the four-rung skill ladder, the seven starting packs seeded from the GDD, the no-downside reframe as the #1 open decision). Full design pending until the Build and Fight phases are locked.</td></tr>
+<tr><td><strong>v2.0.0</strong></td><td><strong>Rebuilt on Jack's cont.27 rulings.</strong> <em>Rooks</em> — the Yard gets its own rating, <span class="rk">♜</span>, five of them (count deliberately differs from the campaign's three: a star is a coarse public bucket, a Rook is a private progress marker and wants finer resolution); name recommended as "Rooks" on a collision argument over "Keeps" and "Towers"; personal only, never any leaderboard. <em>Group boards</em> — the unit of play is now a 20-level ladder per atom, locked-and-linear on a first pass, then reset for a new seed and free roam, with the reset clearing that board's Rooks; 20 levels derived from the 190-battle creep range (~10 tiers/step), cross-checked at 24–60 min per pass. <em>Rung 5 cut</em> — no battles in the Yard; the rebuild tax survives as <strong>S3 The Tax</strong> (Fight→Build), a seam v1.0.0 missed by only looking at seams in forward order; the multi-sortie race becomes a clean hand-off to the campaign rather than a gap. <em>Rung 3 specified</em> as "player plays two phases, game supplies the third," all three pairs, real clocks on every played phase. <em>Rung 2</em> is the phase played twice with the tier stepped, resolving the ≥1-min floor against the 54 s Build clock without inventing a third clock. <em>Durations</em> all multiples of 18 s so the day display never reads fractional: 72 / 108 / 126–144 / 180 s. <em>The clock display</em> — the 0.75 s sweep removed by making the siege day <strong>18 hours</strong>, so one hour = exactly one second (⚠ owner-change owed to Build §2). <em>7-day Muster</em> — days 1–3 rung 1, 4–5 rung 2, 6 rung 3, 7 rung 4; slices 100/150/200/250 duration-proportional against the GDD's unmoved 250 day cap; Rook payouts 6/12/25/50/100% inverted from the locked star rewards; the week tops out at 1,050 against the GDD's 1,750, and the plan doubles as pedagogy (a Muster-only player walks all four rungs weekly). <em>The grind door</em> — the Long Muster pays 6 Stonwryts per level (the cheapest purchase in the game, so one level = one nudge), capped at 100/day, which is exactly the 700/week the 7-day plan handed back, making it <strong>inflation-neutral by subtraction rather than by assurance</strong>; ~17 levels ≈ 20 min ≈ 100, matching the Brick n Balls shape; and because the cap is remaining headroom, the grind opens on the short easy days and closes on the big ones. <em>Streak</em> — any completion counts including a single Yard level; full reset on a missed day (⚠ with the honest consequence flagged: streak gameplay buffs are now nearly free and should move to currency/cosmetics — economy doc's call). <em>The Coach</em> — attaches an <em>entry point on a ladder</em> rather than a drill, one tier below the failure; the persistent Roster (play or dismiss, never accumulating, dismissal permanent and free); the fog case wired into the mapping table; and a testable never-condescending rule — a line is condescending if it explains something the player has already demonstrated. <em>Onboarding</em> — the mini-games <em>are</em> the tutorial; a 10-level Induction that is a playlist rather than a mode, skippable with no nag ("a skip that nags is not a skip"); the escalating idle prompt ending in the pointing finger, scoped to the Induction and rung-1 first passes only. <em>Wind promoted</em> back to its own group (B5 The Drift) — Jack's reversal is right: drift-stop is a technique with a right answer, where board size and theater are conditions. <em>The camera trade</em> resolved as a board-size lever, closing v1.0.0's CALL-OUT 6. <em>Territory/DMZ</em> explained and demoted to a D2 lever, flagged as the least confident cut. <em>Failure philosophy</em> — "the Yard is where you succeed, the campaign is where you fail," which sizes the tier step, places the Coach's entry point, and rules that <strong>the difficulty lives in the Rooks, not in the clear</strong>. <em>The Candy Crush question answered</em>, cutting three ways: our 72–180 s is well inside the genre's level lengths; King <strong>deleted timed levels in 2018</strong> after negative reception, now a live CALL-OUT about attempt-limits at rung 1; and Candy Crush's real engine is repeated failure on one level, which Jack has explicitly inverted — so the Yard is <strong>not</strong> a Candy Crush loop, and the load-bearing claim shifts from "the climb is compelling" to "the player can feel the Yard making them better." Three CALL-OUTs open (rung-1 limit mechanism, grind-door attempt gate, whether territory deserves its own group).</td></tr>
+<tr><td><strong>v1.0.0</strong></td><td>First full design. No-downside resolved (downside ≠ failure; the model derived as the campaign's replay rule minus the drop-back; the 1→5 gauntlet replaced by the locked star-ratchet + continuous-score pair). Two doors, one pool. Ladder systematised to five rungs — the pass found Jack's rungs and Why §7's engagement loops were the same list with the same entry missing (§7's "battle 2–5 min" is really a sortie; a battle is 6–24 min), adding a battle rung since the two-clock race was undrilled. 23-atom superset → 17 drills, weighting inverted to 8-of-12 reading. Endless axis = mind tier = battle index; ceiling defined as where reading stops beating guessing. All durations derived from the locked clocks. Scoring converging on Battle Score. Stonwryt ceiling held at 250. Prescription mapping table, one-tier drop, tone bounds. Tutorial re-cast as rung 1. Six CALL-OUTs.</td></tr>
+<tr><td><strong>v0.1.0</strong></td><td>Design brief — the non-negotiables, the four-rung skill ladder, the seven GDD packs mapped, the no-downside reframe flagged as the #1 open decision. Full design pending the Build and Fight phases.</td></tr>
 </table>
 </section>
 
 </div>
-<footer>Rivenkeep — Mini-Games · <span class="ver"></span> · The skill on-ramp — downside-free drills that build the player into a strategist · Design brief, full design pending the Build &amp; Fight phases · Governed by The Why</footer>
+<footer>Rivenkeep — Mini-Games · <span class="ver"></span> · The Yard and the Muster — where you succeed, so the campaign can be where you fail · Governed by The Why</footer>
 </body>
 </html>
