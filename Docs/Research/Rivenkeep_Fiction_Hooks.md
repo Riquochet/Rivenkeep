@@ -1,5 +1,7 @@
 # RIVENKEEP — FICTION HOOKS: THE CARVED FLEET
 
+> **Renamed 2026-09-26** per `Rivenkeep_Name_Map.md` (originality audit): orn → saen, sil → nei, and their compounds; Naelaer → Naelear; Rhenaer → Rhenear. The proposed *the Mistlands → the Smother* was withdrawn: Jack keeps **the Mystlands**. Where this file and the Admiral or Legends disagree, those docs win.
+
 **For the Legends team.** This is shared fiction for the Admiral layer (admiral_framework.md): how the Mystaeri fleet thinks, told as the Rivenmen come to understand it. Everything here is **cosmetic and off the sim path**. No tale changes a number. But every Reading must be *true* to what the sim did (framework §9b), so the words below are the vocabulary the game will generate them in. Draft v0.1, 2026-09-25.
 
 **Canon conventions (Jack's rulings).**
@@ -40,7 +42,7 @@ The Tides, as the Rivenmen name them. The Mystaeri name is the carved form; the 
 | **The Joined Tide** | *Aelthae* / *Ael'thae* | "bond-tide": *ael*, the word in *Ael'thar* | **one sentence across many hulls**: three roads, one hour | Fleets that arrive on three bearings as if one hand had flung them. **The dark mirror of the Aetherbond** (§8) | 23–26 |
 | **The Tide that Learned Deceit** | *Rhenthae* / *Rhen'thae* | "stone-tide", the tide that learned the stone-folk's ways | **true orders meant to mislead** | Fear shown where they are strong. Straw sent until the shooting stopped, then men | 27–31 |
 | **The Last Tide** | *Eirthae* / *Eir'thae* | "deep tide", the last and oldest wood that sailed | **whole plans, branching**: "if they do this, then that" | "They carve a morrow now, as we do" (story_bible C6) | 32 |
-| **The Thrones** (the Mystarchs) | *Naelorn* / *Nae'lorn* | "mist-hearts", the Mystaeri's own word for the Mystholders | **judgements** | The ten eldest pillars of the fog, grown into moving thrones and set in the ten fallen havens | Finale |
+| **The Thrones** (the Mystarchs) | *Naelsaen* / *Nael'saen* | "mist-hearts", the Mystaeri's own word for the Mystholders | **judgements** | The ten eldest pillars of the fog, grown into moving thrones and set in the ten fallen havens | Finale |
 
 **The Fall and the Tides fit together this way** (resolves story_bible A12 #2). The first Tides took the ten havens easily, because the havens had "no standing navy, no war fleet, no defensive doctrine" (Legend VI), and one sign was enough: *Burn.* Rivenkeep is the first place anyone **fought back**. So the Rivenmen first meet the Hasty Tide there, the last of the young wood, sent to finish a shore the council believed already won. Every Tide after it is finer. The Thrones never sailed in the Fall. Remove the Leviathan from the Crystal spire's night; at most, "a shadow in the fog greater than any hull" was glimpsed. They came last, and they sit in the havens still. The Rivenmen must go out to them (the homecoming frame, story_bible B2.2).
 
@@ -121,16 +123,16 @@ A stratagem is a carving. The carvings grow the way the Tides do: **sign → phr
 
 | Line | Root sign (as Seren names it) | What the sign looks like in the wood | Its first word (Hasty or Second Tide) | Its last (framework §15) | Master (the Throne) |
 |---|---|---|---|---|---|
-| Flood | **the Wave** | one stroke curling forward | *To the shore.* | *Give them the middle; take the sides; close the hand.* | Thaelorn (the "Leviathan") |
+| Flood | **the Wave** | one stroke curling forward | *To the shore.* | *Give them the middle; take the sides; close the hand.* | Thaesaen (the "Leviathan") |
 | Sounding | **the Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* | *Come as the young wood came.* | Naelthar (the "Storm King") |
-| Screen | **the Bar Before** | a bar across a stroke | *Before the bearer.* | *Strike one head; two will answer.* | Selvaren (the "Hydra") |
+| Screen | **the Bar Before** | a bar across a stroke | *Before the bearer.* | *Strike one head; two will answer.* | Leavaren (the "Hydra") |
 | Hunt | **the Spark** | a cut ending in a star-notch, the flash | *Where it flashed.* | *Every gun that speaks, the mountain answers.* | Rhenvael (the "Colossus") |
-| Siege | **the Mute Square** | a closed square: how they write *stone*, the thing that does not speak | *Break the wall.* | *Go under what you cannot go through.* | Ralenorn (the "Ancient Treant") |
+| Siege | **the Mute Square** | a closed square: how they write *stone*, the thing that does not speak | *Break the wall.* | *Go under what you cannot go through.* | Ralensaen (the "Ancient Treant") |
 | Feint | **the Two Mouths** | two strokes, one of them hollow | *Loud in one place; land in another.* | *Show them the host; come up beneath the stone.* | Senneir (the "Sandworm") |
 | Lure | **the Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* | *Burn as you go; let them chase the fire.* | Esthaer (the "Magma Titan") |
-| Bleed | **the Breath** | a gap left between two cuts | *Spend their fire on wood of no worth.* | *Rot the wall; wait for the mending to fail.* | Vaelsorn (the "Plague Herald") |
-| Patience | **the Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* | *Wait in the white; strike the stone that cannot mend.* | Eiravel (the "Frost Wyrm") |
-| Mask | **the Smoothed Cut** | a carving filled and smoothed over, so it can be felt and not seen | *Grey before the landing.* | *Show them themselves.* | Silvaere (the "Crystal Lich") |
+| Bleed | **the Breath** | a gap left between two cuts | *Spend their fire on wood of no worth.* | *Rot the wall; wait for the mending to fail.* | Vaelress (the "Plague Herald") |
+| Patience | **the Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* | *Wait in the white; strike the stone that cannot mend.* | Eirlenth (the "Frost Wyrm") |
+| Mask | **the Smoothed Cut** | a carving filled and smoothed over, so it can be felt and not seen | *Grey before the landing.* | *Show them themselves.* | Neivaere (the "Crystal Lich") |
 
 The full list of 45 carvings, with their English "carven" lines, is framework §14. Writers may quote those carvings freely. They are the text the Reading shows.
 
@@ -206,16 +208,16 @@ So when Halvard and Rhyna read *three roads, one hour* in the wreck-wood, they a
 
 | Fear-name (Rivenmen) | True name (carved / spoken) | Meaning | Haven held (story_bible B7 working names) | Grain | Master of | Its Judgement (carving) |
 |---|---|---|---|---|---|---|
-| the Leviathan | **Thaelorn** / *Thae'lorn* | tide-heart | Eldhythe, the Eldest Haven | Heartoak | the Wave (Flood) | *Give them the middle; take the sides; close the hand.* |
-| the Hydra | **Selvaren** / *Sel'varen* | bearer of branches | Tidesmeet | Ironbark | the Bar Before (Screen) | *Strike one head; two will answer.* |
-| the Plague Herald | **Vaelsorn** / *Vael'sorn* | the grain that rots | Fenholm | Yew | the Breath (Bleed) | *Rot the wall; wait for the mending to fail.* |
-| the Ancient Treant | **Ralenorn** / *Ra'lenorn* | root-heart, a pillar walking home | Holtward | Ironbark | the Mute Square (Siege) | *Go under what you cannot go through.* |
+| the Leviathan | **Thaesaen** / *Thae'saen* | tide-heart | Eldhythe, the Eldest Haven | Heartoak | the Wave (Flood) | *Give them the middle; take the sides; close the hand.* |
+| the Hydra | **Leavaren** / *Lea'varen* | bearer of branches | Tidesmeet | Ironbark | the Bar Before (Screen) | *Strike one head; two will answer.* |
+| the Plague Herald | **Vaelress** / *Vael'ress* | the grain that rots | Fenholm | Yew | the Breath (Bleed) | *Rot the wall; wait for the mending to fail.* |
+| the Ancient Treant | **Ralensaen** / *Ra'lensaen* | root-heart, a pillar walking home | Holtward | Ironbark | the Mute Square (Siege) | *Go under what you cannot go through.* |
 | the Colossus | **Rhenvael** / *Rhen'vael* | stone-grain | Carnhold | Blackthorn | the Spark (Hunt) | *Every gun that speaks, the mountain answers.* |
 | the Magma Titan | **Esthaer** / *Es'thaer* | the burning | Emberhythe | Twistbough | the Turned Stern (Lure) | *Burn as you go; let them chase the fire.* |
 | the Sandworm | **Senneir** / *Sen'neir* | the deep-beneath | Sandreach | Willow | the Two Mouths (Feint) | *Show them the host; come up beneath the stone.* |
-| the Frost Wyrm | **Eiravel** / *Ei'ravel* | the long winter | Rimewatch | Yew | the Knot (Patience) | *Wait in the white; strike the stone that cannot mend.* |
+| the Frost Wyrm | **Eirlenth** / *Eir'lenth* | the long winter | Rimewatch | Yew | the Knot (Patience) | *Wait in the white; strike the stone that cannot mend.* |
 | the Storm King | **Naelthar** / *Nael'thar* | blood of the sky | Highreach | Ashwood | the Lone Stroke (Sounding) | *Come as the young wood came.* |
-| the Crystal Lich | **Silvaere** / *Sil'vaere* | the silvered, the mirror | Glasspire | Silverbark | the Smoothed Cut (Mask) | *Show them themselves.* |
+| the Crystal Lich | **Neivaere** / *Nei'vaere* | the silvered, the mirror | Glasspire | Silverbark | the Smoothed Cut (Mask) | *Show them themselves.* |
 
 The beast-names are the **Rivenmen's fear-names**. The Readings reveal the true names one by one as each haven is retaken (story_bible C5, the exonym-to-endonym swap). The Leviathan and Herald collide with lineage names (story_bible A11, framework CALL-OUT 12). Until Jack rules, keep the fear-names for the Thrones in tales and let the lineage names stay working handles in the docs.
 
@@ -225,20 +227,20 @@ The beast-names are the **Rivenmen's fear-names**. The Readings reveal the true 
 
 | Root | Meaning | Used in |
 |---|---|---|
-| *orn* | heartwood, the heart of a tree | *Ornvael* (the Heartwood); *Naelorn*; *Thaelorn* |
-| *vael* | grain; temper | *Ornvael*; *Vaelthae*; *Rhenvael* |
+| *saen* | heartwood, the heart of a tree | *Saenvael* (the Heartwood); *Naelsaen*; *Thaesaen* |
+| *vael* | grain; temper | *Saenvael*; *Vaelthae*; *Rhenvael* |
 | *seth* | a carving; an order cut in living wood (pl. *sethen*) | *Sethvaren*, "bearer of the carving": the **Standard-Bearer**, a sister-word to *Aelvaren* |
 | *thae* | tide; a growing | the Tides |
 | *lea* | green, young | *Leathae* |
 | *ralen* | roots; the root-bond | *Aelralen* / *Ael'ralen*, "the bond of roots" |
-| *nael* | mist, the veil, the sky it made | *Naelorn*; *Naelthar* |
+| *nael* | mist, the veil, the sky it made | *Naelsaen*; *Naelthar* |
 | *rhen* | stone, the mute thing | *Rhenthae*; *Rhenvael* |
-| *eir* | deep; old; last | *Eirthae*; *Eiravel* |
-| *sil* | silver | *Silvaere* |
+| *eir* | deep; old; last | *Eirthae*; *Eirlenth* |
+| *nei* | silver | *Neivaere* |
 
-**The Heartwood** is *Ornvael* / *Orn'vael*, "heart-grain". The Rivenmen say *the heart of the standard*, or simply *the heart*.
+**The Heartwood** is *Saenvael* / *Saen'vael*, "heart-grain". The Rivenmen say *the heart of the standard*, or simply *the heart*.
 
-**Optional (Jack's call).** In the late Readings the wood might name the Rivenmen. The story bible's candidate is **"the stone-deaf"**, *Rhenaer*: "those of stone, who do not hear". It can surface only in the Tide that Learned Deceit and later, and it is not canon until Jack says so.
+**Optional (Jack's call).** In the late Readings the wood might name the Rivenmen. The story bible's candidate is **"the stone-deaf"**, *Rhenear*: "those of stone, who do not hear". It can surface only in the Tide that Learned Deceit and later, and it is not canon until Jack says so.
 
 ---
 
@@ -282,5 +284,5 @@ Each seed stands alone at 250–600 words, has a named teller, and follows the r
 2. **Remove the Leviathan from the Fall** so that the Thrones come last? This file assumes yes (§2).
 3. **Are the troops root-warriors** (walking Mystwood)? This file assumes the fleet is wood-driven, and that few or no Mystaeri sail (story_bible A12 #4–5).
 4. **The Joined Tide** is a new Tide between Remembering and Deceit (framework CALL-OUT 15). Keep its name, *Aelthae*, with the Ael'thar echo?
-5. **"The stone-deaf"** (*Rhenaer*) as the Mystaeri's name for the Rivenmen in the late Readings: yes or no?
+5. **"The stone-deaf"** (*Rhenear*) as the Mystaeri's name for the Rivenmen in the late Readings: yes or no?
 6. **The ten havens' working names** (story_bible B7): accepted for use in the Throne readings?

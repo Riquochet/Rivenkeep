@@ -1,12 +1,50 @@
 # Rivenkeep — Project Journal
-**Last Updated:** 2026-09-25 (external review; The Admiral + The Legends drafted; Command Time; archive)
-**Design docs (current):** GDD v6.8.0 (paired-down hub; holds the OLD identity) · Removed-Content Archive v1.4.0 · The **Why v2.4.0** · **Build v1.9.0** · **Deploy v1.5.0** · Shape Catalog v1.0.0 · **Cannons & Towers v2.9.0** · **Ships v2.8.0** · **Fleet Memory v2.4.0** · **Campaign v2.4.0** · **Victory v2.11.0** · **Fight v1.9.0** · **Mini-Games v2.0.0** · **The Admiral v0.2.0 (new)** · **The Legends v1.0.0 (new)**. Dead docs live in `Docs/Archive/`; sources cited by the new docs live in `Docs/Research/`. Governed by The Why. **Every HTML doc single-sources its own version** — one `--doc-version` in `:root`, rendered via `<span class="ver"></span>`. **Design detail lives in the module docs — this journal holds the control panel, the current design canon, and session records.**
+**Last Updated:** 2026-10-04 (the Legends v3.1.0: Plain Words rewritten for newcomers with the lore explained as it comes; every romanised Orrowen word glossed in English; Notes v1.2.0; the private web copy updated)
+**Design docs (current):** GDD v6.8.5 (paired-down hub; holds the OLD identity) · Removed-Content Archive v1.4.0 · The **Why v2.4.0** · **Build v1.9.0** · **Deploy v1.5.0** · Shape Catalog v1.0.0 · **Cannons & Towers v2.9.0** · **Ships v2.8.0** · **Fleet Memory v2.4.0** · **Campaign v2.4.0** · **Victory v2.11.0** · **Fight v1.9.1** · **Mini-Games v2.0.1** · **The Admiral v0.3.0** · **The Legends v3.1.0** (the standalone story: The Book, Plain Words for newcomers and the Original with word-by-word glosses, one switch for all) + **The Legends: Notes v1.2.0** · **The Tongues v0.3.0**. Dead docs live in `Docs/Archive/`; sources cited by the new docs live in `Docs/Research/`. Governed by The Why. **Every HTML doc single-sources its own version** — one `--doc-version` in `:root`, rendered via `<span class="ver"></span>`. **Design detail lives in the module docs — this journal holds the control panel, the current design canon, and session records.**
 **Phase:** DESIGN — ongoing (not prototyping yet; see Design Philosophy).
 **Stack:** Flutter + Dart + Flame · iOS + Android · IntelliJ. *(Swift + SpriteKit / CloudKit / GameKit / StoreKit were evaluated and rejected as Apple-only.)*
 **Layout:** ⭐ panel → DESIGN CANON → RECENT SESSIONS → ARCHIVE (full pre-redesign history, preserved).
 
 ---
 ## ⭐ START HERE — Master Control Panel (read first, every new session)
+
+### ⭐ JACK'S TO-DO (Jack's own list; Claude keeps it current)
+1. **Review The Admiral** (`Rivenkeep_Admiral.html` v0.3.0). Start with the framework §0–§15, then the 40 CALL-OUTs in §25. #1 is the Why §5 revision ("not dueling a live, adapting opponent" against the new "another human" target). *(Added 2026-09-26 at Jack's request.)*
+2. **Rule on Legends §10b.** Each item is reversible:
+   - the *Seren Two-Inks* epithet;
+   - *Rhenear*, respelled to match *Naelear*;
+   - boss names *the Root-Giant* (for the Treant) and *the Rime-Serpent* (for the Frost Wyrm);
+   - haven names *Highholm* and *Sandward*;
+   - the three OPTIONAL passages;
+   - Kael beside Ael'thar.
+3. **The Legends v3.1.0: read it, rule on the calls, and share it.**
+   - **What changed (Jack's notes of 2026-10-02, all applied):**
+     - The Book is back in the v1.3 voice, made hard by heavy old English (thou, -eth, hath), with short sentences and no run-ons.
+     - Plain Words is an easy retelling.
+     - Seren writes with economy and wit. On the wood leaves, Halyna give the memory in fragments and Seren makes it a story.
+     - The tales build; they no longer read like a textbook.
+     - The memory theme is woven in lightly.
+     - In IV.3, Brenn only watches, and the warden burns the boat to hide the deed. The burning custom is gone from every tale.
+     - The Original is back in every leaf.
+     - One switch changes the whole Book.
+   - **Calls for Jack (each reversible):**
+     - Brenn no longer laughs at the kick.
+     - VI.1 tells seven of the Captain's strips, not eight (Hesk's is out).
+     - The loaf simile left I.1.
+     - Nine cut lines are listed in Notes §1.14 and can be restored.
+     - The seven open items on the translation are in Notes §1.15.
+     - 24 open calls are in Notes §7.2.
+     - **From v3.1.0 (Notes §1.16):**
+       - Plain Words names Halvard and Rhyna in full in five wood leaves where it had no pair-name.
+       - Plain Words uses *newest course* for the Book's *last course*.
+       - II.2's Plain headnote says the wood people's name "came to us much later".
+       - Should the game's Original show the word glosses too? The story page now does.
+   - **Jack is reading the stories and will critique them (2026-10-03).** Don't change the Book until then.
+   - **Share:** the private web copy on claude.ai, https://claude.ai/artifact/NVaYS6h3uoFL6UGA4m4hKq, holds the whole Book with every stone and grain writing. Only the people Jack shares it with can open it.
+4. **Theaters.** Read `Research/Rivenkeep_Theaters_Analysis.md`. Seven theaters fit (four need only a skin fix). Sky, Crystal and Volcanic need a new premise under the same mechanic. One rule would settle the rest: "every waterway begins at the sea". Analysis only; nothing is changed yet.
+5. **Optional housekeeping:**
+   - set a git identity on this Mac;
+   - decide whether the old servicenow-authored commits should be rewritten (force-push).
 
 ### How to start a new session
 Upload **only this journal** (`RIVENKEEP_JOURNAL.md`) and say what you want to work on. Claude reads this panel and then tells you **which other docs to upload** for that task (see the Document Index) *before* doing the work. Do NOT bulk-upload everything — the GDD is ~4,200 lines (a hub now, but still large) and can exhaust a single turn's token budget.
@@ -66,8 +104,11 @@ Stable filenames; versions live *inside* each doc + in git, never in filenames.
 | `Rivenkeep_Victory.html` | Win condition, sortie resolution, ammo, stars/Battle Score (v2.0.5) | Victory, sorties, scoring, ammo, breakthrough |
 | `Rivenkeep_Build.html` | **The Build phase (complete owner)** — pieces + full 16-tier table + selection algo, enclosure + the 2×2 minimum rule, triage geometry, the six-step carryover machine + wall-HP/degradation, full piece state machine + rotation, wind, the rebuild-tax loop (v1.1.1) | Build phase, pieces/tiers, enclosure, triage, wind, spackle, wall roles, state machine |
 | `Rivenkeep_Shape_Catalog.html` | **The 198-shape catalog** — every one-sided polyomino grouped A–H with IDs + names, generated algorithmically, + an interactive **rotate-all** button (node-verified) (v1.0.0) | shape catalog, piece shapes, rotate-all, piece names visual |
-| `Rivenkeep_Admiral.html` | **The fleet's commander (new, v0.2.0)** — the next-sortie plan specified: one stratagem per sortie from what the fleet believes, each formation's carving, links/hinges, the selection rule, the Shore-Reading of the player's habits, grains; the recognition loop (signatures, the Reading of the Wood); **46 stratagems in 10 growth lines across five Tides + the Thrones**; 40 CALL-OUTs (§25); integration debts (§24). **~108k words — slice it, never upload whole** | Enemy intent, stratagems, how the fleet schemes, the recognition loop |
-| `Rivenkeep_Legends.html` | **The lore (new, v1.0.0)** — *The Book of the Riven Stone*: 24 tales in six Books told from both sides (stone leaves / wood leaves), the Book of Readings, and how the tales, Whispers and battle messages enter the game (§10: calls waiting on Jack). Supersedes the GDD's Legend | Story, lore, names, Whispers, battle messages |
+| `Rivenkeep_Admiral.html` | **The fleet's commander (v0.3.0)** — the next-sortie plan specified: one stratagem per sortie from what the fleet believes, each formation's carving, links/hinges, the selection rule, the Shore-Reading of the player's habits, grains; the recognition loop (signatures, the Reading of the Wood); **46 stratagems in 10 growth lines across five Tides + the Thrones**; 40 CALL-OUTs (§25); integration debts (§24). **~108k words — slice it, never upload whole** | Enemy intent, stratagems, how the fleet schemes, the recognition loop |
+| `Rivenkeep_Legends.html` | **The Book of the Riven Stone (v3.1.0): the standalone STORY page** for readers Jack shares it with. It holds 26 tales in six Books, plus the foreword, Invocation, Epilogue and Book of Knowings. The Book is in the v1.3 voice made hard by heavy old English, with the songs in verse. Plain Words is an easy modern retelling for newcomers, explaining the lore as it comes. The Original has the stone leaves in Orrowen in Seren's leaf-hand, with every romanised word glossed in English beneath it, and the wood leaves as the grain. One switch changes every leaf and keeps the reader's place. It has no design notes. A private web copy lives on claude.ai | The story itself; sharing it |
+| `Rivenkeep_Legends_Notes.html` | **The Legends: Notes (v1.2.0)**, the design companion: what v3 changed (Jack's notes of 2026-10-02, note by note), how the Original was translated, the Reckoning (timeline), the cast and the twelve deaths, the puzzle pieces, how the Legends enter the game, the names, and the settled and open calls | Designing the lore; how it is revealed in play |
+| *(archived)* `Archive/Rivenkeep_Legends_v1.3.html`, `Archive/Rivenkeep_Legends_Modern_v1.2.html`, `Archive/Rivenkeep_Legends_Original_v1.0.html` | The v1.3 telling, its Plain Words, and its first whole translation into Orrowen and the grain. The Tongues still cites the last for its worked examples | History only |
+| `Rivenkeep_Tongues.html` | **The Tongues (v0.3.0)**. **The First Tongue** (*Tumaʔ*) is the ancestor of both.. **Orrowen**, the Shoreland speech, is cut in the course-hand *Garl Dhrenn*; its old register is *the Hal*. **Seilrhass** is the Mystaeri thunder-tongue, and its carved grain *Eilseth* grows ring by ring from heart to bark. Both are real: sounds, grammar, lexicons, and letters or signs as geometry. Also where each script appears, and the achievement ladder that translates unearned leaves. **~3.9 MB; slice it** | Languages, scripts, inscriptions, in-world names, the unlock ladder |
 | `Research/` | Sources the Admiral and Legends cite (fiction hooks, human-feeling-AI research, real-stratagem corpus, story bible, Legends plan, the 2026-09-25 review findings) — `Research/README.md` has the citation key | Only to check a citation or derivation |
 
 *Situational (predate the module set — upload only for their area):* `Rivenkeep_Map_View_Briefs.html` (theater mood/UI), `Rivenkeep_AI_Image_Prompts.md` (art prompts). *Archived (dead — `Docs/Archive/`, see its README):* the SDD, Dev Environment Setup, Setup Guide, GDD backup, Critical Analysis (Definitive), Balance Analysis. **Rule (Jack, 2026-09-25): always archive dead documents; never delete them.**
@@ -89,7 +130,7 @@ Stable filenames; versions live *inside* each doc + in git, never in filenames.
 7. **Boss set-pieces — the 10 Mystarchs.** The roof: promote the chosen flagship chassis into bespoke theater bosses. Later.
 8. ✅ **The DEPLOY phase — DONE (`Rivenkeep_Deploy.html` v1.0.0, cont.12).** The third phase-owning doc, parallel to Build (#1) and Fight (#2). Owns the lived Deploy experience: the 6-beat phase tempo (read/act split), the **cannon economy** (slot formulas, per-archetype type limits, carousel/trash — previously homeless, archive-only), placement's three consequences (coverage + grouping + **territory**: DMZ pinning and the permanent fragile-ground cure), **emergent grouping** and the Build↔Deploy seam (courtyard geometry = command granularity) with a JOIN/FUSE/NEW pre-commit preview, **the order card** (4 fields; the 3 Fight verbs reuse its widgets, so Deploy teaches the Fight), the **auto-AoR default-assignment rule** + free instant nudge (the item parked out of the Fight work), the information-state arc (hypothesis → revision → rehearsal), the Deploy read (Map View, exposed health + %, three-state coverage minus the firing state, DMZ ghost, pending-nurture readout, coverage-holes toggle), the locked boundaries + **no auto-deploy**, and lock-in/handover ordering. **One real contradiction surfaced rather than papered over: the Deploy timer** (see cont.12 below).
 9. **THE ADMIRAL — DRAFTED (`Rivenkeep_Admiral.html` v0.2.0, 2026-09-25).** The missing commander above Fleet Memory's soldiers: the next-sortie plan, finally specified. Built to Jack's vision (a human on the other side; hidden at first, then recognized, then countered; strategy not skill; the Ender's Game ordering). **Next:** Jack's review of §0–§15; rule on the 40 CALL-OUTs (#1: revise Why §5); pay the §24 debts, the BLOCKS ones first (Fleet Memory, Ships, Campaign debut calendar, Victory).
-10. **LORE — THE LEGENDS v1.0.0 (2026-09-25).** The GDD's Legend is rewritten as a cycle of tales (Tolkien register, Odyssey structure) and extracted to its own doc; the original is archived in GDD_Removed. **Next:** Jack reads it and rules on Legends §10.
+10. **LORE — THE LEGENDS v1.1.0 (2026-09-26), with a modern translation.** The GDD's Legend was rewritten as a cycle of tales (Tolkien register, Odyssey structure) and revised on Jack's notes. **Next:** Jack rules on Legends §10b and the theater analysis.
 - **⚠ SUPERSEDED 2026-09-25 (Jack) by COMMAND TIME, Fight v1.9.0 §6.** Beginning an order ramps the siege clock down to 1 game-hour per 18 real s (1/18), and it ramps back up after a post-commit dwell. The record below is kept; its replay and battle-checkpoint rulings still stand. **RESOLVED (cont.11) — Fight time-control:** there is NONE. The Fight is continuous real-time; the only stop is hiding the app (freezes, resumes on a 3-2-1 countdown). Screenshot-then-hide is possible but high-effort/low-gain — not designed for or against. NEW: the **battle is replayable, win or lose**, as a strategic tool (deterministic → replay refines execution across the whole battle; fair by the leaderboard's own logic). **RESOLVED (cont.11):** the earlier "Fight-only vs full-sortie replay + scoring" fork is dissolved — the **checkpoint is always the BATTLE** (sortie/phase are pacing + document subdivisions, not save points), and the battle is already the scored unit, so no special replay-scoring rule is needed.
 - **Smaller open DESIGN items:** the Mimic-mechanic choice (disguise / mirror-projection / both — a real design decision, gated by legibility); fog-of-war + searching-fire behaviour (borderline design/feel); multi-group serial-command throughput (does the spacing law hold per-commander, not just per-group? — Fight §10 feel-check); the Fight feedback/audio vocabulary (polish, later phase).
 - **NUMBERS are the next layer up (deferred until the design layer is done):** resolve magnitudes (per-hull thresholds, broadcast strengths, contagion susceptibility, cascade tipping fraction, recovery, drain weights), air-density, AoR area-scaling, falloff shape/floor, verb costs, cognition-creep rate, ammo amounts.
@@ -264,6 +305,155 @@ GDD reached full feature-completeness around v5.0.2 (46 sections / 10 Parts — 
 
 
 ---
+
+---
+
+## SESSION: 2026-10-01 to 2026-10-03 — The Legends rewritten twice: v2.0.0 (rejected register), then v3.0.0 with the Original set down anew
+
+**2026-10-01, v2.0.0.** Rewritten on Jack's notes of 2026-09-30 as a standalone story in elevated read-aloud prose, with a separate Notes page. The v1.3 Book, Plain Words v1.2 and Original v1.0 pages were archived.
+
+**Jack's notes of 2026-10-02** (verbatim in Notes §1.1):
+- the v2 style was "a bunch of run on sentences"; bring back the previous Book style, hard for the uneducated reader but learnable;
+- Plain Words easy;
+- Seren playful and economical; Halyna speak in fragments on the wood leaves;
+- the stories are too long;
+- Brenn only watched; there is no custom of burning, the warden burned the boat to hide the evidence;
+- the tales "don't build… like a history text book";
+- bring back the Original;
+- one switch for all tabs;
+- a web copy of the full document for chosen readers.
+
+He also approved four nuances of the memory theme ("exactly what I was looking for").
+
+**What was done** (all orchestrated in the workspace, which is now backed up outside the repo in `~/code/Rivenkeep_Workshop/`):
+1. **Research.** Studied Tolkien's craft (his Letters, On Fairy-Stories, Shippey, Drout); Homer and Auerbach; the sagas, the King James Bible, Malory and Le Guin on high style; story craft (Aristotle, Gardner, Le Guin); a measured comparison of v1.3 and v2.0; and an inventory of every tale's elements.
+2. **Register test.** Three registers (heavy, medium, native) wrote I.1, IV.3 and IV.4. Four judges voted heavy, 3 to 1. Then came a binding voice guide, a craft guide, and the samples sent to Jack.
+3. **The rewrite.** 13 writers, each share read by two critics (Jack's eye, and fidelity) and revised, then an editor and two whole-book readers (the arc, continuity). The tales total about 28,000 words (v2.0 had 51,000); mean sentence 10.8 words, none over 30. Plain Words was retold at about 85% of the Book's length, sharing about 14% of its phrasing.
+4. **The Original.** 19 units translated the stone leaves into Orrowen and the wood leaves into the grain. A blind reader back-translated each one, and a fixer repaired it. Over 1,430 passages, before → after: exact 729 → 739, close 586 → 689, drift 104 → 2, wrong 11 → 0. Then the merge:
+   - the lexicon grew to 3,101 entries (86 new);
+   - grain §21.10 added 13 compounds and no new sign;
+   - all 1,300 paragraphs pair with their Orrowen or grain.
+
+   The report is at `Research/Rivenkeep_Tongues_Legends_v3_Translation_Report.md`; the lexicon, concepts and grain spec in Research were updated.
+5. **The page.** v3.0.0, 12.3 MB. One switch for all three tabs, which keeps the reader's place. The wood leaves' readings are in Halyna's two inks. 276 grain and stone drawings. Checked in headless Chrome at 1280 and 390 px. Notes v1.1.0 is renumbered, with the inbound links in Tongues, Admiral and GDD fixed; all 2,803 cross-doc links resolve. v2.0.0 is archived as `Archive/Rivenkeep_Legends_v2.0.html`.
+
+**Workspace loss and repair.** The temp-folder cleaner deleted some old tool files (the Mystaeri spec copy, the sign tables, the leaf-hand module, the Garl Flenn font file, the lexicon notes, the native drawings). All were restored from copies, rebuilt from saved data, or recovered from the published pages.
+
+**2026-10-03 to 2026-10-04, v3.1.0.** Jack's notes of 2026-10-03, verbatim in Notes §1.16:
+- "The old book is good, but the plain text is too hard to read… rewritten so that a modern read[er] can understand… some embellishment because [in] The Book, the reader knows the Lore, but the Plain Text, they would not."
+- He loves the romanisation and wants the English word under each word.
+- He is still reading the stories and will critique them later.
+
+What was done:
+- **Plain Words, rewritten for newcomers.**
+  - A lore primer: about 180 terms, when the hearth first knows each, and 24 mysteries never explained.
+  - 13 groups, each read by a newcomer critic and a fidelity critic, then a whole-book newcomer read and an edit.
+  - It comes to 44,895 words, 142% of the Book. Each tale opens with a plain "when" line, and the foreword opens with a 343-word note for new readers.
+- **The interlinear gloss.** The analyzer drafted every word, a shared gloss table set the common words, and 20 units were glossed and then verified: 1,288 lines and 26,532 words, 0 problems.
+- **The page.** v3.1.0 is 13.25 MB. The Book tab is identical to v3.0.0, the Original's text is unchanged apart from the glosses, and all 2,841 cross-doc links resolve.
+- **The rest.** Notes v1.2.0 and GDD v6.8.5. The private web copy was updated in place, at the same link.
+
+**The private web copy:** https://claude.ai/artifact/NVaYS6h3uoFL6UGA4m4hKq (version 1, v3.0.0, 2026-10-03; version 2, v3.1.0, 2026-10-04). It is the whole story page in the host's page contract. Only Jack can open it until he shares it from the page's Share menu. To update it from a later session, republish to that URL.
+
+**Open:** see ⭐ JACK'S TO-DO #3.
+
+---
+
+## SESSION: 2026-09-28 — Tier 3: the whole Book in its own tongues; the First Tongue; Orrowen v2; the grain v2/v3
+
+**Jack's notes (2026-09-27), all applied:**
+- **Orrowen:** as a chisel language it needs *"an economy of words… like the reformed Egyptian of the Book of Mormon"*, and *"the later written language… written quickly like English if the smaller words were included."*
+- **Keep:** *Tumar* = yes; the three tabs.
+- **Originality:** *"nothing obvious. Nothing we could get sued for."*
+- **Scope:** Tier 3.
+- **Seren** = *"a single sorrow that overcomes"*.
+- **The grain:** keep the anchor at the heart with detail in the outer rings, *"more intricate and more intertwined."*
+- *"The Latin cross is fine. Imagine that all languages come from an ultimate base language."*
+
+**Done (two waves: a pilot, then the whole Book):**
+- **The First Tongue** (*Tumaʔ*, "what is held in common"):
+  - 624 roots; the sound laws give every canon word of both tongues (356 derivations, 0 mismatches); 45 first marks give every letter and sign.
+  - The stone kept the sound and the wood kept the meaning, so the Knowing is the first tongue's nearest survivor.
+  - Seren derives as *\*swe-reŋ-o-s*, "a single sorrow that overcomes"; hers is the only name identical in both tongues.
+- **Orrowen v2:**
+  - **The dry cut** (stone): 328 word-signs; the small words and tense are left out; about a third of the ink hand's signs.
+  - **Garl Flenn:** a real joined, slanted font. Seren's ink hand has every word.
+  - **The Hal** is the most economical hand.
+- **The grain:**
+  - v2 adds years, cells, runners with role terminals, braids, binds and pockets.
+  - v3 changes only how it is drawn: heavier woven runners at page size, with the heart kept a plain anchor.
+- **Tier 3:**
+  - 18 units were translated, validated, and blind back-translated by a second agent. After fixes, no unit has a wrong reading; S04 keeps 2 drifts and S10 keeps 4.
+  - The lexicon was harmonised to 3,015 entries.
+  - The Original re-validates in full: 24,038 Orrowen words and 69 whole grain rounds pass the validators.
+- **Three tabs** (The Book | Plain Words | Original) are live across all three docs.
+- **Research/** gains the First Tongue, the Orrowen v2 spec, the Grain v2 spec and v3 notes, the full lexicon and concept map, and the Tier-3 report. The v1 Shoreland spec is archived.
+
+**Open:** see ⭐ JACK'S TO-DO #3.
+
+---
+
+## SESSION: 2026-09-27 — The Tongues: two real languages and scripts; Legends v1.2.0
+
+**Jack's asks (2026-09-27):**
+- *"Instead of 'Untold. Halyna cannot yet hold this deep.' it would be really interesting if this was written in the Shorelander or Mystaeri language. The human can't read it… only by unlocking the achievements in the game."* He pictures the Mystaeri writing like the aliens' in *Arrival*, and the Shoreland like an ancient Celtic language, *"a real language written like this for this game."*
+- *"We should have a tab that allows the player to read either"* (the Book or the modern translation).
+- **The Torn Cloak fix:** the leaders were dead; there was never a greater man than the Captain.
+
+**Done:**
+- **The conceit: the Book is a translation.** A leaf the player has not earned stays in its own hand until play translates it.
+- **Orrowen**, the Shoreland tongue:
+  - Celtic in feel with no borrowed words: verb first, mutations, a dual number, and "yes" said by repeating the verb, so the hearth's *Tumar* ("We remember") is a grammatical yes.
+  - Its script is the course-hand *Garl Dhrenn*: straight chisel strokes standing on a mortar line, each word a stone. Its old register, *the Hal*, is the first builders' hand.
+- **Seilrhass**, the Mystaeri thunder-tongue:
+  - built from the sounds of the existing names, with one "knock" per word (why the soldiers hear drums);
+  - its carved grain *Eilseth* is Arrival-like in idea but not in look. A knowing is a cross-section of a trunk, heart to bark, with the ten root signs realised as real signs. A carving's inner rings are the carving it grew from.
+- **Proof they are real:**
+  - Blind decoding from the rules alone: the course-hand 10 of 10; the grain 6 of 6 after fixes (1 of 6 before).
+  - The originality pass replaced twelve shapes and four words that read as copies. The shapes included rune algiz and Cirth forms.
+- **The Legends v1.2.0 and Plain Words v1.1.0:**
+  - Native script appears on every unearned surface, each with a "Translation — unlocked by" fold.
+  - The Title of Liberty appears in the course-hand, as the Captain cut it in coal.
+  - Every tale has *The Book | Plain Words* tabs, and the in-game two-tab reader is specified (Legends §8).
+  - The unlock ladder is named in achievements (Legends §4, Tongues §7).
+- **The Torn Cloak fixed** in both.
+- **Research/** gains the two language specs, the craft research, and the decode and originality reports. Generator code stays out of the repo (documents only).
+
+**Open:** see ⭐ JACK'S TO-DO #3.
+
+---
+
+## SESSION: 2026-09-26 — The Legends revised on Jack's notes (v1.1.0), a modern translation, Admiral v0.3.0, and the 24-hour siege day restored
+
+**Jack's rulings and notes (2026-09-26), all applied:**
+- **Names and the bond.** *The Bonded* is the guild's word for the Aetherbonded; what the bond *is* waits for the children's tale (II.3). The Aetherbonded go by **one name, given at the sealing** (the wedding): Rhyna and Halvard are **Halyna**. When one dies, the other follows soon after, peacefully, of a broken heart: *"When the left hand dies, does not the right one die too?"* Halyna tell in **alternating paragraphs**.
+- **Seren.** Seren is **unbonded**: her ordained mate Tarnel died on the long road before the sealing. Halyna took her as their **third**. She cannot know the wood, and she will outlive them, which is why she writes the Book. Her epithet is *Seren Two-Inks* (open).
+- **Knowing, not reading.** The Mystwood is **known, not read**: touch it and the knowing is given whole, and words can be turned while the knowing cannot. Wood leaves are now knowings. The breakthrough happens when Halyna hold the two halves of one heart-plank at once (V.2, left unexplained).
+- **The Captain and the Twelve.** **Twelve True Men** each command a battery by knowing the Captain's mind. The Captain calls to one battery at a time with **three horn calls** (the three Fight verbs). **Runners carry intel, never commands.** *"For the Captain, an hour lasts as long as a day"* is Command Time in the fiction.
+- **The wood and the fleet.**
+  - The burning boat haunts the ship-masters; only the shore laughs.
+  - The Mystholders regrew until the cutting made them stop; *"war is for the short-minded and the angry young."*
+  - Mystaeri and trees live in symbiosis.
+  - Root-men (the soldiers call them *treelings*) are grown from the ship-trees' roots, and winged seeds from the carriers' crowns.
+- **No person aboard.** No one sails; the ship is the commander. The Last Carver stays in the groves.
+- **The sending.** It stays, and its boat is now seaworthy.
+- **Original names.** *Naelear*, and the name audit's renames: orn → saen, sil → nei, and their compounds. The audit's proposed *Mistlands → Smother* rename was **withdrawn** later the same day: Jack keeps **the Mystlands**, his own invention, spelled with *Myst-* as he wrote it.
+- **"Faith is never the butt of a joke"** is kept as a style rule.
+
+**The siege day (Jack):** *"The day has 24 hours; the 18 seconds per day gives it a sense of urgency and anxiety (hours tick by at 0.75 sec)."*
+- This **reverses the cont.27 "18-hour day"** that Mini-Games had recorded. That was the AI's reading of *"the sweep is too distracting"*. The display rule stays: a big number and a small number, with no sweep. Build §2 was right and owes no edit.
+- Under Command Time an hour takes 18 s (1/24 speed), and the readout steps down to hours and racing minutes (0.3 s).
+- A sim tick stays 1 real second (1⅓ game-hours).
+
+**Docs written:**
+- `Rivenkeep_Legends.html` v1.1.0. The HTML now tells stone from wood subtly: stone text is faintly warm in EB Garamond, wood text faintly green in a kindred face, and Halyna's alternating paragraphs are in two near-identical inks.
+- **NEW** `Rivenkeep_Legends_Modern.html` v1.0.0 (the modern translation).
+- `Rivenkeep_Admiral.html` v0.3.0: 24-hour clock, the Knowing, Halyna, the new names, the Twelve note; CALL-OUT 2 resolved.
+- `Rivenkeep_Fight.html` v1.9.1 (Command Time clock) and `Rivenkeep_MiniGames.html` v2.0.1 (18-hour day withdrawn).
+- `Rivenkeep_GDD.html` v6.8.1 (module map).
+- `Research/`: name map, theater analysis and the v1.1 revision plan added; fiction hooks renamed.
+
+**Open:** see ⭐ JACK'S TO-DO at the top.
 
 ---
 
