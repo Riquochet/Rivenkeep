@@ -1,0 +1,32 @@
+# name: STONE
+round STONE {wood: stone; pith: round; rings: 9; rules after: [4, 7]; axis 90}
+  I
+    r1/1  0: STONEFOLK*
+    r2/1  0: LONE    4: DEEP+SQUARE
+    r2/2  4: RISE{still}
+    r3/1  0: BREAK    4: BLOOD+SAIL
+    r3/2  0: >LIE
+    r4/1  4: CARVE+HAND    6: STONEFOLK#1
+    r4/2  6: STONEFOLK×3
+  ‖
+  II
+    r5/1  4: EYE    8: HULL×3{all}
+    r6/1  4: HOLD    8: TREE×3
+    r7/1  4: CARVE    8: US+HOLD{most}
+  ‖
+  III
+    r8/1  0: HOMESTONE    1: BLOOD×3    2: KNEEL    3: OPEN+DOOR      band STILL files 4–4
+    r9/1  0: STONEFOLK×3+RISE    8: US×3+RISE
+  bark
+    bark 0: HOLD
+  runners
+    run a1   0.r2/1        →      4.r2/1
+    run b1   0.r3/1        →      4.r3/1
+    run b2   0.r3/2        →      4.r3/1
+    run c1   6.r4/1        ⇒      6.r4/2
+    run c2   6.r4/2        →      4.r4/1
+    run d1   8.r5/1        →      4.r5/1
+    run e1   8.r6/1        →      4.r6/1
+    run f1   8.r7/1        →      4.r7/1
+  ray 4: r2/1–r7/1
+  mem 4: r6/1 → pith

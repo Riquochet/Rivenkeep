@@ -1,0 +1,237 @@
+{
+ "E1-01": {
+  "root": "Wave",
+  "head": "*To the shore.*",
+  "full": "one word \"…shore…\"; whole: *To shore. As root to water, go. Wait on no bough.*"
+ },
+ "E1-02": {
+  "root": "Mute Square",
+  "head": "*Break the wall.*",
+  "full": "\"…wall…\"; *Break wall. First stone, only stone. Strike till it opens or wood is ash.*"
+ },
+ "E1-03": {
+  "root": "Lone Stroke",
+  "head": "*Go until struck.*",
+  "full": "\"…go…\"; *Go until struck. Where bark splits, turn aside.*"
+ },
+ "E1-04": {
+  "root": "Bar Before",
+  "head": "*Before the bearer.*",
+  "full": "\"…before…\"; *Before bearer, thin wood. Thin wood falls; bearer keeps pace.*"
+ },
+ "E1-05": {
+  "root": "Spark",
+  "head": "*Where it flashed.*",
+  "full": "\"…flash…\"; *Where it flashed, strike. Last flash, only flash.*"
+ },
+ "E1-06": {
+  "root": "Knot",
+  "head": "*Wait in the grey.*",
+  "full": "\"…grey…\"; *Wait in grey, as seed waits out frost. When stone is still, come.*"
+ },
+ "E1-07": {
+  "root": "Turned Stern",
+  "head": "*Home when wounded.*",
+  "full": "\"…home…\"; *Home when wounded. One bough falls; all turn, each by its own water.*"
+ },
+ "E2-01": {
+  "root": "Wave",
+  "head": "*Through, not against.*",
+  "full": "*Through burning, not against. Stone-breakers hold at edge … till bearer touches shore.*"
+ },
+ "E2-02": {
+  "root": "Lone Stroke",
+  "head": "*One goes; the rest follow the quiet.*",
+  "full": "*Root before tree; tree waits in still water. Where root … not burned, tree follows.*"
+ },
+ "E2-03": {
+  "root": "Bar Before",
+  "head": "*Screen the bearer.*",
+  "full": "*Bar before bearer; bark to fire. Bar holds … till bearer is ashore.*"
+ },
+ "E2-04": {
+  "root": "Two Mouths",
+  "head": "*Loud in one place; land in another.*",
+  "full": "*Loud on guarded road; touch no shore. When stone answers loud … bearer to quiet road.*"
+ },
+ "E2-05": {
+  "root": "Spark",
+  "head": "*Make them speak; mark who speaks.*",
+  "full": "*Goad stone until it speaks. Mark mouth that speaks; hunters … to mouth.*"
+ },
+ "E2-06": {
+  "root": "Breath",
+  "head": "*Spend their fire on wood of no worth.*",
+  "full": "*Spend their fire on wood of no worth. When fire falls on worthless … bearer goes.*"
+ },
+ "E2-07": {
+  "root": "Knot",
+  "head": "*Let the fire work.*",
+  "full": "*Set fire on stone most struck. Stand in grey; let fire work … go when stone gives.*"
+ },
+ "E2-08": {
+  "root": "Smoothed Cut",
+  "head": "*Grey before the landing.*",
+  "full": "*Grey before landing. Bearer walks in grey; swift one keeps … same hour.*"
+ },
+ "E3-01": {
+  "root": "Lone Stroke",
+  "head": "*Hold; hear the sounding; go where it is quiet.*",
+  "full": "*Where the dread has [cooled?], trust it not. Send one eye before, and let the body wait where the roads part. If the eye is struck, go by the other road; if the eye goes free, go in its wake.*"
+ },
+ "E3-02": {
+  "root": "Mute Square",
+  "head": "*The same stone, each morrow.*",
+  "full": "*Count our blows on the mute stone. Go each morrow to the stone that has taken most, hammer and chisel together, until it gives. Where we broke it and it stands [new-laid?], go to its sister.*"
+ },
+ "E3-03": {
+  "root": "Turned Stern",
+  "head": "*Show your stern; turn at the stone.*",
+  "full": "*They lean after wood that flees; we have seen it. Bend back as the bough bends and keep your line. Where stone speaks in the leaning, loose the hunters; if none speaks, spring back at the [marked?] stone.*"
+ },
+ "E3-04": {
+  "root": "Bar Before",
+  "head": "*Two roads to one stone.*",
+  "full": "*Their fire at that shore looks one way. Two roots to one stone: the first goes into the fire, the second waits at its edge [until?] the first is in, and closes.*"
+ },
+ "E3-05": {
+  "root": "Spark",
+  "head": "*The first to speak, silence.*",
+  "full": "*They speak from open stone; we have seen it twice. The first stone to speak this morrow, silence with all our wood, that the others [learn?] silence.*"
+ },
+ "E3-06": {
+  "root": "Two Mouths",
+  "head": "*Work the east wall as if it mattered; the west is the road.*",
+  "full": "*Work the east stone we have struck before, as though it mattered, and let them answer there. When they answer, the hidden go west in the hill's [shadow?], the bearers a road's length behind.*"
+ },
+ "E3-07": {
+  "root": "Breath",
+  "head": "*Between their breaths.*",
+  "full": "*Let worthless wood take their blows, and count between. Between breath and breath, the swift go in. At the [low?] stone their breath is four.*"
+ },
+ "E3-08": {
+  "root": "Knot",
+  "head": "*Is the stone spent, or waiting? Look, then go.*",
+  "full": "*The stone that spoke is still. Is it spent, or [waiting?]? Wait in the grey, then send an eye. If the stone stands, go round it as water goes round a root; if it is gone, go.*"
+ },
+ "E4-01": {
+  "root": "Wave",
+  "head": "*Three roads, one hour.*",
+  "full": "*Three roads, one hour. Let the east and the north go as one. Let the south stand at the edge of the dread until the reach of the south has walked east; then let the south go.* (also V.7 I)"
+ },
+ "E4-02": {
+  "root": "Lone Stroke",
+  "head": "*Ask the silent water; heed its answer.*",
+  "full": "*Send one sapling to the still water, at the hour cut here. Heed it. If the water speaks, the hunters go to the voice. If the water keeps silence, the bearers go through.*"
+ },
+ "E4-03": {
+  "root": "Bar Before",
+  "head": "*The great hull first; the kept hand last.*",
+  "full": "*The great hull first, and let it drink the speaking stone's fire. The swift to the flank. Keep the hand closed until the swift are answered or are not; then open it where the reach is not.*"
+ },
+ "E4-04": {
+  "root": "Mute Square",
+  "head": "*When the stone gives, the ram.*",
+  "full": "*The stone we have struck two days, strike it the third. The ram waits at the edge of the dread. When the stone gives, the ram; when the ram is in, the host.*"
+ },
+ "E4-05": {
+  "root": "Turned Stern",
+  "head": "*Draw them along the shore; come home by the far road.*",
+  "full": "*Give them the shore a sector at a time, and keep your line. When the reach has walked to follow into the second, the far road: the swift and the bearers home to the first.*"
+ },
+ "E4-06": {
+  "root": "Breath",
+  "head": "*When they strike the water, fall from the sky.*",
+  "full": "*Send hulls to the water. When the speaking stone strikes them, open the deck, and let the sky fall on the house behind that stone in the hour the hulls touch shore.* Reversed form: *They watch the sky. Fall first; and when their stone looks up, the hulls to the water.*"
+ },
+ "E4-07": {
+  "root": "Spark",
+  "head": "*Pass the quiet gun; know it; take it going home.*",
+  "full": "*Take the bearers past the speaking stone that keeps silence, near enough to see it, and do not turn. When the bearers are ashore and the stone is known, the hunters take it on the road home.*"
+ },
+ "E4-08": {
+  "root": "Smoothed Cut",
+  "head": "*Look heavy where you are light.*",
+  "full": "*Put blossom on the bare bough and send it where they kill our bearers. Hold the laden one thin at the edge of the dread; when the stone that kills our bearers strikes the blossom, the thin one to the soft shore.*"
+ },
+ "E5-01": {
+  "root": "Wave",
+  "head": "*Give them the middle; take the sides; close the hand.*",
+  "full": "*Bend at the heart as the bough bends; stand at the edges as the roots stand. When they lean upon the bending, close the hand. / If none lean, go through the heart.* — *Cut against: they guard the middle road; their reach follows the pressing.* (Thaesaen carves it whole)"
+ },
+ "E5-02": {
+  "root": "Lone Stroke",
+  "head": "*Come as the young wood came.*",
+  "full": "*Come as the green wood came: loud, alone and straight. Stop one breath short of the fire, and let the hunters wait upon the flashing. / If none flash, go ashore as the green wood went.* — *Cut against: they strike first and far; they move the guns we find.* (also V.7 II; Naelthar carves it whole)"
+ },
+ "E5-03": {
+  "root": "Two Mouths",
+  "head": "*Let them see the host where it is not, and keep them seeing.*",
+  "full": "*Raise a host of mist upon the road they guard, and let the grey promise sails. Go ashore by the other road; then leave the mist standing, that they may watch for a second tide. / If the guarded road is not struck, wait in the grey.* — *Cut against: they guard the east road; their reach walks toward noise.*"
+ },
+ "E5-04": {
+  "root": "Knot",
+  "head": "*Do the same thing thrice; the fourth time, mean it.*",
+  "full": "*Go thrice to the same grey water, look at their shore, and thrice come home at the same hour. The fourth time, if their shore is as it was, go on. / If their shore has changed, wait in the grey as the green wood waited.* — *Cut against: they guard the west road; their reach moves when pressed.*"
+ },
+ "E5-05": {
+  "root": "Smoothed Cut",
+  "head": "*Sail straw down every road; where no fire wakes, send the landing.*",
+  "full": "*Sail straw down every road. Where no fire wakes, send the landing in the shape of the straw. / If the fire wakes, run.* — *Cut against: they kill our bearers first; they strike first and far.*"
+ },
+ "E5-06": {
+  "root": "Spark",
+  "head": "*Sail the prize past their reach, and let them hunger.*",
+  "full": "*Sail the prize past their reach, and let them hunger. Where the hunger walks, strike where it stood. / If they do not hunger, the prize is a prize: open the deck.* — *Cut against: they kill our bearers first; their reach moves when pressed.*"
+ },
+ "E5-07": {
+  "root": "Breath",
+  "head": "*They let the first wood pass; let the first wood bear.*",
+  "full": "*They let the first wood pass. Let the first wood bear. / If the first is struck, be the brick, and let the bearers go in the breath.* — *Cut against: they let the first ship pass.*"
+ },
+ "T-01": {
+  "root": "Bar Before",
+  "head": "*Strike one head; two will answer.*",
+  "full": "*Three crowns, one root. Where the axe bites, lean all the wood; the crown unbitten, let it leaf.* Name: Leavaren (see A6)"
+ },
+ "T-02": {
+  "root": "Spark",
+  "head": "*Every gun that speaks, the mountain answers.*",
+  "full": "*Stand past the farthest fire. Whatever speaks, answer with the mountain; whatever keeps silent, walk to it.*"
+ },
+ "T-03": {
+  "root": "Mute Square",
+  "head": "*Go under what you cannot go through.*",
+  "full": "*Where the stone will not open, go beneath it. Root by root, morrow by morrow; when the ground gives, the ram.*"
+ },
+ "T-04": {
+  "root": "Two Mouths",
+  "head": "*Show them the host; come up beneath the stone.*",
+  "full": "*Show them the host and let them look. Go beneath the looking; rise where no eye is.*"
+ },
+ "T-05": {
+  "root": "Turned Stern",
+  "head": "*Burn as you go; let them chase the fire.*",
+  "full": "*Bare the soft side and walk away burning. Where they leave to follow, rise.*"
+ },
+ "T-06": {
+  "root": "Breath",
+  "head": "*Rot the wall; wait for the mending to fail.*",
+  "full": "*Lay the rot where the stone is mended, and count their hands. When the rot outruns the hands, go in between two breaths.*"
+ },
+ "T-07": {
+  "root": "Knot",
+  "head": "*Wait in the white; strike the stone that cannot mend.*",
+  "full": "*Go the same road at the same hour until their eyes slide past. Whiten the stone no hand can mend; on the third going, land.*"
+ },
+ "T-08": {
+  "root": "Smoothed Cut",
+  "head": "*Show them themselves.*",
+  "full": "*Count what their hands love; do it to them before they do it. Stand among the stones as a stone.*"
+ },
+ "BURN": {
+  "root": "Burn",
+  "head": "*Burn.*",
+  "full": "*Burn.*"
+ }
+}

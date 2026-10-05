@@ -1,0 +1,20 @@
+# name: E3-08
+round E3-08 {wood: life; pith: war; rings: 5; rules after: [1, 4]}
+  I
+    r1/1  0: KNOT*
+  ‖¦
+  II
+    r2/1  4: SQUARE+BURN
+    r3/1  4: GUN      band STILL files 4–4
+    r3/2  4: SPENT?
+    r4/1  4: KNOT?    12: KNOT      band MIST files 12–12
+    r4/2  12: EYE+>GO
+  ‖
+  III
+    r5/1  4: RISE      band WATER files 4–5
+    r5/2  5: BEND    3: GO
+  runners
+    run t0  0.r1/1    ⇒  4.r2/1
+    run t1  12.r4/1   ⇒  12.r4/2
+    run t2  12.r4/2   →  4.r5/1
+    run fk1  4.r5/1  →  {5.r5/2, 3.r5/2}

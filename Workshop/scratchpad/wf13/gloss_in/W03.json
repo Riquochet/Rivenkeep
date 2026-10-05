@@ -1,0 +1,680 @@
+[
+ {
+  "leaf": "t-IV-4",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Hebbet sa re yal kethet hos clem",
+  "english": "IV.4 · The Gift Held an Hour",
+  "dup": false,
+  "draft": [
+   [
+    "Hebbet",
+    "gift"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "kethet",
+    "held"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "clem",
+    "hour"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 1,
+  "label": "Romanisation · the dateline",
+  "rom": "Et heth sullast, ul Hyll Dhumol.",
+  "english": "*The third spring, in the Tide of Remembering.*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "heth",
+    "spring"
+   ],
+   [
+    "sullast",
+    "third"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 2,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Ul vess veskyl wrodath Wrenn re vess tev vodh re hebb et arra. Heth sy re heth Rhyna o hos clem, eth re rarr o uloy niss, hosen nynth um dholm; nath re femm Halvard o, um et parow lo et lodh, eth ew o sa re hadh et tolm hosast ul et brodhol.",
+  "english": "*On the night Brenn was read, a child asked what the Guest had given. This spring Rhyna held it an hour, and it came into her slow, as water over stone; Halvard, across the ward at the mortar, touched it not, and it was he that began the telling.*",
+  "dup": false,
+  "draft": [
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "vess",
+    "night"
+   ],
+   [
+    "veskyl",
+    "sight"
+   ],
+   [
+    "wrodath",
+    "S·words"
+   ],
+   [
+    "Wrenn",
+    "S·Brenn"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vess",
+    "S·ask"
+   ],
+   [
+    "tev",
+    "child"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hebb",
+    "give"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "arra",
+    "guest"
+   ],
+   [
+    "Heth",
+    "spring"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "heth",
+    "S·hold"
+   ],
+   [
+    "Rhyna",
+    "Rhyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "clem",
+    "hour"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rarr",
+    "S·come"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "uloy",
+    "in-3SG.F"
+   ],
+   [
+    "niss",
+    "slow"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "nynth",
+    "spring"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "dholm",
+    "S·stone"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "femm",
+    "touch"
+   ],
+   [
+    "Halvard",
+    "Halvard"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "parow",
+    "courtyard"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "lodh",
+    "mortar"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hadh",
+    "S·lay"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "brodhol",
+    "telling"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 3,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Hemm. Domm, eth hemm. Tolm — nel. Nel tolm. Ew mesk.",
+  "english": "*— Old. Dark, and old. Stone — no. Not stone. A tree, once.*",
+  "dup": false,
+  "draft": [
+   [
+    "Hemm",
+    "old"
+   ],
+   [
+    "Domm",
+    "black"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hemm",
+    "old"
+   ],
+   [
+    "Tolm",
+    "stone"
+   ],
+   [
+    "nel",
+    "is.not"
+   ],
+   [
+    "Nel",
+    "is.not"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "Ew",
+    "was"
+   ],
+   [
+    "mesk",
+    "tree"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 4,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Garlath, dhaedh, fedh sell. Flenneth. Nel — brodath, hosen flenneth. Hos, eth hos, eth hos.",
+  "english": "*— Hands, warm, a long while. Leaves. No — words, like leaves. One, and one, and one.*",
+  "dup": false,
+  "draft": [
+   [
+    "Garlath",
+    "hand-PL"
+   ],
+   [
+    "dhaedh",
+    "warm"
+   ],
+   [
+    "fedh",
+    "time"
+   ],
+   [
+    "sell",
+    "long"
+   ],
+   [
+    "Flenneth",
+    "leaf.of.a.book.or.of.slate-PL"
+   ],
+   [
+    "Nel",
+    "is.not"
+   ],
+   [
+    "brodath",
+    "words"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "flenneth",
+    "leaf.of.a.book.or.of.slate-PL"
+   ],
+   [
+    "Hos",
+    "one"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hos",
+    "one"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 5,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Sull. Sull brod ulo —",
+  "english": "*— Three. Three words in him —*",
+  "dup": false,
+  "draft": [
+   [
+    "Sull",
+    "three"
+   ],
+   [
+    "Sull",
+    "three"
+   ],
+   [
+    "brod",
+    "word"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 6,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— eth nayalat ul so lodh. Doss o lona.",
+  "english": "*— and naught to join them. We two have it.*",
+  "dup": false,
+  "draft": [
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nayalat",
+    "nothing"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "lodh",
+    "mortar"
+   ],
+   [
+    "Doss",
+    "be"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "lona",
+    "at-1DU"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 7,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Gebb. Ol — lonn et mesk, ul et gannath. Dannat. Nath dessent.",
+  "english": "*— A door. Our — the wood's kin, in the posts. Sawn. They answer not.*",
+  "dup": false,
+  "draft": [
+   [
+    "Gebb",
+    "door"
+   ],
+   [
+    "Ol",
+    "our(+N)"
+   ],
+   [
+    "lonn",
+    "kin.by.blood"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "gannath",
+    "posts"
+   ],
+   [
+    "Dannat",
+    "hewn"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "dessent",
+    "N·answer-3PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 8,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Lummol. Cadhat. O yell sost. Misk.",
+  "english": "*— Kneeling. Set down. His best. A foot.*",
+  "dup": false,
+  "draft": [
+   [
+    "Lummol",
+    "kneeling"
+   ],
+   [
+    "Cadhat",
+    "laid"
+   ],
+   [
+    "O",
+    "his/it(+S)"
+   ],
+   [
+    "yell",
+    "S·good"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "Misk",
+    "foot"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 9,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Tuss. Dhyvullol, lo dhrenn et tuss.",
+  "english": "*— Dust. Laughter, through the dust.*",
+  "dup": false,
+  "draft": [
+   [
+    "Tuss",
+    "dust"
+   ],
+   [
+    "Dhyvullol",
+    "laughing"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tuss",
+    "dust"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 10,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Biskyann, kethet. Pa wisklern, hos —",
+  "english": "*— A neck, held. Two brows, one —*",
+  "dup": false,
+  "draft": [
+   [
+    "Biskyann",
+    "neck"
+   ],
+   [
+    "kethet",
+    "held"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "wisklern",
+    "S·forehead"
+   ],
+   [
+    "hos",
+    "one"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 11,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— et preller — [ ]",
+  "english": "*— the blade — [ ]*",
+  "dup": false,
+  "draft": [
+   [
+    "et",
+    "the"
+   ],
+   [
+    "preller",
+    "knife"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-4",
+  "para_index": 38,
+  "label": "Romanisation · Seren’s closing line",
+  "rom": "Eth re dhess nahos.",
+  "english": "*And no one answered.*",
+  "dup": true,
+  "draft": [
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhess",
+    "S·answer"
+   ],
+   [
+    "nahos",
+    "none"
+   ]
+  ]
+ }
+]

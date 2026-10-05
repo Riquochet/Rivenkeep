@@ -1,0 +1,361 @@
+# BLIND COPY OF W03 (native lines only: romanised Orrowen, leaf-hand tokens, GN v2). No English.
+
+## A. Orrowen (romanised), in document order
+O1  Dannwresk ul Meskdhrenn
+O2  Hosen tum Mesk Myst: kethet hy volt vovennerd Hyll Pawast, hy et meskdhrenn sa vollar Dommwrint, tevet hy yend yann gostat; doss o ul lern dhrenn et gostol.
+O3  Re rik Rhyna o um et dhysal amm re vellor o, eth re yal kethyl et lern hosel lo Halyna; stonant et lerneth ull hosast.
+O4  Ul Hyll Dhumol re hadh Halvard garl umo ul et nelter, Rhyna lo et odh ul molt et tevath, eth re rarr o tunn ulonta ul hos hoss.
+O5  Ew sull vess et brodhol, hy vodh re yal o ulonta hosen grestet, eth nath re yal hosen trenn.
+O6  Re wrodha Halyna o, hos eth ullen, ul ba luth; re hadh Seren o.
+O7  Amm re yal et mesk cresket, ell re omm et brodhol, doss o rellorat eth nahlennet; eth ul vodh nath gemment o eth et scaevureleth sa hether, re hethym pana, hy vodh nadhumant et scaevureleth, eth doss cadhol nycul ulont lo yarl; eth nath noss nyculol lo et mesk, veth nath noss veskyl ludal lo.
+O8  Hosen re hethe Halyna o hosast, ul Hyll Pawast: et lern hosel.
+O9  Hosen re wrodha Halyna o tunn:
+O10  Eth re dhess nahos.
+
+## B. Leaf-hand tokens
+d.a.n.n.b^S.r.e.s.k u.l m.e.s.k.t^S.r.e.n.n
+h.o.s.e.n t.u.m m.e.s.k m.y.s.t , k.e.th.A.t h.y m^S.o.l.t m^S.o.v.e.n.n.A.r.d h.y.l.l p.a.w.A.s.t , h.y e.t m.e.s.k.t^S.r.e.n.n s.a v.o.l.l.A.r d.o.m.m.b^S.r.i.n.t , t.e.v.A.t h.y g^S.e.n.d g^S.a.n.n g.o.s.t.A.t , d.o.s.s o u.l l.e.r.n t^S.r.e.n.n e.t g.o.s.t.O.l |
+r.e g^S.r.i.k rh.y.n.a o u.m e.t dh.y.s.a.l a.m.m r.e m^S.e.l.l.o.r o , e.th r.e g^S.a.l k.e.th.O.l e.t l.e.r.n h.o.s.e.l l.o =h.a.l.y.n.a , s.t.o.n.A.n.t e.t l.e.r.n.A.th u.l.l h.o.s.A.s.t |
+u.l h.y.l.l t^S.u.m.O.l r.e k^S.a.dh h.a.l.v.a.r.d g.a.r.l u.m.o u.l e.t n.e.l.t.e.r , rh.y.n.a l.o e.t o.dh u.l m.o.l.t e.t t.e.v.a.th , e.th r.e d^S.a.r.r o t.u.n.n u.l.o.n.t.a u.l h.o.s h.o.s.s |
+e.w s.u.l.l v.e.s.s e.t b.r.o.dh.O.l , h.y v.o.dh r.e g^S.a.l o u.l.o.n.t.a h.o.s.e.n g.r.e.s.t.A.t , e.th n.a.th r.e g^S.a.l h.o.s.e.n t.r.e.n.n |
+r.e b^S.r.o.dh.A =h.a.l.y.n.a o , h.o.s e.th u.l.l.e.n , u.l p^N.a l.u.th , r.e k^S.a.dh s.e.r.e.n o |
+a.m.m r.e g^S.a.l e.t m.e.s.k k.r.e.s.k.A.t , e.l.l r.e o.m.m e.t b.r.o.dh.O.l , d.o.s.s o r.e.l.l.o.r.A.t e.th n.a.k^S.l.e.n.n.A.t , e.th u.l v.o.dh n.a.th k^N.e.m.m.A.n.t o e.th e.t s.k.a.e.v.u.r.e.l.A.th s.a k^S.e.th.A.r , r.e k^S.e.th.O.m p.a.n.a , h.y v.o.dh n.a.t^S.u.m.A.n.t e.t s.k.a.e.v.u.r.e.l.A.th , e.th d.o.s.s k.a.dh.O.l n.y.k.u.l u.l.o.n.t l.o g^S.a.r.l , e.th n.a.th d^N.o.s.s n.y.k.u.l.O.l l.o e.t m.e.s.k , v.e.th n.a.th d^N.o.s.s v.e.s.k.O.l l.u.d.a.l l.o |
+h.o.s.e.n r.e k^S.e.th.A =h.a.l.y.n.a o h.o.s.A.s.t , u.l h.y.l.l p.a.w.A.s.t , e.t l.e.r.n h.o.s.e.l |
+h.o.s.e.n r.e b^S.r.o.dh.A =h.a.l.y.n.a o t.u.n.n ,
+e.th r.e t^S.e.s.s n.a.h.o.s #coping
+
+## C. Knowing form, ring by ring
+
+  I
+    r1·1  0: AXE*
+    r1·2  11: EDGE    12: DEEP+PILLAR×3      band MIST files 11–11
+    r1·3  12: BARK    12: OVER+PILLAR      band DARK files 12–12
+    r1·4  12: HOLD    10: EARTH    6: ~ROOT    6: ~EARTH      band MIST files 11–11
+    r1·5  12: !MIND    2: ~STONEFOLK+!MIND    2: ~LIVE    2: ~TAKE
+    r1·6  12: LIVE+PILLAR×3    12: LONE+HOLD    12: GLAD      band MIST files 12–12
+    run a1  12.r1·2      →in    11.r1·2
+    run a2  12.r1·4      →      @11
+    run a3  12.r1·4      →in    10.r1·4
+    run a4  12.r1·4      →as    6.r1·4
+    run a5  6.r1·4       →      6.2.r1·4
+    run a6  12.r1·5      →as    2.r1·5
+    run a7  2.r1·5       →      2.2.r1·5
+    run a8  2.3.r1·5     →      2.2.r1·5
+    run a9  12.r1·6      →for   12.2.r1·6
+
+    r2·1  12: EYE    0: SHORE      band MIST files 12–12
+    r2·2  0: HULL{all}+GO    12: CARVE
+    r2·3  0: EYE{only}      band MIST files 11–11
+    r2·4  0: HAND:palm{all}    12: CARVE    0: GO{all}    12: WOUND
+    r2·5  12: HOLD+CARVE{all}
+    run b1  12.r2·1      →      0.r2·1
+    run b2  0.r2·2       →      12.r2·1
+    run b3  12.r2·2      →      0.r2·2
+    run b4  0.r2·3       →      @11
+    run b5  0.r2·4       ⇒      12.r2·4
+    run b6  0.2.r2·4     ⇒      12.2.r2·4
+  ‖
+
+  II
+    r3·1  4: AXE+GO    2: SHORE+CASTLE×3    2: SUMMER{most}    4: HULL×3    4: HAND×3
+    r3·2  0: STONEFOLK×3+GO    12: BARK      band WATER files 0–0
+    r3·3  12: PILLAR#1+HOLD    12: DEEP+PILLAR×3{all}    12: ROOT×3    12: EDGE{most}
+    run c1  4.r3·1       →      12.r3·2
+    run c2  4.r3·1       →in    2.2.r3·1
+    run c3  4.r3·1       →with  4.2.r3·1
+    run c4  4.2.r3·1     →with  4.3.r3·1
+    run c5  2.r3·1       →in    2.2.r3·1
+    run c6  0.r3·2       →with  4.r3·1
+    run c7  4.r3·1       ⇒      12.r3·3
+    run c8  12.r3·3      →      {12.2.r3·3, 12.4.r3·3}
+    run c9  12.r3·3      →thru  12.3.r3·3
+  mem 12: r3/2 → pith
+
+    r4·1  12: FALL#1    12: FALL{again}
+    r4·2  0: STONEFOLK×3+GO{again}    0: SUMMER{again}
+    r4·3  0: STONEFOLK×3+CARRY@1    0: DEEP+LIVE    0: >GO    1: SAPLING×3
+    run d1  12.r4·1      ⇒      12.2.r4·1
+    run d2  0.r4·2       →      @12
+    run d3  0.r4·2       →in    0.2.r4·2
+    run d4  0.r4·2       ⇒      0.2.r4·3
+    run d5  0.r4·3       →      @4
+    run d7  0.r4·3       ⇒      0.2.r4·3
+    run d6  0.3.r4·3     →      1.r4·3
+
+    r5·1  11: OPEN    11: FLASH    11: GREAT+FLASH    12: FALL{all}    6: ~FLASH    6: ~BREAK+SAIL:cloth      band WHITE files 11–11
+    r5·2  9: NEW+US×3    9: US:crown×3+TURN    9: WEEP
+    run e1  12.r5·1      ⇒      11.r5·1
+    run e2  11.r5·1      ⇒      11.2.r5·1
+    run e3  11.2.r5·1    ⇒      11.3.r5·1
+    run e4  11.r5·1      →as    6.r5·1
+    run e5  6.r5·1       →thru  6.2.r5·1
+    run e6  9.2.r5·2     →bc    11.2.r5·1
+    run e7  9.3.r5·2     →bc    ∅
+
+    r6·1  13: NEW:stump×3    13: GROW    13: TRUE+NEW:shoot    5: NEW:stump×3+GROW      band DARK files 13–13
+    r6·2  13: SUMMER×3{few}    13: NEW+PILLAR    13: RISE    12: FALL
+    r6·3  4: AXE+GO{again}    13: GROW{more}
+    run f1  13.2.r6·1    →      13.3.r6·1
+    run f2  13.2.r6·1    →as    5.r6·1
+    run f3  13.r6·2      ⇒      13.3.r6·2
+    run f4  13.3.r6·2    →in    12.r6·2
+    run p   4.r6·3       →      13.2.r6·2
+    run q   13.r6·3      →      4.r6·3
+  braid B1 p q : aba
+
+    r7·1  12: CARVE    12: !~HOLD
+    r7·2  0: !HAND    14: WOOD    0: HOLD    0: AXE{only}    0: CARRY
+    r7·3  12: CARVE    2: SQUARE    pocket P1 said 5–6 { MOUTH?  STOP }    0: HEART+HOLD    0: SQUARE+RISE    0: HOUSE×3    0: SQUARE×3
+    r7·4  12: MIND    pocket P2 said 9–10 { STONEFOLK×3‿+HOLD{most}  CARVE  HEART+HOLD }
+    run g1  12.r7·1      →for   12.2.r7·1
+    run g2  0.r7·2       →      14.r7·2
+    run g3  0.r7·2       →for   0.2.r7·2
+    run g4  0.3.r7·2     →      14.r7·2
+    run g5  0.4.r7·2     →      @8
+    run g6  12.r7·3      →in    2.r7·3
+    run g7  12.r7·3      →that  P1
+    run g8  12.r7·3      →bc    {0.r7·2, 12.r7·4}
+    run g9  0.r7·3       →      2.r7·3
+    run g10 0.2.r7·3     →with  2.r7·3
+    run g11 0.2.r7·3     →      {0.3.r7·3, 0.4.r7·3}
+    run g12 12.r7·4      →that  P2
+    run g13 P2.1         →      P2.2
+    run g14 P2.2         →in    P2.3
+    run g15 12.r7·3      ⇒      2.2.r8·5
+  mem 12: r7/1 → pith
+
+    r8·1  12: CARVE    12: WORD×3
+    r8·2  0: WORD    12: TAKE    12: CARVE{again}    0: ~MOUTH{most}      band WATER files 13–15
+    r8·3  12: >LIE    2: SQUARE×3    12: PILLAR×3+RISE{still}
+    r8·4  12: TRUE+HOLD    pocket P3 said 5–6 { CARVE{all}+MOUTH }    12: CARVE{all}+MOUTH    8: ~SAPLING+HOLD
+    r8·5  2: SQUARE+!MIND    2: !MOUTH
+    r8·6  0: TAKE    14: AXE+WOOD    0: CARRY
+    run h1  12.r8·1      →with  12.2.r8·1
+    run h2  12.r8·2      →      0.r8·2
+    run h3  12.2.r8·2    →      0.r8·2
+    run h4  12.2.r8·2    →as    0.2.r8·2
+    run h5  12.r8·3      →      2.r8·3
+    run h6  2.r8·3       →in    12.2.r8·3
+    run h7  12.r8·4      →that  P3
+    run h8  12.r8·4      →bc    12.2.r8·4
+    run h9  12.r8·4      →as    8.r8·4
+    run h10 2.2.r8·5     →      12.r8·1
+    run h11 0.r8·6       →      2.r8·3
+    run h12 0.r8·6       →with  14.r8·6
+    run h13 0.2.r8·6     →      ∅
+
+    r9·1  13: NEW:stump×3    13: !GROW{last}
+    r9·2  11: THIN{more}    11: EDGE{all}      band MIST files 11–11
+    r9·3  12: HOLD    12: SAP    12: KNOT
+    r9·4  4: AXE+GO{slow}    4: STOP    12: GROW{again}
+    run i1  11.r9·2      →in    11.2.r9·2
+    run i2  12.r9·3      →      12.2.r9·3
+    run i3  4.r9·4       ⇒      4.2.r9·4
+    run i4  4.2.r9·4     ⇒      12.r9·4
+  ‖
+
+  III
+    r10·1  12: !PILLAR    12: MOUTH
+    r10·2  12: NEW:shoot{last}    13: BENEATH+NEW:stump    4: AXE@1
+    r10·3  12: THIN+NEW    12: AXE{all}    12: TIDE×3
+    r10·4  4: AXE+GO    12: THIN{more}    14: ~AXE+TREE:trunk
+    run j1  12.2.r10·1   →      @0
+    run j2  13.r10·2     ⇒      12.r10·2
+    run j3  4.r10·2      →in    13.r10·2
+    run j4  12.2.r10·3   →in    12.3.r10·3
+    run j5  4.r10·4      →thru  12.r10·3
+    run j6  4.r10·4      →bc    12.r10·4
+    run j7  12.r10·4     →as    14.r10·4
+  mem 12: r10/1 → pith
+
+    r11·1  9: SILVERBARK×3    9: EYE    15: HEART×3+CARRY    9: CARVE×3
+    r11·2  9: !CHOOSE    15: TRUE{most}+SAPLING    15: DEEP{most}+WOOD
+    r11·3  9: CHOOSE    12: AXE
+    run k1  9.2.r11·1    →for   15.r11·1
+    run k2  15.r11·1     →      9.3.r11·1
+    run k3  9.2.r11·1    ⇒      9.r11·2
+    run k4  9.r11·2      →      {15.r11·2, 15.2.r11·2}
+    run k5  9.r11·3      →      @12
+    run k6  9.r11·3      →bc    12.r11·3
+  mem 12: r11/1 → pith
+
+    r12·1  12: WOOD    0: NAME    pocket P4 said 2–3 { NEW:stump[DARK] }
+    r12·2  12: GO    12: LOSE{most}
+    r12·3  12: HULL#1+WOUND    12: GO    6: ~HAND+GO    6: ~WOUND
+    r12·4  12: !STOP    12: TIDE×3
+    run l1  0.r12·1      →      12.r12·1
+    run l2  0.r12·1      →that  P4
+    run l3  12.r12·2     →      12.2.r12·2
+    run l4  12.2.r12·3   →      12.r12·3
+    run l5  12.2.r12·3   →as    6.r12·3
+    run l6  6.r12·3      →      6.2.r12·3
+    run l7  12.r12·4     →bc    12.2.r12·4
+
+    r13·1  12: HULL×3    12: GO    0: GUN+STRIKE    0: GUN@2    12: !GO
+    r13·2  0: HOLD    pocket P5 said 2–5 { AXE  EDGE[MIST]  SUMMER{again}  OPEN[WHITE] }
+    run m1  12.2.r13·1   →      {0.r13·1, 0.2.r13·1}
+    run m2  0.r13·1      →      12.r13·1
+    run m3  12.3.r13·1   →      @8
+    run m4  0.r13·2      →that  P5
+    run m5  P5.1         →in    {P5.2, P5.3}
+    run m6  P5.1         ⇒      P5.4
+  bark
+    bark 0: HOLD
+
+## D. Canonical GN v2
+round IV-2 {wood: long; pith: war; rings: 13; rules after: [2, 9]; cells: [1, 1, 2, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4]}
+  I
+    r1/1  0: AXE*    2: ~STONEFOLK+!MIND    6: ~ROOT    10: EARTH    11: EDGE    12: DEEP+PILLAR×3      band MIST files 11–11
+    r1/2  2: ~LIVE    6: ~EARTH    12: BARK      band DARK files 12–12
+    r1/3  2: ~TAKE    12: OVER+PILLAR
+    r1/4  12: HOLD      band MIST files 11–11
+    r1/5  12: !MIND
+    r1/6  12: LIVE+PILLAR×3      band MIST files 12–12
+    r1/7  12: LONE+HOLD
+    r1/8  12: GLAD
+    r2/1  0: SHORE    12: EYE      band MIST files 12–12
+    r2/2  0: HULL{all}+GO    12: CARVE
+    r2/3  0: EYE{only}    12: CARVE      band MIST files 11–11
+    r2/4  0: HAND:palm{all}    12: WOUND
+    r2/5  0: GO{all}    12: HOLD+CARVE{all}
+  ‖
+  II
+    r3/1  0: STONEFOLK×3+GO    2.1: SHORE+CASTLE×3    2.2: SUMMER{most}    4.1: AXE+GO    4.2: HULL×3    12.1: BARK    12.2: PILLAR#1+HOLD      band WATER files 0–0
+    r3/2  4: HAND×3    12.1: DEEP+PILLAR×3{all}    12.2: ROOT×3
+    r3/3  12: EDGE{most}
+    r4/1  0.1: STONEFOLK×3+GO{again}    0.2: SUMMER{again}    0.3: STONEFOLK×3+CARRY@1    1: SAPLING×3    12.1: FALL#1    12.2: FALL{again}
+    r4/2  0.1: DEEP+LIVE    0.2: >GO
+    r5/1  6.1: ~FLASH    6.2: ~BREAK+SAIL:cloth    9.1: NEW+US×3    9.2: US:crown×3+TURN    9.3: WEEP    11.1: OPEN    11.2: FLASH    11.3: GREAT+FLASH    12: FALL{all}      band WHITE files 11–11
+    r6/1  4: AXE+GO{again}    5: NEW:stump×3+GROW    12: FALL    13.1: NEW:stump×3    13.2: GROW    13.3: TRUE+NEW:shoot    13.4: SUMMER×3{few}      band DARK files 13–13
+    r6/2  13.1: NEW+PILLAR    13.2: RISE    13.3: GROW{more}
+    r7/1  0.1: !HAND    0.2: HOLD    0.3: AXE{only}    0.4: CARRY    2: SQUARE    pocket P1 said 5–6 { MOUTH?  STOP }    pocket P2 said 9–10 { STONEFOLK×3‿+HOLD{most}  CARVE  HEART+HOLD }    12.1: CARVE    12.2: !~HOLD    12.3: CARVE    12.4: MIND    14: WOOD
+    r7/2  0.1: HEART+HOLD    0.2: SQUARE+RISE    0.3: HOUSE×3    0.4: SQUARE×3
+    r8/1  0.1: WORD    0.2: ~MOUTH{most}    0.3: TAKE    0.4: CARRY    2.1: SQUARE×3    2.2: SQUARE+!MIND    2.3: !MOUTH    pocket P3 said 5–6 { CARVE{all}+MOUTH }    8: ~SAPLING+HOLD    12.1: CARVE    12.2: WORD×3    12.3: TAKE    12.4: CARVE{again}    14: AXE+WOOD      band WATER files 13–15
+    r8/2  12.1: >LIE    12.2: PILLAR×3+RISE{still}    12.3: TRUE+HOLD    12.4: CARVE{all}+MOUTH
+    r9/1  4.1: AXE+GO{slow}    4.2: STOP    11.1: THIN{more}    11.2: EDGE{all}    12.1: HOLD    12.2: SAP    12.3: KNOT    12.4: GROW{again}    13.1: NEW:stump×3    13.2: !GROW{last}      band MIST files 11–11
+  ‖
+  III
+    r10/1 4.1: AXE@1    4.2: AXE+GO    12.1: !PILLAR    12.2: MOUTH    12.3: NEW:shoot{last}    12.4: THIN+NEW    13: BENEATH+NEW:stump    14: ~AXE+TREE:trunk
+    r10/2 12.1: AXE{all}    12.2: TIDE×3    12.3: THIN{more}
+    r11/1 9.1: SILVERBARK×3    9.2: EYE    9.3: CARVE×3    9.4: !CHOOSE    12: AXE    15.1: HEART×3+CARRY    15.2: TRUE{most}+SAPLING    15.3: DEEP{most}+WOOD
+    r11/2 9: CHOOSE
+    r12/1 0: NAME    pocket P4 said 2–3 { NEW:stump[DARK] }    6.1: ~HAND+GO    6.2: ~WOUND    12.1: WOOD    12.2: GO    12.3: LOSE{most}    12.4: HULL#1+WOUND
+    r12/2 12.1: GO    12.2: !STOP    12.3: TIDE×3
+    r13/1 0.1: GUN+STRIKE    0.2: GUN@2    0.3: HOLD    pocket P5 said 2–5 { AXE  EDGE[MIST]  SUMMER{again}  OPEN[WHITE] }    12.1: HULL×3    12.2: GO    12.3: !GO
+  bark
+    bark 0: HOLD
+  runners
+    run a7   2.r1/1        →      2.r1/2
+    run a5   6.r1/1        →      6.r1/2
+    run a1   12.r1/1       →in    11.r1/1
+    run a8   2.r1/3        →      2.r1/2
+    run a4   12.r1/4       →as    6.r1/1
+    run a3   12.r1/4       →in    10.r1/1
+    run a2   12.r1/4       →      @11
+    run a6   12.r1/5       →as    2.r1/1
+    run a9   12.r1/6       →for   12.r1/7
+    run b1   12.r2/1       →      0.r2/1
+    run b2   0.r2/2        →      12.r2/1
+    run b3   12.r2/2       →      0.r2/2
+    run b4   0.r2/3        →      @11
+    run b5   0.r2/4        ⇒      12.r2/3
+    run b6   0.r2/5        ⇒      12.r2/4
+    run c6   0.r3/1        →with  4.1.r3/1
+    run c5   2.1.r3/1      →in    2.2.r3/1
+    run c2   4.1.r3/1      →in    2.2.r3/1
+    run c3   4.1.r3/1      →with  4.2.r3/1
+    run c1   4.1.r3/1      →      12.1.r3/1
+    run c7   4.1.r3/1      ⇒      12.2.r3/1
+    run c4   4.2.r3/1      →with  4.r3/2
+    run c8   12.2.r3/1     →      {12.1.r3/2, 12.r3/3}
+    run c9   12.2.r3/1     →thru  12.2.r3/2
+    run d3   0.1.r4/1      →in    0.2.r4/1
+    run d2   0.1.r4/1      →      @12
+    run d4   0.1.r4/1      ⇒      0.1.r4/2
+    run d5   0.3.r4/1      →      @4
+    run d7   0.3.r4/1      ⇒      0.1.r4/2
+    run d1   12.1.r4/1     ⇒      12.2.r4/1
+    run d6   0.2.r4/2      →      1.r4/1
+    run e5   6.1.r5/1      →thru  6.2.r5/1
+    run e6   9.2.r5/1      →bc    11.2.r5/1
+    run e7   9.3.r5/1      →bc    ∅
+    run e4   11.1.r5/1     →as    6.1.r5/1
+    run e2   11.1.r5/1     ⇒      11.2.r5/1
+    run e3   11.2.r5/1     ⇒      11.3.r5/1
+    run e1   12.r5/1       ⇒      11.1.r5/1
+    run p    4.r6/1        →      13.1.r6/2
+    run f2   13.2.r6/1     →as    5.r6/1
+    run f1   13.2.r6/1     →      13.3.r6/1
+    run f3   13.4.r6/1     ⇒      13.2.r6/2
+    run f4   13.2.r6/2     →in    12.r6/1
+    run q    13.3.r6/2     →      4.r6/1
+    run g3   0.1.r7/1      →for   0.2.r7/1
+    run g2   0.1.r7/1      →      14.r7/1
+    run g4   0.3.r7/1      →      14.r7/1
+    run g5   0.4.r7/1      →      @8
+    run g13  P2.1          →      P2.2
+    run g14  P2.2          →in    P2.3
+    run g1   12.1.r7/1     →for   12.2.r7/1
+    run g8   12.3.r7/1     →bc    {0.1.r7/1, 12.4.r7/1}
+    run g6   12.3.r7/1     →in    2.r7/1
+    run g7   12.3.r7/1     →that  P1
+    run g15  12.3.r7/1     ⇒      2.3.r8/1
+    run g12  12.4.r7/1     →that  P2
+    run g9   0.1.r7/2      →      2.r7/1
+    run g10  0.2.r7/2      →with  2.r7/1
+    run g11  0.2.r7/2      →      {0.3.r7/2, 0.4.r7/2}
+    run h11  0.3.r8/1      →      2.1.r8/1
+    run h12  0.3.r8/1      →with  14.r8/1
+    run h13  0.4.r8/1      →      ∅
+    run h6   2.1.r8/1      →in    12.2.r8/2
+    run h10  2.3.r8/1      →      12.1.r8/1
+    run h1   12.1.r8/1     →with  12.2.r8/1
+    run h2   12.3.r8/1     →      0.1.r8/1
+    run h3   12.4.r8/1     →      0.1.r8/1
+    run h4   12.4.r8/1     →as    0.2.r8/1
+    run h5   12.1.r8/2     →      2.1.r8/1
+    run h7   12.3.r8/2     →that  P3
+    run h9   12.3.r8/2     →as    8.r8/1
+    run h8   12.3.r8/2     →bc    12.4.r8/2
+    run i3   4.1.r9/1      ⇒      4.2.r9/1
+    run i4   4.2.r9/1      ⇒      12.4.r9/1
+    run i1   11.1.r9/1     →in    11.2.r9/1
+    run i2   12.1.r9/1     →      12.2.r9/1
+    run j3   4.1.r10/1     →in    13.r10/1
+    run j5   4.2.r10/1     →thru  12.4.r10/1
+    run j6   4.2.r10/1     →bc    12.3.r10/2
+    run j1   12.2.r10/1    →      @0
+    run j2   13.r10/1      ⇒      12.3.r10/1
+    run j4   12.1.r10/2    →in    12.2.r10/2
+    run j7   12.3.r10/2    →as    14.r10/1
+    run k3   9.2.r11/1     ⇒      9.4.r11/1
+    run k1   9.2.r11/1     →for   15.1.r11/1
+    run k4   9.4.r11/1     →      {15.2.r11/1, 15.3.r11/1}
+    run k2   15.1.r11/1    →      9.3.r11/1
+    run k6   9.r11/2       →bc    12.r11/1
+    run k5   9.r11/2       →      @12
+    run l2   0.r12/1       →that  P4
+    run l1   0.r12/1       →      12.1.r12/1
+    run l6   6.1.r12/1     →      6.2.r12/1
+    run l3   12.2.r12/1    →      12.3.r12/1
+    run l5   12.1.r12/2    →as    6.1.r12/1
+    run l4   12.1.r12/2    →      12.4.r12/1
+    run l7   12.2.r12/2    →bc    12.3.r12/2
+    run m2   0.1.r13/1     →      12.1.r13/1
+    run m4   0.3.r13/1     →that  P5
+    run m5   P5.1          →in    {P5.2, P5.3}
+    run m6   P5.1          ⇒      P5.4
+    run m1   12.2.r13/1    →      {0.1.r13/1, 0.2.r13/1}
+    run m3   12.3.r13/1    →      @8
+  braid B1 p q : aba
+  mem 12: r3/2 → pith
+  mem 12: r7/1 → pith
+  mem 12: r10/1 → pith
+  mem 12: r11/1 → pith
+
+## E. A GN excerpt of five knowings (from the unit's round-and-files section; its English annotations removed)
+    r3/1  4.1: AXE+GO
+    r3/2  12.1: DEEP+PILLAR×3{all}    [mem 12: r3/2 → pith]
+    r5/1  12: FALL{all}    11.1: OPEN    band WHITE files 11–11
+    r7/1  12.3: CARVE    2: SQUARE
+    r8/1  2.3: !MOUTH    [from 12.3.r7/1 ⇒]

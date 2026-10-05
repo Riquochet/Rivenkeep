@@ -1,0 +1,9 @@
+# name: E2-07
+round E2-07 {wood: forty; pith: war; rings: 2; rules after: [1]}
+  I
+    r1/1  0: KNOT*
+  ‖¦
+  II
+    r2/1  4: SQUARE+BURN      band MIST files 12–12
+  runners
+    run t1  0.r1/1  ⇒  4.r2/1

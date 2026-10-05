@@ -1,0 +1,84 @@
+# The Book's own titles, and the wall's names, in Orrowen (tier 3: the stone leaves' headings, as Seren
+# would write them in the leaf-hand). A construct: head + possessor (softened, or with its article).
+- | ~Flennath Dholm Treskat | name | The Book of the Riven Stone
+- | ~Flenn Seren | name | Of This Book (Seren's foreword: "the leaf of Seren")
+- | ~Ammelyl | name | The Invocation
+- | ~Flennath et Hald | name | Book One: the Book of the Wall
+- | ~Carm et Lodhan | name | I.2 The Cry of the Bonded
+- | ~Hoss Sell et Crenn | name | I.3 The Captain's Long Breath (the long breath of the Captain)
+- | ~Ternil et Gorndholm | name | I.4 The Rite of the Cornerstone
+- | ~Vollol et Treskan | name | I.5 The Naming of the Rivenmen
+- | ~Flennath et Galdard | name | Book Two: the Book of the Builders
+- | ~Kethow sa re yal nadhumat | name | II.1 Of the Keep That Was Forgotten
+- | ~Hoss et Mesk | name | II.2 Of the Breath of the Wood
+- | ~Lodhan eth Tolmath Vardh | name | II.3 Of the Bonded and the Theoliths
+- | ~Flennath et Cumm | name | Book Three: the Book of the Havens
+- | ~Reskowath strom sa orrant um wadh | name | III.2 The Thrones That Walk the Sea
+- | ~Flennath et Grest | name | Book Four: the Book of the Wound
+- | ~Gostol et Gannath Domm | name | IV.1 Of the Felling of the Black Pillars
+- | ~Dannwresk ul Meskdhrenn | name | IV.2 The Axe in the Grain
+- | ~Gebb et Pard | name | IV.3 The Warden's Door
+- | ~Hebbet sa re yal kethet hos clem | name | IV.4 The Gift Held an Hour
+- | ~Sulter sa vorr | name | IV.5 The Burning Boat (the boat that burns)
+- | ~Farrol et Aelvaren | name | IV.6 The Voyage of the Aelvaren
+- | ~Flennath et Hyll | name | Book Five: the Book of the Tides
+- | ~Rellor Hosast | name | V.1 The First Glyph (the first sign)
+- | ~Kaelir sa re vymm dem varn | name | V.3 The Wreck That Went Home
+- | ~Redul ul vimm et Helv Bynt | name | V.4 The Council Under the Thin Sky
+- | ~Hylleth sa re nydh et Hald | name | V.5 The Tides, as the Wall Counted Them
+- | ~Tevyl | name | V.6 Of the Growing
+- | ~Vesksirr ul Meskdhrenn | name | V.7 The Mirror in the Grain
+- | ~Flennath et Mesk Lurrel | name | Book Six: the Book of the Green Wood
+- | ~Kethyl et Mesk Lurrel | name | VI.1 The Knowing of the Green Wood
+- | ~Pa Varn | name | The Two Homes (the song)
+- | ~Trenn Rask | name | the Epilogue ("the tale of the end": trenn + dask, the possessor softened)
+- | ~Vell et Covv Treskat | name | The Lay of the Torn Cloak (the song of the Torn Cloak)
+- | ~Pa lo Yanna | name | Two at the Gate (the song)
+- | ~Sulter Myst | name | The Grey Boat (the rhyme)
+- | ~Vell et Surrath | name | The Song of the Years
+# the Captain's three calls (orrowen_v2 §11.5), as the wall names them
+- | ~Marr tho dhrun | phr | "Shift your ground" (the first call)
+- | ~Kyl tho vedh | phr | "Change your shot" (the second call)
+- | ~Keth, ell lusk | phr | "Hold, or loose" (the third call)
+# the wood of the Book, as the wall says it
+- | ~mesk tevel | n | the young wood (the Hasty Tide's hulls)
+- | ~mesk lurrel | n | the green wood
+- | ~mesk domm | n | the black wood (the timber of the black pillars)
+- | ~mesk hemm sost | n | the eldest wood
+- | vorr^mesk | n | firewood
+- | sulter^mesk | n | boat-timber
+# the grains, by the wall's names ("your names for the grains will serve")
+- | molt^mesk | name | Heartoak ("heart-tree")
+- | duss^sast | name | Ironbark ("hard-skin")
+- | lilv^mesk | name | Willow ("soft-tree")
+- | kyl^gend | name | Twistbough ("turn-shoot")
+- | tovv^mesk | name | Yew ("the waiting tree")
+- | tuss^mesk | name | Ashwood ("dust-tree")
+# wardens (the canon's -vard: Halvard, Tolmvard, Lurrvard, Frennvar)
+- | cumm^pard | n | a haven-warden
+- | hinnar^pard | n | a town-warden
+- | nelter^pard | n | a vault-keeper
+- | vestul^pard | n | a chest-keeper
+- | ryt+ow^pard | n | an archivist ("archive-warden")
+- | heskal^pard | n | a bridge-warden
+- | taldow^pard | n | a tower-warden
+- | gebb^pard | n | a doorward
+- | hiskenn^pard | n | a pass-warden
+- | ledal^pard | n | a grave-keeper
+- | stell^pard | n | a cairn-keeper
+- | brunn^pard | n | a mountain-warden
+# stones (the canon's -dholm: gorndholm, trenndholm)
+- | ganna^tolm | n | a gatestone
+- | hald^tolm | n | a wall-stone
+- | ledal^tolm | n | a gravestone
+- | trun^tolm | n | a paving stone
+- | misk^tolm | n | a stepping-stone
+- | hess^tolm | n | a boundary stone ("stop-stone")
+- | nydh^tolm | n | a tally-stone, a counting-stone
+- | hosk^tolm | n | a capping stone, a coping
+# the formulas of the hearth (they close every leaf)
+- | ~Cadhom o hosen re yal cadhat lom | phr | This I lay as it was laid for me ("I lay it as it was laid at me")
+- | ~Cadhar o hosen re yal cadhat lor | phr | This we lay as it was laid for us
+- | ~Eth re vysk et odh: Tumar | phr | And the hearth said: We remember
+- | ~Eth re dhess nahos | phr | And no one answered ("and answered no one")
+- | ~Hebb et tolm lom | phr | Give me the stone ("give the stone at me")

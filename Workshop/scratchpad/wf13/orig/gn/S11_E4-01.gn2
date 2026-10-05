@@ -1,0 +1,19 @@
+# name: E4-01
+round E4-01 {wood: long; pith: war ×3; rings: 5; rules after: [2, 4]}
+  I
+    r1/1  p0·0: WAVE*    p1·0: WAVE*    p2·0: WAVE*
+    r2/1  p0·4: EDGE+BREAKER      band DREAD files 15–1
+  ‖
+  II
+    r3/1  0: GO    2: BOND    4: GO    12: KNOT^r4      band DREAD files 11–13
+    r4/1  10: SQUARE+EYE    graft(E3-01)
+  ‖
+  III
+    r5/1  12: GO
+  bark
+    bark 0: BOND+TIDE
+  runners
+    run t0  p0·0.r1/1  ⇒  p0·4.r2/1
+    run t1  10.r4/1    →  @0
+    run t2  10.r4/1    ⇒  12.r5/1
+    mem 10: r4 → pith

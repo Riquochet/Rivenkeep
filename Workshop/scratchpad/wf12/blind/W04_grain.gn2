@@ -1,0 +1,155 @@
+round IV-6-aelvaren {wood: life; pith: war; rings: 23; rules after: [3, 15]; cells: [1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}
+  I
+    r1/1  0: HOLD*    7: HULL×3‿    12: BOND+BEARER    14: HULL+CARRY
+    r1/2  14: !EYE
+    r1/3  14: HOLD
+    r1/4  14: GROW
+    r2/1  0: SHORE    1: BOND+SQUARE    11: THIN    12: BOND+BEARER      band MIST files 11–11
+    r2/2  1: HAND+LIE    12: NAME+GLAD
+    r2/3  12: DEEP+HULL½      band MIST files 12–12
+    r2/4  12: THIN      band WATER files 12–12
+    r2/5  12: CARRY
+    r2/6  12: WOOD
+    r3/1  0: DOOR    1.1: OVER+GO    1.2: !GO    2: BENEATH+DOOR    3: ~AELTHAR{all}    5.1: TIDE    5.2: BENEATH+RISE    12.1: LIE    12.2: KNOT    15: MORNING{all}      band WATER files 2–2
+    r3/2  5: TURN    12: CARRY
+  ‖
+  II
+    r4/1  0.1: HOUSE+STONEFOLK×3    0.2: TAKE    1: US:foot#2    3.1: ~>GO    3.2: ~TAKE+SAIL:cloth
+    r4/2  0: >GO    3: ~BREAK
+    r5/1  1.1: HAND+LIE{gently}    1.2: BLOOD+GO    12: WOOD    15: MORNING
+    r6/1  12: HOLD{all}
+    r7/1  0: >BURN    12.1: DEEP+WOOD    12.2: GRIEF+ANGER    12.3: BURN{more}    14: WOOD+CRY
+    r7/2  12: CRY
+    r8/1  0: >GO    1: LIE    2: AXE+TREE:trunk×3    5.1: TAKE    5.2: >GO    12.1: !GO    12.2: WOOD{all}    13: BURN      band WATER files 5–5  band WATER files 4–4  band WHITE files 1–1
+    r9/1  12: TURN
+    r10/1 5: TAKE    6: ROAD    8: HOME    12: BURN+GO    14.1: BURN+WOOD    14.2: DYING    14.3: HOLD{still}    15: WIND      band WATER files 5–5
+    r11/1 3: AXE    5.1: STONEFOLK+HULL×3    5.2: LIE#2    5.3: GREAT+GO    5.4: >LIE    7: BLOOD×3    11: THIN      band MIST files 11–11  band WATER files 5–5
+    r12/1 3: AXE+GO    5: GREAT{most}    12.1: BURN    12.2: BENEATH+GO
+    r13/1 5.1: BREAK{all}    5.2: BURN{all}    7: TAKE
+    r14/1 9: STONEFOLK×3
+    r15/1 0.1: !GO    0.2: STONEFOLK+BEARER:keel    1: BONE×3    8: ROOT×3    10: _DEEP+ROAD    11.1: THIN{most}    11.2: CLOSE    12.1: FIND    12.2: BEARER:keel+HOLD    12.3: BEARER:keel{only}    12.4: BONE×3{few}    13: !BURN{slow}      band MIST files 11–12  band WATER files 10–10
+  ‖
+  III
+    r16/1 8.1: SAND    8.2: SILVERBARK×3    9.1: DEEP+US×3    9.2: GO    9.3: HOLD    9.4: >GO    12.1: HULL½    12.2: RISE    12.3: BENEATH+LIE      band DARK files 12–12  band DARK files 15–15  band WHITE files 8–8  band STILL files 12–12
+    r17/1 pocket P1 cut 2–4 { GIFT  STONEFOLK:foot }    pocket P2 cut 5–8 { TAKE{gently}+STONEFOLK:stem  AXE  STRIKE×3 }    9.1: BOND+HAND×3    9.2: HOLD    9.3: HOLD    12: BEARER:keel
+    r18/1 14: WOOD+!SMOOTH{all}
+    r19/1 0.1: MOUTH    0.2: DOOR+STONEFOLK    0.3: HAND:stem+TURN    1.1: GIFT{most}    1.2: TRUE+>DYING    1.3: AXE+GO    3: HOLY+AELTHAR    9.1: >GO    9.2: EYE    9.3: HOLD    9.4: !HOLD    13: BURN
+    r19/2 9: !MOUTH?
+    r20/1 0: STRIKE×3    9: EYE{only}
+    r21/1 1: BONE×3    8.1: SILVERBARK×3    8.2: ROOT×3    9: >LIE    12.1: BEARER:keel    12.2: BONE×3
+    r22/1 8: ROOT×3+EAT
+    r23/1 0: SQUARE    7.1: HULL×3{all}    7.2: GO    7.3: CARRY    10: EARTH+EDGE{most}    11: RAIN    12.1: HOLD+GO    12.2: GRIEF    15.1: TREE×3{all}    15.2: ROOT×3    15.3: SAPLING×3{all}    15.4: EAT
+  bark
+    bark 0: HOLD
+  runners
+    run a1   0.r1/1        →in    7.r1/1
+    run a3   12.r1/1       ⇒      14.r1/4
+    run a2   14.r1/1       →      @0.r2/2
+    run a4   14.r1/3       →bc    14.r1/4
+    run b5   1.r2/2        →thru  11.r2/1
+    run b4   1.r2/2        →in    12.r2/6
+    run b3   12.r2/5       →      0.r2/1
+    run b1   12.r2/5       →      1.r2/1
+    run b2   12.r2/5       →thru  11.r2/1
+    run c1   1.1.r3/1      →      0.r3/1
+    run c10  1.2.r3/1      →      @12.r3/2
+    run c7   5.2.r3/1      →      @12.r3/2
+    run c8   5.2.r3/1      ⇒      5.r3/2
+    run c2   12.1.r3/1     →in    {2.r3/1, 15.r3/1}
+    run c3   12.2.r3/1     →for   12.r3/2
+    run c9   5.r3/2        ⇒      1.2.r3/1
+    run c6   12.r3/2       →with  3.r3/1
+    run c4   12.r3/2       →      @1
+    run c5   12.r3/2       →      @8
+    run d1   0.2.r4/1      →      1.r4/1
+    run d2   0.2.r4/1      ⇒      0.r4/2
+    run d6   3.1.r4/1      →      3.2.r4/1
+    run d5   0.r4/2        →as    3.1.r4/1
+    run d3   0.r4/2        →      @1
+    run d4   0.r4/2        →in    @12
+    run d7   3.r4/2        →      3.2.r4/1
+    run e3   1.1.r5/1      ⇒      1.2.r5/1
+    run e1   1.1.r5/1      →in    12.r5/1
+    run e2   1.1.r5/1      →in    15.r5/1
+    run e4   1.2.r5/1      →in    12.r5/1
+    run f0   1.2.r5/1      ⇒      12.r6/1
+    run g1   0.r7/1        →      12.1.r7/1
+    run g2   12.3.r7/1     →as    0.r7/1
+    run g3   12.r7/2       →bc    14.r7/1
+    run h2   0.r8/1        →with  2.r8/1
+    run h1   0.r8/1        →      @12
+    run h9   1.r8/1        →in    @12
+    run h3   5.1.r8/1      →      @12
+    run h5   5.2.r8/1      →in    @4
+    run h4   5.2.r8/1      →      @12
+    run h7   12.1.r8/1     →bc    5.2.r8/1
+    run h6   12.1.r8/1     →      @8
+    run h8   13.r8/1       →in    12.2.r8/1
+    run k1   5.r10/1       →      12.r10/1
+    run k4   6.r10/1       →      8.r10/1
+    run k2   12.r10/1      →in    15.r10/1
+    run k3   14.3.r10/1    →      6.r10/1
+    run l4   3.r11/1       →      7.r11/1
+    run l1   5.2.r11/1     →in    @6
+    run l2   5.2.r11/1     →in    11.r11/1
+    run l3   5.3.r11/1     →with  {3.r11/1, 7.r11/1}
+    run l6   5.4.r11/1     →in    5.1.r11/1
+    run l5   5.4.r11/1     →      7.r11/1
+    run m5   3.r12/1       ⇒      12.2.r12/1
+    run m4   3.r12/1       →in    @12
+    run m1   12.1.r12/1    →with  12.2.r12/1
+    run m3   12.2.r12/1    →in    @3
+    run m2   12.2.r12/1    →in    5.r12/1
+    run n4   5.1.r13/1     ⇒      5.2.r13/1
+    run n3   7.r13/1       ⇒      5.1.r13/1
+    run n2   7.r13/1       →in    @5
+    run n1   7.r13/1       →      @13
+    run o1   9.r14/1       →in    @5
+    run o2   9.r14/1       →      ∅
+    run p5   0.1.r15/1     →with  0.2.r15/1
+    run p4   0.1.r15/1     →      10.r15/1
+    run p8   1.r15/1       →in    12.4.r15/1
+    run p3   10.r15/1      →in    8.r15/1
+    run p9   10.r15/1      ⇒      12.1.r16/1
+    run q    11.2.r15/1    →      13.r15/1
+    run p1   12.1.r15/1    →      10.r15/1
+    run p2   12.1.r15/1    →in    11.1.r15/1
+    run p6   12.2.r15/1    →      @6
+    run p    13.r15/1      →      11.2.r15/1
+    run p7   13.r15/1      ⇒      12.3.r15/1
+    run s4   9.2.r16/1     →      @12
+    run s6   9.3.r16/1     →bc    9.4.r16/1
+    run s5   9.3.r16/1     →      @12
+    run s7   9.4.r16/1     →      @12
+    run s1   12.2.r16/1    →      8.1.r16/1
+    run s2   12.2.r16/1    →in    @15
+    run s3   12.3.r16/1    →in    8.2.r16/1
+    run t1   9.1.r17/1     →      12.r17/1
+    run t2   9.2.r17/1     →that  P1
+    run t3   9.3.r17/1     →that  P2
+    run v4   0.1.r19/1     →with  1.2.r19/1
+    run v3   0.1.r19/1     →      3.r19/1
+    run v5   0.1.r19/1     →with  13.r19/1
+    run v8   0.3.r19/1     →bc    ∅
+    run v7   1.3.r19/1     ⇒      0.3.r19/1
+    run v1   9.1.r19/1     →      {3.r19/1, 1.1.r19/1}
+    run v2   9.2.r19/1     →      0.1.r19/1
+    run v6   9.3.r19/1     →      1.2.r19/1
+    run v9   9.4.r19/1     →in    0.3.r19/1
+    run w1   9.r20/1       →      0.r20/1
+    run x3   1.r21/1       →in    12.2.r21/1
+    run x2   9.r21/1       →in    8.2.r21/1
+    run x1   9.r21/1       →      12.1.r21/1
+    run y0   8.r22/1       ⇒      12.1.r23/1
+    run z6   7.2.r23/1     →      0.r23/1
+    run z7   7.3.r23/1     →      12.2.r23/1
+    run z1   12.1.r23/1    →      {15.1.r23/1, 10.r23/1}
+    run z2   12.1.r23/1    →thru  15.2.r23/1
+    run z3   15.3.r23/1    →for   7.1.r23/1
+    run z5   15.4.r23/1    ⇒      7.2.r23/1
+    run z4   15.4.r23/1    →with  11.r23/1
+  lap  k2 ⊳ k1
+  braid B1 p q : abab!
+  ray 1: r2/2–r5/1
+  ray 15: r3/1–r5/1
+  mem 0: r15/1 → pith

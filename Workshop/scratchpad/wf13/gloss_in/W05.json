@@ -1,0 +1,554 @@
+[
+ {
+  "leaf": "t-V-3",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Kaelir sa re vymm dem varn",
+  "english": "V.3 · The Wreck That Went Home",
+  "dup": false,
+  "draft": [
+   [
+    "Kaelir",
+    "ruin"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vymm",
+    "S·return"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 1,
+  "label": "Romanisation · the dateline",
+  "rom": "Ul nunn et grem sullast.",
+  "english": "*Deep in the third winter.*",
+  "dup": false,
+  "draft": [
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "nunn",
+    "N·deep"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "grem",
+    "winter"
+   ],
+   [
+    "sullast",
+    "third"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 2,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Re yalant garlath Halvard um et sceth sy; nath re femm Rhyna o, eth stinel dhant lunnat ul ey garlremullath, veth re heth ey o hosen re heth o o, hosen keth lonn lonn.",
+  "english": "*Halvard's hands were on this hull; Rhyna, with the salt-cuts open in her palms, touched it not, and knew it as he knew it, as kin know kin.*",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "yalant",
+    "S·be.PST-3PL"
+   ],
+   [
+    "garlath",
+    "hand-PL"
+   ],
+   [
+    "Halvard",
+    "Halvard"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sceth",
+    "ship"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "femm",
+    "touch"
+   ],
+   [
+    "Rhyna",
+    "Rhyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "dhant",
+    "S·salt"
+   ],
+   [
+    "lunnat",
+    "open"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "ey",
+    "her"
+   ],
+   [
+    "garlremullath",
+    "palm-PL"
+   ],
+   [
+    "veth",
+    "but"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "heth",
+    "S·hold"
+   ],
+   [
+    "ey",
+    "her"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "heth",
+    "S·hold"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "keth",
+    "hold"
+   ],
+   [
+    "lonn",
+    "kin.by.blood"
+   ],
+   [
+    "lonn",
+    "kin.by.blood"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 3,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Tant. Tant ul grynir eth crynir. Brid, fedh sell.",
+  "english": "*— Salt. Salt in every board. Cold, a long while.*",
+  "dup": false,
+  "draft": [
+   [
+    "Tant",
+    "salt"
+   ],
+   [
+    "Tant",
+    "salt"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "grynir",
+    "N·plank"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "crynir",
+    "plank"
+   ],
+   [
+    "Brid",
+    "cold"
+   ],
+   [
+    "fedh",
+    "time"
+   ],
+   [
+    "sell",
+    "long"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 4,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Tolm, ul drodol. Dusstyvil, vimm, ulo eth hyo. Et wadh ulo.",
+  "english": "*— A stone, flashing. Iron, low and through. The sea in.*",
+  "dup": false,
+  "draft": [
+   [
+    "Tolm",
+    "stone"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "drodol",
+    "flashing"
+   ],
+   [
+    "Dusstyvil",
+    "iron"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hyo",
+    "from-3SG.M"
+   ],
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "wadh",
+    "sea"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 5,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Dem varn, amm grestet. Dem varn, niss. Brodhol dem lonn.",
+  "english": "*— Home when wounded. Home, slow. Telling its kin.*",
+  "dup": false,
+  "draft": [
+   [
+    "Dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "amm",
+    "when"
+   ],
+   [
+    "grestet",
+    "wound"
+   ],
+   [
+    "Dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "niss",
+    "slow"
+   ],
+   [
+    "Brodhol",
+    "telling"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "lonn",
+    "kin.by.blood"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 6,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Vesk hosast —",
+  "english": "*— Look before —*",
+  "dup": false,
+  "draft": [
+   [
+    "Vesk",
+    "see"
+   ],
+   [
+    "hosast",
+    "first"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 7,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— eth hy ull osk.",
+  "english": "*— you trust.*",
+  "dup": false,
+  "draft": [
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "osk",
+    "trust"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 8,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Pawast. Et wadh ull sost. Hosel, eth niss.",
+  "english": "*— Again. The same water. Alone, and slow.*",
+  "dup": false,
+  "draft": [
+   [
+    "Pawast",
+    "second"
+   ],
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "wadh",
+    "sea"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "Hosel",
+    "alone"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "niss",
+    "slow"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 9,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Hos vorr, driget. Ul vodh re omm o — [ ]",
+  "english": "*— One fire, thrown. Where it fell — [ ]*",
+  "dup": false,
+  "draft": [
+   [
+    "Hos",
+    "one"
+   ],
+   [
+    "vorr",
+    "fire"
+   ],
+   [
+    "driget",
+    "thrown"
+   ],
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "omm",
+    "fall"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 10,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Tolm, ul drodol. Dusstyvil, vimm, ulo eth —",
+  "english": "*— A stone, flashing. Iron, low and —*",
+  "dup": false,
+  "draft": [
+   [
+    "Tolm",
+    "stone"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "drodol",
+    "flashing"
+   ],
+   [
+    "Dusstyvil",
+    "iron"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ],
+   [
+    "eth",
+    "and"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-3",
+  "para_index": 32,
+  "label": "Romanisation · Seren’s closing line",
+  "rom": "Eth re dhess nahos.",
+  "english": "*And no one answered.*",
+  "dup": true,
+  "draft": [
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhess",
+    "S·answer"
+   ],
+   [
+    "nahos",
+    "none"
+   ]
+  ]
+ }
+]

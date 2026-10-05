@@ -1,0 +1,886 @@
+[
+ {
+  "leaf": "t-IV-2",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Dannwresk ul Meskdhrenn",
+  "english": "IV.2 · The Axe in the Grain",
+  "dup": false,
+  "draft": [
+   [
+    "Dannwresk",
+    "axe"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Meskdhrenn",
+    "grain.of.wood"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 1,
+  "label": "Romanisation · the dateline",
+  "rom": "Et grem sullast, ul Hyll Dhumol.",
+  "english": "*The third winter, in the Tide of Remembering.*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "grem",
+    "winter"
+   ],
+   [
+    "sullast",
+    "third"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 2,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Re rik Rhyna et molt sy um et dhysal, eth re yal et lern hosel lo Halyna. Grem sy, re rarr o tunn ul Halvard ul et nelter, eth uloy ul molt et tevath; ew sull vess et brodhol, hy vodh re yal o ulonta hosen grestet, eth nath re yal hosen trenn.",
+  "english": "*Rhyna took up this heart on the shingle, and {{Halyna}} had but its shape. This winter it came whole to Halvard in the vault, and to her among the children; the telling took three nights, for it was in them as a wound is, and not as a tale.*",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "rik",
+    "S·catch"
+   ],
+   [
+    "Rhyna",
+    "Rhyna"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "dhysal",
+    "shingle"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "hosel",
+    "alone"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "Grem",
+    "winter"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rarr",
+    "S·come"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "tunn",
+    "whole"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Halvard",
+    "Halvard"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "nelter",
+    "vault"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "uloy",
+    "in-3SG.F"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tevath",
+    "children"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "vess",
+    "night"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "brodhol",
+    "telling"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "ulonta",
+    "in-3DU"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "grestet",
+    "wound"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "trenn",
+    "course.of.stones"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 3,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Trenneth. Susk, sast domm. Kethyl et hoss dem vimm.",
+  "english": "*— Ranks. Tall, dark of bark. Holding the breath down.*",
+  "dup": false,
+  "draft": [
+   [
+    "Trenneth",
+    "courses.of.a.wall"
+   ],
+   [
+    "Susk",
+    "high"
+   ],
+   [
+    "sast",
+    "skin"
+   ],
+   [
+    "domm",
+    "black"
+   ],
+   [
+    "Kethyl",
+    "holding"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hoss",
+    "breath"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 4,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Nestullath. Nestullath mest. Hy ull, dusstyvil, ul et sast.",
+  "english": "*— Oars. Many oars. Then iron, in the bark.*",
+  "dup": false,
+  "draft": [
+   [
+    "Nestullath",
+    "oar-PL"
+   ],
+   [
+    "Nestullath",
+    "oar-PL"
+   ],
+   [
+    "mest",
+    "much"
+   ],
+   [
+    "Hy",
+    "from(+S)"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "dusstyvil",
+    "iron"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sast",
+    "skin"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 5,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Hos, eth — []",
+  "english": "*— One, and — [⟦legend_iv2_gap1⟧]*",
+  "dup": false,
+  "draft": [
+   [
+    "Hos",
+    "one"
+   ],
+   [
+    "eth",
+    "and"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 6,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Stineleth. Nydhet. Gor stinel, nydhet.",
+  "english": "*— Strokes. Counted. Every stroke, counted.*",
+  "dup": false,
+  "draft": [
+   [
+    "Stineleth",
+    "stroke-PL"
+   ],
+   [
+    "Nydhet",
+    "number"
+   ],
+   [
+    "Gor",
+    "every(+S)"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "nydhet",
+    "number"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 7,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Re omm gor hos, eth re lunn et helv. Stacorn —",
+  "english": "*— Each fell, and the sky came through. Pale —*",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "omm",
+    "fall"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "lunn",
+    "freedom"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "helv",
+    "sky"
+   ],
+   [
+    "Stacorn",
+    "pale"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 8,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— eth stacorn, eth duss. Gendeth. Stinet, eth stinet pawast.",
+  "english": "*— and pale, and hard. Shoots. Cut, and cut again.*",
+  "dup": false,
+  "draft": [
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "stacorn",
+    "pale"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "duss",
+    "hard"
+   ],
+   [
+    "Gendeth",
+    "shoot.from.a.stump-PL"
+   ],
+   [
+    "Stinet",
+    "cut"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "stinet",
+    "cut"
+   ],
+   [
+    "pawast",
+    "second"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 9,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Rellorath lilv, um et galat nawrodh —",
+  "english": "*— Soft letters, on the mute thing —*",
+  "dup": false,
+  "draft": [
+   [
+    "Rellorath",
+    "signs"
+   ],
+   [
+    "lilv",
+    "soft"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "galat",
+    "anything"
+   ],
+   [
+    "nawrodh",
+    "mute"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 10,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— eth nath re []",
+  "english": "*— and it did not [⟦legend_iv2_gap2⟧]*",
+  "dup": false,
+  "draft": [
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 11,
+  "label": "Romanisation · Seren’s caption",
+  "rom": "Pa rellor lern et mesk, sa re yal veskyl lo Halyna, eth nath re yal tul brodhol lonta.",
+  "english": "::: note\nTwo marks of the wood's shape that {{Halyna}} could see, and could not yet tell\nThe first is the pillars, many, with a memory cut through them to the heart: *What one pillar felt, all the ranks felt, root to root.* The second is the mouth, mirrored, and tied back across the rings to the plea cut on the stone: *It did not answer.*\n:::",
+  "dup": false,
+  "draft": [
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "rellor",
+    "sign"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "veskyl",
+    "sight"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "tul",
+    "yet"
+   ],
+   [
+    "brodhol",
+    "telling"
+   ],
+   [
+    "lonta",
+    "at-3DU"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 11,
+  "label": "Romanisation · Seren’s note",
+  "rom": "Et hosast: et gannath, mest, eth tumol stinet lo so dhrenn dem et molt: Galat sa re heth hos gann, re heth gor dhrenn o, hy veskrivull dem meskrivull. Et pawast: et brodow kylet, eth lodhat um et scaevurath dem bessyl rytet um et tolm: Nath re dhess o.",
+  "english": "::: note\nTwo marks of the wood's shape that {{Halyna}} could see, and could not yet tell\nThe first is the pillars, many, with a memory cut through them to the heart: *What one pillar felt, all the ranks felt, root to root.* The second is the mouth, mirrored, and tied back across the rings to the plea cut on the stone: *It did not answer.*\n:::",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "gannath",
+    "posts"
+   ],
+   [
+    "mest",
+    "much"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "tumol",
+    "remembering"
+   ],
+   [
+    "stinet",
+    "cut"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "Galat",
+    "anything"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "heth",
+    "S·hold"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "gann",
+    "post"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "heth",
+    "S·hold"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "veskrivull",
+    "S·root"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "meskrivull",
+    "root"
+   ],
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "pawast",
+    "second"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "brodow",
+    "mouth"
+   ],
+   [
+    "kylet",
+    "changed"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "lodhat",
+    "bonded"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "scaevurath",
+    "wheel-PL"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "bessyl",
+    "N·plea"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhess",
+    "S·answer"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-2",
+  "para_index": 38,
+  "label": "Romanisation · Seren’s closing line",
+  "rom": "Eth re dhess nahos.",
+  "english": "*And no one answered.*",
+  "dup": true,
+  "draft": [
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhess",
+    "S·answer"
+   ],
+   [
+    "nahos",
+    "none"
+   ]
+  ]
+ }
+]

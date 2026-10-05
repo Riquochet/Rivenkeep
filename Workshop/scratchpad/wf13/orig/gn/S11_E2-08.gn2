@@ -1,0 +1,9 @@
+# name: E2-08
+round E2-08 {wood: forty; pith: war; rings: 2; rules after: [1]}
+  I
+    r1/1  0: SMOOTH*
+  ‖¦
+  II
+    r2/1  4: BEARER+GO      band MIST files 4–4
+  runners
+    run t1  0.r1/1  ⇒  4.r2/1

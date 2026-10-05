@@ -1,0 +1,781 @@
+L22	> ## *Sestow Flennath · Flennath Hethyleth*
+L30	> *Re hadh Seren Pa Luth et ryteteth ul sestow et flennath sy, hos eth hos, hosen re hethe Halyna so hy et kaelirvesk; eth derret lo sy, ul vimm so veskrivullath. El saed et flennath sa ross lo et scethan sost. Re ryt et mesk gor wrod ulo, eth nath re ryter hos.*
+L45	> *Gor rytet sa re hebb et mesk lor fedh, el hos stinel o dholm hosast; eth el o veskrivull et stinel hosast. Doss noth meskrivull. Re rystullom lerneth et meskrivullath ul veskyl, somm nath re veskym galat ullen tul; eth gor sa sesk et meskrivull ul veskyl, doss seskyl lonn et rytet lo, sell tevar hy wrodhol et ullen lo Halyna. Nath re ryt et mesk tevel veth et meskrivull. Re ryt gor hyll ul o sestow et meskrivull sost, eth re hadh umo, hosen cadh mesk scaevur; hy ull, el et ryteteth hemm sost et ryteteth tevel sost, sa re dhevent hemm. Ul et hylleth desir, re yal seskyl veskrivull rytet lom ul veskyl hy et hald, somm scaevur kaelir; veth nafedh mest hy et meskrivull, hy vodh et ullen, nath hebb et mesk o veth lo et Lodhan, eth doss maver o hethyl umont, eth nath vesk hos o.*
+L61	> *Hebb et mesk mest hy wisk rytet. Hebb o et saedeth: cedh re dhovv um hedh, vodh re hunn gor sceth, amm vodh re haever et molt kylyl. Re rytym so ul so reskowath ul et trenneth. Lo sy, nath gadhom veth et bisketh, hy et mesk tevel sost dem et mesk hemm sost.*
+L89	> **Fodh** · hos stinel sa hyl dem lern
+L99	```
+L100	round E1-01 {wood: green; pith: war; rings: 1; rules after: []}
+L101	  I
+L102	    r1/1  0: WAVE*
+L103	```
+L105	> *Dem et orrow.*
+L116	```
+L117	round E2-01 {wood: forty; pith: war; rings: 2; rules after: [1]}
+L118	  I
+L119	    r1/1  0: WAVE*
+L120	  ‖¦
+L121	  II
+L122	    r2/1  4: EDGE+BREAKER      band DREAD files 15–1
+L123	  runners
+L124	    run t1  0.r1/1  ⇒  4.r2/1
+L125	```
+L127	> *Lo dhrenn, nel ul lern.*
+L138	```
+L139	round E4-01 {wood: long; pith: war ×3; rings: 5; rules after: [2, 4]}
+L140	  I
+L141	    r1/1  p0·0: WAVE*    p1·0: WAVE*    p2·0: WAVE*
+L142	    r2/1  p0·4: EDGE+BREAKER      band DREAD files 15–1
+L143	  ‖
+L144	  II
+L145	    r3/1  0: GO    2: BOND    4: GO    12: KNOT^r4      band DREAD files 11–13
+L146	    r4/1  10: SQUARE+EYE    graft(E3-01)
+L147	  ‖
+L148	  III
+L149	    r5/1  12: GO
+L150	  bark
+L151	    bark 0: BOND+TIDE
+L152	  runners
+L153	    run t0  p0·0.r1/1  ⇒  p0·4.r2/1
+L154	    run t1  10.r4/1    →  @0
+L155	    run t2  10.r4/1    ⇒  12.r5/1
+L156	    mem 10: r4 → pith
+L157	```
+L159	> *Sull orrol, hos clem.*
+L168	```
+L169	round E5-01 {wood: long; pith: war ×3; rings: 7; rules after: [2, 6]; cells: [1, 1, 2, 2, 2, 3, 3]}
+L170	  I
+L171	    r1/1  p0·0: WAVE*    p1·0: WAVE*    p2·0: WAVE*
+L172	    r2/1  p0·4: EDGE+BREAKER      band DREAD files 15–1
+L173	  ‖
+L174	  II
+L175	    r3/1  0: GO    2: BOND    4: GO    12: KNOT^r4      band DREAD files 11–13
+L176	    r4/1  10: SQUARE+EYE    graft(E3-01)
+L177	    r5/1  12: GO
+L178	    r6/1  0.1: BEND    0.2: STONEFOLK×3+LEAN    0.3: HAND+CLOSE    4: RISE    6: ~HULL+BEND    12: RISE    14: ~ROOT×3+RISE
+L179	  ‖
+L180	  III
+L181	    r7/1  0.1: LEAN<HAND+CLOSE|GO>    0.2: HEART    8.1: STONEFOLK×3+HOLD    8.2: SQUARE+EYE    8.3: FOLLOW
+L182	  bark
+L183	    bark 0: SQUARE+TIDE
+L184	  runners
+L185	    run t0  p0·0.r1/1  ⇒      p0·4.r2/1
+L186	    run t1  10.r4/1    →      @0
+L187	    run t2  10.r4/1    ⇒      12.r5/1
+L188	    run u1  0.1.r6/1   →as    6.r6/1
+L189	    run u2  0.2.r6/1   →      0.1.r6/1
+L190	    run u3  0.2.r6/1   ⇒      0.3.r6/1
+L191	    run u4  4.r6/1     →as    14.r6/1
+L192	    run u5  12.r6/1    →as    14.r6/1
+L193	    run u6  8.1.r7/1   →      0.2.r7/1
+L194	    run u7  8.2.r7/1   ⇒      8.3.r7/1
+L195	    run u8  8.3.r7/1   →      0.1.r7/1
+L196	    mem 10: r4/1 → pith
+L197	```
+L199	> *Hebba lont et molt; grika et lerneth; eska et garl.*
+L210	> *Thaesaen Molt Hyll, sa re ryt et rytet dasken tunn, hosen o dhesset.*
+L222	> **Stinel Hosel** · stinel nasell sa hask ul lern stinel sell
+L232	```
+L233	round E1-03 {wood: green; pith: war; rings: 1; rules after: []}
+L234	  I
+L235	    r1/1  0: LONE*
+L236	```
+L238	> *Orra dem et drunn.*
+L249	```
+L250	round E2-02 {wood: forty; pith: war; rings: 2; rules after: [1]}
+L251	  I
+L252	    r1/1  0: LONE*
+L253	  ‖¦
+L254	  II
+L255	    r2/1  4: SAPLING      band STILL files 4–4
+L256	  runners
+L257	    run t1  0.r1/1  ⇒  4.r2/1
+L258	```
+L260	> *Orr hos; fenn et ullen et velvyth.*
+L270	```
+L271	round E3-01 {wood: life; pith: war; rings: 4; rules after: [1, 3]}
+L272	  I
+L273	    r1/1  0: LONE*
+L274	  ‖¦
+L275	  II
+L276	    r2/1  4: SAPLING      band STILL files 4–4
+L277	    r3/1  0: !ANGER?    4: EYE#1+>GO    12: HULL×3+KNOT      band DREAD files 0–0
+L278	    r3/2  0: !BOND+HOLD    12: ROAD#2
+L279	  ‖
+L280	  III
+L281	    r4/1  4: WOUND<ROAD@2+GO|FOLLOW>
+L282	  runners
+L283	    run t0  0.r1/1   ⇒  4.r2/1
+L284	    run t1  4.r3/1   ⇒  4.r4/1
+L285	    run t2  12.r3/1  ⇒  4.r4/1
+L286	    mem 4: r3/1 → pith
+L287	```
+L289	> *Ketha; hunna et nydhyl; orra ul vodh doss velvyth.*
+L300	```
+L301	round E4-02 {wood: long; pith: war; rings: 4; rules after: [2, 3]; cells: [1, 1, 2, 2]}
+L302	  I
+L303	    r1/1  0: LONE*
+L304	    r2/1  4: SAPLING      band STILL files 4–4
+L305	  ‖
+L306	  II
+L307	    r3/1  4: SAPLING#1+>GO    12: HEAR      band STILL files 5–5
+L308	  ‖
+L309	  III
+L310	    r4/1  5: MOUTH<HUNTER×3+GO|BEARER×3+GO>
+L311	  runners
+L312	    run t0  0.r1/1   ⇒      4.r2/1
+L313	    run t1  4.r3/1   →      @5
+L314	    run t3  4.r3/1   ⇒      5.r4/1
+L315	    run t2  12.r3/1  →      4.r3/1
+L316	```
+L318	> *Pessa et nynth velv; hunna o dhessyl.*
+L329	```
+L330	round E5-02 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 3, 3, 3]}
+L331	  I
+L332	    r1/1  0: LONE*
+L333	  ‖
+L334	  II
+L335	    r2/1  0.1: LONE+GO    0.2: MOUTH    0.3: TRUE    2: NEW+HULL×3
+L336	    r3/1  0: STOP    4: BREATH#1    6: BURN    12: HUNTER×3+KNOT
+L337	  ‖
+L338	  III
+L339	    r4/1  6: !FLASH<LONE½|KNOT>    8.1: STONEFOLK×3+STRIKE@1    8.2: DEEP+STRIKE    8.3: STONEFOLK×3+>GO    10: FIND+GUN×3
+L340	  runners
+L341	    run t1  0.1.r2/1  →as    2.r2/1
+L342	    run t2  0.r3/1    →      4.r3/1
+L343	    run t3  4.r3/1    →      6.r3/1
+L344	    run t4  12.r3/1   →for   6.r3/1
+L345	    run t5  8.3.r4/1  →      10.r4/1
+L346	```
+L348	> *Darra hosen re rarr et mesk tevel.*
+L359	> *Naelthar Lorr Helv, sa re ryt et rytet dasken tunn, hosen o dhesset.*
+L371	> **Hosk ul Lern** · hosk cadhat um stinel
+L381	```
+L382	round E1-04 {wood: green; pith: war; rings: 1; rules after: []}
+L383	  I
+L384	    r1/1  0: BARB*
+L385	```
+L387	> *Ul lern et lymmerd.*
+L397	```
+L398	round E2-03 {wood: forty; pith: war; rings: 2; rules after: [1]}
+L399	  I
+L400	    r1/1  0: BARB*
+L401	  ‖¦
+L402	  II
+L403	    r2/1  4: THIN+HOLD      band DREAD files 4–4
+L404	  runners
+L405	    run t1  0.r1/1  ⇒  4.r2/1
+L406	```
+L408	> *Eska et lymmerd.*
+L419	```
+L420	round E3-04 {wood: life; pith: war; rings: 5; rules after: [1, 4]}
+L421	  I
+L422	    r1/1  0: BARB*
+L423	  ‖¦
+L424	  II
+L425	    r2/1  4: THIN+HOLD      band DREAD files 4–4
+L426	    r3/1  0: FLASH+EYE    2: ROAD#1
+L427	    r4/1  0: SQUARE#1    4: ROOT#2
+L428	    r4/2  4: ROOT@1+GO    12: ROOT@2+KNOT^r5?      band DREAD files 12–12
+L429	  ‖
+L430	  III
+L431	    r5/1  12: CLOSE
+L432	  runners
+L433	    run t0  0.r1/1   ⇒  4.r2/1
+L434	    run t1  0.r3/1   →  2.r3/1
+L435	    run t2  4.r4/1   →  0.r4/1
+L436	    run t3  4.r4/2   →  0.r4/1
+L437	    run t4  4.r4/2   ⇒  12.r5/1
+L438	```
+L440	> *Pa orrol dem hos tolm.*
+L449	```
+L450	round E4-03 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 2, 2]}
+L451	  I
+L452	    r1/1  0: BARB*
+L453	  ‖
+L454	  II
+L455	    r2/1  0.1: GREAT@1    0.2: EAT    2: GUN+FLASH    8: HAND+CLOSE^r4    12: SWIFT+GO
+L456	    r3 ·
+L457	  ‖
+L458	  III
+L459	    r4/1  6: !SQUARE+EYE    8: OPEN    12: MOUTH?
+L460	  runners
+L461	    run t1  0.2.r2/1  →      2.r2/1
+L462	    run t3  8.r4/1    →      6.r4/1
+L463	    run t2  12.r4/1   ⇒      8.r4/1
+L464	```
+L466	> *Et sceth strom hosast; et garl kethet dasken.*
+L477	> *Leavaren Lymmerd Yendeth:* *Drunna hos bisk; es desse pa wisk.*
+L485	```
+L486	round T-01 {wood: eldest; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L487	  I
+L488	    r1/1  0: BARB*
+L489	  ‖
+L490	  II
+L491	    r2/1  0.1: GREAT#3    0.2: ROOT#1
+L492	    r3/1  4: AXE    8.1: !WOUND+GREAT    8.2: >GROW    12: LEAN{all}
+L493	  ‖
+L494	  III
+L495	    r4 ·
+L496	  bark
+L497	    bark 0: SAPLING+BEARER
+L498	  runners
+L499	    run t1  0.1.r2/1   →in    0.2.r2/1
+L500	    run t3  8.1.r3/1   ⇒      8.2.r3/1
+L501	    run t2  12.r3/1    →      @4
+L502	```
+L511	> **Drod** · stinel, eth o rask ul gael elth: et drod
+L521	```
+L522	round E1-05 {wood: green; pith: war; rings: 1; rules after: []}
+L523	  I
+L524	    r1/1  0: SPARK*
+L525	```
+L527	> *Ul vodh re rod o.*
+L538	```
+L539	round E2-05 {wood: forty; pith: war; rings: 2; rules after: [1]}
+L540	  I
+L541	    r1/1  0: SPARK*
+L542	  ‖¦
+L543	  II
+L544	    r2/1  4: SQUARE+>MOUTH
+L545	  runners
+L546	    run t1  0.r1/1  ⇒  4.r2/1
+L547	```
+L549	> *Galda so wrodhol; rellora gor sa wrodh.*
+L560	```
+L561	round E3-05 {wood: life; pith: war; rings: 4; rules after: [1, 3]}
+L562	  I
+L563	    r1/1  0: SPARK*
+L564	  ‖¦
+L565	  II
+L566	    r2/1  4: SQUARE+>MOUTH
+L567	    r3/1  0: OPEN+SQUARE    12: EYE#2
+L568	    r3/2  0: GUN@1    12: HULL×3+>STOP
+L569	  ‖
+L570	  III
+L571	    r4/1  0: GUN×3
+L572	    r4/2  0: NEW+HOLD?
+L573	  runners
+L574	    run t0  0.r1/1    ⇒  4.r2/1
+L575	    run t1  12.r3/2   →  0.r3/2
+L576	    run t2  12.r3/2   ⇒  0.r4/2
+L577	    mem 12: r3/1 → pith
+L578	```
+L580	> *Et hosast sa wrodh, hessa o wrodhol.*
+L591	```
+L592	round E4-07 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 2, 2]}
+L593	  I
+L594	    r1/1  0: SPARK*
+L595	  ‖
+L596	  II
+L597	    r2/1  2.1: GUN    2.2: !FLASH    4.1: BEARER×3+GO    4.2: EYE
+L598	    r2/2  4: !TURN
+L599	    r3/1  0: SHORE    2: GUN    4: BEARER×3+GO    12: HOLD
+L600	  ‖
+L601	  III
+L602	    r4/1  6.1: HUNTER×3+TAKE    6.2: ROAD+HOME
+L603	  runners
+L604	    run t1  4.1.r2/1   →thru  2.1.r2/1
+L605	    run t2  4.2.r2/1   →      2.1.r2/1
+L606	    run t3  4.r3/1     →in    0.r3/1
+L607	    run t4  12.r3/1    →      2.r3/1
+L608	    run t5  6.1.r4/1   →      @2
+L609	    run t6  6.1.r4/1   →in    6.2.r4/1
+L610	    ray 2: r2/1–r3/1
+L611	```
+L613	> *Orra ul neld et bramm velv; seska o; grika o ul morrol dem varn.*
+L624	```
+L625	round E5-06 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L626	  I
+L627	    r1/1  0: SPARK*
+L628	  ‖
+L629	  II
+L630	    r2/1  2.1: SQUARE+EYE    2.2: HAND+>OPEN    4: THIN+BEARER
+L631	    r3/1  2.1: HAND+OPEN    2.2: GO    12: STRIKE
+L632	  ‖
+L633	  III
+L634	    r4/1  0: STRIKE    2: HAND+!OPEN<SEED×3|…>    4: THIN+BEARER    8.1: STONEFOLK×3+>DYING    8.2: BEARER@1    8.3: SQUARE+EYE
+L635	  runners
+L636	    run t1  4.r2/1     →thru  2.1.r2/1
+L637	    run t2  2.1.r3/1   ⇒      2.2.r3/1
+L638	    run t3  12.r3/1    →      2.1.r3/1
+L639	    run t4  0.r4/1     ⇒      8.3.r4/1
+L640	    run t5  8.1.r4/1   →      8.2.r4/1
+L641	```
+L643	> *Farra et maveret ul neld so vellorol, eth luska so ul maveryl.*
+L654	> *Rhenvael Meskdhrenn Dholm:* *Gor wramm sa wrodh, tess et brunn o.*
+L662	```
+L663	round T-02 {wood: eldest; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L664	  I
+L665	    r1/1  0: SPARK*
+L666	  ‖
+L667	  II
+L668	    r2/1  0: DEEP{most}+BURN    12: RISE
+L669	    r3/1  0.1: GUN×3{all}+MOUTH    0.2: GUN×3{all}+!MOUTH    12.1: MOUTH    12.2: DEEP+SQUARE    12.3: GO
+L670	  ‖
+L671	  III
+L672	    r4 ·
+L673	  bark
+L674	    bark 0: SQUARE+GRAIN
+L675	  runners
+L676	    run t1  12.r2/1    →thru  0.r2/1
+L677	    run t2  0.1.r3/1   ⇒      12.1.r3/1
+L678	    run t4  0.2.r3/1   ⇒      12.3.r3/1
+L679	    run t3  12.1.r3/1  →with  12.2.r3/1
+L680	    run t5  12.3.r3/1  →      0.2.r3/1
+L681	```
+L690	> **Gemmyorn Nawrodh** · gemmyorn tunn, hosen rytent et brod *tolm*
+L700	```
+L701	round E1-02 {wood: green; pith: war; rings: 1; rules after: []}
+L702	  I
+L703	    r1/1  0: SQUARE*
+L704	```
+L706	> *Creska et hald.*
+L714	```
+L715	round E3-02 {wood: life; pith: war; rings: 5; rules after: [1, 4]}
+L716	  I
+L717	    r1/1  0: SQUARE*
+L718	  ‖¦
+L719	  II
+L720	    r2/1  4: SQUARE+STRIKE#4    12: STRIKE+CARVE^r4
+L721	    r3 ·
+L722	    r4/1  4: OPEN
+L723	  ‖
+L724	  III
+L725	    r5/1  4: MEND?<GO|STRIKE>    5: BLOOD+SQUARE
+L726	  runners
+L727	    run t1  12.r2/1  →  4.r2/1
+L728	    run t2  4.r4/1   ⇒  4.r5/1
+L729	```
+L731	> *Et tolm sost, gor ryst.*
+L742	```
+L743	round E4-04 {wood: long; pith: war; rings: 5; rules after: [1, 4]; cells: [1, 2, 2, 2, 2]}
+L744	  I
+L745	    r1/1  0: SQUARE*
+L746	  ‖
+L747	  II
+L748	    r2/1  0: STRIKE#2
+L749	    r3/1  0: STRIKE@3    12.1: RAM+KNOT    12.2: EDGE      band DREAD files 12–12
+L750	    r4/1  0: OPEN    12: RAM+GO
+L751	  ‖
+L752	  III
+L753	    r5/1  12: HULL×3+GO
+L754	  runners
+L755	    run t1  0.r2/1   ⇒      0.r3/1
+L756	    run t2  0.r4/1   ⇒      12.r4/1
+L757	    run t3  12.r4/1  →in    0.r4/1
+L758	    run t4  12.r4/1  ⇒      12.r5/1
+L759	```
+L761	> *Amm omm et tolm, et stromrunn.*
+L772	> *Ralensaen Molt Veskrivull:* *Orra ul vimm et galat sa nath noss orrol lo o dhrenn los.*
+L780	```
+L781	round T-03 {wood: eldest; pith: war; rings: 6; rules after: [1, 5]; cells: [1, 2, 2, 2, 2, 3]}
+L782	  I
+L783	    r1/1  0: SQUARE*
+L784	  ‖
+L785	  II
+L786	    r2/1  0: SQUARE+!OPEN    12: BENEATH+GO
+L787	    r3/1  12: ROOT#1
+L788	    r4 ·
+L789	    r5/1  12: ROOT#1{again}
+L790	  ‖
+L791	  III
+L792	    r6/1  0: EARTH+OPEN    12: RAM
+L793	  runners
+L794	    run t1  0.r2/1   ⇒      12.r2/1
+L795	    run t2  12.r2/1  →      0.r2/1
+L796	    run t3  0.r6/1   ⇒      12.r6/1
+L797	  bark
+L798	    bark 0: ROOT×3+HEART
+L799	```
+L808	> **Pa Wrodow** · pa stinel sest lo sest, eth hos hyonta naloskat
+L818	```
+L819	round E2-04 {wood: forty; pith: war; rings: 2; rules after: [1]}
+L820	  I
+L821	    r1/1  0: MOUTHS*
+L822	  ‖¦
+L823	  II
+L824	    r2/1  4: ROAD+BEARER      band STILL files 4–4
+L825	  runners
+L826	    run t1  0.r1/1   ⇒  4.r2/1
+L827	```
+L829	> *Bont ul hos reskow; tava ul reskow ullen.*
+L840	```
+L841	round E3-06 {wood: life; pith: war; rings: 4; rules after: [1, 3]}
+L842	  I
+L843	    r1/1  0: MOUTHS*
+L844	  ‖¦
+L845	  II
+L846	    r2/1  4: ROAD+BEARER      band STILL files 4–4
+L847	    r3/1  2: SQUARE    4: STRIKE
+L848	    r3/2  2: MOUTH
+L849	  ‖
+L850	  III
+L851	    r4/1  8: BEARER×3    12: HULL×3+GO      band DARK files 12–12
+L852	    r4/2  8: ROAD#1
+L853	  runners
+L854	    run t0  0.r1/1   ⇒  4.r2/1
+L855	    run t1  4.r3/1   →  2.r3/1
+L856	    run t2  2.r3/2   ⇒  12.r4/1
+L857	    run t3  12.r4/1  ⇒  8.r4/1
+L858	    mem 2: r3/1 → pith
+L859	```
+L861	> *Drunna et hald rerddhalden hosen amm doss dyllyth lo; el et orrol et rerdsenn.*
+L872	```
+L873	round E5-03 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L874	  I
+L875	    r1/1  0: MOUTHS*
+L876	  ‖
+L877	  II
+L878	    r2/1  4.1: >RISE+~HULL×3    4.2: ROAD    11.1: MOUTH    11.2: SAIL×3      band MIST files 4–4  band MIST files 11–11
+L879	    r3/1  4: RISE{still}    6.1: EYE    6.2: TIDE@2    12.1: GO    12.2: ROAD@2      band MIST files 4–4
+L880	  ‖
+L881	  III
+L882	    r4/1  0: MOUTH    4: !STRIKE<KNOT|GO>    8.1: STONEFOLK×3+HOLD    8.2: ROAD    8.3: SQUARE+EYE      band MIST files 4–4
+L883	  runners
+L884	    run t1  4.1.r2/1   →in    4.2.r2/1
+L885	    run t2  11.1.r2/1  →      11.2.r2/1
+L886	    run t3  6.1.r3/1   →for   6.2.r3/1
+L887	    run t5  12.1.r3/1  ⇒      4.r3/1
+L888	    run t4  12.1.r3/1  →thru  12.2.r3/1
+L889	    run t6  8.1.r4/1   →      8.2.r4/1
+L890	    run t7  8.3.r4/1   →      0.r4/1
+L891	```
+L893	> *Luska so ul veskyl et cryrull ul vodh nath noss o, eth ketha so ul veskyl.*
+L904	> *Senneir Gunn ul vimm:* *Hebba lont veskyl et cryrull; talda ul vimm et tolm.*
+L912	```
+L913	round T-04 {wood: eldest; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L914	  I
+L915	    r1/1  0: MOUTHS*
+L916	  ‖
+L917	  II
+L918	    r2/1  0.1: >EYE    0.2: EYE    4: HULL×3
+L919	    r3/1  0: EYE    12: BENEATH+GO
+L920	  ‖
+L921	  III
+L922	    r4/1  6: !EYE    12: RISE
+L923	  bark
+L924	    bark 0: BENEATH+DEEP
+L925	  runners
+L926	    run t1  0.1.r2/1   →      4.r2/1
+L927	    run t2  0.2.r2/1   →      4.r2/1
+L928	    run t3  12.r3/1    →      0.r3/1
+L929	    run t4  12.r4/1    →in    6.r4/1
+L930	```
+L939	> **Sestow Kylet** · stinel sa hyl umo sost
+L949	```
+L950	round E1-07 {wood: green; pith: war; rings: 1; rules after: []}
+L951	  I
+L952	    r1/1  0: STERN*
+L953	```
+L955	> *Dem varn, amm grestet.*
+L965	```
+L966	round E3-03 {wood: life; pith: war; rings: 4; rules after: [1, 3]}
+L967	  I
+L968	    r1/1  0: STERN*
+L969	  ‖¦
+L970	  II
+L971	    r2/1  0: STONEFOLK×3+LEAN    12: SWIFT+GO
+L972	    r3/1  4: HOLD    12: BEND
+L973	    r3/2  4: ROAD
+L974	  ‖
+L975	  III
+L976	    r4/1  0: MOUTH<HUNTER×3+>GO|TURN{again}>    4: CARVE?+SQUARE
+L977	  runners
+L978	    run t1  0.r2/1   →  12.r2/1
+L979	    run t2  4.r3/1   →  4.r3/2
+L980	    run t3  12.r3/1  ⇒  0.r4/1
+L981	    mem 0: r2/1 → pith
+L982	```
+L984	> *Hebba lont veskyl et sestow; kyla lo et tolm.*
+L995	```
+L996	round E4-05 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 2, 3]}
+L997	  I
+L998	    r1/1  0: STERN*
+L999	  ‖
+L1000	  II
+L1001	    r2/1  0.1: GIFT{again}    0.2: SHORE#1    12.1: HOLD    12.2: ROAD
+L1002	    r3/1  2: SHORE@2    10.1: SQUARE+EYE    10.2: FOLLOW
+L1003	  ‖
+L1004	  III
+L1005	    r4/1  4: SHORE@1    8.1: DEEP+ROAD    8.2: SWIFT×3    8.3: BEARER×3
+L1006	  runners
+L1007	    run t1  0.1.r2/1   →      0.2.r2/1
+L1008	    run t2  12.1.r2/1  →      12.2.r2/1
+L1009	    run t3  10.1.r3/1  ⇒      10.2.r3/1
+L1010	    run t4  10.2.r3/1  →      2.r3/1
+L1011	    run t5  10.2.r3/1  ⇒      8.1.r4/1
+L1012	    run t7  8.2.r4/1   →      4.r4/1
+L1013	    run t6  8.2.r4/1   →thru  8.1.r4/1
+L1014	    run t8  8.3.r4/1   →      4.r4/1
+L1015	```
+L1017	> *Bamma so lo dhrenn et orrow; darra dem varn lo et orrol deld.*
+L1028	> *Esthaer Vorrol:* *Vorra somm orros; luska so ul nanurol et vorr.*
+L1036	```
+L1037	round T-05 {wood: eldest; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L1038	  I
+L1039	    r1/1  0: STERN*
+L1040	  ‖
+L1041	  II
+L1042	    r2/1  4: THIN    12.1: OPEN    12.2: BURN+GO
+L1043	    r3/1  0: STONEFOLK×3+FOLLOW
+L1044	  ‖
+L1045	  III
+L1046	    r4/1  12: RISE
+L1047	  bark
+L1048	    bark 0: BURN
+L1049	  runners
+L1050	    run t1  12.1.r2/1  →      4.r2/1
+L1051	    run t2  12.2.r2/1  →      @8
+L1052	    run t3  0.r3/1     →      @12
+L1053	    run t4  0.r3/1     ⇒      12.r4/1
+L1054	    run t5  12.r4/1    →in    @0
+L1055	```
+L1064	> **Hoss** · tresk lunnat ul lodh stinel eth stinel
+L1074	```
+L1075	round E2-06 {wood: forty; pith: war; rings: 2; rules after: [1]}
+L1076	  I
+L1077	    r1/1  0: BREATH*
+L1078	  ‖¦
+L1079	  II
+L1080	    r2/1  4: FLASH+SPENT
+L1081	  runners
+L1082	    run t1  0.r1/1  ⇒  4.r2/1
+L1083	```
+L1085	> *Vyssora vorr et tolm um et mesk sa nath noss dyllyth lo.*
+L1096	```
+L1097	round E3-07 {wood: life; pith: war; rings: 4; rules after: [1, 3]}
+L1098	  I
+L1099	    r1/1  0: BREATH*
+L1100	  ‖¦
+L1101	  II
+L1102	    r2/1  4: FLASH+SPENT
+L1103	    r3/1  0: STRIKE#3    2: BREATH#4    4: SPENT+TAKE
+L1104	    r3/2  0: BENEATH?+SQUARE
+L1105	  ‖
+L1106	  III
+L1107	    r4/1  2: BREATH    12: SWIFT+GO
+L1108	  runners
+L1109	    run t0  0.r1/1   ⇒  4.r2/1
+L1110	    run t1  4.r3/1   →  0.r3/1
+L1111	    run t2  12.r4/1  →  2.r4/1
+L1112	```
+L1114	> *Ul lodh so hossath.*
+L1125	```
+L1126	round E4-06 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 2, 2]}
+L1127	  I
+L1128	    r1/1  0: BREATH*
+L1129	  ‖
+L1130	  II
+L1131	    r2/1  0: GUN+STRIKE    4: HULL×3+>GO      band WATER files 4–4
+L1132	    r3/1  0.1: CASTLE    0.2: SHORE    4: HULL×3+GO    8: SEED×3
+L1133	  ‖
+L1134	  III
+L1135	    r4/1  0: SQUARE+EYE    4: HULL×3+GO    8: SEED×3@1      band WATER files 4–4
+L1136	  runners
+L1137	    run t1  0.r2/1   →      4.r2/1
+L1138	    run t2  0.r2/1   ⇒      8.r3/1
+L1139	    run t3  4.r3/1   →      0.2.r3/1
+L1140	    run t4  8.r3/1   →      0.1.r3/1
+L1141	    run t6  0.r4/1   ⇒      4.r4/1
+L1142	    run t5  0.r4/1   →      8.r4/1
+L1143	```
+L1145	> *Amm drunnant et nynth, omma hy et helv.*
+L1153	```
+L1154	round E5-07 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 2, 3]}
+L1155	  I
+L1156	    r1/1  0: BREATH*
+L1157	  ‖
+L1158	  II
+L1159	    r2/1  0: STONEFOLK×3+>GO    4.1: HULL@1    4.2: CARRY
+L1160	    r3 ·
+L1161	  ‖
+L1162	  III
+L1163	    r4/1  2: BREATH    4: WOUND<SPENT|CARRY>    8.1: STONEFOLK×3+>GO    8.2: HULL@1    12: BEARER×3+GO
+L1164	  runners
+L1165	    run t1  0.r2/1     →thru  4.1.r2/1
+L1166	    run t2  4.1.r2/1   →      4.2.r2/1
+L1167	    run t4  8.1.r4/1   →thru  8.2.r4/1
+L1168	    run t3  12.r4/1    →in    2.r4/1
+L1169	```
+L1171	> *Luskant et mesk hosast ul morrol; luska et mesk hosast ul lymmyl.*
+L1182	> *Vaelress Meskdhrenn sa Lilv:* *Cadha lilvyl um et hald; tovva um ommol et clennyl.*
+L1190	```
+L1191	round T-06 {wood: eldest; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L1192	  I
+L1193	    r1/1  0: BREATH*
+L1194	  ‖
+L1195	  II
+L1196	    r2/1  0.1: SQUARE+MEND    0.2: STONEFOLK+HAND    4: HOLD+CARVE    12: >ROT
+L1197	    r3/1  0.1: GO    0.2: BREATH#2    0.3: STONEFOLK+HAND    12: ROT{more}
+L1198	  ‖
+L1199	  III
+L1200	    r4 ·
+L1201	  bark
+L1202	    bark 0: GRAIN+ROT
+L1203	  runners
+L1204	    run t1  4.r2/1     →      0.2.r2/1
+L1205	    run t2  12.r2/1    →      0.1.r2/1
+L1206	    run t5  0.1.r3/1   →in    0.2.r3/1
+L1207	    run t4  12.r3/1    ⇒      0.1.r3/1
+L1208	    run t3  12.r3/1    →as    0.3.r3/1
+L1209	```
+L1218	> **Bysket** · stinel sa hess ul vodh doss bysket ul meskdhrenn
+L1228	```
+L1229	round E1-06 {wood: green; pith: war; rings: 1; rules after: []}
+L1230	  I
+L1231	    r1/1  0: KNOT*
+L1232	```
+L1234	> *Tovva ul myst.*
+L1242	```
+L1243	round E2-07 {wood: forty; pith: war; rings: 2; rules after: [1]}
+L1244	  I
+L1245	    r1/1  0: KNOT*
+L1246	  ‖¦
+L1247	  II
+L1248	    r2/1  4: SQUARE+BURN      band MIST files 12–12
+L1249	  runners
+L1250	    run t1  0.r1/1  ⇒  4.r2/1
+L1251	```
+L1253	> *Luska et vorr ul vorrol.*
+L1264	```
+L1265	round E3-08 {wood: life; pith: war; rings: 5; rules after: [1, 4]}
+L1266	  I
+L1267	    r1/1  0: KNOT*
+L1268	  ‖¦
+L1269	  II
+L1270	    r2/1  4: SQUARE+BURN
+L1271	    r3/1  4: GUN      band STILL files 4–4
+L1272	    r3/2  4: SPENT?
+L1273	    r4/1  4: KNOT?    12: KNOT      band MIST files 12–12
+L1274	    r4/2  12: EYE+>GO
+L1275	  ‖
+L1276	  III
+L1277	    r5/1  4: RISE<BEND|GO>      band WATER files 4–5
+L1278	  runners
+L1279	    run t0  0.r1/1    ⇒  4.r2/1
+L1280	    run t1  12.r4/1   ⇒  12.r4/2
+L1281	    run t2  12.r4/2   →  4.r5/1
+L1282	```
+L1284	> *Ho ross et tolm vyssorat, ell ul dovvol? Veska; hy ull, orra.*
+L1295	```
+L1296	round E5-04 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 3, 3, 3]}
+L1297	  I
+L1298	    r1/1  0: KNOT*
+L1299	  ‖
+L1300	  II
+L1301	    r2/1  0.1: GO#3    0.2: EYE    0.3: STERN#3    2: SHORE      band MIST files 4–4  band WATER files 4–4
+L1302	    r3/1  0: GO@4
+L1303	  ‖
+L1304	  III
+L1305	    r4/1  0: STRIKE    2: SHORE+TURN<KNOT½|GO>    8.1: STONEFOLK×3+HOLD    8.2: ROAD    8.3: SQUARE+EYE
+L1306	  runners
+L1307	    run t1  0.1.r2/1   →      @4
+L1308	    run t2  0.2.r2/1   →      2.r2/1
+L1309	    run t3  0.r3/1     ⇒      2.r4/1
+L1310	    run t4  0.r4/1     ⇒      8.3.r4/1
+L1311	    run t5  8.1.r4/1   →      8.2.r4/1
+L1312	```
+L1314	> *Galda et galat sost sull fedh; et fedh gemmest, kaevera o.*
+L1325	> *Eirlenth Grem Sell:* *Tovva ul sulv; drunna et tolm sa nath noss clennyl lo.*
+L1333	```
+L1334	round T-07 {wood: eldest; pith: war; rings: 5; rules after: [1, 4]; cells: [1, 2, 2, 3, 3]}
+L1335	  I
+L1336	    r1/1  0: KNOT*
+L1337	  ‖
+L1338	  II
+L1339	    r2/1  0: SQUARE+EYE    4: ROAD    12: GO^r3
+L1340	    r3/1  0: SQUARE+!MEND    12: GO@2      band WHITE files 0–0
+L1341	    r4/1  12: GO@3
+L1342	  ‖
+L1343	  III
+L1344	    r5/1  0: SHORE    12: GO
+L1345	  bark
+L1346	    bark 0: DEEP+KNOT[WHITE]
+L1347	  runners
+L1348	    run t1  0.r2/1   →thru  12.r2/1
+L1349	    run t2  12.r2/1  →      4.r2/1
+L1350	    run t3  12.r4/1  ⇒      12.r5/1
+L1351	    run t4  12.r5/1  →in    0.r5/1
+L1352	```
+L1361	> **Stinel Dasorat** · rytet loskat eth dasorat, hy ull ledh hos o, eth nath vesk hos o
+L1371	```
+L1372	round E2-08 {wood: forty; pith: war; rings: 2; rules after: [1]}
+L1373	  I
+L1374	    r1/1  0: SMOOTH*
+L1375	  ‖¦
+L1376	  II
+L1377	    r2/1  4: BEARER+GO      band MIST files 4–4
+L1378	  runners
+L1379	    run t1  0.r1/1  ⇒  4.r2/1
+L1380	```
+L1382	> *Myst ul lern et tavol.*
+L1393	```
+L1394	round E4-08 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L1395	  I
+L1396	    r1/1  0: SMOOTH*
+L1397	  ‖
+L1398	  II
+L1399	    r2/1  2.1: GUN    2.2: >DYING    4: ~BEARER+>GO    12: BEARER×3
+L1400	    r3/1  12.1: BEARER    12.2: ~THIN    12.3: EDGE      band DREAD files 12–12
+L1401	  ‖
+L1402	  III
+L1403	    r4/1  2: GUN+STRIKE    4: ~BEARER    12: THIN+GO    14: THIN+SHORE
+L1404	  runners
+L1405	    run t1  2.2.r2/1   →      12.r2/1
+L1406	    run t2  4.r2/1     →      2.1.r2/1
+L1407	    run t3  12.1.r3/1  →as    12.2.r3/1
+L1408	    run t4  2.r4/1     →      4.r4/1
+L1409	    run t5  2.r4/1     ⇒      12.r4/1
+L1410	    run t6  12.r4/1    →      14.r4/1
+L1411	```
+L1413	> *Veska nalelv ul vodh dossos lelv.*
+L1424	```
+L1425	round E5-05 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L1426	  I
+L1427	    r1/1  0: SMOOTH*
+L1428	  ‖
+L1429	  II
+L1430	    r2/1  4.1: ~HULL×3+GO    4.2: ROAD×3      band WATER files 4–4
+L1431	    r3/1  6: !FLASH    12.1: >GO    12.2: ROOT×3    12.3: ~HULL×3
+L1432	  ‖
+L1433	  III
+L1434	    r4/1  6: FLASH<SWIFT+GO|KNOT>    8.1: STONEFOLK×3+>DYING    8.2: BEARER@1    8.3: DEEP+STRIKE@1
+L1435	  runners
+L1436	    run t1  4.1.r2/1   →      4.2.r2/1
+L1437	    run t2  6.r3/1     ⇒      12.1.r3/1
+L1438	    run t3  12.1.r3/1  →      12.2.r3/1
+L1439	    run t4  12.2.r3/1  →as    12.3.r3/1
+L1440	    run t5  8.1.r4/1   →      8.2.r4/1
+L1441	```
+L1443	> *Gor orrol, farra broclinth umo; ul vodh nath rynn vorr, luska et tavol.*
+L1454	> *Neivaere Lennet:* *Hebba lont veskyl so sost.*
+L1462	```
+L1463	round T-08 {wood: eldest; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+L1464	  I
+L1465	    r1/1  0: SMOOTH*
+L1466	  ‖
+L1467	  II
+L1468	    r2/1  0.1: STONEFOLK+HAND    0.2: HEART+HOLD    4: HOLD+CARVE
+L1469	    r3/1  0.1: >EYE    0.2: STRIKE    12: STRIKE
+L1470	  ‖
+L1471	  III
+L1472	    r4/1  0: SQUARE×3    12.1: RISE    12.2: ~SQUARE
+L1473	  bark
+L1474	    bark 0: ~HEART[STILL]
+L1475	  runners
+L1476	    run t1  0.1.r2/1   →      0.2.r2/1
+L1477	    run t2  4.r2/1     →      0.2.r2/1
+L1478	    run t3  0.1.r3/1   →      @0
+L1479	    run t5  12.r3/1    ⇒      0.2.r3/1
+L1480	    run t4  12.r3/1    →      @0
+L1481	    run t6  12.1.r4/1  →in    0.r4/1
+L1482	    run t7  12.1.r4/1  →as    12.2.r4/1
+L1483	```
+L1492	> *Re hebb et mesk tevel lor dhom rytet; Hyll Pawast, thell; Hyll Dhumol, thell; Hyll Lodhat, thell; eth Hyll sa re rystull nycul, dhom. Re hebbent et reskowath strom thell tesset sa re rytent so sost. Nath re ryte pa reskow strom tesset clenn, veth re lymme rytet hemm, tunn, hy vodh el Fodh eth Stinel Hosel sa ross gor rytet ullen rytet ulonta. El ull pa vurr eth vran ul dunnoth. Re hadhom gor hos hyont, eth nath re hethym hos hyont, en sost.*
+L1505	> *Re orr hos rellor ullen dem susk et brunn, ul havul dholmard hy Dhavow Vorr, eth re hethe Halyna o ul Vess Vollol:* **Vorr.** *Re yal o rytet ul et Ommol, eth nafedh ul lern ol hald; eth nath re nydhym o lont.*
+L1518	```
+L1519	round BURN {wood: green; pith: war; rings: 1; rules after: []}
+L1520	  I
+L1521	    r1/1  0: BURN*
+L1522	```
+L1524	> *Vorr.*

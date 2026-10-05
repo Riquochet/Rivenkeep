@@ -1,0 +1,7 @@
+# name: Break wall
+# english: Break wall. First stone, only stone. Strike till it opens or wood is ash.
+# literal: The Mute Square, closed, with nothing after it: the wall; first stone, only stone; strike until it opens.
+# root_word: wall
+round E1-02 {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: SQUARE*

@@ -1,0 +1,19 @@
+# name: E5-02
+round E5-02 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 3, 3, 3]}
+  I
+    r1/1  0: LONE*
+  ‖
+  II
+    r2/1  0.1: LONE+GO    0.2: MOUTH    0.3: TRUE    2: NEW+HULL×3
+    r3/1  0: STOP    4: BREATH#1    6: BURN    12: HUNTER×3+KNOT
+  ‖
+  III
+    r4/1  6: !FLASH    8.1: STONEFOLK×3‿½    8.2: DEEP+STRIKE@1    8.3: >GO    10: FIND+GUN×3
+    r4/2  7: LONE½    5: KNOT
+  runners
+    run t1  0.1.r2/1  →as    2.r2/1
+    run t2  0.r3/1    →      4.r3/1
+    run t3  4.r3/1    →      6.r3/1
+    run t4  12.r3/1   →for   6.r3/1
+    run t5  8.3.r4/1  →      10.r4/1
+    run fk1  6.r4/1  →  {7.r4/2, 5.r4/2}

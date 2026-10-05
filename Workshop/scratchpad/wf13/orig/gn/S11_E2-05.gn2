@@ -1,0 +1,9 @@
+# name: E2-05
+round E2-05 {wood: forty; pith: war; rings: 2; rules after: [1]}
+  I
+    r1/1  0: SPARK*
+  ‖¦
+  II
+    r2/1  4: SQUARE+>MOUTH
+  runners
+    run t1  0.r1/1  ⇒  4.r2/1

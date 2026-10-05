@@ -1,0 +1,46 @@
+# S05 · blind input: native lines only (romanised Orrowen), unit line numbers kept.
+# Taken from wf8/units/S05.md: every blockquote line (> …) and the native words of three ### headings; no English, no word-for-word lines, no notes.
+
+L20	> **Flennath et Cumm**
+L22	> *Vodh re yal mammat, eth vodh resk ulo amm sy.*
+L32	> ## *Flennath et Cumm*
+L40	> *Re hadha Halyna o ul ba saed, hos eth ullen, cumm gor hos, hosen doss nydhyl cadhat: So Yaldol, lo wremm hosast et tynur, eth So Ommol, ul et grem ul sestow. El flenn et tolm um et cummath; doss flenn et mesk ul o lern.*
+L55	### Saed Hosast
+L61	> Amm sy hunna vollath et cummath, eth ketha so, hy vodh dossant lor.
+L71	> Lo dhrenn et orrowath rerddhalden ommant et brunnath eth et brunneleth susk dem vimm dem gemmyl et wadh, eth re hossant ol nedheth lo ull. Ew galdardath so, new wadhardath. Re yal ludal et wadh lunnat umont, eth re dhovvant lo et orrowath cummen; eth re hadhant orrolath strom hosen lorrdhrenneth um et brunnath, dem lodhol et reskowath sa re yaldant. Re yaldant noth cumm, sa vollant et velleth hemm: et noth tavowhinnar, eth ew galdat Stonwrytan gor hald hyont. Ul molt et Orrowan, new gor fedh tavow scetheth et cumm, veth gor reskow ul molt haldath Stonwrytan. Hunna so, hy et hemm sost.
+L87	> Tavow Hemm, et cumm hemm sost, sa re vorr o dhavow ul hos orl. Re orrant et prassath hosast dem vimm hy et Kethow, eth re hadhant et haldath; eth re yalant o dhavowlesteth et dyll sost ul Morrow.
+L99	> Cemm Hyll, ul vodh cemm et rhull et hyll. Re ston o um pa hless ul hos fedh, eth re lodhant sull heskal strom o um et nynth.
+L109	> Sedhnell, et hinnar sa re yal gor fedh ul felmyl. Re ston o um yannath ul et sedh, eth re orr o dem vimm ryssyth yarl ul gor hossol, eth re hadh gor dhesk trenn clenn um et trenn hemm.
+L119	> Lurrvard, et kethow ul vimm et crisur lurr, ul lurr gunn et bithlern, crisurat sost virr ul molt et mesketh, hy ull re yal orrol ul neld lo orrard.
+L130	> Kethow Stellath, kethow et stelleth, stannat ul et brunn ul molt ledalstelleth et stannardath hosast, eth bont gor orl hy o runnowath.
+L141	> Tavow Vorr, et drunnow um et orrow sa vorr, ul vodh orr dhidh et brunn dem et wadh, eth doss et trun dhaedh ul vimm misk ul et grem.
+L151	> Grullsorth, et kethow rytet ul hald et thykir, sa nath re yal galdat, veth paskat, saler ul vimm saler ul et hal unth.
+L161	> Frennvar, et par um et lynth crentet; re ston et hellur strom um et crest lo dhrenn et grem, eth grellereth ul o riskereth lo dhrenn et domm sell.
+L171	> Taldow Helv, taldow et tolmath sa haemerent, um et gynteth sost susk, hy ull re wemment et tolmardath et trenneth um wemmerdeth, eth re veskent et tolmath ul haemeryl um et helvhoss.
+L181	> Eth Sirrvell, sa re yald dhom tesk Stonwrytan, sa re rik et rerd hosen preller hrest. Ew o et galdat dasken sa re yaldar, eth et deth sost; eth re yal veskyl sirr strom et pell lo farrardath hy farrol orl, eth re rig o et rerd dem neld ul et myst.
+L192	> Noth hinnar, noth tavow, noth lonn sa re vollant so sost hos lunt.
+L200	> Cadhan o hosen re yal cadhat lona.
+L208	> *Eth re vysk et odh:* **Tumar.**
+L214	### Saed Pawast
+L220	> Amm sy hunna hosen vodh re yalant et cummath mammat, eth nath veska dem neld, hy vodh nath re vesken dem neld ul et brodhol.
+L230	> Nath re yal scethan stonat lo ol nedheth; nath re yal scethan yorrol; nath re yal ammadol pemessen. Nath re rarr bynd hy ul neld et wadh ul lern Orrow lo dhrenn so dhesketh. Re yalant haldath ol nedheth galdat dem dernil eth dem helv; nath re yalant galdat dem sevir; eth re yalant so yannath ryss, eth re stonant lunnat ul vess.
+L242	> Re orrant et wemmeth domm hosast hy et myst, eth nath re yal peltir. Ul et dhess re ommant um Dhavow Hemm, eth dem rerdsenn ew vorrdhuss o. Re heth et hinnar ul sestow et tavow sull bress. Nath re lusk hos cumm dem mullen dem renn, hy vodh nath re yal renn lo hos dem luskol. Hy ull re omm Cemm Hyll; eth re nend et lunt sa re yal um et orrol susk ul o susk et sull heskal ul mommol dem vimm ul et rhull, hos eth hos, eth re hunn so ul morrol. Re felm Sedhnell tunn ul hos fedh, hosen amm nath re yal et sedh veth ul dovvol. Re vorr Lurrvard ul o vesketh, eth Kethow Stellath ul o runnowath. Re heth Tavow Vorr lesk bress um et orrow sa vorr. Re yal Grullsorth griket saler eth saler, eth Frennvar um et crest, eth Taldow Helv um et gynteth. Eth re omm Sirrvell, sa re yald dhom tesk, ul hos vess ul o nyrulath sost; eth doss et domm ul o vimm lunnat tul.
+L257	> Nath re vellor luskat sa re hyrril hos. Nath re yal veth brammol helv scid, brodhen tevet ul lurrath hemm, sa re runn eth re runn hy et myst; vollant et hesperdeth um ol hald o: et drunnatath. Eth re ston nahos um et pressireth. Re veskent ol nedheth dem grenn um et scetheth ull, eth re veskent nahos, crenn ell cryrull; eth re vollant o: scethan dhenn. Nath re seskent cedh re lusk o; eth hy vodh re orr o hy et myst sa re vollant et farrardath: Mystow, re vollant ol nedheth et luskardath: Mystaeri, et mystan. Garlar et pa voll tul.
+L273	> Re yalant et wemmeth sa re rik et cummath nestorn hy et wemmeth sa orrant ul ol lern amm sy. Re orr gor wemm hosel, eth nath re yal maver ullen umont, hy vodh nath re yal galat sa re hess so.
+L284	> Nath re yorr et Stonwrytan. Re orr, eth nayalat ullen; eth re yalar ul so volt.
+L295	> Doss hos galat ullen brodhat um vess Sirrvell, eth brodhan o hosen re yal brodhat lona. Myskent merr sa re hollarant hy et pell: Re yal dhenn vesket ul et myst ul vess ull, strom hy gor sceth, ul stonol ul neld et tavow, somm re orr et pell dem vimm. Re veskent ullen sa re yalant lo ull nayalat. Nath sesken.
+L307	> *Cadhat ul narl Seren, ul sestow wrodhol et mesk:* Nath gemment et trenneth. Re hethym pana.
+L317	> Cadhan o hosen re yal cadhat lona.
+L321	> *Eth re vysk et odh:* **Tumar.**
+L327	### Mymmyleth
+L331	> *Cadhat ul vimm vollath et cummath ul et saed hosast, hos eth hos, ul et surrath sa re vymment et cummath dem varn, lo wrodath vennuld et cumm, sa re yal lo ull.*
+L342	> **Tavow Hemm.** *Corlen Dhavow:* Re orrar dem vimm dem et tavow ul et dhess, eth re felm Molt Hyll ul et wadh sa re rarr o hyo, eth nath re dhald o. Stonant haldath hosast et cummath pawast.
+L350	> **Cemm Hyll.** *Tamm Sull Heskal:* Re runnar et sull bisk ul et hos kethyl, eth re vymm nahos; eth re orr Lymmerd Yendeth dem vimm ul vodh re ston et heskal ul molt et sull.
+L358	> **Sedhnell.** *Marl Sedhen:* Re orr o ul et sedh hosen mesk lilvet, eth re orr et lilvyl hy ol lodh ul et clem sost. Firr Meskdhrenn sa lilv ul vodh re yalant et gannath.
+L366	> **Lurrvard.** *Aske Hrisur Lurr:* Re ston Molt Veskrivull sol ul et dask ul molt et mesketh, eth re hadh o o veskrivullath, eth nath re dhald pawast. Re luskar o ul stonol. Re vymm o dem varn.
+L374	> **Kethow Stellath.** *Garvel Runnowath:* Re hresk Meskdhrenn Dholm ul vodh re ston o, tolm ul dolm, eth re rik et stelleth o. Doss et drunnowath velv.
+L382	> **Tavow Vorr.** *Harl Orrow sa Vorr:* Re senn Vorrol um et orrow hosen drunnow navothat, eth re esk et sast domm umo. Doss et trun lo ull dhaedh tul.
+L390	> **Grullsorth.** *Ulden Salereth:* Re hresk Gunn ul vimm dem susk hy et grull ul vimm et kethow rerddhalden, eth re hresk o; eth re wont et thykir hyo hos clem ul sestow.
+L398	> **Frennvar.** *Hesk Lynth:* Re dhald et sulv ul sorenn, eth re firr Grem Sell um et lynth, eth re rik et crest o dem vimm lo dhrenn et reskow ul vodh re ston et hellur strom.
+L404	> **Taldow Helv.** *Lanner Gynten:* Re orr Lorr Helv dem vimm hy o henth um et gynteth, eth nath re orr o dem susk pawast.
+L412	> **Sirrvell.** *Pellow Vell:* Ul nomm et nyrulath re hresk Lennet hosen vesksirr, eth re vesker ul gor saedel hyo et grellereth sa re lymmer ol sost.

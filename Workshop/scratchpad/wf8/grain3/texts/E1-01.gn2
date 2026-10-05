@@ -1,0 +1,8 @@
+# name: To shore
+# english: To shore. As root to water, go. Wait on no bough.
+# literal: The Wave, cut from the heart: to the shore, all at once, by the straightest water, none waiting on another. The round is split along its axis: the two planks of V.2.
+# root_word: shore
+# split: true
+round E1-01 {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: WAVE*

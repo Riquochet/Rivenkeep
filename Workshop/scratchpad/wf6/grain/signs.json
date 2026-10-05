@@ -1,0 +1,2274 @@
+{
+"_frame": "u = 0..1 along the file from the inner to the outer edge of the mark's span; v in units of B (the mark's half-breadth), + = clockwise. r, s, w, len of curls/shapes are in B units except 'len' of lens/drop (u units). 'nick' = the entry-nick that gives an otherwise mirror-symmetric sign its handedness.",
+"WAVE": {
+"cls": "root",
+"seren": "the Wave",
+"soft": "aeth",
+"gloss": "to the shore: all at once, by the straightest water, none waiting on another",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.64,
+0
+]
+],
+"bend": 0.05,
+"curl": {
+"r": 0.42,
+"sweep": 200,
+"dir": 1
+}
+}
+]
+},
+"LONE": {
+"cls": "root",
+"seren": "the Lone Stroke",
+"soft": "ith",
+"gloss": "one goes ahead of the rest",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+-0.24
+],
+[
+0.58,
+-0.24
+]
+],
+"bend": 0.04
+},
+{
+"t": "cut",
+"p": [
+[
+0.72,
+0.24
+],
+[
+0.97,
+0.24
+]
+]
+}
+]
+},
+"BARB": {
+"cls": "root",
+"seren": "the Bar Before",
+"soft": "reil",
+"gloss": "a screen before the bearer",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.97,
+0
+]
+]
+},
+{
+"t": "ringarc",
+"u": 0.74,
+"v0": -0.7,
+"v1": 0.7
+}
+]
+},
+"SPARK": {
+"cls": "root",
+"seren": "the Spark",
+"soft": "rheis",
+"gloss": "where the stone flashed, strike there",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.66,
+0
+]
+]
+},
+{
+"t": "star",
+"c": [
+0.84,
+0
+],
+"r": 0.42
+}
+]
+},
+"SQUARE": {
+"cls": "root",
+"seren": "the Mute Square",
+"soft": "rhen",
+"gloss": "stone; the wall; the mute thing",
+"q": "straight",
+"nick": true,
+"els": [
+{
+"t": "square",
+"c": [
+0.54,
+0
+],
+"s": 1.05
+}
+]
+},
+"MOUTHS": {
+"cls": "root",
+"seren": "the Two Mouths",
+"soft": "vannrenn",
+"gloss": "loud in one place; the landing in another",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+-0.42
+],
+[
+0.94,
+-0.42
+]
+],
+"hollow": true
+},
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0.42
+],
+[
+0.94,
+0.42
+]
+]
+}
+]
+},
+"STERN": {
+"cls": "root",
+"seren": "the Turned Stern",
+"soft": "sathneth",
+"gloss": "turn the stern for home",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.8,
+0
+]
+],
+"curl": {
+"r": 0.42,
+"sweep": 180,
+"dir": -1,
+"tail": 0.36
+}
+}
+]
+},
+"BREATH": {
+"cls": "root",
+"seren": "the Breath",
+"soft": "aenn",
+"gloss": "between their blows: go in the gap",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.4,
+0
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.62,
+0
+],
+[
+0.97,
+0
+]
+]
+}
+]
+},
+"KNOT": {
+"cls": "root",
+"seren": "the Knot",
+"soft": "lanth",
+"gloss": "wait in the grey; come when the shore is still",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.55,
+0
+]
+]
+},
+{
+"t": "knot",
+"c": [
+0.74,
+0
+],
+"rx": 0.55,
+"ru": 0.13
+}
+]
+},
+"SMOOTH": {
+"cls": "root",
+"seren": "the Smoothed Cut",
+"soft": "naelseth",
+"gloss": "hidden in the grey: go veiled",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.95,
+0
+]
+],
+"bend": 0.34,
+"smooth": true
+}
+]
+},
+"BURN": {
+"cls": "root",
+"seren": "Burn",
+"soft": "esth",
+"gloss": "burn",
+"nick": true,
+"els": [
+{
+"t": "scar",
+"apex": [
+0.06,
+0
+],
+"base": 0.95,
+"w": 0.8
+}
+]
+},
+"GO": {
+"cls": "act",
+"soft": "rei",
+"gloss": "go",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.08,
+0
+],
+[
+0.92,
+0
+]
+],
+"bend": 0.1
+}
+]
+},
+"STRIKE": {
+"cls": "act",
+"soft": "thass",
+"gloss": "strike",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.08,
+0
+],
+[
+0.7,
+0
+]
+]
+},
+{
+"t": "wedge",
+"apex": [
+0.97,
+0
+],
+"base": 0.71,
+"w": 0.42
+}
+]
+},
+"BREAK": {
+"cls": "act",
+"soft": "rhass",
+"gloss": "break",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.08,
+0
+],
+[
+0.64,
+0
+]
+]
+},
+{
+"t": "check",
+"u0": 0.98,
+"u1": 0.6,
+"v": 0,
+"w": 0.34
+}
+]
+},
+"WOUND": {
+"cls": "act",
+"soft": "thaess",
+"gloss": "struck; the bark splits",
+"nick": true,
+"els": [
+{
+"t": "check",
+"u0": 0.98,
+"u1": 0.22,
+"v": 0,
+"w": 0.3
+}
+]
+},
+"TURN": {
+"cls": "act",
+"soft": "neth",
+"gloss": "turn aside",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.08,
+0
+],
+[
+0.56,
+0
+],
+[
+0.9,
+0.78
+]
+]
+}
+]
+},
+"HOLD": {
+"cls": "act",
+"soft": "thein",
+"gloss": "hold; know",
+"nick": true,
+"els": [
+{
+"t": "cup",
+"c": [
+0.54,
+0
+],
+"r": 0.56,
+"form": "hold"
+}
+]
+},
+"OPEN": {
+"cls": "act",
+"soft": "aenn",
+"gloss": "open; come open",
+"nick": true,
+"els": [
+{
+"t": "cup",
+"c": [
+0.54,
+0
+],
+"r": 0.56,
+"form": "open"
+}
+]
+},
+"CLOSE": {
+"cls": "act",
+"soft": "thann",
+"gloss": "close",
+"nick": true,
+"els": [
+{
+"t": "cup",
+"c": [
+0.5,
+0
+],
+"r": 0.52,
+"form": "hold"
+},
+{
+"t": "bar",
+"u": 0.92,
+"v0": -0.5,
+"v1": 0.5
+}
+]
+},
+"MOUTH": {
+"cls": "act",
+"soft": "renn",
+"gloss": "speak aloud; a voice",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.16,
+0
+],
+[
+0.52,
+-0.5
+],
+[
+0.86,
+-0.22
+]
+],
+"bend": 0
+},
+{
+"t": "cut",
+"p": [
+[
+0.16,
+0
+],
+[
+0.52,
+0.5
+],
+[
+0.86,
+0.22
+]
+],
+"bend": 0
+}
+]
+},
+"FALL": {
+"cls": "act",
+"soft": "nenn",
+"gloss": "fall; sink; go down",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.94,
+0
+],
+[
+0.26,
+0
+]
+],
+"curl": {
+"r": 0.3,
+"sweep": 130,
+"dir": 1
+}
+}
+]
+},
+"RISE": {
+"cls": "act",
+"soft": "thael",
+"gloss": "rise; stand",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.1,
+0
+],
+[
+0.78,
+0
+]
+]
+},
+{
+"t": "lens",
+"c": [
+0.89,
+0
+],
+"len": 0.16,
+"w": 0.3
+}
+]
+},
+"GROW": {
+"cls": "act",
+"soft": "thae",
+"gloss": "grow",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.05,
+0
+],
+[
+0.95,
+0
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.3,
+0
+],
+[
+0.45,
+0.42
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.44,
+0
+],
+[
+0.59,
+-0.42
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.58,
+0
+],
+[
+0.73,
+0.42
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.72,
+0
+],
+[
+0.86,
+-0.38
+]
+]
+}
+]
+},
+"LIVE": {
+"cls": "act",
+"soft": "ilae",
+"gloss": "live; breathe",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.08,
+0
+],
+[
+0.92,
+0
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.5,
+0
+],
+[
+0.6,
+0.3
+]
+]
+},
+{
+"t": "lens",
+"c": [
+0.72,
+0.46
+],
+"len": 0.3,
+"w": 0.2,
+"rot": -38
+}
+]
+},
+"DYING": {
+"cls": "act",
+"soft": "veas",
+"gloss": "die; dying",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0
+],
+[
+0.4,
+0
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.48,
+0
+],
+[
+0.65,
+0
+]
+],
+"k": 0.8
+},
+{
+"t": "cut",
+"p": [
+[
+0.72,
+0
+],
+[
+0.81,
+0
+]
+],
+"k": 0.6
+},
+{
+"t": "cut",
+"p": [
+[
+0.87,
+0
+],
+[
+0.91,
+0
+]
+],
+"k": 0.45
+}
+]
+},
+"KNEEL": {
+"cls": "act",
+"soft": "raeth",
+"gloss": "kneel",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0
+],
+[
+0.7,
+0
+],
+[
+0.36,
+0.4
+],
+[
+0.36,
+1.02
+]
+]
+}
+]
+},
+"GIFT": {
+"cls": "act",
+"soft": "vei",
+"gloss": "give; a gift laid down",
+"nick": true,
+"els": [
+{
+"t": "bar",
+"u": 0.3,
+"v0": -0.62,
+"v1": 0.62
+},
+{
+"t": "lens",
+"c": [
+0.64,
+0
+],
+"len": 0.44,
+"w": 0.5
+}
+]
+},
+"BOND": {
+"cls": "act",
+"soft": "ael",
+"gloss": "bind; join; together",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+-0.62
+],
+[
+0.52,
+0
+]
+],
+"bend": 0.13
+},
+{
+"t": "cut",
+"p": [
+[
+0.18,
+0.5
+],
+[
+0.52,
+0
+]
+],
+"bend": -0.1
+},
+{
+"t": "cut",
+"p": [
+[
+0.52,
+0
+],
+[
+0.95,
+0
+]
+]
+}
+]
+},
+"STOP": {
+"cls": "act",
+"soft": "rheil",
+"gloss": "stop; cease",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0
+],
+[
+0.7,
+0
+]
+]
+},
+{
+"t": "ringarc",
+"u": 0.72,
+"v0": -0.7,
+"v1": 0.7
+}
+]
+},
+"MEND": {
+"cls": "act",
+"soft": "veinn",
+"gloss": "mend (with stone)",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.42,
+0
+]
+]
+},
+{
+"t": "square",
+"c": [
+0.51,
+0
+],
+"s": 0.3
+},
+{
+"t": "cut",
+"p": [
+[
+0.6,
+0
+],
+[
+0.96,
+0
+]
+]
+}
+]
+},
+"ROT": {
+"cls": "act",
+"soft": "ress",
+"gloss": "rot",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.05,
+0
+],
+[
+0.19,
+0
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.25,
+0.1
+],
+[
+0.37,
+0.1
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.43,
+-0.08
+],
+[
+0.55,
+-0.08
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.61,
+0.06
+],
+[
+0.73,
+0.06
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.79,
+-0.1
+],
+[
+0.92,
+-0.1
+]
+]
+}
+]
+},
+"AXE": {
+"cls": "act",
+"soft": "rhith",
+"gloss": "iron; fell; the felling",
+"q": "straight",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0
+],
+[
+0.94,
+0
+]
+],
+"straight": true
+},
+{
+"t": "tri",
+"p": [
+[
+0.8,
+0.08
+],
+[
+0.56,
+0.82
+],
+[
+1.0,
+0.82
+]
+]
+}
+]
+},
+"CARVE": {
+"cls": "act",
+"soft": "seth",
+"gloss": "carve; a carving; marks",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.9,
+-0.56
+],
+[
+0.22,
+0
+]
+],
+"bend": 0.12
+},
+{
+"t": "cut",
+"p": [
+[
+0.9,
+0.56
+],
+[
+0.22,
+0
+]
+],
+"bend": -0.12
+}
+]
+},
+"LEAN": {
+"cls": "act",
+"soft": "ilen",
+"gloss": "lean toward; lean after",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.08,
+-0.52
+],
+[
+0.92,
+0.52
+]
+]
+}
+]
+},
+"BEND": {
+"cls": "act",
+"soft": "seil",
+"gloss": "bend, as a bough bends; give ground in shape",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0
+],
+[
+0.94,
+0
+]
+],
+"bend": 0.72
+}
+]
+},
+"BENEATH": {
+"cls": "act",
+"soft": "senn",
+"gloss": "beneath; go under",
+"nick": true,
+"els": [
+{
+"t": "ringarc",
+"u": 0.92,
+"v0": -0.72,
+"v1": 0.72
+},
+{
+"t": "cut",
+"p": [
+[
+0.08,
+0
+],
+[
+0.66,
+0
+]
+]
+}
+]
+},
+"HULL": {
+"cls": "thing",
+"soft": "seil",
+"gloss": "a bough; a hull",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.5,
+0
+],
+"len": 0.92,
+"w": 0.36
+}
+]
+},
+"BEARER": {
+"cls": "thing",
+"soft": "varen",
+"gloss": "a bearer; a laden hull",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.5,
+0
+],
+"len": 0.92,
+"w": 0.36
+},
+{
+"t": "cut",
+"p": [
+[
+0.22,
+0
+],
+[
+0.78,
+0
+]
+]
+}
+]
+},
+"THIN": {
+"cls": "thing",
+"soft": "isseil",
+"gloss": "thin wood; a cheap hull",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.5,
+0
+],
+"len": 0.94,
+"w": 0.16
+}
+]
+},
+"SPENT": {
+"cls": "thing",
+"soft": "ressveir",
+"gloss": "worthless wood; a spent hull",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.5,
+0
+],
+"len": 0.92,
+"w": 0.36
+},
+{
+"t": "check",
+"u0": 0.9,
+"u1": 0.14,
+"v": 0,
+"w": 0.2
+}
+]
+},
+"GREAT": {
+"cls": "thing",
+"soft": "rhannseil",
+"gloss": "the great hull",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.5,
+0
+],
+"len": 0.96,
+"w": 0.66
+},
+{
+"t": "ringarc",
+"u": 0.5,
+"v0": -0.5,
+"v1": 0.5
+}
+]
+},
+"EYE": {
+"cls": "thing",
+"soft": "neas",
+"gloss": "an eye (a hull sent to look); to look",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.5,
+0
+],
+"len": 0.46,
+"w": 0.32
+},
+{
+"t": "cut",
+"p": [
+[
+0.1,
+0
+],
+[
+0.27,
+0
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.73,
+0
+],
+[
+0.9,
+0
+]
+]
+}
+]
+},
+"HUNTER": {
+"cls": "thing",
+"soft": "thavalea",
+"gloss": "a hunter",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.42,
+0
+],
+"len": 0.76,
+"w": 0.34
+},
+{
+"t": "star",
+"c": [
+0.88,
+0
+],
+"r": 0.3
+}
+]
+},
+"SWIFT": {
+"cls": "thing",
+"soft": "leas",
+"gloss": "the swift",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.64,
+0
+],
+"len": 0.62,
+"w": 0.32
+},
+{
+"t": "cut",
+"p": [
+[
+0.08,
+-0.26
+],
+[
+0.3,
+-0.26
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.08,
+0.26
+],
+[
+0.3,
+0.26
+]
+]
+}
+]
+},
+"BREAKER": {
+"cls": "thing",
+"soft": "rhenrhass",
+"gloss": "a stone-breaker",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.4,
+0
+],
+"len": 0.66,
+"w": 0.34
+},
+{
+"t": "square",
+"c": [
+0.86,
+0
+],
+"s": 0.34
+}
+]
+},
+"RAM": {
+"cls": "thing",
+"soft": "rhasseil",
+"gloss": "the ram",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.38,
+0
+],
+"len": 0.66,
+"w": 0.34
+},
+{
+"t": "wedge",
+"apex": [
+0.97,
+0
+],
+"base": 0.72,
+"w": 0.36
+}
+]
+},
+"ROOT": {
+"cls": "thing",
+"soft": "ral",
+"gloss": "a root; a hull sent first; (x3) root-men",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.1,
+0
+],
+[
+0.8,
+0
+]
+]
+},
+{
+"t": "rootfoot",
+"c": [
+0.8,
+0
+],
+"dir": "out"
+}
+]
+},
+"SEED": {
+"cls": "thing",
+"soft": "veis",
+"gloss": "the winged seed; the sky falling",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.74,
+0
+],
+"len": 0.3,
+"w": 0.3
+},
+{
+"t": "cut",
+"p": [
+[
+0.59,
+0
+],
+[
+0.4,
+-0.3
+],
+[
+0.24,
+-0.52
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.59,
+0
+],
+[
+0.4,
+0.3
+],
+[
+0.24,
+0.52
+]
+]
+}
+]
+},
+"TREE": {
+"cls": "thing",
+"soft": "thael",
+"gloss": "a tree",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.95,
+0
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.44,
+0
+],
+[
+0.74,
+0.52
+]
+],
+"bend": 0.1
+},
+{
+"t": "cut",
+"p": [
+[
+0.62,
+0
+],
+[
+0.9,
+-0.46
+]
+],
+"bend": -0.08
+}
+]
+},
+"PILLAR": {
+"cls": "thing",
+"soft": "naelsaen",
+"gloss": "a black pillar, a mist-heart",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.04,
+0
+],
+[
+0.95,
+0
+]
+],
+"fill": true
+},
+{
+"t": "cut",
+"p": [
+[
+0.44,
+0
+],
+[
+0.74,
+0.52
+]
+],
+"bend": 0.1
+},
+{
+"t": "cut",
+"p": [
+[
+0.62,
+0
+],
+[
+0.9,
+-0.46
+]
+],
+"bend": -0.08
+}
+]
+},
+"SAPLING": {
+"cls": "thing",
+"soft": "leathael",
+"gloss": "a sapling; a child",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.34,
+0
+],
+[
+0.9,
+0
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.58,
+0
+],
+[
+0.77,
+0.34
+]
+],
+"bend": 0.06
+},
+{
+"t": "cut",
+"p": [
+[
+0.7,
+0
+],
+[
+0.87,
+-0.3
+]
+],
+"bend": -0.05
+}
+]
+},
+"HEART": {
+"cls": "thing",
+"soft": "saen",
+"gloss": "a heart; heartwood",
+"nick": true,
+"els": [
+{
+"t": "lens",
+"c": [
+0.5,
+0
+],
+"len": 0.36,
+"w": 0.42,
+"fill": true
+}
+]
+},
+"US": {
+"cls": "thing",
+"soft": "naelea",
+"gloss": "one of us (the long-lived)",
+"nick": true,
+"els": [
+{
+"t": "rootfoot",
+"c": [
+0.12,
+0
+],
+"dir": "in"
+},
+{
+"t": "cut",
+"p": [
+[
+0.12,
+0
+],
+[
+0.7,
+0
+]
+]
+},
+{
+"t": "lens",
+"c": [
+0.83,
+0
+],
+"len": 0.24,
+"w": 0.42
+}
+]
+},
+"STONEFOLK": {
+"cls": "thing",
+"soft": "aethea",
+"gloss": "one of stone; a shore-man",
+"q": "straight",
+"nick": true,
+"els": [
+{
+"t": "rootfoot",
+"c": [
+0.12,
+0
+],
+"dir": "in"
+},
+{
+"t": "cut",
+"p": [
+[
+0.12,
+0
+],
+[
+0.7,
+0
+]
+],
+"straight": true
+},
+{
+"t": "square",
+"c": [
+0.83,
+0
+],
+"s": 0.34
+}
+]
+},
+"HOME": {
+"cls": "thing",
+"soft": "naelenn",
+"gloss": "home (a place loved)",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0
+],
+[
+0.6,
+0
+]
+],
+"curl": {
+"r": 0.4,
+"sweep": 320,
+"dir": -1
+}
+}
+]
+},
+"HOMESTONE": {
+"cls": "thing",
+"soft": "naelenn",
+"gloss": "home (of stone: theirs)",
+"q": "straight",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0
+],
+[
+0.62,
+0
+],
+[
+0.62,
+-0.62
+],
+[
+0.9,
+-0.62
+],
+[
+0.9,
+0
+],
+[
+0.62,
+0
+]
+],
+"straight": true
+}
+]
+},
+"SHORE": {
+"cls": "thing",
+"soft": "aeth",
+"gloss": "a shore",
+"els": [
+{
+"t": "bar",
+"u": 0.56,
+"v0": -0.85,
+"v1": 0.6
+},
+{
+"t": "cut",
+"p": [
+[
+0.56,
+0.6
+],
+[
+0.56,
+0.62
+]
+],
+"curl": {
+"r": 0.26,
+"sweep": 200,
+"dir": -1
+}
+}
+]
+},
+"ROAD": {
+"cls": "thing",
+"soft": "ves",
+"gloss": "a road; a way over water",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+-0.17
+],
+[
+0.94,
+-0.17
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0.17
+],
+[
+0.94,
+0.17
+]
+]
+}
+]
+},
+"EDGE": {
+"cls": "thing",
+"soft": "enth",
+"gloss": "an edge; the rim (of the dread, of the grey)",
+"nick": true,
+"els": [
+{
+"t": "ringarc",
+"u": 0.82,
+"v0": -0.9,
+"v1": 0.9
+}
+]
+},
+"GUN": {
+"cls": "thing",
+"soft": "rennrhen",
+"gloss": "a speaking stone; a gun",
+"q": "straight",
+"nick": true,
+"els": [
+{
+"t": "square",
+"c": [
+0.4,
+0
+],
+"s": 0.78
+},
+{
+"t": "star",
+"c": [
+0.84,
+0
+],
+"r": 0.3
+}
+]
+},
+"CASTLE": {
+"cls": "thing",
+"soft": "rhenennas",
+"gloss": "the house behind the stone; a castle",
+"q": "straight",
+"nick": true,
+"els": [
+{
+"t": "square",
+"c": [
+0.3,
+0
+],
+"s": 0.44
+},
+{
+"t": "cut",
+"p": [
+[
+0.4,
+0
+],
+[
+0.47,
+0
+]
+],
+"straight": true
+},
+{
+"t": "square",
+"c": [
+0.72,
+0
+],
+"s": 0.62
+}
+]
+},
+"DOOR": {
+"cls": "thing",
+"soft": "veth",
+"gloss": "a door",
+"q": "straight",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.14,
+-0.56
+],
+[
+0.84,
+-0.36
+]
+],
+"straight": true
+},
+{
+"t": "cut",
+"p": [
+[
+0.14,
+0.56
+],
+[
+0.84,
+0.36
+]
+],
+"straight": true
+},
+{
+"t": "bar",
+"u": 0.86,
+"v0": -0.54,
+"v1": 0.54
+}
+]
+},
+"FLASH": {
+"cls": "thing",
+"soft": "rheis",
+"gloss": "a flash; hard light; the open sun",
+"nick": true,
+"els": [
+{
+"t": "star",
+"c": [
+0.52,
+0
+],
+"r": 0.56
+}
+]
+},
+"BLOOD": {
+"cls": "thing",
+"soft": "thar",
+"gloss": "blood",
+"nick": true,
+"els": [
+{
+"t": "drop",
+"c": [
+0.56,
+0
+],
+"len": 0.5,
+"w": 0.46,
+"point": "in"
+}
+]
+},
+"GRIEF": {
+"cls": "thing",
+"soft": "aelress",
+"gloss": "grief (a wound the wood has grown over)",
+"nick": true,
+"els": [
+{
+"t": "check",
+"u0": 0.86,
+"u1": 0.2,
+"v": 0,
+"w": 0.26
+},
+{
+"t": "cut",
+"p": [
+[
+0.97,
+-0.58
+],
+[
+0.92,
+-0.2
+],
+[
+0.86,
+0
+]
+]
+},
+{
+"t": "cut",
+"p": [
+[
+0.97,
+0.58
+],
+[
+0.92,
+0.2
+],
+[
+0.86,
+0
+]
+]
+}
+]
+},
+"SAIL": {
+"cls": "thing",
+"soft": "reaslel",
+"gloss": "a sail; a cloth in the wind",
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0
+],
+[
+0.8,
+0
+]
+],
+"straight": true
+},
+{
+"t": "cut",
+"p": [
+[
+0.64,
+-0.58
+],
+[
+0.86,
+-0.32
+],
+[
+0.92,
+0.1
+],
+[
+0.8,
+0.52
+],
+[
+0.56,
+0.8
+]
+],
+"curve": true
+}
+]
+},
+"HAND": {
+"cls": "thing",
+"soft": "vinn",
+"gloss": "a hand; (after a thing) five",
+"nick": true,
+"els": [
+{
+"t": "cut",
+"p": [
+[
+0.06,
+0
+],
+[
+0.52,
+0
+]
+]
+},
+{
+"t": "cup",
+"c": [
+0.74,
+0
+],
+"r": 0.44,
+"form": "palm"
+}
+]
+},
+"TIDE": {
+"cls": "thing",
+"soft": "thae",
+"gloss": "a tide; a growing",
+"nick": true,
+"els": [
+{
+"t": "ringarc",
+"u": 0.3,
+"v0": -0.8,
+"v1": 0.8
+},
+{
+"t": "cut",
+"p": [
+[
+0.3,
+0
+],
+[
+0.9,
+0
+]
+],
+"bend": 0.08
+}
+]
+},
+"DEEP": {
+"cls": "thing",
+"soft": "eir",
+"gloss": "deep; old; long; last",
+"nick": true,
+"els": [
+{
+"t": "ringarc",
+"u": 0.1,
+"v0": -0.62,
+"v1": 0.62
+},
+{
+"t": "cut",
+"p": [
+[
+0.1,
+0
+],
+[
+0.94,
+0
+]
+]
+}
+]
+},
+"AELTHAR": {
+"cls": "ligature",
+"soft": "aelthar",
+"gloss": "the Aelthar: two bloods made one",
+"nick": true,
+"els": [
+{
+"t": "drop",
+"c": [
+0.16,
+-0.62
+],
+"len": 0.24,
+"w": 0.3,
+"point": "in"
+},
+{
+"t": "drop",
+"c": [
+0.16,
+0.62
+],
+"len": 0.24,
+"w": 0.3,
+"point": "in"
+},
+{
+"t": "cut",
+"p": [
+[
+0.28,
+-0.6
+],
+[
+0.6,
+0
+]
+],
+"bend": 0.13
+},
+{
+"t": "cut",
+"p": [
+[
+0.28,
+0.6
+],
+[
+0.6,
+0
+]
+],
+"bend": -0.13
+},
+{
+"t": "cut",
+"p": [
+[
+0.6,
+0
+],
+[
+0.95,
+0
+]
+]
+}
+]
+}
+}

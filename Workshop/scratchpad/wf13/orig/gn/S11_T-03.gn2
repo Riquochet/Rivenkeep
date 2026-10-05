@@ -1,0 +1,19 @@
+# name: T-03
+round T-03 {wood: eldest; pith: war; rings: 6; rules after: [1, 5]; cells: [1, 2, 2, 2, 2, 3]}
+  I
+    r1/1  0: SQUARE*
+  ‖
+  II
+    r2/1  0: SQUARE+!OPEN    12: BENEATH+GO
+    r3/1  12: ROOT#1
+    r4 ·
+    r5/1  12: ROOT#1{again}
+  ‖
+  III
+    r6/1  0: EARTH+OPEN    12: RAM
+  runners
+    run t1  0.r2/1   ⇒      12.r2/1
+    run t2  12.r2/1  →      0.r2/1
+    run t3  0.r6/1   ⇒      12.r6/1
+  bark
+    bark 0: ROOT×3+HEART

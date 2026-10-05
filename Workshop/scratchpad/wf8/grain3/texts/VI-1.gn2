@@ -1,0 +1,7 @@
+# name: We remember our home too
+# english: We remember our home too.
+# literal: Held at the root: two homes grown from one foot, bound. Ours, of wood; yours, of stone. In ours, folded: those of the breath.
+# root_word: home
+round VI-1-sliver {wood: green; pith: round; rings: 1; rules after: []; axis 0°}
+  I
+    r1/1  0: HOLD+(HOME/ = HOMESTONE\)+[US×3 within HOME]*

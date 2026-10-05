@@ -1,0 +1,4 @@
+# name: V1-face
+round V1-face {wood: plain; kind: chip; rings: 1; rules after: []}
+  I
+    r1/1  0: WAVE

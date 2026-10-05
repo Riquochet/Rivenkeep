@@ -1,0 +1,498 @@
+30 lines
+====================================================================================================
+S01 · foreword · Romanisation
+ROM : Re lymmym pa yalat dem susk et brunn, brodhen Orrow eth vestul; eth nath re yal nalelv veth et vestul.
+ENG : Up the mountain I carried two things, our tongue and a chest; and only the chest was heavy.
+  phrase = brodhen Orrow: the speech of the Shore: the formal name of Orrowen
+  phrase = dem susk: up, upward (to the height)
+  phrase = nath re: did not, had not (the negative past: NEG + PST, the tense particle next to the verb, which it softens)
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  lymmym         | page: I carried              | analyzer: bring-1SG                | lex: bring; bear, carry
+  pa             | page: two                    | analyzer: two(+S)                  | lex: two (+S); double, two
+  yalat          | page: things                 | analyzer: S·anything               | lex: anything (a thing); something, a thing; a thing ('what stands made')
+  dem            | page: to                     | analyzer: until(+N)                | lex: until, as far as (+N); until, as far as; for, toward, for the sake of;
+  susk           | page: high                   | analyzer: high                     | lex: high; tall
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  brunn          | page: mountain               | analyzer: mountain                 | lex: a mountain
+  brodhen        | page: tongue                 | analyzer: speech                   | lex: a speech, a tongue; a tongue (a speech)
+  Orrow          | page: Shore                  | analyzer: Shore                    | lex: the Shore; the Shorelands; a coast
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  vestul         | page: chest                  | analyzer: chest                    | lex: a chest
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  nath           | page: not                    | analyzer: NEG(+N)                  | lex: not (before a verb, +N); not (before a verb); no, not
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  yal            | page: was                    | analyzer: S·be.PST                 | lex: (old) was: the suppletive past of doss, re yal-
+  nalelv         | page: heavy                  | analyzer: heavy                    | lex: heavy ('un-light')
+  veth           | page: but                    | analyzer: but                      | lex: but, rather; anyway, rather; though
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  vestul         | page: chest                  | analyzer: chest                    | lex: a chest
+====================================================================================================
+S01 · foreword · Romanisation
+ROM : Re rarr nadhumol um ol nedheth, eth re naelur nahos o. Naelurar ol dumol, hosen naelurant tolmardath et tolmath dem gethyl.
+ENG : Forgetting came on our fathers, and none chose it. Remembering we choose, as masons choose which stones to keep.
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  rarr           | page: came                   | analyzer: S·come                   | lex: come
+  nadhumol       | page: forgetting             | analyzer: forgetting               | lex: a forgetting; forgetting; the act of forgetting
+  um             | page: on                     | analyzer: upon(+S)                 | lex: upon, on (+S); upon, on; about, concerning (what a thing is told upon)
+  ol             | page: our                    | analyzer: our(+N)                  | lex: we; our (+N); we/our
+  nedheth        | page: fathers                | analyzer: N·father-PL              | lex: a father
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  naelur         | page: chose                  | analyzer: choose                   | lex: choose; decide; ordain, choose
+  nahos          | page: none                   | analyzer: none                     | lex: none, no one ('not one')
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  Naelurar       | page: we choose              | analyzer: choose-1PL               | lex: choose; decide; ordain, choose
+  ol             | page: our                    | analyzer: our(+N)                  | lex: we; our (+N); we/our
+  dumol          | page: remembering            | analyzer: N·remembering            | lex: remembering; memory; remembering; the act of remembering
+  hosen          | page: as                     | analyzer: as                       | lex: as, like, the same as; equal
+  naelurant      | page: they choose            | analyzer: choose-3PL               | lex: choose; decide; ordain, choose
+  tolmardath     | page: masons                 | analyzer: mason-PL                 | lex: a mason ('stone-one'); a mason ('the one of the stone')
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  tolmath        | page: stones                 | analyzer: stonework                | lex: stonework, masonry ('the stones') (a plural with a sense of its own)
+  dem            | page: for                    | analyzer: until(+N)                | lex: until, as far as (+N); until, as far as; for, toward, for the sake of;
+  gethyl         | page: keeping                | analyzer: N·holding                | lex: holding; (of the wood) a knowing; a holding; a keeping; holding; keepi
+====================================================================================================
+S02 · t-I-2 · Romanisation · the verse
+ROM : ketha et hald amm mellorant wemmeth myst,
+ENG : *Lay the stone while the sea lies bare,*
+*haul the gun while the guns are cold,*
+*hold the wall when the grey sails come,*
+*and the wall will hold.*
+  phrase = wemmeth myst: the grey sails
+  ketha          | page: hold!                  | analyzer: hold-IMP.PL              | lex: (v.) hold, keep; (of the wood) know; know (the wood, by touch)
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  hald           | page: wall                   | analyzer: wall                     | lex: a wall ('rock made to stand'); a wall; a barrier
+  amm            | page: when                   | analyzer: when                     | lex: when (conj.); when (conjunction); if
+  mellorant      | page: they come in           | analyzer: come.in-3PL              | lex: come in, arrive; enter; reach
+  wemmeth        | page: sails                  | analyzer: sails                    | lex: sails; a fleet under sail (a plural with a sense of its own)
+  myst           | page: grey                   | analyzer: sea-fog                  | lex: sea-fog; the grey; (adj.) grey; mist
+====================================================================================================
+S02 · t-I-3 · Romanisation · the dateline
+ROM : Et grem hosast, ul o wress pawast.
+ENG : *The first winter, in its second month.*
+  Et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  grem           | page: winter                 | analyzer: winter                   | lex: winter
+  hosast         | page: first                  | analyzer: first                    | lex: first
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  o              | page: its                    | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  wress          | page: month                  | analyzer: S·month                  | lex: a month, a moon's turn
+  pawast         | page: second                 | analyzer: second                   | lex: second; again, a second time; a lieutenant (the second)
+====================================================================================================
+S03 · t-I-4 · Romanisation
+ROM : Re yal nindeth nasastat lom hyo.
+ENG : My fingers were raw with it.
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  yal            | page: were                   | analyzer: S·be.PST                 | lex: (old) was: the suppletive past of doss, re yal-
+  nindeth        | page: fingers                | analyzer: finger-PL                | lex: a finger
+  nasastat       | page: raw                    | analyzer: raw                      | lex: raw, the skin rubbed off (of hands and fingers): un-skinned
+  lom            | page: at-me                  | analyzer: at-1SG                   | lex: at, by, with (+S); at, by, with (having, being able)
+  hyo            | page: from-it                | analyzer: from-3SG.M               | lex: from, out of (+S); from, out of; off, away from; than ('from': greater
+====================================================================================================
+S03 · t-I-4 · Romanisation
+ROM : Re harm et lunt o: Ketherd. Ul o volt sost, ew tul hosel et Crenn o.
+ENG : The people called him Commander. In his own heart he was still only the Captain.
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  harm           | page: called                 | analyzer: S·call                   | lex: (n.) a call, a cry; (v.) cry out, call; cry, cry out; a voice
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  lunt           | page: people                 | analyzer: people                   | lex: a people, a nation; folk
+  o              | page: him                    | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  Ketherd        | page: Commander              | analyzer: Commander                | lex: the Commander ('the holder'); the Commander; a commander; one who hold
+  Ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  o              | page: his                    | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  volt           | page: heart                  | analyzer: S·heart                  | lex: a heart; the middle; a temper
+  sost           | page: own                    | analyzer: self                     | lex: self, very; self, very: et dask sost 'the very end'; even; own; so (ve
+  ew             | page: was                    | analyzer: was                      | lex: was; is · was · is not · was not (the copula)
+  tul            | page: still                  | analyzer: yet                      | lex: yet, still; still, yet
+  hosel          | page: only                   | analyzer: alone                    | lex: alone, only, single ('one, a small one'); just, only; lone; simply, on
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  Crenn          | page: Captain                | analyzer: captain                  | lex: a captain; the Captain; an officer
+  o              | page: he                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+====================================================================================================
+S04 · t-II-1 · Romanisation
+ROM : Ul et grem sa re nydh nahos, re orr hosk et ganna ulvenn dem vimm hy et pa yann.
+ENG : In some winter that none told, the capstone of the inner gate came down from its two posts.
+  phrase = dem vimm: down, downward (to the low)
+  phrase = ganna ulvenn: the inner gate
+  Ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  grem           | page: winter                 | analyzer: winter                   | lex: winter
+  sa             | page: that                   | analyzer: REL(+S)                  | lex: who, which, that (relative, +S); who, which, that (relative); that (th
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  nydh           | page: counted                | analyzer: count                    | lex: (v.) count; measure, reckon; weigh, reckon
+  nahos          | page: none                   | analyzer: none                     | lex: none, no one ('not one')
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  orr            | page: went                   | analyzer: go                       | lex: go, walk; pass
+  hosk           | page: capstone               | analyzer: lintel                   | lex: a lintel; a capstone; (v.) lay the lintel, seal; (of a word-sign) a cr
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  ganna          | page: gate                   | analyzer: gate                     | lex: a gate ('the two posts'); a gate; a gateway; a pair (a pair is a gate)
+  ulvenn         | page: inner                  | analyzer: inner                    | lex: inner; inward
+  dem            | page: to                     | analyzer: until(+N)                | lex: until, as far as (+N); until, as far as; for, toward, for the sake of;
+  vimm           | page: low                    | analyzer: low                      | lex: low
+  hy             | page: from                   | analyzer: from(+S)                 | lex: from, out of (+S); from, out of; off, away from; than ('from': greater
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  pa             | page: two                    | analyzer: two(+S)                  | lex: two (+S); double, two
+  yann           | page: posts                  | analyzer: S·post                   | lex: a post, an upright; a doorpost; a piling; a pillar (of the wood); a po
+====================================================================================================
+S04 · t-II-3 · Romanisation · the frame
+ROM : Olen re hadha sona et hosk umo, lo vyskyl hemm sost et Stonwrytan:
+ENG : *Together they ended it, with the oldest saying of the guild:*
+  phrase = et Hosk: the Title ('the lintel')
+  phrase = cadh et hosk um: end, finish (a work, a tale, a telling): 'lay the capstone upon'
+  Olen           | page: together               | analyzer: together                 | lex: together; united, together
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  hadha          | page: they two laid          | analyzer: S·lay-IMP.PL             | lex: lay (a stone, a course, a tale); (v.) lay a stone, a course, a tale; a
+  sona           | page: they two               | analyzer: their.two(+S)            | lex: they two (+S); they two
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  hosk           | page: capstone               | analyzer: lintel                   | lex: a lintel; a capstone; (v.) lay the lintel, seal; (of a word-sign) a cr
+  umo            | page: on-it                  | analyzer: upon-3SG.M               | lex: upon, on (+S); upon, on; about, concerning (what a thing is told upon)
+  lo             | page: with                   | analyzer: at(+S)                   | lex: at, by, with (+S); at, by, with (having, being able)
+  vyskyl         | page: saying                 | analyzer: S·saying                 | lex: saying; the act of saying
+  hemm           | page: old                    | analyzer: old                      | lex: old; Elder; ancient; an elder
+  sost           | page: very                   | analyzer: self                     | lex: self, very; self, very: et dask sost 'the very end'; even; own; so (ve
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  Stonwrytan     | page: guild                  | analyzer: guild                    | lex: the guild; the Stonewrights; the Stonewrights, the guild
+====================================================================================================
+S05 · t-III-1 · Romanisation · the part
+ROM : Lurrvard, et kethow ul vimm et crisur lurr.
+ENG : **Holtward, the keep under the canopy.**
+  phrase = crisur lurr: the canopy (the roof of the forest)
+  phrase = ul vimm: below, under (in the low of); beneath
+  Lurrvard       | page: Holtward               | analyzer: Lurrvard                 | lex: Holtward ('forest-ward'); Holtward (forest-ward)
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  kethow         | page: keep                   | analyzer: keep                     | lex: a keep, a hold; a castle; a citadel; a fortress; a stronghold
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  vimm           | page: low                    | analyzer: low                      | lex: low
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  crisur         | page: roof                   | analyzer: roof                     | lex: a roof
+  lurr           | page: forest                 | analyzer: forest                   | lex: a forest
+====================================================================================================
+S05 · t-III-2 · Romanisation
+ROM : Doss maver vothol reller um hos.
+ENG : Someone must keep a light.
+  phrase = doss maver um: must: 'need is upon Y' (Doss maver um Y), the 'upon' idiom; should: the 'upon' idiom (Doss maver um Y); (Y) must, (Y) needs: 'need is upon Y'
+  phrase = Doss maver vothol reller um hos: Someone must keep a light ('need of tending a lamp is upon someone'): Hesk's word
+  Doss           | page: is                     | analyzer: be                       | lex: be (state, place); be (in a place, in a state; there is)
+  maver          | page: need                   | analyzer: wish                     | lex: wish, want; a need; require
+  vothol         | page: tending                | analyzer: tending                  | lex: tending; caring for; the act of tending
+  reller         | page: lamp                   | analyzer: S·lamp                   | lex: a lamp
+  um             | page: on                     | analyzer: upon(+S)                 | lex: upon, on (+S); upon, on; about, concerning (what a thing is told upon)
+  hos            | page: someone                | analyzer: one                      | lex: one; anyone, anybody (in questions and after not: 'one'); someone ('on
+====================================================================================================
+S06 · t-IV-1 · Romanisation
+ROM : Re stinent o, eth re dhev o. Re stinent o, eth re dhev o. Re stinent o.
+ENG : They cut it, and it grew. They cut it, and it grew. They cut it.
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  stinent        | page: they cut               | analyzer: cut-3PL                  | lex: cut
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  dhev           | page: grew                   | analyzer: S·child                  | lex: a child; grow, sprout
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  stinent        | page: they cut               | analyzer: cut-3PL                  | lex: cut
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  dhev           | page: grew                   | analyzer: S·child                  | lex: a child; grow, sprout
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  stinent        | page: they cut               | analyzer: cut-3PL                  | lex: cut
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+====================================================================================================
+S06 · t-IV-3 · Romanisation
+ROM : Re visk ▒▒▒▒ o lo sest.
+ENG : ▒▒▒▒ kicked it aside.
+  phrase = lo sest: aside, to one side (at the shoulder); beside (at the shoulder of)
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  visk           | page: kicked                 | analyzer: S·foot                   | lex: the foot; a foot; kick
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  lo             | page: at                     | analyzer: at(+S)                   | lex: at, by, with (+S); at, by, with (having, being able)
+  sest           | page: shoulder               | analyzer: shoulder                 | lex: the shoulder; a shoulder
+====================================================================================================
+S07 · t-V-1 · Romanisation · Seren’s caption
+ROM : Fodhrellor, hosen re ryt Seren o.
+ENG : > ::: native legend_wave_chip chip
+> The Wave, as Seren drew it
+> *Shore.*
+> :::
+  Fodhrellor     | page: wave-sign              | analyzer: wave-sign                | lex: the wave-sign
+  hosen          | page: as                     | analyzer: as                       | lex: as, like, the same as; equal
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  ryt            | page: drew                   | analyzer: cut.vow                  | lex: a cut vow, an oath; an inscription; (v.) cut letters, write, swear; ca
+  Seren          | page: Seren                  | analyzer: Seren                    | lex: Seren, 'a single sorrow that overcomes' (a name); a single sorrow that
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+====================================================================================================
+S07 · t-IV-5 · Romanisation
+ROM : Nath re vyskym lo: Hess.
+ENG : I did not tell him to stop.
+  phrase = nath re: did not, had not (the negative past: NEG + PST, the tense particle next to the verb, which it softens)
+  Nath           | page: not                    | analyzer: NEG(+N)                  | lex: not (before a verb, +N); not (before a verb); no, not
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  vyskym         | page: I said                 | analyzer: S·say-1SG                | lex: say
+  lo             | page: to-him                 | analyzer: at(+S)                   | lex: at, by, with (+S); at, by, with (having, being able)
+  Hess           | page: stop!                  | analyzer: stop                     | lex: (v.) stop; neutralize (the clerk's word: 'stop')
+====================================================================================================
+S08 · t-V-2 · Romanisation
+ROM : Re wrodh nahos, eth lo dhrenn fedh sell nath re rytym. Hy ull re hadh Halvard o ul o reskow, lo rask et trenn dasken, hosel.
+ENG : No one spake, and for a long while I wrote not. Then Halvard laid it back at the end of the last row, by itself.
+  phrase = hy ull: afterward, then, from that; so, therefore (from that); then, after that
+  phrase = lo dhrenn: along, by way of (by the course of); through, by way of
+  phrase = nath re: did not, had not (the negative past: NEG + PST, the tense particle next to the verb, which it softens)
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  wrodh          | page: spoke                  | analyzer: S·put.into.words         | lex: (v.) put into words, tell, speak
+  nahos          | page: no one                 | analyzer: none                     | lex: none, no one ('not one')
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  lo             | page: at                     | analyzer: at(+S)                   | lex: at, by, with (+S); at, by, with (having, being able)
+  dhrenn         | page: course                 | analyzer: S·course.of.stones       | lex: a course of stones; a line of writing; a tale laid in one night; a col
+  fedh           | page: time                   | analyzer: time                     | lex: a time, a season; ever (at any time)
+  sell           | page: long                   | analyzer: long                     | lex: long; stretch
+  nath           | page: not                    | analyzer: NEG(+N)                  | lex: not (before a verb, +N); not (before a verb); no, not
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  rytym          | page: I wrote                | analyzer: cut.vow-1SG              | lex: a cut vow, an oath; an inscription; (v.) cut letters, write, swear; ca
+  Hy             | page: from                   | analyzer: from(+S)                 | lex: from, out of (+S); from, out of; off, away from; than ('from': greater
+  ull            | page: that                   | analyzer: that                     | lex: that (after the noun)
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  hadh           | page: laid                   | analyzer: S·lay                    | lex: lay (a stone, a course, a tale); (v.) lay a stone, a course, a tale; a
+  Halvard        | page: Halvard                | analyzer: Halvard                  | lex: Halvard, 'bedrock-warden' (a name)
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  o              | page: its                    | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  reskow         | page: place                  | analyzer: place                    | lex: a place, a seat ('the sitting-place'); a station, a place; a place, a 
+  lo             | page: at                     | analyzer: at(+S)                   | lex: at, by, with (+S); at, by, with (having, being able)
+  rask           | page: end                    | analyzer: S·end                    | lex: the end; (n.) the end (a noun, listed here for the Cry); a cause, a pu
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  trenn          | page: course                 | analyzer: course.of.stones         | lex: a course of stones; a line of writing; a tale laid in one night; a col
+  dasken         | page: last                   | analyzer: final                    | lex: final; last
+  hosel          | page: alone                  | analyzer: alone                    | lex: alone, only, single ('one, a small one'); just, only; lone; simply, on
+====================================================================================================
+S08 · t-V-2 · Romanisation
+ROM : Orr dem drunn. Ul vodh tresk sast, kyl lo sest. Re hyl et hos ull, eth re fenn nahos o. Re vollar o: nawerd.
+ENG : *Go until struck. Where bark splits, turn aside.* That one swerved, and none followed it. We called it a coward.
+  phrase = lo sest: aside, to one side (at the shoulder); beside (at the shoulder of)
+  phrase = ul vodh: where ('in what')
+  Orr            | page: go!                    | analyzer: go                       | lex: go, walk; pass
+  dem            | page: until                  | analyzer: until(+N)                | lex: until, as far as (+N); until, as far as; for, toward, for the sake of;
+  drunn          | page: blow                   | analyzer: mallet                   | lex: a mallet, a hammer; a blow, a stroke; knock; mint, strike (a coin)
+  Ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  vodh           | page: what                   | analyzer: what                     | lex: what?; which (asking)
+  tresk          | page: splits                 | analyzer: cleft                    | lex: a cleft, a split; (v.) cleave, rive, tear; a crack; a gap; separate
+  sast           | page: skin                   | analyzer: skin                     | lex: skin, a hide; a crust
+  kyl            | page: turn!                  | analyzer: change                   | lex: (v.) change; curl, turn; hook, turn back; swerve
+  lo             | page: at                     | analyzer: at(+S)                   | lex: at, by, with (+S); at, by, with (having, being able)
+  sest           | page: shoulder               | analyzer: shoulder                 | lex: the shoulder; a shoulder
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  hyl            | page: swerved                | analyzer: S·change                 | lex: (v.) change; curl, turn; hook, turn back; swerve
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  hos            | page: one                    | analyzer: one                      | lex: one; anyone, anybody (in questions and after not: 'one'); someone ('on
+  ull            | page: that                   | analyzer: that                     | lex: that (after the noun)
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  fenn           | page: followed               | analyzer: follow                   | lex: follow
+  nahos          | page: none                   | analyzer: none                     | lex: none, no one ('not one')
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  vollar         | page: we named               | analyzer: name-1PL                 | lex: a name; call by name, name
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+  nawerd         | page: un-brave               | analyzer: not.brave                | lex: not brave; un-brave
+====================================================================================================
+S09 · t-V-7 · Romanisation
+ROM : Um wirnenn Halvard re yal et lodh ul rhynyl.
+ENG : On Halvard's trowel the mortar was drying.
+  Um             | page: on                     | analyzer: upon(+S)                 | lex: upon, on (+S); upon, on; about, concerning (what a thing is told upon)
+  wirnenn        | page: trowel                 | analyzer: S·trowel                 | lex: a trowel
+  Halvard        | page: Halvard                | analyzer: Halvard                  | lex: Halvard, 'bedrock-warden' (a name)
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  yal            | page: was                    | analyzer: S·be.PST                 | lex: (old) was: the suppletive past of doss, re yal-
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  lodh           | page: mortar                 | analyzer: mortar                   | lex: mortar; the mortar line; the bond; the mortar line of a text; a bond; 
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  rhynyl         | page: setting                | analyzer: setting.fast             | lex: setting fast; taking hold; the act of setting fast
+====================================================================================================
+S09 · t-V-7 · Romanisation
+ROM : Vardh, re lodhith pana ul hos, somm nath re hossa sona tul.
+ENG : "God, thou madest these two one ere either drew breath."
+  phrase = nath re: did not, had not (the negative past: NEG + PST, the tense particle next to the verb, which it softens)
+  phrase = somm nath: ere, before (of a clause): somm nath … tul, 'while … not yet'
+  Vardh          | page: God                    | analyzer: S·God                    | lex: God (used of nothing else); God
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  lodhith        | page: you bonded             | analyzer: mortar-2SG               | lex: mortar; the mortar line; the bond; the mortar line of a text; a bond; 
+  pana           | page: both                   | analyzer: both                     | lex: both
+  ul             | page: into                   | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  hos            | page: one                    | analyzer: one                      | lex: one; anyone, anybody (in questions and after not: 'one'); someone ('on
+  somm           | page: while                  | analyzer: while                    | lex: while, as long as; as, while
+  nath           | page: not                    | analyzer: NEG(+N)                  | lex: not (before a verb, +N); not (before a verb); no, not
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  hossa          | page: they two breathed      | analyzer: breath-IMP.PL            | lex: breath; breathe; live; outlive, live on
+  sona           | page: they two               | analyzer: their.two(+S)            | lex: they two (+S); they two
+  tul            | page: yet                    | analyzer: yet                      | lex: yet, still; still, yet
+====================================================================================================
+S10 · t-VI-3 · Romanisation
+ROM : Re heth et mesk o.
+ENG : The wood took it.
+  Re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  heth           | page: held                   | analyzer: S·hold                   | lex: (v.) hold, keep; (of the wood) know; know (the wood, by touch)
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  mesk           | page: wood                   | analyzer: tree                     | lex: a tree; wood; a log; timber
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+====================================================================================================
+S10 · t-VI-3 · Romanisation
+ROM : Dem ull doss orrol lo hos lunt hosel: et hebbet, eth et lummol.
+ENG : "So far can one people go alone: the gift, and the kneeling."
+  Dem            | page: as far as              | analyzer: until(+N)                | lex: until, as far as (+N); until, as far as; for, toward, for the sake of;
+  ull            | page: that                   | analyzer: that                     | lex: that (after the noun)
+  doss           | page: is                     | analyzer: be                       | lex: be (state, place); be (in a place, in a state; there is)
+  orrol          | page: going                  | analyzer: going                    | lex: a going; a manner, a way; a road ('a going'); going; walking; the act 
+  lo             | page: at                     | analyzer: at(+S)                   | lex: at, by, with (+S); at, by, with (having, being able)
+  hos            | page: one                    | analyzer: one                      | lex: one; anyone, anybody (in questions and after not: 'one'); someone ('on
+  lunt           | page: people                 | analyzer: people                   | lex: a people, a nation; folk
+  hosel          | page: alone                  | analyzer: alone                    | lex: alone, only, single ('one, a small one'); just, only; lone; simply, on
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  hebbet         | page: gift                   | analyzer: gift                     | lex: a gift ('a given thing'); a present; given (the participle)
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  lummol         | page: kneeling               | analyzer: kneeling                 | lex: kneeling; the act of kneeling
+====================================================================================================
+S11 · contents · Romanisation · the Contents
+ROM : Hylleth sa re nydh et Hald · Kael Nydherd, ul vran nydhyl · ul lern Dhevyl
+ENG : V.5 · The Tides, as the Wall Counted Them · *Kael the Counter, in six counts* · facing V.6
+  phrase = Hylleth sa re nydh et Hald: V.5 The Tides, as the Wall Counted Them
+  phrase = Kael Nydherd: Kael the Counter
+  phrase = ul lern: against, in the face of; ahead, in front; before, in front of (in the face of)
+  Hylleth        | page: Tides                  | analyzer: tide-PL                  | lex: a tide
+  sa             | page: that                   | analyzer: REL(+S)                  | lex: who, which, that (relative, +S); who, which, that (relative); that (th
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  nydh           | page: counted                | analyzer: count                    | lex: (v.) count; measure, reckon; weigh, reckon
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  Hald           | page: Wall                   | analyzer: wall                     | lex: a wall ('rock made to stand'); a wall; a barrier
+  Kael           | page: Kael                   | analyzer: tally-notch              | lex: a tally-notch; Kael (a name); Kael (a name: Kael the Counter); a notch
+  Nydherd        | page: Counter                | analyzer: counter                  | lex: a counter: Kael Nydherd; one who counts
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  vran           | page: six                    | analyzer: six                      | lex: six
+  nydhyl         | page: counts                 | analyzer: catalogue                | lex: a catalogue, a list; the contents, a list; a reckoning; a sounding (a 
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  lern           | page: face                   | analyzer: face                     | lex: the face; the bow of a hull (its face); a face; the front; a shape; a 
+  Dhevyl         | page: Growing                | analyzer: S·birth                  | lex: a birth; a growing; growth; V.6 Of the Growing; growing; sprouting; th
+====================================================================================================
+S11 · contents · Romanisation · the Contents
+ROM : Hebbet sa re yal kethet hos clem · et mesk, hosen re hethe Halyna o
+ENG : IV.4 · The Gift Held an Hour · *the wood, as {{Halyna}} knew it*
+  phrase = Hebbet sa re yal kethet hos clem: IV.4 The Gift Held an Hour
+  Hebbet         | page: Gift                   | analyzer: gift                     | lex: a gift ('a given thing'); a present; given (the participle)
+  sa             | page: that                   | analyzer: REL(+S)                  | lex: who, which, that (relative, +S); who, which, that (relative); that (th
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  yal            | page: was                    | analyzer: S·be.PST                 | lex: (old) was: the suppletive past of doss, re yal-
+  kethet         | page: held                   | analyzer: held                     | lex: held, kept (the participle)
+  hos            | page: one                    | analyzer: one                      | lex: one; anyone, anybody (in questions and after not: 'one'); someone ('on
+  clem           | page: hour                   | analyzer: hour                     | lex: an hour
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  mesk           | page: wood                   | analyzer: tree                     | lex: a tree; wood; a log; timber
+  hosen          | page: as                     | analyzer: as                       | lex: as, like, the same as; equal
+  re             | page: (past)                 | analyzer: PST(+S)                  | lex: past particle (+S); past particle
+  hethe          | page: they two knew          | analyzer: S·hold-3DU               | lex: (v.) hold, keep; (of the wood) know; know (the wood, by touch)
+  Halyna         | page: Halyna (the two)       | analyzer: Halyna                   | lex: Halyna: the pair-name of Halvard and Rhyna, the Bonded of the Keep; Ha
+  o              | page: it                     | analyzer: his/it(+S)               | lex: he, it; his, its (+S); he, it/his, its
+====================================================================================================
+W01 · t-II-2 · Romanisation · the reading, second ink
+ROM : — Myst ul molt et gannath. Nel myst. Nath noss brod —
+ENG : *— Grey among the trunks. Not fog. There is no word —*
+  phrase = ul molt: among, amid, in the middle of (in the heart of)
+  Myst           | page: grey                   | analyzer: sea-fog                  | lex: sea-fog; the grey; (adj.) grey; mist
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  molt           | page: heart                  | analyzer: heart                    | lex: a heart; the middle; a temper
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  gannath        | page: posts                  | analyzer: posts                    | lex: posts; a palisade (a plural with a sense of its own)
+  Nel            | page: is not                 | analyzer: is.not                   | lex: is not (the copula, negative); is · was · is not · was not (the copula
+  myst           | page: fog                    | analyzer: sea-fog                  | lex: sea-fog; the grey; (adj.) grey; mist
+  Nath           | page: not                    | analyzer: NEG(+N)                  | lex: not (before a verb, +N); not (before a verb); no, not
+  noss           | page: is                     | analyzer: N·be                     | lex: be (state, place); be (in a place, in a state; there is)
+  brod           | page: word                   | analyzer: word                     | lex: a word
+====================================================================================================
+W02 · t-IV-2 · Romanisation · the reading, first ink
+ROM : — Rellorath lilv, um et galat nawrodh —
+ENG : *— Soft letters, on the mute thing —*
+  Rellorath      | page: signs                  | analyzer: signs                    | lex: signs; a code (a plural with a sense of its own)
+  lilv           | page: soft                   | analyzer: soft                     | lex: soft; rot, go soft
+  um             | page: on                     | analyzer: upon(+S)                 | lex: upon, on (+S); upon, on; about, concerning (what a thing is told upon)
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  galat          | page: thing                  | analyzer: anything                 | lex: anything (a thing); something, a thing; a thing ('what stands made')
+  nawrodh        | page: mute                   | analyzer: mute                     | lex: mute, speechless
+====================================================================================================
+W03 · t-IV-4 · Romanisation · the reading, second ink
+ROM : — Garlath, dhaedh, fedh sell. Flenneth. Nel — brodath, hosen flenneth. Hos, eth hos, eth hos.
+ENG : *— Hands, warm, a long while. Leaves. No — words, like leaves. One, and one, and one.*
+  Garlath        | page: hands                  | analyzer: hand-PL                  | lex: a hand; a hand of writing; a fist; use, handle
+  dhaedh         | page: warm                   | analyzer: warm                     | lex: warm
+  fedh           | page: time                   | analyzer: time                     | lex: a time, a season; ever (at any time)
+  sell           | page: long                   | analyzer: long                     | lex: long; stretch
+  Flenneth       | page: leaves                 | analyzer: leaf.of.a.book.or.of.slate-PL | lex: a leaf of a book or of slate; a sheet; a page; a leaf of a tree, of a 
+  Nel            | page: is not                 | analyzer: is.not                   | lex: is not (the copula, negative); is · was · is not · was not (the copula
+  brodath        | page: words                  | analyzer: words                    | lex: words; a speech (a plural with a sense of its own)
+  hosen          | page: like                   | analyzer: as                       | lex: as, like, the same as; equal
+  flenneth       | page: leaves                 | analyzer: leaf.of.a.book.or.of.slate-PL | lex: a leaf of a book or of slate; a sheet; a page; a leaf of a tree, of a 
+  Hos            | page: one                    | analyzer: one                      | lex: one; anyone, anybody (in questions and after not: 'one'); someone ('on
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  hos            | page: one                    | analyzer: one                      | lex: one; anyone, anybody (in questions and after not: 'one'); someone ('on
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  hos            | page: one                    | analyzer: one                      | lex: one; anyone, anybody (in questions and after not: 'one'); someone ('on
+====================================================================================================
+W04 · t-IV-6 · Romanisation · the reading, first ink
+ROM : — Gannath. Dem neld, dem et lunn, hy —
+ENG : *— Poles. Out, to the open, away from —*
+  phrase = dem neld: away, far off (to far)
+  Gannath        | page: posts                  | analyzer: posts                    | lex: posts; a palisade (a plural with a sense of its own)
+  Dem            | page: to                     | analyzer: until(+N)                | lex: until, as far as (+N); until, as far as; for, toward, for the sake of;
+  neld           | page: far                    | analyzer: N·far                    | lex: far
+  dem            | page: to                     | analyzer: until(+N)                | lex: until, as far as (+N); until, as far as; for, toward, for the sake of;
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  lunn           | page: open                   | analyzer: freedom                  | lex: freedom; open, make room; room, space; (lunn X hy Y) clear a place of 
+  hy             | page: from                   | analyzer: from(+S)                 | lex: from, out of (+S); from, out of; off, away from; than ('from': greater
+====================================================================================================
+W05 · t-V-3 · Romanisation · the dateline
+ROM : Ul nunn et grem sullast.
+ENG : *Deep in the third winter.*
+  Ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  nunn           | page: deep                   | analyzer: N·deep                   | lex: deep; (n.) the deep
+  et             | page: the                    | analyzer: the                      | lex: the (the article); the (the article; never mutates)
+  grem           | page: winter                 | analyzer: winter                   | lex: winter
+  sullast        | page: third                  | analyzer: third                    | lex: a third; the unbonded third of a hearth
+====================================================================================================
+W06 · t-V-4 · Romanisation · the reading, first ink
+ROM : — Gendeth hosen crisur, feth ul vimm. Hellur — nel. Meskan.
+ENG : *— Boughs for a roof, moss under. A hall — no. A grove.*
+  phrase = ul vimm: below, under (in the low of); beneath
+  Gendeth        | page: boughs                 | analyzer: shoot.from.a.stump-PL    | lex: a shoot from a stump; a branch, a bough; brush, undergrowth
+  hosen          | page: like                   | analyzer: as                       | lex: as, like, the same as; equal
+  crisur         | page: roof                   | analyzer: roof                     | lex: a roof
+  feth           | page: moss                   | analyzer: moss                     | lex: moss
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  vimm           | page: low                    | analyzer: low                      | lex: low
+  Hellur         | page: hall                   | analyzer: hall                     | lex: a hall
+  nel            | page: is not                 | analyzer: is.not                   | lex: is not (the copula, negative); is · was · is not · was not (the copula
+  Meskan         | page: grove                  | analyzer: grove                    | lex: a grove, a stand of trees ('the folk of trees')
+====================================================================================================
+W07 · t-V-6 · Romanisation · the reading, second ink
+ROM : — Meskrivullath ul vimm gor yalat, lodhant. Lonn, eth lonn, eth lonn.
+ENG : *— Roots under all, binding. Kin, and kin, and kin.*
+  phrase = gor yalat: everything (gor + S galat)
+  phrase = ul vimm: below, under (in the low of); beneath
+  Meskrivullath  | page: roots                  | analyzer: root-PL                  | lex: a root ('tree-foundation')
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  vimm           | page: low                    | analyzer: low                      | lex: low
+  gor            | page: every                  | analyzer: every(+S)                | lex: every, all (+S); every, all; all, every; any; each
+  yalat          | page: thing                  | analyzer: S·anything               | lex: anything (a thing); something, a thing; a thing ('what stands made')
+  lodhant        | page: they bind              | analyzer: mortar-3PL               | lex: mortar; the mortar line; the bond; the mortar line of a text; a bond; 
+  Lonn           | page: kin                    | analyzer: kin.by.blood             | lex: kin by blood; a kind, a sort; a kindred
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  lonn           | page: kin                    | analyzer: kin.by.blood             | lex: kin by blood; a kind, a sort; a kindred
+  eth            | page: and                    | analyzer: and                      | lex: and; besides, also; too, also
+  lonn           | page: kin                    | analyzer: kin.by.blood             | lex: kin by blood; a kind, a sort; a kindred
+====================================================================================================
+W08 · t-VI-2 · Romanisation · the reading, first ink
+ROM : — Meskrivullath, ul morrol. Tolm, ul dessyl.
+ENG : *— Roots, walking. Stone, answering.*
+  Meskrivullath  | page: roots                  | analyzer: root-PL                  | lex: a root ('tree-foundation')
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  morrol         | page: walking                | analyzer: N·going                  | lex: a going; a manner, a way; a road ('a going'); going; walking; the act 
+  Tolm           | page: stone                  | analyzer: stone                    | lex: a stone; a letter of the course-hand; a dressed stone of a wall; an as
+  ul             | page: in                     | analyzer: in(+N)                   | lex: in (+N); in; into; within
+  dessyl         | page: answering              | analyzer: N·answer                 | lex: an answer, an answering; a confession (an answering for a deed); answe

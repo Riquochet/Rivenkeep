@@ -1,0 +1,399 @@
+sad | prumul | adj | sad
+sail | wemm | n | a sail
+sail | farr | v | sail
+sailor | farr+Ard | n | a sailor
+salt | tant | n | salt
+same | hos+en | adj | the same
+sand | grull | n | sand
+save | renn | v | save
+say | mysk | v | say
+scaffold | prynur | n | a scaffold
+scarce | merr | adj | scarce
+scatter | drig | v | scatter
+scream | scyndal | n | a scream
+scream | scyndal | v | scream
+scribe | ryt+Ard | n | a scribe
+sea | wadh | n | the sea
+seafarer | wadh+Ard | n | a seafarer ("sea-one")
+seal | hosk | v | seal
+sealing | hoskol | n | a sealing
+seam | trovul | n | a seam
+search | raevul | v | search
+season | fedh | n | a season
+season | fedh+At | adj | seasoned
+second | pawast | num | second
+secret | lemm+At | n | a secret ("a hidden thing")
+see | vesk | v | see
+seed | fymm+At | n | seed ("a sown thing")
+seedling | gend+el | n | a seedling ("a small shoot")
+seem | vesk | v | seem (be seen)
+seer | veskerd | n | a seer
+seize | grik | v | seize
+seldom | ~merr fedheth | adv | seldom (few times)
+sell | hynal | v | sell
+send | lusk | v | send (off), let go
+sender | lusk+Ard | n | a sender
+sentence | trenn | n | a sentence (a course of words)
+separate | tresk | v | separate
+separation | tresk+Ol | n | a separation
+sergeant | crenn+el | n | a sergeant ("a small captain")
+serve | par | v | serve (on guard)
+set | cadh | v | set
+set | senn | v | set (of the sun: go down)
+seven | dhom | num | seven
+shadow | dhenn | n | a shadow
+shaft | myger | n | a shaft
+shake | marr | v | shake
+shall | es | part | shall (the future particle)
+shallow | venth | n | shallow water
+shallow | venth+en | adj | shallow
+shame | kaemul | n | shame
+shape | lern | n | a shape
+share | saed | v | share, halve
+sharp | gand | adj | sharp
+she | ey | pron | she
+sheet | flenn | n | a sheet
+shelf | genth | n | a shelf
+shell | pedh | n | a shell (a shot)
+shelter | cumm | n | a shelter
+shift | marr | v | shift
+shingle | dhysal | n | shingle
+ship | sceth | n | a ship
+shoot | bramm | v | shoot, fire
+shoot | gend | n | a shoot
+shore | orrow | n | the shore
+shoreland | Orrow | n | the Shorelands
+short | na-sell | adj | short ("un-long")
+should | ~doss maver um | v | should: the "upon" idiom (Doss maver um Y)
+shoulder | sest | n | a shoulder
+shout | dast | v | shout
+shove | hast | v | shove
+show | lestir | v | show
+sickness | cathal | n | sickness
+side | lern | n | a side
+siege | tynur | n | a siege
+sight | vesk+Ol | n | sight
+sign | rellor | n | a sign
+silence | velv+Oth | n | silence
+silent | velv | adj | silent
+silver | lenn | n | silver
+silvered | lenn+At | adj | silvered
+simply | hos+el | adv | simply, only
+since | ~hy amm | conj | since (from when)
+sing | vell | v | sing
+singer | vell+Ard | n | a singer
+single | hos+el | adj | single
+singly | hos+el | adv | singly
+sink | felm | v | sink
+sit | resk | v | sit
+sitting | resk+Ol | n | a sitting
+six | vran | num | six
+size | strom+Oth | n | size, greatness
+skill | prass+Oth | n | skill
+skip | hunner | v | skip
+sky | helv | n | the sky
+slacken | lusk | v | slacken
+slate | halflenn | n | slate
+slay | hurr | v | slay
+sleep | aedh | n | sleep
+sleep | aedh | v | sleep
+sleeper | aedh+Ard | n | a sleeper
+sleeve | covv+el | n | a sleeve ("a small cloak")
+sliver | saed+el | n | a sliver
+slope | ferr | v | slope
+slow | niss | adj | slow
+slowly | niss | adv | slowly
+small | lyss | adj | small
+smithy | drunnow | n | a smithy
+smoke | dhidh | n | smoke
+smooth | dasor | v | smooth
+snow | sulv | n | snow
+so | ~hy ull | adv | so, therefore (from that)
+so | sost | adv | so (very)
+soar | dhenth | v | soar
+sod | linth | n | sod, turf
+soft | lilv | adj | soft
+soil | trun | n | soil
+soldier | hesperd | n | a soldier
+some | merr | det | some, a few
+someone | hos | pron | someone ("one")
+something | gal+At | pron | something, a thing
+sometimes | fedh+Ath | adv | sometimes ("times")
+somewhere | ~ul reskow | adv | somewhere (in a place)
+son | hass | n | a son
+song | vell | n | a song
+soon | pynt | adv | soon
+soul | myrral | n | a soul
+sound | hunn+At | n | a sound ("a heard thing")
+sound | venn | adj | sound, whole
+sounding | nydh+Ol | n | a sounding (a reckoning of the water)
+south | bith^lern | n | the south ("hot side")
+sovereign | strom | adj | sovereign
+spacing | lodh | n | spacing (the mortar between)
+spade | pask+Ard | n | a spade ("digger")
+span | heskal | n | a span
+spark | drod | n | a spark
+speak | brodh | v | speak
+speech | brodhen | n | speech
+speed | pynt+Oth | n | speed
+spend | vyssor | v | spend
+spill | vidh | v | spill
+spire | pell | n | a spire
+split | tresk | v | split
+spring | heth | n | spring
+spring | nynth | n | a spring (of water)
+square | gemm^gorn | n | a square ("four-corner")
+staff | hulter | n | a staff
+stain | luth | v | stain
+stair | bystir | n | a stair
+stand | ston | v | stand
+stand | tald | v | stand up
+standard | movenn | n | a standard
+standing | ston+At | adj | standing
+star | elth | n | a star
+station | resk+ow | n | a station, a place
+stay | tovv | v | stay
+steady | ston | adj | steady
+step | lusul | n | a step
+stern | sest+ow | n | a stern
+stick | hulter | n | a stick
+still | tul | adv | still, yet
+still | sol | adj | still, at rest
+stone | tolm | n | stone
+stop | hess | v | stop
+storm | nerdess | n | a storm
+story | trenn | n | a story
+straight | venn | adj | straight
+strake | taless | n | a strake
+strange | dyss | adj | strange
+stranger | besk | n | a stranger
+straw | broc^linth | n | straw ("dry-grass")
+strength | mylenn | n | strength
+stretch | sell | v | stretch
+strike | drunn | v | strike
+stroke | stin+el | n | a stroke ("a single cut")
+stronghold | kethow | n | a stronghold
+stump | brynt | n | a stump
+such | ~hosen sy | det | such (like this)
+summer | syst | n | summer
+sun | rerd | n | the sun
+sunset | rerd^senn | n | sunset ("sun-going-down")
+surf | spant | n | surf
+sustain | ston | v | sustain
+swear | ryt | v | swear
+swell | fodh | n | a swell
+swerve | kyl | v | swerve
+sword | hesp | n | a sword
+syllable | brod+el | n | a syllable ("a small word")
+symbol | rellor | n | a symbol
+table | genth | n | a table
+tablet | flenn+el | n | a tablet ("a small leaf")
+take | grik | v | take
+tale | trenn | n | a tale
+tall | susk | adj | tall
+tangle | bysk+At | adj | tangled
+taste | nask | n | a taste
+teach | ammad | v | teach
+tear | tresk | v | tear
+tear | semm | n | a tear
+tell | brodh | v | tell
+teller | brodh+Ard | n | a teller
+telling | brodh+Ol | n | a telling
+temper | molt | n | a temper
+temple | ~lest Vardh | n | a temple
+ten | noth | num | ten
+tenth | noth+Ast | num | tenth
+term | haethil | n | terms (of peace)
+terror | ludal | n | terror
+text | ryt | n | a text
+than | hy | prep | than ("from": greater from X)
+that | ull | det | that
+that | sa | conj | that (the relative particle as the tie of a clause)
+the | et | art | the
+then | ~amm ull | adv | then (that when)
+then | ~hy ull | adv | then, after that
+there | ~lo ull | adv | there (at that)
+they | so | pron | they
+thin | bynt | adj | thin
+thing | gal+At | n | a thing ("what stands made")
+think | kaever | v | think
+third | sullast | num | third
+this | sy | det | this
+though | veth | conj | though
+thought | kaever | n | a thought
+thousand | bost | num | a thousand (loosely: "a great heap", four hundred)
+three | sull | num | three
+throat | hoss+ow | n | a throat ("the breath-place")
+throne | ~reskow strom | n | a throne (a great seat)
+through | ~lo dhrenn | prep | through, by way of
+throw | drig | v | throw
+thunder | ~brammol helv | n | thunder (the roaring of the sky)
+tide | hyll | n | a tide
+tie | bysk | v | tie
+timber | mesk | n | timber
+time | fedh | n | a time
+tip | ferr | v | tip
+title | hosk | n | a title
+to | dem | prep | to, as far as
+to | @VN | part | to (before a verb): the verbal noun carries it
+together | ol+en | adv | together
+toil | pyskorn | n | toil
+tomorrow | ryst | n | tomorrow
+tongue | brodhen | n | a tongue (a speech)
+tongue | serr | n | a tongue (of the mouth)
+tonight | ~vess sy | adv | tonight (this night)
+too | eth | adv | too, also
+tool | garl+el | n | a tool ("a small hand")
+top | bisk | n | the top
+torchlight | ~baegyth dhymorn | n | torchlight
+torpedo | ~pedh yunn | n | a torpedo (a shot of the deep)
+touch | femm | v | touch
+toward | dem | prep | toward
+tower | taldow | n | a tower
+town | hinnar | n | a town
+track | misk^ryt | n | a track ("foot-cut")
+trade | serdul | n | trade
+translate | brod^lymm | v | translate ("word-carry": to carry words across)
+transport | lymm^sceth | n | a transport ("bring-ship")
+trappings | rerr+el | n | trappings
+traveller | orr+Ard | n | a traveller
+tree | mesk | n | a tree
+treeling | mesk+el | n | a treeling, a root-man ("a small tree": the wall's word)
+tremble | marr | v | tremble
+trouble | prumul | adj | troubled
+troop | cryrull | n | a troop
+trowel | birnenn | n | a trowel
+true | venn | adj | true
+truly | venn | adv | truly
+trunk | gann | n | a trunk
+trust | osk | n | trust
+trust | osk | v | trust
+truth | vennoth | n | truth
+try | raevul | v | try
+tumble | omm | v | tumble
+turn | kyl | v | turn
+turning | kyl+Ol | n | a turning
+twelve | delv | num | twelve
+twelvefold | delvoth | adj | twelvefold
+twenty | murr | num | twenty
+twice | ~pa fedh | adv | twice
+two | pa | num | two
+unbonded | nalodhat | adj | unbonded
+unbroken | na-cresk+At | adj | unbroken
+under | ~ul vimm | prep | under
+underfoot | ~ul vimm misk | adv | underfoot (under foot)
+underside | vimm^lern | n | an underside ("low-face")
+understand | hyrril | v | understand
+united | ol+en | adj | united, together
+unknown | na-sesk+At | adj | unknown
+unless | ~amm nath | conj | unless (when not)
+unread | na-vesk+At | adj | unread
+untended | na-voth+At | adj | untended
+until | dem | prep | until
+untold | nawrodhat | adj | untold
+unwelcome | na-vall | adj | unwelcome, unloved
+up | ~dem susk | adv | up, upward (to the height)
+upon | um | prep | upon
+upright | venn | adj | upright
+use | garl | v | use, handle
+vanity | lyrness | n | vanity
+vast | strom | adj | vast
+vault | nelter | n | a vault
+veil | esk+At | n | a veil ("a cover")
+vein | lorr^trenn | n | a vein ("blood-course")
+verse | vell | n | verse
+very | sost | adv | very
+vessel | sceth | n | a vessel
+voice | carm | n | a voice
+volley | sevir | n | a volley
+vote | naelur+Ol | n | a vote (a choosing)
+vow | ryt | n | a vow
+voyage | farr+Ol | n | a voyage
+wait | tovv | v | wait
+wake | gern | v | wake
+wake | rynn | v | wake (up)
+walk | orr | v | walk
+wall | hald | n | a wall
+want | maver | v | want
+war | gorr+Ol | n | war ("fighting")
+warship | gorr^sceth | n | a warship ("fight-ship")
+ward | par+ow | n | a ward
+warden | pard | n | a warden
+warm | dhaedh | adj | warm
+warn | peltir | v | warn
+warning | peltir | n | a warning
+watch | nend | v | watch
+watch | par | n | a watch
+water | nynth | n | water
+wave | fodh | n | a wave
+way | orr+Ol | n | a way
+we | ol | pron | we
+weapon | hesp | n | a weapon
+wear | covv | v | wear
+weather | helv | n | weather
+weave | comull | v | weave
+wed | hosk | v | wed (seal)
+wedding | hoskol | n | a wedding
+week | dynd | n | a week
+weep | semm | v | weep
+weigh | nydh | v | weigh, reckon
+well | gell | adv | well
+west | rerd^senn | n | the west ("sun-down")
+western | rerd^senn+en | adj | western
+wet | thenth | adj | wet
+what | vodh | pron | what
+wheel | scaevur | n | a wheel
+when | amm | conj | when
+where | ~ul vodh | adv | where ("in what")
+wherever | @gor sa | adv | wherever: gor + the relative
+whether | ho | part | whether
+which | sa | pron | which (relative)
+which | vodh | pron | which (asking)
+whichever | @gor sa | pron | whichever: gor + the relative
+while | somm | conj | while
+whisper | medh | v | whisper
+white | sulv | adj | white
+who | sa | pron | who (relative)
+who | cedh | pron | who (asking)
+whoever | @gor sa | pron | whoever: gor + the relative
+whole | tunn | adj | whole
+why | ~hy vodh | adv | why ("from what")
+wide | ryss | adj | wide
+width | ryss+Oth | n | width
+wife | verr | n | a wife
+wild | dend | adj | wild
+will | es | part | will (the future particle)
+wind | helv^hoss | n | wind ("sky-breath")
+window | disker | n | a window
+winged | dhenth+en | adj | winged
+winter | grem | n | winter
+wisdom | podul+Oth | n | wisdom
+wise | podul | adj | wise
+with | lo | prep | with
+wither | broc | v | wither, dry up
+within | ul | prep | within
+without | @na- | prep | without: na- on the verbal noun, or nath ... lo
+woman | essa | n | a woman
+wood | mesk | n | wood
+word | brod | n | a word
+work | gald+At | n | a work
+work | pyskorn | v | work, toil
+workshop | pyskorn+ow | n | a workshop
+world | trun | n | the world ("the ground")
+worship | ammel | v | worship
+worth | dyll+Oth | n | worth
+would | es | part | would (the future particle, in a past frame)
+wound | grest+At | n | a wound
+wounded | grest+At | adj | wounded
+wrap | esk | v | wrap
+wreck | kaelir | n | a wreck
+write | ryt | v | write
+wrong | na-venn | adj | wrong
+wrong | grest | n | a wrong
+yard | lusul | n | a yard (a pace)
+year | surr | n | a year
+yet | tul | adv | yet
+you | tho | pron | you (one)
+you | va | pron | you (many)
+young | tevel | adj | young
+youth | rall | n | a youth

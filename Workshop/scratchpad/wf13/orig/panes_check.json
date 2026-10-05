@@ -1,0 +1,421 @@
+{
+ "leaves": 41,
+ "blocks": 1367,
+ "missing": [],
+ "coverage2": {
+  "text": 1300,
+  "same item": 1300,
+  "furniture": 29
+ },
+ "slots": {
+  "svg3": 269,
+  "svg3 distinct": 266,
+  "native": 7
+ },
+ "svg3_bytes": 11372321,
+ "renders": {
+  "jobs": 391,
+  "failed": [
+   "S10_VI-1-twohomes"
+  ],
+  "set": 263,
+  "not set": [
+   "S10_VI-1_2",
+   "VI-2-eirlenth",
+   "VI-2-eirlenth_r01",
+   "VI-2-eirlenth_r02",
+   "VI-2-eirlenth_r03",
+   "VI-2-eirlenth_r04",
+   "VI-2-eirlenth_r05",
+   "VI-2-eirlenth_r06",
+   "VI-2-eirlenth_r07",
+   "VI-2-eirlenth_r08",
+   "VI-2-eirlenth_r09",
+   "VI-2-eirlenth_r10",
+   "VI-2-eirlenth_r11",
+   "VI-2-eirlenth_r15",
+   "VI-2-eirlenth_r16",
+   "VI-2-esthaer",
+   "VI-2-esthaer_r01",
+   "VI-2-esthaer_r02",
+   "VI-2-esthaer_r03",
+   "VI-2-esthaer_r04",
+   "VI-2-esthaer_r05",
+   "VI-2-esthaer_r06",
+   "VI-2-esthaer_r07",
+   "VI-2-esthaer_r08",
+   "VI-2-esthaer_r09",
+   "VI-2-esthaer_r10",
+   "VI-2-esthaer_r11",
+   "VI-2-esthaer_r13",
+   "VI-2-esthaer_r14",
+   "VI-2-leavaren",
+   "VI-2-leavaren_r01",
+   "VI-2-leavaren_r02",
+   "VI-2-leavaren_r03",
+   "VI-2-leavaren_r04",
+   "VI-2-leavaren_r05",
+   "VI-2-leavaren_r06",
+   "VI-2-leavaren_r07",
+   "VI-2-leavaren_r08",
+   "VI-2-leavaren_r09",
+   "VI-2-leavaren_r10",
+   "VI-2-leavaren_r11",
+   "VI-2-leavaren_r13",
+   "VI-2-leavaren_r14",
+   "VI-2-naelthar",
+   "VI-2-naelthar_r01",
+   "VI-2-naelthar_r02",
+   "VI-2-naelthar_r03",
+   "VI-2-naelthar_r04",
+   "VI-2-naelthar_r05",
+   "VI-2-naelthar_r06",
+   "VI-2-naelthar_r07",
+   "VI-2-naelthar_r08",
+   "VI-2-naelthar_r09",
+   "VI-2-naelthar_r10",
+   "VI-2-naelthar_r11",
+   "VI-2-naelthar_r13",
+   "VI-2-naelthar_r14",
+   "VI-2-neivaere",
+   "VI-2-neivaere_r01",
+   "VI-2-neivaere_r02",
+   "VI-2-neivaere_r03",
+   "VI-2-neivaere_r04",
+   "VI-2-neivaere_r05",
+   "VI-2-neivaere_r06",
+   "VI-2-neivaere_r07",
+   "VI-2-neivaere_r08",
+   "VI-2-neivaere_r09",
+   "VI-2-neivaere_r10",
+   "VI-2-neivaere_r11",
+   "VI-2-neivaere_r15",
+   "VI-2-neivaere_r16",
+   "VI-2-ralensaen",
+   "VI-2-ralensaen_r01",
+   "VI-2-ralensaen_r02",
+   "VI-2-ralensaen_r03",
+   "VI-2-ralensaen_r04",
+   "VI-2-ralensaen_r05",
+   "VI-2-ralensaen_r06",
+   "VI-2-ralensaen_r07",
+   "VI-2-ralensaen_r08",
+   "VI-2-ralensaen_r09",
+   "VI-2-ralensaen_r10",
+   "VI-2-ralensaen_r11",
+   "VI-2-ralensaen_r13",
+   "VI-2-ralensaen_r14",
+   "VI-2-rhenvael",
+   "VI-2-rhenvael_r01",
+   "VI-2-rhenvael_r02",
+   "VI-2-rhenvael_r03",
+   "VI-2-rhenvael_r04",
+   "VI-2-rhenvael_r05",
+   "VI-2-rhenvael_r06",
+   "VI-2-rhenvael_r07",
+   "VI-2-rhenvael_r08",
+   "VI-2-rhenvael_r09",
+   "VI-2-rhenvael_r10",
+   "VI-2-rhenvael_r11",
+   "VI-2-rhenvael_r13",
+   "VI-2-rhenvael_r14",
+   "VI-2-senneir",
+   "VI-2-senneir_r01",
+   "VI-2-senneir_r02",
+   "VI-2-senneir_r03",
+   "VI-2-senneir_r04",
+   "VI-2-senneir_r05",
+   "VI-2-senneir_r06",
+   "VI-2-senneir_r07",
+   "VI-2-senneir_r08",
+   "VI-2-senneir_r09",
+   "VI-2-senneir_r10",
+   "VI-2-senneir_r11",
+   "VI-2-senneir_r13",
+   "VI-2-senneir_r14",
+   "VI-2-vaelress",
+   "VI-2-vaelress_r01",
+   "VI-2-vaelress_r02",
+   "VI-2-vaelress_r03",
+   "VI-2-vaelress_r04",
+   "VI-2-vaelress_r05",
+   "VI-2-vaelress_r06",
+   "VI-2-vaelress_r07",
+   "VI-2-vaelress_r08",
+   "VI-2-vaelress_r09",
+   "VI-2-vaelress_r10",
+   "VI-2-vaelress_r11",
+   "VI-2-vaelress_r13",
+   "VI-2-vaelress_r14"
+  ]
+ },
+ "unbalanced": [],
+ "inks": {
+  "ok": 155
+ },
+ "wood": {
+  "t-II-2": {
+   "rings": 23,
+   "ring-cont": 0,
+   "cited": [],
+   "whole": [
+    "II-2"
+   ],
+   "readings": 9
+  },
+  "t-IV-2": {
+   "rings": 24,
+   "ring-cont": 1,
+   "cited": [],
+   "whole": [
+    "IV-2"
+   ],
+   "readings": 8
+  },
+  "t-IV-4": {
+   "rings": 24,
+   "ring-cont": 0,
+   "cited": [
+    "GIFT"
+   ],
+   "whole": [
+    "IV-4"
+   ],
+   "readings": 9
+  },
+  "t-IV-6": {
+   "rings": 23,
+   "ring-cont": 0,
+   "cited": [],
+   "whole": [
+    "IV-6"
+   ],
+   "readings": 8
+  },
+  "t-V-3": {
+   "rings": 20,
+   "ring-cont": 0,
+   "cited": [],
+   "whole": [
+    "V-3"
+   ],
+   "readings": 8
+  },
+  "t-V-4": {
+   "rings": 22,
+   "ring-cont": 0,
+   "cited": [
+    "V-4-grow"
+   ],
+   "whole": [
+    "V-4"
+   ],
+   "readings": 8
+  },
+  "t-V-6": {
+   "rings": 24,
+   "ring-cont": 1,
+   "cited": [],
+   "whole": [
+    "V-6"
+   ],
+   "readings": 7
+  },
+  "t-VI-2": {
+   "rings": 27,
+   "ring-cont": 0,
+   "cited": [],
+   "whole": [
+    "VI-2-thaesaen"
+   ],
+   "readings": 7
+  }
+ },
+ "kinds": {
+  "front-title": 1,
+  "front-sub": 1,
+  "front-line": 1,
+  "book-head": 11,
+  "contents-line": 10,
+  "contents-arg": 8,
+  "list-item": 28,
+  "dateline": 29,
+  "headnote": 31,
+  "para": 645,
+  "native": 15,
+  "halyna": 77,
+  "title-line": 3,
+  "answer": 33,
+  "book-arg": 8,
+  "title": 29,
+  "laid": 22,
+  "frame": 13,
+  "verse": 9,
+  "inscr": 29,
+  "reading": 64,
+  "seal": 8,
+  "ring": 187,
+  "note": 2,
+  "silent": 9,
+  "marked": 14,
+  "part": 39,
+  "ring-cont": 2,
+  "hood": 2,
+  "cited": 2,
+  "carving": 12,
+  "added": 2,
+  "who-line": 10,
+  "table-head": 1,
+  "table-row": 10
+ },
+ "natives": [
+  {
+   "line": 99,
+   "nid": "legend_stonwryt_hal",
+   "kind": "native",
+   "drawn": true,
+   "caption": "English",
+   "owed": false
+  },
+  {
+   "line": 160,
+   "nid": "legend_title_coal",
+   "kind": "native",
+   "drawn": true,
+   "caption": "English",
+   "owed": false
+  },
+  {
+   "line": 230,
+   "nid": "legend_title_coal",
+   "kind": "native",
+   "drawn": true,
+   "caption": "English",
+   "owed": false
+  },
+  {
+   "line": 277,
+   "nid": "legend_stone_rings",
+   "kind": "native",
+   "drawn": true,
+   "caption": "English",
+   "owed": false
+  },
+  {
+   "line": 282,
+   "nid": "legend_seren_note",
+   "kind": "native",
+   "drawn": true,
+   "caption": "English",
+   "owed": false
+  },
+  {
+   "line": 500,
+   "nid": "legend_stonwryt_aldwena",
+   "kind": "native",
+   "drawn": false,
+   "caption": "English",
+   "owed": true
+  },
+  {
+   "line": 572,
+   "nid": "legend_title_capstone",
+   "kind": "native",
+   "drawn": false,
+   "caption": "English",
+   "owed": true
+  },
+  {
+   "line": 791,
+   "nid": null,
+   "kind": "note",
+   "drawn": true,
+   "caption": "Orrowen",
+   "owed": false
+  },
+  {
+   "line": 880,
+   "nid": "legend_stonwryt_halyna",
+   "kind": "native",
+   "drawn": false,
+   "caption": "English",
+   "owed": true
+  },
+  {
+   "line": 1223,
+   "nid": null,
+   "kind": "note",
+   "drawn": true,
+   "caption": "Orrowen",
+   "owed": false
+  },
+  {
+   "line": 1292,
+   "nid": "legend_seal_wendhessa",
+   "kind": "native",
+   "drawn": false,
+   "caption": "Orrowen",
+   "owed": true
+  },
+  {
+   "line": 1729,
+   "nid": "legend_wave_chip",
+   "kind": "native",
+   "drawn": true,
+   "caption": "Orrowen",
+   "owed": false
+  },
+  {
+   "line": 2226,
+   "nid": "legend_stonwryt_enrella",
+   "kind": "native",
+   "drawn": false,
+   "caption": "Orrowen",
+   "owed": true
+  },
+  {
+   "line": 2657,
+   "nid": "legend_stonwryt_halyna",
+   "kind": "native",
+   "drawn": false,
+   "caption": "English",
+   "owed": true
+  },
+  {
+   "line": 2777,
+   "nid": "legend_stonwryt_halyna",
+   "kind": "native",
+   "drawn": false,
+   "caption": "English",
+   "owed": true
+  },
+  {
+   "line": 2795,
+   "nid": "legend_stone_epilogue",
+   "kind": "native",
+   "drawn": true,
+   "caption": "English",
+   "owed": false
+  },
+  {
+   "line": 2884,
+   "nid": "legend_three_stones",
+   "kind": "native",
+   "drawn": false,
+   "caption": "Orrowen",
+   "owed": true
+  }
+ ],
+ "interlinear": {
+  "marks between the words": 180,
+  "lines": 1288,
+  "words": 26532,
+  "lines without a word": 1,
+  "blotted names boxed": 12,
+  "distinct_lines": 1133,
+  "gloss_in_lines": 1133,
+  "gloss_in_missing": 0,
+  "problems": 0
+ },
+ "fails": []
+}

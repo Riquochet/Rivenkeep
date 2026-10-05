@@ -1,0 +1,123 @@
+boxes 26072 lines with a different token count 0
+distinct (word, gloss) pairs without lexical support: 121  boxes: 272
+  11  hesperdeth       -> soldiers                    e.g. [S01.json] Re vellorant uldath hemm, eth essath lo havulath, eth tevath ul naedh um so visketh, eth h
+  10  galdardath       -> builders                    e.g. [S01.json] Lo et odh sy re hadhant galdardath hosast et Kethow trenneth. Amm re orrant hy et Kethow, 
+   9  firr             -> lay                         e.g. [S05.json] Re firr kaelirvesk et vess lo et odh. Um gor hrynir hyo re hadh Aske o yarl, somm nath re 
+   9  nindeth          -> fingers                     e.g. [S02.json] Hy ull re rarr et Crenn dem vimm hy et hald. Re veskym et covv ul daldol, eth nath re sesk
+   9  sol              -> lay                         e.g. [S01.json] Lo en sest, ul o valtur, doss et tolm, hosk hemm et ganna ulvenn. Um o lern re sol o ul et
+   8  dhess            -> answered                    e.g. [S01.json] Amm sy hunna cedh re dhess, eth ul drenn vodh, hy vodh re nydhym so. Nel nydhyl nydhyl dem
+   8  hiskenneth       -> passes                      e.g. [S01.json] Hy ull re dhald et carmol, eth new hos carm. Re harmant merr: Pessa haethil dem wemmeth my
+   7  dhresk           -> Riven                       e.g. [S03.json] Lo et hulter re yal o vollat Ketherd Hethow Dhresk, eth re ston o sol ul et bontoth.
+   7  orr              -> goes                        e.g. [S02.json] Somm nath re orr saed et ryst tul, re rarrant wemmeth en gethyl hosast hy et myst, pynt hy
+   6  grem             -> winters                     e.g. [S08.json] Lo rask hyll eth hyll, lo dhrenn vran grem.
+   6  hebb             -> gives                       e.g. [S02.json] Re resk vennoth relv tesk umor tul, hosen covv thenth. Re yal gor hos hy et hemmeth lo ull
+   6  mest             -> more                        e.g. [S06.json] Mesk domm, dem homarath eth heskalath. Mesk domm, dem sull heskal ul Gemm Hyll, eth dem na
+   6  prassath         -> masters                     e.g. [S04.json] Stonwryt, vollant et prassath o: ryt hoskat ul hal, nethilet lo vyskorn eth prassoth, eth 
+   6  ull              -> those                       e.g. [S04.json] Re hadh Seren Pa Luth. Doss ulo flenn et galdardath hosast; doss o lont, eth nath noss o l
+   5  dolmath          -> letters                     e.g. [S03.json] Re yal o dholmath strom eth vothen, hosen doss tolmath dhev, eth hosen doss en dolmath tul
+   5  sy               -> these                       e.g. [S03.json] Ul lern et gemm vess sy, re resk ey desir um et prenthrask ull, virr sost lo et kesketh, e
+   5  yedheth          -> fathers                     e.g. [S01.json] Cadhar et trenneth sy, hy vodh re nadhumar hos fedh. Re nadhumant ol nedheth kethow, eth r
+   4  nedheth          -> fathers                     e.g. [S01.json] Re rarr nadhumol um ol nedheth, eth re naelur nahos o. Naelurar ol dumol, hosen naelurant 
+   4  senn             -> dies                        e.g. [S04.json] Rhyna. Hy ull senn et Lodhan olen, eth nath noss ludal umona. Amm doss hos hy yanna hurrat
+   4  theldeth         -> families                    e.g. [S01.json] Ul dumol ol varn, ol theldeth, ol Mardh, ol lunnath, ol sollan.
+   4  wont             -> rang                        e.g. [S05.json] Re vorr o ul o runnowath. Ul hinnarorrol et drunnardath re hunnom et drunnath ul hessyl, d
+   3  dhessent         -> they answered               e.g. [S01.json] Hosast re dhessent et vennuldath. Re wesk o ol hos eth hos, ul gesteth eth um orrolath, et
+   3  gostardath       -> axemen                      e.g. [S06.json] Kethent et scaevureleth nydhyl ullen lo sest ull, dyss hyo. Ul vodh re yal gann gostat, re
+   3  haskardath       -> runners                     e.g. [S02.json] Re yal tolm haskardath lo et cummath, cumm eth cumm. Ol dolm, re yaldar o ul et dynd hosas
+   3  hemmeth          -> elders                      e.g. [S02.json] Re resk vennoth relv tesk umor tul, hosen covv thenth. Re yal gor hos hy et hemmeth lo ull
+   3  odhdholm         -> hearthstone                 e.g. [S03.json] Lo dhrenn et vess, re ston hellenn Idrenna pondul um et odhdholm, eth re femm nahos hyor o
+   3  stannardath      -> quarrymen                   e.g. [S02.json] Somm nath re senn et vorr ull tul, re dhreske Orvenna et tynurorl ul sull, hosen treskent 
+   2  ferr             -> bent                        e.g. [S04.json] Rhyna. Kethen: re lodh Mardh gor yanna ul hos, amm nath re hossa sona tul. Orrant veskerde
+   2  firr             -> lies                        e.g. [S05.json] Ul et sulv hosast re omm o ul hos vess ul o nyrulath sost, pell eth sirr olen. Firr et dom
+   2  firre            -> they two lay                e.g. [S04.json] Rhyna. El olna sullast Seren, sa re heth et greller ryst sy, eth sa ross ul rytyl sy. Re f
+   2  ganurardath      -> hunters                     e.g. [S08.json] Re vellorant hosen re vellor et mesk tevel, bont eth hosel eth venn; eth re dhyvullar hose
+   2  gostard          -> axemen                      e.g. [S06.json] Bremm ull re dhyvull et Orrow um sull gostard, sa re vymment dem varn um vivenn, eth sa re
+   2  haevereth        -> guesses                     e.g. [S01.json] Ul vodh re yal rytet cresket, nath re hlennym o lo haevereth. Ul vodh re navoll et Stonwry
+   2  hal              -> old-hand                    e.g. [S04.json] Re hadh Seren Pa Luth. Doss ulo flenn et galdardath hosast; doss o lont, eth nath noss o l
+   2  hoss             -> lives                       e.g. [S01.json] Hy ull re dhald et carmol, eth new hos carm. Re harmant merr: Pessa haethil dem wemmeth my
+   2  hulter           -> staffs                      e.g. [S05.json] Hosast re veskym hy et scaevureleth, hosen re haral o. Ew galdardath ol nedheth, new wadha
+   2  lunnar           -> we swept                    e.g. [S05.json] Aske Hrisur Lurr. Re yal o sost virr ul molt et mesketh, hy ull re orr orrard ul vimm, eth
+   2  mesketh          -> timbers                     e.g. [S10.json] Re omm semm hy et mesketh ul et vem, eth re vedh o.
+   2  morr             -> goes                        e.g. [S03.json] Doss hulter stinet dem o yaldat, eth nath morr o hyo,
+   2  naesket          -> bare                        e.g. [S05.json] Harl Orrow sa Vorr. Re ston o ul vodh orr dhidh et brunn dem et wadh, eth re yal et trun s
+   2  rik              -> caught                      e.g. [S05.json] Pellow Vell. Re yald dhom tesk o, eth re rik o et rerd hosen preller hrest. Lo wisk re sto
+   2  sirreth          -> glasses                     e.g. [S05.json] Pellow Vell. Re yald dhom tesk o, eth re rik o et rerd hosen preller hrest. Lo wisk re sto
+   2  sol              -> lies                        e.g. [S01.json] El luth et flennath sy. Mavere Halyna o rytyl ul gyvil et hellur sy, trenn um dhrenn, amm 
+   2  solant           -> they lay                    e.g. [S07.json] Hos bress, ell virr, re solant et wemmeth myst ul lern et hald sy, eth re sesk nahos hyor 
+   2  sugornath        -> fishers                     e.g. [S04.json] Re lumma sona ul sulv, eth re hadha sona yemm garl ul vimm o. Re hyle sona o, hosen kylent
+   2  tess             -> answers                     e.g. [S01.json] Tess hos brod gor dhrenn lor, eth nath dess ullen fedh: Tumar.
+   2  tum              -> remembers                   e.g. [S07.json] Nadhumar. Gor fedh re nadhumar gell. Veth tum Mesk Myst.
+   2  wrodhardath      -> tellers                     e.g. [S01.json] Doss saed et flennath loskat. Hos hy o wrodhardath, sa re wemm nind thenth um gor helvhoss
+   1  brammardath      -> gunners                     e.g. [S08.json] Amm re felmer movennerd, re rik ullen et movenn, eth re rik et scethan molt et movennerd c
+   1  brodhat          -> saying                      e.g. [S02.json] Amm sy myskent et uldath o lo dhrenn et hald: Lo et Crenn, clem sell hosen orl. Kaeverym r
+   1  brodhat          -> spoken                      e.g. [S06.json] Ew brodath venn so, brodhat venn. Seskym o amm sy. Veth el hunnatath hosel brodath sa nath
+   1  covveleth        -> sleeves                     e.g. [S06.json] Re hovv ▒▒▒▒ covveleth sell dem sennyl, lo dhrenn systeth bith ul Davow Hemm; eth seskym h
+   1  dasorat          -> dressed                     e.g. [S03.json] Sinth, vollant et tolmardath et sast stacorn um dholm dasorat sa re yal navothat tesk eth 
+   1  derrerdeth       -> gatherers                   e.g. [S03.json] Hy ull re vellorar, et tevath, lo wresketh hemm, eth re ferrer lo dhrenn et tolmath nadhum
+   1  dess             -> answers                     e.g. [S01.json] Tess hos brod gor dhrenn lor, eth nath dess ullen fedh: Tumar.
+   1  dhess            -> answers                     e.g. [S08.json] Re vellor hos sceth, hosel eth niss, ul nydhyl nynth. Nel dem et hald. Dem et reskow ul vo
+   1  dhesser          -> we answered                 e.g. [S05.json] Ul vimm et movenn re dhesser delv hyor. Re rytent noth vess sy. Re ryt Stannard Sorth naya
+   1  dhessym          -> I answered                  e.g. [S08.json] Re dhessym lonta: Es luskar o dem varn; eth nath re seskym vodh re haeverym. Nath noss o h
+   1  dholmath         -> letters                     e.g. [S03.json] Re yal o dholmath strom eth vothen, hosen doss tolmath dhev, eth hosen doss en dolmath tul
+   1  dhreskent        -> they parted                 e.g. [S10.json] Lo rask re orrom dem vimm, eth re dhreskent et tevath ul en lern, hosen tresk et wadh ul l
+   1  dhyvullol        -> laughter                    e.g. [W03.json] — Tuss. Dhyvullol, lo dhrenn et tuss.
+   1  dreskith         -> you part                    e.g. [S09.json] Re yal hos tevow lonta hyoth, eth hos tolm hyor; eth nath dreskith sona.
+   1  drunnat          -> hammered                    e.g. [S06.json] Mesk domm, dem homarath eth heskalath. Mesk domm, dem sull heskal ul Gemm Hyll, eth dem na
+   1  drunnath         -> hammers                     e.g. [S05.json] Re vorr o ul o runnowath. Ul hinnarorrol et drunnardath re hunnom et drunnath ul hessyl, d
+   1  esk              -> covers                      e.g. [S05.json] Et hultereth, nath re lymm et Stonwrytan so. Re ferrent et prassath hulter et cumm um o ha
+   1  ferrer           -> we bent                     e.g. [S03.json] Hy ull re vellorar, et tevath, lo wresketh hemm, eth re ferrer lo dhrenn et tolmath nadhum
+   1  ferrym           -> I bent                      e.g. [S06.json] Ul vimm nydhyl gannath re hess nind Hyna. Re ryt saevul hos trenn mest, lyss sost: pa fedh
+   1  firren           -> we two lay                  e.g. [S04.json] Rhyna. Kethen: re lodh Mardh gor yanna ul hos, amm nath re hossa sona tul. Orrant veskerde
+   1  firrym           -> I lay                       e.g. [S05.json] Saler eth saler re yal griket hyor. Gor vess re firrym, eth en rern um et pressir, eth re 
+   1  gaeden           -> landward                    e.g. [S05.json] Lo orl dasken et cumm, amm nath re yal galdol ullen lo pa yarl dholmard, re orr et Stonwry
+   1  gedheth          -> fathers                     e.g. [S02.json] Halyna, nath re seskym sona amm ull, veth hosen Hemm eth Hemma sa re reske hy ullen ul vim
+   1  gemmnothast      -> fourteenth                  e.g. [S03.json] Ul et orl gemmnothast, re vellor rerd bynt, et hosast hy et movenn. Ul et parow re sol et 
+   1  gesketh          -> embers                      e.g. [S01.json] Doss domm nasell et surr. Aedh et hellur um gor lern lom, eth re nadhald Odh Sell dem gesk
+   1  haral            -> ordered                     e.g. [S09.json] Re vysker gor fedh: hinnar, nayalat veth trenn dasken um et trenn hemm. Vess sy re vysker 
+   1  haralath         -> orders                      e.g. [S10.json] Vran grem re raevular et kaelireth dem haralath, eth et moltath dem vollath, eth et myst d
+   1  haskard          -> runners                     e.g. [S08.json] Re yal lo ull pa vurr eth sullnoth crynir et grem hosast, eth gor hos rytet. Re lymment et
+   1  hemme            -> they two agreed             e.g. [S07.json] Hy ull re rytent uldath et deldvar lo so nunthath um sulter hastat ul vorr, eth uld sennet
+   1  homarath         -> buttresses                  e.g. [S06.json] Mesk domm, dem homarath eth heskalath. Mesk domm, dem sull heskal ul Gemm Hyll, eth dem na
+   1  hos              -> any                         e.g. [S05.json] Saler eth saler re yal griket hyor. Gor vess re firrym, eth en rern um et pressir, eth re 
+   1  hultereth        -> staffs                      e.g. [S05.json] Et hultereth, nath re lymm et Stonwrytan so. Re ferrent et prassath hulter et cumm um o ha
+   1  hultereth        -> staves                      e.g. [S06.json] Re rikent galat sa re yal lo yarl: hultereth, eth tolmath et dhysal, eth gannath et sulter
+   1  kesketh          -> embers                      e.g. [S03.json] Ul lern et gemm vess sy, re resk ey desir um et prenthrask ull, virr sost lo et kesketh, e
+   1  lenull           -> bought                      e.g. [S06.json] Kethent et scaevureleth nydhyl ullen lo sest ull, dyss hyo. Ul vodh re yal gann gostat, re
+   1  lonn             -> kindreds                    e.g. [S05.json] Noth hinnar, noth tavow, noth lonn sa re vollant so sost hos lunt.
+   1  lusk             -> he leaves                   e.g. [S04.json] Halvard. Amm sy et galat dasken, eth hy ull dem lodull. Fedheth re senn hos hy dhevow teva
+   1  lusk             -> leaves                      e.g. [S10.json] Nath re orrom lo Halyna. Re wrodha sona lom hos fedh: Doss orrol loth, hosel, ul vodh nath
+   1  luskardath       -> senders                     e.g. [S05.json] Hy ull re vollar o: scethan dhenn; eth et luskardath: Mystaeri, voll hy et myst. Maver uld
+   1  lyss             -> will lessen                 e.g. [S08.json] Re ston nahos um et pressireth. Hy et lymmscetheth re vellorant et uldath veskrivull, hose
+   1  lyssyl           -> lessening                   e.g. [S08.json] Lo sorenn re yal vorr et scethan ul lyssyl, eth re rystullar myskyl: Doss vorr et scethan 
+   1  lyssym           -> I lessened                  e.g. [S08.json] Re hadh Kael Nydherd, sa nath re hadh hyll veth amm re yal o tunn. Ul et grem vranast re h
+   1  mellor           -> arrives                     e.g. [S01.json] El luth et flennath sy. Mavere Halyna o rytyl ul gyvil et hellur sy, trenn um dhrenn, amm 
+   1  meskel           -> sapling                     e.g. [W07.json] — Gann, eth meskrivull, eth meskel. Nesket — nesket dem neld.
+   1  nadhumat         -> forgotten                   e.g. [S03.json] Hy ull re vellorar, et tevath, lo wresketh hemm, eth re ferrer lo dhrenn et tolmath nadhum
+   1  nahadh           -> unlaid                      e.g. [W06.json] Re hadh Rhyna garl um et molt sy, eth re nahadh ey o ul hos hoss; re rarr Halvard dem susk
+   1  nalusk           -> forbade                     e.g. [S02.json] Noth cumm, re vesker so ul sennyl ul murr bress. Re orrar dem neld hyont, hos eth hos, eth
+   1  naseskyl         -> ignorance                   e.g. [W04.json] Re wemm Halvard et molt sy ul et nelter; re hast Rhyna, um et hald, pa yarl ul et nunth he
+   1  nunth            -> bucket                      e.g. [S03.json] Lo et vorr re veske Halyna et halflenneth dem so haeveret, trenn eth hoss eth trenn, eth r
+   1  nycul            -> lies                        e.g. [S09.json] Nath noss nyculol lo et mesk, re vyskym; eth hy ull re veskym o. Nath nycul et mesk. Re ya
+   1  rasora           -> they two dressed            e.g. [S03.json] Ul et orl gemmnothast, re vellor rerd bynt, et hosast hy et movenn. Ul et parow re sol et 
+   1  rigent           -> they scattered              e.g. [S08.json] Dem varn, amm grestet. Omm hos gend; kyl gor hos ul o nynth sost. Lo vammol hosast re rige
+   1  rike             -> they two caught             e.g. [S10.json] Lo hyll hedhen re orr et odh tunn dem vimm, et hemmeth ul ferryl um et tevan. Re hadha Hal
+   1  runn             -> hammered                    e.g. [S08.json] Thell wemm et ryst hosast, eth re heth nahos reskow lo sest ullen. Re runn gor sceth et ha
+   1  runnant          -> they hammered               e.g. [S08.json] Cresk hald. Tolm hosast, tolm hosel. Drunn dem lunnol, ell dem tho vorrdhuss. Ew ull et ge
+   1  rytowath         -> archives                    e.g. [S06.json] Re haemerent merr ul davowlesteth, kylet dem rerrel. Re fimment uldath ul vimm et tolmath,
+   1  scaelurath       -> grandmothers                e.g. [S06.json] Veth tevar re resk serdul ul reskow strom, eth re yal ol niltenn hosen galat sa vyskent sc
+   1  sola             -> they two lay down           e.g. [S06.json] Ul vess et hiskenn re sola Wendhessa, eth nath re dhalda. Lo et vestul re aedhen Tarnel et
+   1  solom            -> I lay                       e.g. [S02.json] Amm re yal et tymornath lyss, re aedhe Enno eth Della lo et trenn clenn, sona yarlath cemm
+   1  systeth          -> summers                     e.g. [S06.json] Re hovv ▒▒▒▒ covveleth sell dem sennyl, lo dhrenn systeth bith ul Davow Hemm; eth seskym h
+   1  tevar            -> earlier                     e.g. [S11.json] Re rystullom lerneth et meskrivullath ul veskyl, lo et hylldhrenn eth ul et nelter, sell t
+   1  tolmath          -> letters                     e.g. [S03.json] Re yal o dholmath strom eth vothen, hosen doss tolmath dhev, eth hosen doss en dolmath tul
+   1  tresk            -> parts                       e.g. [S10.json] Lo rask re orrom dem vimm, eth re dhreskent et tevath ul en lern, hosen tresk et wadh ul l
+   1  vedh             -> whispered                   e.g. [S10.json] Re omm semm hy et mesketh ul et vem, eth re vedh o.
+   1  vedhent          -> they whispered              e.g. [S02.json] Desir ul et vess ull, lo dhymornath sa re vedhent ul et frenn sa omm, re hadhar trenn hosa
+   1  vellor           -> entered                     e.g. [W08.json] Lo reskowath strom ommat, gor hos, re vellor hos hy Halyna ul molt et mesketh, eth re ston
+   1  vernul           -> jailer                      e.g. [S04.json] Halvard. New Stonwrytan gor Orrowan, veth ew Orrowan gor Stonwrytan. Carm et Stonwrytan te
+   1  vrassath         -> masters                     e.g. [S04.json] Rhyna. Amm stinym en narl ul et taldow bithlernen, ledh Halvard o um et hald bridlernen, e
+   1  wadhardath       -> seafarers                   e.g. [S05.json] Hosast re veskym hy et scaevureleth, hosen re haral o. Ew galdardath ol nedheth, new wadha
+   1  wisklern         -> brows                       e.g. [W03.json] — Biskyann, kethet. Pa wisklern, hos —
+   1  wysk             -> tied                        e.g. [S03.json] Ul hedh re hadhar ey um et lern rerddhalden lo et hesperdeth. Re vyske Idrenna et ammelyl 
+   1  yaldol           -> doing                       e.g. [S04.json] Re yald et nadhumol galat sa nath re yal o yaldol lo wynd fedh.
+   1  yostant          -> they felled                 e.g. [S03.json] Dem et maress, re nesk Stannard Halyna lo dhrenn et sulv dem et meskan ul vodh re yal et h

@@ -1,0 +1,115 @@
+# BLIND COPY of wf8/units/S09.md: native lines only (romanised Orrowen blockquotes; GN v2 code blocks with "#" comment lines stripped).
+# English, word-for-word glosses, notes, tables and GN comment lines removed. [n] = source line.
+
+[59] > ## *Vesksirr ul Meskdhrenn*
+[67] > *Re hadh Seren Pa Luth o, lo sest Halyna, ul sull trenn, gor dhrenn ul et vess sa re yal et rytet kethet. Brodh Seren o, eth brodha Halyna ulo hosen re wrodha um et dhysal, hos eth ullen.*
+[81] > **Trenn Hosast: Sull Orrol, Hos Clem**
+[87] > Re yal o ul Hyll Lodhat. Re yal et crynir hy vovennerd scethan sa re rarr lo sull orrol ul hos clem. Re hadh Rhyna garl umo um et dhysal, eth re yal Halvard um et hald ul susk, lo et lodh, eth trenn cadhat saed. Re yalom lo ey sest, eth et greller lom. Re veskym ey ul stacornol; eth amm re veskym dem susk, re stacorn o um et hald ul hos hoss, eth et birnenn ul o yarl tul, hy vodh galat sa sesk hos, sesk ullen o. Re rarr o dem vimm, demor, eth re wrodha o. Nath re hether fedh rytet sell hyo, eth new haral hos sceth o. Ew haral et scethan tunn o, ul hos fedh, eth et lodhath sa re haskant ul lodh sceth eth sceth.
+## GN block 107-134
+round E4-01 {wood: long; pith: war ×3; rings: 5; rules after: [2, 4]}
+  I
+    r1/1  p0·0: WAVE*    p1·0: WAVE*    p2·0: WAVE*
+    r2/1  p0·4: EDGE+BREAKER      band DREAD files 15–1
+  ‖
+  II
+    r3/1  0: GO    2: BOND    4: GO    12: KNOT^r4      band DREAD files 11–13
+    r4/1  10: SQUARE+EYE    graft(E3-01)
+  ‖
+  III
+    r5/1  12: GO
+  bark
+    bark 0: BOND+TIDE
+  runners
+    run t0  p0·0.r1/1  ⇒  p0·4.r2/1
+    run t1  10.r4/1    →  @0
+    run t2  10.r4/1    ⇒  12.r5/1
+    mem 10: r4 → pith
+
+[154] > Re hadh Rhyna et tolm hosast ulo, eth re hadh Halvard et hosk umo. Hy ull re yala velv fedh sell. Amm ull re vessym vodh re yal grest umonta, veth kaeverym re seskym o. Re vysk hos, eth re dhunn ullen:
+[168] > Hosen sy galdar hald.
+[176] > Tovv et hos dem stinel et ullen, eth nath noss maver wrodhol umo.
+[185] > Eth re heth et rytet voll, et voll sa hebb et mesk lo et hyll tunn ull. Re wrodha Halyna et voll: *Aelthae*. Re rytym o. Re seskym et saed hosast. El *ael* o: et lodh. Eth re rytym o hos fedh ul et flennath sy, ul et *Ael'thar*, ternil et arra lo yebb et pard.
+[197] > Re rytym et voll, eth nath rytym vodh re haeverym.
+[206] > Cadhar o hosen re yal cadhat lor.
+[212] > *Eth re vysk et odh: Tumar.*
+[220] > **Trenn Pawast: Vodh re ammadar lont**
+[226] > Ul Hyll sa re rystull nycul re dhald crynir hy sceth sa re rarr umor hosen re rarr et mesk tevel. Re farr o ul scethan sa re hask um et hald ul et orrol hemm, gor sceth hosel eth bont eth venn, eth nahos ul gethyl reskow lo sest ullen, hosen nath re vesker hy et grem hosast. Re dhyvull et hald, eth re wrodh gor wramm umo, hosen re wrodh gor wramm amm ull. Re vymment et scetheth hos hoss ul lern ol vorr; eth hy et myst ul sestow re rarrant et ganurardath, eth re orrant dem et brammath sa re wrodhant, gor hos, eth nath re orrant hyont. Re rike Halyna et crynir, eth re hethe o.
+## GN block 246-257
+  I
+    r1/1  0: LONE*
+  ‖
+  II
+    r2/1  0.1: LONE+GO    0.2: MOUTH    0.3: TRUE    2: NEW+HULL×3
+    r3/1  0: STOP    4: BREATH#1    6: BURN    12: HUNTER×3+KNOT
+    run t1  0.1.r2/1  →as    2.r2/1
+    run t2  0.r3/1    →      4.r3/1
+    run t3  4.r3/1    →      6.r3/1
+    run t4  12.r3/1   →for   6.r3/1
+
+[274] > Eth ul vimm et haral re firr et galat sa re yal o rytet ul lern: ⟦grain⟧ Re yal o rytet ul ol lern, ul lern vodh galdar.
+## GN block 276-280
+  III
+    r4/1  6: !FLASH<LONE½|KNOT>    8.1: STONEFOLK×3‿½    8.2: DEEP+STRIKE@1    8.3: >GO    10: FIND+GUN×3
+    run t5  8.3.r4/1  →      10.r4/1
+
+[297] > Hosast, nath re hyrrilym o. Re vyskym: Nath noss nyculol lo et mesk. El et galat hosast sa re ammad hebbet et arra lor fedh um so rytet: galat sa heth Mesk Myst, el venn o gor fedh. Amm ull re hyrrilym, eth re rytym o somm re yal syllorn lom tul. Nath nycul et mesk. Re yal o haralat dem gadhol nycul ul ol brener, eth re lynir o.
+[310] > Re reske Halyna fedh sell um et dhysal, eth sona yarlath um et meskdhrenn tul. Hy ull re vysk hos, eth re dhunn ullen:
+[319] > Re rystullant o hyor.
+[325] > Re ammadar o lont lo et brammath velv, gor hos.
+[334] > Ew venn o. Gor wramm sa re heth et Crenn velv dem mellorol sceth; gor vivenn navenn sa re yaldar um et hald, eth nath re yal bramm ul vimm; gor wramm sa re lemmer ul vimm linth eth gend, eth re farrant ul neld, ul o wrodow. Re vymm gor haelir hy et orlath ull, lo dhrenn et meskrivullath, dem et meskanath, eth re rystullant et meskanath. Nath re yal brod dem nycul lont. Re hebber hos lont.
+[346] > Ul et rytet ull re yal voll et Treskan, rytet lyss, eth hosast nath re vyske Halyna o. Ew *Rhenear* o: et nahunn.
+[356] > Cadhar o hosen re yal cadhat lor.
+[360] > *Eth re vysk et odh: Tumar.*
+[368] > **Trenn Sullast: Niltenn sa re ryt lernil umo sost**
+[374] > Ul Hyll Dasken re rarr movennerd umor, eth ryst tunn rytet ul o volt: niltenn, eth kylyleth ulo. Re felmer o, eth re lymm et hyll et molt dem et dhysal, eth ew kethyl sell sost o sa re hethe Halyna fedh; eth new saed duss et kethyl. Re hethe o ul fedh loskol reller. Re wrodha o somm re loskar et grellereth pa fedh. Ul o rask re yal galat sy:
+## GN block 389-397
+  III
+    r3/1  1.1: BEARER    1.2: CARVE    1.3: FALL    3.1: HULL@2    3.2: TAKE
+    r4/1  3: FALL    7: HULL×3+GO    8: HOME
+    run h1  1.3.r3/1  ⇒      3.2.r3/1
+    run h2  3.2.r3/1  →      1.2.r3/1
+    run h3  3.r4/1    ⇒      7.r4/1
+    run h4  7.r4/1    →      8.r4/1
+
+[413] > Re rytent lernil umont sost ul et niltenn. Amm sy seskent ol. Seskent o: doss so hreskyl lor; eth re vyskent vodh es naldant amm cresker so. Eth re vyske Halyna: re yal hos garl ul et rytet ull tunn, eth new garl redul o, eth ew tevel et garl.
+[426] > Veth new o sa re heth Halyna um et dhysal hy ull. Ew et pa wrod rasken o. Nath re sesk et mesk tevel *varn* veth hosen et reskow ul vodh hask galat grestet. Ew orrol dem varn sy, rytet ul et niltenn somm re yal et brammath velv tul: galat kaeveret ul et meskanath, eth rytet lo ull hosen re yal kaeveret. El prener sa vaver orrol dem varn, prener sa ryt hosen vodh es morr dem varn. Ul et vess ull, fedh hosast, re vesker saemal lo et bynd.
+[440] > Re vysk hos, eth re dhunn ullen:
+[444] > Rytent ryst amm sy, hosen ryter.
+[452] > Hy ull es naldar ryst sa nath re rytent demo.
+[461] > Cadhar o hosen re yal cadhat lor.
+[465] > *Eth re vysk et odh: Tumar.*
+## GN block 479-503
+round E5-02 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 3, 3, 3]}
+  I
+    r1/1  0: LONE*
+  ‖
+  II
+    r2/1  0.1: LONE+GO    0.2: MOUTH    0.3: TRUE    2: NEW+HULL×3
+    r3/1  0: STOP    4: BREATH#1    6: BURN    12: HUNTER×3+KNOT
+  ‖
+  III
+    r4/1  6: !FLASH<LONE½|KNOT>    8.1: STONEFOLK×3‿½    8.2: DEEP+STRIKE@1    8.3: >GO    10: FIND+GUN×3
+  runners
+    run t1  0.1.r2/1  →as    2.r2/1
+    run t2  0.r3/1    →      4.r3/1
+    run t3  4.r3/1    →      6.r3/1
+    run t4  12.r3/1   →for   6.r3/1
+    run t5  8.3.r4/1  →      10.r4/1
+
+## GN block 512-532
+round V7-III {wood: long; pith: war; rings: 4; rules after: [1, 2]; cells: [1, 3, 3, 3]}
+  I
+    r1/1  0: STERN*
+  ‖
+  II
+    r2 ·
+  ‖
+  III
+    r3/1  1.1: BEARER    1.2: CARVE    1.3: FALL    3.1: HULL@2    3.2: TAKE
+    r4/1  3: FALL    7: HULL×3+GO    8: HOME
+  runners
+    run h1   1.3.r3/1      ⇒      3.2.r3/1
+    run h2   3.2.r3/1      →      1.2.r3/1
+    run h3   3.r4/1        ⇒      7.r4/1
+    run h4   7.r4/1        →      8.r4/1
+

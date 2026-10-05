@@ -1,0 +1,29 @@
+# name: The gift's sentence (IV.4)
+# english: Stop the felling of the pillars at the edge of the grey, for they are not timber. The sky over us is their breath, and ours, and when you cut them it comes open, and our children cannot live in the open sun. We are here, behind the grey, and we have been here always, and we are not your enemies. Stop, for the sky is dying, and we are dying under it.
+# literal: Stop (the root). The felling of the pillars, at the edge, in the grey. They live: the same pillars. The grey over all; the same pillars' breath; us, within it. You, doing it to them: the felling. There, it opens; the grey has a gap. Hard light, doing it to our children: they do not live. Us, behind the grey; remembered to the heart, always. We do not strike you. The pillars' breath dying; we, the same, beneath, dying. Stop, because of that.
+# root_word: stop
+round IV-4-gift {wood: stone; pith: round; rings: 11; rules after: [3, 7]; axis 0°}
+  I
+    r1/1  0: STOP*
+    r2/1  2: EDGE    3: AXE+PILLAR×3      band MIST files 2–3
+    r3/1  3: LIVE
+  ‖
+  II
+    r4/1  8: US×3      band MIST files all
+    r5/1  0: STONEFOLK×3    3: AXE
+    r6/1  3: OPEN      band MIST files 5–1
+    r7/1  3: FLASH    13: !LIVE+SAPLING×3
+  ‖
+  III
+    r8/1  8: US×3      band MIST files 7–9
+    r9/1  0: STONEFOLK×3    8: !STRIKE
+    r10/1  3: DYING    8: BENEATH+DYING
+    r11/1  0: STOP
+  runners
+    run t1   0.r5/1       →      3.r5/1
+    run t2   3.r7/1       →      13.r7/1
+    run t3   8.r9/1       →      0.r9/1
+    run t4   3.r10/1      ⇒      0.r11/1
+    ray 3: r2/1–r4/1
+    ray 8: r4/1–r10/1
+    mem 8: r8/1 → pith

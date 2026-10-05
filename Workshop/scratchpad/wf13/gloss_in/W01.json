@@ -1,0 +1,750 @@
+[
+ {
+  "leaf": "t-II-2",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Hoss et Mesk",
+  "english": "II.2 · Of the Breath of the Wood",
+  "dup": false,
+  "draft": [
+   [
+    "Hoss",
+    "breath"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Mesk",
+    "tree"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 1,
+  "label": "Romanisation · the dateline",
+  "rom": "Et grem leskest, Hyll sa re rystull nycul.",
+  "english": "*The fifth winter, the Tide that Learned Deceit.*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "grem",
+    "winter"
+   ],
+   [
+    "leskest",
+    "fifth"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rystull",
+    "learn"
+   ],
+   [
+    "nycul",
+    "lie"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 2,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Re vess tev: Ho ross lesteth lo lunt et arra? Lo dhrenn vesseth mest re hethe Halyna hebbet et arra, hos lo et odh, ullen ul naedh, eth gor fedh re rynn et aedherd ul gethyl: re hadhant ulo varn tunn, eth nath noss brod lo Orrowen um varn sa el hoss.",
+  "english": "*A child asked whether the Guest's people had houses. Many nights {{Halyna}} held his gift, one at the hearth, the other asleep, and ever the sleeper woke knowing; into it his people had put the whole of home, and for a home that is air our tongue hath no word.*",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "vess",
+    "S·ask"
+   ],
+   [
+    "tev",
+    "child"
+   ],
+   [
+    "Ho",
+    "Q(+S)"
+   ],
+   [
+    "ross",
+    "S·be"
+   ],
+   [
+    "lesteth",
+    "house-PL"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "lunt",
+    "people"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "arra",
+    "guest"
+   ],
+   [
+    "Lo",
+    "at(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "vesseth",
+    "night-PL"
+   ],
+   [
+    "mest",
+    "much"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "hebbet",
+    "gift"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "arra",
+    "guest"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "odh",
+    "hearth"
+   ],
+   [
+    "ullen",
+    "another"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "naedh",
+    "N·sleep"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "fedh",
+    "time"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rynn",
+    "wake.up"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "aedherd",
+    "sleeper"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "gethyl",
+    "N·holding"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hadhant",
+    "S·lay-3PL"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "tunn",
+    "whole"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "brod",
+    "word"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "Orrowen",
+    "Orrowen"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "el",
+    "is"
+   ],
+   [
+    "hoss",
+    "breath"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 3,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Hemm. Tevar hy dholm. Tevar hy et tolm hosast stannat.",
+  "english": "*— Old. Ere stone. Ere any stone was cut.*",
+  "dup": false,
+  "draft": [
+   [
+    "Hemm",
+    "old"
+   ],
+   [
+    "Tevar",
+    "early"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "dholm",
+    "S·stone"
+   ],
+   [
+    "Tevar",
+    "early"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "stannat",
+    "quarried"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 4,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Myst ul molt et gannath. Nel myst. Nath noss brod —",
+  "english": "*— Grey among the trunks. Not fog. There is no word —*",
+  "dup": false,
+  "draft": [
+   [
+    "Myst",
+    "sea-fog"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "gannath",
+    "posts"
+   ],
+   [
+    "Nel",
+    "is.not"
+   ],
+   [
+    "myst",
+    "sea-fog"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "brod",
+    "word"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 5,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Hoss. Doss o lona. Hoss.",
+  "english": "*— Breath. We two have it. Breath.*",
+  "dup": false,
+  "draft": [
+   [
+    "Hoss",
+    "breath"
+   ],
+   [
+    "Doss",
+    "be"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "lona",
+    "at-1DU"
+   ],
+   [
+    "Hoss",
+    "breath"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 6,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Mesketh ul naedh, hossant o hyont. Hossar — hossant o ulont.",
+  "english": "*— Trees asleep, breathing it out. We — they breathe it in.*",
+  "dup": false,
+  "draft": [
+   [
+    "Mesketh",
+    "tree-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "naedh",
+    "N·sleep"
+   ],
+   [
+    "hossant",
+    "breath-3PL"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hyont",
+    "from-3PL"
+   ],
+   [
+    "Hossar",
+    "breath-1PL"
+   ],
+   [
+    "hossant",
+    "breath-3PL"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "ulont",
+    "in-3PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 7,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Baegyth. Nel orl —",
+  "english": "*— A light. Not day —*",
+  "dup": false,
+  "draft": [
+   [
+    "Baegyth",
+    "light"
+   ],
+   [
+    "Nel",
+    "is.not"
+   ],
+   [
+    "orl",
+    "day"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 8,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— eth nel hedh. Ul lodh. Lilv.",
+  "english": "*— and not dusk. Between. Soft.*",
+  "dup": false,
+  "draft": [
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nel",
+    "is.not"
+   ],
+   [
+    "hedh",
+    "last.light"
+   ],
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "lodh",
+    "mortar"
+   ],
+   [
+    "Lilv",
+    "soft"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 9,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Tevath, galdat demo. Demo hosel.",
+  "english": "*— Little ones, made for it. Only for it.*",
+  "dup": false,
+  "draft": [
+   [
+    "Tevath",
+    "children"
+   ],
+   [
+    "galdat",
+    "building"
+   ],
+   [
+    "demo",
+    "until-3SG.M"
+   ],
+   [
+    "Demo",
+    "until-3SG.M"
+   ],
+   [
+    "hosel",
+    "alone"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 10,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Mesketh stacorn ul hedh, ul vellyl. Eth voll, so sost —",
+  "english": "*— Pale trees at evening, singing. And a name, their own —*",
+  "dup": false,
+  "draft": [
+   [
+    "Mesketh",
+    "tree-PL"
+   ],
+   [
+    "stacorn",
+    "pale"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "hedh",
+    "last.light"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vellyl",
+    "singing"
+   ],
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "voll",
+    "name"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "sost",
+    "self"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 14,
+  "label": "Romanisation · Seren’s caption",
+  "rom": "Et voll sa voll et mesk o sost; nawrodhat tul.",
+  "english": "::: note\nThe name the wood gives itself, not yet told\n*Naelear*, those of the breath. Seren sets the word beside the sign, and the sign stays.\n:::",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "voll",
+    "name"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "voll",
+    "name"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "nawrodhat",
+    "untold"
+   ],
+   [
+    "tul",
+    "yet"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 14,
+  "label": "Romanisation · Seren’s gloss, when the name is told",
+  "rom": "Naelear, lunt et hoss. Cadh Seren et brod lo sest et rellor, eth ston et rellor.",
+  "english": "::: note\nThe name the wood gives itself, not yet told\n*Naelear*, those of the breath. Seren sets the word beside the sign, and the sign stays.\n:::",
+  "dup": false,
+  "draft": [
+   [
+    "Naelear",
+    "Naelear"
+   ],
+   [
+    "lunt",
+    "people"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hoss",
+    "breath"
+   ],
+   [
+    "Cadh",
+    "lay"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "brod",
+    "word"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "rellor",
+    "sign"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "ston",
+    "stand"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "rellor",
+    "sign"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-II-2",
+  "para_index": 37,
+  "label": "Romanisation · Seren’s closing line",
+  "rom": "Eth re dhess nahos.",
+  "english": "*And no one answered.*",
+  "dup": false,
+  "draft": [
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhess",
+    "S·answer"
+   ],
+   [
+    "nahos",
+    "none"
+   ]
+  ]
+ }
+]

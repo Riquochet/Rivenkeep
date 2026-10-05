@@ -1,0 +1,532 @@
+[
+ {
+  "leaf": "t-V-6",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Tevyl",
+  "english": "V.6 · Of the Growing",
+  "dup": false,
+  "draft": [
+   [
+    "Tevyl",
+    "birth"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 1,
+  "label": "Romanisation · the dateline",
+  "rom": "Et heth gemmest.",
+  "english": "*The fourth spring.*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "heth",
+    "spring"
+   ],
+   [
+    "gemmest",
+    "fourth"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 2,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Re lymm Halvard et molt sy dem susk um et sest, eth amm re yal o umo tul, re rarr o ulonta pana, veth Rhyna lo et odh. Ew strom o hyonta, eth re sol o ul et nelter dem heth; re hadhom vell et molt ul vell, virr hosen es morr et luth.",
+  "english": "*Halvard bare this heart up on his shoulder, and ere he set it down it came to them both, though Rhyna sat at the hearth. Too great it was, and lay in the vault till spring; its song I set as verse, as near as ink will go.*",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "lymm",
+    "bring"
+   ],
+   [
+    "Halvard",
+    "Halvard"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "susk",
+    "high"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "amm",
+    "when"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "umo",
+    "upon-3SG.M"
+   ],
+   [
+    "tul",
+    "yet"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rarr",
+    "S·come"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "ulonta",
+    "in-3DU"
+   ],
+   [
+    "pana",
+    "both"
+   ],
+   [
+    "veth",
+    "but"
+   ],
+   [
+    "Rhyna",
+    "Rhyna"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "odh",
+    "hearth"
+   ],
+   [
+    "Ew",
+    "was"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hyonta",
+    "from-3DU"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "sol",
+    "rest"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "nelter",
+    "vault"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "heth",
+    "spring"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hadhom",
+    "S·lay-1SG"
+   ],
+   [
+    "vell",
+    "song"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vell",
+    "song"
+   ],
+   [
+    "virr",
+    "near"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "es",
+    "FUT(+N)"
+   ],
+   [
+    "morr",
+    "N·go"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "luth",
+    "ink"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 3,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Vellyl. Fedh sell, vellyl. Ferryl demo.",
+  "english": "*— Singing. A long while, singing. Bending to it.*",
+  "dup": false,
+  "draft": [
+   [
+    "Vellyl",
+    "singing"
+   ],
+   [
+    "Fedh",
+    "time"
+   ],
+   [
+    "sell",
+    "long"
+   ],
+   [
+    "vellyl",
+    "singing"
+   ],
+   [
+    "Ferryl",
+    "bowing"
+   ],
+   [
+    "demo",
+    "until-3SG.M"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 4,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Gann, eth meskrivull, eth meskel. Nesket — nesket dem neld.",
+  "english": "*— Trunk, and root, and sapling. Led — led far.*",
+  "dup": false,
+  "draft": [
+   [
+    "Gann",
+    "post"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "meskrivull",
+    "root"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "meskel",
+    "treeling"
+   ],
+   [
+    "Nesket",
+    "led"
+   ],
+   [
+    "nesket",
+    "led"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "neld",
+    "N·far"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 5,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Sceth. Nahos ulo. Nahos sost.",
+  "english": "*— A hull. No one in it. No one at all.*",
+  "dup": false,
+  "draft": [
+   [
+    "Sceth",
+    "ship"
+   ],
+   [
+    "Nahos",
+    "none"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ],
+   [
+    "Nahos",
+    "none"
+   ],
+   [
+    "sost",
+    "self"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 6,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Meskrivullath ul vimm gor yalat, lodhant. Lonn, eth lonn, eth lonn.",
+  "english": "*— Roots under all, binding. Kin, and kin, and kin.*",
+  "dup": false,
+  "draft": [
+   [
+    "Meskrivullath",
+    "root-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "yalat",
+    "S·anything"
+   ],
+   [
+    "lodhant",
+    "mortar-3PL"
+   ],
+   [
+    "Lonn",
+    "kin.by.blood"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "lonn",
+    "kin.by.blood"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "lonn",
+    "kin.by.blood"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 7,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Et vellyl —",
+  "english": "*— The singing —*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "vellyl",
+    "singing"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 8,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— hess. Preller, ul et molt.",
+  "english": "*— stops. A blade, in the heart.*",
+  "dup": false,
+  "draft": [
+   [
+    "hess",
+    "stop"
+   ],
+   [
+    "Preller",
+    "knife"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "molt",
+    "heart"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 9,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Stinet ulor. Ul et stinel — [ ]",
+  "english": "*— Cut into us. In the cut — [ ]*",
+  "dup": false,
+  "draft": [
+   [
+    "Stinet",
+    "cut"
+   ],
+   [
+    "ulor",
+    "in-1PL"
+   ],
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-6",
+  "para_index": 36,
+  "label": "Romanisation · Seren’s closing line",
+  "rom": "Eth re dhess nahos.",
+  "english": "*And no one answered.*",
+  "dup": true,
+  "draft": [
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhess",
+    "S·answer"
+   ],
+   [
+    "nahos",
+    "none"
+   ]
+  ]
+ }
+]

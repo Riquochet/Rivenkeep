@@ -1,0 +1,4 @@
+# name: BURN
+round BURN {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: BURN*

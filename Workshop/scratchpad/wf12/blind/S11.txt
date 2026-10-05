@@ -1,0 +1,150 @@
+S11-TP-01	Trenneth Hethow Dhresk
+S11-TP-02	Flennath Dholm Treskat
+S11-TP-03	Et trenneth sa hadhar lo Odh Sell ul Gethow Dhresk, hosen re hadh Seren Pa Luth so.
+S11-CO-01	Nydhyl
+S11-CO-02	Flenn Seren · flenn hosast Seren
+S11-CO-03	Ammelyl · mysket gor vess, ul lern et trenn hosast
+S11-CO-04	Flennath Hosast · Flennath et Hald
+S11-CO-05	Hosen vodh re rarrar dem stonol.
+S11-CO-06	Covv Treskat · Kael Nydherd · eth Vell et Covv Treskat · ul lern Dhrenn Rask
+S11-CO-07	Carm et Lodhan · Seren Pa Luth · eth Pa lo Yanna
+S11-CO-08	Hoss Sell et Crenn · Hale Haskard
+S11-CO-09	Ternil et Gorndholm · Seren Pa Luth
+S11-CO-10	Vollol et Treskan · Voss sa re vess
+S11-CO-11	Flennath Pawast · Flennath et Galdard
+S11-CO-12	Cedh ew ol, eth cedh ew so.
+S11-CO-13	Kethow sa re yal nadhumat · Seren Pa Luth, eth flenn et galdardath hosast · ul lern Hoss et Mesk
+S11-CO-14	Hoss et Mesk · et mesk, hosen re hethe {{Halyna}} o
+S11-CO-15	Lodhan eth Tolmath Vardh · {{Halyna}}, lo et tevath
+S11-CO-16	Flennath Sullast · Flennath et Cumm
+S11-CO-17	Noth cumm, eth noth uld sa wrodhant so: vodh re yal lor, eth hosen vodh re orrar hyo.
+S11-CO-18	So Yaldol · et vennuldath, cumm gor hos
+S11-CO-19	So Ommol · et vennuldath, cumm gor hos
+S11-CO-20	Flennath Gemmest · Flennath et Grest
+S11-CO-21	Et grest, brodhat hy sest eth sest et myst.
+S11-CO-22	Gostol et Gannath Domm · Seren Pa Luth, hy et scaevureleth rytow · ul lern Rannwresk ul Meskdhrenn
+S11-CO-23	Dannwresk ul Meskdhrenn · et mesk, hosen re hethe {{Halyna}} o
+S11-CO-24	Gebb et Pard · brodath Wrenn Reldvar, vesket lo {{Halyna}}, eth ryt surr Seren · ul lern Hebbet sa re yal kethet hos clem
+S11-CO-25	Hebbet sa re yal kethet hos clem · et mesk, hosen re hethe {{Halyna}} o
+S11-CO-26	Sulter sa vorr · Voss sa re vess · eth Sulter Myst · ul lern Farrol et Aelvaren
+S11-CO-27	Farrol et Aelvaren · et mesk, hosen re hethe {{Halyna}} o
+S11-CO-28	Flennath Leskest · Flennath et Hyll
+S11-CO-29	Et gorrol: tesset sa re luskant et senneteth, eth sa re lymment et hosseneth, ul lern lunt sa re sesk nafedh: El et bynd ol.
+S11-CO-30	Rellor Hosast · Seren Pa Luth
+S11-CO-31	Vess Vollol · Seren Pa Luth · ul lern Haelir sa re vymm dem varn
+S11-CO-32	Kaelir sa re vymm dem varn · et mesk, hosen re hethe {{Halyna}} o
+S11-CO-33	Redul ul vimm et Helv Bynt · et mesk, hosen re hethe {{Halyna}} o · ul lern flenn pondul Seren
+S11-CO-34	Hylleth sa re nydh et Hald · Kael Nydherd, ul vran nydhyl · ul lern Dhevyl
+S11-CO-35	Tevyl · et mesk, hosen re hethe {{Halyna}} o · eth Vell et Surrath
+S11-CO-36	Vesksirr ul Meskdhrenn · Seren Pa Luth, ul sull trenn
+S11-CO-37	Flennath Vranast · Flennath et Mymmyl
+S11-CO-38	Hosen vodh re vymment et cummath dem varn, eth re vymm et gorrol dem varn.
+S11-CO-39	Mymmyleth · et vennuldath, cumm gor hos, eth ul reskow et ommatath · ul lern Reskowath strom sa orrant um wadh
+S11-CO-40	Reskowath strom sa orrant um wadh · et mesk, hosen re hethe {{Halyna}} o
+S11-CO-41	Kethyl et Mesk Lurrel · Seren Pa Luth, eth ul et dask, et mesk · eth Pa Varn
+S11-CO-42	Trenn Rask
+S11-CO-43	Vodh re vymm hy et myst.
+S11-CO-44	Tolm hy et Myst · Seren Pa Luth · bysket ul lern et trenn hosast
+S11-CO-45	Sestow Flennath
+S11-CO-46	Gor rytet sa re hebb et mesk lor, ul vimm o veskrivull.
+S11-CO-47	Flennath Hethyleth · Seren Pa Luth
+S11-BH-01	Flennath Hosast · Flennath et Hald
+S11-BH-02	Hosen vodh re rarrar dem stonol.
+S11-BH-03	Flennath Pawast · Flennath et Galdard
+S11-BH-04	Cedh ew ol, eth cedh ew so.
+S11-BH-05	Flennath Sullast · Flennath et Cumm
+S11-BH-06	Noth cumm, eth noth uld sa wrodhant so: vodh re yal lor, eth hosen vodh re orrar hyo.
+S11-BH-07	Flennath Gemmest · Flennath et Grest
+S11-BH-08	Et grest, brodhat hy sest eth sest et myst.
+S11-BH-09	Flennath Leskest · Flennath et Hyll
+S11-BH-10	Et gorrol: tesset sa re luskant et senneteth, eth sa re lymment et hosseneth, ul lern lunt sa re sesk nafedh: El et bynd ol.
+S11-BH-11	Flennath Vranast · Flennath et Mymmyl
+S11-BH-12	Hosen vodh re vymment et cummath dem varn, eth re vymm et gorrol dem varn.
+S11-BH-13	Trenn Rask
+S11-BH-14	Vodh re vymm hy et myst.
+S11-KN-01	Sestow Flennath
+S11-KN-02	Gor rytet sa re hebb et mesk lor, ul vimm o veskrivull.
+S11-KN-03	Flennath Hethyleth
+S11-KN-04	Lo dhrenn et gorrol, eth hoskat gemm surr ul sestow.
+S11-KN-05	Cadhat ul sestow et flennath sy, rytet eth rytet, hosen re hethe {{Halyna}} gor hos hy et kaelirvesk eth hy et reskowath strom. El saed et flennath sa ross lo et scethan sost, hy vodh re ryt et mesk gor rytet ulo, eth nath re ryter hos.
+S11-KN-06	Gor rytet sa re hebb et mesk lor, ew hos stinel o dholm hosast; eth el o veskrivull et stinel hosast ull, hosen el rivull hald et trenn hosast. Doss noth meskrivull.
+S11-KN-07	Re rystullom lerneth et meskrivullath ul veskyl, lo et hylldhrenn eth ul et nelter, sell tevar hy veskyl galat ullen ul et meskdhrenn. Re vollom so, en sost, hy vodh lern navollat, omm o hy et garl hosen tolm thenth. Re vyskym gor voll sull fedh, eth hy ull re rytym o; eth re ston gor voll.
+S11-KN-08	Nath re ryt et mesk tevel veth et meskrivull. Re ryt gor hyll ul o sestow et meskrivull sost pawast, eth re hadh umo, hosen cadhant mesketh scaevur um scaevur. Hy ull, el et ryteteth hemm sost et ryteteth tevel sost, sa re dhevent hemm.
+S11-KN-09	Hy et hald, ul et hylleth desir, re yal seskyl veskrivull lom ul scaevurol haelir. Re seskym nafedh mest hy et meskrivull, hy vodh et ullen, nath hebb et mesk o veth lo et Lodhan, eth doss maver o hethyl umont, eth nath vesk hos o.
+S11-KN-10	Lo sy nath noss veth et bisketh, hy et mesk tevel sost dem et mesk hemm sost. Et saedeth, cedh re dhovv um hedh eth amm vodh re haever et molt kylyl, re rytym so ul so reskowath. Lymment dhom rytet et mesk tevel vollath et hesperdeth: vollath dasorat lo yarlol, hosen hulter runn hemm.
+S11-TB-01	Et meskrivull, hosen vollom o · Hosen vodh vesk o ul meskdhrenn · Et ryteteth, hy et tevel sost dem et hemm sost · Cedh sa re yal o lo, ul et dask
+S11-TB-02	Fodh · hos stinel sa hyl dem lern
+S11-TB-03	Dem et orrow.
+S11-TB-04	Lo dhrenn, nel ul lern.
+S11-TB-05	Sull orrol, hos clem.
+S11-TB-06	Hebba lont et molt; grika et pa sest; eska et garl.
+S11-TB-07	Thaesaen Molt Hyll, sa re ryt et rytet dasken tunn, hosen o dhesset.
+S11-TB-08	Stinel Hosel · stinel nasell sa hask ul lern stinel sell
+S11-TB-09	Orra dem et drunn.
+S11-TB-10	Orr hos; fenn et ullen et velvyth.
+S11-TB-11	Ketha; hunna et nydhyl; orra ul vodh doss velvyth.
+S11-TB-12	Pessa et nynth velv; hunna o dhessyl.
+S11-TB-13	Darra hosen re rarr et mesk tevel.
+S11-TB-14	Naelthar Lorr Helv, sa re ryt et rytet dasken tunn, hosen o dhesset.
+S11-TB-15	Hosk ul Lern · hosk cadhat um stinel
+S11-TB-16	Ul lern et lymmerd.
+S11-TB-17	Eska et lymmerd.
+S11-TB-18	Pa orrol dem hos tolm.
+S11-TB-19	Et sceth strom hosast; et garl kethet dasken.
+S11-TB-20	Leavaren Lymmerd Yendeth Clenn: Drunna hos bisk; es desse pa wisk.
+S11-TB-21	Drod · stinel, eth o rask ul gael elth: et drod
+S11-TB-22	Ul vodh re rod o.
+S11-TB-23	Galda so wrodhol; rellora gor sa wrodh.
+S11-TB-24	Et hosast sa wrodh, hessa o wrodhol.
+S11-TB-25	Orra ul neld et bramm velv; seska o; grika o ul morrol dem varn.
+S11-TB-26	Farra et maveret ul neld so vellorol, eth luska so ul maveryl.
+S11-TB-27	Rhenvael Meskdhrenn Dholm: Gor wramm sa wrodh, tess et brunn o.
+S11-TB-28	Gemmyorn Nawrodh · gemmyorn tunn, hosen rytent et brod tolm
+S11-TB-29	Creska et hald.
+S11-TB-30	Et tolm sost, gor ryst.
+S11-TB-31	Amm omm et tolm, et stromrunn.
+S11-TB-32	Ralensaen Molt Veskrivull: Orra ul vimm et galat sa nath noss orrol lo o dhrenn los.
+S11-TB-33	Pa Wrodow · pa stinel sest lo sest, eth hos hyonta naloskat
+S11-TB-34	Bont ul hos reskow; tava ul reskow ullen.
+S11-TB-35	Drunna et hald rerddhalden hosen amm doss dyllyth lo; el et orrol et rerdsenn.
+S11-TB-36	Luska so ul veskyl et cryrull ul vodh nath noss o, eth ketha so ul veskyl.
+S11-TB-37	Senneir Gunn ul vimm: Hebba lont veskyl et cryrull; talda ul vimm et tolm.
+S11-TB-38	Sestow Kylet · stinel sa hyl umo sost
+S11-TB-39	Dem varn, amm grestet.
+S11-TB-40	Hebba lont veskyl et sestow; kyla lo et tolm.
+S11-TB-41	Bamma so lo dhrenn et orrow; darra dem varn lo et orrol deld.
+S11-TB-42	Esthaer Vorrol: Vorra somm orros; luska so ul nanurol et vorr.
+S11-TB-43	Hoss · tresk lunnat ul lodh stinel eth stinel
+S11-TB-44	Vyssora vorr et tolm um et mesk sa nath noss dyllyth lo.
+S11-TB-45	Ul lodh so hossath.
+S11-TB-46	Amm drunnant et nynth, omma hy et helv.
+S11-TB-47	Luskant et mesk hosast ul morrol; luska et mesk hosast ul lymmyl.
+S11-TB-48	Vaelress Meskdhrenn sa Lilv: Cadha lilvyl um et hald; tovva um ommol et clennyl.
+S11-TB-49	Bysket · stinel sa hess ul vodh doss bysket ul meskdhrenn
+S11-TB-50	Tovva ul myst.
+S11-TB-51	Luska et vorr ul vorrol.
+S11-TB-52	Ho ross et tolm vyssorat, ell ul dovvol? Veska; hy ull, orra.
+S11-TB-53	Galda et galat sost sull fedh; et fedh gemmest, kaevera o.
+S11-TB-54	Eirlenth Grem Sell: Tovva ul sulv; drunna et tolm sa nath noss clennyl lo.
+S11-TB-55	Stinel Dasorat · rytet loskat eth dasorat, hy ull ledh hos o, eth nath vesk hos o
+S11-TB-56	Myst ul lern et tavol.
+S11-TB-57	Veska nalelv ul vodh dossos lelv.
+S11-TB-58	Gor orrol, farra broclinth umo; ul vodh nath rynn vorr, luska et tavol.
+S11-TB-59	Neivaere Lennet: Hebba lont veskyl so sost.
+S11-KN-11	Re rarr hos rellor ullen dem susk et brunn ul havul dholmard, hy Dhavow Vorr: Vorr. Re yal o rytet ul et Ommol, eth re rarr o nafedh ul lern ol hald. Ul surr et mymmyleth, re hadh et tolmard o um et sast domm, ul vodh re senn et Vorrol. Nath nydhym o lont.
+S11-TB-60	Vorr.
+S11-KN-12	Re rarrant dhom rytet hy et mesk tevel, thell gor hos hy et sull hyll ul o sestow, eth dhom hy Hyll sa re rystull nycul. Nath re ryt Hyll Dasken bisk clenn, veth rysteth tunn hy wisketh rytet tevar, eth lo rask gor hos, kylyl dem varn.
+S11-KN-13	Re hebbent et reskowath strom thell tesset sa re rytent so sost. Re lymme pa reskow strom rytet hemm, tunn, hy vodh el Fodh eth Stinel Hosel sa ross gor ullen rytet ulonta. Doss pa vurr eth vran ul dunnoth. Re hadhom gor hos hyont, eth nath re hethym hos hyont.
+S11-LN-01	Rytet Dasken · Sull Tolm ul susk et Odh
+S11-LN-02	Cadhat dasken hy et flenneth.
+S11-LN-03	Keth et tolm, Seren.
+S11-LN-04	Ul et vess hosast et grem sy, re vess tev ul lern vodh myskent, et sull tolm ryss myst ul susk et odh sy. Ul et cummath ew et tessyl gor fedh: Myskent nayalat; eth hosen ull re dhessent lom, amm ew lyss en. Nath re vyskym o. Re vyskym: Nath seskym.
+S11-LN-05	Gor vess hy ull, amm re yal et hellur pondul, re hethym et greller lo et tolm vimm sost. Nath re raevulom kaeveret ulo, veth et hunnatath, hy vodh nath noss brodlymmyl lo dholm. Re rytent et Mystaeri et brodath orrowen ul molt so rellorath, hy so hunnat, virr hosen es morr so rellorath. Eth re yal sull brod orrowen lom hy Wrenn.
+S11-LN-06	Gordal ul vess re yal et hellur pondul, eth re yal et vorr vimm, eth re vorr et greller ryssyth nind dem vimm somm re veskym.
+S11-LN-07	Hy ull re yal so lom, et sull ul hos fedh um et tolm vimm sost, et hunnatath virr, eth et rellorath navenn.
+S11-LN-08	Et tolm vimm sost hy et sull tolm ryss myst ul susk Odh Sell: rellorath kylet lo dhrenn et cless, eth ul molt et rellorath, sull brod orrowen, rytet hy et hunnat.
+S11-LN-09	Hess… Helv… Sennyl…
+S11-LN-10	Lo visketh et gannath domm re yal so rytet, eth nalymmet ul hos fedh eth et mesk, eth hynalat. Sull tesk re haemerent ul susk vorr dhavowlest lo Dhavow Hemm. Ul vimm so re dhyvull et Orrow um sull gostard, sa re haemerent dem varn um stomornel. Um et tolm vimm sost re runnant et higileth mygurath. Eth re vesk nahos so.
+S11-LN-11	Lo sy nath drunn hos mygur umont. Kaeverym: re veskym so. Myskym: kaeverym.
+S11-LN-12	Cadhom o hosen re yal cadhat lom.
+S11-LN-13	Eth re vysk et odh: Tumar.

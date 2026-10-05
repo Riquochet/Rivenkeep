@@ -1,0 +1,31 @@
+# name: E5-01
+round E5-01 {wood: long; pith: war ×3; rings: 7; rules after: [2, 6]; cells: [1, 1, 2, 2, 2, 3, 3]}
+  I
+    r1/1  p0·0: WAVE*    p1·0: WAVE*    p2·0: WAVE*
+    r2/1  p0·4: EDGE+BREAKER      band DREAD files 15–1
+  ‖
+  II
+    r3/1  0: GO    2: BOND    4: GO    12: KNOT^r4      band DREAD files 11–13
+    r4/1  10: SQUARE+EYE    graft(E3-01)
+    r5/1  12: GO
+    r6/1  0.1: BEND    0.2: STONEFOLK×3+LEAN    0.3: HAND+CLOSE    4: RISE    6: ~HULL+BEND    12: RISE    14: ~ROOT×3+RISE
+  ‖
+  III
+    r7/1  0.1: LEAN    0.2: HEART    8.1: STONEFOLK×3+HOLD    8.2: SQUARE+EYE    8.3: FOLLOW
+    r7/2  1: HAND+CLOSE    15: GO
+  bark
+    bark 0: SQUARE+TIDE
+  runners
+    run t0  p0·0.r1/1  ⇒      p0·4.r2/1
+    run t1  10.r4/1    →      @0
+    run t2  10.r4/1    ⇒      12.r5/1
+    run u1  0.1.r6/1   →as    6.r6/1
+    run u2  0.2.r6/1   →      0.1.r6/1
+    run u3  0.2.r6/1   ⇒      0.3.r6/1
+    run u4  4.r6/1     →as    14.r6/1
+    run u5  12.r6/1    →as    14.r6/1
+    run u6  8.1.r7/1   →      0.2.r7/1
+    run u7  8.2.r7/1   ⇒      8.3.r7/1
+    run u8  8.3.r7/1   →      0.1.r7/1
+    mem 10: r4/1 → pith
+    run fk1  0.1.r7/1  →  {1.r7/2, 15.r7/2}

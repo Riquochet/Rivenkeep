@@ -1,0 +1,4 @@
+# name: E1-05
+round E1-05 {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: SPARK*

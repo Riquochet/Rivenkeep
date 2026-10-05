@@ -1,0 +1,9 @@
+# name: E2-01
+round E2-01 {wood: forty; pith: war; rings: 2; rules after: [1]}
+  I
+    r1/1  0: WAVE*
+  ‖¦
+  II
+    r2/1  4: EDGE+BREAKER      band DREAD files 15–1
+  runners
+    run t1  0.r1/1  ⇒  4.r2/1

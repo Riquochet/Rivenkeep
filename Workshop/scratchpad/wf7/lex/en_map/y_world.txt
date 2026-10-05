@@ -1,0 +1,145 @@
+# Compounds, collocations and idioms of the Shoreland world, beyond the Book's own lemmas.
+# lemma "-" = not a Book lemma (the entry is made for the tongue, not for a word of the stone text).
+# A compound is modifier + softened head (§3.10); a construct is head + softened possessor (§3.2).
+# --- stone and building
+- | tolm^bresk | n | a stone-chisel, the mason's chisel
+- | lodh^garl | n | a mortar-hand, a mason's labourer
+- | stell^tolm | n | a cairn-stone
+- | hal^hald | n | a wall of living rock
+- | ganna^hosk | n | a gate-lintel
+- | gebb^gann | n | a doorpost, a jamb
+- | lest^gebb | n | a house-door
+- | crisur^stomorn | n | a roof-beam
+- | kyvil^tolm | n | a block of granite
+- | prynur^bunth | n | a scaffold-rope
+- | hosk^ryt | n | a lintel-inscription, the vow cut in a lintel
+- | ston^tolm | n | a standing stone
+- | trenn^ryt | n | a course-cut, an inscription run along a course
+- | rivull^tolm | n | a foundation stone
+- | hald^bisk | n | the head of a wall, its top course
+- | hald^lern | n | a wall-face
+- | hald^gorn | n | a wall-corner, an angle of the wall
+- | ganna^pard | n | a gatekeeper, a warden of the gate
+- | kethow^pard | n | a castellan, the warden of a keep
+- | hellur^pard | n | a hall-warden, a steward
+- | mesk^pard | n | a forester, a wood-warden
+- | tavow^pard | n | a harbour-warden
+- | odh^pard | n | a hearth-keeper
+- | tolm^stell | n | a heap of stones, a rubble-pile
+- | brellir^lodh | n | the mortar of a joint, pointing
+- | ~hald homar | n | a buttress-wall (a wall of buttress)
+- | nelter^gebb | n | a vault-door
+- | saler^lern | n | a gallery-face, the rock-wall of a gallery
+- | bystir^bisk | n | a stairhead
+- | taldow^helv | n | the sky over a tower
+# --- the wall and the war
+- | bramm^garl | n | a gun-crew ("gun-hands")
+- | bramm^pedh | n | a gunshot
+- | pedh^stell | n | a pile of shot
+- | hesp^garl | n | a sword-hand
+- | ~carm hiser | n | a war-cry (the cry of an assault)
+- | ~carm yorrol | n | a battle-cry (the cry of fighting)
+- | gomm^carm | n | a horn-call (the Captain's calls are three)
+- | hald^par | n | a wall-watch
+- | begorn^taldow | n | a lookout-tower
+- | rellor^vorr | n | a signal-fire, a beacon
+- | tynur^orl | n | a siege-day (four-and-twenty hours)
+- | ~crenn hest | n | a company captain (the captain of a company)
+- | ~hald vathurat | n | a breached wall
+- | pedh^myger | n | a shot-hole, a gun-port
+- | mesk^sceth | n | a wood-ship, a hull of the grey fleet
+- | myst^sceth | n | a grey hull
+- | myst^scethan | n | the grey fleet
+- | gend^sceth | n | a green hull (of the young wood)
+- | ~scethan dhenn | n | the ghost fleet (the fleet of shadow)
+- | ~fymmet dhenthen | n | the winged seed
+- | ~wemmeth myst | n | the grey sails
+- | ~tolmath nawrodh | n | the mute stones
+- | ~gannath domm | n | the black pillars (the posts of the wood, black)
+- | ~hollarol sell | n | the long retreat
+- | ~Redul Serdul | name | the Trade Council (the council of trade)
+- | ~vestul rytow | n | the archive chest (the chest of the archive)
+- | ~baegyth myst | n | the between-light (the light of the grey)
+# --- sea and shore
+- | wadh^trenn | n | a sea-lane
+- | orrow^trenn | n | the shoreline
+- | wadh^helv | n | the sea-sky, the horizon
+- | wadh^nas | n | a seabird
+- | wadh^ses | n | a sea-fish
+- | rhull^ses | n | a river-fish
+- | tant^nynth | n | salt-water, brine
+- | crest^nynth | n | meltwater
+- | piskur^sulter | n | a fishing-boat
+- | sceth^mesk | n | ship-timber
+- | fodh^fidh | n | spume, wave-foam
+- | dhysal^tolm | n | a beach-stone, a shingle-stone
+- | orrow^lunt | n | the shore-people
+- | nell^tavow | n | an island harbour
+- | lynth^orrow | n | a lakeshore
+- | thenn^tavow | n | a bay-harbour
+- | kess^trenn | n | the run of a current
+- | spant^trenn | n | the surf-line
+# --- sky, weather and time
+- | selm^baeg+Oth | n | moonlight
+- | elth^baeg+Oth | n | starlight
+- | rerd^baeg+Oth | n | sunlight
+- | sulv^henth | n | a snow-cloud
+- | grem^orl | n | a winter's day
+- | syst^orl | n | a summer's day
+- | vess^helv | n | the night sky
+- | dhess^carm | n | the dawn-call
+- | hedh^vell | n | an evensong
+- | surr^dask | n | the year's end
+- | orl^dask | n | nightfall, the day's end
+- | ryst^vell | n | a morning-song
+- | nerdess^henth | n | a storm-cloud
+- | frenn^orl | n | a frost-day
+# --- hearth, kin and people
+- | odh^vorr | n | the hearth-fire
+- | odh^trenn | n | a hearth-tale, a tale laid at the hearth
+- | odh^tolm | n | a hearth-stone
+- | varn^vell | n | a song of home
+- | theld^voll | n | a family name
+- | tevow^voll | n | a cradle-name
+- | arra^haral | n | the guest-law (one who kneels at your door is under your roof)
+- | lonn^lorr | n | kin-blood
+- | gedh^lest | n | a father's house
+- | tev^vell | n | a children's rhyme
+- | sodh^vell | n | a skipping-song
+- | nemm^sodh | n | a girls' game
+# --- faith and the bond
+- | ammel^tolm | n | a prayer-stone
+- | ternil^flenn | n | a leaf of the Rite (the slate leaves)
+- | peskul^lernul | n | holy oil, the oil of blessing
+- | ryt^tolm | n | a vow-stone
+- | osk^ryt | n | a trust-vow
+- | molt^ryt | n | a heart-vow, an oath of the heart
+- | lodh^ryt | n | a bond-vow (the vow of a bonded pair)
+- | ~Mardh sost | name | God himself
+# --- speech, writing and the Book
+- | luth^garl | n | an ink-hand, a scribe's hand
+- | trenn^vell | n | a lay, a tale in verse
+- | carm^brod | n | a call-word, a password
+- | flenn^luth | n | leaf-ink, the scribe's ink
+- | ryt^luth | n | a cut letter inked in, a rubric
+- | brod^ryt | n | a word cut in stone
+# --- the idioms of having, being able and feeling (orrowen_v2 §3.7): Doss X lo Y, Doss X um Y
+- | ~doss lomm um | phr | (Y) grieves: "grief is upon Y"
+- | ~doss ludal um | phr | (Y) is afraid: "fear is upon Y"
+- | ~doss kaemul um | phr | (Y) is ashamed: "shame is upon Y"
+- | ~doss hylenn um | phr | (Y) is glad: "gladness is upon Y"
+- | ~doss saemal um | phr | (Y) hopes: "hope is upon Y"
+- | ~doss tevir um | phr | (Y) hates: "hatred is upon Y"
+- | ~doss lyrness um | phr | (Y) is proud: "pride is upon Y"
+- | ~doss cathal um | phr | (Y) is sick: "sickness is upon Y"
+- | ~doss suress um | phr | (Y) has a fever: "a fever is upon Y"
+- | ~doss hydull um | phr | (Y) is patient: "patience is upon Y"
+- | ~doss syllorn um | phr | (Y) is brave: "courage is upon Y"
+- | ~doss maver um | phr | (Y) must, (Y) needs: "need is upon Y"
+- | ~doss lunn lo | phr | (Y) may, is free to: "freedom is at Y"
+- | ~doss mylenn lo | phr | (Y) is strong: "strength is at Y"
+- | ~doss sollan lo | phr | (Y) is at peace: "peace is at Y"
+- | ~nath noss lo | phr | (Y) cannot: "is not at Y" (with a verbal noun)
+- | ~Rytom um | phr | I swear upon (the opening of an oath: rytom is the canon's broad form)
+- | ~Ston | phr | It stands (the close of every oath)
+- | ~Stonos | phr | It stands (the Hal form, kept in liturgy)

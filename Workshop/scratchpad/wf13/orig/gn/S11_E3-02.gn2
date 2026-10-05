@@ -1,0 +1,17 @@
+# name: E3-02
+round E3-02 {wood: life; pith: war; rings: 5; rules after: [1, 4]}
+  I
+    r1/1  0: SQUARE*
+  ‖¦
+  II
+    r2/1  4: SQUARE+STRIKE#4    12: STRIKE+CARVE^r4
+    r3 ·
+    r4/1  4: OPEN
+  ‖
+  III
+    r5/1  4: MEND?    5: BLOOD+SQUARE
+    r5/2  5: GO    3: STRIKE
+  runners
+    run t1  12.r2/1  →  4.r2/1
+    run t2  4.r4/1   ⇒  4.r5/1
+    run fk1  4.r5/1  →  {5.r5/2, 3.r5/2}

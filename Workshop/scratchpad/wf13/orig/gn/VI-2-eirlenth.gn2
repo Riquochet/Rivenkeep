@@ -1,0 +1,94 @@
+# name: VI.2, the heart of Eirlenth, carved whole in the grain
+round VI-2-eirlenth {wood: eldest; pith: war; rings: 16; rules after: [3, 14]; cells: [1, 1, 1, 1, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4]}
+  I
+    r1/1  0: KNOT*    2: SHORE+CASTLE×3    3: NEW+HULL×3    12: DEEP+GO
+    r1/2  3: BURN    12: !BURN
+    r1/3  3: CARVE#1
+    r2/1  10: EDGE    12: DEEP{most}+HEART      band MIST files 12–12
+    r2/2  12: PILLAR×3{last}+RISE
+    r2/3  12: HOLD      band MIST files 11–11
+    r2/4  12: TREE:boughs×3
+    r3/1  4: AXE    11: ~GO{again}    12: !GROW      band MIST files 11–11
+    r3/2  12: KNOT
+  ‖
+  II
+    r4/1  0: MOUTH{still}    5: CARVE+US×3{last}    9: DEEP+CARVE×3
+    r4/2  5: GO    9: !WORD
+    r4/3  5: !KNOT    9: !BOND+WORD×3
+    r4/4  5: CARVE{slow}    9: !MORROW
+    r5/1  2: CASTLE+HAND#2    3: HULL×3{last}    5.1: >RISE    5.2: GROW    10: EARTH    12.1: PILLAR+HULL×3    12.2: GO      band WATER files 14–14
+    r5/2  5: >GO    12: HOLD
+    r6/1  8.1: TREE×3{last}    8.2: FLASH    11: GO    12.1: GO    12.2: HOLD+EARTH      band MIST files 9–7  band WHITE files 8–8
+    r7/1  9.1: SAPLING×3+LIE    9.2: !LIVE      band WHITE files 9–9
+    r8/1  12.1: GIFT{last}    12.2: GO      band MIST files 11–11
+    r9/1  2.1: SHORE+CASTLE    2.2: FALL    2.3: STRIKE{most}    2.4: SQUARE×3    6.1: ~US×3+SIT    6.2: ~LIE+EARTH    12: SIT    13.1: BLOOD×3    13.2: !LIVE    13.3: AXE+WOOD
+    r9/2  2: BRIDGE×3
+    r10/1 9.1: DEEP+CARVE    9.2: GREAT    12.1: CARRY    12.2: CRY
+    r11/1 0: ~HOLD    12.1: LONE+NAME×3    12.2: MOUTH?
+    r12/1 0.1: STONEFOLK×3    0.2: ANGER+RISE{again}    2.1: GREAT+HOUSE    2.2: HOUSE+OVER    12: DEEP+CARVE    13.1: BLOOD×3    13.2: HOLD    pocket P1 cut 14–15 { KNOT½ }      band STILL files 2–2  band WHITE files 2–2  band DARK files 7–7
+    r13/1 1.1: !HOUSE+OVER    1.2: OVER    12: DEEP+KNOT      band WHITE files 4–4
+    r14/1 2: ~GREAT+HOUSE    15.1: BURN{few,last}    15.2: OVER
+  ‖
+  III
+    r15/1 2: SHORE+CASTLE{again}    12.1: PILLAR+HAND#2    12.2: PILLAR{last}+FALL      band MIST files 12–12
+    r16/1 8: TREE×3    9.1: SAPLING×3    9.2: BENEATH+LIE    11.1: THIN+LIVE    11.2: OVER    12.1: HOLD    12.2: TREE:boughs×3      band MIST files 11–11
+  bark
+    bark 0: HOLD
+    bark 0: DEEP+KNOT[WHITE]
+  runners
+    run a1   12.r1/1       →      2.r1/1
+    run a3   3.r1/2        →      2.r1/1
+    run a2   12.r1/2       →      2.r1/1
+    run a4   3.r1/3        →in    3.r1/1
+    run b1   12.r2/2       →in    10.r2/1
+    run b2   12.r2/3       →      @11
+    run b3   12.r2/3       →in    12.r2/4
+    run c1   4.r3/1        ⇒      12.r3/1
+    run c3   11.r3/1       →      12.r3/2
+    run c2   12.r3/2       →for   11.r3/1
+    run d1   0.r4/1        ⇒      5.r4/2
+    run d6   9.r4/1        →as    {9.r4/2, 9.r4/3, 9.r4/4}
+    run d2   5.r4/2        →      @12
+    run d3   5.r4/4        →      9.r4/1
+    run d5   5.r4/4        →bc    9.r4/1
+    run d4   5.r4/4        →in    @12
+    run e2   5.1.r5/1      →      12.1.r5/1
+    run e3   5.2.r5/1      →for   12.1.r5/1
+    run e1   10.r5/1       ⇒      5.1.r5/1
+    run e4   12.1.r5/1     →for   2.r5/1
+    run e6   12.2.r5/1     →in    @14
+    run e5   5.r5/2        →      12.2.r5/1
+    run e7   12.r5/2       →      3.r5/1
+    run f1   11.r6/1       →with  12.1.r6/1
+    run f2   11.r6/1       →bc    12.2.r6/1
+    run h1   12.1.r8/1     →      @11
+    run h2   12.1.r8/1     →for   12.2.r8/1
+    run h3   12.2.r8/1     →      @0
+    run i2   2.3.r9/1      →      13.3.r9/1
+    run i5   6.1.r9/1      →in    6.2.r9/1
+    run i1   12.r9/1       →in    {2.1.r9/1, 13.1.r9/1}
+    run i4   12.r9/1       →as    6.1.r9/1
+    run i3   13.3.r9/1     →in    {2.4.r9/1, 2.r9/2}
+    run j1   12.1.r10/1    →      9.1.r10/1
+    run j2   12.2.r10/1    →bc    9.2.r10/1
+    run k3   0.r11/1       →      12.1.r11/1
+    run k2   12.2.r11/1    →for   0.r11/1
+    run k1   12.2.r11/1    →      @0
+    run k4   12.2.r11/1    →bc    12.1.r11/1
+    run m2   0.2.r12/1     →in    {13.1.r12/1, @7}
+    run m1   2.2.r12/1     →with  13.1.r12/1
+    run m4   12.r12/1      →that  P1
+    run m3   13.2.r12/1    →      0.2.r12/1
+    run n2   1.2.r13/1     →      @12
+    run n1   12.r13/1      →in    @4
+    run o1   15.1.r14/1    →in    2.r14/1
+    run o2   15.2.r14/1    →      @12
+    run p1   2.r15/1       →      @0
+    run q3   9.2.r16/1     →      @11
+    run q4   11.2.r16/1    →      8.r16/1
+    run q1   12.1.r16/1    →      @11
+    run q2   12.1.r16/1    →in    12.2.r16/1
+  ray 2: r9/1–r15/1
+  ray 12: r2/3–r16/1
+  ray 9: r7/1–r16/1
+  ray 2: r12/1–r14/1

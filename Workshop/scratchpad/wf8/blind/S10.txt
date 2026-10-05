@@ -1,0 +1,120 @@
+# BLIND COPY of wf8/units/S10.md: native lines only (romanised Orrowen and Grain Notation v2).
+# English, word-for-word lines, notes, tables and GN '#' comment lines stripped. [n] = source line.
+# Selection was mechanical: blockquote lines whose words the analyzer reads as Orrowen (>= 80%), plus the GN code blocks.
+
+# A. Native words of the headings.
+[1] *KETHYL ET MESK LURREL*
+[1] *TOLM HY ET MYST*
+[309] *Pa Varn*
+
+# B. Orrowen (romanised).
+[32] > **Flennath et Mesk Lurrel**
+[34] > *Et Kylyl.*
+[40] > **Kethyl et Mesk Lurrel**
+[46] > *Re hadha Halyna, hos eth ullen, ul ba luth, ul et vess sa re orr et sulter hyo, pynt ul sestow ommol et reskow strom nothast. Doss o rask ul garm et mesk, eth re hadhom et saed ull hosen re wrodha sona o.*
+[60] > Kethen et tolm olen; eth vess sy kethen o sell dem olna wrodhol.
+[70] > Hunna hosen vodh re yal et kethyl dasken galdat: et kethyl sa nath re raevul hos o.
+[80] > Ew **{LAST_THRONE_AT_HAVEN}** et Crenn Myst nothast sa re omm. Re firr galat sa re dhovv hyo ul vodh re sol o, hosen re firrent et rost ullen: domm o veskdhrenn, eth treskat lunnat. Re dhovvant et hesperdeth deld hyo, hy vodh re yalant et reskowath strom ludalen, sennet sost. Re lusk et Crenn brod dem Halyna: Ketha o volt, eth rystulla et voll sa ross ulo, hosen re hethys moltath et rost. Hy ull re vellora Halyna ul molt o vesketh ul hedh, pana olen, eth re orr Seren ul sona sestow lo et greller.
+[111] > Re weske et molt ul vodh firrent et moltath gor fedh, gunn ul meskdhrenn hemm, myst eth duss eth sol. Eth lo sest et molt, ul dresk et meskvolt, re yal saedel sa new sell hy yarl. Ew mesk lurrel o.
+[122] > Re raevular galatath mest ul surrath sell et tynur; nath re raevul hos galat ull. Re raevular et kaelireth dem haralath, eth et moltath dem vollath, eth et myst dem wemmeth. Nath re haever hos: doss galat hossen tul ul et mesk ull tunn. Veth re yal o lurrel tul, eth ul seskyl tul. Re yal o ul devyl ul nomm volt et reskow strom sennet, lemmet, hosen doss gendel ul devyl ul dresk hald.
+[134] > Hy et grem hosast, re yal hosel garl um vesk loskat lonta. Veth re selle garl gor hos, eth re femme o ul hos clemel, nindeth Halvard eth Rhyna, eth re hethe o ul hos clemel. Re vesk Seren pa lern ul gylyl olen, hosen kyl hos lern.
+[146] > New haral o. New grestet o. Ew hos ell ullen gor vesk sa re hethen fedh. Keth et mesk lurrel hos brod, mysk vell et meskanath; eth hosen ull re heth o, eth ew varn et brod. Re vysk et mesk hosast sa re hethen fedh: *orrow*.
+[157] > Veth nath re hebb o et brod hosel. Re hebb o lonta tessyl et odh sy: galat sa re vyskys lo rask et trenn, gor vess et gorrol; eth nath re hess o ul vodh hesser.
+[182] > Eth re yal voll esket ulo, hosen doss fymmet esket ul nanth: voll sa nath re heth fedh rytet yorrol: et voll sa hebbent lont sost. Nel Mystaeri o, hy vodh el ol voll umont ull. Naelear, vollant so sost. Lunt et hoss.
+[194] > Re semm Rhyna, eth nath re semm Halvard, hy vodh re yal ey ul semmyl dem bana.
+[204] > Hy ull re yalda Halyna galat sa nath re yald stonwrytel fedh. Re yalda sona sulter. Ew galdardath ol nedheth, new farrardath; eth ew galdardath ol; eth nath noss sulter stonwrytel ul ryteth surr et Stonwrytan, nahos.
+[215] > Veth doss pynullath ul molt et Treskan: sugornan et cummath, sa re yald et sultereth lyss sa orrant hyo lo hyll ryst eth mymment dem varn ul hedh, eth sa re lymm so ruvereth dem susk et brunn hosen re lymment tolmardath so wresketh; eth lo vessyl Halyna re orr dem vimm dem dhysal. Re yal et hemm sost hyont hy Hemm Hyll, eth ew gedh Dharnel o.
+[227] > Re yalda Halyna o hy haelirvesk et mystscethan, hy hrynireth sa re hethen; hy vodh re yal et mesk ull tevet dem wadh, eth mesk sa heth et wadh, mesk sa heth et orrol dem varn, hosen re heth et Aelvaren o. Re hadh et sugornan et breller, eth re yal et talesseth ferret, eth re lodh et trovulath; eth re roskura Halyna gor wrellir hosen doss tolm roskurat, eth nath re yal luskol wrellir lo wadh. Re haemer o orl tunn ul neld et pell, ul fodh duss, eth nath re rik o nynth. Ew lyss o, eth ew tunn o.
+[239] > Re hadha Halyna et saedel lurrel lo lern et sulter, um lodull feth. Lo sest et saedel re hadha sona Stonwryt, saed styvil eth saed tolm domm: osk hoskat ul dolm; et hebbet peness sost sa re yal lo Orrow fedh, hosen re yal mesk domm et Arra et peness sost lont.
+[250] > Hy ull re lumma Halyna olen um dhysal ul lern et sulter. El lusul hosast dhernil et Arra ull: et hebbet eth et lummol; eth et hos lusul sa ross o yaldol lo hos lunt hosel. Doss maver et lunt ullen um et ullen.
+[260] > Re hasta sona o, eth re rik et hyll o dem neld. Amm re yal o ul neld, re hyl o, ul lern et helvhoss eth ul lern et kess, hosen re hyl et Aelvaren begess, Lymmerd et Lodh, eth re orr o dem neld ul myst; eth fedh sy nath re lymm o ledal, veth hebbet.
+[271] > Re yalant et higileth hemm ul ol molt um dhysal, eth re nendent o ul morrol. Nath ludalant galat um et wadh tunn hosen sulter myst sa orr hyo ul lern et helvhoss; eth nath re hylent dem neld.
+[281] > Cadhan o hosen re yal cadhat lona.
+[287] > *Eth re dhess nahos.*
+[293] > Re yal et odh velv sell, eth re vorr et odhvorr dem vimm, eth nath re hadh hos mesk umo. Hy ull re vysk tev o, virr ul lern, hos hy dhevath sugornan, hy et kethow rerddhalden, velv: *Tumar.* Eth hy ull re vysk gor uld o.
+[301] > *Hy ull, ul et fedh hosast, re vell et odh ul morrol et mesk. Vell et Treskan o tul, eth voll o* Pa Varn*:*
+[311] > *Re yal ol varn dannat hy hal;*
+[312] > *re nadhumar o, eth re wesker o, eth re hether o ul lorr.*
+[313] (a non-native line stands here in the unit; not copied)
+[314] > *Keth tolm et ryt, eth keth meskdhrenn et vennoth.*
+[315] > *Tumar ol varn. Tumant so varn eth.*
+[317] (a non-native line stands here in the unit; not copied)
+[318] (a non-native line stands here in the unit; not copied)
+[319] (a non-native line stands here in the unit; not copied)
+[320] (a non-native line stands here in the unit; not copied)
+[321] (a non-native line stands here in the unit; not copied)
+[325] (a non-native line stands here in the unit; not copied)
+[326] (a non-native line stands here in the unit; not copied)
+[328] (a non-native line stands here in the unit; not copied)
+[329] (a non-native line stands here in the unit; not copied)
+[379] > **Trenn Rask · bysket ul lern et trenn hosast**
+[383] > *Ul flennath doss et flenn sy bysket ul lern et trenn hosast,* Covv Treskat. *El et flenn hosast sa vesk veskerd o, eth et flenn dasken sa re yal loskat.*
+[393] > **Tolm hy et Myst**
+[397] > *Re ryt Seren Pa Luth o ul et surrath sa re fennent, um et flenn sa ross ul lern dhrenn hosast et flennath sy. Re yal et flenn pondul dem et orl sy, veth meskdhrenn umo eth hos trenn:* Nawrodhat. Nath noss tul kethyl et gunn sy lo Halyna. *Ul et dask, nath re losk hos kethyl Halyna o.*
+[408] > Rytym sy hosel, eth rytym venn; hy vodh nath noss hos amm sy sa heth et mesk eth sa wrodh o lom.
+[416] > Dossa Halyna sennet. Re senne ul hos vess, ul et grem sa re fenn ommol et reskow strom nothast, hosen senn et Lodhan: Rhyna hosast, ul naedh, eth Halvard somm re vorr et greller tul, hy vodh re sesk o. Firre ul vimm et hosk clenn sa ross um yanna ulvenn, ul hos ledal, lo hos tolm, eth hos voll umo.
+[426] > Nath re orrom lonta. El dask hossol nalodhat ull, re wrodha sona lom hos fedh, eth nath re raevarom sona dem et ryst fennet. El ryterd hosast et Stonwrytan sa hoss et brodhardath en, eth hy ull ser et flennath.
+[435] > Ul heth re vellor sulter lyss myst lo hyll ul vimm et kethow, eth re dhav o sost um dhysal, hosen re dhav et Aelvaren hos fedh ul lern redulhellur et Mystaeri. Nath re yal hos ulo, eth nath re luss hos o. Nath re orrant et higileth hemm dem vimm, dem et sulter, hy vodh sulter myst sa vellor lo hyll, sulter sa vellor loth. Ew et tevath sa re orrant dem vimm. Lo lern et sulter re firr tolm.
+[444] > New tolm o. Ell ew tolm o sa re yal mesk: myst eth domm, eth nalelv, eth meskdhrenn ulo tul, hosen hebbet et Arra sa re firr sell sost ul vestul sa re lymmym dem susk et brunn. Tolm Myst re voll et Treskan o; eth mysk: tum o gor yalat. El et hos tolm sa wrodh. Nath noss brodlymmyl lo dholm, eth el venn ull tul; veth new hosel tolm o fedh.
+[454] > Eth re yal o rytet lo wresk. Seskym breskyaldat. Re ryt garl o sa re rystull et bresk desir, eth gell: tevel hosen nydhent, kaeverym, eth fedhet hosen nydher. Re yal o rytet ul ol dolmath sost, tolmath sa vesk gor uld; eth nath re hadhom en narlremullath umo. Re veskym o lo en veskowath. Re yal o rytet dem hos sa vesk hosel.
+[465] > *Ul et dumol ol varn, ol theldeth…*
+[471] > Hess et ryt lo ull, ul molt ol Hosk, eth stinel dasken et bresk gand tul lo rask et trenn. Vesseth mest hy ull re reskym lo, eth re haeverym um et hos sa re ryt o. Nath re vesk o ol govv treskat fedh, kaeverym, hy vodh nath re farr o fedh, eth nath re farr hos hyont fedh ul scetheth ull. Veth re vesk gor sceth sa re vellor ul lern ol hald o ul dhenthyl, eth re orr galat sa re veskent et scetheth dem varn, lo dhrenn et meskrivullath, dem et meskanath; eth re heth o o lo ull, hosen heth et mesk hald. Re lymm o o wrodath ulo gor surr et gorrol, eth re rystull o ol dolmath hyont, hy vodh nath re yal galat ullen orrowen lo dem rystullol hyo; eth ul et dask re ryt o so ul et hos tolm sa re yal lo Naelear, sa es lymm kaeveret. Re vollom o ulom Ryterd Dasken, hy vodh kaeverym: amm re ryt o sy, nath re yal ullen. Eth re haeverym: doss et brodel navenn ulo, et hos brod sa nath re vaver hos, hosen sull brod et Arra lo Yebb et Pard: et galat venn, sa re vysk hos ul vennoth, sa nath re sesk tul hosen vodh mysker o.
+[482] > Nath re rarr hos lo, eth nayess el podul ull. Nath re nethiler arra tul.
+[490] > El vadullen lomm, eth doss o nethilet dem devath. Medh et wadh tul um dhysal ul vimm et hald. Dhenth et Covv Treskat tul um yanna ulvenn, eth ul vess darr et helvhoss um sorthath susk, ul vodh ston Kethow Dhresk tul; eth myskent et hemmeth: brodh o et Hosk somm orr o.
+[499] > Galat sa es luskar ul dessyl, nath seskym o. Nath seskym galat veth sy: doss maver luskol et tessyl umor, ul lummol.
+[576] > *Nath re heth hos lo odh sy o. Cadhat lo hos sa re rystull et meskdhrenn.*
+
+# C. Grain Notation v2 (code blocks; '#' comment lines stripped).
+## block 169
+round VI-1 {wood: green; pith: round; rings: 1; rules after: []}
+  I
+    r1   0: HOLD+(HOME/ = HOMESTONE\)+[NAELEAR within HOME]*
+## block 338
+round VI-1-twohomes {wood: plain; pith: round; rings: 2; rules after: [1]}
+  I
+    r1/1  0: HOME*    10: TREE×3
+    r1/2  10: HEART×3+LIVE      band MIST files 10–10
+  ‖
+  II
+    r2/1  2: AXE×3+GO    10: THIN+LIVE    12: US×3‿      band MIST files 10–10  band MIST files 12–12
+    r2/2  12: !FIND
+    r2/3  12: HOLD
+  runners
+    run a1   10.r1/2       →      0.r1/1
+    run b1   2.r2/1        →      @8
+    run b2   2.r2/1        ⇒      10.r2/1
+    run b3   12.r2/2       →      @8
+    run b4   12.r2/3       →      @8
+  lap  b2 ⊳ b4
+## block 512
+round STONE {wood: stone; pith: round; rings: 9; rules after: [4, 7]; axis 90}
+  I
+    r1/1  0: STONEFOLK*
+    r2/1  0: LONE    4: DEEP+SQUARE
+    r2/2  4: RISE{still}
+    r3/1  0: BREAK    4: BLOOD+SAIL
+    r3/2  0: >LIE
+    r4/1  4: CARVE+HAND    6: STONEFOLK#1
+    r4/2  6: STONEFOLK×3
+  ‖
+  II
+    r5/1  4: EYE    8: HULL×3{all}
+    r6/1  4: HOLD    8: TREE×3
+    r7/1  4: CARVE    8: US+HOLD{most}
+  ‖
+  III
+    r8/1  0: HOMESTONE    1: BLOOD×3    2: KNEEL    3: OPEN+DOOR      band STILL files 4–4
+    r9/1  0: STONEFOLK×3+RISE    8: US×3+RISE
+  bark
+    bark 0: HOLD
+  runners
+    run a1   0.r2/1        →      4.r2/1
+    run b1   0.r3/1        →      4.r3/1
+    run b2   0.r3/2        →      4.r3/1
+    run c1   6.r4/1        ⇒      6.r4/2
+    run c2   6.r4/2        →      4.r4/1
+    run d1   8.r5/1        →      4.r5/1
+    run e1   8.r6/1        →      4.r6/1
+    run f1   8.r7/1        →      4.r7/1
+  ray 4: r2/1–r7/1
+  mem 4: r6/1 → pith

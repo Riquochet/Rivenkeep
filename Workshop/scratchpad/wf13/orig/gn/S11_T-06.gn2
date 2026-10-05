@@ -1,0 +1,19 @@
+# name: T-06
+round T-06 {wood: eldest; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+  I
+    r1/1  0: BREATH*
+  ‖
+  II
+    r2/1  0.1: SQUARE+MEND    0.2: STONEFOLK+HAND    4: HOLD+CARVE    12: >ROT
+    r3/1  0.1: GO    0.2: BREATH#2    0.3: STONEFOLK+HAND    12: ROT{more}
+  ‖
+  III
+    r4 ·
+  bark
+    bark 0: GRAIN+ROT
+  runners
+    run t1  4.r2/1     →      0.2.r2/1
+    run t2  12.r2/1    →      0.1.r2/1
+    run t5  0.1.r3/1   →in    0.2.r3/1
+    run t4  12.r3/1    ⇒      0.1.r3/1
+    run t3  12.r3/1    →as    0.3.r3/1

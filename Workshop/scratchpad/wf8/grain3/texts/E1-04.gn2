@@ -1,0 +1,7 @@
+# name: Before bearer, thin wood
+# english: Before bearer, thin wood. Thin wood falls; bearer keeps pace.
+# literal: The Bar Before: the bearer’s going, with thin wood laid across the way ahead; the stroke runs on through the bar.
+# root_word: before
+round E1-04 {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: BARB*

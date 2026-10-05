@@ -1,0 +1,5 @@
+# name: V.4, the first carving of the war (mystaeri_spec §5.8)
+round V-4-grow {wood: green; pith: round; rings: 2; rules after: []}
+  I
+    r1/1  0: GROW^r2*
+    r2/1  2: !MOUTH+SHORE

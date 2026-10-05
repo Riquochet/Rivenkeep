@@ -1,0 +1,39 @@
+{
+ "lemmas": 670,
+ "mapped": 670,
+ "missing": [],
+ "rows": 429,
+ "rows_by_kind": {
+  "v2": 62,
+  "v1": 97,
+  "add": 47,
+  "cmp": 78,
+  "dev": 94,
+  "name": 41,
+  "desc": 10
+ },
+ "lemmas_by_kind": {
+  "cmp": 93,
+  "v1": 192,
+  "dev": 154,
+  "name": 56,
+  "v2": 114,
+  "add": 50,
+  "desc": 11
+ },
+ "rows_with_errors": 0,
+ "signs_used": 115,
+ "signs_unused": [
+  "MOUTHS",
+  "SPARK",
+  "WAVE"
+ ],
+ "register_only": [
+  "castle",
+  "evening",
+  "few",
+  "morning",
+  "shame",
+  "travel"
+ ]
+}

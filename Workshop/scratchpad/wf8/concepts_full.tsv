@@ -1,0 +1,573 @@
+# lemmas	grain	kind	note
+# kind: v1 = a v1 sign (mystaeri_spec §3.5); v2 = a v2 sign (grain_v2 §9.2); cmp = a compound already in grain_v2 §9.1/§18 or the v1 tables;
+#       add = a compound or reading added by this pass (grain_v2 §21); dev = a device (runner, fringe, band, ring, file, count…);
+#       name = a name (bark, or a said-pocket); desc = a shore place carved by what it is; frame = not carved (reason given)
+# grain: signs and ligatures in GN v2; X[BAND] = X cut inside that band; [BAND] = the band alone; @f = a file referent.
+# ---- the wood, the tree, its parts
+wood, board	WOOD	v2	TREE×3 when it is the forest ("the wood under the grey")
+tree, forest	TREE ; TREE×3	v1	a forest is TREE×3; "the deep forest" DEEP+TREE×3
+grove	TREE×3	v1	thaelen
+trunk	TREE:trunk	v2	part (§5.2)
+bough, branch, boat, ship, hull	HULL	v1	"a bough; a hull"; a small boat of the old wood is DEEP+HULL½
+crown, head	GREAT×3 ; US:crown ; STONEFOLK:crown	v1	crowns and heads of the Hydra are GREAT×3 (v1 table); a person's head is the part
+crown-hull	TREE:boughs	v2	"crown-hulls" (§5.2)
+canopy	TREE:boughs×3	add	crowns of boughs over the keep
+bark, skin	BARK	v2	"a skin of wet bark" BARK[WATER]
+bark-first	BARK+GO	add	"some come bark-first": a going led by bark
+leaf	LEAF	v2
+root	ROOT	v1
+fine	THIN+ROOT×3	add	"the fine roots" (issralen)
+sap	SAP	v2
+seed, wing	SEED	v1	the winged seed; its wings are in the sign
+husk	~SEED×3	cmp	hollow seed (§18)
+shoot	NEW:shoot	v2	part
+stump	NEW:stump	v2	part
+sliver	WOOD½	cmp
+timber	AXE+WOOD	cmp	rhithveir
+heartwood, middle, heart	HEART	v1	saen: heartwood; the middle
+temper	HEART	v1	"no temper yet" !HEART{still}: the grain's temper is its heart
+grain	[grain-arc in names] ; CARVE ; WOOD	dev	the grain-arc is cut only in names (v1 §3.14); "the grain holds it still" is the seal in the bark; wf8 merge (W03 #5): the kind of a heart's wood ("that is our grain") is WOOD on the teller's file, NAME to it and to the said-pocket of the grain's name; CARVE stays for the shape of a knowing [was: [grain-arc in names] ; CARVE]
+ring	TIDE	v1	a growing; "as the first ring lies beneath all the rings" TIDE@1 BENEATH TIDE×3{all}; the rings themselves are rings
+growth, grow	GROW	v1
+ripen	SEED+GROW	cmp
+prune	CARVE+GROW	cmp
+knot	KNOT	v1
+fern	~LEAF	cmp	likeness (§18)
+moss	MOSS	v2
+# ---- the kinds of wood (names the shore gave; carved by meaning, in a said-pocket of the shore-folk)
+heartoak	HEART+TREE	name	§18
+ironbark	AXE+BARK	name	§18
+yew	DEEP+TREE	name	§18 (the old tree); never the Treant, which is TREE+BEAST (fix B8)
+blackthorn	NEW:stump[DARK]	name	§18
+twistbough	TURN+HULL	name	§18
+willow	BEND+TREE	name	§18
+ashwood	BURN+TREE	name	§18
+silverbark, silver	SILVERBARK	v2	a silver elder; SILVERBARK×3 the council
+# ---- the long-lived, the shore-folk, people
+long-lived	US×3	v1	naelea; the long-lived as a people is US×3‿ (Naelear)
+naelear	US×3‿[MIST]	name	the kind-arc (§5.3) inside the MIST band
+people	STONEFOLK×3‿ ; US×3‿	dev	the kind-arc: a whole people
+shore-man, man	STONEFOLK	v1	×3 the shore-men
+builder	STONEFOLK×3 ; STONEFOLK+HAND	v1	the builders (their hands: the masons, v1 table)
+master	DOOR+STONEFOLK	cmp	the master of the house is the host (vethea)
+host	HULL×3 ; DOOR+STONEFOLK	cmp	the host of hulls (v1 table); the host of a house (§9.1)
+guest	BOND+US	cmp	aelea
+elder	SILVERBARK×3 ; DEEP+US	add	the silver elders are SILVERBARK×3; an elder of the long-lived is DEEP+US (eirea)
+council, council-grove, council-hall	SILVERBARK×3	cmp	neivathen; the council-hall is a grove
+child, son	SAPLING	v1	children are saplings (enna)
+newborn	SAPLING½	cmp	§18
+young	SAPLING×3 ; NEW	v2	"the young" SAPLING×3 or NEW+US×3; "young" NEW
+father, mother	ROOT×3‿	cmp	ralear: forebears (§5.3)
+kin, kinship	BLOOD×3	v1	tharear
+brother	WORD@2	dev	the Song: "a word, and waits for its brother" is the second word; kin elsewhere is BLOOD×3
+sister	BLOOD+SQUARE	add	"its sister" (E3-02): a kin-stone, the next stone of the same wall
+soul	US×3{few}	dev	"scattered souls": few of the long-lived
+anyone, someone	US ; STONEFOLK#1	dev	an uncut referent is its file (@f); "someone struck back" STONEFOLK#1
+anything, something, thing	@f ; BREAK	dev	"something broke" is BREAK with no thing-sign: the grain names only what it holds
+enemy, foe	!STRIKE ; ANGER+STONEFOLK	add	v1 GIFT: "we are not your enemies" is !STRIKE; an enemy (rhesea) ANGER+STONEFOLK
+warrior, root-man	ROOT×3	v1	root-men (issralen)
+crew	HULL×3 →with LIVE	add	"crewed by the living"
+aboard	!US →in HULL	dev	"no one aboard"
+mourner	~US×3+SIT	cmp	likeness (§18)
+sleeper	~LIE	cmp	likeness (§18)
+fledgling	~SAPLING½	cmp	likeness (§18)
+carver	CARVE+US	add	sethea: "one who carves"
+# ---- the Thrones' names, the Tides, and the names of things
+aelthar, fellowship	AELTHAR	v1
+aelvaren	BOND+BEARER	name
+aelrhen, bond-to-stone	BOND+SQUARE	name
+aelralen	BOND+ROOT×3	name	the bond of roots
+aelthae	BOND+TIDE	name
+leathae, hasty	SAPLING+TIDE ; NEW	name	the Hasty Tide; "green and hasty" NEW
+vaelthae	GRAIN+TIDE	name	grain-arc+TIDE
+ralenthae	ROOT×3+TIDE	name
+rhenthae	SQUARE+TIDE	name
+eirthae	DEEP+TIDE	name
+saenvael	HEART+GRAIN	name	HEART+grain-arc
+sethvaren	CARVE+BEARER	name
+naelsaen, mist-heart	HEART[MIST]	name	HEART inside a MIST band
+thaesaen, tide-heart	TIDE+HEART	name
+leavaren	SAPLING+BEARER	name
+vaelress	GRAIN+ROT	name
+ralensaen, root-heart	ROOT×3+HEART	name
+rhenvael, stone-grain	SQUARE+GRAIN	name
+esthaer	BURN	name
+senneir, deep-beneath	BENEATH+DEEP	name
+eirlenth	DEEP+KNOT[WHITE]	name
+naelthar	BLOOD[MIST]	name
+neivaere, mirror	~HEART[STILL]	name	a heart that shows and does not mean
+mystholder	HOLD+PILLAR[MIST]	name	the shore's name for the pillars, in a said-pocket; the wood's own is PILLAR
+mystlands	EARTH[MIST]	cmp	§18, written with Addition A1
+leviathan	GREAT+BEAST[WATER]	name	fear-name, in a said-pocket (fix B7)
+hydra	US:crown×3+BEAST	name	the many-headed beast
+plague, herald	ROT+MOUTH	name	the Plague Herald: a rot-speaker
+treant, ancient	TREE+BEAST ; DEEP	name	the Ancient Treant (fix B8: not DEEP+TREE, which is Yew); "ancient" DEEP
+colossus	GREAT+STONEFOLK	name
+magma, titan	BURN+GREAT	name	the Magma Titan
+sandworm	SAND+BEAST	name
+wyrm, frost	BEAST[WHITE] ; WHITE	name	the Frost Wyrm; frost is the WHITE band
+king, storm, thunder	BREAK+GREAT ; BREAK	name	the Storm King; storm and thunder are BREAK (rhass)
+lich, crystal	DYING+HEART[STILL] ; STILL	name	the Crystal Lich: a dying heart in glass; crystal and glass are the STILL band in stone
+# ---- havens and places the shore named (carved by what they are)
+eldhythe	SHORE+HOUSE ; GIFT+TAKE	desc	the harbour-houses and trade-tables of the haven
+tidesmeet	BRIDGE#3	desc	the three spans
+fenholm	PILLAR×3+BENEATH →in EARTH[WATER]	desc	the town on our pillars, driven into the fen
+holtward	CASTLE →in TREE:boughs×3	desc	the keep under the canopy
+carnhold, cairn-mountain	DEEP+SQUARE ; SQUARE×3	desc	the cairn-mountain
+emberhythe	BURN+HOUSE	desc	the forges
+sandreach	ROAD+BENEATH ; BENEATH+SQUARE	desc	the galleries of the canyon citadel
+rimewatch	GREAT+HOUSE[WHITE]	desc	the hall on the frozen mere
+highreach	SQUARE+PILLAR ; >RISE+WOOD	desc	towers and cranes
+glasspire	GREAT+SQUARE[STILL] ; SQUARE+PILLAR	desc	the great glass and the spire
+haven	SHORE+CASTLE	cmp
+city	~CASTLE ; SHORE+CASTLE	cmp	"across a city" as a likeness (§18)
+harbour	SHORE[STILL]	add	still water at the shore
+harbour-house	SHORE+HOUSE	add
+shingle	SHORE+SAND	cmp	§9.2 SAND
+# ---- stone, house, made things
+stone, wall, rock	SQUARE	v1	the Mute Square
+mute	SQUARE ; !MOUTH	v1
+mountain	DEEP+SQUARE	cmp	eirrhen
+hill	EARTH+RISE	add	"the hill's shadow"
+house	HOUSE	v2
+hall	GREAT+HOUSE	cmp
+roof	HOUSE+OVER	add	"roofed with our kin"; "no roof but the boughs" !HOUSE and OVER+HULL×3{only}
+floor	EARTH ; MOSS{only}	dev	"no floor but the moss"
+cellar	BENEATH+HOUSE	cmp
+gallery	ROAD+BENEATH	cmp
+canyon	BENEATH+SQUARE	cmp
+tower, spire	SQUARE+PILLAR	cmp
+bridge, span, beam	BRIDGE	v2	"a beam laid across"
+door	DOOR	v1
+post	DOOR:post	v2	part (§18 gap closed)
+chest	CHEST	v2
+bench	SIT+WOOD	cmp
+forge	BURN+HOUSE	cmp
+hearth	BURN+HOMESTONE	cmp
+lamp	SOFTLIGHT½	cmp	§18; lit at dusk: in the DUSK year
+glass	GREAT+SQUARE[STILL]	cmp	glass is still water in stone (§18)
+shard	BREAK+SQUARE{only}[STILL]	add	"one shard among a thousand"; wf8 merge (W02, A22): was SQUARE½{only}[STILL], which reads as the Mute Square cited [was: SQUARE½{only}[STILL]]
+jar	~BREAK+HOLD	add	a cracked cup, as a likeness (§18); wf8 merge: BREAK+HOLD is now a glossed compound, a cracked cup (W06)
+net	TAKE+SAIL:cloth	add	a catching cloth
+oar	HAND×3	cmp	boats with many oars: HULL×3 →with HAND×3
+crane	>RISE+WOOD	cmp
+castle, keep	CASTLE	v1	the house behind the stone
+gun	GUN	v1	the speaking stone
+bar, screen	BARB	v1	the Bar Before
+brick, worth, worthless	SPENT	v1	worthless wood; the brick
+prize	THIN+BEARER	v1	v1 table
+deck	SEED×3	v1	"open the deck": the sky falls (v1 table)
+straw	~HULL×3	v1	v1 table
+blossom	~BEARER	v1	"blossom on the bare bough" (v1 table)
+trade-table, price	GIFT+TAKE	cmp	trade (§18); "priced" is trade
+chisel	CARVE	v1	with hammer: STRIKE and CARVE, BOND ("hammer and chisel together")
+hammer, shot, blow, stroke, strike	STRIKE	v1
+axe, iron, blade, saw	AXE	v1	iron; fell; the felling; sawn
+fell	AXE	v1
+pole	AXE+TREE:trunk	add	"too thin to make a pole": a felled trunk
+mast	SAIL:mast	v2	part
+sail	SAIL ; GO[WATER]	v1	"to sail" is GO on the WATER band
+letter	WORD×3	cmp	"our soft letters" (§18)
+word	WORD	v2
+phrase	WORD#2	add	"of forty summers, a phrase": two words
+sentence	BOND+WORD×3	add	words bound into one
+sign	CARVE#1	v1	"one sign to a hull"
+# ---- the sky, light, weather, time
+air, fog, mist, grey, sky, breath	[MIST]	dev	the MIST band: nael is mist, breath and sky in one word; in a pocket [MIST] (Addition A1)
+breathe, live, life	LIVE	v1
+between-light	SOFTLIGHT[MIST]	cmp	naelneis
+radiance, soften, softness	SOFTLIGHT	v2
+sun, daylight, day	FLASH	v1	the open sun; hard light; a day is also a ring
+flash	FLASH	v1
+light	SOFTLIGHT ; FLASH ; THIN ; BURN	dev	soft light / hard light / light as not heavy (THIN) / lamps lit (BURN)
+white, pale, snow, cold, winter, frozen	[WHITE]	dev	the WHITE band (a frost ring)
+whiten	[WHITE]	dev	"whiten the stone": the mark cut inside a WHITE band
+dark, night, black, shadow	[DARK]	dev	the DARK band; a black pillar is PILLAR itself
+dusk, evening	DUSK	v2
+morning	MORNING	v2
+summer, season	SUMMER	v2	#1 one season
+spring	NEW+SUMMER ; TURN{again}	cmp	the season (§18); "spring back" (E3-03) TURN{again}
+decade, forty	SUMMER×3	add	many summers ("decades of windsong", "the wood of forty summers")
+year	TIDE ; SUMMER	cmp	a year is a growing; "the Song of the Years" TIDE×3+SING
+age, time	TIDE×3	cmp	"the ages" (§18)
+generation	LIVE×3	add	many lives
+morrow, next	MORROW	v2	the next coming; an empty ring is "a morrow passes"
+hour, moment, today, yesterday, now, since, already, soon, step	ring	dev	one ring is one hour; outer is later (v1 §3.3); "since" is a span ^r; "soon" SWIFT
+wind	WIND	v2
+windsong	WIND+SING	cmp
+rain	RAIN	v2
+storm	BREAK	v1
+sea, water, wet	[WATER]	dev	the WATER band
+current	TAKE[WATER]	cmp	IV-6: the current's taking, on the water
+surf	BREAK[WATER]	add	breaking water
+swell	RISE[WATER]	add	the rising water
+mere	[STILL] ; [WATER] ; [WHITE]	dev	§18: the STILL and WATER bands under a WHITE band
+shallow	WOUND½ ; BENEATH+DOOR	dev	a shallow cut; "the shallows below the door" on the WATER band
+peace, quiet	[STILL] ; HOLY+AELTHAR	dev	peace is still water; "their holiest peace" HOLY+AELTHAR
+silence, silent	!MOUTH ; >STOP ; [STILL]	dev	not speaking; to silence (rheileth); silence as stillness
+earth, ground, land, world	EARTH	v2	the world is EARTH{all}
+measureless	EARTH{all}	dev
+desert, sand	SAND	v2	a waste of sand
+dust	DUST	v2
+ash	BURN+DUST	add	esthas; "wood is ash" is BURN on that file (v1)
+fen	EARTH[WATER]	add	wet ground
+flat	LIE	v2	laid along the ground ("laid flat", "the flat wood")
+edge, end, outer	EDGE	v1	the far edge EDGE{most}
+far	DEEP+ROAD ; EDGE{most}	add	"the far road" (E4-05); "the far edge"
+low, lee	BENEATH	v1	"low and through"; "in the lee of that stone"
+high, tall	OVER	v2	"the high boughs" OVER+HULL×3; "tall and dark" OVER+PILLAR
+float	SQUARE[MIST]	cmp	stones in the sky (§18)
+fly	GO[MIST]	add	a going in the air
+aloft	OVER+SEED	add	the seed on high
+# ---- fire and harm
+burn, fire, flame, char	BURN	v1
+hot, warm, anger, angry, rage, savage	ANGER	v2	rhes: anger; hot. "raged in its grief" GRIEF+ANGER; "savage where it bled" ANGER →in BLOOD
+cool	!ANGER	add	"where the dread has cooled": not hot
+wound, harm, hurt, split	WOUND	v1	"bark splits; struck"
+unbitten, free	!WOUND	add	"the crown unbitten"; "if the eye goes free"
+blood, bleed	BLOOD	v1
+grief	GRIEF	v1
+die, dead	DYING ; !LIVE	v1	"he came back dead" !LIVE
+kill, murder	>DYING	cmp	veaseth
+fade, dwindle	DYING{slow} ; THIN{more}	dev
+wither, vanish, sicken	DYING ; ROT	v1	"the wood sickens" TREE×3+ROT
+rot	ROT	v1
+break, crack, burst	BREAK	v1
+war	STRIKE×3	v1	v1 table
+act	STRIKE×3	cmp	"an act of war": the grain cuts the deed, not the word "act"
+fear	→bc ∅	dev	no sign for fear: the blind (§6.1, §9.2); "fear leaves no mark on wood"
+fault, shame	SHAME	v2
+dread	[DREAD]	dev	the DREAD band
+# ---- the body
+hand	HAND	v1	five: X+HAND; ten: X+HAND#2 (Addition A3)
+arm, shoulder	HAND:stem	v2	part; "shoulder to shoulder" is the two HAND:stem runners bound
+foot	US:foot ; STONEFOLK:foot	v2	part
+neck	US:stem ; STONEFOLK:stem	v2	part: "where life goes up into thought"
+face, forehead	US:crown ; STONEFOLK:crown	v2	part; "turned their faces" TURN; "white faces" in the WHITE band
+bone, rib	BONE	v2	×3 ribs
+keel	BEARER:keel	v2	part
+mouth, tongue, voice	MOUTH	v1	"a tongue of truth" TRUE+MOUTH
+eye, look, watch, see	EYE	v1
+tooth, jaw	→as ~BREATH×3 ; →as ~HAND+GO → ~WOUND	cmp	the grain's likenesses (§18)
+bladder	~HULL½	cmp	likeness (§18)
+body	HULL×3	v1	"let the body wait" (E3-01): the host
+mind, think, intelligence	MIND	v2	"did not think of it" !MIND; "stone has no intelligence" SQUARE+!MIND
+short-mind	THIN+MIND	add	"the short-minded"
+# ---- acts
+go, walk, move, pass, travel	GO	v1
+come, arrive	GO → @f	dev	no COME (§9.2): go, to the one it comes to
+run, flee	SWIFT+GO	cmp	§18; "flee" SWIFT+GO → @8 (away)
+chase	SWIFT+FOLLOW	cmp
+follow	FOLLOW	v2
+lead, guide	GUIDE	v2
+turn, aside, shun, change	TURN	v1	"if their shore has changed" SHORE+TURN
+round	BEND	v1	"go round it as water goes round a root"
+bend, twist	BEND ; TURN	v1	"the twisted boughs" BEND+HULL×3; "no word could be twisted" !TURN → WORD
+rise, stand	RISE	v1	thael
+lift, raise	>RISE	dev	"lifted the floating stones"; "your havens raised" SQUARE+RISE
+fall	FALL	v1
+drive	>FALL	add	"driven into the fen": made to sink
+sit, seat	SIT	v2
+lie, lay, put, set	LIE ; >LIE	v2	"lay down their dead" US×3+>LIE; "set us down" GIFT
+kneel	KNEEL	v1
+lean	LEAN	v1
+hold, keep, know, guard	HOLD	v1	"they guard the road" HOLD → ROAD on the aim file
+take, catch, pick	TAKE	v2
+gather	TAKE#3 ; TAKE×3	cmp	§9.2
+lose, slip	LOSE	v2	"the blade that slipped" LOSE → AXE
+unlearn	!LOSE	add	"cannot unlearn what is carved in it": cannot lose it
+find	FIND	v2
+give, gift, spend	GIFT	v1	"the last of our own sky that we spent" GIFT{last}
+spare	!GIFT	add	"none of the long-lived to spare"
+carry, bear, bring	CARRY	v2	bring: CARRY → @f
+open, bare	OPEN	v1	"bare the soft side"
+close	CLOSE	v1
+wake	EYE+OPEN ; RISE ; FLASH	cmp	a waking eye; "an older carving woke" RISE; "where no fire wakes" !FLASH
+mend, new-laid	MEND	v1	"stands [new-laid?]" MEND?
+stop	STOP	v1
+wait, patience	KNOT	v1
+tend	TEND	v2
+weave	TEND{more}[MIST]	dev	§18: the MIST band laid over more files, tended more
+hide, secret	_	dev	the smoothed cut: hidden; "wood can hide nothing" WOOD+!SMOOTH{all}
+bind, join, unit, together	BOND	v1	and the bind device (§7.3)
+strike, work	STRIKE	v1	"work the east wall" STRIKE → SQUARE
+bite	AXE →	dev	"where the axe bites" AXE → GREAT×3
+beat	STRIKE{again}	dev	"the iron of the felling was beaten out"
+press	STRIKE → @f ; BOND	dev	"moves when pressed"; "press their bleeding arms together"
+touch	HAND → ; / \	dev	a hand laid on; foreheads touching are two marks leaning to meet
+meet	/ \	dev	lean: two marks leaning toward each other meet, face to face
+carve, cut, mark, order, command, carving	CARVE	v1	"cut" is CARVE, AXE, WOUND or STRIKE by what it does
+count	#n ; HOLD+CARVE{all}	dev	the Tally bites; "the wood keeps every count" HOLD+CARVE{all}
+dig	EARTH+OPEN	add
+crawl	GO →with ROOT	cmp	§18
+swim, wade	GO[WATER]	cmp	§18
+throw, shove, send, motion, errand	>GO	dev	reith; "set in motion" >GO; "his errand" >GO
+drink, feed, feast	EAT	v2	feed >EAT; feast EAT×3
+sing, song	SING	v2
+choir	SING×3	cmp
+laugh	LAUGH	v2
+cry, scream, groan	CRY	v2
+weep	WEEP	v2
+speak, say, tell, call, greet, answer, loud, noise, sound	MOUTH	v1	answer is MOUTH with a runner back; "call us home" MOUTH → HOME
+name	NAME	v2
+ask, question	MOUTH?	dev	the question device on MOUTH
+plea, plead	MOUTH? →for	cmp	§18: a plea is asking, for what is asked
+counsel	MOUTH →that	cmp	with a said-pocket
+promise	BOND+MOUTH	cmp
+goad	>MOUTH	cmp	renneth
+hear, listen, heed, obey	HEAR	v2
+mishear	~HEAR	cmp
+learn	NEW+HOLD	cmp	leathein
+teach, train	>HOLD	cmp	theineth
+believe, belief	TRUE+HOLD	cmp
+trust	BOND+HOLD	cmp	aelthein
+love	HEART+HOLD	add	"the thing it loves"; "what their hands love" (the aim file)
+remember, memory	HOLD ; mem	dev	HOLD with a memory ray; held at the root
+forget, ignorance	!HOLD	dev	"time forgot us"; "it was ignorance"
+mistake	~HOLD ; !TURN+HOLD	add	a seeming knowing; "must not be mistaken" !~HOLD; wf8 merge (A17): "must not be mistaken" is !TURN+HOLD (was !~HOLD, which the drawing cannot tell from ~!HOLD) [was: ~HOLD]
+difference	HOLD → TRUE{half}	add	"the wood knows the difference": it holds the half-true as half
+show	>EYE	dev	neaseth
+slide	EYE →thru	dev	"until their eyes slide past"
+choose, vote	CHOOSE	v2
+build	SQUARE+RISE	cmp
+help	HAND+GIFT	add	a hand given; "could not help them" !HAND+GIFT
+need, want, hunger	HAND+OPEN	v1	v1 table
+serve	TAKE → STONEFOLK×3+NAME	add	"your names will serve": we take your names
+play, trick	~ ; ~GO#1{only}	dev	a trick is a hollow cut; "never plays one trick twice" !~GO#2; wf8 merge (A17): "never plays one trick twice" is ~GO#1{only} with a memory ray (was !~GO#2, which the drawing cannot tell from ~!GO#2) [was: ~]
+polish	SMOOTH	v1	made smooth
+drive, tire	{slow}	dev	"the iron tires" AXE+GO{slow}
+fail, failure	!STRIKE ; DYING{slow}	dev	"where it failed" !STRIKE; "we fail, slowly" DYING{slow}
+outrun	ROT{more} →as HAND×3	dev	more than: {more} with an as-runner (§5.4)
+pour	GO{all}	dev	"the light pouring": all going at once
+wrong	STRIKE{most}	dev	"where that haven had most wronged the wood"
+rent	BREAK+SAIL:cloth	add	"a rent in a sail"
+chequer	SQUARE+WOUND{few}	add	a wall struck here and there
+crowd	ROOT×3+BOND	add	root-men together
+part	ROAD#2	add	"where the roads part": two roads
+leave	GO → @8 ; !GO → @8 ; RISE{still}	dev	go away; "leave the mist standing"; wf8 merge (A15): !GO → @8 is not go away, will not leave (IV.2 r13) [was: GO → @8 ; RISE{still}]
+pace	→with	dev	"bearer keeps pace": goes with
+trespass	GO{all} →in	dev	"every trespass counted"
+near	GO → @f ; LEAN	dev	"hulls came near"; "near enough to see it"
+hang	OVER	v2	"hung over the trade-tables"; "hang back" KNOT on file 8
+balk	!GO →	dev	§18
+make, let	>	dev	the causative chevron
+draw	>FOLLOW ; >RISE ; HAND:stem+TURN	dev	"draw them along"; "drew us up"; "the host drew back"
+matter, empty	~ ; !SPENT	dev	"as though it mattered": a seeming; "silent and not empty" !~; wf8 merge (W05, A17): "silent and not empty" is SQUARE+!MOUTH →with !SPENT (was !~, which reads backwards) [was: ~]
+mean, true, truth, right, rightly, straight, sure	TRUE	v2	"mean it": cut whole, not hollow; "made sure of it" >TRUE; the right hand is file 4, a bearing
+law	TRUE+CARVE	add	a true carving
+judgement, doom	DEEP+CARVE	cmp	§18; a doom is a judgement
+rite	HOLY+KNEEL ; AELTHAR	cmp	§18
+holy, sacred, reverence	HOLY	v2	"took that for reverence": TRUE+HOLD →that {HOLY}
+glad	GLAD	v2
+proud	NAME+GLAD	cmp
+caution	EYE ⇒ BOND+HOLD	cmp	look, then trust (§18)
+leash	CLOSE+BOND	cmp
+throne	PILLAR+HULL	cmp
+pillar	PILLAR	v1
+rank	DEEP+PILLAR×3	add	"our long ranks"
+anchor	HOLD+EARTH	cmp	§18
+reach	SQUARE+EYE	v1	the watch of their stone (v1 table)
+ram	RAM	v1
+hunter	HUNTER	v1
+swift, quick	SWIFT	v1
+bearer, laden	BEARER	v1
+stone-breaker	BREAKER	v1
+armada, fleet	HULL×3{all}	cmp	the whole host
+stern	STERN	v1	the Turned Stern
+road, way, line, length	ROAD	v1	"keep your line" HOLD → ROAD; "a road's length" ROAD#1
+channel	_DEEP+ROAD	cmp	IV-6: the hidden old ways
+ashore, land, landing	GO →in SHORE ; GO → @0	dev	the landing is the going ashore
+aground	BENEATH+LIE	cmp	§18
+shore	SHORE	v1
+home	HOME	v1
+away	GO → @8 ; !GO → @8	dev	file 8 is behind: home, the other side; wf8 merge (A15): !GO → @8, not go home, carried away from home (IV.6 r4) [was: GO → @8]
+back	GO{again} → @f ; STONEFOLK:stem	dev	"came back"; "the back of the host's neck" is the neck
+ahead, front	LONE ; @0	dev	file 0 is ahead; one goes ahead of the rest is LONE
+alone	LONE ; {only}	v1	"a man came back alone" STONEFOLK{only}
+east, north, south, west	@4 ; @12	dev	files (bearings); the Knowing generator fills the words (v1)
+flank, side, sector, place	@f	dev	a file
+save	#1{only}	dev	"save once": only once
+seldom	{few}	dev	GO{few}
+scatter	{few}	dev	US×3{few}
+little, small	½	dev
+half	{half}	dev
+full, whole, enough	{all}	dev	"the whole of it" HOLD{all}
+few	{few}	dev
+thick	{more}	dev	"wove the breath thicker"
+well	{most}	dev	"hid so long and so well"
+dear, good	{most}	dev	"the dearest gift" GIFT{most}; "his best" GIFT{most}
+weakest	THIN{most}+SQUARE	add
+wide, weight, broad, great, heavy	GREAT	v1	"the weight of anger and grief" GREAT+ANGER; "wide" is a band over more files
+thin, frail	THIN	v1
+faint	THIN+MOUTH	add	few and faint voices
+hard	FLASH ; →as SQUARE ; [WHITE]	dev	hard light; hard as stone; "pale and hard"
+soft	SOFTLIGHT ; SMOOTH ; THIN ; {gently}	dev	softened light; "carve Aelthar whole and soft"; "the soft side"; gently
+gentle	{gently} ; SOFTLIGHT	dev
+slow	{slow}	dev
+late	GO{last}	cmp	§18: "came late"
+last	{last} ; DEEP	dev
+first, second, third, fourth	@n	dev	ordinal bites
+two, three, four, thrice	#n	dev	count bites
+ten	X+HAND#2	add	Addition A3: two hands
+thousand	×3	dev	many
+green, new, crude, hasty	NEW	v2	lea
+old, long, deep	DEEP	v1	eir
+ready	GROW{all}	dev	grown full
+begin	@1	dev	the first ring
+become	⇒	dev	a later ring on the same file
+beside	HOLD	dev	"kept its own will besides": a second mark on its own file (LONE: own)
+because	→bc	dev
+like	→as	dev
+though	pocket	dev	"though you took us for it": a said-pocket of the shore-folk beside our own mark
+whether	?	dev	"what, and not whether": the question; the fork carries if/if not
+cannot	!	dev	the mirror
+always	mem	dev	a memory ray from an outer ring means always
+bank	HOLD →as ~ROOT	cmp	§18 likeness; wf8 merge (W03 #1): ~ROOT → ~EARTH beside it; was →as ~ROOT+HOLD → ~EARTH, which reads "seem to remember" [was: →as ~ROOT+HOLD → ~EARTH]
+breadth	→as ~TREE:trunk	cmp	§18 likeness
+brush	HAND:palm ⇒ CARVE	cmp	§18
+split	WOUND	v1
+beast	BEAST	v2	"you named us for beasts"
+bond	BOND	v1	"the bond of roots" is the name Aelralen, BOND+ROOT×3
+tide	TIDE	v1	a tide; a growing (the Tides are TIDE with their names)
+sapling	SAPLING	v1	"masts from saplings" SAIL:mast ⇒ SAPLING
+breath, gap, divide	BREATH	v1	the Breath is the gap: "between their breaths"; "in long gaps" BREATH×3; "across any divide" →thru BREATH
+feel	HOLD	v1	thein: to know by touch; "what one pillar felt" PILLAR@1+HOLD
+grave	~LIE+EARTH	cmp	§18 likeness
+kind	‿ ; bind	dev	the kind-arc; "one life, in two kinds" is a bind
+loose	>GO	dev	"loose the hunters"; "the tide worked us loose"
+morn	MORNING	v2	lemma of "morning"
+past	→thru	dev	"take the bearers past the speaking stone"
+rest	×3	dev	"the rest follow the quiet": the others, a plural on its own file
+ride	GO →in ; CARRY	dev	"ride in the deep hulls"; "rides the high air alone" GO[MIST]{only}
+shape	CARVE ; →as	dev	the shape of a knowing is its cut; "in the shape of the straw" →as ~HULL×3
+short	BREATH#1	dev	"one breath short of the fire"
+strength	LIVE+GO	add	"their strength going out of them": life going out; wf8 merge (W06): life going out; was LIVE [was: LIVE]
+# ---- wf8 merge, 2026-09-28: the compounds of grain_v2_full.md §21.9.2 and the readings of §21.9.3 ----
+breathe thin	THIN+LIVE	add	wf8 S10; §21.9.2; breathe thin (the breath grown thin)
+the deep forest	DEEP+TREE×3	add	wf8 W01; §21.9.2; the deep forest (its depths)
+the twisted boughs	BEND+HULL×3	add	wf8 W01; §21.9.2; the twisted boughs
+the high boughs	OVER+HULL×3	add	wf8 W01, W06; §21.9.2; the high boughs
+anchor	HOLD+EARTH	add	wf8 W01; §21.9.2; anchor (hold to the earth)
+a mist-holder	HOLD+PILLAR	add	wf8 W01; §21.9.2; a mist-holder (the shore's Mystholder)
+lie beneath	BENEATH+LIE	add	wf8 W01; §21.9.2; lie (flat) beneath
+the flat wood	LIE+TREE×3	add	wf8 W01; §21.9.2; the flat wood (laid along the ground)
+sit beneath	BENEATH+SIT	add	wf8 W01, W02, W06; §21.9.2; sit beneath
+watch from the edge	EDGE+EYE	add	wf8 W01; §21.9.2; watch from the edge
+its own tongue	LONE+MOUTH	add	wf8 W01; §21.9.2; its own tongue (voice)
+speak in thunder	BREAK+MOUTH	add	wf8 W01; §21.9.2; speak in thunder (the storm's voice)
+the pillars at the edge	EDGE+PILLAR×3	add	wf8 W01; §21.9.2; the pillars at the edge (of the world)
+a forest-leaf	TREE×3+LEAF	add	wf8 W01; §21.9.2; a forest-leaf (a fern of the forest floor)
+come late	DEEP+GO	add	wf8 W02; §21.9.2; come late (go at the last, or long after)
+come up from beneath	BENEATH+RISE	add	wf8 W02; §21.9.2; come up from beneath
+a carved stone	CARVE+SQUARE	add	wf8 W02; §21.9.2; a carved stone (a stone that bears a carving)
+a crane	RISE+WOOD	add	wf8 W02; §21.9.2; a crane (a lifting-wood)
+a shard	BREAK+SQUARE	add	wf8 W02; §21.9.2; a shard (a broken stone)
+a thin green thing	THIN+NEW	add	wf8 W03; §21.9.2; a thin green thing (a thin young shoot)
+a stump cut low	BENEATH+NEW:stump	add	wf8 W03; §21.9.2; a stump cut low
+a blade that slips	AXE+LOSE	add	wf8 W04; §21.9.2; a blade that slips (the blade let slip)
+the edge of the world	EARTH+EDGE	add	wf8 W04; §21.9.2; the edge of the world
+charred wood	BURN+WOOD	add	wf8 W04; §21.9.2; charred wood
+the bearer ahead	LONE+BEARER	add	wf8 W05; §21.9.2; the bearer ahead (going before the rest)
+go ahead	LONE+GO	add	wf8 W05; §21.9.2; go ahead (out in front of the rest)
+a low wound	BENEATH+WOUND	add	wf8 W05; §21.9.2; a low wound (struck low, under the water-line)
+the lee of a stone	SQUARE+BENEATH	add	wf8 W05; §21.9.2; the lee of a stone (its low side)
+the next hulls	MORROW+HULL×3	add	wf8 W05; §21.9.2; the next hulls (of the next coming)
+the bearer's heart	BEARER+HEART	add	wf8 W05; §21.9.2; the bearer's heart
+a cracked cup	BREAK+HOLD	add	wf8 W06; §21.9.2; a cracked cup (a jar)
+life going out	LIVE+GO	add	wf8 W06; §21.9.2; life going out (strength ebbing)
+the iron's coming	AXE+GO	add	wf8 W06; §21.9.2; the iron's coming (the felling going on)
+the iron's stopping	AXE+STOP	add	wf8 W06; §21.9.2; the iron's stopping (the felling ended)
+only the moss	LONE+MOSS	add	wf8 W06; §21.9.2; only the moss (the moss alone)
+open hands	OPEN+HAND×3	add	wf8 W06; §21.9.2; open hands (held out)
+a carving of war	STRIKE×3+CARVE	add	wf8 W06; §21.9.2; a carving of war
+a young silverbark	NEW+SILVERBARK	add	wf8 W06; §21.9.2; a young silverbark
+the angry young	ANGER+SAPLING×3	add	wf8 W06; §21.9.2; the angry young
+the deep hulls	DEEP+HULL×3	add	wf8 W07; §21.9.2; the deep hulls (deep-laden, that carry the root-men)
+a broad hull	GREAT+HULL	add	wf8 W07; §21.9.2; a broad hull (a crown-hull)
+the broad hulls	GREAT+HULL×3	add	wf8 W07; §21.9.2; the broad hulls (the crown-hulls)
+a hull of summers	SUMMER+HULL	add	wf8 W07; §21.9.2; a hull of summers (with one: of one season)
+a hull of many summers	SUMMER×3+HULL	add	wf8 W07; §21.9.2; a hull of many summers (of forty summers)
+green hulls	NEW+HULL×3	add	wf8 W07; §21.9.2; green hulls (crude, of the young wood)
+go heavy	GREAT+GO	add	wf8 W07; §21.9.2; go heavy
+go light	THIN+GO	add	wf8 W07; §21.9.2; go light
+grow quickly	SWIFT+GROW	add	wf8 W07; §21.9.2; grow quickly
+go over	OVER+GO	add	wf8 W07; §21.9.2; go over (go high)
+the heat above	OVER+ANGER	add	wf8 W07; §21.9.2; the heat above (a hot sky)
+its own life	LONE+LIVE	add	wf8 W07; §21.9.2; its own life
+its own grain	LONE+CARVE	add	wf8 W07; §21.9.2; its own grain (its own carving)
+a knot of root-men	ROOT+BOND	add	wf8 W07; §21.9.2; a knot of root-men
+answer; did not answer	MOUTH ; !MOUTH	add	wf8 §21.9.3 (A15); II.2 r8 "and they answered"; IV.2 r8 "It did not answer"; `MOUTH` / `!MOUTH` with a runner back to the one who spoke or cut
+the world; measureless	EARTH{all}	add	wf8 §21.9.3 (A15); II.2 r3, r7; `EARTH{all}`: all the earth
+the edge of the world	EARTH+EDGE ; EARTH{all}	add	wf8 §21.9.3 (A15); IV.6 r11; II.2 r3; `EARTH+EDGE` (compound, §21.9.2); "measureless, to the far edge of the world" is `EARTH{all}` with it
+flat	LIE ; BENEATH+LIE ; LIE+TREE×3	add	wf8 §21.9.3 (A15); II.2 r3, r14; III.2 Leavaren ("laid flat"); `LIE` as a modifier: `BENEATH+LIE`, `LIE+TREE×3`
+must not be mistaken; a knowing that cannot be turned	!TURN+HOLD ; !TURN → ; !~HOLD	add	wf8 §21.9.3 (A15); IV.2 r7; II.2 r11; `!TURN+HOLD`, "a holding not turned" (§18's "no word could be twisted" is `!TURN →` WORD). **Not** `!~HOLD`: see A17
+not mishear	!TURN+HEAR ; !TURN+HOLD ; !~HEAR	add	wf8 §21.9.3 (A15); II.2 r10; `!TURN+HEAR`, "a hearing not turned", the same shape as `!TURN+HOLD`. **Not** `!~HEAR`: see A17
+make sure	>TRUE	add	wf8 §21.9.3 (A15); II.2 r13; `>TRUE`, make it true (the validator reads "are true": §21.9.6)
+not leave out; keep	!LOSE	add	wf8 §21.9.3 (A15); II.2 r13; `!LOSE`, not let slip
+as a branch breaks	~HULL+BREAK	add	wf8 §21.9.3 (A15); II.2 r11; `~HULL+BREAK` as a likeness, read by its parts: a bough's break; it is also the name of the thunder-tongue (*seil·rhass*), which is the pun
+for the moment … for always	MOUTH#1	add	wf8 §21.9.3 (A15); II.2 r11; a count of one on the act (`MOUTH#1`, said once) against a memory ray on what it made (always)
+if any … is left, then …	{few} ; NEW?{few} ⇒ HOLD	add	wf8 §21.9.3 (A15); II.2 r14; a questioned mark with `{few}` and a *then* runner from it, where no ring is left for a fork (`NEW?{few} ⇒ HOLD`)
+heavy; go heavy	GREAT ; GREAT+GO	add	wf8 §21.9.3 (A15); III.2 band I r6; V.6 r8, r14; `GREAT` on the carried thing's file (the validator glosses GREAT "great hull", its v1 hull sense); of a going, `GREAT+GO`
+light; go light	THIN ; THIN+GO	add	wf8 §21.9.3 (A15); IV.6 r2; V.6 r14; `THIN`; of a going, `THIN+GO`
+close the hand	HAND+CLOSE	add	wf8 §21.9.3 (A15); III.2 Thaesaen; `HAND+CLOSE`, which the validator glosses "the kept hand" (E4-03's sense)
+what was seen, the wood does not hold	EYE → ∅	add	wf8 §21.9.3 (A15); III.2 Neivaere; `EYE → ∅`: A5's blind of place read by its role ("whither" for a going, "what" for a seeing)
+put beneath; drive down	>BENEATH ; >FALL	add	wf8 §21.9.3 (A15); III.2 Vaelress; `>BENEATH` (the validator's causative gloss); the register's `>FALL` reads "fell"
+once there were no tricks	DEEP+WOOD ; TRUE{all}	add	wf8 §21.9.3 (A15); III.2 Esthaer; `DEEP+WOOD` with `TRUE{all}`: the old wood, wholly true
+a trick; never the same trick twice	~GO ; ~GO#1{only} ; !~GO#2	add	wf8 §21.9.3 (A15); III.2 Esthaer (`~BURN`); V.6 r8 (Twistbough); a hollow going, `~GO` (shown, not meant); "never plays one trick twice" is `~GO#1{only}` with a memory ray (always): one trick, once only. **Not** `!~GO#2`: see A17
+wait for, hope for	KNOT →for ~X	add	wf8 §21.9.3 (A15); III.2 band I r2; the *for* runner to the awaited thing, **cut hollow** (A6): `KNOT →for ~X`. A *for* target cut whole reads as a thing that happened
+hard to look upon	FLASH ; FLASH →as	add	wf8 §21.9.3 (A15); III.2 Neivaere; `FLASH`, hard light, on the one looked upon; `FLASH →as` another's FLASH is "and so were we"
+hasty; crude, crudest	NEW ; NEW{most}	add	wf8 §21.9.3 (A15); III.2 band I r1; V.6 r9; `NEW` (*lea*: green, young; the Hasty Tide's own syllable); `NEW{most}`, the crudest
+wrong, harm	STRIKE ; STRIKE{most}	add	wf8 §21.9.3 (A15); III.2 band I r5; `STRIKE`, with the fringe for degree: `STRIKE{most}`
+go home; go away; leave	GO → @8	add	wf8 §21.9.3 (A15); IV.2 r13; V.7 III r4 (`HULL×3+GO →` HOME on file 8); `GO → @8`: file 8 is behind, home, the other side (the register's *away*, *leave*)
+not go home; not go away, will not leave	!GO → @8	add	wf8 §21.9.3 (A15); IV.2 r13; IV.6 r4; V.6 r18; `!GO → @8`. Its gloss follows the doer: the axe in our grain "will not leave it" (IV.2 r13); the hull carried out to sea does not go home, "away from home" (IV.6 r4); the felled hull's seed has "no crown to come home to" (V.6 r18). One reading, not going to file 8
+cannot help it	!STOP →bc	add	wf8 §21.9.3 (A15); IV.2 r12; `!STOP →bc` its cause
+as near as could be to	→as ; {most} ; →as ~MOUTH{most}	add	wf8 §21.9.3 (A15); IV.2 r8; `→as` the hollow likeness with `{most}`: `→as ~MOUTH{most}`
+were grey	DEEP+LIVE	add	wf8 §21.9.3 (A15); IV.2 r4; `DEEP+LIVE`, a long life, after a *then* runner
+until it is taken	~LOSE ; LOSE	add	wf8 §21.9.3 (A15); IV.2 r1; `~LOSE` (or `LOSE`) on the loser's own file, after a *then* runner. Not TAKE there: an act stands on its doer's file (§10.3)
+did not know why	!HOLD →in ; →bc ∅ ; !HOLD →	add	wf8 §21.9.3 (A15); IV.2 r5; IV.6 r10; `!HOLD →in` the act, the act cut whole beside its blind `→bc ∅`: the act is known; what is not held is *in* it, its cause. The blind alone is the wood's not-knowing, never another's (§6.1). **Not** `!HOLD →` the act, which is *not feel* (below)
+feel; not feel a happening	HOLD ; !HOLD →	add	wf8 §21.9.3 (A15); V.6 r18; `HOLD`, to know by touch; `!HOLD →` an **act** is *not feel* it (A15's *let go* is `!HOLD →` a **thing** held)
+was not there	!EYE	add	wf8 §21.9.3 (A15); IV.6 r1; `!EYE` on the absent one's file
+out into	→in @f	add	wf8 §21.9.3 (A15); IV.6 r4; `→in @f`, where file f's year carries the WATER band
+even, conceding	{still}	add	wf8 §21.9.3 (A15); IV.6 r5; `{still}` on the act that holds in spite of it
+ourselves, itself	@f ; >GO → @12 ; HEAR → @13	add	wf8 §21.9.3 (A15); IV.6 r5; V.6 r6; the self (A4): a runner to `@f` of its own file: `>GO → @12` from file 12, "we sailed ourselves home"; `HEAR → @13` from file 13, "the wood obeys the wood"
+drew back from X	X ⇒ HAND:stem+TURN	add	wf8 §21.9.3 (A15); IV.6 r10; `X ⇒ HAND:stem+TURN`: from the source end, then the arm turns aside
+it was one	TRUE+ ; TRUE+>DYING	add	wf8 §21.9.3 (A15); IV.6 r10; `TRUE+` the thing (`TRUE+>DYING`, a true killing)
+ignorance	!HOLD	add	wf8 §21.9.3 (A15); IV.6 r10; `!HOLD`, not knowing, as the content of a said-pocket
+their dead	!LIVE	add	wf8 §21.9.3 (A15); IV.6 r3, r11; `!LIVE`
+stand; reach to	RISE ; 8: SILVERBARK×3+RISE → @10	add	wf8 §21.9.3 (A15); IV.6 r8; `RISE` in ligature with the thing that stands, with a *to* runner to where it reaches (`8: SILVERBARK×3+RISE → @10`). A bare *to* runner from a thing that does nothing reads "goes to"
+the council-grove; the council-hall	SILVERBARK×3 ; DEEP+US×3	add	wf8 §21.9.3 (A15); IV.6 r8, r11; `SILVERBARK×3` on a place's file (home, file 8). The council as people is `DEEP+US×3` on its own file
+the shallows	BENEATH+DOOR	add	wf8 §21.9.3 (A15); IV.6 r2; `BENEATH+DOOR` in the WATER band
+throw, shove; send; set in motion	>GO → ; →in ; >GO ; !HOLD →	add	wf8 §21.9.3 (A15); IV.6 r3, r4; V.3 r4–6; V.6 r21; `>GO →` the thing thrown or sent, with `→in` where it goes (B15's two runners). `>GO` is *make go*, never *let go* (which is `!HOLD →`)
+go out of into …	>GO ; → ; →in ; GO	add	wf8 §21.9.3 (A15); V.3 r4–6; `>GO` on the source's file ("we sent it"), `→` the thing, `→in` where it goes. Not `GO` on our file, which is our own going (§10.3)
+not empty: not spent	!SPENT	add	wf8 §21.9.3 (A15); V.3 r10; `!SPENT`, as E3-08 asks of a silent stone "Is it spent, or waiting?"
+know rightly; hold true	TRUE+HOLD	add	wf8 §21.9.3 (A15); V.3 r10; `TRUE+HOLD` cut on the file where the telling's *you* stands, with no runner (the reading needs the file named)
+the bearer, and the standard it bears	BEARER ; CARVE ; CARVE+BEARER	add	wf8 §21.9.3 (A15); V.7 III r3; `BEARER` on its own file, with `CARVE` after it on the same file: *Seth·varen* (`CARVE+BEARER`) said apart
+the second	HULL@2	add	wf8 §21.9.3 (A15); V.7 III r3; `HULL@2`, the second hull
+when X, then Y	⇒	add	wf8 §21.9.3 (A15); V.7 III r3–r4; a *then* runner (`⇒`) from X's act to Y's act; a fork needs an *else* branch
+grown, not built	GROW ; !SQUARE+RISE ; SQUARE+RISE	add	wf8 §21.9.3 (A15); V.6 r1; `GROW` and `!SQUARE+RISE` on one file (build is `SQUARE+RISE`)
+the sky they lived by	LIVE →with ; LIVE	add	wf8 §21.9.3 (A15); V.6 r2; `LIVE →with` the wood's `LIVE` in the MIST band
+ask	MOUTH?	add	wf8 §21.9.3 (A15); V.6 r3; `MOUTH?`, with a *for* runner to what is asked and a *to* runner to the one asked
+sail	GO	add	wf8 §21.9.3 (A15); V.6 r4; `GO` in the WATER band
+crewed by	HULL(×3) →with	add	wf8 §21.9.3 (A15); V.6 r4, r21; `HULL(×3) →with` the crew
+command; obey	HEAR? ; →with CARVE ; HEAR	add	wf8 §21.9.3 (A15); V.6 r5, r6; `HEAR?` on the hull `→with CARVE` (does it obey? by a carving); obey is `HEAR` to the carving obeyed
+says what, and not whether	MOUTH ; !MOUTH?	add	wf8 §21.9.3 (A15); V.6 r7; `MOUTH` and `!MOUTH?` on the carving's file
+balk at	!GO? →	add	wf8 §21.9.3 (A15); V.6 r7; `!GO? →` the thing (the question: *may*)
+fail; a failure	!STRIKE ; →in ; !STRIKE@1	add	wf8 §21.9.3 (A15); V.6 r8; `!STRIKE`; "where it failed" a runner `→in` it; "the first failure" `!STRIKE@1`
+temper; grain	HEART ; !HEART{still}	add	wf8 §21.9.3 (A15); V.6 r8, r12; `HEART`: a grain's temper is its heart; "no temper yet" `!HEART{still}`
+serve	TAKE →	add	wf8 §21.9.3 (A15); V.6 r8; `TAKE →` the thing: we take it up and use it
+the swell	RISE	add	wf8 §21.9.3 (A15); V.6 r13; `RISE` in the WATER band
+generations	LIVE×3	add	wf8 §21.9.3 (A15); V.6 r11; `LIVE×3`: many lives
+spare	!GIFT →	add	wf8 §21.9.3 (A15); V.6 r14; `!GIFT →` them
+pour	GO{all}	add	wf8 §21.9.3 (A15); V.6 r14; `GO{all}`: all going at once
+ripen; ready	GROW{all}	add	wf8 §21.9.3 (A15); V.6 r12, r17; `GROW{all}`: grown full
+hang back	KNOT	add	wf8 §21.9.3 (A15); V.6 r17; `KNOT` (wait) on file 8, the file behind
+soon	SWIFT	add	wf8 §21.9.3 (A15); V.6 r10; `SWIFT`, as a modifier
+touch	HAND →	add	wf8 §21.9.3 (A15); V.6 r16; `HAND →` the thing touched
+your children had children	SAPLING×3 ; ⇒	add	wf8 §21.9.3 (A15); V.6 r10; two `SAPLING×3` on your file, the first `⇒` the second
+fewer	{few,more}	add	wf8 §21.9.3 (A15); V.6 r20; `{few,more}` on one sign
+a people who had never known they were the foe	STONEFOLK×3‿ ; !HOLD →that {ANGER+STONEFOLK}	add	wf8 §21.9.3 (A15); V.6 r21; `STONEFOLK×3‿`, `!HOLD →that {ANGER+STONEFOLK}` with a memory ray (never)
+a doom	DEEP+CARVE	add	wf8 §21.9.3 (A15); V.6 r21; `DEEP+CARVE` cut on our own file: we are the doom
+the shot meant for it	STRIKE → ; TAKE → ; lap	add	wf8 §21.9.3 (A15); V.6 r18; the shot `STRIKE →` the seed, **broken** by the husks' `TAKE →` the shot (`lap`)
+hard to bring down	>FALL{slow}	add	wf8 §21.9.3 (A15); V.6 r19; `>FALL{slow}` from the shore
+the seed is the hull's own life	LONE+LIVE	add	wf8 §21.9.3 (A15); V.6 r18; a **bind** of the hull and the seed, its out-runner to `LONE+LIVE` on the hull's file
+you	STONEFOLK×3	add	wf8 §21.9.3 (A15); V.6 r1; IV.4 r1; files 15, 0 and 1 are the root's (A4), so the shore-men are **named** on another file, `STONEFOLK×3` standing first on it

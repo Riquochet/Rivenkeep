@@ -1,0 +1,104 @@
+# english: The Voyage of the Aelvaren (IV.6), whole.
+# seed: IV-6
+round IV-6-aelvaren {wood: life; pith: war; rings: 11; rules after: [2, 10]; cells: [1, 1, 1, 2, 3, 3, 4, 4, 4, 4, 4]; axis 0°}
+  I
+    r1/1  0: HOLD*    7: HULL×3{all}    12: BOND+BEARER    14: HULL+CARRY
+    r1/2  14: !EYE
+    r1/3  14: HOLD
+    r2/1  1: BOND+US    2: BENEATH+DOOR    3: AELTHAR    11: THIN    12: BOND+BEARER      band MIST files 10–11  band WATER files 2–3
+    r2/2  12: NAME+GLAD
+    r2/3  12: DEEP+HULL½      band MIST files 12–12
+    r2/4  12: CARRY
+    r2/5  12: KNOT
+    r2/6  12: CARRY
+  ‖
+  II
+    r3/1  0: STONEFOLK×3+>GO    1: !LIVE    12: BOND+BEARER
+    r3/2  1: BLOOD    12: WOOD
+    r3/3  1: HOLD{last}    12: WOOD+EAT
+    r3/4  12: HOLD{all}
+    r4/1  0.1: >BURN    0.2: >GO    4: TAKE    12.1: DEEP+WOOD    12.2: GRIEF+ANGER    14: WOOD+CRY      band WATER files 4–6
+    r4/2  12.1: BURN{more}    12.2: CRY
+    r5/1  4: !HOLD    5: TAKE    6: ROAD    8: HOME    12.1: BURN+TURN    12.2: BEARER:keel    12.3: HOLD    14.1: DYING+WOOD    14.2: HOLD      band WATER files 4–5
+    r5/2  12: GO
+    r6/1  5.1: STONEFOLK+HULL×3    5.2: GO#2    5.3: TURN    11: EDGE    12: BOND+BEARER      band MIST files 10–11
+    r6/2  5: SWIFT+GO
+    r7/1  0: !GO    1: BONE×3    10.1: _DEEP+ROAD    10.2: ROOT×3    11.1: THIN{most}    11.2: CLOSE    12.1: FIND    12.2: BURN{all}    12.3: BEARER:keel{only}    12.4: BONE×3{few}    13: !BURN{slow}      band MIST files 11–12  band WATER files 10–10
+    r8/1  8.1: SAND    8.2: SILVERBARK×3    12.1: RISE½    12.2: BENEATH+LIE      band DARK files 12–12  band WATER files 7–7  band STILL files 12–12
+    r9/1  9.1: US×3    9.2: GO    9.3: HOLD    9.4: >GO    12.1: BOND+BEARER    12.2: BEARER:keel
+    r9/2  9.1: BOND+HAND×3    9.2: HOLD{all}    pocket P1 cut 11–2 { GIFT  US:foot+DUST  US:stem  US:crown/  AXE+TURN  STRIKE+FALL  BURN  >GO }
+    r9/3  14: WOOD+!SMOOTH{all}
+    r10/1  0.1: MOUTH    0.2: HAND:stem+TURN    0.3: STRIKE×3    1.1: >DYING    1.2: TRUE    3: HOLY+AELTHAR    pocket P2 said 5–7 { !HOLD }    9.1: EYE    9.2: HOLD    9.3: !HOLD    9.4: !MOUTH?    13: BURN
+    r10/2  9: EYE{only}
+  ‖
+  III
+    r11/1  0: SQUARE    1: BONE×3{still}    7.1: HULL    7.2: HULL×3{all}    7.3: CARRY    8.1: ROOT×3    8.2: ROOT×3+EAT    8.3: SILVERBARK×3    9.1: >LIE    9.2: US×3+>LIE    11: RAIN    12.1: BEARER:keel    12.2: GRIEF    15.1: TREE×3{all}    15.2: SAPLING×3{all}    15.3: EAT
+  bark
+    bark 0: HOLD
+  runners
+    run a1   0.r1/1       →in    7.r1/1
+    run a3   12.r1/1      ⇒      14.r1/3
+    run a2   14.r1/1      →      @0
+    run b1   12.r2/4      →      1.r2/1
+    run b2   12.r2/4      →thru  11.r2/1
+    run b3   12.r2/5      →in    2.r2/1
+    run b4   12.r2/5      →for   12.r2/6
+    run b6   12.r2/6      →with  3.r2/1
+    run b5   12.r2/6      →      @1
+    run c2   0.r3/1       →      @1
+    run c1   1.r3/1       →      12.r3/1
+    run c3   1.r3/2       →in    12.r3/2
+    run c5   1.r3/3       →with  1.r3/2
+    run c4   1.r3/3       →in    12.r3/3
+    run c6   12.r3/4      →bc    12.r3/3
+    run d1   0.1.r4/1     →      12.1.r4/1
+    run d4   0.2.r4/1     →      @12
+    run d5   4.r4/1       →      @12
+    run d2   12.1.r4/2    →as    0.1.r4/1
+    run d3   12.2.r4/2    →bc    14.r4/1
+    run g1   4.r5/1       →      12.2.r5/1
+    run f1   5.r5/1       →      12.1.r5/1
+    run g6   6.r5/1       →      8.r5/1
+    run g3   12.1.r5/1    →bc    4.r5/1
+    run e1   12.1.r5/1    →      8.r5/1
+    run g2   12.3.r5/1    →      6.r5/1
+    run g5   14.2.r5/1    →      6.r5/1
+    run g4   12.r5/2      →      8.r5/1
+    run h1   5.2.r6/1     →thru  12.r6/1
+    run h3   5.3.r6/1     →bc    ∅
+    run h2   12.r6/1      ⇒      5.3.r6/1
+    run i3   0.r7/1       →      10.2.r7/1
+    run i5   1.r7/1       →in    12.4.r7/1
+    run j1   10.1.r7/1    ⇒      12.1.r8/1
+    run q    11.2.r7/1    →      13.r7/1
+    run i1   12.1.r7/1    →      10.1.r7/1
+    run i2   12.1.r7/1    →in    11.1.r7/1
+    run p    13.r7/1      →      11.2.r7/1
+    run j2   12.1.r8/1    →      8.1.r8/1
+    run j3   12.2.r8/1    →in    8.2.r8/1
+    run k1   9.2.r9/1     →      @12
+    run k3   9.3.r9/1     →bc    9.4.r9/1
+    run k2   9.3.r9/1     →      @12
+    run k4   9.4.r9/1     →      @12
+    run k5   9.1.r9/2     →      12.2.r9/1
+    run k6   9.2.r9/2     →that  P1
+    run l3   0.1.r10/1    →with  1.1.r10/1
+    run l2   0.1.r10/1    →      3.r10/1
+    run l4   0.1.r10/1    →with  13.r10/1
+    run l6   0.2.r10/1    →bc    ∅
+    run l1   9.1.r10/1    →      3.r10/1
+    run l5   9.2.r10/1    →      1.1.r10/1
+    run l7   9.3.r10/1    →that  P2
+    run l8   9.r10/2      →      0.3.r10/1
+    run m3   1.r11/1      →in    12.1.r11/1
+    run m9   7.2.r11/1    →      0.r11/1
+    run m10  7.3.r11/1    →      12.2.r11/1
+    run m5   8.1.r11/1    ⇒      8.2.r11/1
+    run m6   8.3.r11/1    →      15.1.r11/1
+    run m4   9.1.r11/1    →as    9.2.r11/1
+    run m1   9.1.r11/1    →      12.1.r11/1
+    run m2   12.1.r11/1   →in    8.1.r11/1
+    run m7   15.2.r11/1   →for   7.1.r11/1
+    run m8   15.3.r11/1   →with  11.r11/1
+  lap  e1 ⊳ f1
+  braid B1 p q : abab!

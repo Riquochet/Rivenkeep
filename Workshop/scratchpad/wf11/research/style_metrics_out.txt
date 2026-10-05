@@ -1,0 +1,162 @@
+# Corpus metrics (tale bodies only: no headnotes, songs, native blocks, hearth-answer frames)
+| metric | v1.3 Book | v2.0 Book | Modern v1.2 | Plain v2.0 |
+|---|---|---|---|---|
+| words | 21132 | 41143 | 21116 | 40831 |
+| sentences | 1391 | 1959 | 1572 | 3311 |
+| paragraphs | 408 | 983 | 407 | 983 |
+| sent_mean | 15.2 | 21.0 | 13.4 | 12.3 |
+| sent_median | 13 | 15 | 12.0 | 11 |
+| sent_p90 | 29 | 49 | 25 | 23 |
+| sent_max | 75 | 93 | 77 | 44 |
+| pct_over30 | 9.1 | 24.1 | 3.6 | 2.0 |
+| pct_over45 | 1.0 | 12.3 | 0.1 | 0.0 |
+| pct_under10 | 39.3 | 34.7 | 38.4 | 42.9 |
+| words_per_para | 51.8 | 41.9 | 51.9 | 41.5 |
+| semicolons_per_sent | 0.09 | 0.24 | 0.04 | 0.0 |
+| commas_per_sent | 1.06 | 1.74 | 0.87 | 0.79 |
+| and_per_sent | 0.69 | 1.04 | 0.5 | 0.34 |
+| archaic_lex_per_1k | 0.9 | 9.0 | 0.0 | 0.1 |
+| archaic_gram_per_1k | 0.3 | 1.2 | 0.2 | 0.4 |
+| contractions_per_1k | 0.0 | 0.1 | 5.3 | 15.5 |
+| dialogue_share_pct | 1.2 | 3.1 | 1.2 | 3.1 |
+| fk_grade | 4.3 | 6.5 | 3.8 | 3.4 |
+| pct_polysyllabic | 2.7 | 2.2 | 2.9 | 2.7 |
+| tic:one-said/other-finished | 0.19 | 0.44 | 0.14 | 0.44 |
+| tic:he and she | 0.0 | 0.29 | 0.0 | 0.22 |
+| tic:the two of them | 0.09 | 0.97 | 0.09 | 0.93 |
+| tic:his ... and hers | 0.05 | 0.15 | 0.05 | 0.15 |
+| tic:epic simile (As when / As a ...: so) | 0.0 | 0.49 | 0.0 | 0.0 |
+| tic:Picture/Think of (plain simile) | 0.0 | 0.0 | 0.0 | 0.47 |
+| tic:day of the banner | 0.0 | 0.27 | 0.0 | 0.27 |
+| tic:causal ", for " | 3.55 | 3.96 | 0.28 | 0.42 |
+| tic:ere | 0.0 | 1.75 | 0.0 | 0.0 |
+| tic:rubric opening (Hear how / This is how / Now hear) | 0.33 | 0.53 | 0.24 | 0.34 |
+| tic:time anchor (nth season/night, years before/after) | 0.62 | 1.63 | 0.57 | 1.67 |
+| tic:numbers spelled (counts/dates) | 5.68 | 8.0 | 5.49 | 7.84 |
+| tic:upon | 0.57 | 6.34 | 0.05 | 0.02 |
+| tales | 25 | 27 | 25 | 27 |
+| words_per_tale_mean | 845.0 | 1524.0 | 845.0 | 1512.0 |
+| headnote_words_mean | 82.4 | 131.9 | 87.2 | 132.0 |
+| headnote_words_max | 210 | 217 | 221 | 227 |
+| headnote_share_pct | 8.9 | 8.0 | 9.4 | 8.0 |
+
+# Sentence-length distribution (% of sentences per band)
+| band | v1.3 Book | v2.0 Book | Modern v1.2 | Plain v2.0 |
+|---|---|---|---|---|
+| 1-5 | 17.6 | 16.9 | 17.5 | 18.8 |
+| 6-10 | 25.9 | 20.2 | 27.9 | 28.8 |
+| 11-15 | 15.1 | 13.0 | 19.3 | 22.7 |
+| 16-20 | 13.4 | 11.8 | 15.8 | 15.0 |
+| 21-30 | 18.8 | 13.9 | 15.9 | 12.7 |
+| 31-45 | 8.1 | 11.8 | 3.4 | 2.0 |
+| 46-60 | 0.9 | 7.8 | 0.1 | 0.0 |
+| 61-+ | 0.1 | 4.5 | 0.1 | 0.0 |
+
+# Per-tale: body words / headnote words / mean sentence / %>30 / semicolons per sentence / dialogue %
+| tale | v1.3 Book | v2.0 Book | Modern v1.2 | Plain v2.0 |
+|---|---|---|---|---|
+| the torn cloak | I.1: 957 / 36 / 11.8 / 4.9% / 0.02 / 0.0% | I.1: 1521 / 117 / 20.6 / 25.7% / 0.3 / 0.5% | I.1: 946 / 38 / 10.1 / 0.0% / 0.05 / 0.0% | I.1: 1502 / 114 / 9.6 / 0.6% / 0.0 / 0.5% |
+| the cry of the bonded | I.2: 944 / 43 / 13.3 / 7.0% / 0.01 / 6.1% | I.2: 1287 / 87 / 23.0 / 28.6% / 0.32 / 6.1% | I.2: 977 / 43 / 12.5 / 2.6% / 0.0 / 5.9% | I.2: 1270 / 82 / 10.9 / 2.6% / 0.0 / 6.5% |
+| the captain's long breath | I.3: 738 / 54 / 14.5 / 11.8% / 0.06 / 3.4% | I.3: 1397 / 90 / 23.3 / 35.0% / 0.28 / 5.0% | I.3: 740 / 57 / 13.0 / 5.3% / 0.0 / 3.1% | I.3: 1375 / 86 / 11.5 / 1.7% / 0.0 / 4.9% |
+| the rite of the cornerstone | I.4: 798 / 80 / 17.3 / 13.0% / 0.02 / 0.0% | I.4: 2772 / 109 / 32.6 / 50.6% / 0.47 / 3.5% | I.4: 832 / 81 / 15.1 / 5.5% / 0.0 / 0.0% | I.4: 2744 / 105 / 12.8 / 2.3% / 0.0 / 3.6% |
+| the naming of the rivenmen | I.5: 744 / 35 / 14.9 / 10.0% / 0.02 / 3.4% | I.5: 1652 / 74 / 24.3 / 30.9% / 0.25 / 4.4% | I.5: 742 / 38 / 13.2 / 3.6% / 0.0 / 3.4% | I.5: 1631 / 73 / 12.4 / 0.8% / 0.0 / 4.4% |
+| the keep that was forgotten | II.1: 721 / 42 / 18.0 / 17.5% / 0.03 / 0.0% | II.1: 1296 / 136 / 27 / 35.4% / 0.23 / 0.8% | II.1: 716 / 43 / 14.9 / 6.2% / 0.0 / 0.0% | II.1: 1271 / 134 / 13.0 / 2.0% / 0.0 / 0.8% |
+| the breath of the wood | II.2: 740 / 123 / 14.5 / 5.9% / 0.04 / 0.0% | II.2: 699 / 185 / 13.7 / 0.0% / 0.16 / 0.0% | II.2: 732 / 130 / 13.3 / 3.6% / 0.02 / 0.0% | II.2: 725 / 195 / 9.9 / 0.0% / 0.0 / 0.0% |
+| the bonded and the theoliths | II.3: 1295 / 67 / 14.9 / 5.7% / 0.13 / 0.0% | II.3: 1489 / 153 / 18.6 / 18.8% / 0.28 / 1.1% | II.3: 1308 / 71 / 13.5 / 3.1% / 0.01 / 0.0% | II.3: 1481 / 150 / 11.1 / 2.2% / 0.01 / 1.1% |
+| their raising | — | III.1: 1324 / 126 / 19.8 / 26.9% / 0.16 / 0.6% | — | III.1: 1279 / 120 / 11.3 / 0.9% / 0.0 / 0.5% |
+| their fall | — | III.2: 1731 / 92 / 20.6 / 25.0% / 0.15 / 1.0% | — | III.2: 1687 / 91 / 11.7 / 0.7% / 0.0 / 1.8% |
+| the felling of the black pillars | IV.1: 939 / 51 / 14.9 / 11.1% / 0.02 / 2.9% | IV.1: 1498 / 93 / 23.4 / 25.0% / 0.25 / 0.7% | IV.1: 945 / 50 / 11.5 / 0.0% / 0.0 / 2.9% | IV.1: 1474 / 94 / 12.4 / 2.5% / 0.0 / 0.7% |
+| the axe in the grain | IV.2: 723 / 196 / 16.8 / 9.3% / 0.19 / 0.0% | IV.2: 719 / 217 / 13.6 / 1.9% / 0.13 / 0.0% | IV.2: 703 / 182 / 14.1 / 0.0% / 0.1 / 0.0% | IV.2: 724 / 227 / 10.5 / 1.4% / 0.0 / 0.0% |
+| the warden's door | IV.3: 935 / 86 / 12.6 / 5.4% / 0.0 / 0.5% | IV.3: 2150 / 175 / 19.5 / 23.6% / 0.21 / 5.3% | IV.3: 961 / 93 / 12.3 / 3.8% / 0.0 / 0.5% | IV.3: 2127 / 177 / 12.5 / 1.2% / 0.0 / 5.4% |
+| the gift held an hour | IV.4: 778 / 139 / 15.6 / 12.0% / 0.06 / 0.0% | IV.4: 890 / 191 / 13.9 / 0.0% / 0.09 / 0.3% | IV.4: 796 / 156 / 13.0 / 1.6% / 0.0 / 0.0% | IV.4: 916 / 196 / 11.7 / 0.0% / 0.0 / 0.3% |
+| the burning boat | IV.5: 736 / 63 / 17.1 / 16.3% / 0.05 / 0.0% | IV.5: 1653 / 122 / 27.1 / 42.6% / 0.3 / 5.7% | IV.5: 743 / 70 / 14.3 / 3.8% / 0.02 / 0.0% | IV.5: 1639 / 114 / 14.4 / 4.4% / 0.0 / 5.7% |
+| the voyage of the aelvaren | IV.6: 549 / 124 / 18.9 / 17.2% / 0.24 / 0.0% | IV.6: 651 / 177 / 15.1 / 0.0% / 0.19 / 0.0% | IV.6: 566 / 139 / 15.7 / 8.3% / 0.11 / 0.0% | IV.6: 658 / 179 / 11.5 / 0.0% / 0.0 / 0.0% |
+| the first glyph | V.1: 714 / 54 / 17 / 19.0% / 0.12 / 5.5% | V.1: 1331 / 97 / 28.9 / 47.8% / 0.39 / 5.4% | V.1: 709 / 42 / 14.8 / 10.4% / 0.06 / 5.5% | V.1: 1314 / 93 / 14.4 / 3.3% / 0.0 / 5.4% |
+| the night of the naming | V.2: 949 / 50 / 13.8 / 8.7% / 0.03 / 0.0% | V.2: 1719 / 67 / 23.2 / 29.7% / 0.22 / 2.7% | V.2: 962 / 55 / 13.5 / 7.0% / 0.03 / 0.0% | V.2: 1703 / 71 / 14.1 / 3.3% / 0.0 / 2.5% |
+| the wreck that went home | V.3: 554 / 123 / 16.3 / 8.8% / 0.09 / 0.0% | V.3: 563 / 138 / 13.1 / 0.0% / 0.09 / 0.0% | V.3: 559 / 137 / 14.7 / 5.3% / 0.03 / 0.0% | V.3: 582 / 140 / 12.1 / 0.0% / 0.0 / 0.0% |
+| the council under the thin sky | V.4: 611 / 130 / 15.3 / 5.0% / 0.23 / 2.8% | V.4: 698 / 156 / 13.4 / 0.0% / 0.13 / 10.3% | V.4: 613 / 147 / 13.6 / 0.0% / 0.11 / 2.8% | V.4: 703 / 157 / 11.3 / 0.0% / 0.0 / 9.5% |
+| the tides, as the wall counted them | V.5: 1059 / 49 / 12.6 / 6.0% / 0.06 / 0.0% | V.5: 3145 / 108 / 18.9 / 23.5% / 0.26 / 3.6% | V.5: 1076 / 54 / 11.7 / 2.2% / 0.02 / 0.0% | V.5: 3099 / 112 / 11.6 / 1.5% / 0.0 / 3.4% |
+| the growing | V.6: 1010 / 136 / 17.4 / 6.9% / 0.36 / 0.0% | V.6: 800 / 173 / 12.5 / 0.0% / 0.12 / 0.0% | V.6: 1062 / 147 / 15.9 / 3.0% / 0.24 / 0.0% | V.6: 860 / 175 / 11.5 / 0.0% / 0.0 / 0.0% |
+| the mirror in the grain | V.7: 885 / 34 / 13.6 / 6.2% / 0.09 / 6.0% | V.7: 3150 / 110 / 23.5 / 31.3% / 0.33 / 5.5% | V.7: 928 / 39 / 12.7 / 2.7% / 0.01 / 5.8% | V.7: 3102 / 111 / 13.6 / 1.3% / 0.0 / 5.4% |
+| the homecomings | — | VI.1: 1273 / 166 / 21.6 / 33.9% / 0.22 / 0.6% | — | VI.1: 1268 / 170 / 12.6 / 1.0% / 0.0 / 1.6% |
+| the thrones that walk the sea | III.2: 1053 / 210 / 16.7 / 6.3% / 0.21 / 0.0% | VI.2: 879 / 176 / 13.5 / 0.0% / 0.29 / 0.0% | III.2: 1102 / 221 / 14.9 / 4.1% / 0.09 / 0.0% | VI.2: 884 / 175 / 11.1 / 0.0% / 0.0 / 0.0% |
+| the knowing of the green wood | VI.1: 903 / 39 / 17.4 / 13.5% / 0.1 / 0.2% | VI.3: 2659 / 126 / 28.0 / 42.1% / 0.27 / 4.0% | VI.1: 877 / 41 / 14.9 / 5.1% / 0.03 / 0.2% | VI.3: 2644 / 126 / 15.6 / 7.6% / 0.0 / 4.0% |
+| the stone out of the grey | Epi: 650 / 49 / 17.6 / 18.9% / 0.08 / 0.0% | Epi: 2197 / 100 / 23.6 / 29.0% / 0.19 / 3.2% | Epi: 656 / 54 / 16.8 / 12.8% / 0.03 / 0.0% | Epi: 2169 / 96 / 13.7 / 4.4% / 0.0 / 3.2% |
+| the book of the havens | III.1: 1147 / 47 / 16.9 / 4.4% / 0.06 / 0.0% | — | III.1: 865 / 52 / 12.9 / 0.0% / 0.0 / 0.0% | — |
+
+# Plain-from-Book verbatim overlap: % of Plain 4-grams found in the paired Book tale (lower = more of a real retelling)
+| tale | Modern v1.2 vs v1.3 | Plain v2.0 vs v2.0 | sentence ratio M1.2/v1.3 | sentence ratio P2/v2.0 |
+|---|---|---|---|---|
+| the torn cloak | 50.5 | 28.7 | 1.16 | 2.12 |
+| the cry of the bonded | 56.0 | 32.1 | 1.1 | 2.09 |
+| the captain's long breath | 56.2 | 30.3 | 1.12 | 2.0 |
+| the rite of the cornerstone | 58.4 | 30.7 | 1.2 | 2.52 |
+| the naming of the rivenmen | 60.9 | 34.4 | 1.12 | 1.94 |
+| the keep that was forgotten | 61.7 | 34.3 | 1.2 | 2.04 |
+| the breath of the wood | 66.5 | 36.6 | 1.08 | 1.43 |
+| the bonded and the theoliths | 61.9 | 36.6 | 1.11 | 1.68 |
+| their raising | — | 34.0 | — | 1.69 |
+| their fall | — | 37.9 | — | 1.71 |
+| the felling of the black pillars | 46.1 | 31.1 | 1.3 | 1.86 |
+| the axe in the grain | 59.3 | 42.0 | 1.16 | 1.3 |
+| the warden's door | 66.9 | 42.9 | 1.05 | 1.55 |
+| the gift held an hour | 63.8 | 42.4 | 1.22 | 1.22 |
+| the burning boat | 67.2 | 38.6 | 1.21 | 1.87 |
+| the voyage of the aelvaren | 68.7 | 51.5 | 1.24 | 1.33 |
+| the first glyph | 70.5 | 41.8 | 1.14 | 1.98 |
+| the night of the naming | 81.1 | 39.7 | 1.03 | 1.64 |
+| the wreck that went home | 75.7 | 47.7 | 1.12 | 1.12 |
+| the council under the thin sky | 73.8 | 42.6 | 1.12 | 1.19 |
+| the tides, as the wall counted them | 72.4 | 46.2 | 1.1 | 1.61 |
+| the growing | 70.3 | 50.5 | 1.16 | 1.17 |
+| the mirror in the grain | 75.5 | 44.1 | 1.12 | 1.7 |
+| the homecomings | — | 44.1 | — | 1.71 |
+| the thrones that walk the sea | 70.2 | 56.9 | 1.17 | 1.23 |
+| the knowing of the green wood | 73.3 | 45.1 | 1.13 | 1.79 |
+| the stone out of the grey | 78.4 | 44.6 | 1.05 | 1.7 |
+| the book of the havens | 59.7 | — | 0.99 | — |
+| MEAN | 65.8 | 40.3 | | |
+
+# Longest sentences, focus tales
+- [v1.3 Book I.1] (37w) The column came in at dusk, and I counted it as it came: old men, and women with bundles, and children asleep on their feet, and soldiers of six broken companies who no longer knew their officers.
+- [v1.3 Book I.1] (37w) He went up the broken face of the inner wall alone, by the stones that stood proud of the mortar, and we stood at the foot and let him, for he had not told us to follow.
+- [v2.0 Book I.1] (67w) Some cried that we should send to the grey sails and beg for terms, though no man living had ever understood one word the grey sails said; and some cried for the high passes, and whatever lay beyond the snow; and some cried that we should go down into the cellars of the Keep, and bar the doors, and wait, as if the sea would forget us.
+- [v2.0 Book I.1] (61w) As a man at a poor table, in the dead of the year, holds the last loaf of his house in his two hands, and breaks it, and gives the one half to the hungry at his door, and lays the other by against the morning, which will come whether there be bread or none: so the Captain held his cloak.
+- [v1.3 Book I.2] (38w) But they would build between the volleys, and mend a breach while the guns still spoke, with the speed and precision that only Aetherbonded pairs could achieve, for a bonded pair works as one body with four hands.
+- [v1.3 Book I.2] (36w) Every gun that is hauled is a course of stone not laid, for it is the same hands on the ropes; and the Captain knows it, and moves a gun as a careful man spends silver.
+- [v2.0 Book I.2] (86w) I did not know the two of them then, save as two elders of the guild who sat apart and spoke to no one, for they had no need, and who had knelt in the gateway at dusk, as the column came in, to turn over a fallen stone: Rhyna of the Inner Gate, of the line that laid it, and Halvard Stone-Warden, of the line that cut it out of the mountain; and they were husband and wife, and had been one since the
+- [v2.0 Book I.2] (78w) It was dusk on the day of the banner, and the last of the light lay thin as ash upon the snow, and the guild sat in the old ward where it had gone to grass, some hundreds of us, masters and prentices, with our chisels in our laps and the bonded pairs a little apart; and I sat among them, for I was of the guild, though I had no craft yet but the carrying of water.
+- [v1.3 Book IV.3] (34w) He put his right hand on the back of the warden's neck, gently, the way my mother did when I had a fever, and drew their heads together until their foreheads touched, in silence.
+- [v1.3 Book IV.3] (32w) They are the words of Brenn, who served at the outermost outpost in his youth, and came to the temple at Eldhythe forty years after and asked the Stonewrights to hear him.
+- [v2.0 Book IV.3] (63w) Tarnel, a fisher's son of Tidesmeet, where the river meets the tide, took the one handle, and I took the other; and between us we carried it up into the passes, and as he went he knotted his net with his free hand, against the day we should come to the tarns of the mountain and fish them, and I watched the knots.
+- [v2.0 Book IV.3] (62w) ▒▒▒▒ was a rich man's son, and hardly older than his own runner; and he held the post by his father's name on the Trade Council and not by his own, for they had sent him to the edge when his temper made him unwelcome in the cities, and at the edge there were only the twelve of us for it to wound.
+- [v1.3 Book IV.4] (48w) He knelt on the stones before the master of that house and set us down, as one who comes under a roof brings his best, and spoke the name of the rite in the thunder of his own tongue, Ael'thar, and after it his three words in yours.
+- [v1.3 Book IV.4] (36w) With his left hand he would open a shallow cut on the host's right arm, and let go the neck, and cut his own left arm, for he would ask no blood he did not give.
+- [v2.0 Book IV.4] (25w) Aelrhen chose the outermost of your holds, for its doors, its walls and its benches were of our wood; and he took that for reverence.
+- [v2.0 Book IV.4] (25w) Then the two of them would have pressed their bleeding arms together, shoulder to shoulder: a promise that harm to one was harm to both.
+- [v1.3 Book VI.1] (51w) But there are boatwrights among the Rivenmen, fisher-folk of the havens who built the small boats that go out on the morning tide and home by dark, and who carried their adzes up the mountain as the masons carried their chisels; and at Halyna's asking they came down to the shingle.
+- [v1.3 Book VI.1] (42w) When it was well out it turned, into the wind and against the current, as the Aelvaren, the Bearer of the Binding, turned long ago, and went away into the grey; and this time it carried a gift and not a grave.
+- [v2.0 Book VI.3] (76w) As when a quarryman sends the noon call down the cleft, as he has sent it every day of his life, and out of the far face, where no one has cut in living memory, the call comes back to him with more in it than he sent: so the green wood gave Halyna the answer of this hearth, the thing you have said at the end of every tale, on every night of the war.
+- [v2.0 Book VI.3] (75w) As when the masons of a river town begin a bridge from their own bank, and raise the half of the arch out over the water upon its timbers, though no one has come yet to the far bank to raise the other, and leave the keystone's place empty and true for hands that they have never seen: so Halyna knelt down upon the wet stones before the bow, he and she, side by side.
+
+# Headnotes, focus tales (words)
+- [v1.3 Book I.1] 36w: Laid by Sergeant Kael, Kael the Counter, oath-keeper of the True Men, on the first night this hearth asked for a tale. He would not let me change a word of it, and I have not.
+- [v2.0 Book I.1] 117w: LAID ON THE FIFTEENTH NIGHT AFTER THE BANNER, THE NIGHT AFTER THE RITE, THE FIRST NIGHT THIS HEARTH ASKED FOR A TALE · OF THE DAY OF THE BANNER, AT DUSK, AND THE LONG RETREAT BEHIND IT. || Laid by Kael the Counter, oath-keeper of the True Men, at the first asking of this hearth. He would not let me change a word of it, and I have not. When he had set the stone back in its niche, and the True Men had sung, 
+- [Modern v1.2 I.1] 38w: Told by Sergeant Kael, known as Kael the Counter, oath-keeper of the True Men, on the first night this hearth asked for a tale. He would not let me change a word of it, and I did not.
+- [Plain v2.0 I.1] 114w: LAID ON THE FIFTEENTH NIGHT AFTER THE BANNER, THE NIGHT AFTER THE RITE, THE FIRST NIGHT THIS HEARTH ASKED FOR A TALE · ABOUT THE DAY OF THE BANNER, AT DUSK, AND THE LONG RETREAT BEFORE IT. || Told by Kael the Counter, the oath-keeper of the True Men, the first time this hearth asked for a tale. He wouldn't let me change a word of it, and I haven't. When he had put the stone back, and the True Men had sung, no
+- [v1.3 Book I.2] 43w: Laid by Seren Two-Inks, apprentice to Halyna and scribe of this Book, on the night after the first assault the Rivenmen held. She was a child of the guild on the day she tells of, and sat in the courtyard with the rest.
+- [v2.0 Book I.2] 87w: LAID ON THE NIGHT AFTER THE FIRST ASSAULT THE RIVENMEN HELD, ABOUT THE TWENTY-FIFTH NIGHT · OF THE DAY OF THE BANNER: THE COURTYARD, THE TERMS, AND THE FIRST LAYING. || Laid by Seren Two-Inks, apprentice to Halyna, he and she, and the third of their hearth; and it was the second tale that this hearth ever heard, and the first that ever I laid. I was a child of the guild on the day I tel
+- [Modern v1.2 I.2] 43w: Told by Seren Two-Inks, Halyna's apprentice and the scribe of this Book, on the night after the Rivenmen held off their first assault. On the day she tells of, she was a child of the guild, sitting in the courtyard with 
+- [Plain v2.0 I.2] 82w: LAID THE NIGHT AFTER THE FIRST ATTACK THE RIVENMEN HELD OFF, AROUND THE TWENTY-FIFTH NIGHT · ABOUT THE DAY OF THE BANNER: THE COURTYARD, THE AGREEMENT, AND THE FIRST ROW OF STONE. || Told by Seren Two-Inks, apprentice to Halyna and the third member of their household. It was the second tale this hearth ever heard, and the first I ever laid. On the day I'm describing, I was a child of the guild, twelv
+- [v1.3 Book IV.3] 86w: The confession of Brenn of the outpost, the man who picked up the stone, as a bonded pair of the guild at Eldhythe set it down from his mouth in his old age and sealed it in the archive chest with the mute stones. Halyna
+- [v2.0 Book IV.3] 175w: LAID IN THE THIRD WINTER, AT THE START OF THE TIDE OF REMEMBERING · OF ONE DAY AT THE OUTERMOST OUTPOST IN THE SUMMER OF THE GUEST, SEVENTY-FIVE YEARS BEFORE THE BANNER, AND OF THE RUN AFTER IT; AND OF THE CONFESSION, FO || Laid in the words of Brenn of the outpost, as Wendhessa, the archivists of Eldhythe, took them from his mouth; read aloud by Halyna, he and she by turns; and the annal is mine. Under the mark of Wendhessa, the bundle lay
+- [Modern v1.2 IV.3] 93w: Told by Halyna, who read it aloud a paragraph each. It is the confession of Brenn of the outpost, the man who picked up the stone. When he was old, a bonded pair of the guild at Eldhythe wrote it down from his own mouth 
+- [Plain v2.0 IV.3] 177w: LAID IN THE THIRD WINTER, AT THE START OF THE TIDE OF REMEMBERING · ABOUT ONE DAY AT THE FURTHEST OUTPOST IN THE SUMMER OF THE GUEST, SEVENTY-FIVE YEARS BEFORE THE BANNER, AND THE RUN AFTERWARD; AND ABOUT THE CONFESSION, || Told in the words of Brenn of the outpost, as Wendhessa, the archivists of Eldhythe, wrote them down from his own mouth. Read out loud by Halyna, taking turns. The record at the end is mine. The bundle lay sealed under t
+- [v1.3 Book IV.4] 139w: As the Mystwood remembers: known from the gift itself, the dark stone that Brenn picked out of the dust, in the Tide of Remembering; it faces the Warden's Door. Rhyna held it an hour at the hearth, and it came into her s
+- [v2.0 Book IV.4] 191w: KNOWN IN THE THIRD SPRING, IN THE TIDE OF REMEMBERING · OF THE GUEST'S LONG LIFE OF LISTENING AND HIS LAST MORNING, SEVENTY-FIVE YEARS BEFORE THE BANNER; AND OF THE GIFT'S ROAD TO THIS HEARTH. || Known from the gift itself. On the night the words of Brenn were read, a child at the front asked what the Kneeling Guest had given, and Rhyna held the stone, and it gave her only its shape; but in the third spring she h
+- [Modern v1.2 IV.4] 156w: As the Mystwood remembers. Known from the wood by Halyna. The wood was the gift itself: the dark stone that Brenn picked out of the dust. This is the wood's side of the Warden's Door, and it faces IV.3. In the Tide of Re
+- [Plain v2.0 IV.4] 196w: KNOWN IN THE THIRD SPRING, DURING THE TIDE OF REMEMBERING · ABOUT THE GUEST'S LONG LIFE OF LISTENING AND HIS LAST MORNING, SEVENTY-FIVE YEARS BEFORE THE BANNER; AND ABOUT THE ROAD THE GIFT TOOK TO THIS HEARTH. || Known from the gift itself. On the night Brenn's words were read, a child at the front asked what the Kneeling Guest had given. Rhyna held the stone, and it gave her only its shape. But in the third spring she held it fo
+- [v1.3 Book VI.1] 39w: Laid by Halyna, by turns, in two inks, on the night the boat went out, not long after the tenth Throne fell. It ends in the wood's voice, and I have set that part down as they told it.
+- [v2.0 Book VI.3] 126w: LAID IN THE SIXTH AUTUMN, ON THE NIGHT THE BOAT WENT OUT, NOT LONG AFTER THE TENTH THRONE FELL · OF THE TENTH THRONE'S HEART, AND OF THE SENDING. || Laid by Seren Two-Inks, who held the lamp. The knowing was done in the haven where the tenth Throne lay, and the boat was built and sent from the shingle below the Keep, and between the one and the other were some days o
+- [Modern v1.2 VI.1] 41w: Told by Halyna, a paragraph each, on the night the boat went out, not long after the tenth Throne fell. It ends in the wood's voice, and Seren set that part down as they told it. This is a stone tale.
+- [Plain v2.0 VI.3] 126w: LAID IN THE SIXTH AUTUMN, ON THE NIGHT THE BOAT WENT OUT, NOT LONG AFTER THE TENTH THRONE FELL · ABOUT THE TENTH THRONE'S HEART, AND ABOUT THE SENDING. || Told by Seren Two-Inks, who held the lamp. The knowing happened in the haven where the tenth Throne lay. The boat was built and sent off from the beach below the Keep. There were some days of road between the two. I writ

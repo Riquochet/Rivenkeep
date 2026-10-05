@@ -1,0 +1,4 @@
+# name: E1-02
+round E1-02 {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: SQUARE*

@@ -1,0 +1,16 @@
+# name: V7-III
+round V7-III {wood: long; pith: war; rings: 4; rules after: [1, 2]; cells: [1, 3, 3, 3]}
+  I
+    r1/1  0: STERN*
+  ‖
+  II
+    r2 ·
+  ‖
+  III
+    r3/1  1.1: BEARER    1.2: CARVE    1.3: FALL    3.1: HULL@2    3.2: TAKE
+    r4/1  3: FALL    7: HULL×3+GO    8: HOME
+  runners
+    run h1   1.3.r3/1      ⇒      3.2.r3/1
+    run h2   3.2.r3/1      →      1.2.r3/1
+    run h3   3.r4/1        ⇒      7.r4/1
+    run h4   7.r4/1        →      8.r4/1

@@ -1,0 +1,381 @@
+dance | vilv | v | dance
+dance | vilv+Ol | n | a dance, dancing
+dare | berd | v | dare
+dark | domm | adj | dark
+dark | domm | n | the dark
+dawn | dhess | n | dawn
+day | orl | n | a day
+dead | senn+At | adj | dead ("gone out")
+deaf | na-hunn | adj | deaf ("unhearing")
+death | sennyl | n | death
+deceit | nycul | n | deceit
+decide | naelur | v | decide
+deck | pressir | n | a deck (a ship's floor)
+deed | gald+At | n | a deed, a thing done
+deep | gunn | adj | deep
+defeat | lernil | n | a defeat
+defend | pemess | v | defend
+defensive | pemess+en | adj | defensive
+despair | na-saemal | v | despair ("un-hope")
+destroy | nayald | v | destroy
+dice | nuless | n | dice
+die | senn | v | die
+different | ull+en | adj | different, other
+dig | pask | v | dig
+disagree | ~nath gemm | v | disagree ("do not meet")
+ditch | pask+At | n | a ditch ("a dug thing")
+doctrine | ammad+Ol | n | a doctrine, a teaching
+do | gald | v | do, make
+do | @none | aux | do (as a helper verb): Orrowen has none; the verb stands alone
+door | gebb | n | a door
+doorpost | gann | n | a doorpost
+double | pa | num | double, two
+doubt | bethir | v | doubt
+down | ~dem vimm | adv | down, downward (to the low)
+dozen | delv | num | a dozen
+drag | cald | v | drag
+drain | sannorn | n | a drain
+draw | bamm | v | draw, pull
+draw | ryt | v | draw (a sign)
+dress | dasor | v | dress (stone), rub smooth
+drink | fimm | v | drink
+drown | felm | v | drown
+drum | drunn+At | n | a drum ("a struck thing")
+dusk | hedh | n | dusk
+dust | tuss | n | dust
+each | gor | det | each
+ear | rern | n | an ear
+earn | nethil | v | earn, pay for
+east | rerd^tald | n | the east ("sun-rise")
+eastern | rerd^tald+en | adj | eastern
+eat | nask | v | eat
+edge | cless | n | an edge
+eight | thell | num | eight
+either | @ell | conj | either ... or: hos ... ell
+elder | hemm | n | an elder
+else | ell | adv | else
+empty | pondul | adj | empty
+enchantment | stykil | n | an enchantment, a wonder
+end | dask | n | an end
+end | dask | v | end
+ending | dask+Ol | n | an ending
+endurance | hydull | n | endurance
+enemy | bynd | n | an enemy
+enough | losk+At | adj | enough ("filled")
+enter | mellor | v | enter
+entire | tunn | adj | entire
+envoy | lusk+At | n | an envoy ("one sent")
+epilogue | ~trenn rask | n | the epilogue (the tale of the end)
+equal | hos+en | adj | equal
+eve | hedh | n | the eve
+even | sost | adv | even
+ever | fedh | adv | ever (at any time)
+every | gor | det | every
+everyone | ~gor uld | pron | everyone
+everything | ~gor yalat | pron | everything (gor + S galat)
+everywhere | ~ul gor reskow | adv | everywhere
+exalt | tald+At | adj | exalted, raised high
+expression | brodh+At | n | an expression, a thing put into words
+eye | vesk+ow | n | an eye ("the seeing-place")
+face | lern | n | a face
+fail | omm | v | fail
+faith | vennoth | n | faith
+fall | omm | v | fall
+false | na-venn | adj | false, untrue
+falter | omm | v | falter
+family | theld | n | a family
+far | deld | adj | far
+fast | pynt | adj | fast
+father | gedh | n | a father
+fear | ludal | n | fear
+fear | ludal | v | fear
+fearful | ludal+en | adj | fearful
+feel | ledh | v | feel
+feigned | na-venn | adj | feigned
+fell | gost | v | fell (a tree)
+felling | gost+Ol | n | a felling
+fen | sedh | n | a fen
+fever | suress | n | a fever
+few | merr | adj | few
+fickleness | kyl+Oth | n | fickleness
+fifth | lesk+Ast | num | fifth
+fifty | ~pa vurr eth noth | num | fifty (two twenties and ten)
+fight | gorr | v | fight
+figure | rellor | n | a figure
+file | cadh | v | file (away), lay by
+fill | losk | v | fill
+final | dask+en | adj | final
+find | wesk | v | find
+fine | bynt | adj | fine, thin
+fine | gell | adj | fine, good
+finger | nind | n | a finger
+finish | tunn | v | finish
+fire | vorr | n | fire
+fire | bramm | v | fire (a gun)
+first | hosast | num | first
+fisher | sugorn | n | a fisher
+fist | garl | n | a fist
+five | lesk | num | five
+flame | vem | n | a flame
+flash | drod | n | a flash
+flash | drod | v | flash
+flask | hellenn | n | a flask
+flat | ryss | adj | flat
+flee | hollar | v | flee
+fleet | scethan | n | a fleet
+flinch | ferr | v | flinch
+fling | drig | v | fling
+float | haemer | v | float
+floor | pressir | n | a floor
+fly | dhenth | v | fly
+fog | myst | n | fog
+fold | esk | v | fold, wrap
+folk | lunt | n | folk
+follow | fenn | v | follow
+fool | gennar | n | a fool
+foot | misk | n | a foot
+footing | ~lodh gunn | n | the footing (the deep mortar)
+for | ~hy vodh | conj | for, because
+for | dem | prep | for, toward, for the sake of
+forbid | na-lusk | v | forbid ("un-loose")
+forebear | vadull | n | a forebear
+forehead | bisk^lern | n | a forehead ("head-face")
+forest | lurr | n | a forest
+forever | ~dem et dask | adv | forever (until the end)
+foreword | ~flenn hosast | n | a foreword (the first leaf)
+forge | drunnow | n | a forge
+forget | nadhum | v | forget
+forgetting | nadhum+Ol | n | a forgetting
+forgive | haeril | v | forgive
+fortress | kethow | n | a fortress
+fortune | pussal | n | fortune
+forty | ~pa vurr | num | forty
+forward | ~dem lern | adv | forward (to the face)
+foul | dath | adj | foul
+foundation | rivull | n | a foundation
+founding | rivull | n | the founding
+four | gemm | num | four
+fourth | gemm+Ast | num | fourth
+frame | stomorn | n | a frame
+freedom | lunn | n | freedom
+freeze | crent | v | freeze
+friend | memm | n | a friend
+frighten | ludal | v | frighten
+from | hy | prep | from
+front | lern | n | the front
+frost | frenn | n | frost
+fruit | nanth | n | a fruit
+full | losk | adj | full
+gallery | saler | n | a gallery
+game | sodh | n | a game
+gaoler | vernul | n | a gaoler
+gap | tresk | n | a gap
+garrison | kest | n | a garrison
+gate | ganna | n | a gate
+gatehouse | ganna^lest | n | a gatehouse ("gate-house")
+gateway | ganna | n | a gateway
+gather | derr | v | gather
+gather | cemm | v | gather, come together
+general | ~crenn hesteth | n | a general (the captain of companies)
+generation | tesk | n | a generation
+gentle | dagorn | adj | gentle
+gently | dagorn | adv | gently
+ghost | dhenn | n | a ghost
+gift | hebb+At | n | a gift ("a given thing")
+give | hebb | v | give
+glass | sirr | n | glass
+glyph | rellor | n | a glyph
+go | orr | v | go
+god | Mardh | n | God
+going | orr+Ol | n | a going
+gold | bell | n | gold
+gold | styvil | n | gold
+good | gell | adj | good
+grain | mesk^trenn | n | the grain of wood ("the wood's course")
+grandmother | scaelur | n | a grandmother
+granite | kyvil | n | granite
+grass | linth | n | grass
+grave | ledal | n | a grave
+great | strom | adj | great
+green | lurrel | adj | green
+greeting | cemm+Ol | n | a greeting, a meeting
+grey | myst | adj | grey
+grey | myst | n | the grey
+grief | lomm | n | grief
+ground | trun | n | the ground
+grove | mesk+an | n | a grove, a stand of trees ("the folk of trees")
+grow | tev | v | grow, sprout
+growing | tev+Ol | n | a growing
+growth | tev+Ol | n | growth
+guess | kaever | v | guess
+guest | arra | n | a guest
+guide | lestir | n | a guide
+guide | lestir | v | guide
+guild | Stonwrytan | n | the guild
+gun | bramm | n | a gun
+half | saed | n | a half
+hall | hellur | n | a hall
+hand | garl | n | a hand
+hang | haemer | v | hang, float
+harbour | tavow | n | a harbour
+hard | duss | adj | hard
+hardly | ~merr fedh | adv | hardly, scarcely
+harm | grest | n | harm
+harsh | scid | adj | harsh
+harvest | derr+Ol | n | a harvest
+hasty | pynt | adj | hasty
+haul | cald | v | haul
+have | @doss lo | v | have: "is at" (Doss X lo Y); as the perfect helper, the past particle re
+haven | cumm | n | a haven
+he | o | pron | he
+head | bisk | n | a head
+heap | stell | n | a heap
+hear | hunn | v | hear
+heart | molt | n | a heart
+heartbeat | molt^drunn | n | a heartbeat ("heart-blow")
+heartwood | mesk^molt | n | heartwood ("wood-heart")
+hearth | odh | n | a hearth
+heavy | na-lelv | adj | heavy ("un-light")
+help | renn | v | help
+help | renn | n | help
+here | ~lo sy | adv | here (at this)
+hew | dann | v | hew
+hide | lemm | v | hide
+high | susk | adj | high
+hill | brunn+el | n | a hill ("a small mountain")
+hinge | brellir | n | a hinge
+hold | keth | v | hold
+holding | kethyl | n | a holding
+hollow | demull | n | a hollow
+holy | peness | adj | holy
+home | varn | n | home
+homecoming | mymm+Ol | n | a homecoming
+honest | venn | adj | honest
+honour | stathul | n | honour
+hood | bisk^covv | n | a hood ("head-cloak")
+hook | kyl | v | hook, turn back
+hope | saemal | n | hope
+horn | gomm | n | a horn
+host | odh+Ard | n | a host (one who keeps a hearth for a guest)
+host | cryrull | n | a host (an army)
+hostile | bynd+en | adj | hostile
+hot | bith | adj | hot
+hour | clem | n | an hour
+house | lest | n | a house
+household | theld | n | a household
+how | ~hosen vodh | adv | how ("like what")
+hull | sceth | n | a hull
+humble | nestorn | adj | humble
+humility | nestorn+Oth | n | humility
+hundred | ~lesk murr | num | a hundred
+hunter | ganur+Ard | n | a hunter
+hurry | pynt | v | hurry
+hurt | grest | v | hurt
+husband | humm | n | a husband
+hut | lest+el | n | a hut ("a small house")
+i | en | pron | I
+ice | crest | n | ice
+if | amm | conj | if
+ill | dath | adj | ill
+in | ul | prep | in
+inheritance | vadull+en | n | an inheritance (what belongs to the forebears)
+ink | luth | n | ink
+inner | ulvenn | adj | inner
+intent | dask | n | intent
+intruder | besk | n | an intruder
+invocation | ammel+Ol | n | an invocation, a prayer
+into | ul | prep | into
+inward | ulvenn | adv | inward
+iron | duss^styvil | n | iron ("hard-metal")
+it | o | pron | it
+join | lodh | v | join, bind
+joint | brellir | n | a joint
+judgment | tess+At | n | a judgement (a verdict: "a thing answered")
+jump | hunner | v | jump
+just | hos+el | adv | just, only
+just | venn | adj | just
+keel | breller | n | a keel
+keep | keth | v | keep
+keeper | pard | n | a keeper
+keeping | kethyl | n | a keeping
+key | roskur | n | a key
+key | roskur | v | key (a joint), lock fast
+kick | misk | v | kick
+kill | hurr | v | kill
+killing | hurr+Ol | n | a killing
+kin | lonn | n | kin
+kind | lonn | n | a kind, a sort
+kind | pryssal | adj | kind
+kindling | syndal+Ol | n | kindling
+kindred | lonn | n | a kindred
+king | pithul | n | a king
+kiss | inth | n | a kiss
+knee | gerd | n | a knee
+kneel | lumm | v | kneel
+knock | drunn | v | knock
+knot | bysk+At | n | a knot
+know | sesk | v | know (a thing that is so)
+know | keth | v | know (the wood, by touch)
+knowing | kethyl | n | a knowing
+lad | luld | n | a lad
+laden | havul+At | adj | laden
+lamp | greller | n | a lamp
+lamplight | ~baegyth reller | n | lamplight (the brightness of a lamp)
+land | gaed | n | land
+land | tav | v | land
+lap | simm | n | a lap
+last | dask+en | adj | last
+late | desir | adj | late
+laugh | dhyvull | v | laugh
+law | haral | n | a law
+lay | cadh | v | lay
+laying | cadh+Ol | n | a laying
+lead | nesk | v | lead
+leader | nesk+Ard | n | a leader
+leaf | flenn | n | a leaf
+lean | ferr | v | lean
+leap | hunner | v | leap
+learn | rystull | v | learn
+learned | rystull | v | learned
+leave | lusk | v | leave, let be
+leave | ~orr hy | v | leave, go from
+left | ull+en | adj | left (the other hand)
+legend | trenn | n | a legend
+length | sell+Oth | n | a length
+let | lusk | v | let
+letter | tolm | n | a letter
+liar | nycul+Ard | n | a liar
+lid | baek | n | a lid
+lie | firr | v | lie (down)
+lie | nycul | v | lie (tell a lie)
+lieutenant | pawast | n | a lieutenant (the second)
+life | hoss+Ol | n | a life ("breathing")
+lifetime | hoss+Ol | n | a lifetime
+lift | bemm | v | lift
+light | baeg+Oth | n | light, brightness
+light | lelv | adj | light (not heavy)
+light | syndal | v | light, kindle
+like | hos+en | prep | like
+like | vall | v | like
+line | trenn | n | a line
+lintel | hosk | n | a lintel
+lip | inth | n | a lip
+list | nydh+Ol | n | a list
+listen | rern | v | listen
+little | lyss | adj | little
+live | hoss | v | live
+lock | roskur | v | lock
+log | mesk | n | a log
+lone | hos+el | adj | lone
+long | sell | adj | long
+look | vesk | v | look
+lookout | begorn | n | a lookout
+loose | lusk | v | loose
+loosen | lusk | v | loosen
+lord | pithul | n | a lord
+lose | mamm | v | lose
+loss | mamm+Ol | n | a loss
+loud | bont | adj | loud
+loudly | bont | adv | loudly
+low | vimm | adj | low
+luck | pussal | n | luck

@@ -1,0 +1,8 @@
+# name: Burn
+# english: Burn.
+# literal: A fire scar at the heart of green wood, lipped with callus. The plank is charred at one end; the stain on the bark carries nothing.
+# root_word: burn
+# char: true
+round BURN {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: BURN*

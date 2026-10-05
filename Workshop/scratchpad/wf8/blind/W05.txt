@@ -1,0 +1,282 @@
+# BLIND COPY of wf8/units/W05.md: native lines only (Orrowen blockquotes, ink-hand letter block, GN code). English, notes, tables, glosses and GN '#' comments stripped. [n] = source line.
+## A. ORROWEN (blockquoted lines)
+[29] **Kaelir sa re vymm dem varn**
+[39] **Hosen tum Mesk Myst: kethet hy scethel Hyll Dhumol, sa re felm ul o rarrol pawast; re hyl o hy ol hald grestet, eth re vymm o dem et tolm sost dem sennyl lo ull; doss o ul lern Vess Vollol.**
+[52] **Re heth Halvard o, eth re yal o yarlath umo; nath re femm Rhyna o orl ull, hy vodh re yal stinel dhant lunnat ul ey garlremullath; veth re heth ey o hosen re heth o o.**
+[66] **Re yal trenn et sceth sost cadhat pynt; re nydhe Halyna et haral ul o rask dhom vess, eth nath re luska sona lom o rytyl veth amm ull.**
+[79] **Re wrodha Halyna o, hos eth ullen, ul ba luth; re hadh Seren o.**
+[87] **Amm re yal et mesk cresket, ell re omm et brodhol, doss o rellorat eth nahlennet.**
+[97] **Eth re dhess nahos.**
+## B. INK HAND LETTER BLOCK / GN BLOCKS
+## block 107
+k.a.e.l.i.r s.a r.e m^S.y.m.m d.e.m v.a.r.n
+h.o.s.e.n t.u.m m.e.s.k m.y.s.t , k.e.th.A.t h.y s.k.e.th.e.l h.y.l.l t^S.u.m.O.l , s.a r.e f.e.l.m u.l o d^S.a.r.r.O.l p.a.w.A.s.t , r.e k^S.y.l o h.y o.l h.a.l.d g.r.e.s.t.A.t , e.th r.e m^S.y.m.m o d.e.m e.t t.o.l.m s.o.s.t d.e.m s.e.n.n.O.l l.o u.l.l , d.o.s.s o u.l l.e.r.n v.e.s.s v.o.l.l.O.l |
+r.e k^S.e.th h.a.l.v.a.r.d o , e.th r.e g^S.a.l o g^S.a.r.l.A.th u.m.o , n.a.th r.e f.e.m.m rh.y.n.a o o.r.l u.l.l , h.y v.o.dh r.e g^S.a.l s.t.i.n.e.l t^S.a.n.t l.u.n.n.A.t u.l e.y g.a.r.l.r.e.m.u.l.l.A.th , v.e.th r.e k^S.e.th e.y o h.o.s.e.n r.e k^S.e.th o o |
+r.e g^S.a.l t.r.e.n.n e.t s.k.e.th s.o.s.t k.a.dh.A.t p.y.n.t , r.e n.y.dh.A =h.a.l.y.n.a e.t h.a.r.a.l u.l o d^S.a.s.k dh.o.m v.e.s.s , e.th n.a.th r.e l.u.s.k.A s.o.n.a l.o.m o r.y.t.O.l v.e.th a.m.m u.l.l |
+r.e b^S.r.o.dh.A =h.a.l.y.n.a o , h.o.s e.th u.l.l.e.n , u.l p^N.a l.u.th , r.e k^S.a.dh s.e.r.e.n o |
+a.m.m r.e g^S.a.l e.t m.e.s.k k.r.e.s.k.A.t , e.l.l r.e o.m.m e.t b.r.o.dh.O.l , d.o.s.s o r.e.l.l.o.r.A.t e.th n.a.k^S.l.e.n.n.A.t |
+e.th r.e t^S.e.s.s n.a.h.o.s #coping
+## block 152
+  I
+    r1·1  0: STERN*
+    r1·2  12: HULL    12: ROOT×3+TIDE    5: ROOT×3    5: >HOLD
+    r1·3  12: CARVE+WORD×3    12: HOLD    12: EYE
+    r1·4  12: GO    13: MORNING    11: BLOOD×3    14: LONE+BEARER      band MIST files 12–12
+    run a1  5.2.r1·2    →      12.2.r1·2
+    run a2  12.r1·3     →for   {12.2.r1·3, 12.3.r1·3}
+    run a3  12.r1·4     →      0.r2·1
+    run a4  12.r1·4     →in    13.r1·4
+    run a5  12.r1·4     →with  {11.r1·4, 14.r1·4}
+    mem 12: r1/4 → pith
+## block 175
+    r2·1  0: SQUARE    0: FLASH
+    r2·2  9: NEW+WOOD    9: NEW+HOLD    5: CARRY    0: GUN
+    r2·3  12: TURN
+    r2·4  12: BENEATH+WOUND    0: MOUTH{again}    0: AXE+GO      band WATER files 12–12
+    run b1  9.2.r2·2    →      0.2.r2·1
+    run b2  0.2.r2·1    ⇒      0.r2·2
+    run b3  5.r2·2      →      0.2.r2·1
+    run b4  5.r2·2      →      @8
+    run b5  12.r2·3     →      0.r2·1
+    run b6  0.r2·4      ⇒      0.2.r2·4
+    run b7  0.2.r2·4    →thru  12.r2·4
+  ‖
+## block 203
+  II
+    r3·1  12: RISE    pocket P1 cut 13–14 { STERN½@1 }
+    r3·2  12: STERN    0: SQUARE
+    r3·3  12: BENEATH+GO{slow}      band MIST files 12–12
+    r3·4  0: GUN×3+>GO?    0: GUN×3+!EYE?
+    run c1  12.r3·1     →that  P1
+    run c2  12.r3·2     →      0.r3·2
+    run c3  12.r3·3     →      @8
+    run c4  0.r3·4      →      12.r3·3
+    run c5  0.2.r3·4    →      12.r3·3
+## block 225
+    r4·1  12: GO{still}    12: MOUTH
+    r4·2  13: WOOD    13: HAND+!OPEN    13: WORD×3
+    r4·3  0: SQUARE    0: FLASH    12: GO
+    run d1  12.2.r4·1   →in    12.r4·1
+    run d2  12.2.r4·1   →      @11
+    run d3  12.2.r4·1   →bc    13.2.r4·2
+    run d4  13.2.r4·2   →      13.3.r4·2
+    run d5  13.2.r4·2   →in    @11
+    run d6  12.r4·3     →with  {0.r4·3, 0.2.r4·3}
+    run d7  12.r4·3     →in    @5
+## block 246
+    r5·1  12: WOUND    12: GO{again}    11: HOLD    11: WOOD
+    r5·2  1: ~STONEFOLK    1: ~HOLD    1: ~WOUND    3: ~STONEFOLK    3: ~HOLD    3: ~WOUND    2: ~CASTLE
+    run e1  12.2.r5·1   →with  12.r5·1
+    run e2  12.2.r5·1   →      @11
+    run e3  11.r5·1     →      12.r5·1
+    run e4  11.r5·1     →in    11.2.r5·1
+    run e5  11.r5·1     →as    1.2.r5·2
+    run h1  1.2.r5·2    →      3.3.r5·2
+    run h2  3.2.r5·2    →      1.3.r5·2
+    run h3  1.2.r5·2    →thru  2.r5·2
+  braid B1 h1 h2 : abab
+  ray 12: r2/2–r5/1
+## block 270
+    r6·1  12: GO    4: WOOD+DYING{only}      band DREAD files 12–12    band WATER files 4–4
+    r6·2  12: GO{slow}    7: HULL×3{all}    6: ~SAP+GO
+    r6·3  12: SWIFT{most}+GO    14: HEART
+    run f1  12.r6·1     →with  4.r6·1
+    run f2  12.r6·2     →      7.r6·2
+    run f3  12.r6·2     →as    6.r6·2
+    run f4  12.r6·3     →      14.r6·3
+    run f5  14.r6·3     →      7.r6·2
+## block 289
+    r7·1  0: MEND
+    r7·2  14: HEART+CARVE    10: MORROW    pocket P2 cut 1–2 { EYE  BOND+HOLD }
+    r7·3  0: SQUARE    0: MOUTH    0: !MOUTH?    0: KNOT?
+    r7·4  12: LONE+GO    12: GO@1    12: EYE    0: FLASH?{still}
+    r7·5  14: >GO{only}
+    run g1  14.r7·2     →      10.r7·2
+    run g2  14.r7·2     →that  P2
+    run g3  P2.1        ⇒      P2.2
+    run g4  0.2.r7·3    ⇒      0.3.r7·3
+    run g5  12.r7·4     →in    10.r7·2
+    run g6  12.r7·4     →bc    12.2.r7·4
+    run g7  12.r7·4     →for   12.3.r7·4
+    run g8  12.3.r7·4   →      0.r7·4
+    run g9  14.r7·5     →      12.r7·4
+    run g10 14.r7·5     →for   12.3.r7·4
+## block 317
+    r8·1  0: FLASH{still}
+    r8·2  12: !TURN@2      band WATER files 12–12
+    r8·3  0: AXE+FIND    12: WOUND{again}    0: ~HOLD+CARVE
+    r8·4  12: FALL    0: SQUARE+BENEATH
+    r8·5  12: LIE    11: OVER+GO      band WHITE files 12–12
+    r8·6  4: TIDE    4: >GO    3: BREAK    3: CARRY    0: SHORE+SAND      band WATER files 3–4
+    r8·7  0: HAND×3
+    run k1  0.r8·3      →      12.r8·3
+    run k2  0.r8·3      →as    0.2.r8·3
+    run k3  12.r8·4     →in    0.r8·4
+    run k4  11.r8·5     →thru  12.r8·5
+    run k6  4.2.r8·6    →      12.r8·5
+    run k7  3.2.r8·6    →in    0.r8·6
+    run k8  0.r8·7      →      @12
+  ray 12: r5/1–r8/1
+  ‖
+## block 348
+  III
+    r9·1  12: MOUTH    12: FALL
+    r9·2  11: LIVE    11: CARRY      band MIST files 11–11
+    r9·3  5: CARRY    8: TREE×3    9: MORROW+HULL×3    9: GROW      band MIST files 5–5
+    r9·4  9: HOLD
+    run m1  12.r9·1     ⇒      12.2.r9·1
+    run m2  11.2.r9·2   ⇒      5.r9·3
+    run m3  5.r9·3      →      @8
+    run m4  9.2.r9·3    →in    8.r9·3
+    run m5  9.2.r9·3    →with  9.r9·4
+## block 370
+    r10·1  0: TRUE+HOLD
+    r10·2  8: NEW+HOLD    0: SQUARE    8: NEW+!HOLD    0: HAND    pocket P3 said 1–3 { SQUARE×3+_GUN×3  SQUARE+!MOUTH  !SPENT  HULL+TURN  SWIFT+GO  AXE+FOLLOW }
+    r10·3  0: >GO?    0: GUN?    0: KNOT?
+    r10·4  7: HULL×3{all}    7: EYE    7: FALL    7: !GO
+    r10·5  7: GO    7: HOLD
+    r10·6  0: NEW
+    run n1  8.r10·2     →      0.r10·2
+    run n2  8.r10·2     →that  P3
+    run n3  8.2.r10·2   →      0.2.r10·2
+    run n4  P3.2        →with  P3.3
+    run n5  P3.4        ⇒      P3.5
+    run n6  P3.5        ⇒      P3.6
+    run n7  0.r10·3     →      0.2.r10·3
+    run n8  7.2.r10·4   →      {0.2.r10·2, 0.r10·3, 0.3.r10·3}
+    run n9  7.2.r10·4   ⇒      7.3.r10·4
+    run n10 7.4.r10·4   →      @8
+    run n11 7.r10·5     →      @0
+    run n12 7.2.r10·5   →      0.r10·2
+    run n13 0.r10·6     →      7.r10·4
+## block 402
+    r11·1  12: GO#1    12: MOUTH    12: GO{again}    12: EYE    12: DYING
+    r11·2  8: HOLD
+    run p1  12.r11·1    →      @8
+    run p2  12.r11·1    ⇒      12.2.r11·1
+    run p3  12.2.r11·1  ⇒      12.3.r11·1
+    run p4  12.3.r11·1  →      @0
+    run p5  12.3.r11·1  →for   12.4.r11·1
+    run p6  12.5.r11·1  →in    12.4.r11·1
+  bark
+    bark 0: HOLD
+## block 456
+round V-3 {wood: life; pith: war; rings: 11; rules after: [2, 8]; cells: [1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4]}
+  I
+    r1/1  0: STERN*    5: ROOT×3    11: BLOOD×3    12: HULL    13: MORNING    14: LONE+BEARER
+    r1/2  5: >HOLD    12: ROOT×3+TIDE
+    r1/3  12: CARVE+WORD×3
+    r1/4  12: HOLD
+    r1/5  12: EYE
+    r1/6  12: GO      band MIST files 12–12
+    r2/1  0: SQUARE    5: CARRY    9: NEW+WOOD    12: TURN
+    r2/2  0: FLASH    9: NEW+HOLD    12: BENEATH+WOUND      band WATER files 12–12
+    r2/3  0: GUN
+    r2/4  0: MOUTH{again}
+    r2/5  0: AXE+GO
+  ‖
+  II
+    r3/1  0.1: SQUARE    0.2: GUN×3+>GO?    12.1: RISE    12.2: STERN    pocket P1 cut 13–14 { STERN½@1 }
+    r3/2  0: GUN×3+!EYE?    12: BENEATH+GO{slow}      band MIST files 12–12
+    r4/1  0.1: SQUARE    0.2: FLASH    12.1: GO{still}    12.2: MOUTH    13.1: WOOD    13.2: HAND+!OPEN
+    r4/2  12: GO    13: WORD×3
+    r5/1  1.1: ~STONEFOLK    1.2: ~HOLD    1.3: ~WOUND    2: ~CASTLE    3.1: ~STONEFOLK    3.2: ~HOLD    3.3: ~WOUND    11.1: HOLD    11.2: WOOD    12.1: WOUND    12.2: GO{again}
+    r6/1  4: WOOD+DYING{only}    6: ~SAP+GO    7: HULL×3{all}    12.1: GO    12.2: GO{slow}    12.3: SWIFT{most}+GO    14: HEART      band DREAD files 12–12  band WATER files 4–4
+    r7/1  0.1: MEND    0.2: SQUARE    0.3: MOUTH    pocket P2 cut 1–2 { EYE  BOND+HOLD }    10: MORROW    12.1: LONE+GO    12.2: GO@1    12.3: EYE    14.1: HEART+CARVE    14.2: >GO{only}
+    r7/2  0.1: !MOUTH?    0.2: KNOT?    0.3: FLASH?{still}
+    r8/1  0.1: FLASH{still}    0.2: AXE+FIND    0.3: ~HOLD+CARVE    0.4: SQUARE+BENEATH    3.1: BREAK    3.2: CARRY    4.1: TIDE    4.2: >GO    11: OVER+GO    12.1: !TURN@2    12.2: WOUND{again}    12.3: FALL    12.4: LIE      band WATER files 12–12  band WHITE files 12–12  band WATER files 3–4
+    r8/2  0.1: SHORE+SAND    0.2: HAND×3
+  ‖
+  III
+    r9/1  5: CARRY    8: TREE×3    9.1: MORROW+HULL×3    9.2: GROW    9.3: HOLD    11.1: LIVE    11.2: CARRY    12.1: MOUTH    12.2: FALL      band MIST files 11–11  band MIST files 5–5
+    r10/1 0.1: TRUE+HOLD    0.2: SQUARE    0.3: HAND    0.4: >GO?    pocket P3 said 1–3 { SQUARE×3+_GUN×3  SQUARE+!MOUTH  !SPENT  HULL+TURN  SWIFT+GO  AXE+FOLLOW }    7.1: HULL×3{all}    7.2: EYE    7.3: FALL    7.4: !GO    8.1: NEW+HOLD    8.2: NEW+!HOLD
+    r10/2 0.1: GUN?    0.2: KNOT?    0.3: NEW    7.1: GO    7.2: HOLD
+    r11/1 8: HOLD    12.1: GO#1    12.2: MOUTH    12.3: GO{again}    12.4: EYE
+    r11/2 12: DYING
+  bark
+    bark 0: HOLD
+  runners
+    run a1   5.r1/2        →      12.r1/2
+    run a2   12.r1/3       →for   {12.r1/4, 12.r1/5}
+    run a5   12.r1/6       →with  {11.r1/1, 14.r1/1}
+    run a4   12.r1/6       →in    13.r1/1
+    run a3   12.r1/6       →      0.r2/1
+    run b4   5.r2/1        →      @8
+    run b3   5.r2/1        →      0.r2/2
+    run b5   12.r2/1       →      0.r2/1
+    run b2   0.r2/2        ⇒      0.r2/3
+    run b1   9.r2/2        →      0.r2/2
+    run b6   0.r2/4        ⇒      0.r2/5
+    run b7   0.r2/5        →thru  12.r2/2
+    run c4   0.2.r3/1      →      12.r3/2
+    run c1   12.1.r3/1     →that  P1
+    run c2   12.2.r3/1     →      0.1.r3/1
+    run c5   0.r3/2        →      12.r3/2
+    run c3   12.r3/2       →      @8
+    run d2   12.2.r4/1     →      @11
+    run d1   12.2.r4/1     →in    12.1.r4/1
+    run d3   12.2.r4/1     →bc    13.2.r4/1
+    run d5   13.2.r4/1     →in    @11
+    run d4   13.2.r4/1     →      13.r4/2
+    run d6   12.r4/2       →with  {0.1.r4/1, 0.2.r4/1}
+    run d7   12.r4/2       →in    @5
+    run h3   1.2.r5/1      →thru  2.r5/1
+    run h1   1.2.r5/1      →      3.3.r5/1
+    run h2   3.2.r5/1      →      1.3.r5/1
+    run e5   11.1.r5/1     →as    1.2.r5/1
+    run e4   11.1.r5/1     →in    11.2.r5/1
+    run e3   11.1.r5/1     →      12.1.r5/1
+    run e2   12.2.r5/1     →      @11
+    run e1   12.2.r5/1     →with  12.1.r5/1
+    run f1   12.1.r6/1     →with  4.r6/1
+    run f3   12.2.r6/1     →as    6.r6/1
+    run f2   12.2.r6/1     →      7.r6/1
+    run f4   12.3.r6/1     →      14.r6/1
+    run f5   14.r6/1       →      7.r6/1
+    run g4   0.3.r7/1      ⇒      0.1.r7/2
+    run g3   P2.1          ⇒      P2.2
+    run g5   12.1.r7/1     →in    10.r7/1
+    run g6   12.1.r7/1     →bc    12.2.r7/1
+    run g7   12.1.r7/1     →for   12.3.r7/1
+    run g8   12.3.r7/1     →      0.3.r7/2
+    run g2   14.1.r7/1     →that  P2
+    run g1   14.1.r7/1     →      10.r7/1
+    run g9   14.2.r7/1     →      12.1.r7/1
+    run g10  14.2.r7/1     →for   12.3.r7/1
+    run k2   0.2.r8/1      →as    0.3.r8/1
+    run k1   0.2.r8/1      →      12.2.r8/1
+    run k7   3.2.r8/1      →in    0.1.r8/2
+    run k6   4.2.r8/1      →      12.4.r8/1
+    run k4   11.r8/1       →thru  12.4.r8/1
+    run k3   12.3.r8/1     →in    0.4.r8/1
+    run k8   0.2.r8/2      →      @12
+    run m3   5.r9/1        →      @8
+    run m4   9.2.r9/1      →in    8.r9/1
+    run m5   9.2.r9/1      →with  9.3.r9/1
+    run m2   11.2.r9/1     ⇒      5.r9/1
+    run m1   12.1.r9/1     ⇒      12.2.r9/1
+    run n7   0.4.r10/1     →      0.1.r10/2
+    run n4   P3.2          →with  P3.3
+    run n5   P3.4          ⇒      P3.5
+    run n6   P3.5          ⇒      P3.6
+    run n8   7.2.r10/1     →      {0.3.r10/1, 0.4.r10/1, 0.2.r10/2}
+    run n9   7.2.r10/1     ⇒      7.3.r10/1
+    run n10  7.4.r10/1     →      @8
+    run n1   8.1.r10/1     →      0.2.r10/1
+    run n2   8.1.r10/1     →that  P3
+    run n3   8.2.r10/1     →      0.3.r10/1
+    run n13  0.3.r10/2     →      7.1.r10/1
+    run n11  7.1.r10/2     →      @0
+    run n12  7.2.r10/2     →      0.2.r10/1
+    run p1   12.1.r11/1    →      @8
+    run p2   12.1.r11/1    ⇒      12.2.r11/1
+    run p3   12.2.r11/1    ⇒      12.3.r11/1
+    run p4   12.3.r11/1    →      @0
+    run p5   12.3.r11/1    →for   12.4.r11/1
+    run p6   12.r11/2      →in    12.4.r11/1
+  braid B1 h1 h2 : abab
+  ray 12: r2/2–r5/1
+  ray 12: r5/1–r8/1
+  mem 12: r1/4 → pith
+## inline header [125]
+round V-3 {wood: life; pith: war; rings: 11; rules after: [2, 8]}

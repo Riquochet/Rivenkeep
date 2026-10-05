@@ -1,0 +1,19 @@
+# name: E3-06
+round E3-06 {wood: life; pith: war; rings: 4; rules after: [1, 3]}
+  I
+    r1/1  0: MOUTHS*
+  ‖¦
+  II
+    r2/1  4: ROAD+BEARER      band STILL files 4–4
+    r3/1  2: SQUARE    4: STRIKE
+    r3/2  2: MOUTH
+  ‖
+  III
+    r4/1  8: BEARER×3    12: HULL×3+GO      band DARK files 12–12
+    r4/2  8: ROAD#1
+  runners
+    run t0  0.r1/1   ⇒  4.r2/1
+    run t1  4.r3/1   →  2.r3/1
+    run t2  2.r3/2   ⇒  12.r4/1
+    run t3  12.r4/1  ⇒  8.r4/1
+    mem 2: r3/1 → pith

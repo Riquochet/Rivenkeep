@@ -1,0 +1,88 @@
+L29	> ## *Flennath et Hyll*
+L31	> *Et gorrol, eth hosen vodh re rystull et mesk.*
+L43	> ## *Rellor Hosast*
+L51	> *Re hadha Halyna lo rask wress hosast et tynur, um yaldat et vess sa re yal et kiser hosast cresket; re hadhom o, eth ew en sa re heth et greller. Amm brodha Halyna, brodha sona hos eth ullen, trenn eth trenn; re rytym ul ba luth, eth nath re rellorom hos hy ullen.*
+L68	> Kethen et tolm. Keth Seren et greller. Hosen ull re hadhan et tolm hosast; eth hosen ull kethen o tul.
+L78	> Amm re yal et kiser hosast cresket, re lymm et hyll et kaelirvesk ul vimm et hald: crynireth myst eth crestalath, eth saed wreller sell hosen ganna, ul scaevurol ul et venth. Re vaverent et hesperdeth vorrol et kaelirvesk, eth re lusk et Crenn so, eth re vorrant et saed strom. Veth re rarr Hale Haskard dem susk hy et hylldhrenn, eth re vysk o: Doss rellorath ul et mesk. Eth re orra Halyna dem et dhysal, amm re yal et hyll kylet, eth Seren ul sestow, ul lymmyl et greller. Re harala Halyna lo et uldath: Bamma hos crynir dem susk hy et spant, eth cadha o um et tolmath! Re yal rytet ulo. Re orr o lo dhrenn et meskdhrenn, bynt eth venthen: hos rellor hosel.
+L93	> Re yal sull lonn rytyl Vystaeri lor amm ull, eth re hyrriler nayalat hyont: tolmath nawrodh ul vestul rytow; et tolm domm sa re sol lo so sest, esket ul dessyl uld hemm; eth amm sy, et kaelirvesk. Nath re wrodhant et tolmath, hy vodh lymm tolm nayalat. Re yalant haralath stemir rytet ul et mesk hossen, sesker amm sy; ul et vess ull nath re sesker galat veth rellorath ulo. Veth re luskant gostardath surrath et derryl brod ul et cummath: Hebb mesk domm kaever ul narl uld fedheth, amm sol o yarl lo ull sell loskat. Eth re yal nayalat ullen lor dem raevulol. Hy ull re femme Halyna o.
+L107	> Re hadh Rhyna pa yarlremull ryss um et meskdhrenn, eth re hadh Halvard pa yarl umont. Nath re haevere fedh raevulol hosel, hy vodh nath re seske tul: el loskat hos ganna yarl. Nath re wrodha sona. Re rarr et hyll um et dhysal, eth re orr. Re vorr et greller ryssyth nind dem vimm.
+L119	> Hy ull re dhald et kethyl ul et pa yarlremull, ell lern et kethyl. Mysk ey: re vorr o, nel hosen vorr vorr, veth hosen vorr dusstyvil brid ul et grem; eth re yal lern et rellor sost ulo: hos stinel ul gylyl dem lern, hosen fodh sa es gresk. Re heth Halvard o hosen re heth ey o, hy vodh el ull et lodh; eth ew Halvard sa re wrodh. Re vysk o: Orrow.
+L134	> Nath re yal myskyl lo hosen vodh re heth o o. Re vysk o hy ull: ew hosen amm re hadh hos et brod ul o wrodow, eth re orr dem neld. Re vysk Rhyna: El venn o. Re hethe pana o ul neld et brod; veth nath re orr et ullen ul et brodath, hy vodh ew ull kaever lurr, eth nath re yal veth kaever Orrow lonta. Ew ull gor yalat sa re yal o wrodhol lonta, veth re hethe et crynir dem sennyl et greller.
+L149	> Re ryt Seren o. Re rik ey hos flenn tunn hy et flennath sy demo, eth re ryt ey hos brod ul molt et flenn, Orrow, eth nayalat ullen; eth re ryt ey et rellor um et flenn ul lern. Mysk ey: re yal o lyss sost lo ull.
+L159	> Hy ull re yal tolm hosast et Kethyl cadhat, um et dhysal ul vimm et hald sy. Ul et clemeth velv ul lodh et kethyleth, re rystulla Halyna brodhen dagorn Vesk Myst, brodhen et bynd, sa nath noss vesket veth kethet; eth re wrodha o, hos rellor gor fedh. Galdar o hosen ull tul, gor fedh amm cresk kiser: et kaelir bammat dem susk, hos garl Halyna um et meskdhrenn, eth et greller lo Seren; hy vodh re rystulla, hy et vess ull: galat sa heth hos, keth ullen o. Nath hebb et mesk et kethyl tunn lo vrener hosel. Re hadhant hesperdeth so yarlath umo, eth nath re ledhent veth crynireth thenth. Re raevul et Lodhan ullen hy et Stonwrytan o hy ull, eth re heth merr, veth nath re yal o hethyl sell loskat lo, dem o wrodhol. Re hadh Seren hos garl umo, hos fedh, hosel, eth re ledh ey galat sa re rarr uloy, strom hy hethyl; eth re lusk ey.
+L174	> Amm re orra dem susk hy et dhysal ul et vess ull, re vysk hos, eth re dhunn ullen:
+L178	> *Re rarr et Arra dem ol nebb, eth re yal sull brod lo, eth nath re yal trenn.*
+L180	> *Amm sy el olna sa ross hos brod lona, eth nath noss trenn. Et rellor venn, kethet venn; eth el hosel kael rellor sa nath noss trenn lo.*
+L196	> Cadhan o hosen re yal cadhat lona.
+L202	> *Eth re vysk et odh: Tumar.*
+L208	> *Doss et rellor um et flenn ul lern, rytet ul narl Seren: hos stinel ul gylyl dem lern, hosen fodh sa es gresk.*
+L216	```
+L217	round V1-face {wood: plain; kind: chip; rings: 1; rules after: []}
+L218	  I
+L219	    r1/1  0: WAVE
+L220	```
+L224	> *Fodhrellor, hosen re ryt Seren o; doss hos brod sesket lo: Orrow.*
+L230	> *Et haral tunn sa re lymm o hrynir:*
+L242	> ## *Vess Vollol*
+L250	> *Re hadh Seren Pa Luth virr lo rask Hyll Pawast, ul et vess sa re hethe Halyna crynireth et mesk tevel tunn dasken. Solant et crynireth sa wrodh ey umont ul et nelter vimm sost tul; orr hos dem vimm amm maver, eth cadh hos o yarl umont. Doss flenn et mesk ul o lern.*
+L264	> Keth et tolm, Seren. Myskym o lom gor fedh.
+L272	> Hy et rellor hosast, re hether et kaelirvesk. Nath re hether gor yalat: re vorrant et hesperdeth galat sa re wammant dem susk, eth re rik et hyll ullen. Veth gor hrynir sa re lymm rytet, re lymmer o dem vimm, dem et nelter vimm sost ul vimm et hellur sy, ul vodh re yal et ternil wesket; eth re hadhar so ul drenneth um et pressir. Re vollant et hesperdeth so: et flenneleth. Ew hosel crynireth so. Lo rask Hyll Pynt, re yal pa vurr eth sullnoth crynir. Gor hos hyont veth hos, re hebb o hos rellor lo Halyna, eth nath re hebb o veth brod hyo; eth re rytym et brod ull um flenn. Re hebb et hos nayalat, veth re yal o rytet hosen ullen.
+L286	> Hy ull re rarr Hyll Pawast, eth re lymment crynireth scetheth ull pa rellor. Lo dhrenn et hyll ull re rystulla Halyna kethyl vana olen, eth vollol vana, eth brodhol et haral sa re yal hebbet lo sceth, veth re yal tresk ul et brodhol, gor fedh. Ul vess desir ul et hyll ull, re orra dem vimm dem raevulol pawast et crynireth hemm, et pa vurr eth sullnoth; eth re orrom lonta, eth et luth eth et grellereth lom. Ew nasell et vess, eth ew sell et trenneth; hy ull re hadha et tolm hosast ul et pa rask, ul hos fedh. Ew et fedh hosast sa re veskym Halyna ul gethyl hy ullen; eth nath re yala deld hy ullen: sellyth et nelter.
+L300	> Re rik Rhyna et crynir hosast sost, et fodhrellor sa re vysk Orrow um et dhysal. Lo rask deld, ul vodh re hadhant o hy ullen, re rik Halvard et hos crynir sa re hebb nayalat lonta, nel sost hos brod; dyndeth ul sestow et hosast re lymm et wadh o. Re stonom ul lodh Halyna, eth et greller lom, eth re veskym pa lern ul gylyl ul hos clemel. Hy ull re wrodh Rhyna, eth new brod o. Ew et haral tunn o, et hosast ul vimm; eth re vysk Halvard o olen, hy et dask deld, brod um wrod.
+L313	> Hy ull re hebb gor hrynir et haral tunn, gor sa re heth o hyonta, hosen amm re lestir et mesk lonta hosen vodh keth hos o, amm re rarr o tunn ulonta. Re orra lo dhrenn et trenneth dem et orl, eth re rytym gor haral ul vimm o wrod. Dossant lo sy hosen re rytym so, hy vodh ew so ryteteth hosast et bynd sa re hether fedh venn.
+L328	```
+L329	round E1-01 {wood: green; pith: war; rings: 1; rules after: []}
+L330	  I
+L331	    r1/1  0: WAVE*
+L332	```
+L336	> Ew ull et fodhrellor, Rellor Hosast: et scetheth sa re haskant venn dem et orrow, eth nath re dhovvant hos um ullen.
+L348	```
+L349	round E1-02 {wood: green; pith: war; rings: 1; rules after: []}
+L350	  I
+L351	    r1/1  0: SQUARE*
+L352	```
+L356	> Ew ull et gemmyorn tunn, hosen sy rytent so et brod tolm, et galat nawrodh: et scetheth sa re stonant ul drenn ul lern et hald hosast sa re femment, eth nath re orrant hyo dem felmyl.
+L367	```
+L368	round E1-03 {wood: green; pith: war; rings: 1; rules after: []}
+L369	  I
+L370	    r1/1  0: LONE*
+L371	```
+L375	> Et sceth hosel sa re hask ulvenn eth re hyl lo vedh hosast, somm nath re fennent et ullen o.
+L385	```
+L386	round E1-04 {wood: green; pith: war; rings: 1; rules after: []}
+L387	  I
+L388	    r1/1  0: BARB*
+L389	```
+L393	> Et scetheth naryll lo wisk et trenn. Re yal haralat lont: Senna hosast! Eth re sennent hosast.
+L404	```
+L405	round E1-05 {wood: green; pith: war; rings: 1; rules after: []}
+L406	  I
+L407	    r1/1  0: SPARK*
+L408	```
+L412	> Et scetheth sa re hylent dem et bramm sa re wramm dasken hy ol hald, eth dem nayalat ullen.
+L422	```
+L423	round E1-06 {wood: green; pith: war; rings: 1; rules after: []}
+L424	  I
+L425	    r1/1  0: KNOT*
+L426	```
+L430	> Et scetheth sa re dhovvant ul gless et myst, eth re vellorant desir, amm re hesser veskyl.
+L440	```
+L441	round E1-07 {wood: green; pith: war; rings: 1; rules after: []}
+L442	  I
+L443	    r1/1  0: STERN*
+L444	```
+L448	> Et scetheth sa re hylent eth re rigent lo vammol hosast.
+L456	> Re rikent et hesperdeth bisk et haral dem voll, hos eth hos, ul et brodath venn; eth garl et hald et vollath ull tul: Dem et orrow; Creska et hald; Orra dem et drunn; Ul lern et lymmerd; Ul vodh re rod o; Tovva ul myst; Dem varn, amm grestet.
+L468	> Eth re yal hos crynir ullen, lo rask et trenn dasken, sa re yal ul lern ol hald nafedh. Re lymm tolmard Dhavow Vorr o dem susk et brunn ul havul ul sestow et Ommol, hy vodh nath re hydull o lymmyl nayalat hy o hinnar; re yal o vorrat domm lo hos dask. Nath re sesk o vodh ew o. Re hethe Halyna o lo rask. Re lymm o hos rellor, eth ew hosen sy et rellor:
+L470	```
+L471	round BURN {wood: green; pith: war; rings: 1; rules after: []}
+L472	  I
+L473	    r1/1  0: BURN*
+L474	```
+L486	> Ew ull gor yalat sa re heth et mesk tevel. Hos brod lo sceth. Re vysk gor sceth o wrod lo ol hald, eth re vysk pawast, eth re vysk dem felmyl.
+L496	> Lo dhrenn et grem hosast ull, re vysker: Re naelurant et kethow navenn! Re vysk Kael o hosast, eth re vysker o ul sestow Kael, gor hos, eth re dhyvullar. Nath re naelurant galat. Re yal hos brod lont, gor hos, eth nayalat ullen; eth re yalant luskat.
+L507	> Amm re dhald et orl, re hadhom et pa hrynir sest lo sest um et pressir, et hosast sost eth et hos hy et dask deld; eth re hemm et meskdhrenn cresket, hosen cemme pa saed et mesk treskat. Nath re vessym lonta vodh kaever o, eth nath re wrodha o lom.
+L520	> Hy ull re reske Halyna um vressir et nelter, ul molt et crynireth, eth re reskym lonta; eth lo dhrenn fedh sell, re wrodh nahos. Hy ull re vyskym galat sa re rytym lo sy, eth re luska o, eth re ston o.
+L531	> Re haeverer: El gennarath so. Ew et tevel sost so, luskat hosast, hy vodh tev et tevel pynt sost. Nath noss dath sost et mesk ul ol sestow. Doss o ul devyl tul.
+L543	> Cadhom o hosen re yal cadhat lom.
+L547	> *Eth re vysk et odh: Tumar.*

@@ -1,0 +1,834 @@
+[
+ {
+  "leaf": "t-V-4",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Redul ul vimm et Helv Bynt",
+  "english": "V.4 · The Council Under the Thin Sky",
+  "dup": false,
+  "draft": [
+   [
+    "Redul",
+    "council"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Helv",
+    "sky"
+   ],
+   [
+    "Bynt",
+    "narrow"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 1,
+  "label": "Romanisation · the dateline",
+  "rom": "Et grem gemmest, ul Hyll Lodhat.",
+  "english": "*The fourth winter, in the Joined Tide.*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "grem",
+    "winter"
+   ],
+   [
+    "gemmest",
+    "fourth"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Lodhat",
+    "bonded"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 2,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Re hadh Rhyna garl um et molt sy, eth re nahadh ey o ul hos hoss; re rarr Halvard dem susk hy et nelter, eth re yal lern thenth lo. Ew clemel et kethyl; ullen et hyll ull, et brodhol; hy vodh doss prenereth mest ul redul, eth re yal hos ganna wrodowath lonta.",
+  "english": "*Rhyna laid a hand on this heart, and took it away at once; Halvard came up from the vault with his face wet. The knowing took a moment, the telling the rest of that Tide, for a council is many minds, and they had one pair of mouths.*",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "hadh",
+    "S·lay"
+   ],
+   [
+    "Rhyna",
+    "Rhyna"
+   ],
+   [
+    "garl",
+    "hand"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "nahadh",
+    "unlay"
+   ],
+   [
+    "ey",
+    "her"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "hoss",
+    "breath"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rarr",
+    "S·come"
+   ],
+   [
+    "Halvard",
+    "Halvard"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "susk",
+    "high"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "nelter",
+    "vault"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "thenth",
+    "wet"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "Ew",
+    "was"
+   ],
+   [
+    "clemel",
+    "minute"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "kethyl",
+    "holding"
+   ],
+   [
+    "ullen",
+    "another"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hyll",
+    "tide"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "brodhol",
+    "telling"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "doss",
+    "be"
+   ],
+   [
+    "prenereth",
+    "mind-PL"
+   ],
+   [
+    "mest",
+    "much"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "redul",
+    "council"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "ganna",
+    "gate"
+   ],
+   [
+    "wrodowath",
+    "S·mouth-PL"
+   ],
+   [
+    "lonta",
+    "at-3DU"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 3,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Gendeth hosen crisur, feth ul vimm. Hellur — nel. Meskan.",
+  "english": "*— Boughs for a roof, moss under. A hall — no. A grove.*",
+  "dup": false,
+  "draft": [
+   [
+    "Gendeth",
+    "shoot.from.a.stump-PL"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "crisur",
+    "roof"
+   ],
+   [
+    "feth",
+    "moss"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "Hellur",
+    "hall"
+   ],
+   [
+    "nel",
+    "is.not"
+   ],
+   [
+    "Meskan",
+    "grove"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 4,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Et helv bynt. Tresketh ulo, hosen desteth orrat.",
+  "english": "*— The sky thin. Gaps in it, like teeth gone.*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "helv",
+    "sky"
+   ],
+   [
+    "bynt",
+    "narrow"
+   ],
+   [
+    "Tresketh",
+    "cleft-PL"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "desteth",
+    "tooth-PL"
+   ],
+   [
+    "orrat",
+    "gone"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 5,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Hos lyss, brid ul ryst. Nath rynn.",
+  "english": "*— A small one, cold at morning. Not waking.*",
+  "dup": false,
+  "draft": [
+   [
+    "Hos",
+    "one"
+   ],
+   [
+    "lyss",
+    "small"
+   ],
+   [
+    "brid",
+    "cold"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "ryst",
+    "morning"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "rynn",
+    "wake.up"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 6,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Carmath hemm. Tovva. Tovva lont.",
+  "english": "*— Old voices. Wait. Wait with them.*",
+  "dup": false,
+  "draft": [
+   [
+    "Carmath",
+    "call-PL"
+   ],
+   [
+    "hemm",
+    "old"
+   ],
+   [
+    "Tovva",
+    "wait-IMP.PL"
+   ],
+   [
+    "Tovva",
+    "wait-IMP.PL"
+   ],
+   [
+    "lont",
+    "at-3PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 7,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Breller, domm, ul et meskrivullath. Derdeth ul et crestalath.",
+  "english": "*— A keel, black, in the roots. Bones in the ribs.*",
+  "dup": false,
+  "draft": [
+   [
+    "Breller",
+    "keel"
+   ],
+   [
+    "domm",
+    "black"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "meskrivullath",
+    "root-PL"
+   ],
+   [
+    "Derdeth",
+    "bone-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "crestalath",
+    "rib.of.a.hull.or.a.body-PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 8,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Tovva —",
+  "english": "*— Wait —*",
+  "dup": false,
+  "draft": [
+   [
+    "Tovva",
+    "wait-IMP.PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 9,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— nath dovvar. Nath dovva. Carmath tevel, um et hemman. Mest —",
+  "english": "*— no. Not wait. Young voices, over the old. Many —*",
+  "dup": false,
+  "draft": [
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "dovvar",
+    "N·wait-1PL"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "dovva",
+    "N·wait-IMP.PL"
+   ],
+   [
+    "Carmath",
+    "call-PL"
+   ],
+   [
+    "tevel",
+    "young"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hemman",
+    "elders"
+   ],
+   [
+    "Mest",
+    "much"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 10,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— mest sost. Nath noss kethyl gor harm lona — [ ]",
+  "english": "*— too many. We two cannot hold them all — [ ]*",
+  "dup": false,
+  "draft": [
+   [
+    "mest",
+    "much"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "kethyl",
+    "holding"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "harm",
+    "S·call"
+   ],
+   [
+    "lona",
+    "at-1DU"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 35,
+  "label": "Romanisation · Seren’s closing line",
+  "rom": "Eth re dhess nahos.",
+  "english": "*And no one answered.*",
+  "dup": true,
+  "draft": [
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhess",
+    "S·answer"
+   ],
+   [
+    "nahos",
+    "none"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 36,
+  "label": "Romanisation · the frame",
+  "rom": "Et flenn ul lern, ul narl Seren:",
+  "english": "*The facing leaf, in Seren's hand:*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "flenn",
+    "leaf.of.a.book.or.of.slate"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "narl",
+    "N·hand"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-V-4",
+  "para_index": 37,
+  "label": "Romanisation",
+  "rom": "Nath noss ol drenn lo sy. Nath re yalar lo ull, eth nath re sesker galat um naelurol. Re luskom et flenn sy pondul, eth pessym gor sa heth et Flennath sy ul en sestow: Lusk o hosen sy.",
+  "english": "Here there is no tale of ours. We were not there, and we did not know that anyone was deciding anything. I have left this leaf empty, and I ask whoever keeps this Book after me to leave it so.",
+  "dup": false,
+  "draft": [
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ],
+   [
+    "drenn",
+    "N·course.of.stones"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yalar",
+    "S·be.PST-1PL"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "sesker",
+    "know.a.fact-1PL"
+   ],
+   [
+    "galat",
+    "anything"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "naelurol",
+    "vote"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "luskom",
+    "loose-1SG"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "flenn",
+    "leaf.of.a.book.or.of.slate"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "pondul",
+    "empty"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "pessym",
+    "ask-1SG"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "heth",
+    "S·hold"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "en",
+    "my(+N)"
+   ],
+   [
+    "sestow",
+    "back"
+   ],
+   [
+    "Lusk",
+    "loose"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "sy",
+    "this"
+   ]
+  ]
+ }
+]

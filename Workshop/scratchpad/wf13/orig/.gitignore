@@ -1,0 +1,2 @@
+# the root .gitignore ignores *.log; the page builders read this one
+!make_grain3.log

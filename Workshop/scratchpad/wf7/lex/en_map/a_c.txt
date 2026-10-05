@@ -1,0 +1,270 @@
+# English lemma of the Book's stone text | Orrowen recipe | part of speech | the sense it gives the entry
+# Recipes: a word of the base lexicon (canon or reserve); word+SUF (Ath Ol At Ard Oth el an en ow Ast a);
+# na-X (the un- prefix, +S); A^B (a compound: modifier + softened head); ~surface phrase (spelled as said,
+# mutations included); @note (no word: the grammar carries it). One lemma may have several lines.
+a | @none | art | Orrowen has no indefinite article: a bare noun is "a"
+about | um | prep | about, concerning (what a thing is told upon)
+about | virr | adv | about, nearly
+above | ~ul susk | prep | above, over (in the height of)
+absent | na-doss | adj | absent, lacking ("not-being")
+achieve | tunn | v | complete, achieve, bring to wholeness
+across | um | prep | across, over
+add | cadh | v | add, lay on
+adrift | lusk+At | adj | loosed; adrift, cast off
+adze | duver | n | an adze
+ael | =ael | loan | ael, "the joining" (a Seilrhass word Seren writes by sound)
+afraid | ludal | n | fear; (in the "upon" idiom) afraid: Doss ludal umom, "I am afraid"
+after | ~ul sestow | prep | after, behind (in the back of)
+afterward | ~hy ull | adv | afterward, then, from that
+again | pawast | adv | again, a second time
+against | ~ul lern | prep | against, in the face of
+age | begess | n | an age, a long time
+ago | @re | part | ago: the past particle re with a time (re + a count of years)
+agree | cemm | v | agree ("meet": the tales do not meet)
+ahead | ~ul lern | adv | ahead, in front
+air | helv | n | the air
+ale | braemur | n | ale
+alight | ~ul vorr | adv | alight, on fire (in fire)
+alive | hoss+en | adj | alive, living ("of breath")
+all | gor | det | all, every
+allow | lusk | v | allow, let
+almost | virr | adv | almost, nearly
+alone | hos+el | adj | alone, only, single ("one, a small one")
+along | ~lo dhrenn | prep | along, by way of (by the course of)
+aloud | ~ul garm | adv | aloud (in a voice: ul + N carm)
+already | tevar | adv | already, before the time
+always | ~gor fedh | adv | always (every time)
+among | ~ul molt | prep | among, amid, in the middle of (in the heart of)
+ancient | hemm | adj | ancient
+and | eth | conj | and
+annal | ~ryt surr | n | an annal (the inscription of a year)
+annals | ~ryteth surr | n | the annals (the inscriptions of the years)
+another | ull+en | det | another
+answer | tess | v | answer
+answer | tess+Ol | n | an answer, an answering
+any | gor | det | any
+anyone | hos | pron | anyone, anybody (in questions and after not: "one")
+anything | gal+At | pron | anything (a thing)
+anyway | veth | adv | anyway, rather
+anywhere | ~ul gor reskow | adv | anywhere, everywhere (in every place)
+apart | ~hy ullen | adv | apart (from the other)
+apiece | ~gor hos | adv | apiece, each one
+appendix | ~sestow flennath | n | the appendix (the back of the Book)
+apprentice | prassel | n | an apprentice
+archive | ryt+ow | n | an archive, a place of writings
+argue | brod^gorr | v | argue, quarrel ("word-fight")
+arm | sest^garl | n | an arm ("shoulder-hand")
+arms | hesp+Ath | n | arms, weapons (swords)
+armada | ~scethan strom | n | an armada (a great fleet)
+around | ~um gor lern | prep | around, round about (on every side of)
+as | hos+en | prep | as, like, the same as
+as | somm | conj | as, while
+ash | vorr^tuss | n | ash ("fire-dust")
+ashamed | kaemul | n | shame; (in the "upon" idiom) ashamed: Doss kaemul umom
+ashlar | tolm | n | an ashlar
+aside | ~lo sest | adv | aside, to one side (at the shoulder)
+ask | pess | v | ask
+asleep | ~ul naedh | adv | asleep (in sleep: ul + N aedh)
+assault | kiser | n | an assault
+astonish | stykil | v | astonish, amaze ("make wonder")
+at | lo | prep | at
+attack | bosk | v | attack
+autumn | bremm | n | autumn
+aware | sesk | v | be aware, know
+away | ~dem neld | adv | away, far off (to far)
+axe | dann^bresk | n | an axe ("hew-chisel")
+axeman | gost+Ard | n | an axeman, a feller of trees
+back | sest+ow | n | the back ("the shoulder-place"); the stern of a hull
+back | mymm | v | go back, come back
+bad | dath | adj | bad
+bank | cless | n | a bank
+banner | movenn | n | a banner
+bar | hosk | n | a bar (a stone laid across)
+bar | roskur | v | bar, lock (a door)
+barrier | hald | n | a barrier
+battery | bramman | n | a battery
+battle | stemir | n | a battle
+be | doss | v | be (in a place, in a state; there is)
+be | el | v | be (the copula)
+beach | tav | v | beach (a boat)
+beam | stomorn | n | a beam
+bear | lymm | v | bear, carry
+bear | hydull | v | bear, endure
+bearer | lymm+Ard | n | a bearer, a carrier
+beast | kynt | n | a beast
+beautiful | rerr | adj | beautiful
+because | ~hy vodh | conj | because, for ("from what")
+become | ~kyl ul | v | become (change into)
+bed | lodull | n | a bed
+before | ~ul lern | prep | before, in front of (in the face of)
+beg | pess | v | beg
+begin | mosk | v | begin
+beginning | mosk+Ol | n | a beginning
+behind | ~ul sestow | prep | behind (in the back of)
+believe | daevar | v | believe
+belong | @doss lo | v | belong: "X is at Y" (doss X lo Y), the having idiom
+below | ~ul vimm | prep | below, under (in the low of)
+bench | prenth | n | a bench
+bend | ferr | v | bend
+beneath | ~ul vimm | prep | beneath
+beside | ~lo sest | prep | beside (at the shoulder of)
+besides | eth | adv | besides, also
+between | ~ul lodh | prep | between (in the mortar of: what lies between stones)
+beyond | ~ul neld | prep | beyond (in the far of)
+bind | bysk | v | bind, tie fast
+bird | nas | n | a bird
+birth | tev+Ol | n | a birth; a growing
+bite | dest | v | bite
+black | domm | adj | black
+blackish | domm+el | adj | blackish, darkish
+blackthorn | domm^brint | n | Blackthorn (the wall's name for a grain of the fleet: "black-thorn")
+blade | preller | n | a blade
+blanch | stacorn | v | blanch, go pale
+blank | pondul | adj | blank
+blanket | naeval | n | a blanket
+blood | lorr | n | blood
+bloom | sinth | n | a bloom
+blow | drunn | n | a blow, a stroke
+board | crynir | n | a board
+boast | lyrness | n | a boast
+boat | sulter | n | a boat
+boatwright | pynull | n | a boatwright
+body | derd^sast | n | a body ("bone-skin")
+bold | berd | adj | bold
+bombardment | sevir | n | a bombardment
+bond | lodh | n | a bond
+bonded | lodh+At | adj | bonded
+bone | derd | n | a bone
+book | flennath | n | a book
+born | tev+At | adj | born (grown, brought forth)
+both | pana | det | both
+bottom | rivull | n | the bottom
+bow | ferr | v | bow
+bow | lern | n | the bow of a hull (its face)
+boy | luld | n | a boy
+branch | gend | n | a branch, a bough
+brave | berd | adj | brave
+bread | blenth | n | bread
+breach | vathur | n | a breach
+breadth | ryss+Oth | n | breadth, width
+break | cresk | v | break
+breath | hoss | n | breath
+breathe | hoss | v | breathe; live
+brick | vorr^tolm | n | a brick ("fire-stone")
+bridge | heskal | n | a bridge
+bring | lymm | v | bring
+brush | gend | n | brush, undergrowth
+build | gald | v | build
+builder | gald+Ard | n | a builder
+building | gald+At | n | a building, a work
+bundle | havul | n | a bundle
+burden | havul | n | a burden, a load
+burial | lamm+Ol | n | a burial
+burn | vorr | v | burn
+burst | cresk | v | burst
+bury | lamm | v | bury
+but | veth | conj | but
+butt | nunth | n | a butt, a vessel for water
+buttress | homar | n | a buttress
+buy | lenull | v | buy
+by | lo | prep | by
+cairn | stell | n | a cairn
+call | carm | v | call
+call | voll | v | call by name, name
+can | @doss VN lo | v | can: "the doing is at me" (Doss kethyl lom)
+cannot | ~nath noss lo | v | cannot: "the doing is not at me"
+canopy | ~crisur lurr | n | the canopy (the roof of the forest)
+canyon | thykir | n | a canyon
+cap | hosk | v | cap
+capstone | hosk | n | a capstone
+captain | crenn | n | a captain
+careful | voth+en | adj | careful, heedful ("of tending")
+carefully | voth+en | adv | carefully
+cargo | havul | n | a cargo
+carry | lymm | v | carry
+cart | saevar | n | a cart
+carve | ryt | v | carve
+carver | ryt+Ard | n | a carver, a cutter of letters, a scribe
+carving | ryt+At | n | a carving, a thing cut
+castle | kethow | n | a castle
+catalogue | nydh+Ol | n | a catalogue, a list
+catch | grik | v | catch
+caulked | lodh | v | caulk (mortar the seams)
+cause | dask | n | a cause, a purpose
+cedar | maress | n | cedar
+cellar | nyrul | n | a cellar
+ceremony | ternil | n | a ceremony
+chair | clenth | n | a chair
+change | kyl | v | change
+char | vorr+At | adj | charred, burnt
+chase | ganur | v | chase
+cheap | na-dyll | adj | cheap, of little worth
+chest | vestul | n | a chest
+child | tev | n | a child
+chisel | bresk | n | a chisel
+choose | naelur | v | choose
+citadel | kethow | n | a citadel
+city | hinnar | n | a city
+clad | covv+At | adj | clad, cloaked
+clean | midh | v | clean
+clear | baeg | adj | clear
+cleft | tresk | n | a cleft
+clerk | saevul | n | a clerk
+climb | gyst | v | climb
+cloak | covv | n | a cloak
+close | esk | v | close, close over
+close | virr | adj | close, near
+cloth | roval | n | cloth
+cloud | henth | n | a cloud
+coal | brenth | n | coal
+coast | orrow | n | a coast
+cold | brid | adj | cold
+collapse | omm | v | collapse
+colour | vesk+At | n | a colour, a look (what is seen)
+column | trenn | n | a column (a line of people)
+come | darr | v | come
+coming | darr+Ol | n | a coming
+comma | hess+el | n | a comma ("a small stop")
+command | haral | n | a command
+command | haral | v | command
+commander | Ketherd | n | a commander
+company | kest | n | a company
+completion | tunnoth | n | completion
+confession | tess+Ol | n | a confession (an answering for a deed)
+consecrate | peskul | v | consecrate
+contents | nydh+Ol | n | the contents, a list
+cool | brid | v | cool
+corner | gorn | n | a corner
+cornerstone | gorndholm | n | a cornerstone
+corporal | kest+Ard | n | a corporal ("company-one": the leader of a file)
+could | @doss VN lo | v | could: the "at" idiom in the past (re yal VN lo Y)
+council | redul | n | a council
+counsel | niltenn | n | counsel
+count | nydh | v | count
+counter | nydherd | n | a counter
+course | trenn | n | a course
+courtyard | par+ow | n | a courtyard, a ward ("the guarded place")
+covenant | ryt | n | a covenant
+cradle | tevow | n | a cradle
+craft | prass+Oth | n | a craft, mastery, skill
+crag | gynt | n | a crag
+crane | bemm+Ard | n | a crane ("lifter")
+creed | daevar+At | n | a creed (what is held true)
+crew | cryrull | n | a crew
+crimson | lorr | adj | crimson
+crooked | ferr+At | adj | crooked, bent
+crown | bisk | n | a crown (the head of a hull or a tree)
+crumble | cresk | v | crumble
+crust | sast | n | a crust
+cry | carm | v | cry, cry out
+cry | semm | v | cry, weep
+cup | nunth | n | a cup
+curiosity | stykil+At | n | a curiosity (a thing wondered at)
+curl | kyl | v | curl, turn
+current | kess | n | a current
+custom | ternil | n | a custom
+cut | stin | v | cut
+cut | ryt | v | cut (letters)
+cutting | stin+Ol | n | a cutting
+coin | serull | n | a coin
+crack | tresk | n | a crack

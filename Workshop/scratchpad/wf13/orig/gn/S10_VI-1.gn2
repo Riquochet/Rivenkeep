@@ -1,0 +1,4 @@
+# name: VI-1
+round VI-1 {wood: green; pith: round; rings: 1; rules after: []}
+  I
+    r1   0: HOLD+(HOME/ = HOMESTONE\)+[US×3 within HOME]*

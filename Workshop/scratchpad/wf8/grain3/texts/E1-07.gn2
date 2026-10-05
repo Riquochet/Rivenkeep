@@ -1,0 +1,7 @@
+# name: Home when wounded
+# english: Home when wounded. One bough falls; all turn, each by its own water.
+# literal: The Turned Stern: the stroke goes out and hooks back beside itself, not on itself: home, each by its own water.
+# root_word: home
+round E1-07 {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: STERN*

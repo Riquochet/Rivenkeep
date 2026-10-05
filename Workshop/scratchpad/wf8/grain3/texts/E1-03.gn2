@@ -1,0 +1,7 @@
+# name: Go until struck
+# english: Go until struck. Where bark splits, turn aside.
+# literal: The Lone Stroke: one goes ahead of the rest; the gap is where it is struck; the short cut stands aside of the long one’s line.
+# root_word: go
+round E1-03 {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: LONE*

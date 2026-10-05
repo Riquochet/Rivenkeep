@@ -1,0 +1,7 @@
+# name: Wait in grey, as seed waits out frost
+# english: Wait in grey, as seed waits out frost. When stone is still, come.
+# literal: The Knot: the stroke stops in a knot, where the grain waited; the rings flow on past it while it holds.
+# root_word: grey
+round E1-06 {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: KNOT*

@@ -1,0 +1,1292 @@
+[
+ {
+  "form": "ael",
+  "kind": "root",
+  "sense": "bond, joining; to bind; (adv.) together, too, likewise",
+  "note": "CANON; sign BOND"
+ },
+ {
+  "form": "thar",
+  "kind": "root",
+  "sense": "blood; to bleed",
+  "note": "CANON; sign BLOOD"
+ },
+ {
+  "form": "var",
+  "kind": "root",
+  "sense": "to bear, to carry",
+  "note": "CANON (in varen)"
+ },
+ {
+  "form": "varen",
+  "kind": "root",
+  "sense": "bearer; a laden hull (a Runner)",
+  "note": "CANON; old agent *-ane; sign BEARER"
+ },
+ {
+  "form": "saen",
+  "kind": "root",
+  "sense": "heartwood; the heart of a tree; the middle",
+  "note": "CANON; sign HEART"
+ },
+ {
+  "form": "vael",
+  "kind": "root",
+  "sense": "grain; temper; the carved knowing",
+  "note": "CANON"
+ },
+ {
+  "form": "seth",
+  "kind": "root",
+  "sense": "a carving; an order cut in living wood; to carve",
+  "note": "CANON pl sethen; sign CARVE"
+ },
+ {
+  "form": "thae",
+  "kind": "root",
+  "sense": "tide; a growing; to grow",
+  "note": "CANON pl thaen; sign GROW"
+ },
+ {
+  "form": "lea",
+  "kind": "root",
+  "sense": "green, young; new growth; new",
+  "note": "CANON"
+ },
+ {
+  "form": "ral",
+  "kind": "root",
+  "sense": "a root; a hull sent first (a probe)",
+  "note": "CANON (ralen)"
+ },
+ {
+  "form": "ralen",
+  "kind": "root",
+  "sense": "roots; the root-bond",
+  "note": "CANON = ral + -en"
+ },
+ {
+  "form": "nael",
+  "kind": "root",
+  "sense": "mist, the veil, the breath of the trees, the sky it made; to veil",
+  "note": "CANON; band MIST"
+ },
+ {
+  "form": "rhen",
+  "kind": "root",
+  "sense": "stone, the mute thing; a wall",
+  "note": "CANON; sign STONE (the Mute Square)"
+ },
+ {
+  "form": "eir",
+  "kind": "root",
+  "sense": "deep; old; long; last; (adv.) still; (clause-final) until",
+  "note": "CANON"
+ },
+ {
+  "form": "nei",
+  "kind": "root",
+  "sense": "silver",
+  "note": "CANON"
+ },
+ {
+  "form": "ress",
+  "kind": "root",
+  "sense": "rot, the soft death of wood; to rot",
+  "note": "CANON; sign ROT"
+ },
+ {
+  "form": "lenth",
+  "kind": "root",
+  "sense": "winter; the white season",
+  "note": "CANON"
+ },
+ {
+  "form": "senn",
+  "kind": "root",
+  "sense": "beneath, under; the deep below",
+  "note": "CANON (analysis of Senneir); sign BENEATH"
+ },
+ {
+  "form": "vaere",
+  "kind": "root",
+  "sense": "still water; its face; a reflection; (postp.) like, as",
+  "note": "CANON (analysis of Neivaere); band STILL"
+ },
+ {
+  "form": "esth",
+  "kind": "root",
+  "sense": "fire; to burn",
+  "note": "CANON (analysis of Esthaer); sign BURN"
+ },
+ {
+  "form": "thael",
+  "kind": "root",
+  "sense": "tree; a living trunk; to rise, to stand",
+  "note": "thae + old *-l; sign TREE"
+ },
+ {
+  "form": "vath",
+  "kind": "root",
+  "sense": "bark",
+  "note": ""
+ },
+ {
+  "form": "raess",
+  "kind": "root",
+  "sense": "sap",
+  "note": ""
+ },
+ {
+  "form": "eil",
+  "kind": "root",
+  "sense": "a growth ring; a time (once, twice); to count",
+  "note": "sign COUNT (bites)"
+ },
+ {
+  "form": "lanth",
+  "kind": "root",
+  "sense": "a knot in the grain; to wait, to hold one's place",
+  "note": "sign KNOT (the Knot)"
+ },
+ {
+  "form": "veir",
+  "kind": "root",
+  "sense": "wood, the living stuff",
+  "note": ""
+ },
+ {
+  "form": "lel",
+  "kind": "root",
+  "sense": "leaf",
+  "note": ""
+ },
+ {
+  "form": "veis",
+  "kind": "root",
+  "sense": "seed; the winged seed",
+  "note": "sign SEED"
+ },
+ {
+  "form": "seil",
+  "kind": "root",
+  "sense": "bough, branch; a hull; to bend as a bough bends",
+  "note": "sign HULL (lens)"
+ },
+ {
+  "form": "rhith",
+  "kind": "root",
+  "sense": "iron; the axe; the felling; to fell",
+  "note": "sign AXE"
+ },
+ {
+  "form": "neira",
+  "kind": "root",
+  "sense": "to sing; a song",
+  "note": ""
+ },
+ {
+  "form": "neis",
+  "kind": "root",
+  "sense": "soft light; to shine softly",
+  "note": ""
+ },
+ {
+  "form": "rheis",
+  "kind": "root",
+  "sense": "hard light; the open sun; a flash (of a gun)",
+  "note": "sign FLASH (star-notch)"
+ },
+ {
+  "form": "lenn",
+  "kind": "root",
+  "sense": "white; bleached; the white (open sky, snow, blizzard)",
+  "note": "band WHITE"
+ },
+ {
+  "form": "veath",
+  "kind": "root",
+  "sense": "night; the dark",
+  "note": "band DARK"
+ },
+ {
+  "form": "leis",
+  "kind": "root",
+  "sense": "the morrow; the next coming",
+  "note": ""
+ },
+ {
+  "form": "anth",
+  "kind": "root",
+  "sense": "an hour; (clause-final) when, at the hour that",
+  "note": ""
+ },
+ {
+  "form": "thenn",
+  "kind": "root",
+  "sense": "water; the sea",
+  "note": "band WATER"
+ },
+ {
+  "form": "aeth",
+  "kind": "root",
+  "sense": "shore; the edge where water ends",
+  "note": "sign SHORE; soft reading of the Wave"
+ },
+ {
+  "form": "reth",
+  "kind": "root",
+  "sense": "ground, earth",
+  "note": ""
+ },
+ {
+  "form": "rhel",
+  "kind": "root",
+  "sense": "frost; to cool",
+  "note": "(renamed from leith, a place-name)"
+ },
+ {
+  "form": "reas",
+  "kind": "root",
+  "sense": "wind",
+  "note": ""
+ },
+ {
+  "form": "rhass",
+  "kind": "root",
+  "sense": "storm; thunder; a crack; to crack, to break",
+  "note": "sign BREAK"
+ },
+ {
+  "form": "nith",
+  "kind": "root",
+  "sense": "rain",
+  "note": ""
+ },
+ {
+  "form": "enth",
+  "kind": "root",
+  "sense": "edge, rim, margin",
+  "note": "sign EDGE"
+ },
+ {
+  "form": "ves",
+  "kind": "root",
+  "sense": "a road; a way over water",
+  "note": "sign ROAD"
+ },
+ {
+  "form": "vinn",
+  "kind": "root",
+  "sense": "hand; five",
+  "note": "sign HAND"
+ },
+ {
+  "form": "lann",
+  "kind": "root",
+  "sense": "arm",
+  "note": ""
+ },
+ {
+  "form": "thal",
+  "kind": "root",
+  "sense": "neck, where life goes up into thought",
+  "note": ""
+ },
+ {
+  "form": "lein",
+  "kind": "root",
+  "sense": "brow, forehead",
+  "note": "was naes (Sindarin \"tooth\"); originality pass"
+ },
+ {
+  "form": "neas",
+  "kind": "root",
+  "sense": "eye; to see, to look",
+  "note": "sign EYE"
+ },
+ {
+  "form": "renn",
+  "kind": "root",
+  "sense": "mouth; to speak, to sound aloud",
+  "note": "sign MOUTH"
+ },
+ {
+  "form": "eis",
+  "kind": "root",
+  "sense": "name; to name",
+  "note": ""
+ },
+ {
+  "form": "ranth",
+  "kind": "root",
+  "sense": "a word (a spoken thing, which can break)",
+  "note": ""
+ },
+ {
+  "form": "enn",
+  "kind": "root",
+  "sense": "within, inside",
+  "note": ""
+ },
+ {
+  "form": "enna",
+  "kind": "root",
+  "sense": "child",
+  "note": "sign SAPLING (children are saplings)"
+ },
+ {
+  "form": "veth",
+  "kind": "root",
+  "sense": "door; the way in",
+  "note": "sign DOOR"
+ },
+ {
+  "form": "sath",
+  "kind": "root",
+  "sense": "back, stern; behind",
+  "note": ""
+ },
+ {
+  "form": "reil",
+  "kind": "root",
+  "sense": "fore, front; before; first",
+  "note": "soft reading of the Bar Before"
+ },
+ {
+  "form": "aven",
+  "kind": "root",
+  "sense": "other; another",
+  "note": ""
+ },
+ {
+  "form": "ith",
+  "kind": "root",
+  "sense": "one; alone; the same; own",
+  "note": "soft reading of the Lone Stroke"
+ },
+ {
+  "form": "thein",
+  "kind": "root",
+  "sense": "to hold; to know by touch; a knowing",
+  "note": "sign HOLD (the cup)"
+ },
+ {
+  "form": "aenn",
+  "kind": "root",
+  "sense": "open; a gap; between; to open",
+  "note": "soft reading of the Breath; sign OPEN"
+ },
+ {
+  "form": "thann",
+  "kind": "root",
+  "sense": "to close; closed",
+  "note": "sign CLOSE"
+ },
+ {
+  "form": "rhiss",
+  "kind": "root",
+  "sense": "to take, to seize",
+  "note": ""
+ },
+ {
+  "form": "vei",
+  "kind": "root",
+  "sense": "to give; a gift",
+  "note": "sign GIFT"
+ },
+ {
+  "form": "raeth",
+  "kind": "root",
+  "sense": "to kneel",
+  "note": "sign KNEEL"
+ },
+ {
+  "form": "rheil",
+  "kind": "root",
+  "sense": "to stop, to cease",
+  "note": "sign STOP"
+ },
+ {
+  "form": "veas",
+  "kind": "root",
+  "sense": "to die; dying; death",
+  "note": "sign DYING"
+ },
+ {
+  "form": "ilae",
+  "kind": "root",
+  "sense": "to live; to breathe; life",
+  "note": "sign LIVE (was thei: clashed with theine \"holds\")"
+ },
+ {
+  "form": "nenn",
+  "kind": "root",
+  "sense": "to fall, to sink",
+  "note": "sign FALL"
+ },
+ {
+  "form": "sae",
+  "kind": "root",
+  "sense": "to come",
+  "note": ""
+ },
+ {
+  "form": "rei",
+  "kind": "root",
+  "sense": "to go",
+  "note": "sign GO"
+ },
+ {
+  "form": "neth",
+  "kind": "root",
+  "sense": "to turn, to turn aside",
+  "note": "sign TURN-ASIDE"
+ },
+ {
+  "form": "thass",
+  "kind": "root",
+  "sense": "to strike; a blow",
+  "note": "sign STRIKE"
+ },
+ {
+  "form": "thaess",
+  "kind": "root",
+  "sense": "to split; a wound; to be struck",
+  "note": "sign WOUND (check)"
+ },
+ {
+  "form": "seinn",
+  "kind": "root",
+  "sense": "to hear; to heed",
+  "note": ""
+ },
+ {
+  "form": "veinn",
+  "kind": "root",
+  "sense": "to mend, to make whole",
+  "note": "sign MEND"
+ },
+ {
+  "form": "thaval",
+  "kind": "root",
+  "sense": "to hunt, to go for",
+  "note": "thavalea a hunter; thavalen the hunters; was eneth (Sindarin \"name\"); originality pass"
+ },
+ {
+  "form": "saess",
+  "kind": "root",
+  "sense": "hunger; to hunger",
+  "note": "sign HUNGER"
+ },
+ {
+  "form": "rhes",
+  "kind": "root",
+  "sense": "anger; hot",
+  "note": ""
+ },
+ {
+  "form": "senth",
+  "kind": "root",
+  "sense": "dread, fear; the dread",
+  "note": "band DREAD"
+ },
+ {
+  "form": "eith",
+  "kind": "root",
+  "sense": "hollow, empty; a seeming",
+  "note": "device HOLLOW"
+ },
+ {
+  "form": "iss",
+  "kind": "root",
+  "sense": "thin, slight",
+  "note": ""
+ },
+ {
+  "form": "rhann",
+  "kind": "root",
+  "sense": "heavy, great",
+  "note": ""
+ },
+ {
+  "form": "leas",
+  "kind": "root",
+  "sense": "swift; to run",
+  "note": ""
+ },
+ {
+  "form": "eiss",
+  "kind": "root",
+  "sense": "so; true; what is",
+  "note": ""
+ },
+ {
+  "form": "ilen",
+  "kind": "root",
+  "sense": "to lean, to incline toward",
+  "note": ""
+ },
+ {
+  "form": "vann",
+  "kind": "root",
+  "sense": "two",
+  "note": ""
+ },
+ {
+  "form": "raes",
+  "kind": "root",
+  "sense": "three; (in the grain) many",
+  "note": ""
+ },
+ {
+  "form": "nal",
+  "kind": "root",
+  "sense": "four",
+  "note": ""
+ },
+ {
+  "form": "va",
+  "kind": "pron",
+  "sense": "I",
+  "note": ""
+ },
+ {
+  "form": "ve",
+  "kind": "pron",
+  "sense": "we",
+  "note": ""
+ },
+ {
+  "form": "sa",
+  "kind": "pron",
+  "sense": "you (one)",
+  "note": ""
+ },
+ {
+  "form": "se",
+  "kind": "pron",
+  "sense": "you (more than one)",
+  "note": ""
+ },
+ {
+  "form": "la",
+  "kind": "pron",
+  "sense": "he, she; it (a living thing: a person, a tree, a hull)",
+  "note": ""
+ },
+ {
+  "form": "le",
+  "kind": "pron",
+  "sense": "they (living)",
+  "note": ""
+ },
+ {
+  "form": "rha",
+  "kind": "pron",
+  "sense": "it (a mute thing: stone, iron, the dead)",
+  "note": ""
+ },
+ {
+  "form": "rhe",
+  "kind": "pron",
+  "sense": "they (mute)",
+  "note": ""
+ },
+ {
+  "form": "ra",
+  "kind": "pron",
+  "sense": "this; the held one (the definite of a known thing)",
+  "note": ""
+ },
+ {
+  "form": "re",
+  "kind": "pron",
+  "sense": "that; the other one",
+  "note": ""
+ },
+ {
+  "form": "li",
+  "kind": "particle",
+  "sense": "in, at, on (place)",
+  "note": ""
+ },
+ {
+  "form": "na",
+  "kind": "particle",
+  "sense": "to, toward",
+  "note": ""
+ },
+ {
+  "form": "rhi",
+  "kind": "particle",
+  "sense": "from, out of",
+  "note": ""
+ },
+ {
+  "form": "thi",
+  "kind": "particle",
+  "sense": "through, past, by way of",
+  "note": ""
+ },
+ {
+  "form": "laes",
+  "kind": "particle",
+  "sense": "above, over",
+  "note": ""
+ },
+ {
+  "form": "si",
+  "kind": "particle",
+  "sense": "with",
+  "note": ""
+ },
+ {
+  "form": "ri",
+  "kind": "particle",
+  "sense": "against, upon",
+  "note": ""
+ },
+ {
+  "form": "vi",
+  "kind": "particle",
+  "sense": "for, for the sake of; so that",
+  "note": ""
+ },
+ {
+  "form": "ni",
+  "kind": "particle",
+  "sense": "not (before the verb)",
+  "note": ""
+ },
+ {
+  "form": "ei",
+  "kind": "particle",
+  "sense": "and",
+  "note": ""
+ },
+ {
+  "form": "thes",
+  "kind": "particle",
+  "sense": "then, after that",
+  "note": ""
+ },
+ {
+  "form": "sei",
+  "kind": "particle",
+  "sense": "if (closes a clause)",
+  "note": ""
+ },
+ {
+  "form": "lae",
+  "kind": "particle",
+  "sense": "(closes a question); to ask",
+  "note": ""
+ },
+ {
+  "form": "-en",
+  "kind": "suffix",
+  "sense": "plural (after a vowel: -n)",
+  "note": "CANON (sethen)"
+ },
+ {
+  "form": "-ea",
+  "kind": "suffix",
+  "sense": "one of; one who; (on numbers) the n-th",
+  "note": ""
+ },
+ {
+  "form": "-ear",
+  "kind": "suffix",
+  "sense": "those of (a whole people or kind)",
+  "note": "CANON; older -aer"
+ },
+ {
+  "form": "-aer",
+  "kind": "suffix",
+  "sense": "older form of -ear, kept in Esthaer and borrowed in Mystaeri",
+  "note": "CANON relic"
+ },
+ {
+  "form": "-as",
+  "kind": "suffix",
+  "sense": "verbal noun: the doing; the thing done",
+  "note": ""
+ },
+ {
+  "form": "-eth",
+  "kind": "suffix",
+  "sense": "causative: make (someone) do",
+  "note": ""
+ },
+ {
+  "form": "-e",
+  "kind": "suffix",
+  "sense": "verb: it does, it is doing (not past)",
+  "note": ""
+ },
+ {
+  "form": "-es",
+  "kind": "suffix",
+  "sense": "verb: it did (past)",
+  "note": ""
+ },
+ {
+  "form": "-ar",
+  "kind": "suffix",
+  "sense": "verb: it shall, it is meant to",
+  "note": ""
+ },
+ {
+  "form": "Aelthar",
+  "kind": "name",
+  "sense": "the holiest rite of fellowship: bond-blood",
+  "note": "CANON ael + thar; spoken Ael'thar"
+ },
+ {
+  "form": "Aelvaren",
+  "kind": "name",
+  "sense": "the Bearer of the Binding (the Guest's boat)",
+  "note": "CANON ael + varen"
+ },
+ {
+  "form": "Aelrhen",
+  "kind": "name",
+  "sense": "bond-to-stone (the Guest's errand-name)",
+  "note": "CANON ael + rhen, a 'who-is' name"
+ },
+ {
+  "form": "Naelear",
+  "kind": "name",
+  "sense": "those of the breath (their own name)",
+  "note": "CANON nael + -ear"
+ },
+ {
+  "form": "Naelsaen",
+  "kind": "name",
+  "sense": "mist-hearts: the black pillars; the Thrones' Tide-name",
+  "note": "CANON nael + saen"
+ },
+ {
+  "form": "Rhenear",
+  "kind": "name",
+  "sense": "those of stone, who do not hear: the stone-deaf",
+  "note": "CANON rhen + -ear"
+ },
+ {
+  "form": "Saenvael",
+  "kind": "name",
+  "sense": "heart-grain: the Heartwood",
+  "note": "CANON saen + vael"
+ },
+ {
+  "form": "Sethvaren",
+  "kind": "name",
+  "sense": "carving-bearer: the Standard-Bearer",
+  "note": "CANON seth + varen"
+ },
+ {
+  "form": "Aelralen",
+  "kind": "name",
+  "sense": "the bond of roots: the root-bond",
+  "note": "CANON ael + ralen"
+ },
+ {
+  "form": "Leathae",
+  "kind": "name",
+  "sense": "green tide: the Hasty Tide",
+  "note": "CANON lea + thae"
+ },
+ {
+  "form": "Vaelthae",
+  "kind": "name",
+  "sense": "the tide with grain: the Second Tide",
+  "note": "CANON vael + thae"
+ },
+ {
+  "form": "Ralenthae",
+  "kind": "name",
+  "sense": "root-tide: the Tide of Remembering",
+  "note": "CANON ralen + thae; spoken Ra'lenthae"
+ },
+ {
+  "form": "Aelthae",
+  "kind": "name",
+  "sense": "bond-tide: the Joined Tide",
+  "note": "CANON ael + thae"
+ },
+ {
+  "form": "Rhenthae",
+  "kind": "name",
+  "sense": "stone-tide: the Tide that Learned Deceit",
+  "note": "CANON rhen + thae"
+ },
+ {
+  "form": "Eirthae",
+  "kind": "name",
+  "sense": "deep tide: the Last Tide",
+  "note": "CANON eir + thae"
+ },
+ {
+  "form": "Thaesaen",
+  "kind": "name",
+  "sense": "tide-heart (the Leviathan)",
+  "note": "CANON thae + saen"
+ },
+ {
+  "form": "Leavaren",
+  "kind": "name",
+  "sense": "bearer of new branches (the Hydra)",
+  "note": "CANON lea + varen"
+ },
+ {
+  "form": "Vaelress",
+  "kind": "name",
+  "sense": "the grain that rots (the Plague Herald)",
+  "note": "CANON vael + ress"
+ },
+ {
+  "form": "Ralensaen",
+  "kind": "name",
+  "sense": "root-heart (the Ancient Treant)",
+  "note": "CANON ralen + saen; spoken Ra'lensaen"
+ },
+ {
+  "form": "Rhenvael",
+  "kind": "name",
+  "sense": "stone-grain (the Colossus)",
+  "note": "CANON rhen + vael"
+ },
+ {
+  "form": "Esthaer",
+  "kind": "name",
+  "sense": "the burning, 'that of fire' (the Magma Titan)",
+  "note": "CANON esth + old -aer"
+ },
+ {
+  "form": "Senneir",
+  "kind": "name",
+  "sense": "the deep-beneath (the Sandworm)",
+  "note": "CANON senn + eir"
+ },
+ {
+  "form": "Eirlenth",
+  "kind": "name",
+  "sense": "the long winter (the Frost Wyrm)",
+  "note": "CANON eir + lenth"
+ },
+ {
+  "form": "Naelthar",
+  "kind": "name",
+  "sense": "blood of the sky (the Storm King)",
+  "note": "CANON nael + thar"
+ },
+ {
+  "form": "Neivaere",
+  "kind": "name",
+  "sense": "the silvered, the mirror: silver still-water (the Crystal Lich)",
+  "note": "CANON nei + vaere"
+ },
+ {
+  "form": "sethen",
+  "kind": "compound",
+  "sense": "carvings",
+  "note": "CANON seth + -en"
+ },
+ {
+  "form": "Seilrhass",
+  "kind": "name",
+  "sense": "'bough-thunder': the spoken tongue",
+  "note": "seil + rhass; spoken Seil'rhass"
+ },
+ {
+  "form": "Eilseth",
+  "kind": "name",
+  "sense": "'ring-carving': the grain as a written craft",
+  "note": "eil + seth; spoken Eil'seth"
+ },
+ {
+  "form": "theinas",
+  "kind": "compound",
+  "sense": "a knowing; the holding",
+  "note": "thein + -as"
+ },
+ {
+  "form": "naelenn",
+  "kind": "compound",
+  "sense": "home ('the within of the breath')",
+  "note": "nael + enn; spoken Nael'enn"
+ },
+ {
+  "form": "naelea",
+  "kind": "compound",
+  "sense": "one of the long-lived; a Mystaeri",
+  "note": "nael + -ea"
+ },
+ {
+  "form": "aethea",
+  "kind": "compound",
+  "sense": "one of the shore; a shore-man (the old, plain word)",
+  "note": "aeth + -ea; pl. Aethear"
+ },
+ {
+  "form": "rhenea",
+  "kind": "compound",
+  "sense": "one of stone (a shore-man, in the late and bitter wood)",
+  "note": "rhen + -ea"
+ },
+ {
+  "form": "ralthein",
+  "kind": "compound",
+  "sense": "to remember ('to root-hold')",
+  "note": "ral + thein; spoken Ral'thein"
+ },
+ {
+  "form": "raltheinas",
+  "kind": "compound",
+  "sense": "a memory",
+  "note": "ralthein + -as"
+ },
+ {
+  "form": "aelthein",
+  "kind": "compound",
+  "sense": "to trust ('to hold as bound')",
+  "note": "ael + thein"
+ },
+ {
+  "form": "leathein",
+  "kind": "compound",
+  "sense": "to learn ('to hold new')",
+  "note": "lea + thein"
+ },
+ {
+  "form": "theineth",
+  "kind": "compound",
+  "sense": "to teach ('to make hold')",
+  "note": "thein + -eth"
+ },
+ {
+  "form": "reith",
+  "kind": "compound",
+  "sense": "to send ('to make go')",
+  "note": "rei + -eth"
+ },
+ {
+  "form": "neaseth",
+  "kind": "compound",
+  "sense": "to show ('to make see')",
+  "note": "neas + -eth"
+ },
+ {
+  "form": "renneth",
+  "kind": "compound",
+  "sense": "to goad ('to make speak')",
+  "note": "renn + -eth"
+ },
+ {
+  "form": "rheileth",
+  "kind": "compound",
+  "sense": "to silence ('to make stop')",
+  "note": "rheil + -eth"
+ },
+ {
+  "form": "veaseth",
+  "kind": "compound",
+  "sense": "to kill ('to make die')",
+  "note": "veas + -eth"
+ },
+ {
+  "form": "aelress",
+  "kind": "compound",
+  "sense": "grief ('the rot of a bond')",
+  "note": "ael + ress"
+ },
+ {
+  "form": "rhenseth",
+  "kind": "compound",
+  "sense": "a lie; to mislead ('stone-carving': a cut that carries nothing)",
+  "note": "rhen + seth; Rhenthae's coinage"
+ },
+ {
+  "form": "rennrhen",
+  "kind": "compound",
+  "sense": "a gun ('speaking stone')",
+  "note": "renn + rhen"
+ },
+ {
+  "form": "rhenneas",
+  "kind": "compound",
+  "sense": "the reach, the watch of a stone ('stone-eye')",
+  "note": "rhen + neas"
+ },
+ {
+  "form": "rhenrhass",
+  "kind": "compound",
+  "sense": "a stone-breaker (a Bombard)",
+  "note": "rhen + rhass"
+ },
+ {
+  "form": "ennas",
+  "kind": "compound",
+  "sense": "a dwelling; a house ('the within-place')",
+  "note": "enn + -as"
+ },
+ {
+  "form": "rhenennas",
+  "kind": "compound",
+  "sense": "a castle ('stone-house')",
+  "note": "rhen + ennas"
+ },
+ {
+  "form": "eithseil",
+  "kind": "compound",
+  "sense": "straw; a phantom hull ('hollow bough')",
+  "note": "eith + seil"
+ },
+ {
+  "form": "ressveir",
+  "kind": "compound",
+  "sense": "worthless wood; a spent hull",
+  "note": "ress + veir"
+ },
+ {
+  "form": "isseil",
+  "kind": "compound",
+  "sense": "thin wood; a cheap hull",
+  "note": "iss + seil"
+ },
+ {
+  "form": "rhannseil",
+  "kind": "compound",
+  "sense": "the great hull",
+  "note": "rhann + seil"
+ },
+ {
+  "form": "thannvinn",
+  "kind": "compound",
+  "sense": "the kept hand ('closed hand'): the reserve",
+  "note": "thann + vinn"
+ },
+ {
+  "form": "issralen",
+  "kind": "compound",
+  "sense": "root-men ('fine roots')",
+  "note": "iss + ralen"
+ },
+ {
+  "form": "rhasseil",
+  "kind": "compound",
+  "sense": "the ram ('breaking bough')",
+  "note": "rhass + seil"
+ },
+ {
+  "form": "leasen",
+  "kind": "compound",
+  "sense": "the swift (Corsairs)",
+  "note": "leas + -en"
+ },
+ {
+  "form": "thavalen",
+  "kind": "compound",
+  "sense": "the hunters (Reavers)",
+  "note": "thaval + -en"
+ },
+ {
+  "form": "seilen",
+  "kind": "compound",
+  "sense": "the host (many hulls)",
+  "note": "seil + -en"
+ },
+ {
+  "form": "neivath",
+  "kind": "compound",
+  "sense": "silverbark; a silver elder",
+  "note": "nei + vath"
+ },
+ {
+  "form": "neivathen",
+  "kind": "compound",
+  "sense": "the council ('the silverbarks')",
+  "note": "neivath + -en"
+ },
+ {
+  "form": "thaelen",
+  "kind": "compound",
+  "sense": "a grove",
+  "note": "thael + -en"
+ },
+ {
+  "form": "leathael",
+  "kind": "compound",
+  "sense": "a sapling",
+  "note": "lea + thael"
+ },
+ {
+  "form": "naelneis",
+  "kind": "compound",
+  "sense": "the between-light",
+  "note": "nael + neis"
+ },
+ {
+  "form": "eirrhen",
+  "kind": "compound",
+  "sense": "the mountain ('old stone')",
+  "note": "eir + rhen"
+ },
+ {
+  "form": "esthas",
+  "kind": "compound",
+  "sense": "ash ('what is burnt')",
+  "note": "esth + -as"
+ },
+ {
+  "form": "rhithveir",
+  "kind": "compound",
+  "sense": "timber ('felled wood')",
+  "note": "rhith + veir"
+ },
+ {
+  "form": "rhithas",
+  "kind": "compound",
+  "sense": "the felling",
+  "note": "rhith + -as"
+ },
+ {
+  "form": "tharear",
+  "kind": "compound",
+  "sense": "kin ('those of the blood')",
+  "note": "thar + -ear"
+ },
+ {
+  "form": "ralear",
+  "kind": "compound",
+  "sense": "forebears; mothers and fathers",
+  "note": "ral + -ear"
+ },
+ {
+  "form": "eirea",
+  "kind": "compound",
+  "sense": "an elder",
+  "note": "eir + -ea"
+ },
+ {
+  "form": "aelea",
+  "kind": "compound",
+  "sense": "a guest ('one of the bond')",
+  "note": "ael + -ea"
+ },
+ {
+  "form": "vethea",
+  "kind": "compound",
+  "sense": "a host, the master of a house ('one of the door')",
+  "note": "veth + -ea"
+ },
+ {
+  "form": "rhesea",
+  "kind": "compound",
+  "sense": "an enemy ('one of anger')",
+  "note": "rhes + -ea"
+ },
+ {
+  "form": "sethea",
+  "kind": "compound",
+  "sense": "a carver",
+  "note": "seth + -ea"
+ },
+ {
+  "form": "Eirsethea",
+  "kind": "name",
+  "sense": "the Last Carver",
+  "note": "eir + sethea; spoken Eir'sethea"
+ },
+ {
+  "form": "leisthein",
+  "kind": "compound",
+  "sense": "to hope ('to hold the morrow')",
+  "note": "leis + thein"
+ },
+ {
+  "form": "lelneis",
+  "kind": "compound",
+  "sense": "blossom ('leaf-light')",
+  "note": "lel + neis"
+ },
+ {
+  "form": "eirveir",
+  "kind": "compound",
+  "sense": "the eldest wood; Myststone ('old wood')",
+  "note": "eir + veir"
+ },
+ {
+  "form": "leaveir",
+  "kind": "compound",
+  "sense": "green wood",
+  "note": "lea + veir"
+ },
+ {
+  "form": "eilen",
+  "kind": "compound",
+  "sense": "all; the whole; (adv.) always ('all the rings')",
+  "note": "eil + -en"
+ },
+ {
+  "form": "rheissae",
+  "kind": "compound",
+  "sense": "east ('sun-coming')",
+  "note": "rheis + sae"
+ },
+ {
+  "form": "rheisnenn",
+  "kind": "compound",
+  "sense": "west ('sun-falling')",
+  "note": "rheis + nenn"
+ },
+ {
+  "form": "lennves",
+  "kind": "compound",
+  "sense": "north ('the white road')",
+  "note": "lenn + ves"
+ },
+ {
+  "form": "rhesves",
+  "kind": "compound",
+  "sense": "south ('the warm road')",
+  "note": "rhes + ves"
+ },
+ {
+  "form": "vannrenn",
+  "kind": "compound",
+  "sense": "'two mouths': a feint",
+  "note": "vann + renn; soft reading of the Two Mouths"
+ },
+ {
+  "form": "sathneth",
+  "kind": "compound",
+  "sense": "'stern-turning': a turning for home",
+  "note": "sath + neth; soft reading of the Turned Stern"
+ },
+ {
+  "form": "reaslel",
+  "kind": "compound",
+  "sense": "a sail ('wind-leaf')",
+  "note": "reas + lel"
+ },
+ {
+  "form": "naelseth",
+  "kind": "compound",
+  "sense": "'veiled carving': a hidden thing",
+  "note": "nael + seth; soft reading of the Smoothed Cut"
+ },
+ {
+  "form": "eisranth",
+  "kind": "compound",
+  "sense": "a soft reading: the unbroken name of a grain sign ('name-word')",
+  "note": "eis + ranth"
+ },
+ {
+  "form": "rhelranth",
+  "kind": "compound",
+  "sense": "the soft letters that spell sound on stone ('frost-words')",
+  "note": "rhel + ranth"
+ }
+]

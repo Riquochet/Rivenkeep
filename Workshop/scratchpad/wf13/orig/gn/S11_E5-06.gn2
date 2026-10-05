@@ -1,0 +1,19 @@
+# name: E5-06
+round E5-06 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+  I
+    r1/1  0: SPARK*
+  ‖
+  II
+    r2/1  2.1: SQUARE+EYE    2.2: HAND+>OPEN    4: THIN+BEARER
+    r3/1  2.1: HAND+OPEN    2.2: GO    12: STRIKE
+  ‖
+  III
+    r4/1  0: STRIKE    2: HAND+!OPEN    4: THIN+BEARER    8.1: STONEFOLK×3+>DYING    8.2: BEARER@1    8.3: SQUARE+EYE
+    r4/2  3: SEED×3
+  runners
+    run t1  4.r2/1     →thru  2.1.r2/1
+    run t2  2.1.r3/1   ⇒      2.2.r3/1
+    run t3  12.r3/1    →      2.1.r3/1
+    run t4  0.r4/1     ⇒      8.3.r4/1
+    run t5  8.1.r4/1   →      8.2.r4/1
+    run fk1  2.r4/1  →  {3.r4/2, @1.r4/2}

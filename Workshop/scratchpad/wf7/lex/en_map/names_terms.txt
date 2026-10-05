@@ -1,0 +1,179 @@
+# The Book's names and its own terms (capitalised words, and the hyphenated words), with their Orrowen.
+# A name that is canon keeps its canon form; a Mystaeri name is a loan, spelled by sound (=Form).
+# persons and pairs (canon: names are names)
+Halyna | Halyna | name | Halyna, the pair-name of Halvard and Rhyna
+Seren | Seren | name | Seren, "a single sorrow that overcomes"
+Halvard | Halvard | name | Halvard, "bedrock-warden"
+Rhyna | Rhyna | name | Rhyna, "she who sets fast"
+Kael | Kael | name | Kael, "a tally-notch"
+Voss | Voss | name | Voss
+Brenn | Brenn | name | Brenn
+Hale | Hale | name | Hale
+Corlen | Corlen | name | Corlen
+Tamm | Tamm | name | Tamm
+Marl | Marl | name | Marl
+Aske | Aske | name | Aske
+Garvel | Garvel | name | Garvel, "little smith"
+Harl | Harl | name | Harl
+Ulden | Ulden | name | Ulden
+Hesk | Hesk | name | Hesk
+Pellow | Pellow | name | Pellow, "of the spire"
+Tarnel | Tarnel | name | Tarnel, "little net"
+Stannard | Stannard | name | Stannard, "quarrier"
+Lanner | Lanner | name | Lanner
+Aldwena | Aldwena | name | Aldwena, the pair-name of Aldun and Bena
+Idrenna | Idrenna | name | Idrenna, the pair-name of Idlan and Denna
+# the Book's terms (canon translations, orrowen_v2 §4.7)
+Stonewrights | Stonwrytan | n | the Stonewrights, the guild
+Stonewright | stonwrytel | n | a Stonewright
+Stonwryt | Stonwryt | n | the Stonwryt
+Mystwood | ~Mesk Myst | n | Mystwood (wood of the grey)
+Myststone | ~Tolm Myst | n | Myststone (stone of the grey)
+Mystlands | Mystow | name | the Mystlands
+Mystholders | ~Gannath Myst | n | the Mystholders (posts of the grey)
+Mystarch | ~Crenn Myst | n | a Mystarch (captain of the grey)
+Mystarchs | ~Crenneth Myst | n | the Mystarchs
+Mystaeri | Mystaeri | name | the Mystaeri
+Rivenkeep | ~Kethow Dhresk | name | Rivenkeep (the holding-place of the cleft)
+RIVENKEEP | ~Kethow Dhresk | name | Rivenkeep
+Rivenmen | Treskan | name | the Rivenmen
+Shorelanders | Orrowan | name | the Shorelanders
+Theoliths | ~Tolmath Vardh | n | the Theoliths (stones of God)
+Aetherbonded | ~et Lodhan | n | the Aetherbonded, the Bonded
+Aetherbond | ~Lodh Helv | n | the Aetherbond (the mortar of the sky)
+Elderess | Hemma | n | Elderess
+Judgement | tess+At | n | a Judgement (of a Throne: its verdict)
+Judgements | tess+At | n | Judgements
+Homecomings | mymm+Ol | n | the Homecomings
+Eldhythe | ~Tavow Hemm | name | Eldhythe (the old landing)
+Tidesmeet | ~Cemm Hyll | name | Tidesmeet (the meeting of the tide)
+Fenholm | Sedhnell | name | Fenholm (fen-islet)
+Holtward | Lurrvard | name | Holtward (forest-ward)
+Carnhold | ~Kethow Stellath | name | Carnhold (the hold of the cairns)
+Emberhythe | ~Tavow Vorr | name | Emberhythe (the landing of fire)
+Sandreach | Grullsorth | name | Sandreach (sand-ridge)
+Rimewatch | Frennvar | name | Rimewatch (frost-guard)
+Highreach | ~Taldow Helv | name | Highreach (the high place of the sky)
+Glasspire | Sirrvell | name | Glasspire (glass-spire)
+# the grains of the fleet, by the wall's names (Your names for the grains will serve)
+Silverbark | lenn^sast | name | Silverbark ("silver-skin")
+Blackthorn | domm^brint | name | Blackthorn ("black-thorn")
+# the Mystaeri names Seren writes by sound (loans; the knock written as a wedge in the course-hand)
+Aelvaren | =Aelvaren | loan | the Aelvaren, the Bearer of the Binding
+Aelthae | =Aelthae | loan | Aelthae, the Joined Tide
+Ael'thar | =Ael'thar | loan | the Ael'thar, the rite of the binding (spoken, with the knock)
+Aelthar | =Aelthar | loan | the Aelthar (carved, soft)
+Rhenear | =Rhenear | loan | Rhenear, "the stone-deaf" (the wood's name for the Rivenmen)
+Naelear | =Naelear | loan | Naelear, "those of the breath" (the Mystaeri's own name)
+Thaesaen | =Thaesaen | loan | Thaesaen, the Tide-Heart
+Naelthar | =Naelthar | loan | Naelthar, the Blood of the Sky
+Leavaren | =Leavaren | loan | Leavaren, the Bearer of Branches
+Rhenvael | =Rhenvael | loan | Rhenvael, the Stone-Grain
+Ralensaen | =Ralensaen | loan | Ralensaen, the Root-Heart
+Senneir | =Senneir | loan | Senneir, the Deep-Beneath
+Esthaer | =Esthaer | loan | Esthaer, the Burning
+Vaelress | =Vaelress | loan | Vaelress, the Grain That Rots
+Eirlenth | =Eirlenth | loan | Eirlenth, the Long Winter
+Neivaere | =Neivaere | loan | Neivaere, the Silvered
+# the hyphenated words of the stone text
+ship-masters | higil | n | a ship-master
+ship-master | higil | n | a ship-master
+two-inks | ~Pa Luth | name | Two-Inks (Seren Pa Luth)
+standard-bearer | movenn+Ard | n | a Standard-Bearer ("banner-one")
+wreck-wood | kaelir^mesk | n | wreck-wood ("wreck-wood")
+harbour-houses | tavow^lest | n | a harbour-house
+harbour-house | tavow^lest | n | a harbour-house
+stone-warden | Tolmvard | name | Stone-Warden, Halvard's epithet
+quarry-wardens | stannow^pard | n | a quarry-warden
+hearth-wall | ~hald odh | n | the hearth-wall (the wall of the hearth)
+mist-folk | myst+an | n | the mist-folk ("the folk of the grey")
+oath-keeper | ryt^pard | n | an oath-keeper ("oath-warden")
+fen-born | sedh+en | adj | fen-born ("of the fen")
+four-and-twenty | ~pa relv | num | four-and-twenty (two twelves)
+tide-heart | ~Molt Hyll | name | the Tide-Heart (the heart of the tide)
+fifty-three | ~pa vurr eth sullnoth | num | fifty-three
+wave-sign | fodh^rellor | n | the wave-sign
+council-hall | redul^hellur | n | a council-hall
+root-men | mesk+el | n | the root-men (treelings)
+fisher-folk | sugorn+an | n | the fisher-folk
+marking-stone | rellor^tolm | n | a marking-stone ("sign-stone")
+coal-black | brenth^domm | adj | coal-black
+wall-walk | hald^orrol | n | the wall-walk
+grey-sailed | myst^wemm | adj | grey-sailed ("grey-sail")
+granite-bloom | kyvil^sinth | n | granite-bloom (the second oil of the Rite)
+going-down | ~orrol dem vimm | n | the going-down
+haven-lands | cumm+ow | n | the haven-lands
+master-pairs | prass^ganna | n | a master-pair
+harbour-cities | tavow^hinnar | n | a harbour-city
+harbour-city | tavow^hinnar | n | a harbour-city
+burial-cairns | ledal^stell | n | a burial-cairn
+root-heart | ~Molt Veskrivull | name | the Root-Heart
+stone-grain | ~Meskdhrenn Dholm | name | the Stone-Grain
+deep-beneath | ~Gunn ul vimm | name | the Deep-Beneath
+night-watches | vess^par | n | a night-watch
+dark-trunked | ~gann domm | adj | dark-trunked
+plumb-line | venn^trenn | n | a plumb-line ("true-line")
+bridge-beams | heskal^stomorn | n | a bridge-beam
+roof-trees | crisur^mesk | n | a roof-tree
+dancing-hall | vilv^hellur | n | a dancing-hall
+trade-tables | serdul^genth | n | a trade-table
+dice-boards | nuless^crynir | n | a dice-board
+cargo-list | ~nydhyl havul | n | a cargo-list
+guild-halls | ~hellur Stonwrytan | n | a guild-hall
+mist-cloth | myst^roval | n | mist-cloth
+storm-wind | ~helvhoss nerdess | n | a storm-wind
+fog-bank | ~cless vyst | n | a fog-bank (a bank of the grey)
+rain-butt | ~nunth helvnynth | n | a rain-butt
+tide-line | hyll^trenn | n | the tide-line
+salt-cuts | ~stinel dhant | n | salt-cuts
+council-grove | redul^meskan | n | the council-grove
+fire-ships | vorr^sceth | n | a fire-ship
+mortar-ships | lodh^sceth | n | a mortar-ship
+torpedo-boats | gunn^sulter | n | a torpedo-boat ("deep-boat")
+grey-green | ~myst eth lurrel | adj | grey-green
+crown-hulls | bisk^sceth | n | a crown-hull
+stone-deaf | na-hunn | adj | stone-deaf
+fisher-children | ~tevath sugornan | n | the fisher-children
+grey-black | ~myst eth domm | adj | grey-black
+chisel-work | bresk^galdat | n | chisel-work
+star-notch | ~kael elth | n | a star-notch (the notch of a star)
+forty-six | ~pa vurr eth vran | num | forty-six
+# the Book's own set phrases (titles of the Book, its tides and its hearth)
+@phrase | ~Odh Sell | name | the Long Hearth
+@phrase | ~ganna ulvenn | n | the inner gate
+@phrase | ~Hosk Lunn | name | the Title of Liberty (the lintel of freedom)
+@phrase | ~Covv Treskat | name | the Torn Cloak
+@phrase | ~Ternil Yorndholm | name | the Rite of the Cornerstone (gorndholm softened as possessor)
+@phrase | ~Seren Pa Luth | name | Seren Two-Inks
+@phrase | ~Kael Nydherd | name | Kael the Counter
+@phrase | ~Halvard Tolmvard | name | Halvard Stone-Warden
+@phrase | ~Rhyna Yanna Ulvenn | name | Rhyna of the Inner Gate
+@phrase | ~Voss sa re vess | name | Voss who asked
+@phrase | ~Flennath Dholm Treskat | name | the Book of the Riven Stone
+@phrase | ~Flennath Hethyleth | name | the Book of Knowings (kethyleth softened as possessor)
+@phrase | ~Hyll Pynt | name | the Hasty Tide
+@phrase | ~Hyll Pawast | name | the Second Tide
+@phrase | ~Hyll Dhumol | name | the Tide of Remembering
+@phrase | ~Hyll Lodhat | name | the Joined Tide
+@phrase | ~Hyll sa re rystull nycul | name | the Tide that Learned Deceit
+@phrase | ~Hyll Dasken | name | the Last Tide
+@phrase | ~Vess Vollol | name | the Night of the Naming
+@phrase | ~Ryterd Dasken | name | the Last Carver
+@phrase | ~Tolm hy et Myst | name | the Stone out of the Grey
+@phrase | ~et Delv | name | the Twelve
+@phrase | ~Ryt Dhunnoth | name | the Covenant of Completion
+@phrase | ~lest Vardh | n | a temple (a house of God)
+@phrase | ~Garl Dhrenn | name | the course-hand
+@phrase | ~Garl Flenn | name | the leaf-hand
+@phrase | ~Garl Hal | name | the bedrock hand, the first builders' hand
+@phrase | ~garl brenth | n | the coal hand
+@phrase | ~ryt broc | n | the dry cut ("dry cutting")
+@phrase | ~brodath lodh | n | the mortar words
+@phrase | ~rellor wrod | n | a word-sign ("a sign of a word")
+@phrase | ~tolm kylet | n | the turned stone (the NOT mark)
+@phrase | ~lodh gunn | n | the footing (the deep mortar)
+@phrase | ~brodhen Orrow | n | the speech of the Shore
+@phrase | ~Orrowen Hal | name | the Hal, the old register ("the bedrock speech")
+@phrase | ~cadh trenn | v | lay a course; lay a tale
+@phrase | ~Grest um hos, grest um vana | phr | harm to one is harm to both (the saying both peoples share)
+@phrase | ~Vennuld | n | a True Man

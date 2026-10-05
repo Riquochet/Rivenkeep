@@ -1,0 +1,60 @@
+[
+ {
+  "leaf": "t-I-4",
+  "para_index": 41,
+  "label": "Romanisation · the Title",
+  "rom": "Ul dumol ol varn, ol theldeth, ol Mardh, ol lunnath, ol sollan.",
+  "english": "::: native legend_title_capstone line\nThe Title in the course-hand, cut under the new capstone of the inner gate in the Captain's own strokes\n*Ul dumol ol varn, ol theldeth, ol Mardh, ol lunnath, ol sollan.* In memory of our home, our families, our God, our freedoms, our peace.\n:::",
+  "dup": true,
+  "draft": [
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "dumol",
+    "N·remembering"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ],
+   [
+    "theldeth",
+    "family-PL"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ],
+   [
+    "Mardh",
+    "God"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ],
+   [
+    "lunnath",
+    "freedom-PL"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ],
+   [
+    "sollan",
+    "peace"
+   ]
+  ]
+ }
+]

@@ -1,0 +1,19 @@
+# name: E3-01
+round E3-01 {wood: life; pith: war; rings: 4; rules after: [1, 3]}
+  I
+    r1/1  0: LONE*
+  ‖¦
+  II
+    r2/1  4: SAPLING      band STILL files 4–4
+    r3/1  0: !ANGER?    4: EYE#1+>GO    12: HULL×3+KNOT      band DREAD files 0–0
+    r3/2  0: !BOND+HOLD    12: ROAD#2
+  ‖
+  III
+    r4/1  4: WOUND
+    r4/2  5: ROAD@2+GO    3: FOLLOW
+  runners
+    run t0  0.r1/1   ⇒  4.r2/1
+    run t1  4.r3/1   ⇒  4.r4/1
+    run t2  12.r3/1  ⇒  4.r4/1
+    mem 4: r3/1 → pith
+    run fk1  4.r4/1  →  {5.r4/2, 3.r4/2}

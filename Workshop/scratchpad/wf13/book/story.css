@@ -1,0 +1,234 @@
+
+/* ---- The Legends of Rivenkeep, the story alone (v3.1.0): the reading face ---- */
+:root{--page:#e6e1d6;--page-dim:#a29d92;--gold-m:#cdb57a;--grain:#9fb08a;--leaf-bg:#11150f;
+ /* the two text roles. Stone: EB Garamond, ink a hair toward yellow. Wood: Crimson Pro set to
+    EB Garamond's x-height, ink a hair toward green. Each role has Seren's second ink (-b), a small
+    hue shift inside the role's family, for Halyna's alternate paragraphs. All inks >= 15:1 on --bg. */
+ --stone-ink:#ece5cf;--stone-ink-b:#efe1ce;
+ --wood-ink:#dde8d8;--wood-ink-b:#d6e8e0;--wood-dim:#cbd8c6;
+ --face-stone:'EB Garamond',Georgia,serif;
+ --face-wood:'Crimson Pro','EB Garamond',Georgia,serif;
+ --x-stone:.405;--grain-ink:#dccaa3}
+/* the sticky bars (the nav and the one switch) stand over every anchor */
+html{scroll-padding-top:var(--bars-h)}
+:root{--bars-h:72px}
+[id]{scroll-margin-top:6px}
+header .h1{font-family:'Chakra Petch',sans-serif;font-size:2rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:4px;line-height:1.3}
+header .meta{margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--dim)}
+.sep{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.read{max-width:680px;margin:0 auto}
+main.ctn>section:last-child{border-bottom:0}
+/* the pair-name under its lintel: one thin stroke the width of the name, as a capstone over two posts */
+.pair{position:relative;white-space:nowrap}
+.pair::before{content:"";position:absolute;left:0;right:0;top:var(--lintel,.2em);border-top:1px solid currentColor;opacity:.66;pointer-events:none}
+.wood .pair,.tale.wood .pair{--lintel:.19em}
+/* the title page */
+.titlepage{text-align:center;padding:30px 0 10px;font-family:var(--face-stone)}
+.tp-title{background:none;-webkit-text-fill-color:currentColor;font-family:var(--face-stone);font-size:2.05rem;font-weight:500;letter-spacing:.16em;color:var(--page);line-height:1.25;text-transform:none;margin:0}
+.tp-sub{font-size:1.35rem;color:var(--gold-m);margin:8px 0 0}
+.tp-sub em,.tp-line em{color:inherit}
+.tp-orn{width:120px;height:1px;margin:18px auto;background:linear-gradient(90deg,transparent,var(--gold-m),transparent)}
+.tp-line{font-size:1.08rem;color:var(--page-dim);margin:0}
+/* Books, and their Arguments */
+section.book{padding:44px 0 36px}
+.book-h{font-family:'Chakra Petch',sans-serif;text-align:center;margin-bottom:8px;color:var(--page)}
+.book-h .kick{display:block;font-family:'IBM Plex Mono',monospace;font-size:.64rem;font-weight:500;letter-spacing:3px;color:var(--gold-m);margin-bottom:4px}
+.book-sub{font-family:var(--face-stone);font-style:normal;font-size:1.15rem;line-height:1.55;color:var(--page-dim);text-align:center;margin:0 auto 26px;max-width:36em}
+.book-sub em{color:inherit}
+/* the leaves */
+.tale,.prose{font-family:var(--face-stone);color:var(--page)}
+.tale{padding:30px 0 8px}
+.tale::after{content:"\2042";display:block;text-align:center;color:var(--gold-m);opacity:.55;font-size:1.1rem;margin-top:22px}
+.tale.wood{--gold-m:#a9b894}
+.tale-h{font-family:var(--face-stone);text-transform:none;letter-spacing:0;text-align:center;margin:0 0 16px;color:var(--ink,var(--page));font-weight:500;font-size:1.75rem;line-height:1.25}
+.tale-h .tn{display:block;font-family:'IBM Plex Mono',monospace;font-size:.7rem;font-weight:500;letter-spacing:3px;color:var(--gold-m);margin-bottom:6px}
+.tale-h .tt{display:block}
+.tale-h .kind{display:block;font-family:'IBM Plex Mono',monospace;font-size:.58rem;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:var(--dim);margin-top:8px}
+.tale.stone .tale-h .kind{color:var(--page-dim)}.tale.wood .tale-h .kind{color:var(--grain)}
+.tale p,.prose p{font-size:calc(1.22rem * var(--fit,1));line-height:1.62;margin-bottom:.85em}
+.tale em,.prose em,.tale strong,.prose strong{color:inherit}
+.tale strong,.prose strong{font-weight:600}
+/* the two text roles, set on the leaf and, where the Book marks it, on a passage */
+.stone{--ink:var(--stone-ink);--ink-b:var(--stone-ink-b)}
+.wood{--ink:var(--wood-ink);--ink-b:var(--wood-ink-b)}
+.tale.stone,.prose.stone,.tale.wood,.tale .wood,.prose .wood{color:var(--ink)}
+.wood{font-family:var(--face-wood);font-weight:350;letter-spacing:.005em;font-size-adjust:var(--x-stone);font-synthesis:none}
+/* the x-height match is for the wood face alone: a wood leaf's head, its switch, the folds' labels and its Grain
+   Notation keep their own faces' size, as on a stone leaf (inherited, the match shrank the mono labels by a fifth) */
+.wood .tale-h,.wood .tabs,.wood summary,.wood pre,.wood code,.wood .cont-cap,.wood .lit-h{font-size-adjust:none}
+.tale.wood strong,.tale .wood strong{font-weight:540}
+.tale.wood em,.wood em,em.wood{font-weight:300}
+.mixed{--ink:var(--wood-ink);color:var(--wood-ink);font-family:var(--face-stone)}
+/* Seren's second ink, on Halyna's alternate paragraphs and on the halves they speak between them */
+.tale p[data-voice="b"],.prose p[data-voice="b"]{color:var(--ink-b)}
+/* II.3: the teller's name, small in the margin (above the paragraph on phones) */
+.tale p.marked{position:relative}
+.tale p .who{position:absolute;right:100%;top:.42em;margin-right:1.1em;font-size:.74rem;line-height:1.2;font-variant:small-caps;letter-spacing:.07em;white-space:nowrap;opacity:.78;font-weight:400}
+/* wood leaves: each knowing a touch apart; a short grain-rule between the rings */
+.tale.wood p{margin-bottom:1.05em}
+.ring{width:3em;height:4px;margin:1.35em auto 1.5em;border-top:1px solid var(--grain);border-bottom:1px solid var(--grain);border-radius:50%;opacity:.4}
+/* frames stay in the neutral house face and ink, on stone and wood leaves alike */
+.tale p.dateline,.prose p.dateline,.tale p.teller,.prose p.teller,.tale p.frame,.tale p.answer,.prose p.answer,.tale p.laid,.tale p.title-line,.prose p.title-line,.tale h4.part{font-family:var(--face-stone);font-weight:400;letter-spacing:normal;font-size-adjust:none}
+/* the dateline (v3: short, the first italic line under the title): when it was laid */
+.tale p.dateline,.prose p.dateline{font-style:normal;font-size:1.02rem;letter-spacing:.02em;line-height:1.5;color:var(--gold-m);text-align:center;max-width:30em;margin:0 auto .9em;text-wrap:balance;opacity:.92}
+.tale p.dateline em,.prose p.dateline em{font-weight:400}
+.tale p.teller,.prose p.teller{font-style:normal;color:var(--page-dim);font-size:1.06rem;line-height:1.55;margin-bottom:1.5em}
+/* Plain Words v3.1: the foreword opens with a note for new readers, set apart, quietly: between two hairlines, a
+   little smaller and dimmer than the foreword, under a small mono label; the foreword's own dateline follows it. Its
+   own font-size (1rem) fixes the em of its measure: left to inherit, the web copy took the host's 14px body and the
+   note stood 476px wide at desktop, against 544px on the Docs page (wf13 reader check) */
+.prose aside.newreaders{font-size:1rem;max-width:34em;margin:4px auto 2.2em;padding:1.1em 0 .45em;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.prose aside.newreaders h3.nr-h{font-family:'IBM Plex Mono',monospace;font-size:.62rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold-m);text-align:center;line-height:1.4;margin:0 0 1.1em;padding:0;border:0;background:none}
+.prose aside.newreaders p{font-size:calc(1.06rem * var(--fit,1));line-height:1.6;color:var(--page-dim);margin:0 0 .85em}
+.prose aside.newreaders p em{color:inherit}
+/* Plain Words v3.1: a headnote that runs to a second italic paragraph (II.2, IV.4) keeps its two paragraphs together */
+.tale p.teller:has(+ p.teller){margin-bottom:.85em}
+.tale p.teller em,.tale p.frame em,.tale p.answer em{font-weight:400}
+.tale p.first::first-letter,.prose p.first::first-letter{font-size:2.3em;line-height:1;color:var(--gold-m);font-weight:500;margin-right:.03em}
+.tale p.frame{color:var(--page-dim);font-size:1.1rem}
+.tale p.frame.who-line{font-size:1rem;letter-spacing:.02em;margin-top:-.35em}
+.tale p.frame.added{font-size:1.06rem;border-left:1px solid var(--border);padding-left:.9em}
+.tale p.inscr{margin-left:1.6em;margin-right:.6em}
+.tale.wood p.inscr{color:var(--wood-dim)}
+.tale p.answer,.prose p.answer{text-align:center;color:var(--gold-m);font-size:1.12rem;margin:1.1em 0 .4em}
+.tale p.answer.silent,.tale p.answer.hood{color:var(--page-dim)}
+.tale p.answer+p.answer{margin-top:.2em}
+.tale p.laid{font-variant:small-caps;letter-spacing:.04em;color:var(--page-dim);font-size:1.12rem}
+.tale p.title-line,.prose p.title-line{text-align:center;font-size:1.06rem;letter-spacing:.09em;color:var(--gold-m);margin:1.1em 0;line-height:1.5}
+h4.part{font-family:var(--face-stone);font-size:1.22rem;font-weight:500;font-variant:small-caps;text-transform:none;letter-spacing:.06em;color:var(--gold-m);margin:1.7em 0 .7em;text-align:center}
+.verse{margin:1.1em 0 1.3em 2.2em;font-size:calc(1.16rem * var(--fit,1));line-height:1.6}
+.verse .l{display:block;padding-left:1.6em;text-indent:-1.6em}
+.verse em{color:inherit}
+.token{color:inherit}
+blockquote.invocation{border-left:2px solid var(--gold-m);padding:6px 0 6px 22px;margin:8px 0 12px}
+blockquote.grain{margin:1.4em 0;padding:14px 20px;border:1px solid rgba(159,176,138,.28);border-radius:4px;background:repeating-linear-gradient(97deg,rgba(159,176,138,.045) 0 1px,transparent 1px 7px),repeating-linear-gradient(94deg,rgba(159,176,138,.03) 0 2px,transparent 2px 19px),var(--leaf-bg);color:#c3ccb4}
+blockquote.grain p{font-size:1.1rem;margin-bottom:0;font-family:var(--face-stone);font-weight:400;letter-spacing:normal;font-size-adjust:none}
+blockquote.grain em{color:inherit}
+/* the Book of Knowings' table, wider than the measure on a wide screen */
+.wide{width:min(960px,calc(100vw - 80px));margin:18px 0 22px 50%;transform:translateX(-50%)}
+.tw{overflow-x:auto}.tw table{margin:0}
+.wide th{font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--gold-m);letter-spacing:1px}
+.wide td{font-family:var(--face-stone);font-size:1rem;line-height:1.45;color:var(--ink,var(--page))}.wide td em,.wide td strong{color:inherit}.wide td strong{font-weight:600}
+.wide td.wood{font-family:var(--face-wood)}
+@supports not (font-size-adjust:0.5){.tale.wood,.tale p.wood,.tale .verse .wood{--fit:.965}}
+/* contents */
+.toc{font-family:var(--face-stone);margin-top:22px}
+.toc a{color:var(--page);text-decoration:none;border-bottom:1px solid rgba(205,181,122,.25)}
+.toc a:hover,.toc a:focus-visible{color:var(--gold-m);border-bottom-color:var(--gold-m)}
+.toc em{color:var(--page-dim)}
+.toc p{font-size:1.1rem;color:var(--page-dim);margin-bottom:4px}
+.toc p.toc-book{margin-top:20px;font-size:1rem}
+.toc p.toc-book strong{letter-spacing:.08em;font-weight:500}
+.toc p.toc-arg{font-style:normal;font-size:1rem;line-height:1.5;margin:2px 0 6px}
+.toc-tales{list-style:none;margin:4px 0 6px 0}
+.toc-tales li{font-size:1.04rem;color:var(--page-dim);line-height:1.5;margin-bottom:3px;padding-left:1.2em}
+.toc-tales .tn{font-family:'IBM Plex Mono',monospace;font-size:.72em;letter-spacing:1px;color:var(--gold-m)}
+/* the drawings: the grain and the course-hand */
+.wood-ink{color:var(--grain-ink)}
+.stone-ink{color:var(--stone-ink)}
+.stone-ink .sh{opacity:var(--cut-shade-alpha,.3)}
+.stone-ink .bed{stroke-opacity:var(--bed-alpha,.4)}
+.stone-ink .bite{stroke-opacity:var(--bite-alpha,.95)}
+.stone-ink .joint{stroke-opacity:var(--joint-alpha,.13)}
+.stone-ink .coal{stroke-opacity:var(--coal-alpha,.9)}
+.stone-ink .lab{fill-opacity:var(--label-alpha,.72)}
+.stone-ink .lab2{fill-opacity:var(--label2-alpha,.5)}
+figure.native{margin:1.5em auto 1.6em;text-align:center}
+figure.native .art svg{display:block;margin:0 auto;max-width:100%;height:auto}
+figure.native.round .art svg{width:min(330px,78%)}
+figure.native.stone .art svg{width:min(430px,92%)}
+figure.native.chip .art svg{width:104px}
+figure.native.line .art svg{--cut-shade-alpha:.42;max-width:min(100%,600px)}
+figure.native figcaption,.native-note{font-family:var(--face-stone);font-weight:400;font-style:normal;letter-spacing:normal;font-size-adjust:none;text-align:center;color:var(--page-dim)}
+figure.native figcaption{margin-top:.55em;font-size:1rem}
+.native-note{margin:-.35em auto 1.3em}
+figure.native .cap,.native-note .cap{display:block;font-style:italic;font-size:1rem;line-height:1.45;max-width:34em;margin:0 auto}
+figure.native .cap em,.native-note .cap em{font-style:normal}
+/* a mark not yet drawn: its caption stands alone, between two short rules, as a plate's title */
+figure.native.unset{margin:1.3em auto 1.4em}
+figure.native.unset figcaption{margin:0}
+figure.native.unset figcaption::before,figure.native.unset figcaption::after{content:"";display:block;width:2.4em;height:1px;margin:.55em auto;background:var(--gold-m);opacity:.45}
+details.tr{margin:.5em auto 0;max-width:36rem;text-align:left;font-size:1rem}
+details.tr summary{cursor:pointer;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-style:normal;letter-spacing:1.2px;text-transform:uppercase;color:var(--dim);list-style-position:inside;padding:2px 0}
+details.tr summary:hover,details.tr[open] summary{color:var(--gold-m)}
+details.tr .tr-body{margin-top:.5em;padding:.6em .9em;border-left:1px solid var(--border);background:rgba(255,255,255,.02)}
+.tale details.tr .tr-body p,.prose details.tr .tr-body p,blockquote details.tr .tr-body p{font-family:var(--face-stone);font-weight:400;font-size:1.02rem;line-height:1.55;margin:0 0 .5em;color:var(--page)}
+details.tr .tr-body p:last-child{margin-bottom:0}
+blockquote.grain figure.native{margin:1.1em auto .9em}
+blockquote.invocation figure.native{margin:.4em 0 .9em}
+blockquote.invocation figure.native .art svg{margin:0}
+blockquote.invocation figure.native figcaption,blockquote.invocation figure.native .cap{text-align:left;margin-left:0}
+blockquote.invocation details.tr{margin-left:0}
+blockquote.invocation details.tr summary{text-align:left}
+span.glyph{display:inline-block;vertical-align:-.5em;margin:0 .08em;font-style:normal}
+span.glyph svg{display:block;height:1.75em;width:auto;border-radius:2px}
+/* ONE SWITCH FOR THE WHOLE BOOK: three radios at the top of the body (visually hidden, fixed, so focusing one never
+   scrolls), a slim sticky bar of their labels under the nav, and the same three labels in every leaf. CSS sibling
+   selectors show the chosen text in every leaf and mark the active label everywhere; no script is needed for it. */
+.rd{position:fixed;top:0;left:0;width:1px;height:1px;margin:0;padding:0;border:0;opacity:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;pointer-events:none}
+.bars{position:sticky;top:env(safe-area-inset-top, 0px);z-index:110;background:rgba(10,12,16,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.bars nav{position:static;top:auto;background:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.readbar{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;padding:4px 40px 5px;border-bottom:1px solid var(--border);font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;letter-spacing:1.6px;text-transform:uppercase;line-height:1.3}
+.readbar label{padding:3px 6px 2px;color:var(--dim);border-bottom:1px solid transparent;white-space:nowrap;cursor:pointer;user-select:none;-webkit-user-select:none}
+.readbar label:hover{color:var(--gold-m)}
+.readbar .dot{color:var(--dim);opacity:.55}
+.tabs{display:flex;justify-content:center;width:max-content;max-width:100%;margin:-4px auto 22px;border-bottom:1px solid var(--border);font-family:'IBM Plex Mono',monospace;font-size:.6rem;font-weight:500;letter-spacing:1.6px;text-transform:uppercase;line-height:1.2}
+.tabs .tab{padding:7px 13px 6px;margin-bottom:-1px;border:1px solid transparent;border-bottom:0;border-radius:4px 4px 0 0;color:var(--dim);white-space:nowrap;cursor:pointer;user-select:none;-webkit-user-select:none}
+.tabs .tab:hover{color:var(--gold-m)}
+#read-book:checked~* .tabs .l-book,#read-plain:checked~* .tabs .l-plain,#read-orig:checked~* .tabs .l-orig{color:var(--page);border-color:var(--border);background:var(--bg);box-shadow:inset 0 2px 0 var(--gold-m);cursor:default}
+#read-book:checked~.bars .l-book,#read-plain:checked~.bars .l-plain,#read-orig:checked~.bars .l-orig{color:var(--page);border-bottom-color:var(--gold-m);cursor:default}
+#read-book:focus-visible~.bars .l-book,#read-plain:focus-visible~.bars .l-plain,#read-orig:focus-visible~.bars .l-orig{outline:1px solid var(--gold-m);outline-offset:1px}
+.pane{display:none}
+#read-book:checked~.ctn .p-book,#read-plain:checked~.ctn .p-plain,#read-orig:checked~.ctn .p-orig{display:block}
+section.book>.read>.prose>.tabs{margin-top:10px}
+/* the frame switches with the leaves: the title page's line, the Contents, each Book's Argument */
+.tp-sw .pane{text-align:center}
+.tp-sw .p-orig{margin-top:14px}
+.tp-sw .p-orig .ip{margin:0}
+.tp-sw .p-orig .ip+.ip{margin-top:.5em}
+.arg-sw .p-orig .book-sub-ink{max-width:36em;margin:0 auto 26px;text-align:center}
+.arg-sw .p-orig .ip{margin:0 0 .35em}
+.toc-ink .ip{margin:0 0 .25em}
+.toc-ink .ip:has(> p.ink.ink-book){margin-bottom:.8em}
+.toc-ink .ip:has(> p.ink.ink-toc){margin-top:1.1em}
+.toc-ink .ip:has(> p.ink.ink-toc-tale){padding-left:1.2em}
+.toc a.ink-a{color:inherit;border-bottom-color:rgba(205,181,122,.18)}
+.toc a.ink-a:hover,.toc a.ink-a:focus-visible{color:var(--gold-m);border-bottom-color:var(--gold-m)}
+/* a wood leaf's READING: the fragments Halyna spoke as the wood gave the memory up, set apart, in the wood face,
+   a little smaller, the two voices by turns in Seren's two inks; no label */
+.reading{margin:.2em 0 1.7em;padding:.1em 0 .1em 1.15em;border-left:1px solid rgba(159,176,138,.34)}
+.tale .reading p.rd-line,.prose .reading p.rd-line{font-family:var(--face-wood);font-weight:350;letter-spacing:.005em;font-size-adjust:var(--x-stone);font-synthesis:none;font-size:calc(1.07rem * var(--fit,1));line-height:1.55;margin:0 0 .32em;color:var(--ink)}
+.tale .reading p.rd-line[data-voice="b"]{color:var(--ink-b)}
+.reading p.rd-line em{font-weight:300}
+.reading span.glyph svg{height:1.6em}
+.reading .ip:has(> p.ink.ink-reading){margin:0 0 .5em}
+.pane .reading p.ink.ink-reading{margin-left:0}
+/* the seal: the bark's, not a story paragraph */
+.tale p.seal{text-align:center;font-family:var(--face-stone);font-weight:400;font-size-adjust:none;font-variant:small-caps;letter-spacing:.06em;color:var(--grain);font-size:1.08rem;margin:0 0 1.25em}
+/* the colophon */
+footer a{color:var(--dim)}
+footer a:hover{color:var(--gold-m)}
+@media(max-width:768px){
+ header .h1{font-size:1.35rem}
+ .titlepage{padding-top:16px}.tp-title{font-size:1.45rem;letter-spacing:.1em}.tp-sub{font-size:1.15rem}
+ .tale p,.prose p{font-size:calc(1.1rem * var(--fit,1))}
+ .tale-h{font-size:1.45rem}
+ .verse{margin-left:.8em;font-size:calc(1.06rem * var(--fit,1))}
+ .wide{width:100%;margin-left:0;transform:none}
+ /* the Book of Knowings on a phone: each root a block of its own, each cell under its column's name */
+ .wide table,.wide tbody,.wide tr,.wide td{display:block;width:100%}
+ .wide thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%)}
+ .wide tr{border:1px solid var(--border);border-radius:4px;margin:0 0 12px;padding:4px 0}
+ .wide td{border:0;padding:5px 12px}
+ .wide td::before{content:attr(data-label);display:block;font-size-adjust:none;font-family:'IBM Plex Mono',monospace;font-style:normal;font-weight:500;font-size:.56rem;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold-m);margin-bottom:2px}
+ .wide td:first-child{font-size:1.1rem}
+ blockquote.invocation{padding-left:14px}
+ blockquote.grain{padding:12px 14px}
+ figure.native.round .art svg{width:min(300px,86%)}figure.native.stone .art svg{width:100%}span.glyph svg{height:1.65em}
+ .tabs .tab{padding:7px 9px 6px;letter-spacing:1.2px}
+ .tale p.dateline,.prose p.dateline{font-size:.96rem}
+ .readbar{padding-left:16px;padding-right:16px;letter-spacing:1.2px}
+ .reading{padding-left:.85em}
+}
+@media(max-width:980px){.tale p.marked{margin-top:1.55em}.tale p .who{right:auto;left:0;top:-1.3em;margin:0}}
+@media print{.bars,.tabs{display:none}}

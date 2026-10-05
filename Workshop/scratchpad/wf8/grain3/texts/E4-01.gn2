@@ -1,0 +1,24 @@
+# name: Three roads, one hour
+# english: Three roads, one hour. Let the east and the north go as one. Let the south stand at the edge of the dread until the reach of the south has walked east; then let the south go.
+# literal: Three roots of the Wave on three piths: three roads, each all at once and straight. In the east pith, the older carving whole: its stone-breakers holding the edge of the burning. One ring, one hour: the east goes and the north goes, bound as one; the south waits, knotted, at the dread's edge, until the next ring. The south's watching stone (the reach) goes to the east, grafted from E3-01 and remembered. When that has happened, the south goes. In the bark: bond-tide, the Tide's name.
+# root_word: shore
+round E4-01 {wood: long; pith: war ×3; rings: 5; rules after: [2, 4]}
+  I
+    r1/1  p0·0: WAVE*    p1·0: WAVE*    p2·0: WAVE*
+  ¦ p0
+    r2/1  p0·4: EDGE+BREAKER      band DREAD files p0·15–1
+  ¦ p0
+  ‖
+  II
+    r3/1  0: GO    2: BOND    4: GO    12: KNOT^r4      band DREAD files 11–13
+    r4/1  10: SQUARE+EYE    graft(E3-01)
+  ‖
+  III
+    r5/1  12: GO
+  bark
+    bark 0: BOND+TIDE
+  runners
+    run t1   p0·0.r1/1    ⇒      p0·4.r2/1
+    run t3   10.r4/1      ⇒      12.r5/1
+    run t2   10.r4/1      →      @0
+    mem 10: r4/1 → pith

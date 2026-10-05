@@ -1,0 +1,244 @@
+make | gald | v | make
+man | uld | n | a man
+manner | orr+Ol | n | a manner, a way
+many | mest | adj | many
+mark | rellor | n | a mark
+mark | rellor | v | mark
+market | gylorn | n | a market
+mason | tolm+Ard | n | a mason ("stone-one")
+mast | mivenn | n | a mast
+master | prass | n | a master
+may | ~doss lunn lo | v | may: "freedom is at Y" (Doss lunn lo Y) for leave; nayess for a maybe
+mean | kaever | v | mean, intend
+meaning | kaever+At | n | a meaning (a thing thought)
+measure | nydh | v | measure, reckon
+meet | cemm | v | meet
+memory | tumol | n | memory
+mend | clenn | v | mend
+merchant | vaskorn | n | a merchant
+mere | lynth | n | a mere
+middle | molt | n | the middle
+might | na-gess | adv | might: nayess "perhaps", or the "at" idiom
+mind | prener | n | a mind
+mint | drunn | v | mint, strike (a coin)
+minute | clem+el | n | a minute, a moment ("a small hour")
+mirror | vesk^sirr | n | a mirror ("see-glass")
+mist | myst | n | mist
+mistake | na-venn | adj | mistaken, wrong
+moment | clem+el | n | a moment
+month | bress | n | a month
+morning | ryst | n | morning
+morrow | ryst | n | the morrow
+mortar | lodh | n | mortar
+moss | feth | n | moss
+mother | odha | n | a mother
+mountain | brunn | n | a mountain
+mourning | lomm+Ol | n | mourning
+mouth | brod+ow | n | a mouth ("the word-place")
+move | marr | v | move
+much | mest | adj | much
+multiply | mest | v | multiply, grow many
+murmur | medh | v | murmur
+must | ~doss maver um | v | must: "need is upon Y" (Doss maver um Y), the "upon" idiom
+mute | na-brodh | adj | mute, speechless
+myrrh | styvess | n | myrrh
+myth | trenn | n | a myth, an old tale
+name | voll | n | a name
+name | voll | v | name
+naming | voll+Ol | n | a naming
+nation | lunt | n | a nation
+natural | venn | adj | natural, true
+navy | scethan | n | a navy
+near | virr | adj | near
+neck | bisk^gann | n | a neck ("head-post")
+need | maver | n | a need
+need | maver | v | need
+neither | @nath ... ell | conj | neither ... nor: nath ... ell nath
+nerve | syllorn | n | nerve, courage
+neutralize | hess | v | neutralize (the clerk's word: "stop")
+never | na-fedh | adv | never ("no time")
+new | clenn | adj | new
+next | fenn+At | adj | next (followed)
+niche | paltur | n | a niche
+night | vess | n | night
+nine | rost | num | nine
+nineteen | rost^noth | num | nineteen (nine-ten)
+no | nath | part | no, not
+noble | pithul | n | a noble
+nobleman | pithul | n | a nobleman
+nod | ferr | v | nod
+none | na-hos | pron | none, no one ("not one")
+noon | sorenn | n | noon
+nor | ~ell nath | conj | nor
+north | brid^lern | n | the north ("cold side")
+northern | brid^lern+en | adj | northern
+not | nath | part | not
+notch | kael | n | a notch
+nothing | na-gal+At | pron | nothing ("un-thing")
+now | ~amm sy | adv | now (this when)
+number | nydh+At | n | a number ("a counted thing")
+oak | duss^mesk | n | oak ("hard-tree")
+oath | ryt | n | an oath
+obey | lynir | v | obey
+of | @construct | prep | of: the construct (the possessor follows, softened); "made of" is hy
+off | hy | prep | off, away from
+officer | crenn | n | an officer
+oil | lernul | n | oil
+old | hemm | adj | old
+old | crystil | adj | old (of things), worn
+on | um | prep | on
+once | ~hos fedh | adv | once (one time)
+one | hos | num | one
+only | hos+el | adv | only
+onto | um | prep | onto
+open | lunn | v | open, make room
+open | lunn+At | adj | open, opened
+or | ell | conj | or
+ordain | naelur | v | ordain, choose
+order | haral | n | an order
+order | haral | v | order, bid
+ornament | rerr+el | n | an ornament ("a small fair thing")
+orphan | dhaker | n | an orphan
+other | ull+en | adj | other
+otherwise | ell | adv | otherwise
+out | hy | prep | out of
+out | ~hyo | adv | out ("out of it", the preposition with its ending)
+outer | hy^venn | adj | outer (by analogy with ulvenn, inner)
+outermost | ~hyvenn sost | adj | outermost
+outlive | hoss | v | outlive, live on
+outpost | deld^par | n | an outpost ("far-watch")
+outside | ~hyo | adv | outside
+outsider | besk | n | an outsider
+outward | hy^venn | adv | outward
+over | um | prep | over
+overseer | nend+Ard | n | an overseer, a watcher
+owe | tess | v | owe (stand surety for)
+own | sost | adj | own
+pace | lusul | n | a pace
+pack | havul | n | a pack
+page | flenn | n | a page
+pair | ganna | n | a pair (a pair is a gate)
+pale | stacorn | adj | pale
+palm | garl^demull | n | a palm ("hand-hollow")
+paragraph | trenn | n | a paragraph
+parapet | ~hosk hald | n | a parapet (the capstone of the wall)
+part | saed | n | a part
+pass | hiskenn | n | a pass
+pass | orr | v | pass
+past | ~ul neld | prep | past, beyond
+patience | hydull | n | patience
+pave | cadh | v | pave
+pay | nethil | v | pay
+peace | sollan | n | peace
+pennant | gever | n | a pennant
+people | lunt | n | a people
+perhaps | na-gess | adv | perhaps ("unsure")
+permit | lusk | v | permit
+phantom | dhenn | n | a phantom
+pick | grik | v | pick (up)
+piece | saed+el | n | a piece ("a small part")
+pike | hagess | n | a pike
+piling | gann | n | a piling
+pillar | gann | n | a pillar (of the wood)
+pillar | saenul | n | a pillar (of stone)
+pipe | mygur | n | a pipe
+place | resk+ow | n | a place, a seat ("the sitting-place")
+plain | venn | adj | plain
+plainly | venn | adv | plainly
+plan | niltenn | n | a plan
+plank | crynir | n | a plank
+plea | pess+Ol | n | a plea ("an asking")
+plumb | venn | adj | plumb
+plunge | hast | v | plunge
+point | pell | n | a point
+pole | gann | n | a pole
+polish | dasor | v | polish
+politician | redul+Ard | n | a politician ("council-one")
+poor | rirn | adj | poor
+post | gann | n | a post
+pray | ammel | v | pray
+precision | gand+Oth | n | precision (sharpness)
+prentice | prassel | n | a prentice
+present | hebb+At | n | a present
+pretend | nycul | v | pretend
+pride | lyrness | n | pride
+private | kest+el | n | a private ("one of the company")
+promise | tragul | n | a promise
+promise | tragul | v | promise
+proof | pemess | v | be proof against, ward off
+protect | par | v | protect
+proud | deth | adj | proud
+purpose | dask | n | a purpose
+push | hast | v | push
+put | cadh | v | put
+quarry | stann | v | quarry
+quarry | stannow | n | a quarry
+quarryman | stannard | n | a quarryman, a quarrier
+quay | tavow | n | a quay
+question | pess+Ol | n | a question
+quick | pynt | adj | quick
+quickly | pynt | adv | quickly
+quiet | velv | adj | quiet
+rain | helv^nynth | n | rain ("sky-water")
+raise | gald | v | raise
+ram | strom^drunn | n | a ram ("great-hammer")
+rank | trenn | n | a rank
+rare | merr | adj | rare
+rather | veth | adv | rather
+reach | mellor | v | reach
+read | vesk | v | read
+reader | veskerd | n | a reader
+recall | tum | v | recall
+reckon | nydh | v | reckon
+reckoning | nydh+Ol | n | a reckoning
+red | unth | adj | red
+reduce | lyss | v | reduce
+refuse | na-hebb | v | refuse ("un-give")
+release | lusk | v | release
+relic | hemm+el | n | a relic ("a small old one")
+remake | clenn | v | remake
+remember | tum | v | remember
+repeat | ~mysk pawast | v | repeat (say again)
+require | maver | v | require
+rest | sol | v | rest
+rest | ull+en | n | the rest, the others
+restraint | hess+Oth | n | restraint
+retreat | hollar+Ol | n | a retreat
+return | mymm | v | return
+revenge | mymm^grest | n | revenge ("return-harm")
+rhyme | vell | n | a rhyme
+rib | crestal | n | a rib
+rich | dyll | adj | rich
+ride | haemer | v | ride (on the water)
+ridge | sorth | n | a ridge
+right | venn | adj | right, true; right-hand
+rightly | venn | adv | rightly
+ring | scaevur | n | a ring (a round, a wheel)
+ring | bont | v | ring, resound
+ripple | fodh+el | n | a ripple ("a small wave")
+rise | tald | v | rise
+rise | rynn | v | rise (from sleep)
+rite | ternil | n | a rite
+riven | treskat | adj | riven
+river | rhull | n | a river
+road | orr+Ol | n | a road ("a going")
+rock | hal | n | rock
+rod | hulter | n | a rod
+roll | scaevur | v | roll
+roll | scaevur+el | n | a roll (a scroll: "a small wheel")
+roof | crisur | n | a roof
+room | syther | n | a room
+room | lunn | n | room, space
+root | mesk^rivull | n | a root ("tree-foundation")
+rope | bunth | n | a rope
+rot | lilv | v | rot, go soft
+rot | lilv+Ol | n | rot
+round | ~um gor lern | adv | round, around
+rout | hollar+Ol | n | a rout
+row | trenn | n | a row
+row | luss | v | row
+rubble | gask | n | rubble (broken stone)
+ruin | kaelir | n | a ruin
+run | hask | v | run
+runner | haskard | n | a runner
+mile | ~bost lusul | n | a mile (four hundred paces)

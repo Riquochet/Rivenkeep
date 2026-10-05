@@ -1,0 +1,576 @@
+[
+ {
+  "leaf": "t-VI-2",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Reskowath strom sa orrant um wadh",
+  "english": "VI.2 · The Thrones That Walk the Sea",
+  "dup": false,
+  "draft": [
+   [
+    "Reskowath",
+    "place-PL"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "orrant",
+    "go-3PL"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "wadh",
+    "sea"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 1,
+  "label": "Romanisation · the dateline",
+  "rom": "Lo dhrenn et surr vranast, cumm eth cumm.",
+  "english": "*Through the sixth year, haven by haven.*",
+  "dup": false,
+  "draft": [
+   [
+    "Lo",
+    "at(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "surr",
+    "year"
+   ],
+   [
+    "vranast",
+    "sixth"
+   ],
+   [
+    "cumm",
+    "haven"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "cumm",
+    "haven"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 2,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Lo reskowath strom ommat, gor hos, re vellor hos hy Halyna ul molt et mesketh, eth re ston ullen lo hless, lo sest et hesperdeth, sa re nahebbent orrol virr; eth re heth et hos hyo o hosen re heth et hos ulo. Doss molt reskow strom kethet ul hos hoss, eth et voll dasken, eth duss sost.",
+  "english": "*At each fallen Throne one of {{Halyna}} went among the timbers, and the other stood at the edge with the soldiers, that would not go nigh; and the one outside knew it as the one within. A Throne's heart is known in a breath, its name last and hardest.*",
+  "dup": false,
+  "draft": [
+   [
+    "Lo",
+    "at(+S)"
+   ],
+   [
+    "reskowath",
+    "place-PL"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "ommat",
+    "fallen"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vellor",
+    "S·come.in"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesketh",
+    "tree-PL"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "ston",
+    "stand"
+   ],
+   [
+    "ullen",
+    "another"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "hless",
+    "S·bank"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hesperdeth",
+    "soldier-PL"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "nahebbent",
+    "refuse-3PL"
+   ],
+   [
+    "orrol",
+    "going"
+   ],
+   [
+    "virr",
+    "near"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "heth",
+    "S·hold"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "hyo",
+    "from-3SG.M"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "heth",
+    "S·hold"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ],
+   [
+    "Doss",
+    "be"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "reskow",
+    "place"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "kethet",
+    "held"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "hoss",
+    "breath"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "voll",
+    "name"
+   ],
+   [
+    "dasken",
+    "final"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "duss",
+    "hard"
+   ],
+   [
+    "sost",
+    "self"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 3,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Nynth. Lesteth, nalelv umor.",
+  "english": "*— Water. Houses, heavy on us.*",
+  "dup": false,
+  "draft": [
+   [
+    "Nynth",
+    "spring"
+   ],
+   [
+    "Lesteth",
+    "house-PL"
+   ],
+   [
+    "nalelv",
+    "heavy"
+   ],
+   [
+    "umor",
+    "upon-1PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 4,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Misketh, ul morrol umor. Lilvyl, ul et sedh.",
+  "english": "*— Feet, walking on us. Rot, in the fen.*",
+  "dup": false,
+  "draft": [
+   [
+    "Misketh",
+    "foot-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "morrol",
+    "N·going"
+   ],
+   [
+    "umor",
+    "upon-1PL"
+   ],
+   [
+    "Lilvyl",
+    "rot"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sedh",
+    "fen"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 5,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Meskrivullath, ul morrol. Tolm, ul dessyl.",
+  "english": "*— Roots, walking. Stone, answering.*",
+  "dup": false,
+  "draft": [
+   [
+    "Meskrivullath",
+    "root-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "morrol",
+    "N·going"
+   ],
+   [
+    "Tolm",
+    "stone"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "dessyl",
+    "N·answer"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 6,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Vorrdhuss. Domm, ul vimm et hal.",
+  "english": "*— Ash. Dark, under the rock.*",
+  "dup": false,
+  "draft": [
+   [
+    "Vorrdhuss",
+    "ash"
+   ],
+   [
+    "Domm",
+    "black"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hal",
+    "bedrock"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 7,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Sulv. Fedh sell ul et sulv.",
+  "english": "*— White. A long while in the white.*",
+  "dup": false,
+  "draft": [
+   [
+    "Sulv",
+    "snow"
+   ],
+   [
+    "Fedh",
+    "time"
+   ],
+   [
+    "sell",
+    "long"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sulv",
+    "snow"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 8,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Helv, bemmet. Sirr —",
+  "english": "*— Sky, lifted. Glass —*",
+  "dup": false,
+  "draft": [
+   [
+    "Helv",
+    "sky"
+   ],
+   [
+    "bemmet",
+    "lifted"
+   ],
+   [
+    "Sirr",
+    "glass"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 9,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— cresket. Vollath, ul vimm gor yalat. Thae — [ ]",
+  "english": "*— broken. Names, under all. Thae — [ ]*",
+  "dup": false,
+  "draft": [
+   [
+    "cresket",
+    "broken"
+   ],
+   [
+    "Vollath",
+    "name-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "yalat",
+    "S·anything"
+   ],
+   [
+    "Thae",
+    "Thae"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-VI-2",
+  "para_index": 38,
+  "label": "Romanisation · Seren’s closing line",
+  "rom": "Eth re dhess nahos.",
+  "english": "*And no one answered.*",
+  "dup": true,
+  "draft": [
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhess",
+    "S·answer"
+   ],
+   [
+    "nahos",
+    "none"
+   ]
+  ]
+ }
+]

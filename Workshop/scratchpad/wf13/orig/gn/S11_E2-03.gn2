@@ -1,0 +1,9 @@
+# name: E2-03
+round E2-03 {wood: forty; pith: war; rings: 2; rules after: [1]}
+  I
+    r1/1  0: BARB*
+  ‖¦
+  II
+    r2/1  4: THIN+HOLD      band DREAD files 4–4
+  runners
+    run t1  0.r1/1  ⇒  4.r2/1

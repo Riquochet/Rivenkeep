@@ -1,0 +1,606 @@
+[
+ {
+  "leaf": "t-IV-6",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Farrol et Aelvaren",
+  "english": "IV.6 · The Voyage of the Aelvaren",
+  "dup": false,
+  "draft": [
+   [
+    "Farrol",
+    "voyage"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Aelvaren",
+    "Aelvaren"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 1,
+  "label": "Romanisation · the dateline",
+  "rom": "Et syst sullast, ul Hyll Dhumol.",
+  "english": "*The third summer, in the Tide of Remembering.*",
+  "dup": true,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "syst",
+    "summer"
+   ],
+   [
+    "sullast",
+    "third"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 2,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Re wemm Halvard et molt sy ul et nelter; re hast Rhyna, um et hald, pa yarl ul et nunth helvnynth, eth re nahebb ey myskyl hy vodh. Um et sellhossan myskym vodh nath noss kethyl lo et mesk: nath re seskent ew naseskyl.",
+  "english": "*Halvard lifted this heart in the vault; Rhyna, on the wall, thrust both hands into the rain-butt, and would not say why. Of the long-lived I say what the wood cannot: They did not know it was ignorance.*",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "wemm",
+    "S·lift"
+   ],
+   [
+    "Halvard",
+    "Halvard"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "nelter",
+    "vault"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hast",
+    "push"
+   ],
+   [
+    "Rhyna",
+    "Rhyna"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hald",
+    "wall"
+   ],
+   [
+    "pa",
+    "two(+S)"
+   ],
+   [
+    "yarl",
+    "S·hand"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "nunth",
+    "cup"
+   ],
+   [
+    "helvnynth",
+    "rain"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "nahebb",
+    "refuse"
+   ],
+   [
+    "ey",
+    "her"
+   ],
+   [
+    "myskyl",
+    "saying"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "Um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sellhossan",
+    "long-lived"
+   ],
+   [
+    "myskym",
+    "say-1SG"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "kethyl",
+    "holding"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "seskent",
+    "know.a.fact-3PL"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "naseskyl",
+    "notting.know"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 3,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Lyss. Myst. Lelv um et wadh. Voll, eth lyrness umo.",
+  "english": "*— Small. Grey. Light on the water. A name, and proud of it.*",
+  "dup": false,
+  "draft": [
+   [
+    "Lyss",
+    "small"
+   ],
+   [
+    "Myst",
+    "sea-fog"
+   ],
+   [
+    "Lelv",
+    "light"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "wadh",
+    "sea"
+   ],
+   [
+    "Voll",
+    "name"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "lyrness",
+    "pride"
+   ],
+   [
+    "umo",
+    "upon-3SG.M"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 4,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Garl um et crynireth, ul et farrol tunn. Venth. Tovvol.",
+  "english": "*— A hand on the boards, all the way over. Shallows. Waiting.*",
+  "dup": false,
+  "draft": [
+   [
+    "Garl",
+    "hand"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "crynireth",
+    "plank-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "farrol",
+    "voyage"
+   ],
+   [
+    "tunn",
+    "whole"
+   ],
+   [
+    "Venth",
+    "shallow.water"
+   ],
+   [
+    "Tovvol",
+    "waiting"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 5,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Pa sestow visk um et tolmath. Driget ulo. Nalelv —",
+  "english": "*— Heels on the stones. Thrown in. Heavy —*",
+  "dup": false,
+  "draft": [
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "sestow",
+    "back"
+   ],
+   [
+    "visk",
+    "S·foot"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolmath",
+    "stonework"
+   ],
+   [
+    "Driget",
+    "thrown"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ],
+   [
+    "Nalelv",
+    "heavy"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 6,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— eth dhaedh. Ul et crynireth. O dhunnoth.",
+  "english": "*— and warm. Into the boards. All of him.*",
+  "dup": false,
+  "draft": [
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "dhaedh",
+    "warm"
+   ],
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "crynireth",
+    "plank-PL"
+   ],
+   [
+    "O",
+    "his/it(+S)"
+   ],
+   [
+    "dhunnoth",
+    "S·wholeness"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 7,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Lomm. Um sy doss brodath lona.",
+  "english": "*— Grief. For this we two have words.*",
+  "dup": false,
+  "draft": [
+   [
+    "Lomm",
+    "grief"
+   ],
+   [
+    "Um",
+    "upon(+S)"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "doss",
+    "be"
+   ],
+   [
+    "brodath",
+    "words"
+   ],
+   [
+    "lona",
+    "at-1DU"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 8,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Vorr. Garlath ul vorrol — nath vorrant. Crynireth. Et crynireth ul vorrol.",
+  "english": "*— Fire. Hands burning — no. Boards. The boards burning.*",
+  "dup": false,
+  "draft": [
+   [
+    "Vorr",
+    "fire"
+   ],
+   [
+    "Garlath",
+    "hand-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vorrol",
+    "burning"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "vorrant",
+    "fire-3PL"
+   ],
+   [
+    "Crynireth",
+    "plank-PL"
+   ],
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "crynireth",
+    "plank-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vorrol",
+    "burning"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 9,
+  "label": "Romanisation · the reading, first ink",
+  "rom": "— Gannath. Dem neld, dem et lunn, hy —",
+  "english": "*— Poles. Out, to the open, away from —*",
+  "dup": false,
+  "draft": [
+   [
+    "Gannath",
+    "posts"
+   ],
+   [
+    "Dem",
+    "until(+N)"
+   ],
+   [
+    "neld",
+    "N·far"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "lunn",
+    "freedom"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 10,
+  "label": "Romanisation · the reading, second ink",
+  "rom": "— Kylyl. Ul lern et — [ ]",
+  "english": "*— Turning. Against the — [ ]*",
+  "dup": false,
+  "draft": [
+   [
+    "Kylyl",
+    "turning"
+   ],
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "et",
+    "the"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-IV-6",
+  "para_index": 35,
+  "label": "Romanisation · Seren’s closing line",
+  "rom": "Eth re dhess nahos.",
+  "english": "*And no one answered.*",
+  "dup": true,
+  "draft": [
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhess",
+    "S·answer"
+   ],
+   [
+    "nahos",
+    "none"
+   ]
+  ]
+ }
+]

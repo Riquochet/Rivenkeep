@@ -1,0 +1,86 @@
+S01-FRONT-01	Flennath Dholm Treskat
+S01-FRONT-02	Et trenneth cadhat lo Odh Sell ul Gethow Dhresk, hosen re hadh Seren Pa Luth so.
+S01-F-00	Flenn Seren
+S01-F-01	Et syst sullast, ul Hyll Dhumol.
+S01-F-02	Re ryt Seren Pa Luth o, ryterd et flennath sy, eth sullast odh {{Halyna}}.
+S01-F-03	Doss domm nasell et surr. Aedh et hellur um gor lern lom, eth re nadhald Odh Sell dem gesketh. Um et hald veskym et movenn ul memmyl, ul helvhoss sa nath hunnom.
+S01-F-04	Doss saed et flennath loskat. Hos hy o wrodhardath, sa re wemm nind thenth um gor helvhoss, doss o ul vimm stelleth rerddhald tevar. Vess sy re vymmym dem et flenn hosast. Re luskom et flenn pondul, hy vodh nel hosk ul lern ganna.
+S01-F-05	Lo et odh sy re hadhant galdardath hosast et Kethow trenneth. Amm re orrant hy et Kethow, re wrident et trenneth lo et odh. Amm sy resker ul vodh re reskent, amm doss nayalat tul lo et garlath veth so hethyl lo et vorr.
+S01-F-06	Lo en sest, ul o valtur, doss et tolm, hosk hemm et ganna ulvenn. Um o lern re sol o ul et ganna, eth et Stonwryt ul lern et trun, dem hedh orl et movenn, amm re hyle {{Halyna}} o. Nath gyl hos o; kyle pana o. Doss Stonwryt et tolm gand tul.
+S01-F-07	ESAN STONOS ETAS XALDOS SIU · RE CADHANA OA ETHAS TESSANA OA SOŊMAS ELIS TOLMOS TOLMOS · STONOS
+S01-F-08	Es ston et hald sy. Re hadhan o, eth tessen o, somm el tolm tolm. Ston.
+S01-F-09	Hy ull rytym gor yanna lodhat ul vimm hos hosk, hosen hosk um yanna. El hos voll o, eth voll vana.
+S01-F-10	El Halvard Tolmvard eth Rhyna Yanna Ulvenn {{Halyna}}. Re ammada {{Idrenna}}, et hemm sost, sona, eth ferre lo et gebb amm cadhat trenn venn. Nath memme {{Orvenna}}, prassyanna et hald, sona harm fedh. Hy {{Enrella}}, et tevel sost, amm cadh hos tolm hosast sodh, cadh ullen et hosk umo.
+S01-F-11	Amm doss et trenn tunnat, vollar o: nel brodhat, veth cadhat. Trenn sa nath gadhar veth brodhar, doss o sennet dem et ryst. Trenn sa hadhar, el saed et hald o.
+S01-F-12	Tess hos brod gor dhrenn lor, eth nath dess ullen fedh: Tumar.
+S01-F-13	Ul et vess hosast sa re vess et odh sy trenn, nath re yal brod lor. Re vysk Ebba hemm Sedhnell o ul velvyth. Re vess nahos o loy, eth re vysk nahos lor: Fenna. Veth re rik et odh et brod hyoy. Virr gor vess doss ey hosast tul, hos hoss ul lern et ullen, eth mellorar ul sestow Ebba, hosen hyll ul sestow et fodh hosast.
+S01-F-14	Re rarr nadhumol um ol nedheth, eth re naelur nahos o. Naelurar ol dumol, hosen naelurant tolmardath et tolmath dem gethyl.
+S01-F-15	Doss merr hy et trenneth sy lo et mesk, eth et saed strom hy et kaelirvesk. Nadhumant et scaevureleth, eth doss cadhol nycul ulont lo yarl. Nath noss nyculol lo et mesk, veth nath noss veskyl ludal lo.
+S01-F-16	Re rarr hos hy dholm domm. Re sol o ul et vestul ul vimm misk, ul vimm hosk {{Wendhessa}}, sa re lymme et vestul hy Dhavow Hemm ul et Ommol. Re heth gor yanna et hosk ull, dem et fedh sa re hebb et mesk lo {{Halyna}} kethyl et tolmath nawrodh sa sol lo o sest. Hy ull re hebbe {{Idrenna}} lunn.
+S01-F-17	Nath vesker et mesk, veth kether o, tunn, hosen kether tumol. Hy ull hebbe {{Halyna}} o ul saedeleth, eth grik hos ul vodh omm brodath ullen.
+S01-F-18	Cadhom et saedeleth hosen ommant, ul ba luth. Nath mavere sona en rellorol cedh el cedh. Nath noss seskyl los. Galdom et trenn hy et saedeleth. Ul sestow et trenn el velvyth et odh, eth re rytym et velvyth ull.
+S01-F-19	Mavere {{Halyna}} flenn et mesk lo yarl venn, ul lern flenn et tolm.
+S01-F-20	Trenn brodhat hy hos lern hald,
+S01-F-21	saed trenn.
+S01-F-22	Ul vodh nath re yal tul brodhol flenn et mesk, re luskom et flenn pondul, eth doss hosel meskdhrenn umo: lern yalat sa nath re hyrriler tul.
+S01-F-23	Nel hos et Lodhan en, veth re lymme {{Halyna}} en ul sona odh, hosen sullast et odh. Amm kethe sona et mesk, kethym et greller. Re hadhom en narl sost um et meskdhrenn hos fedh, eth re luskom. El garl sa ryt en narl, eth nel garl sa heth.
+S01-F-24	Ew saed yanna gor ryterd demom. Rytym hosel.
+S01-F-25	Hunn et Crenn gor yalat, eth brodh o nayalat, eth o wiskhovv dem susk.
+S01-F-26	Ul vodh re yal rytet cresket, nath re hlennym o lo haevereth. Ul vodh re navoll et Stonwrytan, re hadhom luth. Ul vodh mysk et mesk, re rytym vollath sost et mesk um yalatath, eth nel vollath orrowen.
+S01-F-27	Gor vess cadhom et trenn lo wrodhen Orrow, hosen cadh tolmard trenn, gor wrellir cresket um wrellir ul vimm. Gor wrod, myskym o ul garm sull fedh amm nath rytym o tul, dem hunnol: Ho heth o? Doss et trenn lo et brodhard; doss et brodath lom. Veskym gor flenn ul garm lo hos sa re hadh o, eth nath re vess brodhard tul o wrodath sost pawast.
+S01-F-28	Virr gor vess doss et brentheth sennet dem vorrdhuss, eth doss et brod dasken tul um en serr. El hosen ull, vess sy.
+S01-F-29	Vallom brodhen Orrow.
+S01-F-30	Re lymmym pa yalat dem susk et brunn, brodhen Orrow eth vestul; eth nath re yal nalelv veth et vestul.
+S01-F-31	El luth et flennath sy. Mavere {{Halyna}} o rytyl ul gyvil et hellur sy, trenn um dhrenn, amm mellor sollan. Dem et fedh ull, sol o ul et vestul ull, ul molt et tolmath nawrodh.
+S01-INV-00	Ammelyl
+S01-INV-01	Mysket gor vess lo Odh Sell, ul lern et trenn hosast, eth cadhat lo sy ul lern et trenn hosast et flennath.
+S01-INV-02	Ul dumol ol varn, ol theldeth, ol Mardh, ol lunnath, ol sollan.
+S01-INV-03	Reska, amm doss lunn, eth stona amm nath noss. Brident et brammath, eth nath rhyn et lodh ul lern vess.
+S01-INV-04	Doss et odh lo sy, eth lo sy et tolm sa re omm hy et ganna ulvenn. Re hethent garlath mest o, eth es gethent mest. Brodh gor sa heth o amm sy.
+S01-INV-05	Cadhar et trenneth sy, hy vodh re nadhumar hos fedh. Re nadhumant ol nedheth kethow, eth re hresk o. Re nadhumant so yedheth grest, eth re vymm o demor ul vimm wemmeth myst. Hy ull cadhar gor yalat: et galdol eth et creskyl, et grest sa re yal galdat umor, eth et grest sa re yaldar.
+S01-INV-06	Doss merr hy et trenneth sy lor, trenneth rytet venn, hosen rytet tolmath et hald. Doss merr lo et mesk, eth el duss so wrodhol, eth nath byntent. Ul vodh nath gemme pana, re hether pana.
+S01-INV-07	Keth et tolm. Cadh et trenn. Amm cadhat o, es dess et odh.
+S01-INV-08	Eth re vysk et odh: Tumar.
+S01-B1-01	Flennath et Hald
+S01-B1-02	Hosen vodh re stonar.
+S01-I1-00	Covv Treskat
+S01-I1-01	Et grem hosast, et vess ul sestow et Ternil.
+S01-I1-02	Re hadh Kael Nydherd, ul et vess hosast sa re vess et odh sy trenn. Nath re lusk o lom kylyl hos brod hyo; re hylym mest, eth amm re veskym o lo, re ryt o: Brod um wrod ew o, hosen re wrodhom o.
+S01-I1-03	Hebb et tolm lom. Nath reskym; es stonom. Re reskym loskat grem sy.
+S01-I1-04	Rytom um hosk et bystir rerdsennen, sa re rytent et pardath hemm so vollath umo. Ston. El nydherd en, nel vellerd. Nydhym bisketh, eth tolmath, eth orlath. Galat sa nath re nydhym, nath gadhom o.
+S01-I1-05	Re vellor et trenn ul hedh, ul vimm et ganna hyvenn. Re hunnom o amm nath re veskym o tul: misketh mest, eth nath re yal carm ulont. Hy et ganna re nydhym o, bisk eth bisk.
+S01-I1-06	Re vellorant uldath hemm, eth essath lo havulath, eth tevath ul naedh um so visketh, eth hesperdeth vran kest cresket, sa re vammant so hrenneth. Re vellor et Crenn dasken, sa re heth o et sestow gor orl et orrol. Lesk bost eth merr lesk murr, nydhet tunn.
+S01-I1-07	Re orrar bress hy vorrdhuss Sirrvell dem gethow. Re vellorar tolmstell. Re heth hos brellir et ganna, eth ul et parow re ston linth dem et gerd. Ul vodh re hadhant et velleth hellur strom, re yal et crisur ommat, eth re sol sulv um et odh sa reskys lo amm sy.
+S01-I1-08	Re varrant merr. Re semment merr. Re ommant merr, eth nath re dhaldant.
+S01-I1-09	Hy ull re dhald et carmol, eth new hos carm. Re harmant merr: Pessa haethil dem wemmeth myst! Veth re hyrril nahos sa hoss fedh hos brod sa re vyskent. Re harmant merr: Dem et hiskenneth susk, eth et sulv ul neld! Re harmant merr: Orra dem vimm ul nyrulath, eth hoska et gebbeth, eth tovva! Hosen amm es nadhum et wadh ol.
+S01-I1-10	Re hunnom uldath ul greskyl ul et hollarol sell. Nath re hunnom fedh lunt ul greskyl, dem et hedh ull. El hunnat hosen crest hull ul morrol.
+S01-I1-11	Re rarr et helvhoss dem vimm hy et sorth treskat, eth grem tunn ul o wrodow.
+S01-I1-12	Re vesk et lunt dem grenn hesteth, eth re yalant et crenneth hesteth hurrat. Re vesk o dem et pithulath, eth re yalant et pithulath driget. Re vesk o dem et Stonwrytan, eth re resk et Stonwrytan ul linth, eth so wresketh ul so simmeth.
+S01-I1-13	Re vesk nahos hyont dem et Crenn. Ew crenn hest lyss o, eth ew o hest ol. Gor orl et orrol sell re dhovv o dem hos sa re yal et neskyl lo; eth re rarr nahos, hy vodh re yalant sennet. Nath hyrrila en navenn: nath re yal hos strom hyo, eth nath gaeverym re hoss fedh uld hosen et Crenn. Veth nath re vaver o neskyl. Rytom um ull. Ston.
+S01-I1-14	Re veskent et vennuldath dem so Hrenn. Re vesk et Crenn um et hald.
+S01-I1-15	Hy ull re yyst o. Ul et hellur re rik brenth hy et odh sennet, et odh sy, eth re sesk nahos hyor hy vodh. Re orr o dem susk um lern gask, hosel, lo dhrenn et tolmath sa re dhaldant hy et lodh. Re stonar lo visk, eth re luskar o, hy vodh nath re vysk o lor: Fenna. Re nydhym et tolmath ull hy et fedh ull: doss hosnoth eth murr, eth marrant gemm hyont.
+S01-I1-16	Lo wisk re nahovv o hovv. Ew lorr o hos fedh, amm nath re hyl et orrol o tul dem vesket vorrdholm. Ul et helvhoss ull, nath re yal galat lo veth o.
+S01-I1-17	Re vysk nahos ul et parow. Ul molt et essath re hresk hoss dhev lyss, eth re hadh et odha velvyth umo. Hy ull re yal nayalat veth et helvhoss.
+S01-I1-18	Re dhresk o lo dhrenn o sestow.
+S01-I1-19	Ew hunnat lyss o, hunnat roval hemm ul villurol. Re hunnom o um et helvhoss.
+S01-I1-20	Re hadh o hos saed um et hoskath, eth re lumm o umo lo et brenth, eth re ryt o. Re ryt o niss, hosen rytent uldath sa nath re rytent mest. Re yal et saed ull bysket um hagess hy et gask. Re hadh o et saed ullen pawast um o sest, nayalat rytet umo.
+S01-I1-21	Hosast re fennym o dem susk, eth hosast re veskym o. Nath re varr o yarl hos fedh. Re hylym dem et parow, eth re veskym o ul garm, eth nath re ston en garm, eth nath nyculom umo.
+S01-I1-22	Ul dumol ol varn, ol theldeth, ol Mardh, ol lunnath, ol sollan.
+S01-I1-23	Re hadh o et hagess ul dresk et hald, eth re hebb o lo et helvhoss, eth re rik et helvhoss o. Ew ull hald nahresket dasken Orrow, eth ew ull et movenn umo.
+S01-I1-24	Amm sy hunna cedh re dhess, eth ul drenn vodh, hy vodh re nydhym so. Nel nydhyl nydhyl dem vollol.
+S01-I1-25	Hosast re dhessent et vennuldath. Re wesk o ol hos eth hos, ul gesteth eth um orrolath, eth re heth o ol lo nayalat veth osk. Re hether ol ryteth, eth re yaldar galat sa re dhragular, eth nath re yorrar veth amm ew venn et dask. El gor yalat vennuld ull. Myskym o dem va seskyl: nel mest o. Veth nel lyss o.
+S01-I1-26	Stannard Sorth. Corlen Dhavow. Tamm Sull Heskal. Marl Sedhen. Aske Hrisur Lurr. Garvel Runnowath. Harl Orrow sa Vorr. Ulden Salereth. Hesk Lynth. Lanner Gynten. Pellow Vell. Eth Kael Nydherd, rytvard et vennuldath; nath noss cumm lom, hy vodh re wesk et Crenn en lo orrol.
+S01-I1-27	Delv. Re nydhym ol pa fedh, eth new sell.
+S01-I1-28	Hy ull re dhessent et vran kest, gor vennuld hos cryrull, eth oskant ol hosen oskar o. Hy ull re dhess lunt et trenn, sa re lymm so dhevath um so sestowath lo dhrenn et hiskenneth. Hos carm. Delv. Hy ull lesk murr eth lesk murr, dem et fedh sa nath re yal nydhyl lom.
+S01-I1-29	Re hessym. El et fedh hosel sa re hessym.
+S01-I1-30	Nath re hebb o haral. Nath re ryt o veth galat sa re yal lor tul, eth re yal loskat.
+S01-I1-31	El lorr gever et Kethow sy, eth gever ol gethowath sa yaldar. El vesket et covv ull.
+S01-I1-32	Veska um rask et prenth, dhevath lo lern. Doss o ul reskyl lo ull, eth o wiskhovv dem susk.
+S01-I1-33	Doss et saed ullen um o sestow.
+S01-I1-34	Mysk o los: new hosen ull. Ew hosen ull.
+S01-I1-35	Cadhom o hosen re yal cadhat lom.
+S01-I1-36	Hy ull re vellent et vennuldath, hosen vellent o tul:
+S01-I1-37	Ganna cresket, pithulath driget, / ul gemmyl lo orrow, wemmeth myst; / re yyst hosel um dholmath luskat, / eth re dhresk et covv um o sest. / Re ryt o lesk sa senner demont, / eth re vaver nahos hyor vranast.
+S01-I1-38	Eth re vysk et odh: Tumar.
+S01-I1-39	Doss hosel meskdhrenn um et flenn ul lern, eth hos trenn ul vimm:
+S01-I1-40	Nawrodhat. Nath noss tul kethyl et gunn sy lo {{Halyna}}.

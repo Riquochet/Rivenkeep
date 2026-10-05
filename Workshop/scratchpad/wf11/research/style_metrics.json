@@ -1,0 +1,1200 @@
+{
+ "corpus": {
+  "v1.3 Book": {
+   "words": 21132,
+   "sentences": 1391,
+   "paragraphs": 408,
+   "sent_mean": 15.2,
+   "sent_median": 13,
+   "sent_p90": 29,
+   "sent_max": 75,
+   "pct_over30": 9.1,
+   "pct_over45": 1.0,
+   "pct_under10": 39.3,
+   "words_per_para": 51.8,
+   "semicolons_per_sent": 0.09,
+   "commas_per_sent": 1.06,
+   "and_per_sent": 0.69,
+   "archaic_lex_per_1k": 0.9,
+   "archaic_gram_per_1k": 0.3,
+   "contractions_per_1k": 0.0,
+   "dialogue_share_pct": 1.2,
+   "fk_grade": 4.3,
+   "pct_polysyllabic": 2.7,
+   "tic:one-said/other-finished": 0.19,
+   "tic:he and she": 0.0,
+   "tic:the two of them": 0.09,
+   "tic:his ... and hers": 0.05,
+   "tic:epic simile (As when / As a ...: so)": 0.0,
+   "tic:Picture/Think of (plain simile)": 0.0,
+   "tic:day of the banner": 0.0,
+   "tic:causal \", for \"": 3.55,
+   "tic:ere": 0.0,
+   "tic:rubric opening (Hear how / This is how / Now hear)": 0.33,
+   "tic:time anchor (nth season/night, years before/after)": 0.62,
+   "tic:numbers spelled (counts/dates)": 5.68,
+   "tic:upon": 0.57,
+   "tales": 25,
+   "words_per_tale_mean": 845.0,
+   "headnote_words_mean": 82.4,
+   "headnote_words_max": 210,
+   "headnote_share_pct": 8.9
+  },
+  "v2.0 Book": {
+   "words": 41143,
+   "sentences": 1959,
+   "paragraphs": 983,
+   "sent_mean": 21.0,
+   "sent_median": 15,
+   "sent_p90": 49,
+   "sent_max": 93,
+   "pct_over30": 24.1,
+   "pct_over45": 12.3,
+   "pct_under10": 34.7,
+   "words_per_para": 41.9,
+   "semicolons_per_sent": 0.24,
+   "commas_per_sent": 1.74,
+   "and_per_sent": 1.04,
+   "archaic_lex_per_1k": 9.0,
+   "archaic_gram_per_1k": 1.2,
+   "contractions_per_1k": 0.1,
+   "dialogue_share_pct": 3.1,
+   "fk_grade": 6.5,
+   "pct_polysyllabic": 2.2,
+   "tic:one-said/other-finished": 0.44,
+   "tic:he and she": 0.29,
+   "tic:the two of them": 0.97,
+   "tic:his ... and hers": 0.15,
+   "tic:epic simile (As when / As a ...: so)": 0.49,
+   "tic:Picture/Think of (plain simile)": 0.0,
+   "tic:day of the banner": 0.27,
+   "tic:causal \", for \"": 3.96,
+   "tic:ere": 1.75,
+   "tic:rubric opening (Hear how / This is how / Now hear)": 0.53,
+   "tic:time anchor (nth season/night, years before/after)": 1.63,
+   "tic:numbers spelled (counts/dates)": 8.0,
+   "tic:upon": 6.34,
+   "tales": 27,
+   "words_per_tale_mean": 1524.0,
+   "headnote_words_mean": 131.9,
+   "headnote_words_max": 217,
+   "headnote_share_pct": 8.0
+  },
+  "Modern v1.2": {
+   "words": 21116,
+   "sentences": 1572,
+   "paragraphs": 407,
+   "sent_mean": 13.4,
+   "sent_median": 12.0,
+   "sent_p90": 25,
+   "sent_max": 77,
+   "pct_over30": 3.6,
+   "pct_over45": 0.1,
+   "pct_under10": 38.4,
+   "words_per_para": 51.9,
+   "semicolons_per_sent": 0.04,
+   "commas_per_sent": 0.87,
+   "and_per_sent": 0.5,
+   "archaic_lex_per_1k": 0.0,
+   "archaic_gram_per_1k": 0.2,
+   "contractions_per_1k": 5.3,
+   "dialogue_share_pct": 1.2,
+   "fk_grade": 3.8,
+   "pct_polysyllabic": 2.9,
+   "tic:one-said/other-finished": 0.14,
+   "tic:he and she": 0.0,
+   "tic:the two of them": 0.09,
+   "tic:his ... and hers": 0.05,
+   "tic:epic simile (As when / As a ...: so)": 0.0,
+   "tic:Picture/Think of (plain simile)": 0.0,
+   "tic:day of the banner": 0.0,
+   "tic:causal \", for \"": 0.28,
+   "tic:ere": 0.0,
+   "tic:rubric opening (Hear how / This is how / Now hear)": 0.24,
+   "tic:time anchor (nth season/night, years before/after)": 0.57,
+   "tic:numbers spelled (counts/dates)": 5.49,
+   "tic:upon": 0.05,
+   "tales": 25,
+   "words_per_tale_mean": 845.0,
+   "headnote_words_mean": 87.2,
+   "headnote_words_max": 221,
+   "headnote_share_pct": 9.4
+  },
+  "Plain v2.0": {
+   "words": 40831,
+   "sentences": 3311,
+   "paragraphs": 983,
+   "sent_mean": 12.3,
+   "sent_median": 11,
+   "sent_p90": 23,
+   "sent_max": 44,
+   "pct_over30": 2.0,
+   "pct_over45": 0.0,
+   "pct_under10": 42.9,
+   "words_per_para": 41.5,
+   "semicolons_per_sent": 0.0,
+   "commas_per_sent": 0.79,
+   "and_per_sent": 0.34,
+   "archaic_lex_per_1k": 0.1,
+   "archaic_gram_per_1k": 0.4,
+   "contractions_per_1k": 15.5,
+   "dialogue_share_pct": 3.1,
+   "fk_grade": 3.4,
+   "pct_polysyllabic": 2.7,
+   "tic:one-said/other-finished": 0.44,
+   "tic:he and she": 0.22,
+   "tic:the two of them": 0.93,
+   "tic:his ... and hers": 0.15,
+   "tic:epic simile (As when / As a ...: so)": 0.0,
+   "tic:Picture/Think of (plain simile)": 0.47,
+   "tic:day of the banner": 0.27,
+   "tic:causal \", for \"": 0.42,
+   "tic:ere": 0.0,
+   "tic:rubric opening (Hear how / This is how / Now hear)": 0.34,
+   "tic:time anchor (nth season/night, years before/after)": 1.67,
+   "tic:numbers spelled (counts/dates)": 7.84,
+   "tic:upon": 0.02,
+   "tales": 27,
+   "words_per_tale_mean": 1512.0,
+   "headnote_words_mean": 132.0,
+   "headnote_words_max": 227,
+   "headnote_share_pct": 8.0
+  }
+ },
+ "hist": {
+  "v1.3 Book": [
+   17.6,
+   25.9,
+   15.1,
+   13.4,
+   18.8,
+   8.1,
+   0.9,
+   0.1
+  ],
+  "v2.0 Book": [
+   16.9,
+   20.2,
+   13.0,
+   11.8,
+   13.9,
+   11.8,
+   7.8,
+   4.5
+  ],
+  "Modern v1.2": [
+   17.5,
+   27.9,
+   19.3,
+   15.8,
+   15.9,
+   3.4,
+   0.1,
+   0.1
+  ],
+  "Plain v2.0": [
+   18.8,
+   28.8,
+   22.7,
+   15.0,
+   12.7,
+   2.0,
+   0.0,
+   0.0
+  ]
+ },
+ "pertale": {
+  "the torn cloak": {
+   "v1.3 Book": {
+    "id": "I.1",
+    "body": 957,
+    "head": 36,
+    "mean": 11.8,
+    "o30": 4.9,
+    "semi": 0.02,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "I.1",
+    "body": 1521,
+    "head": 117,
+    "mean": 20.6,
+    "o30": 25.7,
+    "semi": 0.3,
+    "dlg": 0.5
+   },
+   "Modern v1.2": {
+    "id": "I.1",
+    "body": 946,
+    "head": 38,
+    "mean": 10.1,
+    "o30": 0.0,
+    "semi": 0.05,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "I.1",
+    "body": 1502,
+    "head": 114,
+    "mean": 9.6,
+    "o30": 0.6,
+    "semi": 0.0,
+    "dlg": 0.5
+   }
+  },
+  "the cry of the bonded": {
+   "v1.3 Book": {
+    "id": "I.2",
+    "body": 944,
+    "head": 43,
+    "mean": 13.3,
+    "o30": 7.0,
+    "semi": 0.01,
+    "dlg": 6.1
+   },
+   "v2.0 Book": {
+    "id": "I.2",
+    "body": 1287,
+    "head": 87,
+    "mean": 23.0,
+    "o30": 28.6,
+    "semi": 0.32,
+    "dlg": 6.1
+   },
+   "Modern v1.2": {
+    "id": "I.2",
+    "body": 977,
+    "head": 43,
+    "mean": 12.5,
+    "o30": 2.6,
+    "semi": 0.0,
+    "dlg": 5.9
+   },
+   "Plain v2.0": {
+    "id": "I.2",
+    "body": 1270,
+    "head": 82,
+    "mean": 10.9,
+    "o30": 2.6,
+    "semi": 0.0,
+    "dlg": 6.5
+   }
+  },
+  "the captain's long breath": {
+   "v1.3 Book": {
+    "id": "I.3",
+    "body": 738,
+    "head": 54,
+    "mean": 14.5,
+    "o30": 11.8,
+    "semi": 0.06,
+    "dlg": 3.4
+   },
+   "v2.0 Book": {
+    "id": "I.3",
+    "body": 1397,
+    "head": 90,
+    "mean": 23.3,
+    "o30": 35.0,
+    "semi": 0.28,
+    "dlg": 5.0
+   },
+   "Modern v1.2": {
+    "id": "I.3",
+    "body": 740,
+    "head": 57,
+    "mean": 13.0,
+    "o30": 5.3,
+    "semi": 0.0,
+    "dlg": 3.1
+   },
+   "Plain v2.0": {
+    "id": "I.3",
+    "body": 1375,
+    "head": 86,
+    "mean": 11.5,
+    "o30": 1.7,
+    "semi": 0.0,
+    "dlg": 4.9
+   }
+  },
+  "the rite of the cornerstone": {
+   "v1.3 Book": {
+    "id": "I.4",
+    "body": 798,
+    "head": 80,
+    "mean": 17.3,
+    "o30": 13.0,
+    "semi": 0.02,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "I.4",
+    "body": 2772,
+    "head": 109,
+    "mean": 32.6,
+    "o30": 50.6,
+    "semi": 0.47,
+    "dlg": 3.5
+   },
+   "Modern v1.2": {
+    "id": "I.4",
+    "body": 832,
+    "head": 81,
+    "mean": 15.1,
+    "o30": 5.5,
+    "semi": 0.0,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "I.4",
+    "body": 2744,
+    "head": 105,
+    "mean": 12.8,
+    "o30": 2.3,
+    "semi": 0.0,
+    "dlg": 3.6
+   }
+  },
+  "the naming of the rivenmen": {
+   "v1.3 Book": {
+    "id": "I.5",
+    "body": 744,
+    "head": 35,
+    "mean": 14.9,
+    "o30": 10.0,
+    "semi": 0.02,
+    "dlg": 3.4
+   },
+   "v2.0 Book": {
+    "id": "I.5",
+    "body": 1652,
+    "head": 74,
+    "mean": 24.3,
+    "o30": 30.9,
+    "semi": 0.25,
+    "dlg": 4.4
+   },
+   "Modern v1.2": {
+    "id": "I.5",
+    "body": 742,
+    "head": 38,
+    "mean": 13.2,
+    "o30": 3.6,
+    "semi": 0.0,
+    "dlg": 3.4
+   },
+   "Plain v2.0": {
+    "id": "I.5",
+    "body": 1631,
+    "head": 73,
+    "mean": 12.4,
+    "o30": 0.8,
+    "semi": 0.0,
+    "dlg": 4.4
+   }
+  },
+  "the keep that was forgotten": {
+   "v1.3 Book": {
+    "id": "II.1",
+    "body": 721,
+    "head": 42,
+    "mean": 18.0,
+    "o30": 17.5,
+    "semi": 0.03,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "II.1",
+    "body": 1296,
+    "head": 136,
+    "mean": 27,
+    "o30": 35.4,
+    "semi": 0.23,
+    "dlg": 0.8
+   },
+   "Modern v1.2": {
+    "id": "II.1",
+    "body": 716,
+    "head": 43,
+    "mean": 14.9,
+    "o30": 6.2,
+    "semi": 0.0,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "II.1",
+    "body": 1271,
+    "head": 134,
+    "mean": 13.0,
+    "o30": 2.0,
+    "semi": 0.0,
+    "dlg": 0.8
+   }
+  },
+  "the breath of the wood": {
+   "v1.3 Book": {
+    "id": "II.2",
+    "body": 740,
+    "head": 123,
+    "mean": 14.5,
+    "o30": 5.9,
+    "semi": 0.04,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "II.2",
+    "body": 699,
+    "head": 185,
+    "mean": 13.7,
+    "o30": 0.0,
+    "semi": 0.16,
+    "dlg": 0.0
+   },
+   "Modern v1.2": {
+    "id": "II.2",
+    "body": 732,
+    "head": 130,
+    "mean": 13.3,
+    "o30": 3.6,
+    "semi": 0.02,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "II.2",
+    "body": 725,
+    "head": 195,
+    "mean": 9.9,
+    "o30": 0.0,
+    "semi": 0.0,
+    "dlg": 0.0
+   }
+  },
+  "the bonded and the theoliths": {
+   "v1.3 Book": {
+    "id": "II.3",
+    "body": 1295,
+    "head": 67,
+    "mean": 14.9,
+    "o30": 5.7,
+    "semi": 0.13,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "II.3",
+    "body": 1489,
+    "head": 153,
+    "mean": 18.6,
+    "o30": 18.8,
+    "semi": 0.28,
+    "dlg": 1.1
+   },
+   "Modern v1.2": {
+    "id": "II.3",
+    "body": 1308,
+    "head": 71,
+    "mean": 13.5,
+    "o30": 3.1,
+    "semi": 0.01,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "II.3",
+    "body": 1481,
+    "head": 150,
+    "mean": 11.1,
+    "o30": 2.2,
+    "semi": 0.01,
+    "dlg": 1.1
+   }
+  },
+  "their raising": {
+   "v2.0 Book": {
+    "id": "III.1",
+    "body": 1324,
+    "head": 126,
+    "mean": 19.8,
+    "o30": 26.9,
+    "semi": 0.16,
+    "dlg": 0.6
+   },
+   "Plain v2.0": {
+    "id": "III.1",
+    "body": 1279,
+    "head": 120,
+    "mean": 11.3,
+    "o30": 0.9,
+    "semi": 0.0,
+    "dlg": 0.5
+   }
+  },
+  "their fall": {
+   "v2.0 Book": {
+    "id": "III.2",
+    "body": 1731,
+    "head": 92,
+    "mean": 20.6,
+    "o30": 25.0,
+    "semi": 0.15,
+    "dlg": 1.0
+   },
+   "Plain v2.0": {
+    "id": "III.2",
+    "body": 1687,
+    "head": 91,
+    "mean": 11.7,
+    "o30": 0.7,
+    "semi": 0.0,
+    "dlg": 1.8
+   }
+  },
+  "the felling of the black pillars": {
+   "v1.3 Book": {
+    "id": "IV.1",
+    "body": 939,
+    "head": 51,
+    "mean": 14.9,
+    "o30": 11.1,
+    "semi": 0.02,
+    "dlg": 2.9
+   },
+   "v2.0 Book": {
+    "id": "IV.1",
+    "body": 1498,
+    "head": 93,
+    "mean": 23.4,
+    "o30": 25.0,
+    "semi": 0.25,
+    "dlg": 0.7
+   },
+   "Modern v1.2": {
+    "id": "IV.1",
+    "body": 945,
+    "head": 50,
+    "mean": 11.5,
+    "o30": 0.0,
+    "semi": 0.0,
+    "dlg": 2.9
+   },
+   "Plain v2.0": {
+    "id": "IV.1",
+    "body": 1474,
+    "head": 94,
+    "mean": 12.4,
+    "o30": 2.5,
+    "semi": 0.0,
+    "dlg": 0.7
+   }
+  },
+  "the axe in the grain": {
+   "v1.3 Book": {
+    "id": "IV.2",
+    "body": 723,
+    "head": 196,
+    "mean": 16.8,
+    "o30": 9.3,
+    "semi": 0.19,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "IV.2",
+    "body": 719,
+    "head": 217,
+    "mean": 13.6,
+    "o30": 1.9,
+    "semi": 0.13,
+    "dlg": 0.0
+   },
+   "Modern v1.2": {
+    "id": "IV.2",
+    "body": 703,
+    "head": 182,
+    "mean": 14.1,
+    "o30": 0.0,
+    "semi": 0.1,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "IV.2",
+    "body": 724,
+    "head": 227,
+    "mean": 10.5,
+    "o30": 1.4,
+    "semi": 0.0,
+    "dlg": 0.0
+   }
+  },
+  "the warden's door": {
+   "v1.3 Book": {
+    "id": "IV.3",
+    "body": 935,
+    "head": 86,
+    "mean": 12.6,
+    "o30": 5.4,
+    "semi": 0.0,
+    "dlg": 0.5
+   },
+   "v2.0 Book": {
+    "id": "IV.3",
+    "body": 2150,
+    "head": 175,
+    "mean": 19.5,
+    "o30": 23.6,
+    "semi": 0.21,
+    "dlg": 5.3
+   },
+   "Modern v1.2": {
+    "id": "IV.3",
+    "body": 961,
+    "head": 93,
+    "mean": 12.3,
+    "o30": 3.8,
+    "semi": 0.0,
+    "dlg": 0.5
+   },
+   "Plain v2.0": {
+    "id": "IV.3",
+    "body": 2127,
+    "head": 177,
+    "mean": 12.5,
+    "o30": 1.2,
+    "semi": 0.0,
+    "dlg": 5.4
+   }
+  },
+  "the gift held an hour": {
+   "v1.3 Book": {
+    "id": "IV.4",
+    "body": 778,
+    "head": 139,
+    "mean": 15.6,
+    "o30": 12.0,
+    "semi": 0.06,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "IV.4",
+    "body": 890,
+    "head": 191,
+    "mean": 13.9,
+    "o30": 0.0,
+    "semi": 0.09,
+    "dlg": 0.3
+   },
+   "Modern v1.2": {
+    "id": "IV.4",
+    "body": 796,
+    "head": 156,
+    "mean": 13.0,
+    "o30": 1.6,
+    "semi": 0.0,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "IV.4",
+    "body": 916,
+    "head": 196,
+    "mean": 11.7,
+    "o30": 0.0,
+    "semi": 0.0,
+    "dlg": 0.3
+   }
+  },
+  "the burning boat": {
+   "v1.3 Book": {
+    "id": "IV.5",
+    "body": 736,
+    "head": 63,
+    "mean": 17.1,
+    "o30": 16.3,
+    "semi": 0.05,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "IV.5",
+    "body": 1653,
+    "head": 122,
+    "mean": 27.1,
+    "o30": 42.6,
+    "semi": 0.3,
+    "dlg": 5.7
+   },
+   "Modern v1.2": {
+    "id": "IV.5",
+    "body": 743,
+    "head": 70,
+    "mean": 14.3,
+    "o30": 3.8,
+    "semi": 0.02,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "IV.5",
+    "body": 1639,
+    "head": 114,
+    "mean": 14.4,
+    "o30": 4.4,
+    "semi": 0.0,
+    "dlg": 5.7
+   }
+  },
+  "the voyage of the aelvaren": {
+   "v1.3 Book": {
+    "id": "IV.6",
+    "body": 549,
+    "head": 124,
+    "mean": 18.9,
+    "o30": 17.2,
+    "semi": 0.24,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "IV.6",
+    "body": 651,
+    "head": 177,
+    "mean": 15.1,
+    "o30": 0.0,
+    "semi": 0.19,
+    "dlg": 0.0
+   },
+   "Modern v1.2": {
+    "id": "IV.6",
+    "body": 566,
+    "head": 139,
+    "mean": 15.7,
+    "o30": 8.3,
+    "semi": 0.11,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "IV.6",
+    "body": 658,
+    "head": 179,
+    "mean": 11.5,
+    "o30": 0.0,
+    "semi": 0.0,
+    "dlg": 0.0
+   }
+  },
+  "the first glyph": {
+   "v1.3 Book": {
+    "id": "V.1",
+    "body": 714,
+    "head": 54,
+    "mean": 17,
+    "o30": 19.0,
+    "semi": 0.12,
+    "dlg": 5.5
+   },
+   "v2.0 Book": {
+    "id": "V.1",
+    "body": 1331,
+    "head": 97,
+    "mean": 28.9,
+    "o30": 47.8,
+    "semi": 0.39,
+    "dlg": 5.4
+   },
+   "Modern v1.2": {
+    "id": "V.1",
+    "body": 709,
+    "head": 42,
+    "mean": 14.8,
+    "o30": 10.4,
+    "semi": 0.06,
+    "dlg": 5.5
+   },
+   "Plain v2.0": {
+    "id": "V.1",
+    "body": 1314,
+    "head": 93,
+    "mean": 14.4,
+    "o30": 3.3,
+    "semi": 0.0,
+    "dlg": 5.4
+   }
+  },
+  "the night of the naming": {
+   "v1.3 Book": {
+    "id": "V.2",
+    "body": 949,
+    "head": 50,
+    "mean": 13.8,
+    "o30": 8.7,
+    "semi": 0.03,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "V.2",
+    "body": 1719,
+    "head": 67,
+    "mean": 23.2,
+    "o30": 29.7,
+    "semi": 0.22,
+    "dlg": 2.7
+   },
+   "Modern v1.2": {
+    "id": "V.2",
+    "body": 962,
+    "head": 55,
+    "mean": 13.5,
+    "o30": 7.0,
+    "semi": 0.03,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "V.2",
+    "body": 1703,
+    "head": 71,
+    "mean": 14.1,
+    "o30": 3.3,
+    "semi": 0.0,
+    "dlg": 2.5
+   }
+  },
+  "the wreck that went home": {
+   "v1.3 Book": {
+    "id": "V.3",
+    "body": 554,
+    "head": 123,
+    "mean": 16.3,
+    "o30": 8.8,
+    "semi": 0.09,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "V.3",
+    "body": 563,
+    "head": 138,
+    "mean": 13.1,
+    "o30": 0.0,
+    "semi": 0.09,
+    "dlg": 0.0
+   },
+   "Modern v1.2": {
+    "id": "V.3",
+    "body": 559,
+    "head": 137,
+    "mean": 14.7,
+    "o30": 5.3,
+    "semi": 0.03,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "V.3",
+    "body": 582,
+    "head": 140,
+    "mean": 12.1,
+    "o30": 0.0,
+    "semi": 0.0,
+    "dlg": 0.0
+   }
+  },
+  "the council under the thin sky": {
+   "v1.3 Book": {
+    "id": "V.4",
+    "body": 611,
+    "head": 130,
+    "mean": 15.3,
+    "o30": 5.0,
+    "semi": 0.23,
+    "dlg": 2.8
+   },
+   "v2.0 Book": {
+    "id": "V.4",
+    "body": 698,
+    "head": 156,
+    "mean": 13.4,
+    "o30": 0.0,
+    "semi": 0.13,
+    "dlg": 10.3
+   },
+   "Modern v1.2": {
+    "id": "V.4",
+    "body": 613,
+    "head": 147,
+    "mean": 13.6,
+    "o30": 0.0,
+    "semi": 0.11,
+    "dlg": 2.8
+   },
+   "Plain v2.0": {
+    "id": "V.4",
+    "body": 703,
+    "head": 157,
+    "mean": 11.3,
+    "o30": 0.0,
+    "semi": 0.0,
+    "dlg": 9.5
+   }
+  },
+  "the tides, as the wall counted them": {
+   "v1.3 Book": {
+    "id": "V.5",
+    "body": 1059,
+    "head": 49,
+    "mean": 12.6,
+    "o30": 6.0,
+    "semi": 0.06,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "V.5",
+    "body": 3145,
+    "head": 108,
+    "mean": 18.9,
+    "o30": 23.5,
+    "semi": 0.26,
+    "dlg": 3.6
+   },
+   "Modern v1.2": {
+    "id": "V.5",
+    "body": 1076,
+    "head": 54,
+    "mean": 11.7,
+    "o30": 2.2,
+    "semi": 0.02,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "V.5",
+    "body": 3099,
+    "head": 112,
+    "mean": 11.6,
+    "o30": 1.5,
+    "semi": 0.0,
+    "dlg": 3.4
+   }
+  },
+  "the growing": {
+   "v1.3 Book": {
+    "id": "V.6",
+    "body": 1010,
+    "head": 136,
+    "mean": 17.4,
+    "o30": 6.9,
+    "semi": 0.36,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "V.6",
+    "body": 800,
+    "head": 173,
+    "mean": 12.5,
+    "o30": 0.0,
+    "semi": 0.12,
+    "dlg": 0.0
+   },
+   "Modern v1.2": {
+    "id": "V.6",
+    "body": 1062,
+    "head": 147,
+    "mean": 15.9,
+    "o30": 3.0,
+    "semi": 0.24,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "V.6",
+    "body": 860,
+    "head": 175,
+    "mean": 11.5,
+    "o30": 0.0,
+    "semi": 0.0,
+    "dlg": 0.0
+   }
+  },
+  "the mirror in the grain": {
+   "v1.3 Book": {
+    "id": "V.7",
+    "body": 885,
+    "head": 34,
+    "mean": 13.6,
+    "o30": 6.2,
+    "semi": 0.09,
+    "dlg": 6.0
+   },
+   "v2.0 Book": {
+    "id": "V.7",
+    "body": 3150,
+    "head": 110,
+    "mean": 23.5,
+    "o30": 31.3,
+    "semi": 0.33,
+    "dlg": 5.5
+   },
+   "Modern v1.2": {
+    "id": "V.7",
+    "body": 928,
+    "head": 39,
+    "mean": 12.7,
+    "o30": 2.7,
+    "semi": 0.01,
+    "dlg": 5.8
+   },
+   "Plain v2.0": {
+    "id": "V.7",
+    "body": 3102,
+    "head": 111,
+    "mean": 13.6,
+    "o30": 1.3,
+    "semi": 0.0,
+    "dlg": 5.4
+   }
+  },
+  "the homecomings": {
+   "v2.0 Book": {
+    "id": "VI.1",
+    "body": 1273,
+    "head": 166,
+    "mean": 21.6,
+    "o30": 33.9,
+    "semi": 0.22,
+    "dlg": 0.6
+   },
+   "Plain v2.0": {
+    "id": "VI.1",
+    "body": 1268,
+    "head": 170,
+    "mean": 12.6,
+    "o30": 1.0,
+    "semi": 0.0,
+    "dlg": 1.6
+   }
+  },
+  "the thrones that walk the sea": {
+   "v1.3 Book": {
+    "id": "III.2",
+    "body": 1053,
+    "head": 210,
+    "mean": 16.7,
+    "o30": 6.3,
+    "semi": 0.21,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "VI.2",
+    "body": 879,
+    "head": 176,
+    "mean": 13.5,
+    "o30": 0.0,
+    "semi": 0.29,
+    "dlg": 0.0
+   },
+   "Modern v1.2": {
+    "id": "III.2",
+    "body": 1102,
+    "head": 221,
+    "mean": 14.9,
+    "o30": 4.1,
+    "semi": 0.09,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "VI.2",
+    "body": 884,
+    "head": 175,
+    "mean": 11.1,
+    "o30": 0.0,
+    "semi": 0.0,
+    "dlg": 0.0
+   }
+  },
+  "the knowing of the green wood": {
+   "v1.3 Book": {
+    "id": "VI.1",
+    "body": 903,
+    "head": 39,
+    "mean": 17.4,
+    "o30": 13.5,
+    "semi": 0.1,
+    "dlg": 0.2
+   },
+   "v2.0 Book": {
+    "id": "VI.3",
+    "body": 2659,
+    "head": 126,
+    "mean": 28.0,
+    "o30": 42.1,
+    "semi": 0.27,
+    "dlg": 4.0
+   },
+   "Modern v1.2": {
+    "id": "VI.1",
+    "body": 877,
+    "head": 41,
+    "mean": 14.9,
+    "o30": 5.1,
+    "semi": 0.03,
+    "dlg": 0.2
+   },
+   "Plain v2.0": {
+    "id": "VI.3",
+    "body": 2644,
+    "head": 126,
+    "mean": 15.6,
+    "o30": 7.6,
+    "semi": 0.0,
+    "dlg": 4.0
+   }
+  },
+  "the stone out of the grey": {
+   "v1.3 Book": {
+    "id": "Epi",
+    "body": 650,
+    "head": 49,
+    "mean": 17.6,
+    "o30": 18.9,
+    "semi": 0.08,
+    "dlg": 0.0
+   },
+   "v2.0 Book": {
+    "id": "Epi",
+    "body": 2197,
+    "head": 100,
+    "mean": 23.6,
+    "o30": 29.0,
+    "semi": 0.19,
+    "dlg": 3.2
+   },
+   "Modern v1.2": {
+    "id": "Epi",
+    "body": 656,
+    "head": 54,
+    "mean": 16.8,
+    "o30": 12.8,
+    "semi": 0.03,
+    "dlg": 0.0
+   },
+   "Plain v2.0": {
+    "id": "Epi",
+    "body": 2169,
+    "head": 96,
+    "mean": 13.7,
+    "o30": 4.4,
+    "semi": 0.0,
+    "dlg": 3.2
+   }
+  },
+  "the book of the havens": {
+   "v1.3 Book": {
+    "id": "III.1",
+    "body": 1147,
+    "head": 47,
+    "mean": 16.9,
+    "o30": 4.4,
+    "semi": 0.06,
+    "dlg": 0.0
+   },
+   "Modern v1.2": {
+    "id": "III.1",
+    "body": 865,
+    "head": 52,
+    "mean": 12.9,
+    "o30": 0.0,
+    "semi": 0.0,
+    "dlg": 0.0
+   }
+  }
+ }
+}

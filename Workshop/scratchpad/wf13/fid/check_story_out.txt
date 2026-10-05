@@ -1,0 +1,32 @@
+0. 41 switch units: 31 leaves, 10 frame units
+1. words, leaf by leaf
+   leaves word for word: 62 of 62
+   title page, Contents, Book heads and Arguments: each text its own, checked
+2. the Original
+   41 anchors; 1367 blocks; every block in its place by the Book line: 41 of 41; no slot unfilled: True
+   Halyna's two inks: 155 paragraphs in The Book, 155 in the Original, line for line
+3. HTML: 118920 tags; unbalanced 0; still open []
+   ids 5736 unique: True; in-page links 125, dead 0; labels 96, all for a radio: True
+4. one switch for the whole Book
+   the sticky bar: 'The Book · Plain Words · Original', labels for read-book, read-plain, read-orig
+   31 leaves each with the same three labels; 41 switch units each with The Book, Plain Words and Original
+   the CSS: radios fixed and hidden; :checked ~ .ctn .p-* switches every pane; the active label marked in every bar
+5. the script
+   one inline script, 2790 bytes; localStorage 2 times, each inside try/catch; no alert/confirm/prompt/print; no handlers
+6. outside links ['https://fonts.googleapis.com', 'https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300..600;1,300..600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@300;400;600;700&display=swap', 'https://fonts.gstatic.com']; relative links ['Rivenkeep_Legends_Notes.html']
+7. tale ids: the v2 page had 29, all present: True; 29 on the page
+   datelines 29 (the Original's 29, line for line); headnotes: The Book 31, Plain Words 33
+   READING blocks: 16 (the 8 wood leaves in both texts), each line its own, the voices by turns, no label; the seal set
+8. lintels: source book 113 plain 136; page book 113 plain 136
+   wood-role passages inside stone leaves: book 30, plain 30
+   leaves: 21 stone, 8 wood
+9. design matter: none
+   the Original: no builder, tool or scratch matter; the warden's blots: The Book 12, the ink 12, the romanisation 12
+10. the web copy
+   opens <title> · Google Fonts <link> · one <style>; no doctype/html/head/body; 1 :root rule with color-scheme dark; literal colours outside :root: 0; font inline; sticky at the safe area; links to files: 0; 13.24 MB (13887337 bytes)
+   the page: 13.25 MB (13890288 bytes)
+11. the romanisation, word over word
+   1218 romanisation folds; 1288 lines set word over word (1133 distinct, every one of gloss_in's 1133: True), 26532 words glossed, 1 line(s) with no word (a gap); problems 0
+12. Plain Words v3.1
+   the source: plain_v31.md; Plain datelines 29 of the Book's 29, each the source's first italic paragraph, the dl1 landmark shared, the headnote after; headnote paragraphs 33; the note for new readers: True, 4 paragraphs
+ALL CHECKS PASS

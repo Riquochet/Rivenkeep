@@ -1,0 +1,26 @@
+# name: IV.4, the Guest's sentence (the gift's own round, mystaeri_spec §5.4)
+round IV-4-gift {wood: stone; pith: round; rings: 11; rules after: [3, 7]; axis 0}
+  I
+    r1/1  0: STOP*
+    r2/1  2: EDGE    3: AXE+PILLAR×3      band MIST files 2–3
+    r3/1  3: LIVE
+  ‖
+  II
+    r4/1  8: US×3      band MIST files 0–15
+    r5/1  0: STONEFOLK×3    3: AXE
+    r6/1  3: OPEN      band MIST files 5–1
+    r7/1  3: FLASH    13: !LIVE+SAPLING×3
+  ‖
+  III
+    r8/1  8: US×3      band MIST files 7–9
+    r9/1  0: STONEFOLK×3    8: !STRIKE
+    r10/1 3: DYING    8: BENEATH+DYING
+    r11/1 0: STOP
+  runners
+    run t1   0.r5/1        →      3.r5/1
+    run t2   3.r7/1        →      13.r7/1
+    run t3   8.r9/1        →      0.r9/1
+    run t4   3.r10/1       ⇒      0.r11/1
+  ray 3: r2/1–r4/1
+  ray 8: r4/1–r10/1
+  mem 8: r8/1 → pith

@@ -1,0 +1,18 @@
+# name: T-04
+round T-04 {wood: eldest; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 3, 3]}
+  I
+    r1/1  0: MOUTHS*
+  ‖
+  II
+    r2/1  0.1: >EYE    0.2: EYE    4: HULL×3
+    r3/1  0: EYE    12: BENEATH+GO
+  ‖
+  III
+    r4/1  6: !EYE    12: RISE
+  bark
+    bark 0: BENEATH+DEEP
+  runners
+    run t1  0.1.r2/1   →      4.r2/1
+    run t2  0.2.r2/1   →      4.r2/1
+    run t3  12.r3/1    →      0.r3/1
+    run t4  12.r4/1    →in    6.r4/1

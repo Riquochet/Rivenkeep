@@ -1,0 +1,19 @@
+# name: T-07
+round T-07 {wood: eldest; pith: war; rings: 5; rules after: [1, 4]; cells: [1, 2, 2, 3, 3]}
+  I
+    r1/1  0: KNOT*
+  ‖
+  II
+    r2/1  0: SQUARE+EYE    4: ROAD    12: GO^r3
+    r3/1  0: SQUARE+!MEND    12: GO@2      band WHITE files 0–0
+    r4/1  12: GO@3
+  ‖
+  III
+    r5/1  0: SHORE    12: GO
+  bark
+    bark 0: DEEP+KNOT[WHITE]
+  runners
+    run t1  0.r2/1   →thru  12.r2/1
+    run t2  12.r2/1  →      4.r2/1
+    run t3  12.r4/1  ⇒      12.r5/1
+    run t4  12.r5/1  →in    0.r5/1

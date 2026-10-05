@@ -1,0 +1,2226 @@
+[
+ {
+  "form": "tolm",
+  "sub": "5.1",
+  "hal": "tolmos",
+  "cls": "B",
+  "sense": "a stone; a dressed stone of a wall; a letter of the course-hand",
+  "note": "S dholm, N dolm"
+ },
+ {
+  "form": "hal",
+  "sub": "5.1",
+  "hal": "xalos",
+  "cls": "B",
+  "sense": "bedrock, the living rock of the ridge",
+  "note": "in Halvard"
+ },
+ {
+  "form": "hald",
+  "sub": "5.1",
+  "hal": "xaldos",
+  "cls": "B",
+  "sense": "a wall",
+  "note": "\"rock made to stand\", from hal"
+ },
+ {
+  "form": "lodh",
+  "sub": "5.1",
+  "hal": "lodhos",
+  "cls": "B",
+  "sense": "mortar; the mortar line of a text; the bond",
+  "note": "Lodh Helv, the Aetherbond"
+ },
+ {
+  "form": "trenn",
+  "sub": "5.1",
+  "hal": "trennos",
+  "cls": "S",
+  "sense": "a course of stones; a line of writing; a tale laid in one night",
+  "note": "\"a tale that is laid is part of the wall\""
+ },
+ {
+  "form": "cadh",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) lay a stone, a course, a tale",
+  "note": "cadhat laid; Cadh et trenn \"Lay the tale\""
+ },
+ {
+  "form": "ston",
+  "sub": "5.1",
+  "hal": "stonos (3sg)",
+  "cls": "B",
+  "sense": "(v.) stand (of a wall), make stand, hold firm",
+  "note": "Ston. \"It stands\": the close of an oath"
+ },
+ {
+  "form": "gald",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) build, raise a work",
+  "note": "S yald"
+ },
+ {
+  "form": "nayald",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) destroy",
+  "note": "na- + S gald, \"un-build\""
+ },
+ {
+  "form": "clenn",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(adj.) new; (v.) make new, mend",
+  "note": "ul glennol \"being mended\""
+ },
+ {
+  "form": "stann",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) quarry, cut stone from the bed",
+  "note": "Stannard, the quarryman"
+ },
+ {
+  "form": "stannow",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a quarry",
+  "note": "place -ow"
+ },
+ {
+  "form": "bresk",
+  "sub": "5.1",
+  "hal": "breskis",
+  "cls": "S",
+  "sense": "a chisel",
+  "note": ""
+ },
+ {
+  "form": "drunn",
+  "sub": "5.1",
+  "hal": "drunnos",
+  "cls": "B",
+  "sense": "a mallet, a hammer",
+  "note": "drunnard a smith; drunnow a smithy, a forge"
+ },
+ {
+  "form": "gann",
+  "sub": "5.1",
+  "hal": "gannos",
+  "cls": "B",
+  "sense": "a post, an upright",
+  "note": ""
+ },
+ {
+  "form": "ganna",
+  "sub": "5.1",
+  "hal": "gannā",
+  "cls": "B",
+  "sense": "a gate",
+  "note": "an old dual, \"the two posts\". ganna ulvenn is the inner gate"
+ },
+ {
+  "form": "hosk",
+  "sub": "5.1",
+  "hal": "hoskos",
+  "cls": "B",
+  "sense": "a lintel; a capstone; (v.) lay the lintel, seal",
+  "note": "hoskol the sealing; et Hosk the Title"
+ },
+ {
+  "form": "gorn",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a corner, a quoin",
+  "note": ""
+ },
+ {
+  "form": "gorndholm",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a cornerstone",
+  "note": "gorn + S tolm"
+ },
+ {
+  "form": "trenndholm",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "B",
+  "sense": "the tale-stone",
+  "note": "trenn + S tolm: \"the course-stone\""
+ },
+ {
+  "form": "kethow",
+  "sub": "5.1",
+  "hal": "kethū",
+  "cls": "B",
+  "sense": "a keep, a hold",
+  "note": "\"holding-place\", from keth"
+ },
+ {
+  "form": "tresk",
+  "sub": "5.1",
+  "hal": "treskis",
+  "cls": "S",
+  "sense": "a cleft, a split; (v.) cleave, rive, tear",
+  "note": "treskat riven, torn"
+ },
+ {
+  "form": "lest",
+  "sub": "5.1",
+  "hal": "lestis",
+  "cls": "S",
+  "sense": "a house",
+  "note": "lest Vardh a temple"
+ },
+ {
+  "form": "taldow",
+  "sub": "5.1",
+  "hal": "taldū",
+  "cls": "B",
+  "sense": "a tower, a high place",
+  "note": "from tald, rise"
+ },
+ {
+  "form": "cumm",
+  "sub": "5.1",
+  "hal": "cummos",
+  "cls": "B",
+  "sense": "a haven: any walled place of shelter",
+  "note": "\"not always a harbour for ships\""
+ },
+ {
+  "form": "halflenn",
+  "sub": "5.1",
+  "hal": "—",
+  "cls": "S",
+  "sense": "slate",
+  "note": "\"rock-leaf\""
+ },
+ {
+  "form": "stell",
+  "sub": "5.1",
+  "hal": "stellis",
+  "cls": "S",
+  "sense": "a cairn",
+  "note": ""
+ },
+ {
+  "form": "pell",
+  "sub": "5.1",
+  "hal": "pellis",
+  "cls": "S",
+  "sense": "a spire, a tall point",
+  "note": "in Pellow"
+ },
+ {
+  "form": "ryt",
+  "sub": "5.1",
+  "hal": "wrytis",
+  "cls": "S",
+  "sense": "a cut vow, an oath; an inscription; (v.) cut letters, write, swear",
+  "note": "Rytom um … \"I swear upon …\""
+ },
+ {
+  "form": "Stonwryt",
+  "sub": "5.1",
+  "hal": "stonwryta",
+  "cls": "S",
+  "sense": "the vow cut under a great work; the Stonwryt coin; trust",
+  "note": "\"the standing cutting\"; said /ˈstonryt/"
+ },
+ {
+  "form": "Stonwrytan",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "the guild; the Stonewrights",
+  "note": "collective -an, \"those of the Stonwryt\". Vocative in the Cry"
+ },
+ {
+  "form": "stonwrytel",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "S",
+  "sense": "one Stonewright",
+  "note": "singulative -el"
+ },
+ {
+  "form": "prass",
+  "sub": "5.2",
+  "hal": "prassos",
+  "cls": "B",
+  "sense": "a master of the craft",
+  "note": ""
+ },
+ {
+  "form": "prassel",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "S",
+  "sense": "a prentice",
+  "note": "\"little master\""
+ },
+ {
+  "form": "Hemm · Hemma",
+  "sub": "5.2",
+  "hal": "hemmos · hemmā",
+  "cls": "S · B",
+  "sense": "Elder · Elderess",
+  "note": "\"old one\"; one rank. Was Mell: Sindarin mell is \"dear\", the root of mellon (originality pass)"
+ },
+ {
+  "form": "Mardh",
+  "sub": "5.2",
+  "hal": "Mardhos",
+  "cls": "B",
+  "sense": "God",
+  "note": "Used of nothing else. It softens in construct (lest Vardh) and is never the butt of a jest"
+ },
+ {
+  "form": "vennoth",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "faith; truth; faithfulness",
+  "note": "venn + -Oth"
+ },
+ {
+  "form": "ammel",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) pray",
+  "note": ""
+ },
+ {
+  "form": "Lodh Helv",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "S",
+  "sense": "the Aetherbond",
+  "note": "\"the mortar of the sky\""
+ },
+ {
+  "form": "et Lodhan",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "the Bonded",
+  "note": "\"those of the mortar\""
+ },
+ {
+  "form": "lodhat",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "bonded",
+  "note": "\"mortared\""
+ },
+ {
+  "form": "nalodhat",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "unbonded",
+  "note": ""
+ },
+ {
+  "form": "sullast",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a third; the unbonded third of a hearth",
+  "note": "ordinal of sull (three)"
+ },
+ {
+  "form": "veskerd",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "S",
+  "sense": "a seer",
+  "note": "\"one who reads\" the cradles"
+ },
+ {
+  "form": "tevow",
+  "sub": "5.2",
+  "hal": "tevū",
+  "cls": "B",
+  "sense": "a cradle",
+  "note": "\"child-place\""
+ },
+ {
+  "form": "hoskol",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "the sealing (the wedding)",
+  "note": "\"the laying of the lintel\""
+ },
+ {
+  "form": "hoskvoll",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a pair-name",
+  "note": "\"lintel-name\""
+ },
+ {
+  "form": "voll",
+  "sub": "5.2",
+  "hal": "vollos",
+  "cls": "B",
+  "sense": "a name",
+  "note": ""
+ },
+ {
+  "form": "Tolm Vardh",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a Theolith",
+  "note": "\"stone of God\"; pl. Tolmath Vardh"
+ },
+ {
+  "form": "Ryt Dhunnoth",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "the Covenant of Completion",
+  "note": "\"the vow of wholeness\"; its words are withheld"
+ },
+ {
+  "form": "tunn",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "whole, complete",
+  "note": "tunnoth wholeness"
+ },
+ {
+  "form": "grest",
+  "sub": "5.2",
+  "hal": "grestos",
+  "cls": "S",
+  "sense": "harm, hurt",
+  "note": "Grest um hos, grest um vana"
+ },
+ {
+  "form": "pana",
+  "sub": "5.2",
+  "hal": "panā",
+  "cls": "B",
+  "sense": "both",
+  "note": "\"the two\"; S vana"
+ },
+ {
+  "form": "par",
+  "sub": "5.2",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) guard, protect; (n.) a watch",
+  "note": ""
+ },
+ {
+  "form": "pard",
+  "sub": "5.2",
+  "hal": "pardos",
+  "cls": "B",
+  "sense": "a warden, a keeper",
+  "note": "S vard: Halvard, Lurrvard"
+ },
+ {
+  "form": "odh",
+  "sub": "5.3",
+  "hal": "odhos",
+  "cls": "B",
+  "sense": "a hearth",
+  "note": "Odh Sell, the Long Hearth"
+ },
+ {
+  "form": "theld",
+  "sub": "5.3",
+  "hal": "theldis",
+  "cls": "S",
+  "sense": "a family, a household",
+  "note": "\"hearth-kin\"; pl. theldeth"
+ },
+ {
+  "form": "varn",
+  "sub": "5.3",
+  "hal": "varnos",
+  "cls": "B",
+  "sense": "home",
+  "note": ""
+ },
+ {
+  "form": "tev",
+  "sub": "5.3",
+  "hal": "tevis",
+  "cls": "S",
+  "sense": "a child",
+  "note": "pl. tevath (irregular, from old tevāthi)"
+ },
+ {
+  "form": "gedh",
+  "sub": "5.3",
+  "hal": "gedhis",
+  "cls": "S",
+  "sense": "a father",
+  "note": ""
+ },
+ {
+  "form": "odha",
+  "sub": "5.3",
+  "hal": "odhā",
+  "cls": "B",
+  "sense": "a mother",
+  "note": "\"she of the hearth\""
+ },
+ {
+  "form": "uld",
+  "sub": "5.3",
+  "hal": "uldos",
+  "cls": "B",
+  "sense": "a man; a grown person",
+  "note": ""
+ },
+ {
+  "form": "essa",
+  "sub": "5.3",
+  "hal": "essā",
+  "cls": "B",
+  "sense": "a woman",
+  "note": ""
+ },
+ {
+  "form": "lunt",
+  "sub": "5.3",
+  "hal": "luntos",
+  "cls": "B",
+  "sense": "a people, a nation",
+  "note": ""
+ },
+ {
+  "form": "Orrow",
+  "sub": "5.3",
+  "hal": "orrū",
+  "cls": "B",
+  "sense": "the Shore; the Shorelands",
+  "note": ""
+ },
+ {
+  "form": "Orrowan",
+  "sub": "5.3",
+  "hal": "—",
+  "cls": "B",
+  "sense": "the Shorelanders",
+  "note": ""
+ },
+ {
+  "form": "Orrowen",
+  "sub": "5.3",
+  "hal": "—",
+  "cls": "S",
+  "sense": "the Shoreland tongue",
+  "note": "\"of the Shore\""
+ },
+ {
+  "form": "brodhen",
+  "sub": "5.3",
+  "hal": "—",
+  "cls": "S",
+  "sense": "a speech, a tongue",
+  "note": "from brod word"
+ },
+ {
+  "form": "Treskan",
+  "sub": "5.3",
+  "hal": "—",
+  "cls": "B",
+  "sense": "the Rivenmen",
+  "note": "\"the cleft-folk\""
+ },
+ {
+  "form": "arra",
+  "sub": "5.3",
+  "hal": "arrā",
+  "cls": "B",
+  "sense": "a guest",
+  "note": ""
+ },
+ {
+  "form": "gebb",
+  "sub": "5.3",
+  "hal": "gebbis",
+  "cls": "S",
+  "sense": "a door",
+  "note": ""
+ },
+ {
+  "form": "lumm",
+  "sub": "5.3",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) kneel",
+  "note": ""
+ },
+ {
+  "form": "vall",
+  "sub": "5.3",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) love",
+  "note": ""
+ },
+ {
+  "form": "osk",
+  "sub": "5.3",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) trust; (n.) trust",
+  "note": ""
+ },
+ {
+  "form": "tesk",
+  "sub": "5.3",
+  "hal": "teskis",
+  "cls": "S",
+  "sense": "a generation",
+  "note": "delv tesk twelve generations"
+ },
+ {
+  "form": "Crenn",
+  "sub": "5.4",
+  "hal": "crennos",
+  "cls": "S",
+  "sense": "a captain; the Captain",
+  "note": "S Hrenn, N Grenn"
+ },
+ {
+  "form": "Ketherd",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "S",
+  "sense": "the Commander",
+  "note": "\"the holder\", from keth: the Rite's name for him"
+ },
+ {
+  "form": "vennuld",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a True Man",
+  "note": "venn + S uld; et Delv, the Twelve"
+ },
+ {
+  "form": "hesperd",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "S",
+  "sense": "a soldier",
+  "note": "\"sword-one\""
+ },
+ {
+  "form": "hesp",
+  "sub": "5.4",
+  "hal": "hespis",
+  "cls": "S",
+  "sense": "a sword",
+  "note": ""
+ },
+ {
+  "form": "kest",
+  "sub": "5.4",
+  "hal": "kestis",
+  "cls": "S",
+  "sense": "a company of soldiers",
+  "note": ""
+ },
+ {
+  "form": "bramm",
+  "sub": "5.4",
+  "hal": "brammos",
+  "cls": "B",
+  "sense": "a gun",
+  "note": ""
+ },
+ {
+  "form": "bramman",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a battery",
+  "note": "\"the guns of one True Man\""
+ },
+ {
+  "form": "haskard",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a runner",
+  "note": "from hask run"
+ },
+ {
+  "form": "hask",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) run",
+  "note": ""
+ },
+ {
+  "form": "gomm",
+  "sub": "5.4",
+  "hal": "gommos",
+  "cls": "B",
+  "sense": "a horn",
+  "note": ""
+ },
+ {
+  "form": "carm",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(n.) a call, a cry; (v.) cry out, call",
+  "note": "sull carm the three calls"
+ },
+ {
+  "form": "pedh",
+  "sub": "5.4",
+  "hal": "pedhis",
+  "cls": "S",
+  "sense": "a shot: what a gun throws",
+  "note": "S vedh"
+ },
+ {
+  "form": "trun",
+  "sub": "5.4",
+  "hal": "trunos",
+  "cls": "B",
+  "sense": "ground; (on the wall) the water a battery watches",
+  "note": "S dhrun"
+ },
+ {
+  "form": "marr",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) shift, move to another place",
+  "note": "Marr tho dhrun"
+ },
+ {
+  "form": "kyl",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) change",
+  "note": ""
+ },
+ {
+  "form": "keth",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) hold, keep; (of the wood) know",
+  "note": "VN kethyl"
+ },
+ {
+  "form": "lusk",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) loose, let go, set free",
+  "note": ""
+ },
+ {
+  "form": "bosk",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) attack",
+  "note": "N mosk"
+ },
+ {
+  "form": "hurr",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) kill",
+  "note": "VN hurrol"
+ },
+ {
+  "form": "gorr",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) fight",
+  "note": ""
+ },
+ {
+  "form": "covv",
+  "sub": "5.4",
+  "hal": "covvos",
+  "cls": "B",
+  "sense": "a cloak",
+  "note": "Covv Treskat, the Torn Cloak"
+ },
+ {
+  "form": "Hosk Lunn",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "the Title of Liberty",
+  "note": "\"the lintel of freedom\""
+ },
+ {
+  "form": "sceth",
+  "sub": "5.4",
+  "hal": "scethis",
+  "cls": "S",
+  "sense": "a ship, a hull",
+  "note": ""
+ },
+ {
+  "form": "scethan",
+  "sub": "5.4",
+  "hal": "—",
+  "cls": "B",
+  "sense": "a fleet",
+  "note": "collective; one hull of it is scethel"
+ },
+ {
+  "form": "wemm",
+  "sub": "5.4",
+  "hal": "wemmis",
+  "cls": "S",
+  "sense": "a sail",
+  "note": "wemmeth myst the grey sails"
+ },
+ {
+  "form": "wadh",
+  "sub": "5.5",
+  "hal": "wadhos",
+  "cls": "B",
+  "sense": "the sea",
+  "note": ""
+ },
+ {
+  "form": "myst",
+  "sub": "5.5",
+  "hal": "mystis",
+  "cls": "S",
+  "sense": "sea-fog; the grey; (adj.) grey",
+  "note": "the Shoreland half of Mystaeri"
+ },
+ {
+  "form": "Mystow",
+  "sub": "5.5",
+  "hal": "—",
+  "cls": "B",
+  "sense": "the Mystlands",
+  "note": "Jack's word, with its original"
+ },
+ {
+  "form": "Mystaeri",
+  "sub": "5.5",
+  "hal": "—",
+  "cls": "S",
+  "sense": "the Mystaeri",
+  "note": "hybrid exonym (§4.6)"
+ },
+ {
+  "form": "Mesk Myst · Tolm Myst",
+  "sub": "5.5",
+  "hal": "—",
+  "cls": "S",
+  "sense": "Mystwood · Myststone",
+  "note": "\"wood / stone of the grey\""
+ },
+ {
+  "form": "Gannath Myst · Crenn Myst",
+  "sub": "5.5",
+  "hal": "—",
+  "cls": "S",
+  "sense": "the Mystholders · a Mystarch",
+  "note": "\"posts of the grey · captain of the grey\""
+ },
+ {
+  "form": "mesk",
+  "sub": "5.5",
+  "hal": "meskis",
+  "cls": "S",
+  "sense": "a tree; wood",
+  "note": ""
+ },
+ {
+  "form": "lurr",
+  "sub": "5.5",
+  "hal": "lurros",
+  "cls": "B",
+  "sense": "a forest",
+  "note": "lurrel green"
+ },
+ {
+  "form": "helv",
+  "sub": "5.5",
+  "hal": "helvis",
+  "cls": "S",
+  "sense": "the sky, the upper air",
+  "note": "the Guest's second word"
+ },
+ {
+  "form": "hyll",
+  "sub": "5.5",
+  "hal": "hyllis",
+  "cls": "S",
+  "sense": "a tide",
+  "note": ""
+ },
+ {
+  "form": "rhull",
+  "sub": "5.5",
+  "hal": "hrullos",
+  "cls": "B",
+  "sense": "a river",
+  "note": ""
+ },
+ {
+  "form": "sedh",
+  "sub": "5.5",
+  "hal": "sedhis",
+  "cls": "S",
+  "sense": "a fen",
+  "note": ""
+ },
+ {
+  "form": "nell",
+  "sub": "5.5",
+  "hal": "nellis",
+  "cls": "S",
+  "sense": "an islet",
+  "note": ""
+ },
+ {
+  "form": "tavow",
+  "sub": "5.5",
+  "hal": "tavū",
+  "cls": "B",
+  "sense": "a harbour, a landing",
+  "note": "from tav, come ashore"
+ },
+ {
+  "form": "tav",
+  "sub": "5.5",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) come ashore, land a boat",
+  "note": ""
+ },
+ {
+  "form": "sorth",
+  "sub": "5.5",
+  "hal": "sorthos",
+  "cls": "B",
+  "sense": "a ridge",
+  "note": ""
+ },
+ {
+  "form": "brunn",
+  "sub": "5.5",
+  "hal": "brunnos",
+  "cls": "B",
+  "sense": "a mountain",
+  "note": ""
+ },
+ {
+  "form": "grull",
+  "sub": "5.5",
+  "hal": "grullos",
+  "cls": "B",
+  "sense": "sand",
+  "note": ""
+ },
+ {
+  "form": "sirr",
+  "sub": "5.5",
+  "hal": "sirris",
+  "cls": "S",
+  "sense": "glass",
+  "note": ""
+ },
+ {
+  "form": "crest",
+  "sub": "5.5",
+  "hal": "crestis",
+  "cls": "S",
+  "sense": "ice",
+  "note": ""
+ },
+ {
+  "form": "frenn",
+  "sub": "5.5",
+  "hal": "hwrennos",
+  "cls": "S",
+  "sense": "frost, rime",
+  "note": "Hal hw > f"
+ },
+ {
+  "form": "sulv",
+  "sub": "5.5",
+  "hal": "sulvos",
+  "cls": "B",
+  "sense": "snow; (adj.) white",
+  "note": ""
+ },
+ {
+  "form": "grem",
+  "sub": "5.5",
+  "hal": "gremis",
+  "cls": "S",
+  "sense": "winter",
+  "note": ""
+ },
+ {
+  "form": "vorr",
+  "sub": "5.5",
+  "hal": "vorros",
+  "cls": "B",
+  "sense": "fire",
+  "note": ""
+ },
+ {
+  "form": "orl",
+  "sub": "5.5",
+  "hal": "orlos",
+  "cls": "B",
+  "sense": "a day",
+  "note": ""
+ },
+ {
+  "form": "vess",
+  "sub": "5.5",
+  "hal": "vessis",
+  "cls": "S",
+  "sense": "a night",
+  "note": ""
+ },
+ {
+  "form": "clem",
+  "sub": "5.5",
+  "hal": "clemis",
+  "cls": "S",
+  "sense": "an hour",
+  "note": "pa relv clem four-and-twenty hours (\"two-twelve hour\")"
+ },
+ {
+  "form": "surr",
+  "sub": "5.5",
+  "hal": "surros",
+  "cls": "B",
+  "sense": "a year",
+  "note": ""
+ },
+ {
+  "form": "cemm",
+  "sub": "5.5",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) meet; (n.) a meeting",
+  "note": "Cemm Hyll, Tidesmeet"
+ },
+ {
+  "form": "garl",
+  "sub": "5.6",
+  "hal": "garlos",
+  "cls": "B",
+  "sense": "a hand; a hand of writing",
+  "note": "Garl Dhrenn; dual pa yarl"
+ },
+ {
+  "form": "molt",
+  "sub": "5.6",
+  "hal": "moltos",
+  "cls": "B",
+  "sense": "a heart",
+  "note": ""
+ },
+ {
+  "form": "hoss",
+  "sub": "5.6",
+  "hal": "hossos",
+  "cls": "B",
+  "sense": "breath",
+  "note": ""
+ },
+ {
+  "form": "lorr",
+  "sub": "5.6",
+  "hal": "lorros",
+  "cls": "B",
+  "sense": "blood; (adj.) crimson",
+  "note": "the colour of the cloak and the pennants"
+ },
+ {
+  "form": "senn",
+  "sub": "5.6",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) die: go out, as a fire in peace",
+  "note": "VN sennyl dying, death: the Guest's third word"
+ },
+ {
+  "form": "hess",
+  "sub": "5.6",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) stop",
+  "note": "the Guest's first word"
+ },
+ {
+  "form": "lomm",
+  "sub": "5.6",
+  "hal": "lommos",
+  "cls": "B",
+  "sense": "grief",
+  "note": "Doss lomm umom \"I grieve\""
+ },
+ {
+  "form": "sollan",
+  "sub": "5.6",
+  "hal": "sollanos",
+  "cls": "B",
+  "sense": "peace",
+  "note": "\"the rest after the work\", from sol"
+ },
+ {
+  "form": "sol",
+  "sub": "5.6",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) rest, lie still",
+  "note": ""
+ },
+ {
+  "form": "lunn",
+  "sub": "5.6",
+  "hal": "lunnos",
+  "cls": "B",
+  "sense": "freedom",
+  "note": "pl. lunnath"
+ },
+ {
+  "form": "tum",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) remember",
+  "note": "Tumar. \"We remember.\""
+ },
+ {
+  "form": "tumol",
+  "sub": "5.7",
+  "hal": "tumola",
+  "cls": "B",
+  "sense": "remembering; memory",
+  "note": "N dumol in the Title"
+ },
+ {
+  "form": "nadhum",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) forget",
+  "note": "\"un-remember\""
+ },
+ {
+  "form": "brod",
+  "sub": "5.7",
+  "hal": "brodos",
+  "cls": "B",
+  "sense": "a word",
+  "note": ""
+ },
+ {
+  "form": "brodh",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) put into words, tell, speak",
+  "note": "brodhat told; nawrodhat untold"
+ },
+ {
+  "form": "vesk",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) see; read (letters, or a cradle)",
+  "note": "Seren \"read it with my eyes\""
+ },
+ {
+  "form": "flenn",
+  "sub": "5.7",
+  "hal": "hwlennā",
+  "cls": "S",
+  "sense": "a leaf of a book or of slate; a sheet",
+  "note": ""
+ },
+ {
+  "form": "flennath",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "S",
+  "sense": "the Book",
+  "note": "\"the leaves\""
+ },
+ {
+  "form": "luth",
+  "sub": "5.7",
+  "hal": "luthos",
+  "cls": "B",
+  "sense": "ink",
+  "note": "Seren Pa Luth, Seren Two-Inks"
+ },
+ {
+  "form": "brenth",
+  "sub": "5.7",
+  "hal": "brenthis",
+  "cls": "S",
+  "sense": "coal",
+  "note": "the Captain's hand is garl brenth"
+ },
+ {
+  "form": "vell",
+  "sub": "5.7",
+  "hal": "vellis",
+  "cls": "S",
+  "sense": "a song",
+  "note": ""
+ },
+ {
+  "form": "sesk",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) know a fact",
+  "note": "the wood is not sesk'd but keth'd"
+ },
+ {
+  "form": "ammad",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "B",
+  "sense": "(v.) teach",
+  "note": "the Theoliths' work"
+ },
+ {
+  "form": "nydh",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) count",
+  "note": "nydherd a counter: Kael Nydherd"
+ },
+ {
+  "form": "kael",
+  "sub": "5.7",
+  "hal": "kēlos",
+  "cls": "S",
+  "sense": "a tally-notch",
+  "note": "the sense of Kael's name"
+ },
+ {
+  "form": "pess",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) ask",
+  "note": "Voss sa re vess, Voss who asked"
+ },
+ {
+  "form": "tess",
+  "sub": "5.7",
+  "hal": "—",
+  "cls": "S",
+  "sense": "(v.) answer; stand surety for",
+  "note": "es dess et odh \"the hearth will answer\""
+ },
+ {
+  "form": "doss",
+  "sub": "5.8",
+  "cls": "B",
+  "sense": "be (state, place)",
+  "hal": "",
+  "note": "irregular; past re yal- (§3.4)"
+ },
+ {
+  "form": "el · ew · nel · new",
+  "sub": "5.8",
+  "cls": "S",
+  "sense": "is · was · is not · was not (the copula)",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "tald",
+  "sub": "5.8",
+  "cls": "B",
+  "sense": "rise, stand up",
+  "hal": "",
+  "note": "imperative plural Talda!"
+ },
+ {
+  "form": "orr",
+  "sub": "5.8",
+  "cls": "B",
+  "sense": "go, walk",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "darr",
+  "sub": "5.8",
+  "cls": "B",
+  "sense": "come",
+  "hal": "",
+  "note": "was tol, which is Sindarin tol- \"to come\" (Quenya tul-): the same word (originality pass)"
+ },
+ {
+  "form": "hunn",
+  "sub": "5.8",
+  "cls": "B",
+  "sense": "hear",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "hebb",
+  "sub": "5.8",
+  "cls": "S",
+  "sense": "give",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "tovv",
+  "sub": "5.8",
+  "cls": "B",
+  "sense": "wait",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "omm",
+  "sub": "5.8",
+  "cls": "B",
+  "sense": "fall",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "cresk",
+  "sub": "5.8",
+  "cls": "S",
+  "sense": "break",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "ser",
+  "sub": "5.8",
+  "cls": "S",
+  "sense": "go on, carry forward",
+  "hal": "",
+  "note": "in Seren"
+ },
+ {
+  "form": "rhyn",
+  "sub": "5.8",
+  "cls": "S",
+  "sense": "set fast (of mortar), take hold",
+  "hal": "",
+  "note": "in Rhyna"
+ },
+ {
+  "form": "hemm",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "old",
+  "hal": "",
+  "note": "Tavow Hemm, Eldhythe. Was mell (originality pass)"
+ },
+ {
+  "form": "tevel",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "young",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "strom",
+  "sub": "5.9",
+  "cls": "B",
+  "sense": "great",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "lyss",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "small",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "gell",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "good",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "venn",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "true; plumb; faithful",
+  "hal": "",
+  "note": "a true wall is plumb"
+ },
+ {
+  "form": "gunn",
+  "sub": "5.9",
+  "cls": "B",
+  "sense": "deep; (n.) the deep",
+  "hal": "",
+  "note": "et gunn sy this deep"
+ },
+ {
+  "form": "sell",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "long",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "domm",
+  "sub": "5.9",
+  "cls": "B",
+  "sense": "black",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "lurrel",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "green",
+  "hal": "",
+  "note": "\"forest-coloured\""
+ },
+ {
+  "form": "bell",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "gold, golden",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "lenn",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "silver",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "ulvenn",
+  "sub": "5.9",
+  "cls": "S",
+  "sense": "inner",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "treskat",
+  "sub": "5.9",
+  "cls": "B",
+  "sense": "riven, torn",
+  "hal": "",
+  "note": ""
+ },
+ {
+  "form": "et",
+  "sub": "5.10",
+  "sense": "the (the article; never mutates)",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "ul",
+  "sub": "5.10",
+  "sense": "in",
+  "hal": "",
+  "cls": "",
+  "note": "mut: N"
+ },
+ {
+  "form": "hy",
+  "sub": "5.10",
+  "sense": "from, out of",
+  "hal": "",
+  "cls": "",
+  "note": "mut: S"
+ },
+ {
+  "form": "um",
+  "sub": "5.10",
+  "sense": "upon, on",
+  "hal": "",
+  "cls": "",
+  "note": "mut: S"
+ },
+ {
+  "form": "lo",
+  "sub": "5.10",
+  "sense": "at, by, with (having, being able)",
+  "hal": "",
+  "cls": "",
+  "note": "mut: S"
+ },
+ {
+  "form": "dem",
+  "sub": "5.10",
+  "sense": "until, as far as",
+  "hal": "",
+  "cls": "",
+  "note": "mut: N"
+ },
+ {
+  "form": "eth",
+  "sub": "5.10",
+  "sense": "and",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "ell",
+  "sub": "5.10",
+  "sense": "or",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "veth",
+  "sub": "5.10",
+  "sense": "but, rather",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "nath",
+  "sub": "5.10",
+  "sense": "not (before a verb)",
+  "hal": "",
+  "cls": "",
+  "note": "mut: N"
+ },
+ {
+  "form": "na-",
+  "sub": "5.10",
+  "sense": "un- (prefix)",
+  "hal": "",
+  "cls": "",
+  "note": "mut: S"
+ },
+ {
+  "form": "re",
+  "sub": "5.10",
+  "sense": "past particle",
+  "hal": "",
+  "cls": "",
+  "note": "mut: S"
+ },
+ {
+  "form": "es",
+  "sub": "5.10",
+  "sense": "future particle",
+  "hal": "",
+  "cls": "",
+  "note": "mut: N"
+ },
+ {
+  "form": "ho",
+  "sub": "5.10",
+  "sense": "question particle",
+  "hal": "",
+  "cls": "",
+  "note": "mut: S"
+ },
+ {
+  "form": "sa",
+  "sub": "5.10",
+  "sense": "who, which, that (relative)",
+  "hal": "",
+  "cls": "",
+  "note": "mut: S"
+ },
+ {
+  "form": "somm",
+  "sub": "5.10",
+  "sense": "while, as long as",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "amm",
+  "sub": "5.10",
+  "sense": "when (conjunction)",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "cedh · vodh",
+  "sub": "5.10",
+  "sense": "who? · what?",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "sy · ull",
+  "sub": "5.10",
+  "sense": "this · that (after the noun)",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "gor",
+  "sub": "5.10",
+  "sense": "every, all",
+  "hal": "",
+  "cls": "",
+  "note": "mut: S"
+ },
+ {
+  "form": "sost",
+  "sub": "5.10",
+  "sense": "self, very: et dask sost \"the very end\"",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "tul",
+  "sub": "5.10",
+  "sense": "yet, still",
+  "hal": "",
+  "cls": "",
+  "note": "mut: none"
+ },
+ {
+  "form": "dask",
+  "sub": "5.10",
+  "sense": "(n.) the end (a noun, listed here for the Cry)",
+  "hal": "",
+  "cls": "",
+  "note": "mut: —"
+ },
+ {
+  "form": "en · tho · o · ey · olna · ol · va · sona · so",
+  "sub": "5.10",
+  "sense": "I/my · you/your · he, it/his, its · she/her · we two · we/our · you (pl) · they two · they/their",
+  "hal": "",
+  "cls": "",
+  "note": "mut: see §3.5"
+ },
+ {
+  "form": "hos",
+  "sub": "5.11",
+  "sense": "number 1",
+  "hal": "",
+  "cls": "",
+  "note": "hos"
+ },
+ {
+  "form": "hosnoth",
+  "sub": "5.11",
+  "sense": "number 11",
+  "hal": "",
+  "cls": "",
+  "note": "hosnoth (one-ten)"
+ },
+ {
+  "form": "pa",
+  "sub": "5.11",
+  "sense": "number 2",
+  "hal": "",
+  "cls": "",
+  "note": "pa (+S)"
+ },
+ {
+  "form": "delv",
+  "sub": "5.11",
+  "sense": "number 12",
+  "hal": "",
+  "cls": "",
+  "note": "delv: \"a course\", the guild's twelve. et Delv, the Twelve"
+ },
+ {
+  "form": "et Delv",
+  "sub": "5.11",
+  "sense": "number 12",
+  "hal": "",
+  "cls": "",
+  "note": "delv: \"a course\", the guild's twelve. et Delv, the Twelve"
+ },
+ {
+  "form": "sull",
+  "sub": "5.11",
+  "sense": "number 3",
+  "hal": "",
+  "cls": "",
+  "note": "sull"
+ },
+ {
+  "form": "sullnoth",
+  "sub": "5.11",
+  "sense": "number 13",
+  "hal": "",
+  "cls": "",
+  "note": "sullnoth"
+ },
+ {
+  "form": "gemm",
+  "sub": "5.11",
+  "sense": "number 4",
+  "hal": "",
+  "cls": "",
+  "note": "gemm"
+ },
+ {
+  "form": "murr",
+  "sub": "5.11",
+  "sense": "number 20",
+  "hal": "",
+  "cls": "",
+  "note": "murr"
+ },
+ {
+  "form": "lesk",
+  "sub": "5.11",
+  "sense": "number 5",
+  "hal": "",
+  "cls": "",
+  "note": "lesk"
+ },
+ {
+  "form": "pa relv",
+  "sub": "5.11",
+  "sense": "number 24",
+  "hal": "",
+  "cls": "",
+  "note": "pa relv \"two twelves\" (guild), or gemm eth murr (speech)"
+ },
+ {
+  "form": "vran",
+  "sub": "5.11",
+  "sense": "number 6",
+  "hal": "",
+  "cls": "",
+  "note": "vran"
+ },
+ {
+  "form": "pa vurr",
+  "sub": "5.11",
+  "sense": "number 40",
+  "hal": "",
+  "cls": "",
+  "note": "pa vurr \"two twenties\""
+ },
+ {
+  "form": "dhom",
+  "sub": "5.11",
+  "sense": "number 7",
+  "hal": "",
+  "cls": "",
+  "note": "dhom"
+ },
+ {
+  "form": "lesk murr",
+  "sub": "5.11",
+  "sense": "number 100",
+  "hal": "",
+  "cls": "",
+  "note": "lesk murr \"five twenties\""
+ },
+ {
+  "form": "thell",
+  "sub": "5.11",
+  "sense": "number 8",
+  "hal": "",
+  "cls": "",
+  "note": "thell"
+ },
+ {
+  "form": "bost",
+  "sub": "5.11",
+  "sense": "number 400",
+  "hal": "",
+  "cls": "",
+  "note": "bost \"a score of scores\"; 2,000 is lesk bost"
+ },
+ {
+  "form": "rost",
+  "sub": "5.11",
+  "sense": "number 9",
+  "hal": "",
+  "cls": "",
+  "note": "rost"
+ },
+ {
+  "form": "hosast · pawast · sullast",
+  "sub": "5.11",
+  "sense": "number first · second · third",
+  "hal": "",
+  "cls": "",
+  "note": "hosast · pawast · sullast"
+ },
+ {
+  "form": "noth",
+  "sub": "5.11",
+  "sense": "number 10",
+  "hal": "",
+  "cls": "",
+  "note": "noth"
+ },
+ {
+  "form": "delvoth",
+  "sub": "5.11",
+  "sense": "number twelvefold",
+  "hal": "",
+  "cls": "",
+  "note": "delvoth"
+ },
+ {
+  "form": "-Ath",
+  "sub": "5.12",
+  "sense": "plural",
+  "hal": "",
+  "cls": "",
+  "note": "tolmath, theldeth"
+ },
+ {
+  "form": "-Ol",
+  "sub": "5.12",
+  "sense": "verbal noun",
+  "hal": "",
+  "cls": "",
+  "note": "tumol, kethyl"
+ },
+ {
+  "form": "-At",
+  "sub": "5.12",
+  "sense": "participle (done, made)",
+  "hal": "",
+  "cls": "",
+  "note": "cadhat, treskat, brodhat"
+ },
+ {
+  "form": "-Ard",
+  "sub": "5.12",
+  "sense": "agent, one who does",
+  "hal": "",
+  "cls": "",
+  "note": "Stannard, haskard, Ketherd"
+ },
+ {
+  "form": "-Oth",
+  "sub": "5.12",
+  "sense": "abstract quality",
+  "hal": "",
+  "cls": "",
+  "note": "vennoth, tunnoth"
+ },
+ {
+  "form": "-el",
+  "sub": "5.12",
+  "sense": "singulative; \"little, dear\" (names)",
+  "hal": "",
+  "cls": "",
+  "note": "stonwrytel, prassel, Tarnel"
+ },
+ {
+  "form": "-an",
+  "sub": "5.12",
+  "sense": "\"the folk of\", a collective",
+  "hal": "",
+  "cls": "",
+  "note": "Stonwrytan, Treskan, Orrowan, Lodhan"
+ },
+ {
+  "form": "-en",
+  "sub": "5.12",
+  "sense": "\"of, belonging to\"; an old name-ending",
+  "hal": "",
+  "cls": "",
+  "note": "Orrowen, Seren"
+ },
+ {
+  "form": "-ow",
+  "sub": "5.12",
+  "sense": "place of",
+  "hal": "",
+  "cls": "",
+  "note": "kethow, stannow, tevow, Mystow"
+ },
+ {
+  "form": "-Ast",
+  "sub": "5.12",
+  "sense": "ordinal",
+  "hal": "",
+  "cls": "",
+  "note": "sullast"
+ },
+ {
+  "form": "-a",
+  "sub": "5.12",
+  "sense": "the old dual; feminine names; the pair-name lintel",
+  "hal": "",
+  "cls": "",
+  "note": "ganna, pana, Rhyna, Halyna"
+ },
+ {
+  "form": "na- (+S)",
+  "sub": "5.12",
+  "sense": "un-, not",
+  "hal": "",
+  "cls": "",
+  "note": "nawrodhat, nadhum, nalodhat"
+ },
+ {
+  "form": "-na",
+  "sub": "5.12",
+  "sense": "dual of a pronoun",
+  "hal": "",
+  "cls": "",
+  "note": "olna, sona"
+ },
+ {
+  "form": "Halvard",
+  "sub": "4.5",
+  "hal": "Xalpardos",
+  "cls": "",
+  "sense": "\"bedrock-warden\": hal (living rock) + softened pard (warden)",
+  "note": "His epithet, Tolmvard \"Stone-Warden\", translates his name. The canon's Old Norse gloss \"rock-guardian\" becomes a folk comparison, a sound-alike from another shore [Jack]"
+ },
+ {
+  "form": "Rhyna",
+  "sub": "4.5",
+  "hal": "Hriunā",
+  "cls": "",
+  "sense": "\"she who sets fast\", from rhyn- (to set, of mortar) + feminine -ā",
+  "note": "hr > rh, iu > y"
+ },
+ {
+  "form": "Halyna",
+  "sub": "4.5",
+  "hal": "—",
+  "cls": "",
+  "sense": "pair-name: Hal- + softened Rhyn- + lintel -a",
+  "note": "§3.10"
+ },
+ {
+  "form": "Aldwena",
+  "sub": "4.5",
+  "hal": "Ald·Ben (the Hal ligature)",
+  "cls": "",
+  "sense": "pair-name of the first builders: Aldun + Bena",
+  "note": "The first builders' cradle-names"
+ },
+ {
+  "form": "Idrenna",
+  "sub": "4.5",
+  "hal": "—",
+  "cls": "",
+  "sense": "pair-name: Idlan + Denna",
+  "note": "The Theoliths of II.3"
+ },
+ {
+  "form": "Seren",
+  "sub": "4.5",
+  "hal": "Serenos",
+  "cls": "",
+  "sense": "\"she goes on\", from ser- (to go on, carry forward)",
+  "note": "Welsh seren \"star\" is a coincidence of sound only; the tongue does not use the meaning"
+ },
+ {
+  "form": "Tarnel",
+  "sub": "4.5",
+  "hal": "Tarnelos",
+  "cls": "",
+  "sense": "\"little net\"",
+  "note": "A fisher's son of Tidesmeet"
+ },
+ {
+  "form": "Kael",
+  "sub": "4.5",
+  "hal": "Kēlos",
+  "cls": "",
+  "sense": "\"a tally-notch\"",
+  "note": "ē > ae explains the ae in a Shoreland name; he is Kael the Counter"
+ },
+ {
+  "form": "Stannard",
+  "sub": "4.5",
+  "hal": "Stannardos",
+  "cls": "",
+  "sense": "\"quarrier\", from stann (quarry) + -ard",
+  "note": "\"the quarryman\""
+ },
+ {
+  "form": "Garvel",
+  "sub": "4.5",
+  "hal": "Garvelos",
+  "cls": "",
+  "sense": "\"little smith\", from garv- (to forge; a Hal word lost from the living tongue) + -el",
+  "note": "Garvel of the smithies"
+ },
+ {
+  "form": "Pellow",
+  "sub": "4.5",
+  "hal": "Pellū",
+  "cls": "",
+  "sense": "\"of the spire\"",
+  "note": "Pellow of the spire"
+ },
+ {
+  "form": "Corlen · Voss · Hale · Brenn · Marl · Tamm · Aske · Harl · Ulden · Hesk · Lanner",
+  "sub": "4.5",
+  "hal": "—",
+  "cls": "",
+  "sense": "cradle-names whose sense is lost",
+  "note": "Names are names. The lexicon deliberately gives none of them a meaning, and never borrows the real-world senses (Estonian tamm \"oak\", Old Norse askr \"ash\", English marl, Scots harl)"
+ },
+ {
+  "form": "Stonwryt (Hal stonwryta)",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Stonwryt :: \"the standing cutting\": ston (standing) + wryt (a cut vow)",
+  "note": "Not translated. It is the guild's own word, kept in its old spelling"
+ },
+ {
+  "form": "Stonwrytan",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the Stonewrights :: \"those of the Stonwryt\"",
+  "note": "Seren's English echoes the guild's own name, which is why she chose it"
+ },
+ {
+  "form": "Tolmath Vardh (sg. Tolm Vardh)",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the Theoliths :: \"stones of God\"",
+  "note": "theo- = Mardh, -lith = tolm: a scholar's rendering"
+ },
+ {
+  "form": "Lodh Helv",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the Aetherbond :: \"the mortar of the sky\"",
+  "note": "aether = helv, bond = lodh"
+ },
+ {
+  "form": "et Lodhan",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the Bonded :: \"those of the mortar\"",
+  "note": ""
+ },
+ {
+  "form": "hoskol",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the sealing :: \"the laying of the lintel\"",
+  "note": ""
+ },
+ {
+  "form": "Ryt Dhunnoth",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the Covenant of Completion :: \"the vow of wholeness\"",
+  "note": "Its words stay withheld"
+ },
+ {
+  "form": "Kethow Dhresk",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Rivenkeep :: \"the holding-place of the cleft\"",
+  "note": ""
+ },
+ {
+  "form": "Treskan",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the Rivenmen :: \"the cleft-folk\"",
+  "note": ""
+ },
+ {
+  "form": "Covv Treskat",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the Torn Cloak :: \"the riven cloak\"",
+  "note": "Torn and riven are one word in Orrowen. The cloak and the Keep share it"
+ },
+ {
+  "form": "et Hosk",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the Title :: \"the lintel\"",
+  "note": "The words set over a text, as a lintel over a door. The Title of Liberty is Hosk Lunn, \"the lintel of freedom\""
+ },
+ {
+  "form": "Orrow · Orrowan",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "the Shorelands · Shorelanders :: \"the Shore · the shore-folk\"",
+  "note": ""
+ },
+ {
+  "form": "Mystaeri",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Mystaeri :: myst (Shoreland \"sea-fog, the grey\") + -aer (the thunder-tongue's \"those of\", heard across the water in its old shape) + the old loan-plural -i",
+  "note": "A true hybrid, borrowed early, so it kept the Mystaeri ending before that tongue turned -aer into -ear. The Book keeps it untranslated"
+ },
+ {
+  "form": "Mesk Myst · Tolm Myst · Mystow",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Mystwood · Myststone · the Mystlands :: \"wood of the grey · stone of the grey · the place of the grey\"",
+  "note": "Mystow is the Orrowen behind Jack's \"the Mystlands\""
+ },
+ {
+  "form": "Gannath Myst · Crenn Myst",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Mystholders · Mystarchs :: \"the posts of the grey · the captain of the grey\"",
+  "note": "\"as posts hold up a roof\""
+ },
+ {
+  "form": "Tavow Hemm",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Eldhythe :: the old landing",
+  "note": ""
+ },
+ {
+  "form": "Cemm Hyll",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Tidesmeet :: the meeting of the tide",
+  "note": ""
+ },
+ {
+  "form": "Sedhnell",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Fenholm :: fen-islet",
+  "note": ""
+ },
+ {
+  "form": "Lurrvard",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Holtward :: forest-ward",
+  "note": ""
+ },
+ {
+  "form": "Kethow Stellath",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Carnhold :: the hold of the cairns",
+  "note": ""
+ },
+ {
+  "form": "Tavow Vorr",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Emberhythe :: the landing of fire",
+  "note": ""
+ },
+ {
+  "form": "Grullsorth",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Sandreach :: sand-ridge",
+  "note": ""
+ },
+ {
+  "form": "Frennvar",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Rimewatch :: frost-guard",
+  "note": ""
+ },
+ {
+  "form": "Taldow Helv",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Highreach :: the high place of the sky",
+  "note": ""
+ },
+ {
+  "form": "Sirrvell",
+  "sub": "4.6",
+  "hal": "",
+  "cls": "",
+  "sense": "Glasspire :: glass-spire",
+  "note": ""
+ }
+]

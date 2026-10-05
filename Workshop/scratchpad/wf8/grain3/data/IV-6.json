@@ -1,0 +1,992 @@
+{
+ "id": "IV-6-aelvaren",
+ "seed": "IV-6",
+ "wood": "life",
+ "pith": "war",
+ "axis": 0,
+ "english": "The Voyage of the Aelvaren (IV.6), whole.",
+ "rules": [
+  2,
+  10
+ ],
+ "rings": [
+  {
+   "band": "I",
+   "lamellae": [
+    {
+     "marks": [
+      "0: HOLD*",
+      "7: HULL×3{all}"
+     ]
+    },
+    {
+     "marks": [
+      "14: HULL+CARRY"
+     ]
+    },
+    {
+     "marks": [
+      "14: !EYE",
+      "12: BOND+BEARER"
+     ]
+    },
+    {
+     "marks": [
+      "14: HOLD"
+     ]
+    }
+   ]
+  },
+  {
+   "band": "I",
+   "lamellae": [
+    {
+     "marks": [
+      "12: BOND+BEARER"
+     ]
+    },
+    {
+     "marks": [
+      "12: NAME+GLAD"
+     ]
+    },
+    {
+     "marks": [
+      "12: DEEP+HULL½"
+     ],
+     "conds": [
+      {
+       "band": "MIST",
+       "files": [
+        12,
+        12
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "12: CARRY",
+      "1: BOND+US",
+      "11: THIN"
+     ],
+     "conds": [
+      {
+       "band": "MIST",
+       "files": [
+        10,
+        11
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "12: KNOT",
+      "2: BENEATH+DOOR"
+     ],
+     "conds": [
+      {
+       "band": "WATER",
+       "files": [
+        2,
+        3
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "12: CARRY",
+      "3: AELTHAR"
+     ]
+    }
+   ]
+  },
+  {
+   "band": "II",
+   "lamellae": [
+    {
+     "marks": [
+      "1: !LIVE",
+      "12: BOND+BEARER"
+     ]
+    },
+    {
+     "marks": [
+      "0: STONEFOLK×3+>GO"
+     ]
+    },
+    {
+     "marks": [
+      "1: BLOOD",
+      "12: WOOD"
+     ]
+    },
+    {
+     "marks": [
+      "1: HOLD{last}",
+      "12: WOOD+EAT"
+     ]
+    },
+    {
+     "marks": [
+      "12: HOLD{all}"
+     ]
+    }
+   ]
+  },
+  {
+   "band": "II",
+   "lamellae": [
+    {
+     "marks": [
+      "0: >BURN",
+      "12: DEEP+WOOD"
+     ]
+    },
+    {
+     "marks": [
+      "12: GRIEF+ANGER"
+     ]
+    },
+    {
+     "marks": [
+      "12: BURN{more}"
+     ]
+    },
+    {
+     "marks": [
+      "12: CRY",
+      "14: WOOD+CRY"
+     ]
+    },
+    {
+     "marks": [
+      "0: >GO"
+     ]
+    },
+    {
+     "marks": [
+      "4: TAKE"
+     ],
+     "conds": [
+      {
+       "band": "WATER",
+       "files": [
+        4,
+        6
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "band": "II",
+   "lamellae": [
+    {
+     "marks": [
+      "12: BURN+TURN"
+     ]
+    },
+    {
+     "marks": [
+      "5: TAKE"
+     ],
+     "conds": [
+      {
+       "band": "WATER",
+       "files": [
+        4,
+        5
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "4: !HOLD",
+      "12: BEARER:keel"
+     ]
+    },
+    {
+     "marks": [
+      "8: HOME"
+     ]
+    },
+    {
+     "marks": [
+      "12: HOLD",
+      "6: ROAD"
+     ]
+    },
+    {
+     "marks": [
+      "12: GO"
+     ]
+    },
+    {
+     "marks": [
+      "14: DYING+WOOD"
+     ]
+    },
+    {
+     "marks": [
+      "14: HOLD"
+     ]
+    }
+   ]
+  },
+  {
+   "band": "II",
+   "lamellae": [
+    {
+     "marks": [
+      "5: STONEFOLK+HULL×3",
+      "12: BOND+BEARER"
+     ]
+    },
+    {
+     "marks": [
+      "5: GO#2",
+      "11: EDGE"
+     ],
+     "conds": [
+      {
+       "band": "MIST",
+       "files": [
+        10,
+        11
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "5: TURN"
+     ]
+    },
+    {
+     "marks": [
+      "5: SWIFT+GO"
+     ]
+    }
+   ]
+  },
+  {
+   "band": "II",
+   "lamellae": [
+    {
+     "marks": [
+      "12: FIND",
+      "10: _DEEP+ROAD",
+      "11: THIN{most}"
+     ],
+     "conds": [
+      {
+       "band": "MIST",
+       "files": [
+        11,
+        12
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "10: ROOT×3",
+      "0: !GO"
+     ],
+     "conds": [
+      {
+       "band": "WATER",
+       "files": [
+        10,
+        10
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "12: BURN{all}"
+     ]
+    },
+    {
+     "marks": [
+      "13: !BURN{slow}",
+      "11: CLOSE"
+     ]
+    },
+    {
+     "marks": [
+      "12: BEARER:keel{only}",
+      "1: BONE×3"
+     ]
+    },
+    {
+     "marks": [
+      "12: BONE×3{few}"
+     ]
+    }
+   ]
+  },
+  {
+   "band": "II",
+   "lamellae": [
+    {
+     "marks": [
+      "12: RISE½"
+     ],
+     "conds": [
+      {
+       "band": "DARK",
+       "files": [
+        12,
+        12
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "8: SAND"
+     ]
+    },
+    {
+     "marks": [
+      "8: SILVERBARK×3"
+     ],
+     "conds": [
+      {
+       "band": "WATER",
+       "files": [
+        7,
+        7
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "12: BENEATH+LIE"
+     ],
+     "conds": [
+      {
+       "band": "STILL",
+       "files": [
+        12,
+        12
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "band": "II",
+   "lamellae": [
+    {
+     "marks": [
+      "9: US×3",
+      "12: BOND+BEARER"
+     ]
+    },
+    {
+     "marks": [
+      "9: GO"
+     ]
+    },
+    {
+     "marks": [
+      "9: HOLD"
+     ]
+    },
+    {
+     "marks": [
+      "9: >GO"
+     ]
+    },
+    {
+     "marks": [
+      "9: BOND+HAND×3",
+      "12: BEARER:keel"
+     ]
+    },
+    {
+     "marks": [
+      "9: HOLD{all}"
+     ]
+    },
+    {
+     "marks": [],
+     "pocket_room": true,
+     "pockets": [
+      {
+       "id": "P1",
+       "kind": "cut",
+       "files": [
+        11,
+        2
+       ],
+       "contents": [
+        "GIFT",
+        "US:foot+DUST",
+        "US:stem",
+        "US:crown/",
+        "AXE+TURN",
+        "STRIKE+FALL",
+        "BURN",
+        ">GO"
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "14: WOOD+!SMOOTH{all}"
+     ]
+    }
+   ]
+  },
+  {
+   "band": "II",
+   "lamellae": [
+    {
+     "marks": [
+      "9: EYE",
+      "3: HOLY+AELTHAR"
+     ]
+    },
+    {
+     "marks": [
+      "0: MOUTH",
+      "13: BURN",
+      "1: >DYING"
+     ]
+    },
+    {
+     "marks": [
+      "9: HOLD"
+     ]
+    },
+    {
+     "marks": [
+      "1: TRUE"
+     ]
+    },
+    {
+     "marks": [
+      "0: HAND:stem+TURN"
+     ]
+    },
+    {
+     "marks": [
+      "9: !HOLD"
+     ],
+     "pocket_room": true,
+     "pockets": [
+      {
+       "id": "P2",
+       "kind": "said",
+       "files": [
+        5,
+        7
+       ],
+       "contents": [
+        "!HOLD"
+       ]
+      }
+     ]
+    },
+    {
+     "marks": [
+      "9: !MOUTH?"
+     ]
+    },
+    {
+     "marks": [
+      "9: EYE{only}",
+      "0: STRIKE×3"
+     ]
+    }
+   ]
+  },
+  {
+   "band": "III",
+   "lamellae": [
+    {
+     "marks": [
+      "9: >LIE",
+      "12: BEARER:keel",
+      "8: ROOT×3"
+     ]
+    },
+    {
+     "marks": [
+      "1: BONE×3{still}"
+     ]
+    },
+    {
+     "marks": [
+      "9: US×3+>LIE"
+     ]
+    },
+    {
+     "marks": [
+      "8: ROOT×3+EAT"
+     ]
+    },
+    {
+     "marks": [
+      "8: SILVERBARK×3",
+      "15: TREE×3{all}"
+     ]
+    },
+    {
+     "marks": [
+      "15: SAPLING×3{all}",
+      "7: HULL"
+     ]
+    },
+    {
+     "marks": [
+      "15: EAT",
+      "11: RAIN"
+     ]
+    },
+    {
+     "marks": [
+      "7: HULL×3{all}",
+      "0: SQUARE"
+     ]
+    },
+    {
+     "marks": [
+      "7: CARRY",
+      "12: GRIEF"
+     ]
+    }
+   ]
+  }
+ ],
+ "runners": [
+  {
+   "id": "a1",
+   "from": "0.r1·1",
+   "to": "7.r1·1",
+   "role": "in"
+  },
+  {
+   "id": "a2",
+   "from": "14.r1·2",
+   "to": "bearing 0",
+   "role": "to"
+  },
+  {
+   "id": "a3",
+   "from": "12.r1·3",
+   "to": "14.r1·4",
+   "role": "then"
+  },
+  {
+   "id": "b1",
+   "from": "12.r2·4",
+   "to": "1.r2·4",
+   "role": "to"
+  },
+  {
+   "id": "b2",
+   "from": "12.r2·4",
+   "to": "11.r2·4",
+   "role": "thru"
+  },
+  {
+   "id": "b3",
+   "from": "12.r2·5",
+   "to": "2.r2·5",
+   "role": "in"
+  },
+  {
+   "id": "b4",
+   "from": "12.r2·5",
+   "to": "12.r2·6",
+   "role": "for"
+  },
+  {
+   "id": "b5",
+   "from": "12.r2·6",
+   "to": "bearing 1",
+   "role": "to"
+  },
+  {
+   "id": "b6",
+   "from": "12.r2·6",
+   "to": "3.r2·6",
+   "role": "with"
+  },
+  {
+   "id": "c1",
+   "from": "1.r3·1",
+   "to": "12.r3·1",
+   "role": "to"
+  },
+  {
+   "id": "c2",
+   "from": "0.r3·2",
+   "to": "bearing 1",
+   "role": "to"
+  },
+  {
+   "id": "c3",
+   "from": "1.r3·3",
+   "to": "12.r3·3",
+   "role": "in"
+  },
+  {
+   "id": "c4",
+   "from": "1.r3·4",
+   "to": "12.r3·4",
+   "role": "in"
+  },
+  {
+   "id": "c5",
+   "from": "1.r3·4",
+   "to": "1.r3·3",
+   "role": "with"
+  },
+  {
+   "id": "c6",
+   "from": "12.r3·5",
+   "to": "12.r3·4",
+   "role": "bc"
+  },
+  {
+   "id": "d1",
+   "from": "0.r4·1",
+   "to": "12.r4·1",
+   "role": "to"
+  },
+  {
+   "id": "d2",
+   "from": "12.r4·3",
+   "to": "0.r4·1",
+   "role": "as"
+  },
+  {
+   "id": "d3",
+   "from": "12.r4·4",
+   "to": "14.r4·4",
+   "role": "bc"
+  },
+  {
+   "id": "d4",
+   "from": "0.r4·5",
+   "to": "bearing 12",
+   "role": "to"
+  },
+  {
+   "id": "d5",
+   "from": "4.r4·6",
+   "to": "bearing 12",
+   "role": "to"
+  },
+  {
+   "id": "e1",
+   "from": "12.r5·1",
+   "to": "8.r5·4",
+   "role": "to"
+  },
+  {
+   "id": "f1",
+   "from": "5.r5·2",
+   "to": "12.r5·1",
+   "role": "to"
+  },
+  {
+   "id": "g1",
+   "from": "4.r5·3",
+   "to": "12.r5·3",
+   "role": "to"
+  },
+  {
+   "id": "g3",
+   "from": "12.r5·1",
+   "to": "4.r5·3",
+   "role": "bc"
+  },
+  {
+   "id": "g2",
+   "from": "12.r5·5",
+   "to": "6.r5·5",
+   "role": "to"
+  },
+  {
+   "id": "g4",
+   "from": "12.r5·6",
+   "to": "8.r5·4",
+   "role": "to"
+  },
+  {
+   "id": "g5",
+   "from": "14.r5·8",
+   "to": "6.r5·5",
+   "role": "to"
+  },
+  {
+   "id": "g6",
+   "from": "6.r5·5",
+   "to": "8.r5·4",
+   "role": "to"
+  },
+  {
+   "id": "h1",
+   "from": "5.r6·2",
+   "to": "12.r6·1",
+   "role": "thru"
+  },
+  {
+   "id": "h2",
+   "from": "12.r6·1",
+   "to": "5.r6·3",
+   "role": "then"
+  },
+  {
+   "id": "h3",
+   "from": "5.r6·3",
+   "to": "∅",
+   "role": "blind",
+   "blind_file": 7
+  },
+  {
+   "id": "i1",
+   "from": "12.r7·1",
+   "to": "10.r7·1",
+   "role": "to"
+  },
+  {
+   "id": "i2",
+   "from": "12.r7·1",
+   "to": "11.r7·1",
+   "role": "in"
+  },
+  {
+   "id": "i3",
+   "from": "0.r7·2",
+   "to": "10.r7·2",
+   "role": "to"
+  },
+  {
+   "id": "p",
+   "from": "13.r7·4",
+   "to": "11.r7·4",
+   "role": "to"
+  },
+  {
+   "id": "q",
+   "from": "11.r7·4",
+   "to": "13.r7·4",
+   "role": "to"
+  },
+  {
+   "id": "i5",
+   "from": "1.r7·5",
+   "to": "12.r7·6",
+   "role": "in"
+  },
+  {
+   "id": "j1",
+   "from": "10.r7·1",
+   "to": "12.r8·1",
+   "role": "then"
+  },
+  {
+   "id": "j2",
+   "from": "12.r8·1",
+   "to": "8.r8·2",
+   "role": "to"
+  },
+  {
+   "id": "j3",
+   "from": "12.r8·4",
+   "to": "8.r8·3",
+   "role": "in"
+  },
+  {
+   "id": "k1",
+   "from": "9.r9·2",
+   "to": "bearing 12",
+   "role": "to"
+  },
+  {
+   "id": "k2",
+   "from": "9.r9·3",
+   "to": "bearing 12",
+   "role": "to"
+  },
+  {
+   "id": "k3",
+   "from": "9.r9·3",
+   "to": "9.r9·4",
+   "role": "bc"
+  },
+  {
+   "id": "k4",
+   "from": "9.r9·4",
+   "to": "bearing 12",
+   "role": "to"
+  },
+  {
+   "id": "k5",
+   "from": "9.r9·5",
+   "to": "12.r9·5",
+   "role": "to"
+  },
+  {
+   "id": "k6",
+   "from": "9.r9·6",
+   "to": "P1",
+   "role": "that"
+  },
+  {
+   "id": "l1",
+   "from": "9.r10·1",
+   "to": "3.r10·1",
+   "role": "to"
+  },
+  {
+   "id": "l2",
+   "from": "0.r10·2",
+   "to": "3.r10·1",
+   "role": "to"
+  },
+  {
+   "id": "l3",
+   "from": "0.r10·2",
+   "to": "1.r10·2",
+   "role": "with"
+  },
+  {
+   "id": "l4",
+   "from": "0.r10·2",
+   "to": "13.r10·2",
+   "role": "with"
+  },
+  {
+   "id": "l5",
+   "from": "9.r10·3",
+   "to": "1.r10·2",
+   "role": "to"
+  },
+  {
+   "id": "l6",
+   "from": "0.r10·5",
+   "to": "∅",
+   "role": "blind",
+   "blind_file": 15
+  },
+  {
+   "id": "l7",
+   "from": "9.r10·6",
+   "to": "P2",
+   "role": "that"
+  },
+  {
+   "id": "l8",
+   "from": "9.r10·8",
+   "to": "0.r10·8",
+   "role": "to"
+  },
+  {
+   "id": "m1",
+   "from": "9.r11·1",
+   "to": "12.r11·1",
+   "role": "to"
+  },
+  {
+   "id": "m2",
+   "from": "12.r11·1",
+   "to": "8.r11·1",
+   "role": "in"
+  },
+  {
+   "id": "m3",
+   "from": "1.r11·2",
+   "to": "12.r11·1",
+   "role": "in"
+  },
+  {
+   "id": "m4",
+   "from": "9.r11·1",
+   "to": "9.r11·3",
+   "role": "as"
+  },
+  {
+   "id": "m5",
+   "from": "8.r11·1",
+   "to": "8.r11·4",
+   "role": "then"
+  },
+  {
+   "id": "m6",
+   "from": "8.r11·5",
+   "to": "15.r11·5",
+   "role": "to"
+  },
+  {
+   "id": "m7",
+   "from": "15.r11·6",
+   "to": "7.r11·6",
+   "role": "for"
+  },
+  {
+   "id": "m8",
+   "from": "15.r11·7",
+   "to": "11.r11·7",
+   "role": "with"
+  },
+  {
+   "id": "m9",
+   "from": "7.r11·8",
+   "to": "0.r11·8",
+   "role": "to"
+  },
+  {
+   "id": "m10",
+   "from": "7.r11·9",
+   "to": "12.r11·9",
+   "role": "to"
+  }
+ ],
+ "laps": [
+  {
+   "over": "e1",
+   "under": "f1"
+  }
+ ],
+ "braids": [
+  {
+   "id": "B1",
+   "strands": [
+    "p",
+    "q"
+   ],
+   "pattern": "abab!",
+   "span": [
+    11.5,
+    12.5
+   ],
+   "site_lam": [
+    7,
+    4
+   ]
+  }
+ ],
+ "binds": [],
+ "bark": {
+  "marks": [
+   "0: HOLD"
+  ]
+ }
+}

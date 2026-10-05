@@ -1,0 +1,20 @@
+# name: E4-05
+round E4-05 {wood: long; pith: war; rings: 4; rules after: [1, 3]; cells: [1, 2, 2, 3]}
+  I
+    r1/1  0: STERN*
+  ‖
+  II
+    r2/1  0.1: GIFT{again}    0.2: SHORE#1    12.1: HOLD    12.2: ROAD
+    r3/1  2: SHORE@2    10.1: SQUARE+EYE    10.2: FOLLOW
+  ‖
+  III
+    r4/1  4: SHORE@1    8.1: DEEP+ROAD    8.2: SWIFT×3    8.3: BEARER×3
+  runners
+    run t1  0.1.r2/1   →      0.2.r2/1
+    run t2  12.1.r2/1  →      12.2.r2/1
+    run t3  10.1.r3/1  ⇒      10.2.r3/1
+    run t4  10.2.r3/1  →      2.r3/1
+    run t5  10.2.r3/1  ⇒      8.1.r4/1
+    run t7  8.2.r4/1   →      4.r4/1
+    run t6  8.2.r4/1   →thru  8.1.r4/1
+    run t8  8.3.r4/1   →      4.r4/1

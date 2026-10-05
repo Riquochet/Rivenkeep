@@ -1,0 +1,7 @@
+# name: Where it flashed, strike
+# english: Where it flashed, strike. Last flash, only flash.
+# literal: The Spark: the cut goes to the star-notch and ends there. One star, at the head.
+# root_word: flash
+round E1-05 {wood: green; pith: war; rings: 1; rules after: []}
+  I
+    r1/1  0: SPARK*

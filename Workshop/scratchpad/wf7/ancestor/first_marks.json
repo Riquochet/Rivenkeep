@@ -1,0 +1,1825 @@
+{
+ "STEM": {
+  "id": "STEM",
+  "name": "the Stem",
+  "word": "tolm-",
+  "mean": "a standing thing: a stone set up, a trunk",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      9.5
+     ]
+    ]
+   ]
+  ],
+  "stone": "every consonant's upright; a letter is still called a tolm",
+  "wood": "the cut itself: GO; the trunk of TREE and RISE (thael)"
+ },
+ "BAR": {
+  "id": "BAR",
+  "name": "the Bar",
+  "word": "hosk-",
+  "mean": "a stone laid across; a cap",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      1,
+      5
+     ],
+     [
+      9,
+      5
+     ]
+    ]
+   ]
+  ],
+  "stone": "the laid stones; the sealing lintel; the long-stone",
+  "wood": "the bar and the ring-arc that lie along a ring"
+ },
+ "FORE": {
+  "id": "FORE",
+  "name": "the Fore",
+  "word": "re-il",
+  "mean": "the one before; first",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      9.5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      2,
+      7.2
+     ],
+     [
+      8,
+      7.2
+     ]
+    ]
+   ]
+  ],
+  "stone": "kept whole as the foremark (proposed: the mark on the black chest, the head of the lintel column); its right arm and foot give r",
+  "wood": "kept whole: the Bar Before (reil)"
+ },
+ "END": {
+  "id": "END",
+  "name": "the End",
+  "word": "kul-",
+  "mean": "leave off; stop",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      8.6
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      2,
+      9.2
+     ],
+     [
+      8,
+      9.2
+     ]
+    ]
+   ]
+  ],
+  "stone": "the perpend (the stopping bar stood on the bed)",
+  "wood": "STOP (rheil); laid along the whole ring, the band-rule"
+ },
+ "POST": {
+  "id": "POST",
+  "name": "the Post",
+  "word": "gann-",
+  "mean": "a post, an upright",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      5.2
+     ]
+    ]
+   ]
+  ],
+  "stone": "the pin of b d g r rh (a letter 'with its post')",
+  "wood": "the posts of DOOR"
+ },
+ "DOOR": {
+  "id": "DOOR",
+  "name": "the Door",
+  "word": "gann-aʔ",
+  "mean": "the two posts; a gate",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      2.5,
+      0.5
+     ],
+     [
+      2.5,
+      7.8
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      7.5,
+      0.5
+     ],
+     [
+      7.5,
+      7.8
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      1.4,
+      8.6
+     ],
+     [
+      8.6,
+      8.6
+     ]
+    ]
+   ]
+  ],
+  "stone": "kept whole: the gate mark (end of an oath); capped, the coping (end of a tale)",
+  "wood": "kept whole: DOOR (veth)"
+ },
+ "CURL": {
+  "id": "CURL",
+  "name": "the Curl",
+  "word": "oð-",
+  "mean": "the rim where one comes to rest",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      4,
+      0.5
+     ],
+     [
+      4,
+      6.5
+     ]
+    ]
+   ],
+   [
+    "c",
+    5.9,
+    6.5,
+    1.9,
+    180,
+    -30
+   ]
+  ],
+  "stone": "the broad vowels a and o (the curl laid over a short pin as a capstone)",
+  "wood": "the Wave (aeth); SHORE, the Turned Stern, HOME, FALL"
+ },
+ "LONE": {
+  "id": "LONE",
+  "name": "the Lone Mark",
+  "word": "itt-",
+  "mean": "this very one; one",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      4.2,
+      0.5
+     ],
+     [
+      4.2,
+      6.2
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      6.2,
+      7.6
+     ],
+     [
+      6.2,
+      9.6
+     ]
+    ]
+   ]
+  ],
+  "stone": "the slender vowels i and e (a tall pin and a low stone)",
+  "wood": "the Lone Stroke (ith)"
+ },
+ "UPON": {
+  "id": "UPON",
+  "name": "the Upon",
+  "word": "um-",
+  "mean": "upon; (seen from below) beneath",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      3.2,
+      0.5
+     ],
+     [
+      3.2,
+      5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      6.8,
+      0.5
+     ],
+     [
+      6.8,
+      5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      2,
+      7
+     ],
+     [
+      8,
+      7
+     ]
+    ]
+   ]
+  ],
+  "stone": "the vowel u (two pins and a keystone raised clear)",
+  "wood": "BENEATH (senn): the two strokes grown into one"
+ },
+ "SPLIT": {
+  "id": "SPLIT",
+  "name": "the Split",
+  "word": "krask-",
+  "mean": "crack, break",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      5.4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5.4
+     ],
+     [
+      3.8,
+      7.4
+     ],
+     [
+      3.2,
+      9.6
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5.4
+     ],
+     [
+      7.4,
+      8.4
+     ]
+    ]
+   ]
+  ],
+  "stone": "the shore (the back-leaning upright of k g h); k",
+  "wood": "BREAK (rhass); the check of WOUND, SPENT, GRIEF; the fork (if, if not)"
+ },
+ "COURSE": {
+  "id": "COURSE",
+  "name": "the Course",
+  "word": "trenn-",
+  "mean": "a running line: a course, a stream",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      3,
+      0.5
+     ],
+     [
+      3,
+      4.8
+     ],
+     [
+      7,
+      4.8
+     ],
+     [
+      7,
+      9.5
+     ]
+    ]
+   ]
+  ],
+  "stone": "the offset (the stepped upright of t d n th dh s l r rh); t; the hand's own name, Garl Dhrenn",
+  "wood": "the WATER band; ROAD (two running lines); the ray"
+ },
+ "BEARER": {
+  "id": "BEARER",
+  "name": "the Bearer",
+  "word": "par-",
+  "mean": "bear up, hold up",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      2.6,
+      0.5
+     ],
+     [
+      5.6,
+      8.4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      4.6,
+      9
+     ],
+     [
+      9.2,
+      9
+     ]
+    ]
+   ]
+  ],
+  "stone": "the prop (the forward-leaning upright of p b m f v w); p",
+  "wood": "BEARER (varen): the load grown round the stroke into a laden hull"
+ },
+ "BOUGH": {
+  "id": "BOUGH",
+  "name": "the Bough",
+  "word": "sul-",
+  "mean": "a bough; to bend",
+  "draw": [
+   [
+    "lens",
+    5,
+    5,
+    8.6,
+    3.2,
+    90
+   ]
+  ],
+  "stone": "the sibilant stones of s (the lens cut straight: one stone free above, one joined below)",
+  "wood": "HULL and BEND (seil); every curved closed shape (of wood)"
+ },
+ "SQUARE": {
+  "id": "SQUARE",
+  "name": "the Square",
+  "word": "xreun-",
+  "mean": "the hard thing, the set-fast; stone",
+  "draw": [
+   [
+    "sq",
+    5,
+    5,
+    6.4
+   ]
+  ],
+  "stone": "rh (Hal hr): the square stood on its bed and opened",
+  "wood": "the Mute Square (rhen); every straight closed shape (of stone); the war-pith"
+ },
+ "WITHIN": {
+  "id": "WITHIN",
+  "name": "the Breath Within",
+  "word": "molt-",
+  "mean": "the living middle; the heart's breath",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      9.5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      1.0,
+      5.0
+     ],
+     [
+      1.4,
+      5.636142662994829
+     ],
+     [
+      1.8,
+      5.899999714638652
+     ],
+     [
+      2.2,
+      5.637155817783589
+     ],
+     [
+      2.6,
+      5.0014333876248385
+     ],
+     [
+      3.0,
+      4.364872105398371
+     ],
+     [
+      3.4000000000000004,
+      4.100002568251054
+     ],
+     [
+      3.8000000000000003,
+      4.361832643602005
+     ],
+     [
+      4.2,
+      4.997133228386176
+     ],
+     [
+      4.6,
+      5.6341115151779935
+     ],
+     [
+      5.0,
+      5.899992865975327
+     ],
+     [
+      5.4,
+      5.639177276272235
+     ],
+     [
+      5.800000000000001,
+      5.004300148331116
+     ],
+     [
+      6.2,
+      4.366906472697985
+     ],
+     [
+      6.6000000000000005,
+      4.1000139826706254
+     ],
+     [
+      7.0,
+      4.3598144251554
+     ],
+     [
+      7.4,
+      4.9942664858591135
+     ],
+     [
+      7.800000000000001,
+      5.632073933555866
+     ],
+     [
+      8.2,
+      5.899976885828461
+     ],
+     [
+      8.600000000000001,
+      5.6411922495574975
+     ],
+     [
+      9.0,
+      5.007166865407342
+     ]
+    ]
+   ]
+  ],
+  "stone": "the nasal stone (the middle stone of m n ŋ)",
+  "wood": "the MIST band (a pale band through the middle of the ring)"
+ },
+ "BREATHING": {
+  "id": "BREATHING",
+  "name": "the Breathing",
+  "word": "hoss-",
+  "mean": "breath going out",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      4.4,
+      0.5
+     ],
+     [
+      4.4,
+      9.5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      4.4,
+      3.2
+     ],
+     [
+      7.8,
+      4.6
+     ]
+    ]
+   ]
+  ],
+  "stone": "the fricative stone (the low stone of f th h)",
+  "wood": "LIVE (ilae): a leaf on a short stalk"
+ },
+ "SAIL": {
+  "id": "SAIL",
+  "name": "the Sail",
+  "word": "gwemm-",
+  "mean": "a cloth that fills",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      3.6,
+      0.5
+     ],
+     [
+      3.6,
+      9.6
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      3.6,
+      9.6
+     ],
+     [
+      7.2,
+      9.6
+     ],
+     [
+      8.6,
+      8.2
+     ],
+     [
+      8.8,
+      6.6
+     ],
+     [
+      8.0,
+      5.2
+     ],
+     [
+      6.4,
+      4.4
+     ]
+    ]
+   ]
+  ],
+  "stone": "the approximant stones of w and l (a short top stone and a free low one)",
+  "wood": "SAIL (reaslel)"
+ },
+ "BED": {
+  "id": "BED",
+  "name": "the Bed",
+  "word": "loð-",
+  "mean": "the wet bed a thing is set in",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      1.4
+     ],
+     [
+      5,
+      9.5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      1.5,
+      0.6
+     ],
+     [
+      8.5,
+      0.6
+     ]
+    ]
+   ]
+  ],
+  "stone": "the mortar line under every word (lodh)",
+  "wood": "DEEP (eir): a cut standing on a floor-bar"
+ },
+ "ROOTS": {
+  "id": "ROOTS",
+  "name": "the Roots",
+  "word": "ral-",
+  "mean": "a root; what feeds from below",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      9.5
+     ],
+     [
+      5,
+      4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      4
+     ],
+     [
+      2.6,
+      0.8
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      4
+     ],
+     [
+      4.6,
+      0.5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      4
+     ],
+     [
+      7.8,
+      1.2
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost: the chisel set every mark on its bed instead",
+  "wood": "ROOT, the feet of US and STONEFOLK, the memory ray's root-hairs"
+ },
+ "GAP": {
+  "id": "GAP",
+  "name": "the Gap",
+  "word": "onn-",
+  "mean": "the between",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      3.8
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      6.2
+     ],
+     [
+      5,
+      9.5
+     ]
+    ]
+   ]
+  ],
+  "stone": "the head-joint: the break in the bed between two word-stones",
+  "wood": "the Breath (aenn)"
+ },
+ "CUP": {
+  "id": "CUP",
+  "name": "the Cup",
+  "word": "tum-",
+  "mean": "hold, keep",
+  "draw": [
+   [
+    "c",
+    5.6,
+    5,
+    3.2,
+    125,
+    235
+   ],
+   [
+    "c",
+    4.4,
+    5,
+    3.2,
+    -55,
+    55
+   ]
+  ],
+  "stone": "lost: the stone kept the word (tum, remember) and let the mark go",
+  "wood": "HOLD (thein), OPEN, CLOSE, the palm of HAND; the seal in the bark"
+ },
+ "DROP": {
+  "id": "DROP",
+  "name": "the Drop",
+  "word": "θar-",
+  "mean": "blood",
+  "draw": [
+   [
+    "drop",
+    5,
+    5,
+    7,
+    4
+   ]
+  ],
+  "stone": "lost",
+  "wood": "BLOOD (thar); the Aelthar's two drops"
+ },
+ "STAR": {
+  "id": "STAR",
+  "name": "the Star",
+  "word": "kris-",
+  "mean": "a hard glint",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      5
+     ],
+     [
+      5,
+      9.4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5
+     ],
+     [
+      9.2,
+      6.4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5
+     ],
+     [
+      7.6,
+      1.4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5
+     ],
+     [
+      2.4,
+      1.4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5
+     ],
+     [
+      0.8,
+      6.4
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "FLASH (rheis); the star of SPARK, HUNTER and GUN"
+ },
+ "WEDGE": {
+  "id": "WEDGE",
+  "name": "the Wedge",
+  "word": "tass-",
+  "mean": "a blow",
+  "draw": [
+   [
+    "fill",
+    [
+     [
+      3,
+      9.4
+     ],
+     [
+      7,
+      9.4
+     ],
+     [
+      5,
+      3.4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      3.4
+     ],
+     [
+      5,
+      0.5
+     ]
+    ]
+   ]
+  ],
+  "stone": "the wedge mark (a pause: the blow's base kept as a free laid stone)",
+  "wood": "STRIKE (thass); the wedge of RAM; the causative chevron"
+ },
+ "KNOT": {
+  "id": "KNOT",
+  "name": "the Knot",
+  "word": "lanθ-",
+  "mean": "hold one's place, wait",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      5
+     ]
+    ]
+   ],
+   [
+    "lens",
+    5,
+    7,
+    3.6,
+    3,
+    0
+   ]
+  ],
+  "stone": "lost",
+  "wood": "the Knot (lanth)"
+ },
+ "SCAR": {
+  "id": "SCAR",
+  "name": "the Scar",
+  "word": "esθ-",
+  "mean": "burn",
+  "draw": [
+   [
+    "fill",
+    [
+     [
+      2,
+      9.5
+     ],
+     [
+      8,
+      9.5
+     ],
+     [
+      5,
+      0.8
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "BURN (esth): a fire scar"
+ },
+ "CARVE": {
+  "id": "CARVE",
+  "name": "the Cut",
+  "word": "skeθ-",
+  "mean": "hew, cut into wood",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      2.2,
+      9.5
+     ],
+     [
+      5,
+      0.8
+     ],
+     [
+      7.8,
+      9.5
+     ]
+    ]
+   ]
+  ],
+  "stone": "late: the V of the softening bite",
+  "wood": "CARVE (seth); the Smoothed Cut"
+ },
+ "LEAN": {
+  "id": "LEAN",
+  "name": "the Lean",
+  "word": "iʔl-en-",
+  "mean": "lean toward",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      2.6,
+      0.8
+     ],
+     [
+      7.4,
+      9.2
+     ]
+    ]
+   ]
+  ],
+  "stone": "the vowel y (e's pin set leaning)",
+  "wood": "LEAN (ilen); the lean and the pair"
+ },
+ "MOUTH": {
+  "id": "MOUTH",
+  "name": "the Mouth",
+  "word": "brenn-",
+  "mean": "a mouth; to speak",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.8
+     ],
+     [
+      3.4,
+      2.8
+     ],
+     [
+      2.5,
+      5.6
+     ],
+     [
+      2.3,
+      9.2
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      0.8
+     ],
+     [
+      6.6,
+      2.8
+     ],
+     [
+      7.5,
+      5.6
+     ],
+     [
+      7.7,
+      9.2
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "MOUTH (renn); the Two Mouths"
+ },
+ "HAND": {
+  "id": "HAND",
+  "name": "the Hand",
+  "word": "wind-",
+  "mean": "the whole hand",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      5.2
+     ]
+    ]
+   ],
+   [
+    "c",
+    5,
+    7.4,
+    2.2,
+    180,
+    360
+   ]
+  ],
+  "stone": "lost",
+  "wood": "HAND (vinn); five"
+ },
+ "EYE": {
+  "id": "EYE",
+  "name": "the Eye",
+  "word": "neʔs-",
+  "mean": "the eye; to look",
+  "draw": [
+   [
+    "lens",
+    5,
+    5,
+    4.6,
+    3,
+    90
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      2.7
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      7.3
+     ],
+     [
+      5,
+      9.5
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "EYE (neas)"
+ },
+ "SEED": {
+  "id": "SEED",
+  "name": "the Seed",
+  "word": "wus-",
+  "mean": "a seed",
+  "draw": [
+   [
+    "lens",
+    5,
+    7.2,
+    3.6,
+    2.8,
+    90
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5.4
+     ],
+     [
+      2.6,
+      1.2
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5.4
+     ],
+     [
+      7.4,
+      1.2
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "SEED (veis)"
+ },
+ "SPROUT": {
+  "id": "SPROUT",
+  "name": "the Sprout",
+  "word": "taw-",
+  "mean": "sprout, grow",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      9.5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      3
+     ],
+     [
+      7.4,
+      5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5
+     ],
+     [
+      2.6,
+      7
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      7
+     ],
+     [
+      7.2,
+      8.8
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost (the stone kept the word, tev, a child)",
+  "wood": "GROW and TIDE (thae); SAPLING"
+ },
+ "KNEEL": {
+  "id": "KNEEL",
+  "name": "the Kneel",
+  "word": "roθ-",
+  "mean": "fold the knee",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      3.4,
+      9.5
+     ],
+     [
+      3.4,
+      4.2
+     ],
+     [
+      6.6,
+      2.4
+     ],
+     [
+      6.6,
+      0.6
+     ],
+     [
+      9.2,
+      0.6
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "KNEEL (raeth); in the Stone, 'the one they kneel to'"
+ },
+ "BOND": {
+  "id": "BOND",
+  "name": "the Bond",
+  "word": "ol",
+  "mean": "together, one with another",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      1.4,
+      9.6
+     ],
+     [
+      2.6,
+      7.2
+     ],
+     [
+      4.0,
+      5.2
+     ],
+     [
+      5,
+      4.2
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      7.8,
+      8.0
+     ],
+     [
+      6.8,
+      6.2
+     ],
+     [
+      5.8,
+      4.9
+     ],
+     [
+      5,
+      4.2
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      4.2
+     ],
+     [
+      5,
+      0.5
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost (the stone binds with mortar: lodh)",
+  "wood": "BOND (ael); the Aelthar's joined stems; the tie"
+ },
+ "STILL": {
+  "id": "STILL",
+  "name": "the Still",
+  "word": "waʔr-",
+  "mean": "stillness",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      1.2,
+      4
+     ],
+     [
+      8.8,
+      4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      1.2,
+      6.4
+     ],
+     [
+      8.8,
+      6.4
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "the STILL band (vaere)"
+ },
+ "FADE": {
+  "id": "FADE",
+  "name": "the Fade",
+  "word": "feʔ-",
+  "mean": "fade, go dark",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      4.4
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      5.4
+     ],
+     [
+      5,
+      7.2
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      8.0
+     ],
+     [
+      5,
+      8.8
+     ]
+    ]
+   ],
+   [
+    "dot",
+    5,
+    9.5,
+    0.25
+   ]
+  ],
+  "stone": "lost",
+  "wood": "DYING (veas); crumbled, ROT; laid along the ring, the DARK band"
+ },
+ "PALE": {
+  "id": "PALE",
+  "name": "the Pale",
+  "word": "lenn-",
+  "mean": "pale-bright",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      1.8,
+      4.0
+     ],
+     [
+      1.8,
+      5.6
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      3.9,
+      5.2
+     ],
+     [
+      3.9,
+      6.8
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      6.1,
+      4.0
+     ],
+     [
+      6.1,
+      5.6
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      8.2,
+      5.2
+     ],
+     [
+      8.2,
+      6.8
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "the WHITE band (a frost ring of short ticks)"
+ },
+ "EDGE": {
+  "id": "EDGE",
+  "name": "the Rim",
+  "word": "enθ-",
+  "mean": "a rim, an edge",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      6.4
+     ]
+    ]
+   ],
+   [
+    "c",
+    5,
+    5.0,
+    3.6,
+    30,
+    150
+   ]
+  ],
+  "stone": "lost",
+  "wood": "EDGE (enth); the ring-arc under TIDE"
+ },
+ "TALLY": {
+  "id": "TALLY",
+  "name": "the Tally",
+  "word": "kail-",
+  "mean": "a notch cut to keep a count",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      4,
+      0.5
+     ],
+     [
+      4,
+      9.5
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      4.3,
+      7.9
+     ],
+     [
+      5.4,
+      7.3
+     ],
+     [
+      4.3,
+      6.7
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      4.3,
+      5.7
+     ],
+     [
+      5.4,
+      5.1
+     ],
+     [
+      4.3,
+      4.5
+     ]
+    ]
+   ]
+  ],
+  "stone": "the numeral cap; and Kael's name",
+  "wood": "the count and ordinal bites"
+ },
+ "GIFT": {
+  "id": "GIFT",
+  "name": "the Gift",
+  "word": "wi",
+  "mean": "give; a thing set down before",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      1.6,
+      3
+     ],
+     [
+      8.4,
+      3
+     ]
+    ]
+   ],
+   [
+    "lens",
+    5,
+    6.2,
+    4.4,
+    3.4,
+    0
+   ]
+  ],
+  "stone": "lost",
+  "wood": "GIFT (vei)"
+ },
+ "WHOLE": {
+  "id": "WHOLE",
+  "name": "the Whole",
+  "word": "weinn-",
+  "mean": "sound, true, made whole",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      5,
+      0.5
+     ],
+     [
+      5,
+      3.8
+     ]
+    ]
+   ],
+   [
+    "sq",
+    5,
+    5,
+    1.8
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      6.2
+     ],
+     [
+      5,
+      9.5
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost (the stone kept the word, venn, true, plumb)",
+  "wood": "MEND (veinn)"
+ },
+ "TURN": {
+  "id": "TURN",
+  "name": "the Turn",
+  "word": "neθ-",
+  "mean": "turn aside",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      4,
+      0.5
+     ],
+     [
+      4,
+      6
+     ],
+     [
+      7.6,
+      9.2
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "TURN (neth)"
+ },
+ "EDGE2": {
+  "id": "EDGE2",
+  "name": "the Blade",
+  "word": "kriθθ-",
+  "mean": "a hard cutting edge",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      4,
+      0.5
+     ],
+     [
+      4,
+      9.5
+     ]
+    ]
+   ],
+   [
+    "fill",
+    [
+     [
+      4.2,
+      9.2
+     ],
+     [
+      8.4,
+      9.2
+     ],
+     [
+      4.2,
+      5.4
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost",
+  "wood": "AXE (rhith)"
+ },
+ "THREE": {
+  "id": "THREE",
+  "name": "the Three",
+  "word": "ros-",
+  "mean": "three; many",
+  "draw": [
+   [
+    "l",
+    [
+     [
+      3,
+      1
+     ],
+     [
+      3,
+      9
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      5,
+      1
+     ],
+     [
+      5,
+      9
+     ]
+    ]
+   ],
+   [
+    "l",
+    [
+     [
+      7,
+      1
+     ],
+     [
+      7,
+      9
+     ]
+    ]
+   ]
+  ],
+  "stone": "lost (the stone counts with letters)",
+  "wood": "the plural: three copies abreast"
+ }
+}

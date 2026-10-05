@@ -1,0 +1,16 @@
+# name: E3-07
+round E3-07 {wood: life; pith: war; rings: 4; rules after: [1, 3]}
+  I
+    r1/1  0: BREATH*
+  ‖¦
+  II
+    r2/1  4: FLASH+SPENT
+    r3/1  0: STRIKE#3    2: BREATH#4    4: SPENT+TAKE
+    r3/2  0: BENEATH?+SQUARE
+  ‖
+  III
+    r4/1  2: BREATH    12: SWIFT+GO
+  runners
+    run t0  0.r1/1   ⇒  4.r2/1
+    run t1  4.r3/1   →  0.r3/1
+    run t2  12.r4/1  →  2.r4/1

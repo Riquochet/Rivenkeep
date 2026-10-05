@@ -1,0 +1,10120 @@
+[
+ {
+  "leaf": "front",
+  "para_index": 0,
+  "label": "Romanisation · the Book’s name",
+  "rom": "Trenneth Hethow Dhresk",
+  "english": "THE LEGENDS OF RIVENKEEP",
+  "dup": false,
+  "draft": [
+   [
+    "Trenneth",
+    "courses.of.a.wall"
+   ],
+   [
+    "Hethow",
+    "spring-PLACE"
+   ],
+   [
+    "Dhresk",
+    "S·cleft"
+   ]
+  ]
+ },
+ {
+  "leaf": "front",
+  "para_index": 1,
+  "label": "Romanisation · the Book’s name",
+  "rom": "Flennath Dholm Treskat",
+  "english": "*The Book of the Riven Stone*",
+  "dup": false,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Dholm",
+    "S·stone"
+   ],
+   [
+    "Treskat",
+    "riven"
+   ]
+  ]
+ },
+ {
+  "leaf": "front",
+  "para_index": 2,
+  "label": "Romanisation · the title page",
+  "rom": "Et trenneth sa hadhar lo Odh Sell ul Gethow Dhresk, hosen re hadh Seren Pa Luth so.",
+  "english": "*The tales laid at the Long Hearth of Rivenkeep, as Seren Two-Inks set them down.*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "trenneth",
+    "courses.of.a.wall"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "hadhar",
+    "S·lay-1PL"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "Odh",
+    "hearth"
+   ],
+   [
+    "Sell",
+    "long"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Gethow",
+    "N·keep"
+   ],
+   [
+    "Dhresk",
+    "S·cleft"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hadh",
+    "S·lay"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 0,
+  "label": "Romanisation · the heading",
+  "rom": "Nydhyl",
+  "english": "CONTENTS",
+  "dup": false,
+  "draft": [
+   [
+    "Nydhyl",
+    "catalogue"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 1,
+  "label": "Romanisation · the Contents",
+  "rom": "Flenn Seren · flenn hosast Seren",
+  "english": "**Of This Book** · *Seren's foreword*",
+  "dup": false,
+  "draft": [
+   [
+    "Flenn",
+    "leaf.of.a.book.or.of.slate"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "flenn",
+    "leaf.of.a.book.or.of.slate"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 2,
+  "label": "Romanisation · the Contents",
+  "rom": "Ammelyl · mysket gor vess, ul lern et trenn hosast",
+  "english": "**The Invocation** · *spoken before the first tale of every night*",
+  "dup": false,
+  "draft": [
+   [
+    "Ammelyl",
+    "invocation"
+   ],
+   [
+    "mysket",
+    "said"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "vess",
+    "night"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "trenn",
+    "course.of.stones"
+   ],
+   [
+    "hosast",
+    "first"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 3,
+  "label": "Romanisation · the Contents",
+  "rom": "Flennath Hosast · Flennath et Hald",
+  "english": "**BOOK ONE · THE BOOK OF THE WALL**",
+  "dup": false,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Hosast",
+    "first"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Hald",
+    "wall"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 4,
+  "label": "Romanisation · the Contents",
+  "rom": "Hosen vodh re rarrar dem stonol.",
+  "english": "*How we came to stand.*",
+  "dup": false,
+  "draft": [
+   [
+    "Hosen",
+    "as"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rarrar",
+    "S·come-1PL"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "stonol",
+    "standing"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 5,
+  "label": "Romanisation · the Contents",
+  "rom": "Covv Treskat · Kael Nydherd · eth Vell et Covv Treskat · ul lern Dhrenn Rask",
+  "english": "I.1 · The Torn Cloak · *Kael the Counter* · with *The Lay of the Torn Cloak* · facing the Epilogue",
+  "dup": false,
+  "draft": [
+   [
+    "Covv",
+    "cloak"
+   ],
+   [
+    "Treskat",
+    "riven"
+   ],
+   [
+    "Kael",
+    "tally-notch"
+   ],
+   [
+    "Nydherd",
+    "counter"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "Vell",
+    "song"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Covv",
+    "cloak"
+   ],
+   [
+    "Treskat",
+    "riven"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "Dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "Rask",
+    "S·end"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 6,
+  "label": "Romanisation · the Contents",
+  "rom": "Carm et Lodhan · Seren Pa Luth · eth Pa lo Yanna",
+  "english": "I.2 · The Cry of the Bonded · *Seren Two-Inks* · with *Two at the Gate*",
+  "dup": false,
+  "draft": [
+   [
+    "Carm",
+    "call"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Lodhan",
+    "Bonded"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "Yanna",
+    "S·gate"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 7,
+  "label": "Romanisation · the Contents",
+  "rom": "Hoss Sell et Crenn · Hale Haskard",
+  "english": "I.3 · The Captain's Long Breath · *Hale the runner*",
+  "dup": false,
+  "draft": [
+   [
+    "Hoss",
+    "breath"
+   ],
+   [
+    "Sell",
+    "long"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Crenn",
+    "captain"
+   ],
+   [
+    "Hale",
+    "Hale"
+   ],
+   [
+    "Haskard",
+    "runner"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 8,
+  "label": "Romanisation · the Contents",
+  "rom": "Ternil et Gorndholm · Seren Pa Luth",
+  "english": "I.4 · The Rite of the Cornerstone · *Seren Two-Inks*",
+  "dup": false,
+  "draft": [
+   [
+    "Ternil",
+    "rite"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Gorndholm",
+    "cornerstone"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 9,
+  "label": "Romanisation · the Contents",
+  "rom": "Vollol et Treskan · Voss sa re vess",
+  "english": "I.5 · The Naming of the Rivenmen · *Voss who asked*",
+  "dup": false,
+  "draft": [
+   [
+    "Vollol",
+    "naming"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Treskan",
+    "Treskan"
+   ],
+   [
+    "Voss",
+    "Voss"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vess",
+    "S·ask"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 10,
+  "label": "Romanisation · the Contents",
+  "rom": "Flennath Pawast · Flennath et Galdard",
+  "english": "**BOOK TWO · THE BOOK OF THE BUILDERS**",
+  "dup": false,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Pawast",
+    "second"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Galdard",
+    "builder"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 11,
+  "label": "Romanisation · the Contents",
+  "rom": "Cedh ew ol, eth cedh ew so.",
+  "english": "*Who we were, and who they were.*",
+  "dup": false,
+  "draft": [
+   [
+    "Cedh",
+    "who?"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "cedh",
+    "who?"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 12,
+  "label": "Romanisation · the Contents",
+  "rom": "Kethow sa re yal nadhumat · Seren Pa Luth, eth flenn et galdardath hosast · ul lern Hoss et Mesk",
+  "english": "II.1 · Of the Keep That Was Forgotten · *Seren Two-Inks, with the founders' leaf* · facing II.2",
+  "dup": false,
+  "draft": [
+   [
+    "Kethow",
+    "keep"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "nadhumat",
+    "unremembered"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "flenn",
+    "leaf.of.a.book.or.of.slate"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "galdardath",
+    "builder-PL"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "Hoss",
+    "breath"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Mesk",
+    "tree"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 13,
+  "label": "Romanisation · the Contents",
+  "rom": "Hoss et Mesk · et mesk, hosen re hethe Halyna o",
+  "english": "II.2 · Of the Breath of the Wood · *the wood, as {{Halyna}} knew it*",
+  "dup": false,
+  "draft": [
+   [
+    "Hoss",
+    "breath"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Mesk",
+    "tree"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 14,
+  "label": "Romanisation · the Contents",
+  "rom": "Lodhan eth Tolmath Vardh · Halyna, lo et tevath",
+  "english": "II.3 · Of the Bonded and the Theoliths · *{{Halyna}}, to the children*",
+  "dup": false,
+  "draft": [
+   [
+    "Lodhan",
+    "Bonded"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "Tolmath",
+    "stonework"
+   ],
+   [
+    "Vardh",
+    "S·God"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tevath",
+    "children"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 15,
+  "label": "Romanisation · the Contents",
+  "rom": "Flennath Sullast · Flennath et Cumm",
+  "english": "**BOOK THREE · THE BOOK OF THE HAVENS**",
+  "dup": false,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Sullast",
+    "third"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Cumm",
+    "haven"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 16,
+  "label": "Romanisation · the Contents",
+  "rom": "Noth cumm, eth noth uld sa wrodhant so: vodh re yal lor, eth hosen vodh re orrar hyo.",
+  "english": "*Ten havens, and ten men to tell them: what we had, and how we walked away from it.*",
+  "dup": false,
+  "draft": [
+   [
+    "Noth",
+    "ten"
+   ],
+   [
+    "cumm",
+    "haven"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "noth",
+    "ten"
+   ],
+   [
+    "uld",
+    "man"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "wrodhant",
+    "S·put.into.words-3PL"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "lor",
+    "at-1PL"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "orrar",
+    "go-1PL"
+   ],
+   [
+    "hyo",
+    "from-3SG.M"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 17,
+  "label": "Romanisation · the Contents",
+  "rom": "So Yaldol · et vennuldath, cumm gor hos",
+  "english": "III.1 · Of Their Raising · *the True Men, each for his own haven*",
+  "dup": false,
+  "draft": [
+   [
+    "So",
+    "their(+S)"
+   ],
+   [
+    "Yaldol",
+    "S·building"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "vennuldath",
+    "True.Man-PL"
+   ],
+   [
+    "cumm",
+    "haven"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 18,
+  "label": "Romanisation · the Contents",
+  "rom": "So Ommol · et vennuldath, cumm gor hos",
+  "english": "III.2 · Of Their Fall · *the True Men, each for his own haven*",
+  "dup": false,
+  "draft": [
+   [
+    "So",
+    "their(+S)"
+   ],
+   [
+    "Ommol",
+    "falling"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "vennuldath",
+    "True.Man-PL"
+   ],
+   [
+    "cumm",
+    "haven"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 19,
+  "label": "Romanisation · the Contents",
+  "rom": "Flennath Gemmest · Flennath et Grest",
+  "english": "**BOOK FOUR · THE BOOK OF THE WOUND**",
+  "dup": false,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Gemmest",
+    "fourth"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Grest",
+    "harm"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 20,
+  "label": "Romanisation · the Contents",
+  "rom": "Et grest, brodhat hy sest eth sest et myst.",
+  "english": "*The wrong, told from both sides of the grey.*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "grest",
+    "harm"
+   ],
+   [
+    "brodhat",
+    "told"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "myst",
+    "sea-fog"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 21,
+  "label": "Romanisation · the Contents",
+  "rom": "Gostol et Gannath Domm · Seren Pa Luth, hy et scaevureleth rytow · ul lern Rannwresk ul Meskdhrenn",
+  "english": "IV.1 · Of the Felling of the Black Pillars · *Seren Two-Inks, from the rolls* · facing IV.2",
+  "dup": false,
+  "draft": [
+   [
+    "Gostol",
+    "felling"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Gannath",
+    "posts"
+   ],
+   [
+    "Domm",
+    "black"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "scaevureleth",
+    "roll-PL"
+   ],
+   [
+    "rytow",
+    "archive"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "Rannwresk",
+    "S·axe"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Meskdhrenn",
+    "grain.of.wood"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 22,
+  "label": "Romanisation · the Contents",
+  "rom": "Dannwresk ul Meskdhrenn · et mesk, hosen re hethe Halyna o",
+  "english": "IV.2 · The Axe in the Grain · *the wood, as {{Halyna}} knew it*",
+  "dup": false,
+  "draft": [
+   [
+    "Dannwresk",
+    "axe"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Meskdhrenn",
+    "grain.of.wood"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 23,
+  "label": "Romanisation · the Contents",
+  "rom": "Gebb et Pard · brodath Wrenn Reldvar, vesket lo Halyna, eth ryt surr Seren · ul lern Hebbet sa re yal kethet hos clem",
+  "english": "IV.3 · The Warden's Door · *the words of Brenn of the outpost, read by {{Halyna}}, with Seren's annal* · facing IV.4",
+  "dup": false,
+  "draft": [
+   [
+    "Gebb",
+    "door"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Pard",
+    "warden"
+   ],
+   [
+    "brodath",
+    "words"
+   ],
+   [
+    "Wrenn",
+    "S·Brenn"
+   ],
+   [
+    "Reldvar",
+    "S·outpost"
+   ],
+   [
+    "vesket",
+    "colour"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "ryt",
+    "cut.vow"
+   ],
+   [
+    "surr",
+    "year"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "Hebbet",
+    "gift"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "kethet",
+    "held"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "clem",
+    "hour"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 24,
+  "label": "Romanisation · the Contents",
+  "rom": "Hebbet sa re yal kethet hos clem · et mesk, hosen re hethe Halyna o",
+  "english": "IV.4 · The Gift Held an Hour · *the wood, as {{Halyna}} knew it*",
+  "dup": false,
+  "draft": [
+   [
+    "Hebbet",
+    "gift"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "kethet",
+    "held"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "clem",
+    "hour"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 25,
+  "label": "Romanisation · the Contents",
+  "rom": "Sulter sa vorr · Voss sa re vess · eth Sulter Myst · ul lern Farrol et Aelvaren",
+  "english": "IV.5 · The Burning Boat · *Voss who asked* · with *The Grey Boat* · facing IV.6",
+  "dup": false,
+  "draft": [
+   [
+    "Sulter",
+    "small.boat"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "vorr",
+    "fire"
+   ],
+   [
+    "Voss",
+    "Voss"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vess",
+    "S·ask"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "Sulter",
+    "small.boat"
+   ],
+   [
+    "Myst",
+    "sea-fog"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "Farrol",
+    "voyage"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Aelvaren",
+    "Aelvaren"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 26,
+  "label": "Romanisation · the Contents",
+  "rom": "Farrol et Aelvaren · et mesk, hosen re hethe Halyna o",
+  "english": "IV.6 · The Voyage of the Aelvaren · *the wood, as {{Halyna}} knew it*",
+  "dup": false,
+  "draft": [
+   [
+    "Farrol",
+    "voyage"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Aelvaren",
+    "Aelvaren"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 27,
+  "label": "Romanisation · the Contents",
+  "rom": "Flennath Leskest · Flennath et Hyll",
+  "english": "**BOOK FIVE · THE BOOK OF THE TIDES**",
+  "dup": false,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Leskest",
+    "fifth"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 28,
+  "label": "Romanisation · the Contents",
+  "rom": "Et gorrol: tesset sa re luskant et senneteth, eth sa re lymment et hosseneth, ul lern lunt sa re sesk nafedh: El et bynd ol.",
+  "english": "*The war: a doom set in motion by the dead, crewed by the living, against a people who had never known they were the foe.*",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "gorrol",
+    "war"
+   ],
+   [
+    "tesset",
+    "judgement"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "luskant",
+    "loose-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "senneteth",
+    "dead-PL"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "lymment",
+    "bring-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hosseneth",
+    "alive-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "lunt",
+    "people"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "sesk",
+    "know.a.fact"
+   ],
+   [
+    "nafedh",
+    "never"
+   ],
+   [
+    "El",
+    "is"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "bynd",
+    "foe"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 29,
+  "label": "Romanisation · the Contents",
+  "rom": "Rellor Hosast · Seren Pa Luth",
+  "english": "V.1 · The First Glyph · *Seren Two-Inks*",
+  "dup": false,
+  "draft": [
+   [
+    "Rellor",
+    "sign"
+   ],
+   [
+    "Hosast",
+    "first"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 30,
+  "label": "Romanisation · the Contents",
+  "rom": "Vess Vollol · Seren Pa Luth · ul lern Haelir sa re vymm dem varn",
+  "english": "V.2 · The Night of the Naming · *Seren Two-Inks* · facing V.3",
+  "dup": false,
+  "draft": [
+   [
+    "Vess",
+    "night"
+   ],
+   [
+    "Vollol",
+    "naming"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "Haelir",
+    "S·ruin"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vymm",
+    "S·return"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 31,
+  "label": "Romanisation · the Contents",
+  "rom": "Kaelir sa re vymm dem varn · et mesk, hosen re hethe Halyna o",
+  "english": "V.3 · The Wreck That Went Home · *the wood, as {{Halyna}} knew it*",
+  "dup": false,
+  "draft": [
+   [
+    "Kaelir",
+    "ruin"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vymm",
+    "S·return"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 32,
+  "label": "Romanisation · the Contents",
+  "rom": "Redul ul vimm et Helv Bynt · et mesk, hosen re hethe Halyna o · ul lern flenn pondul Seren",
+  "english": "V.4 · The Council Under the Thin Sky · *the wood, as {{Halyna}} knew it* · facing Seren's empty leaf",
+  "dup": false,
+  "draft": [
+   [
+    "Redul",
+    "council"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Helv",
+    "sky"
+   ],
+   [
+    "Bynt",
+    "narrow"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "flenn",
+    "leaf.of.a.book.or.of.slate"
+   ],
+   [
+    "pondul",
+    "empty"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 33,
+  "label": "Romanisation · the Contents",
+  "rom": "Hylleth sa re nydh et Hald · Kael Nydherd, ul vran nydhyl · ul lern Dhevyl",
+  "english": "V.5 · The Tides, as the Wall Counted Them · *Kael the Counter, in six counts* · facing V.6",
+  "dup": false,
+  "draft": [
+   [
+    "Hylleth",
+    "tide-PL"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "nydh",
+    "count"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Hald",
+    "wall"
+   ],
+   [
+    "Kael",
+    "tally-notch"
+   ],
+   [
+    "Nydherd",
+    "counter"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vran",
+    "six"
+   ],
+   [
+    "nydhyl",
+    "catalogue"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "Dhevyl",
+    "S·birth"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 34,
+  "label": "Romanisation · the Contents",
+  "rom": "Tevyl · et mesk, hosen re hethe Halyna o · eth Vell et Surrath",
+  "english": "V.6 · Of the Growing · *the wood, as {{Halyna}} knew it* · with *The Song of the Years*",
+  "dup": false,
+  "draft": [
+   [
+    "Tevyl",
+    "birth"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "Vell",
+    "song"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Surrath",
+    "age"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 35,
+  "label": "Romanisation · the Contents",
+  "rom": "Vesksirr ul Meskdhrenn · Seren Pa Luth, ul sull trenn",
+  "english": "V.7 · The Mirror in the Grain · *Seren Two-Inks, in three parts*",
+  "dup": false,
+  "draft": [
+   [
+    "Vesksirr",
+    "mirror"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Meskdhrenn",
+    "grain.of.wood"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "trenn",
+    "course.of.stones"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 36,
+  "label": "Romanisation · the Contents",
+  "rom": "Flennath Vranast · Flennath et Mymmyl",
+  "english": "**BOOK SIX · THE BOOK OF THE HOMECOMINGS**",
+  "dup": false,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Vranast",
+    "sixth"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Mymmyl",
+    "homecoming"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 37,
+  "label": "Romanisation · the Contents",
+  "rom": "Hosen vodh re vymment et cummath dem varn, eth re vymm et gorrol dem varn.",
+  "english": "*How the havens came home, and the war went home.*",
+  "dup": false,
+  "draft": [
+   [
+    "Hosen",
+    "as"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vymment",
+    "S·return-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "cummath",
+    "haven-PL"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vymm",
+    "S·return"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "gorrol",
+    "war"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 38,
+  "label": "Romanisation · the Contents",
+  "rom": "Mymmyleth · et vennuldath, cumm gor hos, eth lo reskow et ommatath · ul lern Reskowath strom sa orrant um wadh",
+  "english": "VI.1 · The Homecomings · *the True Men, each for his own haven, and for the fallen* · facing VI.2",
+  "dup": false,
+  "draft": [
+   [
+    "Mymmyleth",
+    "homecoming-PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "vennuldath",
+    "True.Man-PL"
+   ],
+   [
+    "cumm",
+    "haven"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "reskow",
+    "place"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "ommatath",
+    "fallen-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "Reskowath",
+    "place-PL"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "orrant",
+    "go-3PL"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "wadh",
+    "sea"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 39,
+  "label": "Romanisation · the Contents",
+  "rom": "Reskowath strom sa orrant um wadh · et mesk, hosen re hethe Halyna o",
+  "english": "VI.2 · The Thrones That Walk the Sea · *the wood, as {{Halyna}} knew it*",
+  "dup": false,
+  "draft": [
+   [
+    "Reskowath",
+    "place-PL"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "orrant",
+    "go-3PL"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "wadh",
+    "sea"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 40,
+  "label": "Romanisation · the Contents",
+  "rom": "Kethyl et Mesk Lurrel · Seren Pa Luth, eth ul et dask, et mesk · eth Pa Varn",
+  "english": "VI.3 · The Knowing of the Green Wood · *Seren Two-Inks, and at the last the wood* · with *The Two Homes*",
+  "dup": false,
+  "draft": [
+   [
+    "Kethyl",
+    "holding"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Mesk",
+    "tree"
+   ],
+   [
+    "Lurrel",
+    "green"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "dask",
+    "end"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Varn",
+    "home"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 41,
+  "label": "Romanisation · the Contents",
+  "rom": "Trenn Rask",
+  "english": "**EPILOGUE**",
+  "dup": false,
+  "draft": [
+   [
+    "Trenn",
+    "course.of.stones"
+   ],
+   [
+    "Rask",
+    "S·end"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 42,
+  "label": "Romanisation · the Contents",
+  "rom": "Galat sa re lusk et myst dem sestow.",
+  "english": "*What the grey sent back.*",
+  "dup": false,
+  "draft": [
+   [
+    "Galat",
+    "anything"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "lusk",
+    "loose"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "myst",
+    "sea-fog"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "sestow",
+    "back"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 43,
+  "label": "Romanisation · the Contents",
+  "rom": "Tolm hy et Myst · Seren Pa Luth · bysket ul lern et trenn hosast",
+  "english": "The Stone out of the Grey · *Seren Two-Inks* · bound facing the first tale",
+  "dup": false,
+  "draft": [
+   [
+    "Tolm",
+    "stone"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Myst",
+    "sea-fog"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ],
+   [
+    "bysket",
+    "knot"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "trenn",
+    "course.of.stones"
+   ],
+   [
+    "hosast",
+    "first"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 44,
+  "label": "Romanisation · the Contents",
+  "rom": "Sestow Flennath",
+  "english": "**APPENDIX**",
+  "dup": false,
+  "draft": [
+   [
+    "Sestow",
+    "back"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 45,
+  "label": "Romanisation · the Contents",
+  "rom": "Gor rytet sa re hebb et mesk lor, ul vimm o veskrivull.",
+  "english": "*Every carving the wood gave us, under its root.*",
+  "dup": false,
+  "draft": [
+   [
+    "Gor",
+    "every(+S)"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hebb",
+    "give"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "lor",
+    "at-1PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "veskrivull",
+    "S·root"
+   ]
+  ]
+ },
+ {
+  "leaf": "contents",
+  "para_index": 46,
+  "label": "Romanisation · the Contents",
+  "rom": "Flennath Hethyleth · Seren Pa Luth",
+  "english": "The Book of Knowings · *Seren Two-Inks*",
+  "dup": false,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Hethyleth",
+    "spring-VN-PL"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ],
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Luth",
+    "ink"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-1",
+  "para_index": 0,
+  "label": "Romanisation · the heading",
+  "rom": "Flennath Hosast · Flennath et Hald",
+  "english": "BOOK ONE · THE BOOK OF THE WALL",
+  "dup": true,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Hosast",
+    "first"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Hald",
+    "wall"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-1",
+  "para_index": 1,
+  "label": "Romanisation · the line under it",
+  "rom": "Hosen vodh re rarrar dem stonol.",
+  "english": "*How we came to stand.*",
+  "dup": true,
+  "draft": [
+   [
+    "Hosen",
+    "as"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rarrar",
+    "S·come-1PL"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "stonol",
+    "standing"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-2",
+  "para_index": 0,
+  "label": "Romanisation · the heading",
+  "rom": "Flennath Pawast · Flennath et Galdard",
+  "english": "BOOK TWO · THE BOOK OF THE BUILDERS",
+  "dup": true,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Pawast",
+    "second"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Galdard",
+    "builder"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-2",
+  "para_index": 1,
+  "label": "Romanisation · the line under it",
+  "rom": "Cedh ew ol, eth cedh ew so.",
+  "english": "*Who we were, and who they were.*",
+  "dup": true,
+  "draft": [
+   [
+    "Cedh",
+    "who?"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "cedh",
+    "who?"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-3",
+  "para_index": 0,
+  "label": "Romanisation · the heading",
+  "rom": "Flennath Sullast · Flennath et Cumm",
+  "english": "BOOK THREE · THE BOOK OF THE HAVENS",
+  "dup": true,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Sullast",
+    "third"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Cumm",
+    "haven"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-3",
+  "para_index": 1,
+  "label": "Romanisation · the line under it",
+  "rom": "Noth cumm, eth noth uld sa wrodhant so: vodh re yal lor, eth hosen vodh re orrar hyo.",
+  "english": "*Ten havens, and ten men to tell them: what we had, and how we walked away from it.*",
+  "dup": true,
+  "draft": [
+   [
+    "Noth",
+    "ten"
+   ],
+   [
+    "cumm",
+    "haven"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "noth",
+    "ten"
+   ],
+   [
+    "uld",
+    "man"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "wrodhant",
+    "S·put.into.words-3PL"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "lor",
+    "at-1PL"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "orrar",
+    "go-1PL"
+   ],
+   [
+    "hyo",
+    "from-3SG.M"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-4",
+  "para_index": 0,
+  "label": "Romanisation · the heading",
+  "rom": "Flennath Gemmest · Flennath et Grest",
+  "english": "BOOK FOUR · THE BOOK OF THE WOUND",
+  "dup": true,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Gemmest",
+    "fourth"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Grest",
+    "harm"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-4",
+  "para_index": 1,
+  "label": "Romanisation · the line under it",
+  "rom": "Et grest, brodhat hy sest eth sest et myst.",
+  "english": "*The wrong, told from both sides of the grey.*",
+  "dup": true,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "grest",
+    "harm"
+   ],
+   [
+    "brodhat",
+    "told"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "myst",
+    "sea-fog"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-5",
+  "para_index": 0,
+  "label": "Romanisation · the heading",
+  "rom": "Flennath Leskest · Flennath et Hyll",
+  "english": "BOOK FIVE · THE BOOK OF THE TIDES",
+  "dup": true,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Leskest",
+    "fifth"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-5",
+  "para_index": 1,
+  "label": "Romanisation · the line under it",
+  "rom": "Et gorrol: tesset sa re luskant et senneteth, eth sa re lymment et hosseneth, ul lern lunt sa re sesk nafedh: El et bynd ol.",
+  "english": "*The war: a doom set in motion by the dead, crewed by the living, against a people who had never known they were the foe.*",
+  "dup": true,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "gorrol",
+    "war"
+   ],
+   [
+    "tesset",
+    "judgement"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "luskant",
+    "loose-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "senneteth",
+    "dead-PL"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "lymment",
+    "bring-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hosseneth",
+    "alive-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "lunt",
+    "people"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "sesk",
+    "know.a.fact"
+   ],
+   [
+    "nafedh",
+    "never"
+   ],
+   [
+    "El",
+    "is"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "bynd",
+    "foe"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-6",
+  "para_index": 0,
+  "label": "Romanisation · the heading",
+  "rom": "Flennath Vranast · Flennath et Mymmyl",
+  "english": "BOOK SIX · THE BOOK OF THE HOMECOMINGS",
+  "dup": true,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Vranast",
+    "sixth"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Mymmyl",
+    "homecoming"
+   ]
+  ]
+ },
+ {
+  "leaf": "book-6",
+  "para_index": 1,
+  "label": "Romanisation · the line under it",
+  "rom": "Hosen vodh re vymment et cummath dem varn, eth re vymm et gorrol dem varn.",
+  "english": "*How the havens came home, and the war went home.*",
+  "dup": true,
+  "draft": [
+   [
+    "Hosen",
+    "as"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vymment",
+    "S·return-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "cummath",
+    "haven-PL"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vymm",
+    "S·return"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "gorrol",
+    "war"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ]
+  ]
+ },
+ {
+  "leaf": "epilogue",
+  "para_index": 0,
+  "label": "Romanisation · the heading",
+  "rom": "Trenn Rask",
+  "english": "EPILOGUE",
+  "dup": true,
+  "draft": [
+   [
+    "Trenn",
+    "course.of.stones"
+   ],
+   [
+    "Rask",
+    "S·end"
+   ]
+  ]
+ },
+ {
+  "leaf": "epilogue",
+  "para_index": 1,
+  "label": "Romanisation · the line under it",
+  "rom": "Galat sa re lusk et myst dem sestow.",
+  "english": "*What the grey sent back.*",
+  "dup": true,
+  "draft": [
+   [
+    "Galat",
+    "anything"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "lusk",
+    "loose"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "myst",
+    "sea-fog"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "sestow",
+    "back"
+   ]
+  ]
+ },
+ {
+  "leaf": "knowings",
+  "para_index": 0,
+  "label": "Romanisation · the heading",
+  "rom": "Sestow Flennath",
+  "english": "APPENDIX",
+  "dup": true,
+  "draft": [
+   [
+    "Sestow",
+    "back"
+   ],
+   [
+    "Flennath",
+    "Book"
+   ]
+  ]
+ },
+ {
+  "leaf": "knowings",
+  "para_index": 1,
+  "label": "Romanisation · the line under it",
+  "rom": "Gor rytet sa re hebb et mesk lor, ul vimm o veskrivull.",
+  "english": "*Every carving the wood gave us, under its root.*",
+  "dup": true,
+  "draft": [
+   [
+    "Gor",
+    "every(+S)"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hebb",
+    "give"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "lor",
+    "at-1PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "veskrivull",
+    "S·root"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Flennath Hethyleth",
+  "english": "The Book of Knowings",
+  "dup": false,
+  "draft": [
+   [
+    "Flennath",
+    "Book"
+   ],
+   [
+    "Hethyleth",
+    "spring-VN-PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 1,
+  "label": "Romanisation · the dateline",
+  "rom": "Lo dhrenn et gorrol, eth hoskat gemm surr ul sestow.",
+  "english": "*Through the war, and closed four years after.*",
+  "dup": false,
+  "draft": [
+   [
+    "Lo",
+    "at(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "gorrol",
+    "war"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hoskat",
+    "laid.the.lintel"
+   ],
+   [
+    "gemm",
+    "four"
+   ],
+   [
+    "surr",
+    "year"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "sestow",
+    "back"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 2,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Cadhat ul sestow et flennath sy, rytet eth rytet, hosen re hethe Halyna gor hos hy et kaelirvesk eth hy et reskowath strom. El saed et flennath sa ross lo et scethan sost, hy vodh re ryt et mesk gor rytet ulo, eth nath re ryter hos.",
+  "english": "*Set down at the back of this Book, one carving at a time, as {{Halyna}} knew each from the wreck-wood and the Thrones. It is the fleet's own half of the Book, for the wood cut every carving in it, and we cut none.*",
+  "dup": false,
+  "draft": [
+   [
+    "Cadhat",
+    "laid"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "sestow",
+    "back"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "flennath",
+    "Book"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethe",
+    "S·hold-3DU"
+   ],
+   [
+    "Halyna",
+    "Halyna"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "kaelirvesk",
+    "wreck-wood"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "reskowath",
+    "place-PL"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "El",
+    "is"
+   ],
+   [
+    "saed",
+    "half"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "flennath",
+    "Book"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "ross",
+    "S·be"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "scethan",
+    "fleet"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "ryt",
+    "cut.vow"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "ryter",
+    "cut.vow-1PL"
+   ],
+   [
+    "hos",
+    "one"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 3,
+  "label": "Romanisation",
+  "rom": "Gor rytet sa re hebb et mesk lor, ew hos stinel o dholm hosast; eth el o veskrivull et stinel hosast ull, hosen el rivull hald et trenn hosast. Doss noth meskrivull.",
+  "english": "Every carving the wood gave us began with one stroke, and that first stroke is its root, as the first course is the root of a wall. Of roots there are ten.",
+  "dup": false,
+  "draft": [
+   [
+    "Gor",
+    "every(+S)"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hebb",
+    "give"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "lor",
+    "at-1PL"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "dholm",
+    "S·stone"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "el",
+    "is"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "veskrivull",
+    "S·root"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "el",
+    "is"
+   ],
+   [
+    "rivull",
+    "foundation"
+   ],
+   [
+    "hald",
+    "wall"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "trenn",
+    "course.of.stones"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "Doss",
+    "be"
+   ],
+   [
+    "noth",
+    "ten"
+   ],
+   [
+    "meskrivull",
+    "root"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 4,
+  "label": "Romanisation",
+  "rom": "Re rystullom lerneth et meskrivullath ul veskyl, lo et hylldhrenn eth ul et nelter, sell tevar hy veskyl galat ullen ul et meskdhrenn. Re vollom so, en sost, hy vodh lern navollat, omm o hy et garl hosen tolm thenth. Re vyskym gor voll sull fedh, eth hy ull re rytym o; eth re ston gor voll.",
+  "english": "Their shapes I learned by eye, at the tide-line and in the vault, long ere I could make out anything else in the grain. The names are mine own, for a shape without a name slippeth out of the hand like a wet stone. Each I said three times ere I wrote it, and each held.",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "rystullom",
+    "learn-1SG"
+   ],
+   [
+    "lerneth",
+    "face-PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "meskrivullath",
+    "root-PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "veskyl",
+    "sight"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hylldhrenn",
+    "tide-line"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "nelter",
+    "vault"
+   ],
+   [
+    "sell",
+    "long"
+   ],
+   [
+    "tevar",
+    "early"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "veskyl",
+    "S·tree-VN"
+   ],
+   [
+    "galat",
+    "anything"
+   ],
+   [
+    "ullen",
+    "another"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "meskdhrenn",
+    "grain.of.wood"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "vollom",
+    "name-1SG"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "en",
+    "my(+N)"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "navollat",
+    "unnamed"
+   ],
+   [
+    "omm",
+    "fall"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "garl",
+    "hand"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "thenth",
+    "wet"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "vyskym",
+    "S·say-1SG"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "voll",
+    "name"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "fedh",
+    "time"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rytym",
+    "cut.vow-1SG"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "ston",
+    "stand"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "voll",
+    "name"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 5,
+  "label": "Romanisation",
+  "rom": "Nath re ryt et mesk tevel veth et meskrivull. Re ryt gor hyll ul o sestow et meskrivull sost pawast, eth re hadh umo, hosen cadhant mesketh scaevur um scaevur. Hy ull, el et ryteteth hemm sost et ryteteth tevel sost, sa re dhevent hemm.",
+  "english": "The young wood cut the root and naught more. Each Tide after cut the same root again, and added to it, as trees lay ring on ring. So the eldest carvings are but the youngest grown old.",
+  "dup": false,
+  "draft": [
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "ryt",
+    "cut.vow"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "tevel",
+    "young"
+   ],
+   [
+    "veth",
+    "but"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "meskrivull",
+    "root"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "ryt",
+    "cut.vow"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hyll",
+    "tide"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "sestow",
+    "back"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "meskrivull",
+    "root"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "pawast",
+    "second"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hadh",
+    "S·lay"
+   ],
+   [
+    "umo",
+    "upon-3SG.M"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "cadhant",
+    "lay-3PL"
+   ],
+   [
+    "mesketh",
+    "tree-PL"
+   ],
+   [
+    "scaevur",
+    "wheel"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "scaevur",
+    "wheel"
+   ],
+   [
+    "Hy",
+    "from(+S)"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "el",
+    "is"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "ryteteth",
+    "carving-PL"
+   ],
+   [
+    "hemm",
+    "old"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "ryteteth",
+    "carving-PL"
+   ],
+   [
+    "tevel",
+    "young"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhevent",
+    "S·child-3PL"
+   ],
+   [
+    "hemm",
+    "old"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 6,
+  "label": "Romanisation",
+  "rom": "Hy et hald, ul et hylleth desir, re yal seskyl veskrivull lom ul scaevurol haelir. Re seskym nafedh mest hy et meskrivull, hy vodh et ullen, nath hebb et mesk o veth lo et Lodhan, eth doss maver o hethyl umont, eth nath vesk hos o.",
+  "english": "From the wall, in the late Tides, I could tell a root in the time a wreck taketh to roll over. More than the root I knew never, for the rest the wood giveth only to the Bonded, and it must be known, not read.",
+  "dup": false,
+  "draft": [
+   [
+    "Hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hald",
+    "wall"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hylleth",
+    "tide-PL"
+   ],
+   [
+    "desir",
+    "late"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "seskyl",
+    "knowing.a.fact"
+   ],
+   [
+    "veskrivull",
+    "S·root"
+   ],
+   [
+    "lom",
+    "at-1SG"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "scaevurol",
+    "rolling"
+   ],
+   [
+    "haelir",
+    "S·ruin"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "seskym",
+    "know.a.fact-1SG"
+   ],
+   [
+    "nafedh",
+    "never"
+   ],
+   [
+    "mest",
+    "much"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "meskrivull",
+    "root"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "ullen",
+    "another"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "hebb",
+    "give"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "veth",
+    "but"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Lodhan",
+    "Bonded"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "doss",
+    "be"
+   ],
+   [
+    "maver",
+    "wish"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hethyl",
+    "S·holding"
+   ],
+   [
+    "umont",
+    "upon-3PL"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "vesk",
+    "see"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 7,
+  "label": "Romanisation",
+  "rom": "Lo sy nath noss veth et bisketh, hy et mesk tevel sost dem et mesk hemm sost. Et saedeth, cedh re dhovv um hedh eth amm vodh re haever et molt kylyl, re rytym so ul so reskowath. Lymment dhom rytet et mesk tevel vollath et hesperdeth: vollath dasorat lo yarlol, hosen hulter runn hemm.",
+  "english": "Here are but the heads, from the youngest wood to the eldest. The parts, who waited on whom and when the heart meant to turn, I have written in their places. The seven of the young wood bear the soldiers' names, worn smooth with handling, like the haft of an old mallet.",
+  "dup": false,
+  "draft": [
+   [
+    "Lo",
+    "at(+S)"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "veth",
+    "but"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "bisketh",
+    "head-PL"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "tevel",
+    "young"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hemm",
+    "old"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "saedeth",
+    "half-PL"
+   ],
+   [
+    "cedh",
+    "who?"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhovv",
+    "S·wait"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "hedh",
+    "S·who?"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "amm",
+    "when"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "haever",
+    "S·think"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "kylyl",
+    "turning"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rytym",
+    "cut.vow-1SG"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "reskowath",
+    "place-PL"
+   ],
+   [
+    "Lymment",
+    "bring-3PL"
+   ],
+   [
+    "dhom",
+    "seven"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "tevel",
+    "young"
+   ],
+   [
+    "vollath",
+    "name-PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hesperdeth",
+    "soldier-PL"
+   ],
+   [
+    "vollath",
+    "name-PL"
+   ],
+   [
+    "dasorat",
+    "polished"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "yarlol",
+    "S·using"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "hulter",
+    "staff"
+   ],
+   [
+    "runn",
+    "S·mallet"
+   ],
+   [
+    "hemm",
+    "old"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 8,
+  "label": "Romanisation · the four columns of Seren’s table",
+  "rom": "Et meskrivull, hosen vollom o",
+  "english": "| The root, as I name it | What it looks like in the grain | The carvings, youngest to eldest | Whose it was at the last |",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "meskrivull",
+    "root"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "vollom",
+    "name-1SG"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 8,
+  "label": "Romanisation · the four columns of Seren’s table",
+  "rom": "Hosen vodh vesk o ul meskdhrenn",
+  "english": "| The root, as I name it | What it looks like in the grain | The carvings, youngest to eldest | Whose it was at the last |",
+  "dup": false,
+  "draft": [
+   [
+    "Hosen",
+    "as"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "vesk",
+    "see"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "meskdhrenn",
+    "grain.of.wood"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 8,
+  "label": "Romanisation · the four columns of Seren’s table",
+  "rom": "Et ryteteth, hy et tevel sost dem et hemm sost",
+  "english": "| The root, as I name it | What it looks like in the grain | The carvings, youngest to eldest | Whose it was at the last |",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "ryteteth",
+    "carving-PL"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tevel",
+    "young"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hemm",
+    "old"
+   ],
+   [
+    "sost",
+    "self"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 8,
+  "label": "Romanisation · the four columns of Seren’s table",
+  "rom": "Cedh sa re yal o lo, ul et dask",
+  "english": "| The root, as I name it | What it looks like in the grain | The carvings, youngest to eldest | Whose it was at the last |",
+  "dup": false,
+  "draft": [
+   [
+    "Cedh",
+    "who?"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "dask",
+    "end"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Fodh · hos stinel sa hyl dem lern",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Fodh",
+    "wave"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "hyl",
+    "S·change"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation",
+  "rom": "Dem et orrow.",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Dem",
+    "until(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "orrow",
+    "Shore"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation",
+  "rom": "Hyll Pynt",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pynt",
+    "quick"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation",
+  "rom": "Lo dhrenn, nel ul lern.",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Lo",
+    "at(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "nel",
+    "is.not"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation",
+  "rom": "Hyll Pawast",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pawast",
+    "second"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation",
+  "rom": "Sull orrol, hos clem.",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Sull",
+    "three"
+   ],
+   [
+    "orrol",
+    "going"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "clem",
+    "hour"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation",
+  "rom": "Hyll Lodhat",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Lodhat",
+    "bonded"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation",
+  "rom": "Hebba lont et molt; grika et pa sest; eska et garl.",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Hebba",
+    "give-IMP.PL"
+   ],
+   [
+    "lont",
+    "at-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "grika",
+    "catch-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "pa",
+    "two(+S)"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "eska",
+    "cover-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "garl",
+    "hand"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation",
+  "rom": "Hyll sa re rystull nycul",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rystull",
+    "learn"
+   ],
+   [
+    "nycul",
+    "lie"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 9,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Thaesaen Molt Hyll, sa re ryt et rytet dasken tunn, hosen o dhesset.",
+  "english": "| **The Wave** | one stroke curling forward | *To the shore.* (Hasty) → *Through, not against.* (Second) → *Three roads, one hour.* (Joined) → *Give them the middle; take the sides; close the hand.* (Deceit) | **Thaesaen**, the Tide-Heart, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Thaesaen",
+    "Thaesaen"
+   ],
+   [
+    "Molt",
+    "heart"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "ryt",
+    "cut.vow"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "dasken",
+    "final"
+   ],
+   [
+    "tunn",
+    "whole"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "dhesset",
+    "S·judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Stinel Hosel · stinel nasell sa hask ul lern stinel sell",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Stinel",
+    "stroke"
+   ],
+   [
+    "Hosel",
+    "alone"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "nasell",
+    "short"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "hask",
+    "run"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "sell",
+    "long"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Orra dem et drunn.",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Orra",
+    "go-IMP.PL"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "drunn",
+    "mallet"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Hyll Pynt",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pynt",
+    "quick"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Orr hos; fenn et ullen et velvyth.",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Orr",
+    "go"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "fenn",
+    "follow"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "ullen",
+    "another"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "velvyth",
+    "silence"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Hyll Pawast",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pawast",
+    "second"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Ketha; hunna et nydhyl; orra ul vodh doss velvyth.",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Ketha",
+    "hold-IMP.PL"
+   ],
+   [
+    "hunna",
+    "hear-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "nydhyl",
+    "catalogue"
+   ],
+   [
+    "orra",
+    "go-IMP.PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "doss",
+    "be"
+   ],
+   [
+    "velvyth",
+    "silence"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Hyll Dhumol",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Pessa et nynth velv; hunna o dhessyl.",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Pessa",
+    "ask-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "nynth",
+    "spring"
+   ],
+   [
+    "velv",
+    "quiet"
+   ],
+   [
+    "hunna",
+    "hear-IMP.PL"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "dhessyl",
+    "S·answer"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Hyll Lodhat",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Lodhat",
+    "bonded"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Darra hosen re rarr et mesk tevel.",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Darra",
+    "come-IMP.PL"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rarr",
+    "S·come"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "tevel",
+    "young"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Hyll sa re rystull nycul",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rystull",
+    "learn"
+   ],
+   [
+    "nycul",
+    "lie"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 10,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Naelthar Lorr Helv, sa re ryt et rytet dasken tunn, hosen o dhesset.",
+  "english": "| **The Lone Stroke** | a short cut running ahead of a long one | *Go until struck.* (Hasty) → *One goes; the rest follow the quiet.* (Second) → *Hold; hear the sounding; go where it is quiet.* (Remembering) → *Ask the silent water; heed its answer.* (Joined) → *Come as the young wood came.* (Deceit) | **Naelthar**, the Blood of the Sky, who carved the last of these whole as its Judgement |",
+  "dup": false,
+  "draft": [
+   [
+    "Naelthar",
+    "Naelthar"
+   ],
+   [
+    "Lorr",
+    "blood"
+   ],
+   [
+    "Helv",
+    "sky"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "ryt",
+    "cut.vow"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "dasken",
+    "final"
+   ],
+   [
+    "tunn",
+    "whole"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "dhesset",
+    "S·judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Hosk ul Lern · hosk cadhat um stinel",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Hosk",
+    "lintel"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "Lern",
+    "face"
+   ],
+   [
+    "hosk",
+    "lintel"
+   ],
+   [
+    "cadhat",
+    "laid"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation",
+  "rom": "Ul lern et lymmerd.",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "lymmerd",
+    "bearer"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation",
+  "rom": "Hyll Pynt",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pynt",
+    "quick"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation",
+  "rom": "Eska et lymmerd.",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Eska",
+    "cover-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "lymmerd",
+    "bearer"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation",
+  "rom": "Hyll Pawast",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pawast",
+    "second"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation",
+  "rom": "Pa orrol dem hos tolm.",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "orrol",
+    "going"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "tolm",
+    "stone"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation",
+  "rom": "Hyll Dhumol",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation",
+  "rom": "Et sceth strom hosast; et garl kethet dasken.",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "sceth",
+    "ship"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "garl",
+    "hand"
+   ],
+   [
+    "kethet",
+    "held"
+   ],
+   [
+    "dasken",
+    "final"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation",
+  "rom": "Hyll Lodhat",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Lodhat",
+    "bonded"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Leavaren Lymmerd Yendeth Clenn: Drunna hos bisk; es desse pa wisk.",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Leavaren",
+    "Leavaren"
+   ],
+   [
+    "Lymmerd",
+    "bearer"
+   ],
+   [
+    "Yendeth",
+    "S·shoot.from.a.stump-PL"
+   ],
+   [
+    "Clenn",
+    "new"
+   ],
+   [
+    "Drunna",
+    "mallet-IMP.PL"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "bisk",
+    "head"
+   ],
+   [
+    "es",
+    "FUT(+N)"
+   ],
+   [
+    "desse",
+    "N·answer-3DU"
+   ],
+   [
+    "pa",
+    "two(+S)"
+   ],
+   [
+    "wisk",
+    "S·head"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 11,
+  "label": "Romanisation",
+  "rom": "Tesset",
+  "english": "| **The Bar Before** | a bar laid across a stroke | *Before the bearer.* (Hasty) → *Screen the bearer.* (Second) → *Two roads to one stone.* (Remembering) → *The great hull first; the kept hand last.* (Joined) | **Leavaren**, the Bearer of New Branches: *Strike one head; two will answer.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Tesset",
+    "judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Drod · stinel, eth o rask ul gael elth: et drod",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Drod",
+    "spark"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "rask",
+    "S·end"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "gael",
+    "N·tally-notch"
+   ],
+   [
+    "elth",
+    "star"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "drod",
+    "spark"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Ul vodh re rod o.",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rod",
+    "S·spark"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Hyll Pynt",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pynt",
+    "quick"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Galda so wrodhol; rellora gor sa wrodh.",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Galda",
+    "build-IMP.PL"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "wrodhol",
+    "S·telling"
+   ],
+   [
+    "rellora",
+    "sign-IMP.PL"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "wrodh",
+    "S·put.into.words"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Hyll Pawast",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pawast",
+    "second"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Et hosast sa wrodh, hessa o wrodhol.",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "wrodh",
+    "S·put.into.words"
+   ],
+   [
+    "hessa",
+    "stop-IMP.PL"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "wrodhol",
+    "S·telling"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Hyll Dhumol",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Orra ul neld et bramm velv; seska o; grika o ul morrol dem varn.",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Orra",
+    "go-IMP.PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "neld",
+    "N·far"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "bramm",
+    "gun"
+   ],
+   [
+    "velv",
+    "quiet"
+   ],
+   [
+    "seska",
+    "know.a.fact-IMP.PL"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "grika",
+    "catch-IMP.PL"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "morrol",
+    "N·going"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Hyll Lodhat",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Lodhat",
+    "bonded"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Farra et maveret ul neld so vellorol, eth luska so ul maveryl.",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Farra",
+    "sail-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "maveret",
+    "wished"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "neld",
+    "N·far"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "vellorol",
+    "S·coming.in"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "luska",
+    "loose-IMP.PL"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "maveryl",
+    "wishing"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Hyll sa re rystull nycul",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rystull",
+    "learn"
+   ],
+   [
+    "nycul",
+    "lie"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Rhenvael Meskdhrenn Dholm: Gor wramm sa wrodh, tess et brunn o.",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Rhenvael",
+    "Rhenvael"
+   ],
+   [
+    "Meskdhrenn",
+    "grain.of.wood"
+   ],
+   [
+    "Dholm",
+    "S·stone"
+   ],
+   [
+    "Gor",
+    "every(+S)"
+   ],
+   [
+    "wramm",
+    "S·gun"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "wrodh",
+    "S·put.into.words"
+   ],
+   [
+    "tess",
+    "answer"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "brunn",
+    "mountain"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 12,
+  "label": "Romanisation",
+  "rom": "Tesset",
+  "english": "| **The Spark** | a cut that ends in a star-notch, the flash | *Where it flashed.* (Hasty) → *Make them speak; mark who speaks.* (Second) → *The first to speak, silence.* (Remembering) → *Pass the quiet gun; know it; take it going home.* (Joined) → *Sail the prize past their reach, and let them hunger.* (Deceit) | **Rhenvael**, the Stone-Grain: *Every gun that speaks, the mountain answers.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Tesset",
+    "judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 13,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Gemmyorn Nawrodh · gemmyorn tunn, hosen rytent et brod tolm",
+  "english": "| **The Mute Square** | a closed square, which is how they cut the word for stone | *Break the wall.* (Hasty) → *The same stone, each morrow.* (Remembering) → *When the stone gives, the ram.* (Joined) | **Ralensaen**, the Root-Heart: *Go under what you cannot go through.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Gemmyorn",
+    "square"
+   ],
+   [
+    "Nawrodh",
+    "mute"
+   ],
+   [
+    "gemmyorn",
+    "square"
+   ],
+   [
+    "tunn",
+    "whole"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "rytent",
+    "cut.vow-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "brod",
+    "word"
+   ],
+   [
+    "tolm",
+    "stone"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 13,
+  "label": "Romanisation",
+  "rom": "Creska et hald.",
+  "english": "| **The Mute Square** | a closed square, which is how they cut the word for stone | *Break the wall.* (Hasty) → *The same stone, each morrow.* (Remembering) → *When the stone gives, the ram.* (Joined) | **Ralensaen**, the Root-Heart: *Go under what you cannot go through.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Creska",
+    "break-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hald",
+    "wall"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 13,
+  "label": "Romanisation",
+  "rom": "Hyll Pynt",
+  "english": "| **The Mute Square** | a closed square, which is how they cut the word for stone | *Break the wall.* (Hasty) → *The same stone, each morrow.* (Remembering) → *When the stone gives, the ram.* (Joined) | **Ralensaen**, the Root-Heart: *Go under what you cannot go through.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pynt",
+    "quick"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 13,
+  "label": "Romanisation",
+  "rom": "Et tolm sost, gor ryst.",
+  "english": "| **The Mute Square** | a closed square, which is how they cut the word for stone | *Break the wall.* (Hasty) → *The same stone, each morrow.* (Remembering) → *When the stone gives, the ram.* (Joined) | **Ralensaen**, the Root-Heart: *Go under what you cannot go through.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "ryst",
+    "morning"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 13,
+  "label": "Romanisation",
+  "rom": "Hyll Dhumol",
+  "english": "| **The Mute Square** | a closed square, which is how they cut the word for stone | *Break the wall.* (Hasty) → *The same stone, each morrow.* (Remembering) → *When the stone gives, the ram.* (Joined) | **Ralensaen**, the Root-Heart: *Go under what you cannot go through.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 13,
+  "label": "Romanisation",
+  "rom": "Amm omm et tolm, et stromrunn.",
+  "english": "| **The Mute Square** | a closed square, which is how they cut the word for stone | *Break the wall.* (Hasty) → *The same stone, each morrow.* (Remembering) → *When the stone gives, the ram.* (Joined) | **Ralensaen**, the Root-Heart: *Go under what you cannot go through.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Amm",
+    "when"
+   ],
+   [
+    "omm",
+    "fall"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "stromrunn",
+    "ram"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 13,
+  "label": "Romanisation",
+  "rom": "Hyll Lodhat",
+  "english": "| **The Mute Square** | a closed square, which is how they cut the word for stone | *Break the wall.* (Hasty) → *The same stone, each morrow.* (Remembering) → *When the stone gives, the ram.* (Joined) | **Ralensaen**, the Root-Heart: *Go under what you cannot go through.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Lodhat",
+    "bonded"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 13,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Ralensaen Molt Veskrivull: Orra ul vimm et galat sa nath noss orrol lo o dhrenn los.",
+  "english": "| **The Mute Square** | a closed square, which is how they cut the word for stone | *Break the wall.* (Hasty) → *The same stone, each morrow.* (Remembering) → *When the stone gives, the ram.* (Joined) | **Ralensaen**, the Root-Heart: *Go under what you cannot go through.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Ralensaen",
+    "Ralensaen"
+   ],
+   [
+    "Molt",
+    "heart"
+   ],
+   [
+    "Veskrivull",
+    "S·root"
+   ],
+   [
+    "Orra",
+    "go-IMP.PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "galat",
+    "anything"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "orrol",
+    "going"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "los",
+    "at-2PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 13,
+  "label": "Romanisation",
+  "rom": "Tesset",
+  "english": "| **The Mute Square** | a closed square, which is how they cut the word for stone | *Break the wall.* (Hasty) → *The same stone, each morrow.* (Remembering) → *When the stone gives, the ram.* (Joined) | **Ralensaen**, the Root-Heart: *Go under what you cannot go through.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Tesset",
+    "judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 14,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Pa Wrodow · pa stinel sest lo sest, eth hos hyonta naloskat",
+  "english": "| **The Two Mouths** | two strokes side by side, one of them hollow | *Loud in one place; land in another.* (Second) → *Work the east wall as if it mattered; the west is the road.* (Remembering) → *Let them see the host where it is not, and keep them seeing.* (Deceit) | **Senneir**, the Deep-Beneath: *Show them the host; come up beneath the stone.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Pa",
+    "two(+S)"
+   ],
+   [
+    "Wrodow",
+    "S·mouth"
+   ],
+   [
+    "pa",
+    "two(+S)"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "sest",
+    "shoulder"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "hyonta",
+    "from-3DU"
+   ],
+   [
+    "naloskat",
+    "unfilled"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 14,
+  "label": "Romanisation",
+  "rom": "Bont ul hos reskow; tava ul reskow ullen.",
+  "english": "| **The Two Mouths** | two strokes side by side, one of them hollow | *Loud in one place; land in another.* (Second) → *Work the east wall as if it mattered; the west is the road.* (Remembering) → *Let them see the host where it is not, and keep them seeing.* (Deceit) | **Senneir**, the Deep-Beneath: *Show them the host; come up beneath the stone.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Bont",
+    "loud"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "reskow",
+    "place"
+   ],
+   [
+    "tava",
+    "come.ashore-IMP.PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "reskow",
+    "place"
+   ],
+   [
+    "ullen",
+    "another"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 14,
+  "label": "Romanisation",
+  "rom": "Hyll Pawast",
+  "english": "| **The Two Mouths** | two strokes side by side, one of them hollow | *Loud in one place; land in another.* (Second) → *Work the east wall as if it mattered; the west is the road.* (Remembering) → *Let them see the host where it is not, and keep them seeing.* (Deceit) | **Senneir**, the Deep-Beneath: *Show them the host; come up beneath the stone.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pawast",
+    "second"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 14,
+  "label": "Romanisation",
+  "rom": "Drunna et hald rerddhalden hosen amm doss dyllyth lo; el et orrol et rerdsenn.",
+  "english": "| **The Two Mouths** | two strokes side by side, one of them hollow | *Loud in one place; land in another.* (Second) → *Work the east wall as if it mattered; the west is the road.* (Remembering) → *Let them see the host where it is not, and keep them seeing.* (Deceit) | **Senneir**, the Deep-Beneath: *Show them the host; come up beneath the stone.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Drunna",
+    "mallet-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hald",
+    "wall"
+   ],
+   [
+    "rerddhalden",
+    "eastern"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "amm",
+    "when"
+   ],
+   [
+    "doss",
+    "be"
+   ],
+   [
+    "dyllyth",
+    "worth"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "el",
+    "is"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "orrol",
+    "going"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "rerdsenn",
+    "sunset"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 14,
+  "label": "Romanisation",
+  "rom": "Hyll Dhumol",
+  "english": "| **The Two Mouths** | two strokes side by side, one of them hollow | *Loud in one place; land in another.* (Second) → *Work the east wall as if it mattered; the west is the road.* (Remembering) → *Let them see the host where it is not, and keep them seeing.* (Deceit) | **Senneir**, the Deep-Beneath: *Show them the host; come up beneath the stone.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 14,
+  "label": "Romanisation",
+  "rom": "Luska so ul veskyl et cryrull ul vodh nath noss o, eth ketha so ul veskyl.",
+  "english": "| **The Two Mouths** | two strokes side by side, one of them hollow | *Loud in one place; land in another.* (Second) → *Work the east wall as if it mattered; the west is the road.* (Remembering) → *Let them see the host where it is not, and keep them seeing.* (Deceit) | **Senneir**, the Deep-Beneath: *Show them the host; come up beneath the stone.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Luska",
+    "loose-IMP.PL"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "veskyl",
+    "sight"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "cryrull",
+    "troop"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "ketha",
+    "hold-IMP.PL"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "veskyl",
+    "sight"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 14,
+  "label": "Romanisation",
+  "rom": "Hyll sa re rystull nycul",
+  "english": "| **The Two Mouths** | two strokes side by side, one of them hollow | *Loud in one place; land in another.* (Second) → *Work the east wall as if it mattered; the west is the road.* (Remembering) → *Let them see the host where it is not, and keep them seeing.* (Deceit) | **Senneir**, the Deep-Beneath: *Show them the host; come up beneath the stone.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rystull",
+    "learn"
+   ],
+   [
+    "nycul",
+    "lie"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 14,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Senneir Gunn ul vimm: Hebba lont veskyl et cryrull; talda ul vimm et tolm.",
+  "english": "| **The Two Mouths** | two strokes side by side, one of them hollow | *Loud in one place; land in another.* (Second) → *Work the east wall as if it mattered; the west is the road.* (Remembering) → *Let them see the host where it is not, and keep them seeing.* (Deceit) | **Senneir**, the Deep-Beneath: *Show them the host; come up beneath the stone.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Senneir",
+    "Senneir"
+   ],
+   [
+    "Gunn",
+    "deep"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "Hebba",
+    "give-IMP.PL"
+   ],
+   [
+    "lont",
+    "at-3PL"
+   ],
+   [
+    "veskyl",
+    "sight"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "cryrull",
+    "troop"
+   ],
+   [
+    "talda",
+    "rise-IMP.PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 14,
+  "label": "Romanisation",
+  "rom": "Tesset",
+  "english": "| **The Two Mouths** | two strokes side by side, one of them hollow | *Loud in one place; land in another.* (Second) → *Work the east wall as if it mattered; the west is the road.* (Remembering) → *Let them see the host where it is not, and keep them seeing.* (Deceit) | **Senneir**, the Deep-Beneath: *Show them the host; come up beneath the stone.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Tesset",
+    "judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 15,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Sestow Kylet · stinel sa hyl umo sost",
+  "english": "| **The Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* (Hasty) → *Show your stern; turn at the stone.* (Remembering) → *Draw them along the shore; come home by the far road.* (Joined) | **Esthaer**, the Burning: *Burn as you go; let them chase the fire.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Sestow",
+    "back"
+   ],
+   [
+    "Kylet",
+    "changed"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "hyl",
+    "S·change"
+   ],
+   [
+    "umo",
+    "upon-3SG.M"
+   ],
+   [
+    "sost",
+    "self"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 15,
+  "label": "Romanisation",
+  "rom": "Dem varn, amm grestet.",
+  "english": "| **The Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* (Hasty) → *Show your stern; turn at the stone.* (Remembering) → *Draw them along the shore; come home by the far road.* (Joined) | **Esthaer**, the Burning: *Burn as you go; let them chase the fire.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "amm",
+    "when"
+   ],
+   [
+    "grestet",
+    "wound"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 15,
+  "label": "Romanisation",
+  "rom": "Hyll Pynt",
+  "english": "| **The Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* (Hasty) → *Show your stern; turn at the stone.* (Remembering) → *Draw them along the shore; come home by the far road.* (Joined) | **Esthaer**, the Burning: *Burn as you go; let them chase the fire.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pynt",
+    "quick"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 15,
+  "label": "Romanisation",
+  "rom": "Hebba lont veskyl et sestow; kyla lo et tolm.",
+  "english": "| **The Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* (Hasty) → *Show your stern; turn at the stone.* (Remembering) → *Draw them along the shore; come home by the far road.* (Joined) | **Esthaer**, the Burning: *Burn as you go; let them chase the fire.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Hebba",
+    "give-IMP.PL"
+   ],
+   [
+    "lont",
+    "at-3PL"
+   ],
+   [
+    "veskyl",
+    "sight"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sestow",
+    "back"
+   ],
+   [
+    "kyla",
+    "change-IMP.PL"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 15,
+  "label": "Romanisation",
+  "rom": "Hyll Dhumol",
+  "english": "| **The Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* (Hasty) → *Show your stern; turn at the stone.* (Remembering) → *Draw them along the shore; come home by the far road.* (Joined) | **Esthaer**, the Burning: *Burn as you go; let them chase the fire.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 15,
+  "label": "Romanisation",
+  "rom": "Bamma so lo dhrenn et orrow; darra dem varn lo et orrol deld.",
+  "english": "| **The Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* (Hasty) → *Show your stern; turn at the stone.* (Remembering) → *Draw them along the shore; come home by the far road.* (Joined) | **Esthaer**, the Burning: *Burn as you go; let them chase the fire.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Bamma",
+    "pull-IMP.PL"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "orrow",
+    "Shore"
+   ],
+   [
+    "darra",
+    "come-IMP.PL"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "orrol",
+    "going"
+   ],
+   [
+    "deld",
+    "far"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 15,
+  "label": "Romanisation",
+  "rom": "Hyll Lodhat",
+  "english": "| **The Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* (Hasty) → *Show your stern; turn at the stone.* (Remembering) → *Draw them along the shore; come home by the far road.* (Joined) | **Esthaer**, the Burning: *Burn as you go; let them chase the fire.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Lodhat",
+    "bonded"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 15,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Esthaer Vorrol: Vorra somm orros; luska so ul nanurol et vorr.",
+  "english": "| **The Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* (Hasty) → *Show your stern; turn at the stone.* (Remembering) → *Draw them along the shore; come home by the far road.* (Joined) | **Esthaer**, the Burning: *Burn as you go; let them chase the fire.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Esthaer",
+    "Esthaer"
+   ],
+   [
+    "Vorrol",
+    "burning"
+   ],
+   [
+    "Vorra",
+    "fire-IMP.PL"
+   ],
+   [
+    "somm",
+    "while"
+   ],
+   [
+    "orros",
+    "go-2PL"
+   ],
+   [
+    "luska",
+    "loose-IMP.PL"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "nanurol",
+    "N·chasing"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "vorr",
+    "fire"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 15,
+  "label": "Romanisation",
+  "rom": "Tesset",
+  "english": "| **The Turned Stern** | a stroke that hooks back on itself | *Home when wounded.* (Hasty) → *Show your stern; turn at the stone.* (Remembering) → *Draw them along the shore; come home by the far road.* (Joined) | **Esthaer**, the Burning: *Burn as you go; let them chase the fire.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Tesset",
+    "judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Hoss · tresk lunnat ul lodh stinel eth stinel",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Hoss",
+    "breath"
+   ],
+   [
+    "tresk",
+    "cleft"
+   ],
+   [
+    "lunnat",
+    "open"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lodh",
+    "mortar"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation",
+  "rom": "Vyssora vorr et tolm um et mesk sa nath noss dyllyth lo.",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Vyssora",
+    "spend-IMP.PL"
+   ],
+   [
+    "vorr",
+    "fire"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "dyllyth",
+    "worth"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation",
+  "rom": "Hyll Pawast",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pawast",
+    "second"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation",
+  "rom": "Ul lodh so hossath.",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "lodh",
+    "mortar"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "hossath",
+    "breath-PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation",
+  "rom": "Hyll Dhumol",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation",
+  "rom": "Amm drunnant et nynth, omma hy et helv.",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Amm",
+    "when"
+   ],
+   [
+    "drunnant",
+    "mallet-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "nynth",
+    "spring"
+   ],
+   [
+    "omma",
+    "fall-IMP.PL"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "helv",
+    "sky"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation",
+  "rom": "Hyll Lodhat",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Lodhat",
+    "bonded"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation",
+  "rom": "Luskant et mesk hosast ul morrol; luska et mesk hosast ul lymmyl.",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Luskant",
+    "loose-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "morrol",
+    "N·going"
+   ],
+   [
+    "luska",
+    "loose-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lymmyl",
+    "bringing"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation",
+  "rom": "Hyll sa re rystull nycul",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rystull",
+    "learn"
+   ],
+   [
+    "nycul",
+    "lie"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Vaelress Meskdhrenn sa Lilv: Cadha lilvyl um et hald; tovva um ommol et clennyl.",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Vaelress",
+    "Vaelress"
+   ],
+   [
+    "Meskdhrenn",
+    "grain.of.wood"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "Lilv",
+    "soft"
+   ],
+   [
+    "Cadha",
+    "lay-IMP.PL"
+   ],
+   [
+    "lilvyl",
+    "rot"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hald",
+    "wall"
+   ],
+   [
+    "tovva",
+    "wait-IMP.PL"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "ommol",
+    "falling"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "clennyl",
+    "making.new"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 16,
+  "label": "Romanisation",
+  "rom": "Tesset",
+  "english": "| **The Breath** | a gap left open between two cuts | *Spend their fire on wood of no worth.* (Second) → *Between their breaths.* (Remembering) → *When they strike the water, fall from the sky.* (Joined) → *They let the first wood pass; let the first wood bear.* (Deceit) | **Vaelress**, the Grain That Rots: *Rot the wall; wait for the mending to fail.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Tesset",
+    "judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Bysket · stinel sa hess ul vodh doss bysket ul meskdhrenn",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Bysket",
+    "knot"
+   ],
+   [
+    "stinel",
+    "stroke"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "hess",
+    "stop"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "doss",
+    "be"
+   ],
+   [
+    "bysket",
+    "knot"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "meskdhrenn",
+    "grain.of.wood"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation",
+  "rom": "Tovva ul myst.",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Tovva",
+    "wait-IMP.PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "myst",
+    "sea-fog"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation",
+  "rom": "Hyll Pynt",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pynt",
+    "quick"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation",
+  "rom": "Luska et vorr ul vorrol.",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Luska",
+    "loose-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "vorr",
+    "fire"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vorrol",
+    "burning"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation",
+  "rom": "Hyll Pawast",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pawast",
+    "second"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation",
+  "rom": "Ho ross et tolm vyssorat, ell ul dovvol? Veska; hy ull, orra.",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Ho",
+    "Q(+S)"
+   ],
+   [
+    "ross",
+    "S·be"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "vyssorat",
+    "spent"
+   ],
+   [
+    "ell",
+    "or"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "dovvol",
+    "N·waiting"
+   ],
+   [
+    "Veska",
+    "see-IMP.PL"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "orra",
+    "go-IMP.PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation",
+  "rom": "Hyll Dhumol",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dhumol",
+    "S·remembering"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation",
+  "rom": "Galda et galat sost sull fedh; et fedh gemmest, kaevera o.",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Galda",
+    "build-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "galat",
+    "anything"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "fedh",
+    "time"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "fedh",
+    "time"
+   ],
+   [
+    "gemmest",
+    "fourth"
+   ],
+   [
+    "kaevera",
+    "think-DU"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation",
+  "rom": "Hyll sa re rystull nycul",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rystull",
+    "learn"
+   ],
+   [
+    "nycul",
+    "lie"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Eirlenth Grem Sell: Tovva ul sulv; drunna et tolm sa nath noss clennyl lo.",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Eirlenth",
+    "Eirlenth"
+   ],
+   [
+    "Grem",
+    "winter"
+   ],
+   [
+    "Sell",
+    "long"
+   ],
+   [
+    "Tovva",
+    "wait-IMP.PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "sulv",
+    "snow"
+   ],
+   [
+    "drunna",
+    "mallet-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "clennyl",
+    "making.new"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 17,
+  "label": "Romanisation",
+  "rom": "Tesset",
+  "english": "| **The Knot** | a stroke that stops in a knot of the grain | *Wait in the grey.* (Hasty) → *Let the fire work.* (Second) → *Is the stone spent, or waiting? Look, then go.* (Remembering) → *Do the same thing thrice; the fourth time, mean it.* (Deceit) | **Eirlenth**, the Long Winter: *Wait in the white; strike the stone that cannot mend.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Tesset",
+    "judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 18,
+  "label": "Romanisation · the root, and what it looks like",
+  "rom": "Stinel Dasorat · rytet loskat eth dasorat, hy ull ledh hos o, eth nath vesk hos o",
+  "english": "| **The Smoothed Cut** | a carving filled and smoothed over, so that it can be felt and not seen | *Grey before the landing.* (Second) → *Look heavy where you are light.* (Joined) → *Sail straw down every road; where no fire wakes, send the landing.* (Deceit) | **Neivaere**, the Silvered: *Show them themselves.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Stinel",
+    "stroke"
+   ],
+   [
+    "Dasorat",
+    "polished"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "loskat",
+    "enough"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "dasorat",
+    "polished"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "ledh",
+    "feel"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "vesk",
+    "see"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 18,
+  "label": "Romanisation",
+  "rom": "Myst ul lern et tavol.",
+  "english": "| **The Smoothed Cut** | a carving filled and smoothed over, so that it can be felt and not seen | *Grey before the landing.* (Second) → *Look heavy where you are light.* (Joined) → *Sail straw down every road; where no fire wakes, send the landing.* (Deceit) | **Neivaere**, the Silvered: *Show them themselves.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Myst",
+    "sea-fog"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tavol",
+    "coming.ashore"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 18,
+  "label": "Romanisation",
+  "rom": "Hyll Pawast",
+  "english": "| **The Smoothed Cut** | a carving filled and smoothed over, so that it can be felt and not seen | *Grey before the landing.* (Second) → *Look heavy where you are light.* (Joined) → *Sail straw down every road; where no fire wakes, send the landing.* (Deceit) | **Neivaere**, the Silvered: *Show them themselves.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Pawast",
+    "second"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 18,
+  "label": "Romanisation",
+  "rom": "Veska nalelv ul vodh dossos lelv.",
+  "english": "| **The Smoothed Cut** | a carving filled and smoothed over, so that it can be felt and not seen | *Grey before the landing.* (Second) → *Look heavy where you are light.* (Joined) → *Sail straw down every road; where no fire wakes, send the landing.* (Deceit) | **Neivaere**, the Silvered: *Show them themselves.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Veska",
+    "see-IMP.PL"
+   ],
+   [
+    "nalelv",
+    "heavy"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "dossos",
+    "be-2PL"
+   ],
+   [
+    "lelv",
+    "light"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 18,
+  "label": "Romanisation",
+  "rom": "Hyll Lodhat",
+  "english": "| **The Smoothed Cut** | a carving filled and smoothed over, so that it can be felt and not seen | *Grey before the landing.* (Second) → *Look heavy where you are light.* (Joined) → *Sail straw down every road; where no fire wakes, send the landing.* (Deceit) | **Neivaere**, the Silvered: *Show them themselves.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Lodhat",
+    "bonded"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 18,
+  "label": "Romanisation",
+  "rom": "Gor orrol, farra broclinth umo; ul vodh nath rynn vorr, luska et tavol.",
+  "english": "| **The Smoothed Cut** | a carving filled and smoothed over, so that it can be felt and not seen | *Grey before the landing.* (Second) → *Look heavy where you are light.* (Joined) → *Sail straw down every road; where no fire wakes, send the landing.* (Deceit) | **Neivaere**, the Silvered: *Show them themselves.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Gor",
+    "every(+S)"
+   ],
+   [
+    "orrol",
+    "going"
+   ],
+   [
+    "farra",
+    "sail-IMP.PL"
+   ],
+   [
+    "broclinth",
+    "straw"
+   ],
+   [
+    "umo",
+    "upon-3SG.M"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "rynn",
+    "wake.up"
+   ],
+   [
+    "vorr",
+    "fire"
+   ],
+   [
+    "luska",
+    "loose-IMP.PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tavol",
+    "coming.ashore"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 18,
+  "label": "Romanisation",
+  "rom": "Hyll sa re rystull nycul",
+  "english": "| **The Smoothed Cut** | a carving filled and smoothed over, so that it can be felt and not seen | *Grey before the landing.* (Second) → *Look heavy where you are light.* (Joined) → *Sail straw down every road; where no fire wakes, send the landing.* (Deceit) | **Neivaere**, the Silvered: *Show them themselves.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rystull",
+    "learn"
+   ],
+   [
+    "nycul",
+    "lie"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 18,
+  "label": "Romanisation · whose it was at the last",
+  "rom": "Neivaere Lennet: Hebba lont veskyl so sost.",
+  "english": "| **The Smoothed Cut** | a carving filled and smoothed over, so that it can be felt and not seen | *Grey before the landing.* (Second) → *Look heavy where you are light.* (Joined) → *Sail straw down every road; where no fire wakes, send the landing.* (Deceit) | **Neivaere**, the Silvered: *Show them themselves.* |",
+  "dup": false,
+  "draft": [
+   [
+    "Neivaere",
+    "Neivaere"
+   ],
+   [
+    "Lennet",
+    "silvered"
+   ],
+   [
+    "Hebba",
+    "give-IMP.PL"
+   ],
+   [
+    "lont",
+    "at-3PL"
+   ],
+   [
+    "veskyl",
+    "sight"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "sost",
+    "self"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 18,
+  "label": "Romanisation",
+  "rom": "Tesset",
+  "english": "| **The Smoothed Cut** | a carving filled and smoothed over, so that it can be felt and not seen | *Grey before the landing.* (Second) → *Look heavy where you are light.* (Joined) → *Sail straw down every road; where no fire wakes, send the landing.* (Deceit) | **Neivaere**, the Silvered: *Show them themselves.* |",
+  "dup": true,
+  "draft": [
+   [
+    "Tesset",
+    "judgement"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 19,
+  "label": "Romanisation",
+  "rom": "Re rarr hos rellor ullen dem susk et brunn ul havul dholmard, hy Dhavow Vorr: Vorr. Re yal o rytet ul et Ommol, eth re rarr o nafedh ul lern ol hald. Ul surr et mymmyleth, re hadh et tolmard o um et sast domm, ul vodh re senn Vorrol. Nath nydhym o lont.",
+  "english": "One sign more came up the mountain in a mason's pack, out of Emberhythe: *Burn*. It was cut in the Fall, and came never against our wall. In the year of the homecomings the mason laid it down on the black crust where the Burning went out. I count it not among these.",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "rarr",
+    "S·come"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "rellor",
+    "sign"
+   ],
+   [
+    "ullen",
+    "another"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "susk",
+    "high"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "brunn",
+    "mountain"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "havul",
+    "pack"
+   ],
+   [
+    "dholmard",
+    "S·mason"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "Dhavow",
+    "S·harbour"
+   ],
+   [
+    "Vorr",
+    "fire"
+   ],
+   [
+    "Vorr",
+    "fire"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Ommol",
+    "falling"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rarr",
+    "S·come"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "nafedh",
+    "un-time"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "ol",
+    "our(+N)"
+   ],
+   [
+    "hald",
+    "wall"
+   ],
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "surr",
+    "year"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mymmyleth",
+    "homecoming-PL"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hadh",
+    "S·lay"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolmard",
+    "mason"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sast",
+    "skin"
+   ],
+   [
+    "domm",
+    "black"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "senn",
+    "die"
+   ],
+   [
+    "Vorrol",
+    "burning"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "nydhym",
+    "count-1SG"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "lont",
+    "at-3PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 19,
+  "label": "Romanisation · Seren’s head for it",
+  "rom": "Vorr.",
+  "english": "One sign more came up the mountain in a mason's pack, out of Emberhythe: *Burn*. It was cut in the Fall, and came never against our wall. In the year of the homecomings the mason laid it down on the black crust where the Burning went out. I count it not among these.",
+  "dup": false,
+  "draft": [
+   [
+    "Vorr",
+    "fire"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 20,
+  "label": "Romanisation",
+  "rom": "Re rarrant dhom rytet hy et mesk tevel, thell gor hos hy et sull hyll ul o sestow, eth dhom hy Hyll sa re rystull nycul. Nath re ryt Hyll Dasken bisk clenn, veth rysteth tunn hy wisketh rytet tevar, eth lo rask gor hos, kylyl dem varn.",
+  "english": "Seven carvings came of the young wood, eight of each of the three Tides after it, and seven of the Tide that Learned Deceit. The Last Tide carved no new head, but whole morrows out of heads already cut, and at the end of each a turning for home.",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "rarrant",
+    "S·come-3PL"
+   ],
+   [
+    "dhom",
+    "seven"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "tevel",
+    "young"
+   ],
+   [
+    "thell",
+    "eight"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "hyll",
+    "tide"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "sestow",
+    "back"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "dhom",
+    "seven"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rystull",
+    "learn"
+   ],
+   [
+    "nycul",
+    "lie"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "ryt",
+    "cut.vow"
+   ],
+   [
+    "Hyll",
+    "tide"
+   ],
+   [
+    "Dasken",
+    "final"
+   ],
+   [
+    "bisk",
+    "head"
+   ],
+   [
+    "clenn",
+    "new"
+   ],
+   [
+    "veth",
+    "but"
+   ],
+   [
+    "rysteth",
+    "morning-PL"
+   ],
+   [
+    "tunn",
+    "whole"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "wisketh",
+    "S·head-PL"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "tevar",
+    "early"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "rask",
+    "S·end"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "kylyl",
+    "turning"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-knowings",
+  "para_index": 21,
+  "label": "Romanisation",
+  "rom": "Re hebbent et reskowath strom thell tesset sa re rytent so sost. Re lymme pa reskow strom rytet hemm, tunn, hy vodh el Fodh eth Stinel Hosel sa ross gor ullen rytet ulonta. Doss pa vurr eth vran ul dunnoth. Re hadhom gor hos hyont, eth nath re hethym hos hyont.",
+  "english": "The Thrones gave eight Judgements of their own. Two Thrones carried an older carving whole, for the Wave and the Lone Stroke are the roots in which every other is written. Forty-six there are in all. Every one have I set down, and not one of them did I know.",
+  "dup": false,
+  "draft": [
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "hebbent",
+    "give-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "reskowath",
+    "place-PL"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "thell",
+    "eight"
+   ],
+   [
+    "tesset",
+    "judgement"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "rytent",
+    "cut.vow-3PL"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "lymme",
+    "bring-3DU"
+   ],
+   [
+    "pa",
+    "two(+S)"
+   ],
+   [
+    "reskow",
+    "place"
+   ],
+   [
+    "strom",
+    "great"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "hemm",
+    "old"
+   ],
+   [
+    "tunn",
+    "whole"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "el",
+    "is"
+   ],
+   [
+    "Fodh",
+    "wave"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "Stinel",
+    "stroke"
+   ],
+   [
+    "Hosel",
+    "alone"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "ross",
+    "S·be"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "ullen",
+    "S·of.rivers"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "ulonta",
+    "in-3DU"
+   ],
+   [
+    "Doss",
+    "be"
+   ],
+   [
+    "pa",
+    "two(+S)"
+   ],
+   [
+    "vurr",
+    "S·twenty"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "vran",
+    "six"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "dunnoth",
+    "N·wholeness"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "hadhom",
+    "S·lay-1SG"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "hyont",
+    "from-3PL"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethym",
+    "S·hold-1SG"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "hyont",
+    "from-3PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 0,
+  "label": "Romanisation · the title",
+  "rom": "Rytet Dasken · Sull Tolm ul susk et Odh",
+  "english": "**The Last Note · Three Stones over the Hearth**",
+  "dup": false,
+  "draft": [
+   [
+    "Rytet",
+    "carving"
+   ],
+   [
+    "Dasken",
+    "final"
+   ],
+   [
+    "Sull",
+    "three"
+   ],
+   [
+    "Tolm",
+    "stone"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "susk",
+    "high"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Odh",
+    "hearth"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 1,
+  "label": "Romanisation · Seren’s headnote",
+  "rom": "Cadhat dasken hy et flenneth.",
+  "english": "*Laid last of all the leaves.*",
+  "dup": false,
+  "draft": [
+   [
+    "Cadhat",
+    "laid"
+   ],
+   [
+    "dasken",
+    "final"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "flenneth",
+    "leaf.of.a.book.or.of.slate-PL"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 2,
+  "label": "Romanisation",
+  "rom": "Keth et tolm, Seren.",
+  "english": "Hold the stone, Seren.",
+  "dup": true,
+  "draft": [
+   [
+    "Keth",
+    "hold"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "Seren",
+    "Seren"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 3,
+  "label": "Romanisation",
+  "rom": "Ul et vess hosast et grem sy, re vess tev ul lern vodh myskent, et sull tolm ryss myst ul susk et odh sy. Ul et cummath ew et tessyl gor fedh: Myskent nayalat; eth hosen ull re dhessent lom, amm ew lyss en. Nath re vyskym o. Re vyskym: Nath seskym.",
+  "english": "On the first night of this winter a child at the front asked what they say, the three grey stones over this hearth. In the havens the answer was ever that they said naught, and so was I answered when I was small. I said it not. I said that I wist not.",
+  "dup": false,
+  "draft": [
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "vess",
+    "night"
+   ],
+   [
+    "hosast",
+    "first"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "grem",
+    "winter"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vess",
+    "S·ask"
+   ],
+   [
+    "tev",
+    "child"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "lern",
+    "face"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "myskent",
+    "say-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "ryss",
+    "wide"
+   ],
+   [
+    "myst",
+    "sea-fog"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "susk",
+    "high"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "odh",
+    "hearth"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "cummath",
+    "haven-PL"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tessyl",
+    "answer"
+   ],
+   [
+    "gor",
+    "every(+S)"
+   ],
+   [
+    "fedh",
+    "time"
+   ],
+   [
+    "Myskent",
+    "say-3PL"
+   ],
+   [
+    "nayalat",
+    "nothing"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhessent",
+    "S·answer-3PL"
+   ],
+   [
+    "lom",
+    "at-1SG"
+   ],
+   [
+    "amm",
+    "when"
+   ],
+   [
+    "ew",
+    "was"
+   ],
+   [
+    "lyss",
+    "small"
+   ],
+   [
+    "en",
+    "my(+N)"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vyskym",
+    "S·say-1SG"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "vyskym",
+    "S·say-1SG"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "seskym",
+    "know.a.fact-1SG"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 4,
+  "label": "Romanisation",
+  "rom": "Gor vess hy ull, amm re yal et hellur pondul, re hethym et greller lo et tolm vimm sost. Nath re raevulom kaeveret ulo, veth et hunnatath, hy vodh nath noss brodlymmyl lo dholm. Re rytent et Mystaeri et brodath orrowen ul molt so rellorath, hy so hunnat, virr hosen es morr so rellorath. Eth re yal sull brod orrowen lom hy Wrenn.",
+  "english": "Every night since, when the hall was empty, I have held the lamp to the lowest stone. No meaning sought I there, but the sounds only, for stone does not translate. The Mystaeri cut our words among their letters by the sound, as near as their letters would go. And three words of ours I had from Brenn.",
+  "dup": false,
+  "draft": [
+   [
+    "Gor",
+    "every(+S)"
+   ],
+   [
+    "vess",
+    "night"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "amm",
+    "when"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hellur",
+    "hall"
+   ],
+   [
+    "pondul",
+    "empty"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "hethym",
+    "S·hold-1SG"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "greller",
+    "lamp"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "Nath",
+    "NEG(+N)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "raevulom",
+    "seek-1SG"
+   ],
+   [
+    "kaeveret",
+    "meaning"
+   ],
+   [
+    "ulo",
+    "in-3SG.M"
+   ],
+   [
+    "veth",
+    "but"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hunnatath",
+    "sound-PL"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "vodh",
+    "what"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "noss",
+    "N·be"
+   ],
+   [
+    "brodlymmyl",
+    "translating"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "dholm",
+    "S·stone"
+   ],
+   [
+    "Re",
+    "PST(+S)"
+   ],
+   [
+    "rytent",
+    "cut.vow-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Mystaeri",
+    "Mystaeri"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "brodath",
+    "words"
+   ],
+   [
+    "orrowen",
+    "Orrowen"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "rellorath",
+    "signs"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "hunnat",
+    "sound"
+   ],
+   [
+    "virr",
+    "near"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "es",
+    "FUT(+N)"
+   ],
+   [
+    "morr",
+    "N·go"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "rellorath",
+    "signs"
+   ],
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "brod",
+    "word"
+   ],
+   [
+    "orrowen",
+    "Orrowen"
+   ],
+   [
+    "lom",
+    "at-1SG"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "Wrenn",
+    "S·Brenn"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 5,
+  "label": "Romanisation",
+  "rom": "Gordal ul vess re yal et hellur pondul, eth re yal et vorr vimm, eth re vorr et greller dem vimm ryssyth nind somm re veskym.",
+  "english": "Last night the hall was empty, and the fire was low, and the lamp burned down a finger's width while I looked.",
+  "dup": false,
+  "draft": [
+   [
+    "Gordal",
+    "yesterday"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "vess",
+    "night"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hellur",
+    "hall"
+   ],
+   [
+    "pondul",
+    "empty"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "vorr",
+    "fire"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vorr",
+    "fire"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "greller",
+    "lamp"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "ryssyth",
+    "breadth"
+   ],
+   [
+    "nind",
+    "finger"
+   ],
+   [
+    "somm",
+    "while"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "veskym",
+    "see-1SG"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 6,
+  "label": "Romanisation",
+  "rom": "Hy ull re yal so lom, et sull ul hos fedh um et tolm vimm sost, et hunnatath virr, eth et rellorath navenn.",
+  "english": "Then I had them, the three together on the lowest stone, the sounds close and the symbols wrong.",
+  "dup": false,
+  "draft": [
+   [
+    "Hy",
+    "from(+S)"
+   ],
+   [
+    "ull",
+    "that"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "lom",
+    "at-1SG"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "fedh",
+    "time"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hunnatath",
+    "sound-PL"
+   ],
+   [
+    "virr",
+    "near"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "rellorath",
+    "signs"
+   ],
+   [
+    "navenn",
+    "false"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 7,
+  "label": "Romanisation · Seren’s caption",
+  "rom": "Et tolm vimm sost hy et sull tolm ryss myst ul susk Odh Sell: rellorath kylet lo dhrenn et cless, eth ul molt et rellorath, sull brod orrowen, rytet hy et hunnat.",
+  "english": "::: native legend_three_stones chip\nThe lowest of the three grey stones over the Long Hearth: the curling letters of the edge, and among them three words of ours, cut by their sound\n:::",
+  "dup": false,
+  "draft": [
+   [
+    "Et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "ryss",
+    "wide"
+   ],
+   [
+    "myst",
+    "sea-fog"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "susk",
+    "high"
+   ],
+   [
+    "Odh",
+    "hearth"
+   ],
+   [
+    "Sell",
+    "long"
+   ],
+   [
+    "rellorath",
+    "signs"
+   ],
+   [
+    "kylet",
+    "changed"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "dhrenn",
+    "S·course.of.stones"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "cless",
+    "bank"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "molt",
+    "heart"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "rellorath",
+    "signs"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "brod",
+    "word"
+   ],
+   [
+    "orrowen",
+    "Orrowen"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "hy",
+    "from(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "hunnat",
+    "sound"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 8,
+  "label": "Romanisation · the words set in",
+  "rom": "Hess… Helv… Sennyl…",
+  "english": "*Stop… Sky… Dying…*",
+  "dup": true,
+  "draft": [
+   [
+    "Hess",
+    "stop"
+   ],
+   [
+    "Helv",
+    "sky"
+   ],
+   [
+    "Sennyl",
+    "dying"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 9,
+  "label": "Romanisation",
+  "rom": "Lo visketh et gannath domm re yal so rytet, eth nalymmet ul hos fedh eth et mesk, eth hynalat. Sull tesk re haemerent ul susk vorr dhavowlest lo Dhavow Hemm. Ul vimm so re dhyvull et Orrow um sull gostard, sa re vymment dem varn um vivenn. Um et tolm vimm sost re runnant et higileth mygurath. Eth re vesk nahos so.",
+  "english": "At the feet of the black pillars they were cut, and carried off with the timber, and sold. Three generations they hung over a harbour-house fire at Eldhythe. Under them the shore laughed at three axemen, home on a spar. On the lowest the ship-masters knocked out their pipes. And no one read them.",
+  "dup": false,
+  "draft": [
+   [
+    "Lo",
+    "at(+S)"
+   ],
+   [
+    "visketh",
+    "S·foot-PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "gannath",
+    "posts"
+   ],
+   [
+    "domm",
+    "black"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "rytet",
+    "carving"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "nalymmet",
+    "taked.away"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "fedh",
+    "time"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "mesk",
+    "tree"
+   ],
+   [
+    "eth",
+    "and"
+   ],
+   [
+    "hynalat",
+    "sold"
+   ],
+   [
+    "Sull",
+    "three"
+   ],
+   [
+    "tesk",
+    "generation"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "haemerent",
+    "raft-3PL"
+   ],
+   [
+    "ul",
+    "in(+N)"
+   ],
+   [
+    "susk",
+    "high"
+   ],
+   [
+    "vorr",
+    "fire"
+   ],
+   [
+    "dhavowlest",
+    "S·harbour-house"
+   ],
+   [
+    "lo",
+    "at(+S)"
+   ],
+   [
+    "Dhavow",
+    "S·harbour"
+   ],
+   [
+    "Hemm",
+    "old"
+   ],
+   [
+    "Ul",
+    "in(+N)"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "dhyvull",
+    "laugh"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "Orrow",
+    "Shore"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "sull",
+    "three"
+   ],
+   [
+    "gostard",
+    "axeman"
+   ],
+   [
+    "sa",
+    "REL(+S)"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vymment",
+    "S·return-3PL"
+   ],
+   [
+    "dem",
+    "until(+N)"
+   ],
+   [
+    "varn",
+    "home"
+   ],
+   [
+    "um",
+    "upon(+S)"
+   ],
+   [
+    "vivenn",
+    "S·mast"
+   ],
+   [
+    "Um",
+    "upon(+S)"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "tolm",
+    "stone"
+   ],
+   [
+    "vimm",
+    "low"
+   ],
+   [
+    "sost",
+    "self"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "runnant",
+    "S·mallet-3PL"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "higileth",
+    "one.who.knows.the.water-PL"
+   ],
+   [
+    "mygurath",
+    "pipe-PL"
+   ],
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vesk",
+    "see"
+   ],
+   [
+    "nahos",
+    "none"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 10,
+  "label": "Romanisation",
+  "rom": "Lo sy nath drunn hos mygur umont. Kaeverym: re veskym so. Myskym: kaeverym.",
+  "english": "Here no pipe is knocked on them. I think I have read them. I say I think.",
+  "dup": false,
+  "draft": [
+   [
+    "Lo",
+    "at(+S)"
+   ],
+   [
+    "sy",
+    "this"
+   ],
+   [
+    "nath",
+    "NEG(+N)"
+   ],
+   [
+    "drunn",
+    "mallet"
+   ],
+   [
+    "hos",
+    "one"
+   ],
+   [
+    "mygur",
+    "pipe"
+   ],
+   [
+    "umont",
+    "upon-3PL"
+   ],
+   [
+    "Kaeverym",
+    "think-1SG"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "veskym",
+    "see-1SG"
+   ],
+   [
+    "so",
+    "their(+S)"
+   ],
+   [
+    "Myskym",
+    "say-1SG"
+   ],
+   [
+    "kaeverym",
+    "think-1SG"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 11,
+  "label": "Romanisation · the laying",
+  "rom": "Cadhom o hosen re yal cadhat lom.",
+  "english": "This I lay as it was laid for me.",
+  "dup": true,
+  "draft": [
+   [
+    "Cadhom",
+    "lay-1SG"
+   ],
+   [
+    "o",
+    "his/it(+S)"
+   ],
+   [
+    "hosen",
+    "as"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "yal",
+    "S·be.PST"
+   ],
+   [
+    "cadhat",
+    "laid"
+   ],
+   [
+    "lom",
+    "at-1SG"
+   ]
+  ]
+ },
+ {
+  "leaf": "t-last-note",
+  "para_index": 12,
+  "label": "Romanisation · the hearth’s answer",
+  "rom": "Eth re vysk et odh: Tumar.",
+  "english": "*And the hearth said: We remember.*",
+  "dup": true,
+  "draft": [
+   [
+    "Eth",
+    "and"
+   ],
+   [
+    "re",
+    "PST(+S)"
+   ],
+   [
+    "vysk",
+    "S·say"
+   ],
+   [
+    "et",
+    "the"
+   ],
+   [
+    "odh",
+    "hearth"
+   ],
+   [
+    "Tumar",
+    "we.remember"
+   ]
+  ]
+ }
+]

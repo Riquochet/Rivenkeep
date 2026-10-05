@@ -1,0 +1,17 @@
+# name: VI-1-twohomes
+round VI-1-twohomes {wood: plain; pith: round; rings: 2; rules after: [1]}
+  I
+    r1/1  0: HOME*    10: TREE×3
+    r1/2  10: HEART×3+LIVE      band MIST files 10–10
+  ‖
+  II
+    r2/1  2: AXE×3+GO    10: THIN+LIVE    12: US×3‿      band MIST files 10–10  band MIST files 12–12
+    r2/2  12: !FIND
+    r2/3  12: HOLD
+  runners
+    run a1   10.r1/2       →      0.r1/1
+    run b1   2.r2/1        →      @8
+    run b2   2.r2/1        ⇒      10.r2/1
+    run b3   12.r2/2       →      @8
+    run b4   12.r2/3       →      @8
+  lap  b2 ⊳ b4
